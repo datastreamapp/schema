@@ -1,0 +1,23 @@
+{
+  "name": "datastream-wqx",
+  "version": "1.0.0",
+  "description": "WQX JSON Schema and JSON Table Schema for DataStream",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://willfarrell@github.com/gordonfn/datastream-wqx.git"
+  },
+  "keywords": [
+    "WQX",
+    "jsonschema"
+  ],
+  "author": "willfarrell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gordonfn/datastream-wqx/issues"
+  },
+  "homepage": "https://github.com/gordonfn/datastream-wqx#readme"
+}
