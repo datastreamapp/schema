@@ -1,0 +1,197 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Monitoring Locations",
+  "description": "WQX Web Monitoring Locations",
+  "type":"object",
+  "properties":{
+    "monitoring_location_id":{
+      "$ref":"./definitions.wqx.json#/MonitoringLocationID"
+    },
+    "monitoring_location_name":{
+      "title":"Monitoring Location Name",
+      "description":"A geographically descriptive name",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "monitoring_location_type":{
+      "title":"Monitoring Location Type",
+      "description":"Type of monitoring location",
+      "$ref":"./definitions.wqx.values.json#/MonitoringLocationType"
+    },
+    "monitoring_location_description":{
+      "title":"Monitoring Location Description",
+      "description":"Text description of the monitoring location.",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 1999
+    },
+    "huc_eight_digit_code":{
+      "title":"HUC Eight-Digit Code",
+      "description":"8-digit Hydrologic Unit Code",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 8
+    },
+    "huc_twelve_digit_code":{
+      "title":"HUC Twelve-Digit Code",
+      "description":"12-digit Hydrologic Unit Code",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 12
+    },
+    "tribal_land_indicator":{
+      "title":"Tribal Land Indicator",
+      "description":"Indicator denoting whether or not a location is on tribal land",
+      "type":"string",
+      "enum":["Yes","No"]
+    },
+    "tribal_land_name":{
+      "title":"Tribal Land Name",
+      "description":"Name of American Indian or Alaskan Native area where the location exists",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 200
+    },
+    "alternate_monitoring_location_id":{
+      "title":"Alternate Monitoring Location ID",
+      "description":"Alternate identifier used by other organization",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 35
+    },
+    "alternate_monitoring_location_context":{
+      "title":"Alternate Monitoring Location Context",
+      "description":"Organization ID for alternate monitoring ID, required if Alternate Monitoring Location ID is reported.",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 120
+    },
+    "monitoring_location_latitude":{
+      "title":"Monitoring Location Latitude",
+      "description":"Latitude. Decimal 6-8 digits (i.e., 37)",
+      "type":"number",
+      "minimum": 0,
+      "maximum": 90
+    },
+    "monitoring_location_longitude":{
+      "title":"Monitoring Location Longitude",
+      "description":"Longitude. Decimal 6-9 digits (i.e., -74.75)",
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180
+    },
+    "monitoring_location_source_map_scale":{
+      "title":"Monitoring Location Source Map Scale",
+      "description":"Integer representing distance on ground for one unit of measure on map or photo.  Required when Horizontal Collection Method Name is "Interpolation-Map"",
+      "type":"integer"
+    },
+    "monitoring_location_horizontal_accuracy_measure_value":{
+      "title":"Monitoring Location Horizontal Accuracy Measure Value",
+      "description":"The horizontal measure of the relative accuracy of the latitude and longitude coordinates",
+      "type":"number"
+    },
+    "monitoring_location_horizontal_accuracy_measure_unit_code":{
+      "title":"Monitoring Location Horizontal Accuracy Measure Unit Code",
+      "description":"Unit of measure of the relative accuracy, required if Monitoring Location Horizontal Accuracy Measure Value is reported.",
+      "$ref":"./definitions.qwx.values.json#/MeasureUnit"
+    },
+    "monitoring_location_horizontal_collection_method":{
+      "title":"Monitoring Location Horizontal Collection Method",
+      "description":"Method used to determine Lat/Long coordinates",
+      "$ref":"./definitions.qwx.values.json#/HorizontalCollectionMethod"
+    },
+    "monitoring_location_horizontal_coordinate_reference_system":{
+      "title":"Monitoring Location Horizontal Coordinate Reference System",
+      "description":"Datum used to determine Lat/Long",
+      "$ref":"./definitions.qwx.values.json#/HorizontalCoordinateReferenceSystemDatum"
+    },
+    "vertical_measure":{
+      "title":"Vertical Measure",
+      "description":"The measure of elevation (i.e., the altitude), above or below a reference datum.",
+      "type":"number"
+    },
+    "vertical_unit":{
+      "title":"Vertical Unit",
+      "description":"Unit of measure of the vertical measure, required if Vertical Measure is reported",
+      "$ref":"./definitions.qwx.values.json#/DepthVerticalMeasurementUnit"
+    },
+    "vertical_collection_method":{
+      "title":"Vertical Collection Method",
+      "description":"The name that identifies the method used to collect the vertical measure of a reference point.  Required if Vertical Measure is reported.",
+      "$ref":"./definitions.qwx.values.json#/VerticalCollectionMethod"
+    },
+    "vertical_coordinate_reference_system":{
+      "title":"Vertical Coordinate Reference System",
+      "description":"The name of the reference datum used to determine the vertical measure (i.e., the altitude).  Required if Vertical Measure is reported.",
+      "$ref":"./definitions.qwx.values.json#/VerticalCoordinateReferenceSystemDatum"
+    },
+    "monitoring_location_country_code":{
+      "title":"Monitoring Location Country Code",
+      "description":"Code for Country,  recommended if state code is used not in (default) US.",
+      "$ref":"./definitions.qwx.values.json#/Country",
+      "default":"US"
+    },
+    "monitoring_location_state":{
+      "title":"Monitoring Location State",
+      "description":"Postal abbreviation for Monitoring Locations's primary state, required if county code is reported",
+      "$ref":"./definitions.qwx.values.json#/State"
+    },
+    "monitoring_location_county":{
+      "title":"Monitoring Location County",
+      "description":"FIPS code for Monitoring Location's primary county",
+      "$ref":"./definitions.qwx.values.json#/County"
+    },
+    "well_type":{
+      "title":"Well Type",
+      "description":"Identifies the primary well type.",
+      "$ref":"./definitions.qwx.values.json#/WellType"
+    },
+    "aquifer_name":{
+      "title":"Aquifer Name",
+      "description":"Name of the aquifer in which the well is completed.",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 120
+    },
+    "well_formation_type":{
+      "title":"Well Formation Type",
+      "description":"Name of the primary formation or soils unit, in which the well is completed.",
+      "$ref":"./definitions.qwx.values.json#/WellFormationType"
+    },
+    "well_hole_depth_measure_value":{
+      "title":"Well Hole Depth Measure Value",
+      "description":"Depth below land surface datum (LSD) to the bottom of the hole on completion of drilling.",
+      "type":"number"
+    },
+    "well_hole_depth_measure_unit":{
+      "title":"Well Hole Depth Measure Unit",
+      "description":"Unit of measure of the vertical measure, required if Well Hole Depth Measure Value is reported.",
+      "type":"string",
+      "$ref":"./definitions.qwx.values.json#/DepthVerticalMeasurementUnit"
+    },
+    "monitoring_location_attachment_file_name":{
+      "title":"Monitoring Location Attachment File Name",
+      "description":"The text describing the descriptive name used to represent the file, including file extension.",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "monitoring_location_attachment_type":{
+      "title":"Monitoring Location Attachment Type",
+      "description":"File text extension, free text not domain list validation.  Required if Monitoring Location Attachment File Name is reported.",
+      "type":"string",
+      "minLength": 0,
+      "maxLength": 6
+    }
+  },
+  "required":[
+    "monitoring_location_id",
+    "monitoring_location_name",
+    "monitoring_location_type",
+    "monitoring_location_latitude",
+    "monitoring_location_longitude",
+    "monitoring_location_horizontal_collection_method",
+    "monitoring_location_horizontal_coordinate_reference_system"
+  ]
+}

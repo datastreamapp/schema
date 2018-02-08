@@ -1,6 +1,5 @@
 # Build Files
-schema/
-table/
+dist/
 
 
 # Logs
@@ -65,3 +64,6 @@ typings/
 # IDE
 .idea
 *.iml
+
+# OS
+.DS_Store

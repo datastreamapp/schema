@@ -10,6 +10,10 @@ module.exports = self;
  * @returns {string}
  */
 self.makeId = (str) => {
+    return str.replace(/[ -]/g, '').trim();
+};
+
+self.makeIdTwo = (str) => {
     return str.toLowerCase().replace(/[^a-z0-9]/g, ' ').trim().replace(/[ ]+/g, '_');
 };
 

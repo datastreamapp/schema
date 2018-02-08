@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Activity Metric",
+  "description": "WQX Web Activity Metric Results",
+  "type":"object",
+  "properties": {
+    "ActivityID":{
+      "$ref":"./definitions.wqx.json#/ActivityID"
+    },
+
+
+
+
+    "MonitoringLocationID":{
+      "$ref":"./definitions.wqx.json#/MonitoringLocationID"
+    }
+  },
+  "required":["ActivityID"]
+}

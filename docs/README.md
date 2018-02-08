@@ -11,6 +11,7 @@
   <a href="https://www.npmjs.com/package/wqx"><img src="https://img.shields.io/npm/v/wqx.svg" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/wqx"><img src="https://img.shields.io/npm/dm/wqx.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/wqx"><img src="https://img.shields.io/npm/l/wqx.svg" alt="npm license" /></a>
+  <a href="http://packagequality.com/#?package=wqx"><img src="http://npm.packagequality.com/shield/wqx.svg" alt="Package Quality" /></a>
 </p>
 
 
@@ -26,9 +27,12 @@ In this repo we use `tz` notation for identifying timezones (https://en.wikipedi
 Abbreviations are not globally unique and we feel it is important to allow samples from all timezones.
 We have proved a function that will allow you to convert america timezone abbreviations to `tz` via `makeTimezone(abbr)`.
 
+## Limitations
+- Currently only support validation of `CA` timezones
+
 ## Install
 ```bash
-$ npm i wqx
+$ npm i wqx datastream-wqx
 ```
 
 ## Schemas
@@ -40,7 +44,7 @@ $ npm i wqx
 ### nodeJS
 ```javascript
 const Ajv = require('ajv');
-const jsonschema = requrie('wqx/schema/datastream');
+const jsonschema = requrie('wqx/json-schema/datastream');
 
 
 ```
@@ -60,6 +64,7 @@ const jsonschema = requrie('wqx/schema/datastream');
 Find `^\s*(.*)`, Replace `"$1",`.
 
 ## References
-- http://www.exchangenetwork.net
-- https://www3.epa.gov/storet/archive/web/wqx.html
-- https://www.epa.gov/waterdata/water-quality-exchange-web-template-files -> WQX Web Lab Results Template
+- [About](https://www3.epa.gov/storet/archive/web/wqx.html)
+- [Web Template Files](https://www.epa.gov/waterdata/water-quality-exchange-web-template-files)
+- [Schema (XML)](http://www.exchangenetwork.net/data-exchange/wqx/)
+- [Schema Allowed Values (XML)](http://www.epa.gov/storet/wqx/wqx_getdomainvalueswebservice.html)

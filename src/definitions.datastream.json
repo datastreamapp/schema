@@ -71,8 +71,8 @@
     "minimum":0
   },
   "result_unit":{
-    "description":"Result Unit",
-    "$ref":"./definitions.units.json#/units"
+    "description":"Result Measure Unit Code",
+    "$ref":"./definitions.wqx.values.json#/measure_unit_code"
   },
   "result_detection_limit_value":{
     "description":"Result Detection Limit Value",

@@ -1,0 +1,37 @@
+{
+  "title":"WQX Definitions",
+  "description":"WQX Definitions",
+
+  "MonitoringLocationID":{
+    "title":"Monitoring Location ID",
+    "description":"Unique identifier for the monitoring location",
+    "tags":["location","biological-habitat"],
+    "type":"string",
+    "minLength": 0,
+    "maxLength": 35
+  },
+
+  "ActivityID":{
+    "title":"Activity ID",
+    "description":"A unique identifier for each Activity (an Activity can be based on a unique lab ID, a suite of on-site field measurements, an individual sample, etc);  Results within one Activity must share the same Activity Type and Activity Medium (example:  a water sample and a sediment sample must be separate Activities; a water sample and a measurement made in the field must be separate Activities; 2 lab results from the same water sample can be the same activity)",
+    "tags":["physical-chemistry","habitat","biological","activitymetric"],
+    "type":"string",
+    "minLength": 0,
+    "maxLength": 35
+  },
+  "ActivityType":{
+    "title":"ActivityType",
+    "description":"",
+    "$ref":"./definitions.wqx.values.json#/ActivityType"
+  },
+
+
+  "IndexID":{
+    "title":"Index ID",
+    "description":"A unique designator used to identify a unique index record that the activity metric is associated with.",
+    "tags":["biological-habitat"],
+    "type":"string",
+    "minLength": 0,
+    "maxLength": 35
+  }
+}
