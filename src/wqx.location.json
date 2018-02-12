@@ -114,7 +114,7 @@
     "vertical_unit":{
       "title":"Vertical Unit",
       "description":"Unit of measure of the vertical measure, required if Vertical Measure is reported",
-      "$ref":"./definitions.qwx.values.json#/DepthVerticalMeasurementUnit"
+      "$ref":"./definitions.qwx.values.json#/DistanceMeasurementUnit"
     },
     "vertical_collection_method":{
       "title":"Vertical Collection Method",
@@ -168,7 +168,7 @@
       "title":"Well Hole Depth Measure Unit",
       "description":"Unit of measure of the vertical measure, required if Well Hole Depth Measure Value is reported.",
       "type":"string",
-      "$ref":"./definitions.qwx.values.json#/DepthVerticalMeasurementUnit"
+      "$ref":"./definitions.qwx.values.json#/DistanceMeasurementUnit"
     },
     "monitoring_location_attachment_file_name":{
       "title":"Monitoring Location Attachment File Name",

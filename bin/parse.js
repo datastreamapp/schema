@@ -15,11 +15,35 @@ const jsonSchema = {
     title:'Allowed Values',
     description:'WQX Allowed Values Definitions',
     // Missing from file
-    DepthVerticalMeasurementUnit: {
-        title: 'DepthVerticalMeasurementUnit',
+    AreaMeasurementUnit: {
+        title: 'Area Measurement Unit',
         description: '',
         type: 'string',
-        enum: ['ft', 'm']
+        enum: ['cm3','in3','ft3', 'm3']
+    },
+    DistanceMeasurementUnit: {
+        title: 'Distance Measurement Unit',
+        description: '',
+        type: 'string',
+        enum: ['cm','in','ft', 'm', 'km']
+    },
+    TimeMeasurementUnit: {
+        title: 'Time Measurement Unit',
+        description: '',
+        type: 'string',
+        enum: ['seconds','minutes','hours','weeks','months','years']
+    },
+    SpeedMeasurementUnit: {
+        title: 'Speed Measurement Unit',
+        description: '',
+        type: 'string',
+        enum: ['cm/sec','ft/sec','m/sec','km/sec','km/hr']
+    },
+    MassMeasurementUnit: {
+        title: 'Mass Measurement Unit',
+        description: '',
+        type: 'string',
+        enum: ['g','oz','lb','kg']
     }
 };
 for (let e in values.WQXDomainValueList.WQXElement) {
@@ -42,13 +66,15 @@ for (let e in values.WQXDomainValueList.WQXElement) {
             rowObj[col.colname] = col.value;
         }
 
-        if (field === 'TimeZone') console.log(rowObj, Object.keys(rowObj));
+        //if (field === 'TimeZone' || field === 'County') console.log(rowObj, Object.keys(rowObj));
 
         let value = '';
         if (Object.keys(rowObj).indexOf('ID') !== -1) {
             value = rowObj['ID'];
         } else if (Object.keys(rowObj).indexOf('Code') !== -1) {
             value = rowObj['Code'];
+        } else if (Object.keys(rowObj).indexOf('CountyFIPSCode') !== -1) {
+            value = rowObj['CountyName']+', '+rowObj['StateCode'];
         } else {
             value = rowObj['Name'];
         }
