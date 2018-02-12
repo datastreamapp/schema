@@ -49,6 +49,17 @@
       "km/hr"
     ]
   },
+  "MassMeasurementUnit": {
+    "title": "Mass Measurement Unit",
+    "description": "",
+    "type": "string",
+    "enum": [
+      "g",
+      "oz",
+      "lb",
+      "kg"
+    ]
+  },
   "ActivityGroupType": {
     "title": "ActivityGroupType",
     "description": "",
