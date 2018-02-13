@@ -66,14 +66,16 @@ for (let e in values.WQXDomainValueList.WQXElement) {
             rowObj[col.colname] = col.value;
         }
 
-        //if (field === 'TimeZone' || field === 'County') console.log(rowObj, Object.keys(rowObj));
+        //if (field === 'CharacteristicPickListValue') console.log(rowObj, Object.keys(rowObj));
 
         let value = '';
         if (Object.keys(rowObj).indexOf('ID') !== -1) {
             value = rowObj['ID'];
+        } else if (Object.keys(rowObj).indexOf('Characteristic') !== -1) {  // CharacteristicPickListValue
+            value = rowObj['Characteristic'];
         } else if (Object.keys(rowObj).indexOf('Code') !== -1) {
             value = rowObj['Code'];
-        } else if (Object.keys(rowObj).indexOf('CountyFIPSCode') !== -1) {
+        } else if (Object.keys(rowObj).indexOf('CountyFIPSCode') !== -1) {  // County
             value = rowObj['CountyName']+', '+rowObj['StateCode'];
         } else {
             value = rowObj['Name'];
