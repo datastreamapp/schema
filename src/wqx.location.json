@@ -126,7 +126,7 @@
       "description":"The name of the reference datum used to determine the vertical measure (i.e., the altitude).  Required if Vertical Measure is reported.",
       "$ref":"./definitions.qwx.values.json#/VerticalCoordinateReferenceSystemDatum"
     },
-    "MonitoringLocationcountryCode":{
+    "MonitoringLocationCountryCode":{
       "title":"Monitoring Location Country Code",
       "description":"Code for Country,  recommended if state code is used not in (default) US.",
       "$ref":"./definitions.qwx.values.json#/Country",

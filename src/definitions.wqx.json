@@ -361,7 +361,6 @@
     "minLength": 0,
     "maxLength": 4000
   },
-
   "IndexID":{
     "title":"Index ID",
     "description":"A unique designator used to identify a unique index record that the activity metric is associated with.",
@@ -369,7 +368,6 @@
     "minLength": 0,
     "maxLength": 35
   },
-
   "ActivityAttachmentFileName":{
     "title":"Activity Attachment File Name",
     "description":"The text describing the descriptive name used to represent the Activity Attachment file including file extension.",
