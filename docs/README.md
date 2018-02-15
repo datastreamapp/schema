@@ -1,7 +1,7 @@
 <h1 align="center">
-  TODO DateStream Logo
+  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/datastream.png" alt="DataStream Logo" width="200">
   <br/>
-  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/logo.gif" alt="WQX Logo" width="200">
+  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/water-quality-exchange.gif" alt="WQX Logo" width="200">
   <br/>
   Datastream WQX: JSON Schema and JSON Table Schema
   <br/>
@@ -85,5 +85,5 @@ Find `^\s*(.*)`, Replace `"$1",`.
 
 <div align="center">
   <h3>Maintained By</h3>
-  <a href="https://tesera.com"><img src="https://raw.githubusercontent.com/gordonfn/wqx/master/docs/images/tesera.png" alt="Tesera Systems Inc. Logo" width="200"></a>
+  <a href="https://tesera.com"><img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/tesera.png" alt="Tesera Systems Inc. Logo" width="200"></a>
 </div>
