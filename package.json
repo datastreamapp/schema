@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/gordonfn/datastream-wqx#readme",
   "devDependencies": {
+    "wqx":"git@github.com:gordonfn/wqx.git",
     "xml-js": "^1.6.2"
   }
 }

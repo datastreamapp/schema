@@ -38,14 +38,16 @@
       "$ref":"./definitions.wqx.json#/ActivityType"
     },
     "ActivityMediaName":{
-      "$ref":"./definitions.wqx.json#/ActivityMediaName"
+      "$ref":"./definitions.wqx.json#/ActivityMediaName",
+      "default":"Water"
     },
-    "ActivityStartDate":{
+    "ActivityStartTimestamp":{
       "$ref":"./definitions.wqx.json#/ActivityStartDate"
     },
     "ActivitySampleTimestamp":{},
-    "ActivityEndDate":{
-      "$ref":"./definitions.wqx.json#/ActivityEndDate"
+    "ActivityEndTimestamp":{
+      "$ref":"./definitions.wqx.json#/ActivityEndDate",
+      "TODO":"** Have it default to StartTimestamp"
     },
     "ActivityDepthHeightMeasure":{
       "$ref":"./definitions.wqx.json#/ActivityDepthHeightMeasure"
