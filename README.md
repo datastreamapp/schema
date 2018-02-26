@@ -3,7 +3,7 @@
   <br/>
   <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/water-quality-exchange.gif" alt="WQX Logo" width="200">
   <br/>
-  DataStream WQX<br />JSON Schema and JSON Table Schema
+  DataStream WQX<br />JSON Schema, JSON Table Schema, and CSV Template
   <br/>
   <br/>
 </h1>
@@ -15,31 +15,26 @@
   <a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>
 </p>
 
-## CSV Template
-We're build out `csv` template to follow `R` import/export best practices.
-
-TODO script to build and link
-
 ## Additions
 ### Program
 A higher level than Project that can contain multiple Projects.
 
-- `ProgramName`
-- `ProgramDescription`
-- `ProgramType`
+- `ProgramName` - 
+- `ProgramDescription` - 
+- `ProgramType` - 
 
 ### Project
-- `ProjectStatus`
-- `ProjectMethod`
+- `ProjectStatus` - 
+- `ProjectMethod` - 
 
 ### Location
 - `MonitoringLocationRegion` - Equivalent to using `Monitoring Location Country Code` from the WQX.
-- `MonitoringLocationWaterbody`
+- `MonitoringLocationWaterbody` - 
 
 ### Activity
 - `ActivityStartTimestamp` - A consolidation of `ActivityStartDate`, `ActivityStartTime`, and `ActivityStartTimeZone`
 - `ActivityEndTimestamp` - A consolidation of `ActivityEndDate`, `ActivityEndTime`, and `ActivityEndTimeZone`
-- `ResultAnalyticalMethodName`
+- `ResultAnalyticalMethodName` - 
 - `AnalysisStartTimestamp` - A consolidation of `AnalysisStartDate`, `AnalysisStartTime`, and `AnalysisStartTimeZone`
 
 ## Differences
@@ -64,6 +59,9 @@ $ npm i datastream-wqx
 ```
 
 ## Use
+### CSV Template
+We're build out `csv` template to follow `R` import/export best practices. It can be found `datastream-wqx/csv/template.csv`.
+
 ### nodeJS
 ```javascript
 const Ajv = require('ajv');
