@@ -3,7 +3,7 @@
   <br/>
   <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/water-quality-exchange.gif" alt="WQX Logo" width="200">
   <br/>
-  Datastream WQX: JSON Schema and JSON Table Schema
+  DataStream WQX<br />JSON Schema and JSON Table Schema
   <br/>
   <br/>
 </h1>
@@ -13,20 +13,42 @@
   <a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/v/datastream-wqx.svg" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/dm/datastream-wqx.svg" alt="npm downloads"></a>
   <a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>
-  <a href="http://packagequality.com/#?package=datastream-wqx"><img src="http://npm.packagequality.com/shield/datastream-wqx.svg" alt="Package Quality" /></a>
 </p>
 
+## CSV Template
+We're build out `csv` template to follow `R` import/export best practices.
+
+TODO script to build and link
 
 ## Additions
 ### Program
+A higher level than Project that can contain multiple Projects.
+
+- `ProgramName`
+- `ProgramDescription`
+- `ProgramType`
 
 ### Project
+- `ProjectStatus`
+- `ProjectMethod`
 
 ### Location
+- `MonitoringLocationRegion` - Equivalent to using `Monitoring Location Country Code` from the WQX.
+- `MonitoringLocationWaterbody`
 
 ### Activity
+- `ActivityStartTimestamp` - A consolidation of `ActivityStartDate`, `ActivityStartTime`, and `ActivityStartTimeZone`
+- `ActivityEndTimestamp` - A consolidation of `ActivityEndDate`, `ActivityEndTime`, and `ActivityEndTimeZone`
+- `ResultAnalyticalMethodName`
+- `AnalysisStartTimestamp` - A consolidation of `AnalysisStartDate`, `AnalysisStartTime`, and `AnalysisStartTimeZone`
 
 ## Differences
+- `MonitoringLocationHorizontalCollectionMethod` - Defaults to `Unknown`
+- `MonitoringLocationHorizontalCoordinateReferenceSystem` - defaults to `UNKWN`
+- `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
+
+### Naming
+We opted for `CamelCase` for header names to reduce `csv` parsing issues and improving `R` imports.
 
 ### Locations
 In WQX the use of `State` and `County` are used. These are very `USA` specific, thus we have chosen to use `MonitoringLocationRegion` to allow for a broader meaning that can be applied internationally.
@@ -36,26 +58,16 @@ In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated agains
 
 Alternatively, the use of [`tz`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered, and opted against due to the increased complexity involved compared to `ISO 8601`.
 
-## Limitations
-- Currently only support validation of `CA` timezones
-
 ## Install
 ```bash
 $ npm i datastream-wqx
 ```
 
-## Schemas
-### JSON Schema
-
-### JSON Table Schema
-
 ## Use
 ### nodeJS
 ```javascript
 const Ajv = require('ajv');
-const jsonschema = requrie('wqx/json-schema/datastream');
-
-
+const jsonschema = requrie('datastream-wqx/json-schema');
 ```
 
 ### Browser
@@ -69,18 +81,26 @@ const jsonschema = requrie('wqx/json-schema/datastream');
 
 ## Contributing
 
-### Update WQX Lists
-Find `^\s*(.*)`, Replace `"$1",`.
+### Publishing
+```bash
+# update version in `package.json`
+npm run build
+cd dist
+npm publish
+```
+
+### Contributors
+- [willfarrell](https://github.com/willfarrell)
 
 ## References
 - [About](https://www3.epa.gov/storet/archive/web/wqx.html)
 - [Web Template Files](https://www.epa.gov/waterdata/water-quality-exchange-web-template-files)
 - [Schema (XML)](http://www.exchangenetwork.net/data-exchange/wqx/)
 - [Schema Allowed Values (XML)](http://www.epa.gov/storet/wqx/wqx_getdomainvalueswebservice.html)
+- [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 
 ## TODO
 - [ ] add file level definitions to help minimize size
-- [ ] script to build json-schema
 - [ ] script to build json table schema
 
 <div align="center">

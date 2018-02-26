@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataStream",
+  "description": "DataStream WQX Results",
+  "type":"object",
+  "definitions":{
+    "timestamp":{
+      "description":"Timestamp in ISO 8601 format",
+      "type":"string",
+      "format":"date-time"
+    }
+  },
+  "properties":{
+    "ProgramName":{
+      "title":"Program Name",
+      "description":"Name of the program",
+      "type":"string"
+    },
+    "ProgramDescription":{
+      "title":"Program Description",
+      "description":"Description of the program",
+      "type":"string"
+    },
+    "ProgramType":{
+      "title":"Program Type",
+      "description":"Type of the program (TODO enum list?)",
+      "type":"string"
+    },
+
+    "ProjectName":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ProjectName"
+    },
+    "ProjectDescription":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ProjectDescription"
+    },
+    "ProjectStatus":{
+      "title":"Project Status",
+      "description":"Current status of the project (TODO enum list)",
+      "type":"string"
+    },
+    "ProjectMethod":{
+      "title":"Project Method",
+      "description":"Method used in sample collection (TODO enum list)",
+      "type":"string"
+    },
+
+    "MonitoringLocationID":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
+    },
+    "MonitoringLocationName":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName"
+    },
+    "MonitoringLocationLatitude":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
+    },
+    "MonitoringLocationLongitude":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
+    },
+
+    "MonitoringLocationHorizontalCollectionMethod": {
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCollectionMethod",
+      "default":"Unknown"
+    },
+    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCoordinateReferenceSystem",
+      "default":"UNKWN"
+    },
+
+    "MonitoringLocationRegion":{
+      "title":"Monitoring Location Region",
+      "description":"Region name",
+      "type":"string"
+    },
+    "MonitoringLocationType":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationType"
+    },
+    "MonitoringLocationWaterbody":{
+      "title":"Monitoring Location Waterbody",
+      "description":"Waterbody name at location",
+      "type":"string"
+    },
+
+    "ActivityType":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ActivityType"
+    },
+    "ActivityMediaName":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ActivityMediaName",
+      "default":"Water"
+    },
+    "ActivityStartTimestamp":{
+      "title":"Activity Start Timestamp",
+      "description":"Activity Start Timestamp in ISO format",
+      "$ref":"#/definitions/timestamp"
+    },
+    "ActivityEndTimestamp":{
+      "title":"Activity End Timestamp",
+      "description":"Activity End Timestamp in ISO format",
+      "$ref":"#/definitions/timestamp",
+      "TODO":"** Have it default to StartTimestamp"
+    },
+    "ActivityDepthHeightMeasure":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
+      "maximum":0
+    },
+    "ActivityDepthHeightUnit":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightUnit"
+    },
+
+    "SampleCollectionEquipmentName": {
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/SampleCollectionEquipmentName"
+    },
+
+    "ResultDetectionCondition":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultDetectionCondition"
+    },
+    "CharacteristicName":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/CharacteristicName"
+    },
+    "MethodSpeciation":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MethodSpeciation"
+    },
+    "ResultSampleFraction":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultSampleFraction"
+    },
+    "ResultValue":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultValue"
+    },
+    "ResultUnit":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultUnit"
+    },
+    "ResultStatusID": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultStatusID"
+    },
+    "ResultComment":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultComment"
+    },
+
+    "ResultAnalyticalMethodID":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodID"
+    },
+    "ResultAnalyticalMethodName":{
+      "title":"Result Analytical Method Name",
+      "description":"Name of the analytical method",
+      "type":"string"
+    },
+    "ResultAnalyticalMethodContext":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodContext"
+    },
+    "LaboratoryName":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
+    },
+
+    "AnalysisStartTimestamp":{
+      "title":"Analysis Start Timestamp",
+      "description":"AnalysisStartTimestamp in ISO format",
+      "$ref":"#/definitions/timestamp"
+    },
+
+    "ResultDetectionQuantitationLimitType":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitType"
+    },
+    "ResultDetectionQuantitationLimitMeasure":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
+    },
+    "ResultDetectionQuantitationLimitUnit":{
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitUnit"
+    }
+
+  },
+  "required":[
+    "ProgramName",
+
+    "ProjectName",
+    "ProjectMethod",
+
+    "MonitoringLocationName",
+    "MonitoringLocationLatitude",
+    "MonitoringLocationLongitude",
+    "MonitoringLocationType",
+
+    "ActivityType",
+    "ActivityMediaName",
+    "ActivityStartTimestamp",
+    "CharacteristicName",
+    "ResultSampleFraction",
+    "ResultValue",
+    "ResultUnit"
+  ]
+}

@@ -1,9 +1,10 @@
 {
   "name": "datastream-wqx",
   "version": "2.1.0-alpha.1",
-  "description": "Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
+  "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "main": "index.js",
   "scripts": {
+    "build": "node ./bin/build.js",
     "test": "mocha"
   },
   "repository": {
@@ -14,7 +15,8 @@
     "water quality exchange",
     "WQX",
     "jsonschema",
-    "jsontableschema"
+    "jsontableschema",
+    "datastream"
   ],
   "author": "willfarrell",
   "license": "MIT",
@@ -23,7 +25,8 @@
   },
   "homepage": "https://github.com/gordonfn/datastream-wqx#readme",
   "devDependencies": {
-    "wqx":"git@github.com:gordonfn/wqx.git",
-    "xml-js": "^1.6.2"
+    "glob": "^7.1.2",
+    "json-schema-ref-parser": "^4.1.1",
+    "wqx": "^2.1.0-alpha.3"
   }
 }
