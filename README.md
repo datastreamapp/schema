@@ -93,10 +93,7 @@ npm publish
 - [willfarrell](https://github.com/willfarrell)
 
 ## References
-- [About](https://www3.epa.gov/storet/archive/web/wqx.html)
-- [Web Template Files](https://www.epa.gov/waterdata/water-quality-exchange-web-template-files)
-- [Schema (XML)](http://www.exchangenetwork.net/data-exchange/wqx/)
-- [Schema Allowed Values (XML)](http://www.epa.gov/storet/wqx/wqx_getdomainvalueswebservice.html)
+- [WQX](hhttps://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 
 ## TODO
