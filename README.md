@@ -91,7 +91,7 @@ npm publish
 - [willfarrell](https://github.com/willfarrell)
 
 ## References
-- [WQX](hhttps://github.com/gordonfn/wqx)
+- [WQX](https://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 
 ## TODO
