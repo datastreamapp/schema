@@ -53,7 +53,7 @@ In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated agains
 
 Alternatively, the use of [`tz`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered and opted against due to the increased complexity involved compared to `ISO 8601`.
 
-Both of these solutions also decrease on errors with the uncertainty that can come up with daylight savings time.
+Both of these solutions also decrease errors with the uncertainty that can come up with daylight savings time.
 
 ## Install
 ```bash
