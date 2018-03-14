@@ -49,9 +49,11 @@ We opted for `CamelCase` for header names to reduce `csv` parsing issues and imp
 In WQX the use of `State` and `County` are used. These are very `USA` specific, thus we have chosen to use `MonitoringLocationRegion` to allow for a broader meaning that can be applied internationally.
 
 ### Dates, Times, and Timezones
-In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated against timezone acronyms, these acronyms however do not scale internationally. Because of this we've joined these fields in to one, `Timestamp`, that will follow [`ISO 8601`](https://en.wikipedia.org/wiki/ISO_8601) standard (ex. 2018-02-14T18:59:59-0600).
+In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated against timezone acronyms, these acronyms, however, do not scale internationally. Because of this, we've joined these fields into one, `Timestamp`, that will follow [`ISO 8601`](https://en.wikipedia.org/wiki/ISO_8601) standard (ex. 2018-02-14T18:59:59-0600).
 
-Alternatively, the use of [`tz`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered, and opted against due to the increased complexity involved compared to `ISO 8601`.
+Alternatively, the use of [`tz`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered and opted against due to the increased complexity involved compared to `ISO 8601`.
+
+Both of these solutions also decrease on errors with the uncertainty that can come up with daylight savings time.
 
 ## Install
 ```bash
