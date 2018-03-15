@@ -1,7 +1,7 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/datastream.png" alt="DataStream Logo" width="200">
+  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/datastream.png?token=ABC9POoWo80cE0P25opVHbdsuQnW30g6ks5as_29wA%3D%3D" alt="DataStream Logo" width="200">
   <br/>
-  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/water-quality-exchange.gif" alt="WQX Logo" width="200">
+  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/water-quality-exchange.gif?token=ABC9PNs8vDDUB-LYzDfSdeJ4lvH4JccXks5as_4dwA%3D%3D" alt="WQX Logo" width="200">
   <br/>
   DataStream WQX<br />JSON Schema, JSON Table Schema, and CSV Template
   <br/>
@@ -102,5 +102,5 @@ npm publish
 
 <div align="center">
   <h3>Maintained By</h3>
-  <a href="https://tesera.com"><img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/tesera.png" alt="Tesera Systems Inc. Logo" width="200"></a>
+  <a href="https://tesera.com"><img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/tesera.png?token=ABC9PPDeMtIvm_7YPZRL69QPAAYSfMW5ks5as_3WwA%3D%3D" alt="Tesera Systems Inc. Logo" width="200"></a>
 </div>
