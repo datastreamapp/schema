@@ -10,6 +10,7 @@ console.log('Building JSON Schema & JSON Table Schema & CSV Template');
 
 const srcGlob = __dirname+'/../src/*.json';    // Note files starting w/ `definitions.` will be skipped in code
 const csvFile = __dirname+'/../dist/csv/template.csv';
+const sqlFile = __dirname+'/../dist/sql/index.sql';
 const jsonSchemaDir = __dirname+'/../dist/json-schema';
 const jsonTableSchemaDir = __dirname+'/../dist/json-table-schema';
 
@@ -32,10 +33,10 @@ glob(srcGlob)
 
                     const columns = Object.keys(schemaJSON.properties);
 
-                    // csv
+                    // ## csv
                     let csv = `"`+columns.join(`","`)+`"`+"\r\n";
 
-                    // json-schema -> json-schema-table
+                    // ## json-schema -> json-schema-table
                     const table = {
                         fields:[]
                     };
@@ -68,10 +69,59 @@ glob(srcGlob)
                         table.fields.push(column);
                     }
 
+                    // ## sql
+                    let sql = `
+CREATE TABLE IF NOT EXISTS activity_data (
+  UploadId                        VARCHAR(60) NOT NULL,
+  UploadTimestamp                 TIMESTAMP DEFAULT NOW(),
+`;
+                    for(let i = 0, l = columns.length; i<l; i++) {
+                        const key = columns[i];
+                        if (key.indexOf('TimeZone') !== -1) continue;   // covered by previous column (DateTime)
+                        sql += `  ${key.replace('DateTime', 'Timestamp')}`;
+
+                        const field = schemaJSON.properties[key];
+
+                        if (field.type === 'string' && field.maxLength) {
+                            sql += ` VARCHAR(${field.maxLength})`;
+                        } else if (field.type === 'string' && field.format === 'date-time') {
+                            sql += ` TIMESTAMP WITH TIME ZONE`;
+                        }  else if (field.type === 'string') {
+                            sql += ` TEXT`;
+                        } else if (field.type === 'number') {
+                            sql += ` DECIMAL(6)`;
+                        }
+
+                        if (field.default) {
+                            sql += ` DEFAULT '${field.default}'`;
+                        } else if (schemaJSON.required.indexOf(key) !== -1) {
+                            sql += ` NOT NULL`;
+                        }
+
+                        if (i !== columns.length -1) {
+                            sql += `,
+`;
+                        }
+                    }
+                    sql += `
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS pkey ON activity_data (
+  UploadId,
+  MonitoringLocationLatitude,
+  MonitoringLocationLongitude,
+  ActivityStartTimestamp,
+  SampleCollectionEquipmentName,
+  ResultAnalyticalMethodName,
+  AnalysisStartTimestamp
+);
+`;
+
                     return Promise.all([
                         writeFile(csvFile, csv, {encoding:'utf8'}),
                         writeFile(jsonSchemaFile, JSON.stringify(schemaJSON, null, 2), {encoding:'utf8'}),
-                        writeFile(jsonTableSchemaFile, JSON.stringify(table, null, 2), {encoding:'utf8'})
+                        writeFile(jsonTableSchemaFile, JSON.stringify(table, null, 2), {encoding:'utf8'}),
+                        writeFile(sqlFile, sql, {encoding:'utf8'})
                     ]);
                 })
                 .catch((err) => {
