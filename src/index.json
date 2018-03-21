@@ -4,51 +4,29 @@
   "description": "DataStream WQX Results",
   "type":"object",
   "definitions":{
-    "timestamp":{
+    "datetime":{
       "description":"Timestamp in ISO 8601 format",
       "type":"string",
       "format":"date-time"
+    },
+    "timezone":{
+      "description":"ISO 8601 ",
+      "type":"string",
+      "pattern":"^+?(0[0-9]|1[0-9]|2[0-4])([0-5][0-9])$",
+      "maxLength":5
     }
   },
   "properties":{
-    "ProgramName":{
-      "title":"Program Name",
-      "description":"Name of the program",
-      "type":"string"
-    },
-    "ProgramDescription":{
-      "title":"Program Description",
-      "description":"Description of the program",
-      "type":"string"
-    },
-    "ProgramType":{
-      "title":"Program Type",
-      "description":"Type of the program (TODO enum list?)",
-      "type":"string"
-    },
-
     "ProjectName":{
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/ProjectName"
-    },
-    "ProjectDescription":{
-      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ProjectDescription"
-    },
-    "ProjectStatus":{
-      "title":"Project Status",
-      "description":"Current status of the project (TODO enum list)",
-      "type":"string"
-    },
-    "ProjectMethod":{
-      "title":"Project Method",
-      "description":"Method used in sample collection (TODO enum list)",
-      "type":"string"
     },
 
     "MonitoringLocationID":{
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
     },
     "MonitoringLocationName":{
-      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName"
+      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
+      "minLength":1
     },
     "MonitoringLocationLatitude":{
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
@@ -57,10 +35,6 @@
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
     },
 
-    "MonitoringLocationHorizontalCollectionMethod": {
-      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCollectionMethod",
-      "default":"Unknown"
-    },
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCoordinateReferenceSystem",
       "default":"UNKWN"
@@ -69,34 +43,46 @@
     "MonitoringLocationRegion":{
       "title":"Monitoring Location Region",
       "description":"Region name",
-      "type":"string"
+      "type":"string",
+      "maxLength": 255
     },
     "MonitoringLocationType":{
-      "$ref":"../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationType"
+      "$ref":"./definitions.json#/MonitoringLocationType"
     },
     "MonitoringLocationWaterbody":{
       "title":"Monitoring Location Waterbody",
       "description":"Waterbody name at location",
-      "type":"string"
+      "type":"string",
+      "maxLength": 255
     },
 
     "ActivityType":{
-      "$ref":"../node_modules/wqx/json-schema/definitions.json#/ActivityType"
+      "$ref":"./definitions.json#/ActivityType"
     },
     "ActivityMediaName":{
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/ActivityMediaName",
-      "default":"Water"
+      "default":"Surface Water"
     },
-    "ActivityStartTimestamp":{
-      "title":"Activity Start Timestamp",
-      "description":"Activity Start Timestamp in ISO format",
-      "$ref":"#/definitions/timestamp"
+    "ActivityStartDateTime":{
+      "title":"Activity Start Date-Time",
+      "description":"Activity Start Date Time in ISO format",
+      "$ref":"#/definitions/datetime"
     },
-    "ActivityEndTimestamp":{
-      "title":"Activity End Timestamp",
-      "description":"Activity End Timestamp in ISO format",
-      "$ref":"#/definitions/timestamp",
+    "ActivityStartTimeZone":{
+      "title":"Activity Start Timezone",
+      "description":"",
+      "$ref":"#/definitions/timezone"
+    },
+    "ActivityEndDateTime":{
+      "title":"Activity End Date-Time",
+      "description":"Activity End Date Time in ISO format",
+      "$ref":"#/definitions/datetime",
       "TODO":"** Have it default to StartTimestamp"
+    },
+    "ActivityEndTimeZone":{
+      "title":"Activity End Timezone",
+      "description":"",
+      "$ref":"#/definitions/timezone"
     },
     "ActivityDepthHeightMeasure":{
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
@@ -141,7 +127,8 @@
     "ResultAnalyticalMethodName":{
       "title":"Result Analytical Method Name",
       "description":"Name of the analytical method",
-      "type":"string"
+      "type":"string",
+      "maxLength":100
     },
     "ResultAnalyticalMethodContext":{
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodContext"
@@ -149,11 +136,23 @@
     "LaboratoryName":{
       "$ref":"../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
     },
+    "LaboratorySampleID":{
+      "title":"Laboratory Sample ID",
+      "description":"Unique identifier for the lab sample",
+      "type":"string",
+      "maxLength":60
+    },
 
-    "AnalysisStartTimestamp":{
-      "title":"Analysis Start Timestamp",
-      "description":"AnalysisStartTimestamp in ISO format",
-      "$ref":"#/definitions/timestamp"
+    "AnalysisStartDateTime":{
+      "title":"Analysis Start Date Time",
+      "description":"AnalysisStartDateTime in ISO format",
+      "$ref":"#/definitions/datetime"
+    },
+
+    "AnalysisStartTimeZone":{
+      "title":"Analysis Start Timezone",
+      "description":"",
+      "$ref":"#/definitions/timezone"
     },
 
     "ResultDetectionQuantitationLimitType":{
@@ -168,10 +167,7 @@
 
   },
   "required":[
-    "ProgramName",
-
     "ProjectName",
-    "ProjectMethod",
 
     "MonitoringLocationName",
     "MonitoringLocationLatitude",
@@ -180,10 +176,14 @@
 
     "ActivityType",
     "ActivityMediaName",
-    "ActivityStartTimestamp",
+    "ActivityStartDateTime",
+    "ActivityStartTimeZone",
     "CharacteristicName",
     "ResultSampleFraction",
     "ResultValue",
     "ResultUnit"
-  ]
+  ],
+  "switch":{
+    if `ResultValue` blank `ResultDetectionCondition` is certain values `ResultDetectionLimitMeasure` & `ResultDetectionLimitUnit` are required
+  }
 }

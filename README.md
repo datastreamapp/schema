@@ -15,32 +15,27 @@
   <a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>
 </p>
 
-## Additions
-### Program
-A higher level than Project that can contain multiple Projects.
-
-- `ProgramName` - 
-- `ProgramDescription` - 
-- `ProgramType` - 
-
-### Project
-- `ProjectStatus` - 
-- `ProjectMethod` - 
+## Additions / Differences
 
 ### Location
-- `MonitoringLocationRegion` - Equivalent to using `Monitoring Location Country Code` from the WQX.
+- `MonitoringLocationHorizontalCoordinateReferenceSystem` - defaults to `UNKWN`
+- `MonitoringLocationRegion` - Equivalent to using `Monitoring Location County Code` from the WQX. Can be a Canadian Watershed, but left flexible to any type of region.
+- `MonitoringLocationType` - Added `Wetland` to the allowed values.
 - `MonitoringLocationWaterbody` - 
 
 ### Activity
-- `ActivityStartTimestamp` - A consolidation of `ActivityStartDate`, `ActivityStartTime`, and `ActivityStartTimeZone`
-- `ActivityEndTimestamp` - A consolidation of `ActivityEndDate`, `ActivityEndTime`, and `ActivityEndTimeZone`
-- `ResultAnalyticalMethodName` - 
-- `AnalysisStartTimestamp` - A consolidation of `AnalysisStartDate`, `AnalysisStartTime`, and `AnalysisStartTimeZone`
+- `ActivityType` - Added `Quality Control`, `Sample`, `Other` to the allowed values.
+- `ActivityMediaName` - only one right now - used for conditional statements - default to `Surface Water` *** name change?
 
-## Differences
-- `MonitoringLocationHorizontalCollectionMethod` - Defaults to `Unknown`
-- `MonitoringLocationHorizontalCoordinateReferenceSystem` - defaults to `UNKWN`
+- `ActivityStartDateTime` - A consolidation of `ActivityStartDate`, `ActivityStartTime`
+- `ActivityEndDateTime` - A consolidation of `ActivityEndDate`, `ActivityEndTime`
 - `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
+- `ResultAnalyticalMethodName` - 
+- `AnalysisStartDateTime` - A consolidation of `AnalysisStartDate`, `AnalysisStartTime`
+- `LabratorySampleID` - 
+
+- `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`
+
 
 ### Naming
 We opted for `CamelCase` for header names to reduce `csv` parsing issues and improving `R` imports.
@@ -51,7 +46,7 @@ In WQX the use of `State` and `County` are used. These are very `USA` specific, 
 ### Dates, Times, and Timezones
 In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated against timezone acronyms, these acronyms, however, do not scale internationally. Because of this, we've joined these fields into one, `Timestamp`, that will follow [`ISO 8601`](https://en.wikipedia.org/wiki/ISO_8601) standard (ex. 2018-02-14T18:59:59-0600).
 
-Alternatively, the use of [`tz`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered and opted against due to the increased complexity involved compared to `ISO 8601`.
+Alternatively, the use of [`IANA Time Zone Database`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered, and opted against due to the increased complexity involved compared to `ISO 8601`.
 
 Both of these solutions also decrease errors with the uncertainty that can come up with daylight savings time.
 
@@ -95,10 +90,7 @@ npm publish
 ## References
 - [WQX](https://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
-
-## TODO
-- [ ] add file level definitions to help minimize size
-- [ ] script to build json table schema
+- [Watersheds](https://open.canada.ca/data/en/dataset/dc639a40-8893-11e0-96ca-6cf049291510) - possible list for `MonitoringLocationRegion`
 
 <div align="center">
   <h3>Maintained By</h3>
