@@ -17,6 +17,9 @@
 
 ## Additions / Differences
 
+### Project
+- `ProjectName` - Upped maxLength to 255.
+
 ### Location
 - `MonitoringLocationHorizontalCoordinateReferenceSystem` - defaults to `UNKWN`
 - `MonitoringLocationRegion` - Equivalent to using `Monitoring Location County Code` from the WQX. Can be a Canadian Watershed, but left flexible to any type of region.

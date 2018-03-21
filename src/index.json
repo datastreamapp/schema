@@ -16,9 +16,11 @@
       "maxLength": 5
     }
   },
+  "additionalProperties":false,
   "properties": {
     "ProjectName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ProjectName"
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ProjectName",
+      "maxLength":255
     },
     "MonitoringLocationID": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
@@ -160,6 +162,7 @@
     "MonitoringLocationName",
     "MonitoringLocationLatitude",
     "MonitoringLocationLongitude",
+    "MonitoringLocationHorizontalCoordinateReferenceSystem",
     "MonitoringLocationType",
     "ActivityType",
     "ActivityMediaName",

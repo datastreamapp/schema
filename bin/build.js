@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS activity_data (
                         }  else if (field.type === 'string') {
                             sql += ` TEXT`;
                         } else if (field.type === 'number') {
-                            sql += ` DECIMAL(6)`;
+                            sql += ` NUMERIC`;
                         }
 
                         if (field.default) {
@@ -111,9 +111,10 @@ CREATE UNIQUE INDEX IF NOT EXISTS pkey ON activity_data (
   MonitoringLocationLatitude,
   MonitoringLocationLongitude,
   ActivityStartTimestamp,
-  SampleCollectionEquipmentName,
-  ResultAnalyticalMethodName,
-  AnalysisStartTimestamp
+  ActivityEndTimestamp,
+  CharacteristicName,
+  ResultSampleFraction,
+  ResultAnalyticalMethodID
 );
 `;
 
