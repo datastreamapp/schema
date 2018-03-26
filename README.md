@@ -66,15 +66,23 @@ We're build out `csv` template to follow `R` import/export best practices. It ca
 ```javascript
 const Ajv = require('ajv');
 const jsonschema = requrie('datastream-wqx/json-schema');
-```
 
-### Browser
-```html
+const ajv = new Ajv({
+    v5: true,
+    format:'full',
+    coerceTypes: true,
+    allErrors: true,
+    useDefaults: true
+});
 
-```
+const validate = ajv.compile(jsonschema);
 
-```javascript
+let data = {}; // your data, must not be const
 
+// like data will be coming from csv and will have blanks in the form of empty string
+Object.keys(data).forEach((key) => (data[key] == null || data[key] === '') && delete data[key]);
+
+const valid = validate(data);
 ```
 
 ## Contributing
