@@ -16,11 +16,11 @@
       "maxLength": 5
     }
   },
-  "additionalProperties":false,
+  "additionalProperties": false,
   "properties": {
     "ProjectName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ProjectName",
-      "maxLength":255
+      "maxLength": 255
     },
     "MonitoringLocationID": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
@@ -37,6 +37,7 @@
     },
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCoordinateReferenceSystem",
+      "type": "string",
       "default": "UNKWN"
     },
     "MonitoringLocationRegion": {
@@ -174,15 +175,26 @@
   "oneOf": [
     {
       "required": [
-        "ResultValue",
-        "ResultUnit"
+        "ResultValue"
       ]
     },
     {
       "required": [
-        "ResultDetectionQuantitationLimitMeasure",
-        "ResultDetectionQuantitationLimitUnit"
+        "ResultDetectionCondition"
       ]
     }
-  ]
+  ],
+  "dependencies": {
+    "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
+    "ResultValue": ["ResultUnit"],
+    "ResultDetectionCondition": ["ResultDetectionQuantitationLimitMeasure"],
+    "ResultDetectionQuantitationLimitMeasure": [
+      "ResultDetectionQuantitationLimitUnit",
+      "ResultDetectionQuantitationLimitType"
+    ],
+    "ResultAnalyticalMethodID": [
+      "ResultAnalyticalMethodContext",
+      "ResultAnalyticalMethodName"
+    ]
+  }
 }
