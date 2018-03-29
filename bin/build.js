@@ -2,6 +2,7 @@ const util = require('util');
 const path = require('path');
 const fs = require('fs');
 
+const changeCase = require('change-case');
 const glob = util.promisify(require('glob'));
 const $RefParser = require('json-schema-ref-parser');
 const writeFile = util.promisify(fs.writeFile);
@@ -71,14 +72,16 @@ glob(srcGlob)
 
                     // ## sql
                     let sql = `
-CREATE TABLE IF NOT EXISTS activity_data (
-  UploadId                        VARCHAR(60) NOT NULL,
-  UploadTimestamp                 TIMESTAMP DEFAULT NOW(),
+CREATE SCHEMA IF NOT EXISTS samples;
+CREATE TABLE IF NOT EXISTS samples.data (
+  tenant                           VARCHAR(60) NOT NULL,
+  upload_id                        VARCHAR(60) NOT NULL,
+  upload_timestamp                 TIMESTAMP DEFAULT NOW(),
 `;
                     for(let i = 0, l = columns.length; i<l; i++) {
                         const key = columns[i];
                         if (key.indexOf('TimeZone') !== -1) continue;   // covered by previous column (DateTime)
-                        sql += `  ${key.replace('DateTime', 'Timestamp')}`;
+                        sql += `  ${changeCase.snake(key.replace('DateTime', 'Timestamp'))}`;
 
                         const field = schemaJSON.properties[key];
 
@@ -106,15 +109,25 @@ CREATE TABLE IF NOT EXISTS activity_data (
                     sql += `
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS pkey ON activity_data (
-  UploadId,
-  MonitoringLocationLatitude,
-  MonitoringLocationLongitude,
-  ActivityStartTimestamp,
-  ActivityEndTimestamp,
-  CharacteristicName,
-  ResultSampleFraction,
-  ResultAnalyticalMethodID
+CREATE UNIQUE INDEX IF NOT EXISTS pkey ON samples.data (
+  upload_id,
+  monitoring_location_latitude,
+  monitoring_location_longitude,
+  activity_start_timestamp,
+  activity_end_timestamp,
+  characteristic_name,
+  result_sample_fraction,
+  result_analytical_method_id
+);
+
+CREATE TABLE IF NOT EXISTS samples.meta (
+  upload_id     VARCHAR(60) UNIQUE NOT NULL,
+  program_id    INTEGER,
+  user_id       VARCHAR(64) NOT NULL,
+  title         VARCHAR(255),
+  description   TEXT,
+  created       TIMESTAMP DEFAULT NOW(),
+  modified      TIMESTAMP DEFAULT NOW()
 );
 `;
 

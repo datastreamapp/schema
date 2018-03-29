@@ -127,7 +127,7 @@
       "maxLength": 100
     },
     "ResultAnalyticalMethodContext": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodContext"
+      "$ref": "./definitions.json#/ResultAnalyticalMethodContext"
     },
     "LaboratoryName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"

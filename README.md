@@ -35,6 +35,8 @@
 - `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
 - `ResultAnalyticalMethodName` - 
 - `AnalysisStartDateTime` - A consolidation of `AnalysisStartDate`, `AnalysisStartTime`
+- `ResultAnalyticalMethodName` - Added for readability
+- `ResultAnalyticalMethodContext` - Added `VMV` to allowed values.
 - `LabratorySampleID` - 
 
 - `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`
