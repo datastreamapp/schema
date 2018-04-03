@@ -57,17 +57,17 @@ Both of these solutions also decrease errors with the uncertainty that can come 
 
 ## Install
 ```bash
-$ npm i datastream-wqx
+$ npm i @datastream/schema
 ```
 
 ## Use
 ### CSV Template
-We're build out `csv` template to follow `R` import/export best practices. It can be found `datastream-wqx/csv/template.csv`.
+We're build out `csv` template to follow `R` import/export best practices. It can be found `@datastream/schema/csv/template.csv`.
 
-### nodeJS
+### NodeJS
 ```javascript
 const Ajv = require('ajv');
-const jsonschema = requrie('datastream-wqx/json-schema');
+const jsonschema = requrie('@datastream/schema/json-schema');
 
 const ajv = new Ajv({
     v5: true,
@@ -85,6 +85,15 @@ let data = {}; // your data, must not be const
 Object.keys(data).forEach((key) => (data[key] == null || data[key] === '') && delete data[key]);
 
 const valid = validate(data);
+```
+
+### Browser
+```html
+<script src=""></script>
+```
+```js
+TODO
+
 ```
 
 ## Contributing
