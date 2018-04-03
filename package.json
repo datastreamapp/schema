@@ -26,6 +26,7 @@
   "homepage": "https://github.com/gordonfn/datastream-wqx#readme",
   "devDependencies": {
     "ajv": "^6.4.0",
+    "ajv-pack": "^0.3.1",
     "chai": "^4.1.2",
     "change-case": "^3.0.2",
     "glob": "^7.1.2",

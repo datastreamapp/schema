@@ -5,11 +5,16 @@ const fs = require('fs');
 const changeCase = require('change-case');
 const glob = util.promisify(require('glob'));
 const $RefParser = require('json-schema-ref-parser');
+const Ajv = require('ajv'); // version >= 4.7.4
+const pack = require('ajv-pack');
+
+const ajv = new Ajv({sourceCode: true}); // this option is required
 const writeFile = util.promisify(fs.writeFile);
 
 console.log('Building JSON Schema & JSON Table Schema & CSV Template');
 
 const srcGlob = __dirname+'/../src/*.json';    // Note files starting w/ `definitions.` will be skipped in code
+const ajvFile = __dirname+'/../dist/ajv/index.js';
 const csvFile = __dirname+'/../dist/csv/template.csv';
 const sqlFile = __dirname+'/../dist/sql/index.sql';
 const jsonSchemaDir = __dirname+'/../dist/json-schema';
@@ -131,7 +136,12 @@ CREATE TABLE IF NOT EXISTS samples.meta (
 );
 `;
 
+                    // compiled ajv
+                    const validate = ajv.compile(schemaJSON);
+                    const moduleCode = pack(ajv, validate);
+
                     return Promise.all([
+                        writeFile(ajvFile, moduleCode, {encoding:'utf8'}),
                         writeFile(csvFile, csv, {encoding:'utf8'}),
                         writeFile(jsonSchemaFile, JSON.stringify(schemaJSON, null, 2), {encoding:'utf8'}),
                         writeFile(jsonTableSchemaFile, JSON.stringify(table, null, 2), {encoding:'utf8'}),
