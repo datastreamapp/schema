@@ -11,7 +11,7 @@ const pack = require('ajv-pack');
 const ajv = new Ajv({sourceCode: true}); // this option is required
 const writeFile = util.promisify(fs.writeFile);
 
-console.log('Building JSON Schema & JSON Table Schema & CSV Template');
+console.log('Compile: JSON Schema & JSON Table Schema & CSV Template');
 
 const srcGlob = __dirname+'/../src/*.json';    // Note files starting w/ `definitions.` will be skipped in code
 const ajvFile = __dirname+'/../dist/ajv/index.js';
@@ -155,19 +155,18 @@ CREATE TABLE IF NOT EXISTS samples.meta (
         });
         return Promise.all(arr);
     })
-    .then(() => {
-        console.log('Done!');
-    })
     .catch((err) => {
         console.error('Error: glob', err);
+    })
+    .then(() => {
+        console.log('Compile: Complete');
+        console.log('Copy package.json');
+        const npm = require(__dirname+'/../package.json');
+
+        delete npm.scripts;
+        delete npm.devDependencies;
+
+        fs.writeFileSync(__dirname+'/../dist/package.json', JSON.stringify(npm, null, 2), {encoding:'utf8'});
+
+        console.log('Done!');
     });
-
-console.log('Copy package.json');
-const npm = require(__dirname+'/../package.json');
-
-delete npm.scripts;
-delete npm.devDependencies;
-
-fs.writeFileSync(__dirname+'/../dist/package.json', JSON.stringify(npm, null, 2), {encoding:'utf8'});
-
-console.log('Done!');
