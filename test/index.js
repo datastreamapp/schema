@@ -1,8 +1,8 @@
 const expect = require('chai').expect;
 
-const istanbul = require('istanbul');
+//const istanbul = require('istanbul');
 const Ajv = require('ajv');
-const ajvIstanbul = require('ajv-istanbul');
+//const ajvIstanbul = require('ajv-istanbul');
 const schema = require('../dist/json-schema');
 
 const ajv = new Ajv({
@@ -12,7 +12,7 @@ const ajv = new Ajv({
     allErrors: true,
     useDefaults: true
 });
-ajvIstanbul(ajv);
+//ajvIstanbul(ajv);
 const validate = ajv.compile(schema);
 
 const checkMissingProperty = (errors, keyword, property) => {
