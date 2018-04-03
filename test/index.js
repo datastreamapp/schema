@@ -1,6 +1,8 @@
 const expect = require('chai').expect;
 
+const istanbul = require('istanbul');
 const Ajv = require('ajv');
+const ajvIstanbul = require('ajv-istanbul');
 const schema = require('../dist/json-schema');
 
 const ajv = new Ajv({
@@ -10,7 +12,7 @@ const ajv = new Ajv({
     allErrors: true,
     useDefaults: true
 });
-
+ajvIstanbul(ajv);
 const validate = ajv.compile(schema);
 
 const checkMissingProperty = (errors, keyword, property) => {
@@ -128,3 +130,28 @@ describe('DataStream Schema', function () {
     });
 
 });
+
+
+// Print out coverage report
+// const collector = new istanbul.Collector();
+// const reporter = new istanbul.Reporter();
+// const sync = true;
+//
+// collector.add(global.__coverage__);
+//
+// reporter.add('text');
+// reporter.addAll([ 'lcov', 'html' ]);
+//
+// const oldLog = console.log;
+// let logged;
+// console.log = (str) => {
+//     logged = str;
+// };
+//
+// reporter.write(collector, sync, function () {
+//     console.log = oldLog;
+//     console.log('Coverage Report');
+//     console.log(logged);
+// });
+
+
