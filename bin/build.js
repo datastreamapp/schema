@@ -20,6 +20,13 @@ const sqlFile = __dirname+'/../dist/sql/index.sql';
 const jsonSchemaDir = __dirname+'/../dist/json-schema';
 const jsonTableSchemaDir = __dirname+'/../dist/json-table-schema';
 
+const repalce = (str) => {
+    // fix typos in wqx allowed values
+    return str
+        .repalce('ug/L', 'µg/L');
+
+}
+
 glob(srcGlob)
     .then((files) => {
         const arr = [];
@@ -141,10 +148,10 @@ CREATE TABLE IF NOT EXISTS samples.meta (
                     const moduleCode = pack(ajv, validate);
 
                     return Promise.all([
-                        writeFile(validateFile, moduleCode, {encoding:'utf8'}),
+                        writeFile(validateFile, repalce(moduleCode), {encoding:'utf8'}),
                         writeFile(csvFile, csv, {encoding:'utf8'}),
-                        writeFile(jsonSchemaFile, JSON.stringify(schemaJSON, null, 2), {encoding:'utf8'}),
-                        writeFile(jsonTableSchemaFile, JSON.stringify(table, null, 2), {encoding:'utf8'}),
+                        writeFile(jsonSchemaFile, repalce(JSON.stringify(schemaJSON, null, 2)), {encoding:'utf8'}),
+                        writeFile(jsonTableSchemaFile, repalce(JSON.stringify(table, null, 2)), {encoding:'utf8'}),
                         writeFile(sqlFile, sql, {encoding:'utf8'})
                     ]);
                 })
