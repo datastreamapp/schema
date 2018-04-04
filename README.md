@@ -41,6 +41,8 @@
 
 - `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`
 
+### Typo Corrections
+- `ug/L` -> `ug/L`
 
 ### Naming
 We opted for `CamelCase` for header names to reduce `csv` parsing issues and improving `R` imports.
