@@ -8,7 +8,14 @@ const $RefParser = require('json-schema-ref-parser');
 const Ajv = require('ajv'); // version >= 4.7.4
 const pack = require('ajv-pack');
 
-const ajv = new Ajv({sourceCode: true}); // this option is required
+const ajv = new Ajv({
+    v5: true,
+    format: 'full',
+    coerceTypes: true,
+    allErrors: true,
+    useDefaults: true,
+    sourceCode: true    // this option is required
+});
 const writeFile = util.promisify(fs.writeFile);
 
 console.log('Compile: JSON Schema & JSON Table Schema & CSV Template');
