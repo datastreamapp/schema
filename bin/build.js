@@ -14,7 +14,7 @@ const writeFile = util.promisify(fs.writeFile);
 console.log('Compile: JSON Schema & JSON Table Schema & CSV Template');
 
 const srcGlob = __dirname+'/../src/*.json';    // Note files starting w/ `definitions.` will be skipped in code
-const ajvFile = __dirname+'/../dist/ajv/index.js';
+const validateFile = __dirname+'/../dist/validate/index.js';
 const csvFile = __dirname+'/../dist/csv/template.csv';
 const sqlFile = __dirname+'/../dist/sql/index.sql';
 const jsonSchemaDir = __dirname+'/../dist/json-schema';
@@ -141,7 +141,7 @@ CREATE TABLE IF NOT EXISTS samples.meta (
                     const moduleCode = pack(ajv, validate);
 
                     return Promise.all([
-                        writeFile(ajvFile, moduleCode, {encoding:'utf8'}),
+                        writeFile(validateFile, moduleCode, {encoding:'utf8'}),
                         writeFile(csvFile, csv, {encoding:'utf8'}),
                         writeFile(jsonSchemaFile, JSON.stringify(schemaJSON, null, 2), {encoding:'utf8'}),
                         writeFile(jsonTableSchemaFile, JSON.stringify(table, null, 2), {encoding:'utf8'}),
