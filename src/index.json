@@ -60,7 +60,7 @@
     },
     "ActivityMediaName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityMediaName",
-      "default": "Surface Water"
+      "default": "Water"
     },
     "ActivityStartDateTime": {
       "title": "Activity Start Date-Time",
