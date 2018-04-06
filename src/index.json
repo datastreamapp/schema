@@ -182,6 +182,7 @@
     "ResultAnalyticalMethodID": [
       "ResultAnalyticalMethodContext",
       "ResultAnalyticalMethodName"
-    ]
+    ],
+    "AnalysisStartTime":["AnalysisStartTimeZone"]
   }
 }
