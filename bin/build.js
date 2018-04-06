@@ -30,7 +30,7 @@ const jsonTableSchemaDir = __dirname+'/../dist/json-table-schema';
 const repalce = (str) => {
     // fix typos in wqx allowed values
     return str
-        .replace('ug/l', 'µg/l');
+        //.replace('ug/l', 'µg/l'); // opted to keep u
 
 }
 

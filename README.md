@@ -27,25 +27,19 @@
 - `MonitoringLocationWaterbody` - Meta data
 
 ### Activity
-- `ActivityType` - Added `Quality Control`, `Sample`, `Other` to the allowed values.
-- `ActivityMediaName` - only one right now - used for conditional statements - default to `Surface Water` *** name change?
+- `ActivityType` - Added `Quality Control` to the allowed values.
+- `ActivityMediaName` - defaults to `Water`
 
-- `ActivityStartDateTime` - A consolidation of `ActivityStartDate`, `ActivityStartTime`
-- `ActivityEndDateTime` - A consolidation of `ActivityEndDate`, `ActivityEndTime`
 - `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
-- `ResultAnalyticalMethodName` - 
-- `AnalysisStartDateTime` - A consolidation of `AnalysisStartDate`, `AnalysisStartTime`
 - `ResultAnalyticalMethodName` - Added for readability
 - `ResultAnalyticalMethodContext` - Added `VMV` to allowed values.
-- `LabratorySampleID` - 
+- `LabratorySampleID` - Meta data
 
 - `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`
 
-### Typo Corrections
-- `ug/L` -> `ug/L`
 
 ### Naming
-We opted for `CamelCase` for header names to reduce `csv` parsing issues and improving `R` imports.
+We opted for `PascalCase` for header names to reduce `csv` parsing issues and improving `R` imports.
 
 ### Locations
 In WQX the use of `State` and `County` are used. These are very `USA` specific, thus we have chosen to use `MonitoringLocationRegion` to allow for a broader meaning that can be applied internationally.
@@ -56,6 +50,8 @@ In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated agains
 Alternatively, the use of [`IANA Time Zone Database`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered, and opted against due to the increased complexity involved compared to `ISO 8601`.
 
 Both of these solutions also decrease errors with the uncertainty that can come up with daylight savings time.
+
+In the case where a latitude and longitude is present, we infer the timezone from the date at the location. Code snippet can be made available upon request.
 
 ## Install
 ```bash
@@ -69,7 +65,7 @@ We're build out `csv` template to follow `R` import/export best practices. It ca
 ### NodeJS
 ```javascript
 const Ajv = require('ajv');
-const jsonschema = requrie('@datastream/schema/json-schema');
+const jsonschema = require('@datastream/schema/json-schema');
 
 const ajv = new Ajv({
     v5: true,
@@ -81,7 +77,7 @@ const ajv = new Ajv({
 
 const validate = ajv.compile(jsonschema);
 
-let data = {}; // your data, must not be const
+let data = {}; // must not be const to allow coerce of types
 
 // like data will be coming from csv and will have blanks in the form of empty string
 Object.keys(data).forEach((key) => (data[key] == null || data[key] === '') && delete data[key]);
@@ -95,7 +91,9 @@ const valid = validate(data);
 ```
 ```js
 TODO
-
+const validate = require('@datastream/schema/validate');
+let data = {}; // must not be const to allow coerce of types
+const valid = validate(data);
 ```
 
 ## Contributing

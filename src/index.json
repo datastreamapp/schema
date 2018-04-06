@@ -4,11 +4,6 @@
   "description": "DataStream WQX Results",
   "type": "object",
   "definitions": {
-    "datetime": {
-      "description": "Timestamp in ISO 8601 format",
-      "type": "string",
-      "format": "date-time"
-    },
     "timezone": {
       "description": "ISO 8601 Timezone",
       "type": "string",
@@ -62,26 +57,18 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityMediaName",
       "default": "Water"
     },
-    "ActivityStartDateTime": {
-      "title": "Activity Start Date-Time",
-      "description": "Activity Start Date Time in ISO format",
-      "$ref": "#/definitions/datetime"
+    "ActivityStartDate": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityStartDate"
     },
-    "ActivityStartTimeZone": {
-      "title": "Activity Start Timezone",
-      "description": "",
-      "$ref": "#/definitions/timezone"
+    "ActivityStartTime": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityStartTime"
     },
-    "ActivityEndDateTime": {
-      "title": "Activity End Date-Time",
-      "description": "Activity End Date Time in ISO format",
-      "$ref": "#/definitions/datetime",
+    "ActivityEndDate": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityEndDate",
       "TODO": "** Have it default to StartTimestamp"
     },
-    "ActivityEndTimeZone": {
-      "title": "Activity End Timezone",
-      "description": "",
-      "$ref": "#/definitions/timezone"
+    "ActivityEndTime": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityEndTime"
     },
     "ActivityDepthHeightMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
@@ -138,10 +125,11 @@
       "type": "string",
       "maxLength": 60
     },
-    "AnalysisStartDateTime": {
-      "title": "Analysis Start Date Time",
-      "description": "AnalysisStartDateTime in ISO format",
-      "$ref": "#/definitions/datetime"
+    "AnalysisStartDate": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/AnalysisStartDate"
+    },
+    "AnalysisStartTime": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/AnalysisStartTime"
     },
     "AnalysisStartTimeZone": {
       "title": "Analysis Start Timezone",
@@ -167,8 +155,7 @@
     "MonitoringLocationType",
     "ActivityType",
     "ActivityMediaName",
-    "ActivityStartDateTime",
-    "ActivityStartTimeZone",
+    "ActivityStartDate",
     "CharacteristicName",
     "ResultSampleFraction"
   ],
