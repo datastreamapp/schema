@@ -95,18 +95,18 @@ CREATE SCHEMA IF NOT EXISTS samples;
 CREATE TABLE IF NOT EXISTS samples.data (
   tenant                           VARCHAR(60) NOT NULL,
   upload_id                        VARCHAR(60) NOT NULL,
-  upload_timestamp                 TIMESTAMP DEFAULT NOW(),
+  upload_timestamp                 TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
 `;
                     for(let i = 0, l = columns.length; i<l; i++) {
                         const key = columns[i];
-                        if (key.indexOf('TimeZone') !== -1) continue;   // covered by previous column (DateTime)
-                        sql += `  ${changeCase.snake(key.replace('DateTime', 'Timestamp'))}`;
+                        if (key.indexOf('Time') !== -1) continue;   // covered by previous column (DateTime)
+                        sql += `  ${changeCase.snake(key.replace('Date', 'Timestamp'))}`;
 
                         const field = schemaJSON.properties[key];
 
                         if (field.type === 'string' && field.maxLength) {
                             sql += ` VARCHAR(${field.maxLength})`;
-                        } else if (field.type === 'string' && field.format === 'date-time') {
+                        } else if (field.type === 'string' && field.format === 'date') {
                             sql += ` TIMESTAMP WITH TIME ZONE`;
                         }  else if (field.type === 'string') {
                             sql += ` TEXT`;
@@ -138,8 +138,13 @@ CREATE UNIQUE INDEX IF NOT EXISTS pkey ON samples.data (
   result_sample_fraction,
   result_analytical_method_id
 );
+CREATE INDEX IF NOT EXISTS tenant_idx ON samples.data (tenant);
+CREATE INDEX IF NOT EXISTS upload_id_idx ON samples.data (upload_id);
+CREATE INDEX IF NOT EXISTS latitude_idx ON samples.data (monitoring_location_latitude);
+CREATE INDEX IF NOT EXISTS longitude_idx ON samples.data (monitoring_location_longitude);
 
 CREATE TABLE IF NOT EXISTS samples.meta (
+  tenant        VARCHAR(60) NOT NULL,
   upload_id     VARCHAR(60) UNIQUE NOT NULL,
   program_id    INTEGER,
   user_id       VARCHAR(64) NOT NULL,

@@ -18,7 +18,7 @@
 ## Additions / Differences
 
 ### Project
-- `ProjectName` - Upped maxLength to 255.
+- `DatasetName` - Equivalent to `ProjectName` with maxLength set to 255.
 
 ### Location
 - `MonitoringLocationHorizontalCoordinateReferenceSystem` - defaults to `UNKWN`
