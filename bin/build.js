@@ -91,11 +91,11 @@ glob(srcGlob)
 
                     // ## sql
                     let sql = `
-CREATE SCHEMA IF NOT EXISTS samples;
-CREATE TABLE IF NOT EXISTS samples.data (
+CREATE SCHEMA IF NOT EXISTS datasets;
+CREATE TABLE IF NOT EXISTS datasets.data (
   tenant                           VARCHAR(60) NOT NULL,
-  upload_id                        VARCHAR(60) NOT NULL,
-  upload_timestamp                 TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  id                               VARCHAR(60) NOT NULL,
+  create_timestamp                 TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
 `;
                     for(let i = 0, l = columns.length; i<l; i++) {
                         const key = columns[i];
@@ -128,8 +128,8 @@ CREATE TABLE IF NOT EXISTS samples.data (
                     sql += `
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS pkey ON samples.data (
-  upload_id,
+CREATE UNIQUE INDEX IF NOT EXISTS pkey ON datasets.data (
+  id,
   monitoring_location_latitude,
   monitoring_location_longitude,
   activity_start_timestamp,
@@ -138,14 +138,14 @@ CREATE UNIQUE INDEX IF NOT EXISTS pkey ON samples.data (
   result_sample_fraction,
   result_analytical_method_id
 );
-CREATE INDEX IF NOT EXISTS tenant_idx ON samples.data (tenant);
-CREATE INDEX IF NOT EXISTS upload_id_idx ON samples.data (upload_id);
-CREATE INDEX IF NOT EXISTS latitude_idx ON samples.data (monitoring_location_latitude);
-CREATE INDEX IF NOT EXISTS longitude_idx ON samples.data (monitoring_location_longitude);
+CREATE INDEX IF NOT EXISTS tenant_idx ON datasets.data (tenant);
+CREATE INDEX IF NOT EXISTS upload_id_idx ON datasets.data (upload_id);
+CREATE INDEX IF NOT EXISTS latitude_idx ON datasets.data (monitoring_location_latitude);
+CREATE INDEX IF NOT EXISTS longitude_idx ON datasets.data (monitoring_location_longitude);
 
-CREATE TABLE IF NOT EXISTS samples.meta (
+CREATE TABLE IF NOT EXISTS datasets.meta (
   tenant        VARCHAR(60) NOT NULL,
-  upload_id     VARCHAR(60) UNIQUE NOT NULL,
+  id            VARCHAR(60) UNIQUE NOT NULL,
   program_id    INTEGER,
   user_id       VARCHAR(64) NOT NULL,
   title         VARCHAR(255),

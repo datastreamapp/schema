@@ -147,7 +147,7 @@
     }
   },
   "required": [
-    "ProjectName",
+    "DatasetName",
     "MonitoringLocationName",
     "MonitoringLocationLatitude",
     "MonitoringLocationLongitude",
