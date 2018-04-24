@@ -1,6 +1,6 @@
 {
   "name": "@datastream/schema",
-  "version": "2.1.0-beta.6",
+  "version": "2.1.0-beta.7",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "ajv": "^6.4.0",
     "ajv-istanbul": "^0.1.0",
     "ajv-pack": "^0.3.1",
+    "ajv-keywords": "git@github.com:willfarrell/ajv-keywords.git#feature/coerce",
     "chai": "^4.1.2",
     "change-case": "^3.0.2",
     "glob": "^7.1.2",
