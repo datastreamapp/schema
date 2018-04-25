@@ -1,20 +1,7 @@
 const expect = require('chai').expect
 
-//const istanbul = require('istanbul');
-const Ajv = require('ajv')
-//const ajvIstanbul = require('ajv-istanbul');
 const schema = require('../dist/json-schema')
-
-const ajv = new Ajv({
-  v5: true,
-  format: 'full',
-  coerceTypes: true,
-  allErrors: true,
-  useDefaults: true
-})
-require('ajv-keywords')(ajv, ['switch','transform'])
-//ajvIstanbul(ajv);
-const validate = ajv.compile(schema)
+const validate = require('../dist/validate')
 
 const checkMissingProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {

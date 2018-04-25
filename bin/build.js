@@ -5,7 +5,7 @@ const fs = require('fs')
 const changeCase = require('change-case')
 const glob = util.promisify(require('glob'))
 const $RefParser = require('json-schema-ref-parser')
-const Ajv = require('ajv') // version >= 4.7.4
+const Ajv = require('ajv')
 const pack = require('ajv-pack')
 
 const ajv = new Ajv({
@@ -16,7 +16,7 @@ const ajv = new Ajv({
   useDefaults: true,
   sourceCode: true    // this option is required
 })
-require('ajv-keywords')(ajv, ['switch','transform'])
+require('ajv-keywords')(ajv, ['switch'])  // TODO Note doesn't transform data
 
 const writeFile = util.promisify(fs.writeFile)
 
