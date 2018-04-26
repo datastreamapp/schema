@@ -253,12 +253,16 @@
         ]
       }
     },
-    "required":["ResultDetectionCondition"]
+    "required": [
+      "ResultDetectionCondition"
+    ]
   },
   "then": {
-    "required": [
-      "ResultDetectionQuantitationLimitMeasure"
-    ]
+    "dependencies": {
+      "ResultDetectionCondition": [
+        "ResultDetectionQuantitationLimitMeasure"
+      ]
+    }
   },
   "dependencies": {
     "ActivityDepthHeightMeasure": [
