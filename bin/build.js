@@ -46,7 +46,8 @@ glob(srcGlob)
 
       console.log('Processing:', file)
 
-      const jsonSchemaFile = jsonSchemaDir + '/' + file
+      const jsonSchemaFileJSON = jsonSchemaDir + '/' + file
+      const jsonSchemaFileJS = jsonSchemaDir + '/' + file.substr(0,file.length-2)
       const jsonTableSchemaFile = jsonTableSchemaDir + '/' + file
 
       const deref = $RefParser.dereference(filePath)
@@ -150,7 +151,8 @@ CREATE INDEX IF NOT EXISTS sample_longitude_idx ON datastream.samples (monitorin
           return Promise.all([
             writeFile(validateFile, replace(moduleCode), {encoding: 'utf8'}),
             writeFile(csvFile, csv, {encoding: 'utf8'}),
-            writeFile(jsonSchemaFile, replace(JSON.stringify(schemaJSON, null, 2)), {encoding: 'utf8'}),
+            writeFile(jsonSchemaFileJSON, replace(JSON.stringify(schemaJSON, null, 2)), {encoding: 'utf8'}),
+            writeFile(jsonSchemaFileJS, `module.exports = ${replace(JSON.stringify(schemaJSON, null, 2))}`, {encoding: 'utf8'}),
             writeFile(jsonTableSchemaFile, replace(JSON.stringify(table, null, 2)), {encoding: 'utf8'}),
             writeFile(sqlFile, sql, {encoding: 'utf8'})
           ])
