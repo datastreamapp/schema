@@ -104,7 +104,7 @@ describe('DataStream Schema', function () {
         'ResultDetectionCondition':'Present Above Quantification Limit'
       });
       expect(valid).to.equal(false);
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true);
+      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true);
       done();
     });
 
@@ -113,7 +113,7 @@ describe('DataStream Schema', function () {
         'ResultDetectionCondition':'Present Below Quantification Limit'
       });
       expect(valid).to.equal(false);
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true);
+      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true);
       done();
     });
 
@@ -122,7 +122,7 @@ describe('DataStream Schema', function () {
         'ResultDetectionCondition':''
       });
       expect(valid).to.equal(false);
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false);
+      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false);
       done();
     });
 

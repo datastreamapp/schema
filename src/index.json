@@ -215,8 +215,7 @@
     "ActivityType",
     "ActivityMediaName",
     "ActivityStartDate",
-    "CharacteristicName",
-    "ResultSampleFraction"
+    "CharacteristicName"
   ],
   "oneOf": [
     {
