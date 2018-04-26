@@ -33,7 +33,10 @@
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCoordinateReferenceSystem",
       "default": "UNKWN",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "MonitoringLocationRegion": {
       "title": "Monitoring Location Region",
@@ -43,7 +46,10 @@
     },
     "MonitoringLocationType": {
       "$ref": "./definitions.json#/MonitoringLocationType",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "MonitoringLocationWaterbody": {
       "title": "Monitoring Location Waterbody",
@@ -53,12 +59,18 @@
     },
     "ActivityType": {
       "$ref": "./definitions.json#/ActivityType",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ActivityMediaName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityMediaName",
       "default": "Water",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ActivityStartDate": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityStartDate"
@@ -79,38 +91,62 @@
     },
     "ActivityDepthHeightUnit": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightUnit",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "SampleCollectionEquipmentName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/SampleCollectionEquipmentName",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ResultDetectionCondition": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionCondition",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "CharacteristicName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/CharacteristicName",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "MethodSpeciation": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MethodSpeciation",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ResultSampleFraction": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultSampleFraction",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ResultValue": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
     },
     "ResultUnit": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultUnit",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ResultStatusID": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultStatusID",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ResultComment": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
@@ -126,7 +162,10 @@
     },
     "ResultAnalyticalMethodContext": {
       "$ref": "./definitions.json#/ResultAnalyticalMethodContext",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "LaboratoryName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
@@ -150,14 +189,20 @@
     },
     "ResultDetectionQuantitationLimitType": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitType",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "ResultDetectionQuantitationLimitMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
     },
     "ResultDetectionQuantitationLimitUnit": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitUnit",
-      "transform":["trim","toEnumCase"]
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     }
   },
   "required": [
@@ -176,57 +221,62 @@
   "oneOf": [
     {
       "required": [
-        "ResultValue","ResultAnalyticalMethodID"
+        "ResultValue",
+        "ResultAnalyticalMethodID"
       ]
     },
     {
       "required": [
-        "ResultValue","ResultAnalyticalMethodName"
+        "ResultValue",
+        "ResultAnalyticalMethodName"
       ]
     },
     {
       "required": [
-        "ResultDetectionCondition","ResultAnalyticalMethodID"
+        "ResultDetectionCondition",
+        "ResultAnalyticalMethodID"
       ]
     },
     {
       "required": [
-        "ResultDetectionCondition","ResultAnalyticalMethodName"
+        "ResultDetectionCondition",
+        "ResultAnalyticalMethodName"
       ]
     }
   ],
-  "switch":[
-    {
-      "if":{
-        "properties":{
-          "ResultDetectionCondition":{"enum":["Present Above Quantification Limit","Present Below Quantification Limit"]}
-        }
-      },
-      "then":{
-        "required":["ResultDetectionQuantitationLimitMeasure"]
+  "if": {
+    "properties": {
+      "ResultDetectionCondition": {
+        "enum": [
+          "Present Above Quantification Limit",
+          "Present Below Quantification Limit"
+        ]
       }
     },
-    {
-      "if":{
-        "properties":{
-          "ResultDetectionCondition":{"not":{"enum":["Present Above Quantification Limit","Present Below Quantification Limit"]}}
-        }
-      },
-      "then":{
-        "properties":{
-          "ResultDetectionQuantitationLimitMeasure":{"type":"null"}
-        }
-      }
-    }
-  ],
+    "required":["ResultDetectionCondition"]
+  },
+  "then": {
+    "required": [
+      "ResultDetectionQuantitationLimitMeasure"
+    ]
+  },
   "dependencies": {
-    "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
-    "ResultValue": ["ResultUnit"],
+    "ActivityDepthHeightMeasure": [
+      "ActivityDepthHeightUnit"
+    ],
+    "ResultValue": [
+      "ResultUnit"
+    ],
     "ResultDetectionQuantitationLimitMeasure": [
       "ResultDetectionQuantitationLimitUnit",
       "ResultDetectionQuantitationLimitType"
     ],
-    "ResultAnalyticalMethodID": ["ResultAnalyticalMethodContext"],
-    "AnalysisStartTime":["AnalysisStartDate","AnalysisStartTimeZone"]
+    "ResultAnalyticalMethodID": [
+      "ResultAnalyticalMethodContext"
+    ],
+    "AnalysisStartTime": [
+      "AnalysisStartDate",
+      "AnalysisStartTimeZone"
+    ]
   }
 }

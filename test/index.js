@@ -108,14 +108,24 @@ describe('DataStream Schema', function () {
       done();
     });
 
+    it('ResultDetectionCondition true', function (done) {
+      const valid = validate({
+        'ResultDetectionCondition':'Present Below Quantification Limit'
+      });
+      expect(valid).to.equal(false);
+      expect(checkMissingProperty(validate.errors, 'required', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true);
+      done();
+    });
+
     it('ResultDetectionCondition false', function (done) {
       const valid = validate({
-        'ResultDetectionCondition':false
+        'ResultDetectionCondition':''
       });
       expect(valid).to.equal(false);
       expect(checkMissingProperty(validate.errors, 'required', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false);
       done();
     });
+
   })
 
   describe('Should require dependencies', function () {
