@@ -65,7 +65,6 @@
     },
     "ActivityMediaName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityMediaName",
-      "default": "Water",
       "transform": [
         "trim",
         "toEnumCase"

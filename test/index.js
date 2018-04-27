@@ -20,8 +20,7 @@ describe('DataStream Schema', function () {
     expect(valid).to.equal(false)
 
     expect(data.MonitoringLocationHorizontalCoordinateReferenceSystem).to.equal('UNKWN')
-    expect(data.ActivityMediaName).to.equal('Water')
-    expect(Object.keys(data).length).to.equal(2)
+    expect(Object.keys(data).length).to.equal(1)
 
     done()
   })
