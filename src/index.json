@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "DataStream",
   "description": "DataStream WQX Results",
   "type": "object",

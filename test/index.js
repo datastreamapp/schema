@@ -40,6 +40,45 @@ describe('DataStream Schema', function () {
     done()
   })
 
+  it('Should not require properties', function (done) {
+    const valid = validate({
+      "DatasetName":"Test",
+      "MonitoringLocationID":"A1",
+      "MonitoringLocationName":"A1 Test",
+      "MonitoringLocationLatitude":"51.0486",
+      "MonitoringLocationLongitude":"-114.0708",
+      "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
+      "MonitoringLocationRegion":"Calgary",
+      "MonitoringLocationType":"Atmosphere",
+      "MonitoringLocationWaterbody":"Elbow River",
+      "ActivityType":"Field Msr/Obs",
+      "ActivityMediaName":"Water",
+      "ActivityDepthHeightMeasure":"-34",
+      "ActivityDepthHeightUnit":"m",
+      "SampleCollectionEquipmentName":"Bongo Net",
+      "CharacteristicName":"(E)-Dimethomorph",
+      "MethodSpeciation":"as B",
+      "ResultSampleFraction":"Dissolved",
+      "ResultValue":"99.99",
+      "ResultUnit":"#/100ml",
+      "ResultStatusID":"Accepted",
+      "ResultComment":"None at this time",
+      "ResultAnalyticalMethodID":"1",
+      "ResultAnalyticalMethodContext":"APHA",
+      "ActivityStartDate":"2018-02-23",
+      "ActivityStartTime":"13:15:00",
+      "ActivityEndDate":"2018-02-23",
+      "ActivityEndTime":"13:15:00",
+      "LaboratoryName":"Farrell Labs",
+      "LaboratorySampleID":"101010011110",
+      "AnalysisStartDate":"2018-02-23",
+      "AnalysisStartTime":"13:15:00",
+      "AnalysisStartTimeZone":"-0600"
+    })
+    expect(valid).to.equal(true)
+    done()
+  })
+
   describe('Should enforce conditional required', function () {
     it('ResultValue & ResultDetectionCondition', function (done) {
       const valid = validate({})
