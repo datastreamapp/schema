@@ -32,7 +32,6 @@ describe('DataStream Schema', function () {
     // check required error out
     schema.required.forEach((property) => {
       if (property === 'MonitoringLocationHorizontalCoordinateReferenceSystem') return
-      if (property === 'ActivityMediaName') return
       expect(checkMissingProperty(validate.errors, 'required', property)).to.equal(true)
     })
 

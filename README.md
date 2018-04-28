@@ -32,6 +32,7 @@
 
 - `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
 - `ResultAnalyticalMethodName` - Added for readability
+- `ResultAnalyticalMethodID` - Removed allowed values
 - `ResultAnalyticalMethodContext` - Added `VMV` to allowed values.
 - `LabratorySampleID` - Meta data
 

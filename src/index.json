@@ -150,7 +150,10 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
     },
     "ResultAnalyticalMethodID": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodID"
+      "title":"Result Analytical Method ID",
+      "description":"",
+      "type":"string",
+      "maxLength":20
     },
     "ResultAnalyticalMethodName": {
       "title": "Result Analytical Method Name",
