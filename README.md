@@ -28,7 +28,7 @@
 
 ### Activity
 - `ActivityType` - Added `Quality Control` to the allowed values.
-- `ActivityMediaName` - defaults to `Water`
+- `ActivityMediaName` - Added `Surface Water`
 
 - `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
 - `ResultAnalyticalMethodName` - Added for readability

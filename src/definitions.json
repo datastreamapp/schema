@@ -176,6 +176,23 @@
       "Sample-Routine Resample"
     ]
   },
+  "ActivityMediaName": {
+    "title": "Activity Media Name",
+    "description": "Medium in which sample or measurement was taken (example: Water, Sediment, etc.)",
+    "type": "string",
+    "enum": [
+      "Surface Water",
+      "Air",
+      "Biological",
+      "Habitat",
+      "Other",
+      "Sediment",
+      "Soil",
+      "Tissue",
+      "Water"
+    ],
+    "maxLength": 10
+  },
   "ResultAnalyticalMethodContext": {
     "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodContext",
     "enum": [

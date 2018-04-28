@@ -64,7 +64,7 @@
       ]
     },
     "ActivityMediaName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityMediaName",
+      "$ref": "./definitions.json#/ActivityMediaName",
       "transform": [
         "trim",
         "toEnumCase"
