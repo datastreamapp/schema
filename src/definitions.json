@@ -190,8 +190,7 @@
       "Soil",
       "Tissue",
       "Water"
-    ],
-    "maxLength": 10
+    ]
   },
   "ResultAnalyticalMethodContext": {
     "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodContext",
