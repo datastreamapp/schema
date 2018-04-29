@@ -221,49 +221,81 @@
   "oneOf": [
     {
       "required": [
-        "ResultValue",
-        "ResultAnalyticalMethodID"
+        "ResultValue"
       ]
     },
     {
       "required": [
-        "ResultValue",
-        "ResultAnalyticalMethodName"
-      ]
-    },
-    {
-      "required": [
-        "ResultDetectionCondition",
-        "ResultAnalyticalMethodID"
-      ]
-    },
-    {
-      "required": [
-        "ResultDetectionCondition",
-        "ResultAnalyticalMethodName"
+        "ResultDetectionCondition"
       ]
     }
   ],
-  "if": {
-    "properties": {
-      "ResultDetectionCondition": {
-        "enum": [
-          "Present Above Quantification Limit",
-          "Present Below Quantification Limit"
+  "switch": [
+    {
+      "if": {
+        "properties": {
+          "ResultDetectionCondition": {
+            "enum": [
+              "Present Above Quantification Limit",
+              "Present Below Quantification Limit"
+            ]
+          }
+        },
+        "required": [
+          "ResultDetectionCondition"
+        ]
+      },
+      "then": {
+        "dependencies": {
+          "ResultDetectionCondition": [
+            "ResultDetectionQuantitationLimitMeasure"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "ResultAnalyticalMethodID"
+        ]
+      },
+      "then": {
+        "oneOf": [
+          {
+            "required": [
+              "ResultAnalyticalMethodID"
+            ]
+          },
+          {
+            "required": [
+              "ResultAnalyticalMethodName"
+            ]
+          }
         ]
       }
     },
-    "required": [
-      "ResultDetectionCondition"
-    ]
-  },
-  "then": {
-    "dependencies": {
-      "ResultDetectionCondition": [
-        "ResultDetectionQuantitationLimitMeasure"
-      ]
+    {
+      "if": {
+        "required": [
+          "ResultAnalyticalMethodName"
+        ]
+      },
+      "then": {
+        "oneOf": [
+          {
+            "required": [
+              "ResultAnalyticalMethodID"
+            ]
+          },
+          {
+            "required": [
+              "ResultAnalyticalMethodName"
+            ]
+          }
+        ]
+      }
     }
-  },
+  ],
   "dependencies": {
     "ActivityDepthHeightMeasure": [
       "ActivityDepthHeightUnit"

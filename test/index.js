@@ -73,12 +73,13 @@ describe('DataStream Schema', function () {
       "AnalysisStartTime":"13:15:00",
       "AnalysisStartTimeZone":"-0600"
     })
+    //console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })
 
   describe('Should enforce conditional required', function () {
-    it('ResultValue & ResultDetectionCondition', function (done) {
+    it('NOT ResultValue & NOT ResultDetectionCondition', function (done) {
       const valid = validate({})
       expect(valid).to.equal(false)
       expect(checkMissingProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
@@ -98,25 +99,23 @@ describe('DataStream Schema', function () {
 
     it('ResultDetectionCondition', function (done) {
       const valid = validate({
-        'ResultDetectionCondition': true,
-        'ResultAnalyticalMethodID': true
+        'ResultDetectionCondition': true
       })
       expect(valid).to.equal(false)
       expect(checkMissingProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
       done()
     })
 
-    it('ResultAnalyticalMethodID & ResultAnalyticalMethodName', function (done) {
+    it('NOT ResultAnalyticalMethodID & NOT ResultAnalyticalMethodName', function (done) {
       const valid = validate({})
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(true)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(true)
+      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
+      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
       done()
     })
 
     it('ResultAnalyticalMethodID', function (done) {
       const valid = validate({
-        'ResultValue': true,
         'ResultAnalyticalMethodID': true
       })
       expect(valid).to.equal(false)
@@ -126,11 +125,21 @@ describe('DataStream Schema', function () {
 
     it('ResultAnalyticalMethodName', function (done) {
       const valid = validate({
-        'ResultValue': true,
         'ResultAnalyticalMethodName': true
       })
       expect(valid).to.equal(false)
       expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodIDResultAnalyticalMethodID')).to.equal(false)
+      done()
+    })
+
+    it('ResultAnalyticalMethodID & ResultAnalyticalMethodName', function (done) {
+      const valid = validate({
+        'ResultAnalyticalMethodID': true,
+        'ResultAnalyticalMethodName': true
+      })
+      expect(valid).to.equal(false)
+      //console.log(JSON.stringify(validate.errors, null, 2))
+      // TODO add test
       done()
     })
   })
