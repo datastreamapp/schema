@@ -19,8 +19,8 @@ describe('DataStream Schema', function () {
     const valid = validate(data)
     expect(valid).to.equal(false)
 
-    expect(data.MonitoringLocationHorizontalCoordinateReferenceSystem).to.equal('UNKWN')
-    expect(Object.keys(data).length).to.equal(1)
+    //expect(data.MonitoringLocationHorizontalCoordinateReferenceSystem).to.equal('UNKWN')
+    expect(Object.keys(data).length).to.equal(0)
 
     done()
   })

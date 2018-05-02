@@ -31,7 +31,6 @@
     },
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCoordinateReferenceSystem",
-      "default": "UNKWN",
       "transform": [
         "trim",
         "toEnumCase"
