@@ -253,6 +253,14 @@
       }
     },
     {
+      "if":{ "$ref":"./definitions.switch-if-characteristic-name.json"},
+      "then":{
+        "required": [
+          "ResultSampleFraction"
+        ]
+      }
+    },
+    {
       "if": {
         "required": [
           "ResultAnalyticalMethodID"

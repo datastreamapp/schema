@@ -172,6 +172,15 @@ describe('DataStream Schema', function () {
       done();
     });
 
+    it('CharacteristicName true', function (done) {
+      const valid = validate({
+        'CharacteristicName':'Silver'
+      });
+      expect(valid).to.equal(false);
+      expect(checkMissingProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(true);
+      done();
+    });
+
   })
 
   describe('Should require dependencies', function () {
