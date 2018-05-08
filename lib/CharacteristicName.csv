@@ -1,68 +1,68 @@
 CharacteristicName,Sample Fraction Required,Common
-Chlorophyll a,No,Y
-Chlorophyll a (probe),No,Y
-"Chlorophyll a, corrected for pheophytin",No,Y
-"Depth, Secchi disk depth",No,Y
-Inorganic carbon,Yes,Y
+"Alkalinity, total",No,Y
 Aluminum,Yes,Y
+Ammonia,No,Y
+Ammonia-nitrogen,Yes,Y
+Antimony,Yes,Y
+Arsenic,Yes,Y
 Barium,Yes,Y
 Beryllium,Yes,Y
 Cadmium,Yes,Y
+Calcium,Yes,Y
 Cesium,No,Y
+Chloride,Yes,Y
+Chlorophyll a,No,Y
+Chlorophyll a (probe),No,Y
+"Chlorophyll a, corrected for pheophytin",No,Y
 Chromium,Yes,Y
 Cobalt,No,Y
-Copper,Yes,Y
-Iron,Yes,Y
-Lead,Yes,Y
-Lithium,Yes,Y
-Manganese,Yes,Y
-Mercury,Yes,Y
-Molybdenum,Yes,Y
-Nickel,Yes,Y
-Rubidium,Yes,Y
-Silver,Yes,Y
-Strontium,No,Y
-Thallium,Yes,Y
-Titanium,Yes,Y
-Vanadium,No,Y
-Zinc,No,Y
-Antimony,Yes,Y
-Arsenic,Yes,Y
-Selenium,Yes,Y
-Calcium,Yes,Y
-Magnesium,Yes,Y
-Potassium,No,Y
-Sodium,Yes,Y
-Chloride,Yes,Y
-Fluoride,Yes,Y
-Sulfate,Yes,Y
-Total carbon,No,Y
-Ammonia,No,Y
-Ammonia-nitrogen,Yes,Y
-Inorganic nitrogen (nitrate and nitrite),No,Y
-Kjeldahl nitrogen,No,Y
-Nitrate,No,Y
-Nitrite,No,Y
-Nitrogen,Yes,Y
-Orthophosphate,No,Y
-Phosphorus,No,Y
-Soluble Reactive Phosphorus (SRP),No,Y
-Methylmercury(1+),Yes,Y
-Organic carbon,Yes,Y
-"Alkalinity, total",No,Y
 Conductivity,No,Y
+Copper,Yes,Y
+"Depth, Secchi disk depth",No,Y
 Dissolved oxygen (DO),No,Y
 Dissolved oxygen saturation,No,Y
+Fluoride,Yes,Y
 "Hardness, Ca, Mg",No,Y
 "Hardness, carbonate",No,Y
 "Hardness, non-carbonate",No,Y
+Inorganic carbon,Yes,Y
+Inorganic nitrogen (nitrate and nitrite),No,Y
+Iron,Yes,Y
+Kjeldahl nitrogen,No,Y
+Lead,Yes,Y
+Lithium,Yes,Y
+Magnesium,Yes,Y
+Manganese,Yes,Y
+Mercury,Yes,Y
+Methylmercury(1+),Yes,Y
+Molybdenum,Yes,Y
+Nickel,Yes,Y
+Nitrate,No,Y
+Nitrite,No,Y
+Nitrogen,Yes,Y
+Organic carbon,Yes,Y
+Orthophosphate,No,Y
 Oxidation reduction potential (ORP),No,Y
 pH,No,Y
+Phosphorus,No,Y
+Potassium,No,Y
+Rubidium,Yes,Y
+Selenium,Yes,Y
+Silver,Yes,Y
+Sodium,Yes,Y
+Soluble Reactive Phosphorus (SRP),No,Y
+Strontium,No,Y
+Sulfate,Yes,Y
 "Temperature, water",No,Y
+Thallium,Yes,Y
+Titanium,Yes,Y
+Total carbon,No,Y
 Total dissolved solids,No,Y
 Total suspended solids,No,Y
 Turbidity,No,Y
 Uranium,No,Y
+Vanadium,No,Y
+Zinc,No,Y
 ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid",Yes,
 .alpha.-Chlordene,Yes,
 .alpha.-Endosulfan,Yes,
@@ -830,7 +830,6 @@ Algal growth potential,No,
 Aliphatics fraction,Yes,
 Alkaline phosphatase,No,
 "Alkalinity, Phenolphthalein (total hydroxide+1/2 carbonate)",Yes,
-"Alkalinity, total",No,
 Alkane mix C10-C34,Yes,
 "Alkanes, total",Yes,
 Allethrin,No,
@@ -839,7 +838,6 @@ Allyl isothiocyanate,Yes,
 Alpha particle,No,
 Alprazolam,No,
 Altitude,No,
-Aluminum,No,
 Aluminum sulfate,Yes,
 "Aluminum, Organic + Inorganic Monomeric (reactive aluminum)",Yes,
 "Aluminum, Organic Monomeric (reactive aluminum)",Yes,
@@ -850,9 +848,7 @@ Aminocarb,No,
 Aminomethylphosphonic acid,Yes,
 Amitriptyline,Yes,
 Amitrole,Yes,
-Ammonia,No,
 Ammonia uptake,No,
-Ammonia-nitrogen,No,
 Ammonium,Yes,
 Ammonium bromide,Yes,
 Ammonium hydroxide,Yes,
@@ -879,7 +875,6 @@ Anise oil,Yes,
 Anisole,No,
 Anthracene,Yes,
 Anthraquinone,Yes,
-Antimony,Yes,
 Antimony potassium tartrate,Yes,
 Antimony-124,Yes,
 Antimony-125,No,
@@ -917,7 +912,6 @@ Aroclor 1262,Yes,
 Aroclor 1268,Yes,
 Aroclor 5442,Yes,
 Aromatics fraction,Yes,
-Arsenic,Yes,
 Arsenic ion (3+),Yes,
 Arsenic ion (5+),Yes,
 Arsenic pentafluoride,Yes,
@@ -969,7 +963,6 @@ Bank erosion stability (choice list),No,
 Bank vegetative stability (choice list),No,
 Barban,No,
 Barite,No,
-Barium,Yes,
 Barium-133,Yes,
 Barium-140,No,
 Barium-lanthanum,Yes,
@@ -1042,7 +1035,6 @@ Benzoyl chloride,Yes,
 Benzyl alcohol,No,
 Benzyl chloride,Yes,
 Benzyl ethyl ether,Yes,
-Beryllium,Yes,
 Beryllium-7,No,
 Beta particle,No,
 "BHC, .beta.-BHC & .gamma.-BHC mix, unspecified",Yes,
@@ -1177,9 +1169,7 @@ C8 Hydrocarbons,Yes,
 C8-C10 Aliphatics,Yes,
 C8-C10 Aromatics,Yes,
 Cacodylic acid,No,
-Cadmium,Yes,
 Caffeine,No,
-Calcium,No,
 Calcium carbonate,No,
 Calcium hydroxide,No,
 Calcium oxide,No,
@@ -1228,7 +1218,6 @@ Cephalothin,Yes,
 Cerium,No,
 Cerium-141,Yes,
 Cerium-144,No,
-Cesium,Yes,
 Cesium-134,No,
 Cesium-136,Yes,
 Cesium-137,No,
@@ -1260,7 +1249,6 @@ Chlordiazepoxide,No,
 Chlordimeform,No,
 Chlorfenson,No,
 Chlorfenvinphos,Yes,
-Chloride,No,
 Chlorimuron-ethyl,Yes,
 "Chlorinated dioxins and furans -- 2,3,7,8 congeners only",No,
 Chlorinated naphthalenes,Yes,
@@ -1285,10 +1273,7 @@ Chloroneb,No,
 Chloronitrobenzene,No,
 Chlorophenol,No,
 Chlorophyll,No,
-Chlorophyll a,Yes,
 Chlorophyll a (probe relative fluorescence),No,
-Chlorophyll a (probe),Yes,
-"Chlorophyll a, corrected for pheophytin",Yes,
 "Chlorophyll a, free of pheophytin",No,
 "Chlorophyll a, uncorrected for pheophytin",No,
 Chlorophyll b,Yes,
@@ -1312,7 +1297,6 @@ Chlorthal-dimethyl,No,
 Chlorthal-Monomethyl,No,
 Chlorthion,No,
 Cholesterol,No,
-Chromium,Yes,
 Chromium-51,No,
 Chromium(III),Yes,
 Chromium(VI),Yes,
@@ -1345,7 +1329,6 @@ Cloud cover,No,
 Cloud cover (choice list),No,
 Cloud type (choice list),No,
 Coal,No,
-Cobalt,Yes,
 Cobalt-57,Yes,
 Cobalt-58,No,
 Cobalt-60,No,
@@ -1359,8 +1342,6 @@ Codeine,No,
 "Coliphage, Somatic",No,
 Colored dissolved organic matter (CDOM),Yes,
 Compass / Tilt (probe),No,
-Conductivity,Yes,
-Copper,Yes,
 Copper Sulfate Pentahydrate,No,
 Coprosterol,Yes,
 "Corrosion & scaling control, Langelier Saturation Index",No,
@@ -1455,7 +1436,6 @@ Depth,No,
 "Depth, data-logger (non-ported)",No,
 "Depth, data-logger (ported)",No,
 "Depth, from ground surface to well water level",No,
-"Depth, Secchi disk depth",Yes,
 "Depth, Secchi disk depth (choice list)",No,
 "Depth, snow cover",No,
 Desipramine,Yes,
@@ -1596,8 +1576,6 @@ Diquat dibromide,Yes,
 Disruptive Pressures,No,
 Dissolved gases,No,
 Dissolved inorganic nitrogen/soluble reactive phosphorus ratio,No,
-Dissolved oxygen (DO),Yes,
-Dissolved oxygen saturation,Yes,
 Dissolved oxygen uptake,No,
 Distance from/to,No,
 "Distillates (petroleum), hydrofined lubricating-oil",No,
@@ -1773,7 +1751,6 @@ Fluoranthene,Yes,
 "Fluoranthenes + pyrenes mix, unspecified",Yes,
 Fluorene,Yes,
 Fluorescein,Yes,
-Fluoride,No,
 Fluorine,No,
 Fluorobenzene,No,
 Fluoroboric acid,No,
@@ -1837,10 +1814,7 @@ Halogen,Yes,
 Halogenated organics,Yes,
 Halon 1011,No,
 Halosulfuron-methyl,Yes,
-"Hardness, Ca, Mg",Yes,
-"Hardness, carbonate",Yes,
 "Hardness, magnesium",Yes,
-"Hardness, non-carbonate",No,
 Hartmannella,No,
 Hartmannella limax,No,
 Hartmannella vermiformis,No,
@@ -1941,9 +1915,7 @@ Indene,No,
 Indium,Yes,
 Indole,No,
 Inert gases,No,
-Inorganic carbon,No,
 Inorganic monomeric aluminum,Yes,
-Inorganic nitrogen (nitrate and nitrite),Yes,
 "Instream feature, stream substrate (choice list)",No,
 Iodide,No,
 Iodine,No,
@@ -1953,7 +1925,6 @@ Ionic strength,Yes,
 Ioxynil,No,
 Iprodione,No,
 Iridium,No,
-Iron,Yes,
 Iron + aluminum mix,Yes,
 Iron + manganese mix,Yes,
 Iron sulfide (FeS),No,
@@ -1989,7 +1960,6 @@ Isoxaflutole,No,
 Kerosene,No,
 Kick Depth,No,
 Kick Time,No,
-Kjeldahl nitrogen,Yes,
 Klebsiella,No,
 Kojic acid,No,
 Kresoxim-methyl,Yes,
@@ -2014,7 +1984,6 @@ Lanthanum,No,
 Lanthanum-140,Yes,
 Larkspur alkaloid,Yes,
 Lauric acid,No,
-Lead,Yes,
 Lead monoxide,No,
 Lead-210,No,
 Lead-212,No,
@@ -2050,7 +2019,6 @@ Lindane,Yes,
 Linoleic acid,No,
 Linuron,No,
 Lipids,No,
-Lithium,Yes,
 Lithium-6,Yes,
 Lithium-7,Yes,
 Lithium-7/Lithium-6 ratio,Yes,
@@ -2078,14 +2046,12 @@ m-Xylene,Yes,
 "m,p-Xylene",No,
 Macroinvertebrates,No,
 Macrophytes covering streambed (emergent and submerged) (choice list),No,
-Magnesium,No,
 Magnetite (Fe3O4),No,
 Malaoxon,Yes,
 Malathion,No,
 Maleic anhydride,Yes,
 Mancozeb,No,
 Maneb,No,
-Manganese,Yes,
 Manganese dimethyldithiocarbamate,No,
 Manganese-54,No,
 Maple lactone,Yes,
@@ -2099,7 +2065,6 @@ Mecoprop,Yes,
 Medroxyprogesterone,Yes,
 Megestrol acetate,Yes,
 Menadione,Yes,
-Mercury,Yes,
 Meropenem,Yes,
 Merphos,No,
 Mesityl oxide,Yes,
@@ -2178,7 +2143,6 @@ Methylene dithiocyanate,No,
 Methylfluorene,Yes,
 Methylindan,Yes,
 Methylindene,No,
-Methylmercury(1+),Yes,
 Methylnaphthalene,No,
 Methylparaben,No,
 Methylphenanthrene,Yes,
@@ -2199,7 +2163,6 @@ MIOX micaceous iron oxide,Yes,
 Mirex,No,
 Moisture content,No,
 Molinate,Yes,
-Molybdenum,Yes,
 Molybdenum-99,Yes,
 Monensin,No,
 Monochlorobiphenyl,No,
@@ -2252,7 +2215,6 @@ Neomycin sulfate,Yes,
 Neosaxitoxin,No,
 Neptunium-237,No,
 Neutrals,No,
-Nickel,No,
 Nickel-63,Yes,
 Nicosulfuron,Yes,
 Nicotinamide,No,
@@ -2262,15 +2224,12 @@ Nifedipine,No,
 Niobium,No,
 Niobium-94,Yes,
 Niobium-95,No,
-Nitrate,No,
 Nitrilotriacetic acid,No,
-Nitrite,Yes,
 Nitrobenzene,Yes,
 Nitrobenzene-D5,No,
 Nitrocyclohexane,Yes,
 Nitrofen,No,
 Nitrofurantoin,Yes,
-Nitrogen,No,
 Nitrogen dioxide,No,
 Nitrogen ion,No,
 Nitrogen plus argon,Yes,
@@ -2362,14 +2321,12 @@ Oleandomycin phosphate,Yes,
 Oleic acid,No,
 Omethoate,No,
 Organic anions,Yes,
-Organic carbon,No,
 Organic Nitrogen,No,
 "Organics mix, unspecified",Yes,
 "Organics semivolatile mix, unspecified",Yes,
 "Organics volatile mix, unspecified",Yes,
 Ormetoprim,No,
 ortho & para Xylene mix,Yes,
-Orthophosphate,No,
 Oryzalin,No,
 Osmium,No,
 Osmotic pressure,No,
@@ -2378,7 +2335,6 @@ Oxadiazon,Yes,
 Oxamyl,Yes,
 Oxazepam,No,
 Oxetane,No,
-Oxidation reduction potential (ORP),No,
 Oxychlordane,Yes,
 Oxydisulfoton,No,
 Oxyfluorfen,No,
@@ -2673,7 +2629,6 @@ Petroleum phenols,Yes,
 Petroleum spirits,Yes,
 Pfiesteria,No,
 Pfiesteria piscicida,No,
-pH,Yes,
 pH Saturated Paste,No,
 Phenacetin,No,
 Phenanthrene,Yes,
@@ -2710,7 +2665,6 @@ phosphatase (corrected for carbon content),No,
 Phosphate-phosphorus,No,
 Phosphated pesticides,Yes,
 "Phosphoric acid, diethyl ester",No,
-Phosphorus,No,
 Phosphorus-32,No,
 "Phosphorus, Particulate Organic",Yes,
 Photomirex,No,
@@ -2758,7 +2712,6 @@ Pool Substrate,No,
 "Population diversity, macroinvertebrates, # of species",No,
 "Population diversity, phytoplankton, # of species",No,
 "Population diversity, zooplankton, # of species",No,
-Potassium,No,
 Potassium bisulfate,Yes,
 Potassium bitartrate,Yes,
 Potassium glycolate,Yes,
@@ -3027,7 +2980,6 @@ Ronnel,No,
 Rosgen Stream Type,No,
 Rotenone,No,
 Roxithromycin,No,
-Rubidium,No,
 Ruthenium,No,
 Ruthenium-103,Yes,
 Ruthenium-103/106,Yes,
@@ -3056,7 +3008,6 @@ Secondary productivity,Yes,
 "Sediment, inorganic, classification (choice list)",No,
 "Sediment, organic, classification (choice list)",No,
 Sediment/ Substrate Odors (choice list),No,
-Selenium,Yes,
 Selenium-75,No,
 Serratia,No,
 Sertraline,Yes,
@@ -3075,7 +3026,6 @@ Silicate,No,
 Silicate/dissolved inorganic nitrogen ratio,No,
 Silicon,No,
 Silt,No,
-Silver,Yes,
 Silver-108,Yes,
 Silver-110,No,
 Silvex,No,
@@ -3088,7 +3038,6 @@ Simultaneously extracted metals,Yes,
 Simultaneously extracted metals/acid volatile sulfides,No,
 Slow Riffle,No,
 "Sludge, substrate rock/bank cover - severity (choice list)",No,
-Sodium,No,
 Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)],No,
 Sodium C14-16-alkane hydroxy and C14-16-olefin sulfonates,Yes,
 Sodium cacodylate,Yes,
@@ -3109,7 +3058,6 @@ Sodium-22,No,
 Sodium-24,Yes,
 "Solar irradiation, global",No,
 "Solar irradiation, local",No,
-Soluble Reactive Phosphorus (SRP),No,
 Sorbitol,Yes,
 Species Rank,No,
 Species Relative Density,No,
@@ -3142,7 +3090,6 @@ Streptomycin sulfate,Yes,
 Streptozotocin,No,
 Strobane,No,
 Strong acids,No,
-Strontium,No,
 Strontium-85,Yes,
 "Strontium-87/Strontium-86, ratio",Yes,
 Strontium-89,No,
@@ -3198,7 +3145,6 @@ Sulfamethazine,No,
 Sulfamethoxazole,Yes,
 Sulfaquinoxaline,No,
 sulfatase (corrected for carbon content),No,
-Sulfate,No,
 Sulfathiazole,Yes,
 Sulfide,No,
 Sulfite,No,
@@ -3261,7 +3207,6 @@ Temperature difference,Yes,
 "Temperature, sediment",No,
 "Temperature, soil",No,
 "Temperature, tissue",No,
-"Temperature, water",No,
 "Temperature, wet bulb",No,
 Terbacil,No,
 Terbium,No,
@@ -3314,7 +3259,6 @@ Tetramethylpyrazine,No,
 Tetrapropyl dithiopyrophosphate,Yes,
 Tetratetracontane,Yes,
 Tetrodotoxin,No,
-Thallium,No,
 Thallium-208,Yes,
 Thecamoeba,No,
 Thecamoeba munda,No,
@@ -3357,17 +3301,14 @@ Tilmicosin,Yes,
 Tin,Yes,
 Tin-113,Yes,
 Tin-San,Yes,
-Titanium,No,
 Toluene,No,
 Toluene diisocyanate,No,
 Toluene-d8,Yes,
 Toluenediamine,Yes,
 Toluic acid,No,
 Toluidine,No,
-Total carbon,No,
 Total Coliform,No,
 Total Dichloro Biphenyls,No,
-Total dissolved solids,No,
 Total fixed solids,No,
 Total Heptachloro Biphenyls,No,
 Total Hexachloro Biphenyls,No,
@@ -3383,7 +3324,6 @@ Total Sample Volume,No,
 Total Sample Weight,No,
 Total solids,No,
 Total Sulfur minus Sulfate,No,
-Total suspended solids,No,
 Total Tetrachloro Biphenyls,No,
 Total Trichloro Biphenyls,No,
 Total volatile solids,No,
@@ -3495,14 +3435,12 @@ Tritium,No,
 Tritriacontane,Yes,
 True color,Yes,
 Tungsten,No,
-Turbidity,No,
 Turbidity severity (choice list),No,
 Tylosin,Yes,
 Tyrothricin,Yes,
 Undecane,Yes,
 Undecanoic acid,Yes,
 Undercut Banks (%),No,
-Uranium,No,
 Uranium 238/234 ratio,Yes,
 Uranium-234,No,
 Uranium-234/235/238,Yes,
@@ -3517,7 +3455,6 @@ Vahlkampfia,No,
 Vahlkampfia limax,No,
 Valeric acid,Yes,
 Valley Width Index,No,
-Vanadium,No,
 Vannella,No,
 Vannellidae,No,
 Velocity - stream,No,
@@ -3569,7 +3506,6 @@ Yersinia,No,
 Ytterbium,No,
 Yttrium,No,
 Yttrium-90,Yes,
-Zinc,No,
 Zinc bacitracin,Yes,
 Zinc dehydroabietylammonium 2-ethylhexanoate,Yes,
 Zinc phosphide,No,
