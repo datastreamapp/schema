@@ -1,9 +1,10 @@
 {
   "name": "@datastream/schema",
-  "version": "2.1.0-beta.21",
+  "version": "2.1.0-beta.22",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "main": "index.js",
   "scripts": {
+    "prebuild":"./bin/build-switch-if-characteristic-name.sh && ./bin/build-enum-characteristic-name.sh ",
     "build": "node ./bin/build.js",
     "test": "npm run build && mocha"
   },

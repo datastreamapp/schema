@@ -77,7 +77,7 @@
     },
     "ActivityEndDate": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityEndDate",
-      "TODO": "** Have it default to StartTimestamp"
+      "$comment": "** Have it default to StartTimestamp"
     },
     "ActivityEndTime": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityEndTime"
@@ -108,7 +108,7 @@
       ]
     },
     "CharacteristicName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/CharacteristicName",
+      "$ref":"./definitions.enum-characteristic-name.json#/CharacteristicName",
       "transform": [
         "trim",
         "toEnumCase"
@@ -132,7 +132,7 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
     },
     "ResultUnit": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultUnit",
+      "$ref": "./definitions.json#/ResultUnit",
       "transform": [
         "trim",
         "toEnumCase"
