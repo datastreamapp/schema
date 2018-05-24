@@ -198,7 +198,7 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
     },
     "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitUnit",
+      "$ref": "./definitions.json#/ResultDetectionQuantitationLimitUnit",
       "transform": [
         "trim",
         "toEnumCase"

@@ -54,7 +54,7 @@ describe('DataStream Schema', function () {
       "ActivityDepthHeightMeasure":"-34",
       "ActivityDepthHeightUnit":"m",
       "SampleCollectionEquipmentName":"Bongo Net",
-      "CharacteristicName":"(E)-Dimethomorph",
+      "CharacteristicName":"Aluminum",
       "MethodSpeciation":"as B",
       "ResultSampleFraction":"Dissolved",
       "ResultValue":"99.99",
@@ -73,7 +73,7 @@ describe('DataStream Schema', function () {
       "AnalysisStartTime":"13:15:00",
       "AnalysisStartTimeZone":"-0600"
     })
-    //console.log(validate.errors)
+    console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })
