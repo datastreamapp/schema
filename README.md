@@ -34,7 +34,7 @@
 - `ResultAnalyticalMethodID` - Removed allowed values
 - `ResultAnalyticalMethodContext` - Added `VMV` to allowed values.
 - `ResultUnit` / `ResultDetectionQuantitationLimitUnit` - Added "REL","CTU","HZN".
-- `CharacteristicName` - Added `Silver Dioxide` and `Apparent Colour`
+- `CharacteristicName` - Added `Silver Dioxide`, `Apparent Colour`, `Total Hardness`
 - `LabratorySampleID` - Meta data
 
 - `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`
