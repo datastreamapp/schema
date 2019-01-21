@@ -33,7 +33,7 @@
 - `ResultAnalyticalMethodName` - Added for readability
 - `ResultAnalyticalMethodID` - Removed allowed values
 - `ResultAnalyticalMethodContext` - Added `VMV` to allowed values.
-- `ResultUnit` / `ResultDetectionQuantitationLimitUnit` - Added "REL","CTU","HZN".
+- `ResultUnit` / `ResultDetectionQuantitationLimitUnit` - Added `REL`,`CTU`,`HZN`.
 - `CharacteristicName` - Added `Silver Dioxide`, `Apparent Colour`, `Total Hardness`
 - `LabratorySampleID` - Meta data
 

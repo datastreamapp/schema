@@ -101,7 +101,7 @@
       ]
     },
     "ResultDetectionCondition": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionCondition",
+      "$ref": "./definitions.json#/ResultDetectionCondition",
       "transform": [
         "trim",
         "toEnumCase"
@@ -122,7 +122,7 @@
       ]
     },
     "ResultSampleFraction": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultSampleFraction",
+      "$ref": "./definitions.json#/ResultSampleFraction",
       "transform": [
         "trim",
         "toEnumCase"

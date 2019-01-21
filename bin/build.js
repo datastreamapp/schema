@@ -135,13 +135,22 @@ CREATE UNIQUE INDEX IF NOT EXISTS sample_pkey ON datastream.samples (
   monitoring_location_longitude,
   activity_start_timestamp,
   activity_end_timestamp,
+  activity_type,
   characteristic_name,
+  method_speciation,
   result_sample_fraction,
   result_analytical_method_id
 );
 CREATE INDEX IF NOT EXISTS sample_project_id_idx ON datastream.samples (project_id);
-CREATE INDEX IF NOT EXISTS sample_latitude_idx ON datastream.samples (monitoring_location_latitude);
-CREATE INDEX IF NOT EXISTS sample_longitude_idx ON datastream.samples (monitoring_location_longitude);
+CREATE INDEX IF NOT EXISTS sample_monitoring_location_latitude_idx ON datastream.samples (monitoring_location_latitude);
+CREATE INDEX IF NOT EXISTS sample_monitoring_location_longitude_idx ON datastream.samples (monitoring_location_longitude);
+CREATE INDEX IF NOT EXISTS sample_activity_start_timestamp_idx ON datastream.samples (activity_start_timestamp);
+CREATE INDEX IF NOT EXISTS sample_activity_end_timestamp_idx ON datastream.samples (activity_end_timestamp);
+CREATE INDEX IF NOT EXISTS sample_activity_type_idx ON datastream.samples (activity_type);
+CREATE INDEX IF NOT EXISTS sample_characteristic_name_idx ON datastream.samples (characteristic_name);
+CREATE INDEX IF NOT EXISTS sample_method_speciation_idx ON datastream.samples (method_speciation);
+CREATE INDEX IF NOT EXISTS sample_result_sample_fraction_idx ON datastream.samples (result_sample_fraction);
+CREATE INDEX IF NOT EXISTS sample_result_analytical_method_id_idx ON datastream.samples (result_analytical_method_id);
 `
 
           // compiled ajv
