@@ -56,6 +56,16 @@ glob(srcGlob)
 
           const columns = Object.keys(schemaJSON.properties)
 
+          // ## json-schema
+          // ensure maxLength is right
+          for (let key in schemaJSON.properties) {
+            const maxLength = schemaJSON.properties[key].maxLength || 0;
+            (schemaJSON.properties[key].enum || []).forEach((value) => {
+              schemaJSON.properties[key].maxLength = Math.max(schemaJSON.properties[key].maxLength || 0, value.length);
+              if (value.length > maxLength) console.log('WARN maxLength on', key, 'should be', schemaJSON.properties[key].maxLength)
+            })
+          }
+
           // ## csv
           let csv = `"` + columns.join(`","`) + `"` + '\r\n'
 

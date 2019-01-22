@@ -620,7 +620,8 @@
       "Soil",
       "Tissue",
       "Water"
-    ]
+    ],
+    "maxLength": 13
   },
   "ResultSampleFraction": {
     "title": "Result Sample Fraction",
