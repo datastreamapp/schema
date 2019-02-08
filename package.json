@@ -1,10 +1,10 @@
 {
   "name": "@datastream/schema",
-  "version": "2.1.2",
+  "version": "2.1.4",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "main": "index.js",
   "scripts": {
-    "prebuild":"./bin/build-switch-if-characteristic-name.sh && ./bin/build-enum-characteristic-name.sh ",
+    "prebuild": "./bin/build-switch-if-characteristic-name.sh && ./bin/build-enum-characteristic-name.sh ",
     "build": "npm run prebuild && node ./bin/build.js",
     "test": "npm run build && mocha"
   },
@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/gordonfn/datastream-wqx#readme",
   "devDependencies": {
-    "ajv": "^6.4.0",
+    "ajv": "^6.8.0",
     "ajv-istanbul": "^0.1.0",
-    "ajv-keywords": "^3.2.0",
+    "ajv-keywords": "3.2.0",
     "ajv-pack": "^0.3.1",
     "chai": "^4.1.2",
     "change-case": "^3.0.2",

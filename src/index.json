@@ -152,7 +152,7 @@
       "title":"Result Analytical Method ID",
       "description":"",
       "type":"string",
-      "maxLength":20
+      "maxLength":50
     },
     "ResultAnalyticalMethodName": {
       "title": "Result Analytical Method Name",
@@ -318,8 +318,7 @@
       "ResultAnalyticalMethodContext"
     ],
     "AnalysisStartTime": [
-      "AnalysisStartDate",
-      "AnalysisStartTimeZone"
+      "AnalysisStartDate"
     ]
   }
 }

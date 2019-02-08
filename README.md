@@ -76,7 +76,7 @@ const ajv = new Ajv({
     allErrors: true,
     useDefaults: true
 });
-
+require('ajv-keywords')(ajv, ['transform']); // Optional
 const validate = ajv.compile(jsonschema);
 
 let data = {}; // must not be const to allow coerce of types

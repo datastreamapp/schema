@@ -73,7 +73,7 @@ describe('DataStream Schema', function () {
       "AnalysisStartTime":"13:15:00",
       "AnalysisStartTimeZone":"-0600"
     })
-    console.log(validate.errors)
+    //console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })
