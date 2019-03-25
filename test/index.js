@@ -58,7 +58,7 @@ describe('DataStream Schema', function () {
       "MethodSpeciation":"as B",
       "ResultSampleFraction":"Dissolved",
       "ResultValue":"99.99",
-      "ResultUnit":"#/100ml",
+      "ResultUnit":"µg",
       "ResultStatusID":"Accepted",
       "ResultComment":"None at this time",
       "ResultAnalyticalMethodID":"1",
@@ -128,7 +128,7 @@ describe('DataStream Schema', function () {
         'ResultAnalyticalMethodName': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodIDResultAnalyticalMethodID')).to.equal(false)
+      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
       done()
     })
 
