@@ -3,6 +3,11 @@
   "description": "DataStream WQX Results",
   "type": "object",
   "definitions": {
+    "time": {
+      "description": "ISO 8601 Time",
+      "type": "string",
+      "pattern": "^(2[0-3]|[01]?[0-9]):[0-5]?[0-9]:?([0-5]?[0-9])?(\\.[0-9]+)?$"
+    },
     "timezone": {
       "description": "ISO 8601 Timezone",
       "type": "string",
@@ -73,14 +78,14 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityStartDate"
     },
     "ActivityStartTime": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityStartTime"
+      "$ref": "#/definitions/time"
     },
     "ActivityEndDate": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityEndDate",
       "$comment": "** Have it default to StartTimestamp"
     },
     "ActivityEndTime": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityEndTime"
+      "$ref": "#/definitions/time"
     },
     "ActivityDepthHeightMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
@@ -180,7 +185,7 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/AnalysisStartDate"
     },
     "AnalysisStartTime": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/AnalysisStartTime"
+      "$ref": "#/definitions/time"
     },
     "AnalysisStartTimeZone": {
       "title": "Analysis Start Timezone",

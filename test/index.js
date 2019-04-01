@@ -222,6 +222,18 @@ describe('DataStream Schema', function () {
     })
   })
 
+  it('Should validate time', function(done) {
+    const valid = validate({
+
+      "ActivityStartTime":"9:15:00",
+      "ActivityEndTime":"13:15:00.000",
+      "AnalysisStartTime":"2:15"
+    })
+    console.log(validate.errors.filter((i) => i.keyword === 'pattern'))
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+    done()
+  })
+
 })
 
 // Print out coverage report
