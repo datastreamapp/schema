@@ -16,7 +16,6 @@ const ajv = new Ajv({
   useDefaults: true,
   sourceCode: true    // this option is required
 })
-require('ajv-keywords')(ajv, ['switch'])  // TODO Note doesn't transform data
 
 const writeFile = util.promisify(fs.writeFile)
 

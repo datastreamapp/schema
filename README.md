@@ -22,7 +22,7 @@
 
 ### Location
 - `MonitoringLocationRegion` - Equivalent to using `Monitoring Location County Code` from the WQX. Can be a Canadian Watershed, but left flexible to any type of region.
-- `MonitoringLocationType` - Added `Wetland` & `Lake/Pond` to the allowed values. Removed `Lake`.
+- `MonitoringLocationType` - Added `Wetland` & `Lake/Pond` to the allowed values. Removed `Lake` and others.
 - `MonitoringLocationWaterbody` - Meta data
 
 ### Activity
@@ -34,7 +34,7 @@
 - `ResultAnalyticalMethodID` - Removed allowed values
 - `ResultAnalyticalMethodContext` - Added `VMV` to allowed values.
 - `ResultUnit` / `ResultDetectionQuantitationLimitUnit` - Added `REL`,`CTU`,`HZN`.
-- `CharacteristicName` - Added `Silver Dioxide`, `Apparent Colour`, `Total Hardness`
+- `CharacteristicName` - Added `Silver Dioxide`, `Apparent Colour`, `Total Hardness`; Removed ones containing `***retired***`.
 - `LabratorySampleID` - Meta data
 
 - `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`

@@ -1,6 +1,6 @@
 {
   "name": "@datastream/schema",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "main": "index.js",
   "scripts": {
