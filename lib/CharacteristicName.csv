@@ -1,68 +1,4 @@
 CharacteristicName,Sample Fraction Required,Common,Grouping
-"Alkalinity, total",No,Y,Physical
-Aluminum,Yes,Y,"Inorganics, Minor, Metals"
-Ammonia,Yes,Y,Nutrient
-Ammonia-nitrogen,Yes,Y,Nutrient
-Antimony,Yes,Y,"Inorganics, Minor, Non-metals"
-Arsenic,Yes,Y,"Inorganics, Minor, Non-metals"
-Barium,Yes,Y,"Inorganics, Minor, Metals"
-Beryllium,Yes,Y,"Inorganics, Minor, Metals"
-Cadmium,Yes,Y,"Inorganics, Minor, Metals"
-Calcium,Yes,Y,Major ions
-Cesium,No,Y,"Inorganics, Minor, Metals"
-Chloride,Yes,Y,Major ions
-Chlorophyll a,No,Y,Biological
-Chlorophyll a (probe),No,Y,Biological
-"Chlorophyll a, corrected for pheophytin",No,Y,Biological
-Chromium,Yes,Y,"Inorganics, Minor, Metals"
-Cobalt,No,Y,"Inorganics, Minor, Metals"
-Conductivity,No,Y,Physical
-Copper,Yes,Y,"Inorganics, Minor, Metals"
-"Depth, Secchi disk depth",No,Y,Information
-Dissolved oxygen (DO),No,Y,Physical
-Dissolved oxygen saturation,No,Y,Physical
-Fluoride,Yes,Y,Major ions
-"Hardness, Ca, Mg",No,Y,Physical
-"Hardness, carbonate",No,Y,Physical
-"Hardness, non-carbonate",No,Y,Physical
-Inorganic carbon,Yes,Y,"Inorganics, Major, Non-metals"
-Inorganic nitrogen (nitrate and nitrite),Yes,Y,Nutrient
-Iron,Yes,Y,"Inorganics, Minor, Metals"
-Kjeldahl nitrogen,Yes,Y,Nutrient
-Lead,Yes,Y,"Inorganics, Minor, Metals"
-Lithium,Yes,Y,"Inorganics, Minor, Metals"
-Magnesium,Yes,Y,Major ions
-Manganese,Yes,Y,"Inorganics, Minor, Metals"
-Mercury,Yes,Y,"Inorganics, Minor, Metals"
-Methylmercury(1+),Yes,Y,"Organics, Other"
-Molybdenum,Yes,Y,"Inorganics, Minor, Metals"
-Nickel,Yes,Y,"Inorganics, Minor, Metals"
-Nitrate,Yes,Y,Nutrient
-Nitrite,Yes,Y,Nutrient
-Nitrogen,Yes,Y,Nutrient
-Organic carbon,Yes,Y,"Organics, Other"
-Orthophosphate,Yes,Y,Nutrient
-Oxidation reduction potential (ORP),No,Y,Physical
-pH,No,Y,Physical
-Phosphorus,Yes,Y,Nutrient
-Potassium,No,Y,Major ions
-Rubidium,Yes,Y,"Inorganics, Minor, Metals"
-Selenium,Yes,Y,"Inorganics, Minor, Non-metals"
-Silver,Yes,Y,"Inorganics, Minor, Metals"
-Sodium,Yes,Y,Major ions
-Soluble Reactive Phosphorus (SRP),Yes,Y,Nutrient
-Strontium,No,Y,"Inorganics, Minor, Metals"
-Sulfate,Yes,Y,Major ions
-"Temperature, water",No,Y,Physical
-Thallium,Yes,Y,"Inorganics, Minor, Metals"
-Titanium,Yes,Y,"Inorganics, Minor, Metals"
-Total carbon,No,Y,Not Assigned
-Total dissolved solids,No,Y,Physical
-Total suspended solids,No,Y,Physical
-Turbidity,No,Y,Physical
-Uranium,No,Y,Radiochemical
-Vanadium,No,Y,"Inorganics, Minor, Metals"
-Zinc,Yes,Y,"Inorganics, Minor, Metals"
 % undercut bank,No,,Information
 (-)-cis-Permethrin,Yes,,"Organics, Pesticide"
 (-)-trans-Permethrin,Yes,,"Organics, Pesticide"
@@ -278,7 +214,6 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 17.alpha.-Estradiol,No,,"Organics, Other"
 17.beta.-Estradiol-13C6,No,,"Organics, Other"
 17.beta.-Estradiol-d4,No,,"Organics, Other"
-"19-Norpregna-1,3,5(10)-trien-20-yne-3,17-diol,(17.alpha.)-***retired***use Ethinyl estradiol",No,,"Organics, Pesticide"
 1-Bromo-2-chloroethane,Yes,,"Organics, Other"
 "1-Bromo-3-chloro-5,5-dimethyl-2,4-imidazolidinedione",Yes,,"Organics, Pesticide"
 1-Bromobutane,Yes,,Not Assigned
@@ -346,12 +281,10 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 2-(p-iodophenyl)-3-(p-nitrophenyl)-5-phenyltetrazolium chloride,No,,Not Assigned
 2-(p-tert-Butylphenoxy)cyclohexanol,Yes,,Not Assigned
 "2,2',3,3',4,4',5,5',6-NOBDE",No,,Not Assigned
-"2,2',3,3',4,4',5,5',6-NOBDE***retired***use Nonabromophenoxybenzene",No,,Not Assigned
 "2,2',3,3',4,4',5,5',6-Nonachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,2',3,3',4,4',5,5'-Octabromodiphenyl ether",No,,"Organics, PCBs"
 "2,2',3,3',4,4',5,5'-Octachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,2',3,3',4,4',5,6,6'-NOBDE",No,,"Organics, PCBs"
-"2,2',3,3',4,4',5,6,6'-NOBDE***retired***use BDE-207",No,,Not Assigned
 "2,2',3,3',4,4',5,6,6'-Nonachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,2',3,3',4,4',5,6'-Octachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,2',3,3',4,4',5,6-Octachlorobiphenyl",Yes,,"Organics, PCBs"
@@ -361,8 +294,6 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 "2,2',3,3',4,4',6-Heptabromodiphenyl ether",No,,"Organics, PCBs"
 "2,2',3,3',4,4',6-Heptachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,2',3,3',4,4'-Hexachlorobiphenyl",Yes,,"Organics, PCBs"
-"2,2',3,3',4,4'-HXBDE (2,2',3,3',4,4'-HXBDE***retired*** use Hexabromodiphenyl ether)",No,,Not Assigned
-"2,2',3,3',4,4'-HXBDE***retired*** use Hexabromodiphenyl ether",No,,Not Assigned
 "2,2',3,3',4,5,5',6,6'-NOBDE",No,,"Organics, PCBs"
 "2,2',3,3',4,5,5',6,6'-Nonachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,2',3,3',4,5,5',6'-Octabromodiphenyl ether",No,,"Organics, PCBs"
@@ -593,8 +524,6 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 "2,3',4,4',5'-Pentachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,3',4,4',5-Pentachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,3',4,4',6-PEBDE",No,,"Organics, PCBs"
-"2,3',4,4',6-PEBDE/2,3',4,5,5'-PEBDE (2,3',4,4',6-PEBDE/2,3',4,5,5'-PEBDE***retired***use BDE-119/120)",Yes,,"Organics, PCBs"
-"2,3',4,4',6-PEBDE/2,3',4,5,5'-PEBDE***retired***use BDE-119/120",Yes,,"Organics, PCBs"
 "2,3,4,4',6-Pentachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,3',4,4',6-Pentachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,3,4,4'-Tetrachlorobiphenyl",Yes,,"Organics, PCBs"
@@ -639,7 +568,6 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 "2,3,5-Trichlorobiphenyl",Yes,,"Organics, PCBs"
 "2,3',5'-Trichlorobiphenyl",Yes,,"Organics, PCBs"
 "2,3',5-Trichlorobiphenyl",Yes,,"Organics, PCBs"
-"2,3,5-Trimethylnaphthalene***retired***use 1,6,7-Trimethylnaphthalene",No,,Not Assigned
 "2,3,5-trimethyl-Phenanthrene",No,,Not Assigned
 "2,3,6-Trichlorobiphenyl",Yes,,"Organics, PCBs"
 "2,3',6-Trichlorobiphenyl",Yes,,"Organics, PCBs"
@@ -664,8 +592,6 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 "2,4,4',5-Tetrachlorobiphenyl",Yes,,"Organics, PCBs"
 "2,4,4',6-TEBDE",No,,Not Assigned
 "2,4,4',6-Tetrachlorobiphenyl",Yes,,"Organics, PCBs"
-"2,4,4'-TRBDE/2',3,4-TRBDE (2,4,4'-TRBDE/2',3,4-TRBDE***retired***use BDE-28/33)",Yes,,"Organics, PCBs"
-"2,4,4'-TRBDE/2',3,4-TRBDE***retired***use BDE-28/33",Yes,,"Organics, PCBs"
 "2,4,4'-Trichlorobiphenyl",No,,"Organics, PCBs"
 "2,4,5-T",Yes,,"Organics, Pesticide"
 "2,4,5-T + Silvex",Yes,,"Organics, Pesticide"
@@ -690,9 +616,8 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 "2,4,6-Trichlorophenol",Yes,,"Organics, Pesticide"
 "2,4,6-Trimethylbenzoic acid",Yes,,Not Assigned
 "2,4,6-Trimethylphenol",Yes,,"Organics, Other"
-"2,4,6-Trinitrophenylmethylnitramine***retired*** use Tetryl",No,,Not Assigned
 "2,4,6-Tris(tert-butyl)phenol",Yes,,Not Assigned
-"2,4-D",Yes,,"Organics, Pesticide"
+"2,4-D",No,,"Organics, Pesticide"
 "2,4-D 2-butoxyethyl ester",No,,Not Assigned
 "2,4-D 2-ethylhexyl ester",No,,"Organics, Pesticide"
 "2,4-D dimethylamine salt",No,,Not Assigned
@@ -884,8 +809,6 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 "3,3',4-Trichlorobiphenyl",Yes,,"Organics, PCBs"
 "3,3',5,5'-Tetrachlorobiphenyl",Yes,,"Organics, PCBs"
 "3,3',5-Trichlorobiphenyl",Yes,,"Organics, PCBs"
-"3,3'-DIBDE (3,3'-DIBDE***retired***use 3,3'-Dibromodiphenyl ether)",No,,"Organics, PCBs"
-"3,3'-DIBDE***retired***use 3,3'-Dibromodiphenyl ether",No,,"Organics, PCBs"
 "3,3'-Dibromodiphenyl ether",No,,"Organics, PCBs"
 "3,3'-Dichlorobenzidine",Yes,,"Organics, Other"
 "3,3'-Dichlorobenzophenone",Yes,,Not Assigned
@@ -931,6 +854,7 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 "3-Hexen-2-one, 5-methyl-",No,,Not Assigned
 "3-Hexene-2,5-dione",No,,Not Assigned
 3-Hydroxycarbofuran,Yes,,"Organics, Pesticide"
+3-Iodo-2-propynyl butyl carbamate,No,,Not Assigned
 3-Ketocarbofuran,Yes,,"Organics, Pesticide"
 3-Methyl decane,No,,Not Assigned
 3-Methyl-1-butanol,No,,Not Assigned
@@ -1026,8 +950,6 @@ Zinc,Yes,Y,"Inorganics, Minor, Metals"
 4-Phenyltetradecane,Yes,,Not Assigned
 4-Phenyltridecane,Yes,,Not Assigned
 4-Phenylundecane,Yes,,Not Assigned
-4-Terphenyl-d14 (4-Terphenyl-d14***retired***use p-Terphenyl-d14),Yes,,Not Assigned
-4-Terphenyl-d14***retired***use p-Terphenyl-d14,Yes,,Not Assigned
 "5,6-Dibutyl-5,6-bis(4-tert-butylphenyl)decane",Yes,,Not Assigned
 "5,6-Dimethylbenzotriazole",No,,Not Assigned
 "5,9-Dimethylchrysene",No,,Not Assigned
@@ -1079,34 +1001,19 @@ Abietylamine,Yes,,"Organics, Pesticide"
 Absolute Humidity,No,,Not Assigned
 Acanthamoeba,No,,Microbiological
 Acanthamoeba astronyxis,No,,Microbiological
-Acanthamoeba astronyxis***retired***use Acanthamoeba astronyxis (Protozoa),No,,Not Assigned
 Acanthamoeba castellanii,No,,Microbiological
-Acanthamoeba castellanii***retired***use Acanthamoeba castellani (Protozoa),No,,Not Assigned
 Acanthamoeba comandoni,No,,Microbiological
-Acanthamoeba comandoni***retired***use Acanthamoeba comandoni (Protozoa),No,,Not Assigned
 Acanthamoeba culbertsoni,No,,Microbiological
-Acanthamoeba culbertsoni***retired***use Acanthamoeba culbertson (Protozoa),No,,Not Assigned
 Acanthamoeba griffini,No,,Microbiological
-Acanthamoeba griffini***retired***use Acanthamoeba griffini (Protozoa),No,,Not Assigned
 Acanthamoeba hatchetti,No,,Microbiological
-Acanthamoeba hatchetti***retired***use Acanthamoeba hatchetti (Protozoa),No,,Not Assigned
 Acanthamoeba hyalina,No,,Microbiological
-Acanthamoeba hyalina***retired***use Acanthamoeba hyalina (Protozoa),No,,Not Assigned
 Acanthamoeba lenticulata,No,,Microbiological
-Acanthamoeba lenticulata***retired***use Acanthamoeba lenticulata (Protozoa),No,,Not Assigned
 Acanthamoeba palestinensis,No,,Microbiological
-Acanthamoeba palestinensis***retired***use Acanthamoeba palestinensis (Protozoa),No,,Not Assigned
 Acanthamoeba polyphaga,No,,Microbiological
-Acanthamoeba polyphaga***retired***use Acanthamoeba polyphaga (Protozoa),No,,Not Assigned
 Acanthamoeba rhysodes,No,,Microbiological
-Acanthamoeba rhysodes***retired***use Acanthamoeba rhysodes (Protozoa),No,,Not Assigned
 Acanthamoeba royreba,No,,Microbiological
-Acanthamoeba royreba***retired***use Acanthamoeba royreba (Protozoa),No,,Not Assigned
 Acanthamoeba terricola,No,,Microbiological
-Acanthamoeba terricola***retired***use Acanthamoeba terricola (Protozoa),No,,Not Assigned
 Acanthamoeba tubiashi,No,,Microbiological
-Acanthamoeba tubiashi***retired***use Acanthamoeba tubiashi (Protozoa),No,,Not Assigned
-Acanthamoeba***retired***use Acanthamoeba (Protozoa),No,,Not Assigned
 Acebutolol,No,,Not Assigned
 Acenaphthene,Yes,,"Organics, Other"
 Acenaphthene-d10,No,,Not Assigned
@@ -1203,6 +1110,7 @@ Alkaline phosphatase,No,,Not Assigned
 "Alkalinity, carbonate",No,,Not Assigned
 "Alkalinity, Hydroxide",No,,Not Assigned
 "Alkalinity, Phenolphthalein (total hydroxide+1/2 carbonate)",Yes,,Physical
+"Alkalinity, total",No,Y,Physical
 Alkane mix C10-C34,Yes,,Not Assigned
 "Alkanes, Petroleum",No,,Not Assigned
 "Alkanes, Plant Wax",No,,Not Assigned
@@ -1216,6 +1124,7 @@ Alpha particle,No,,Radiochemical
 Alprazolam,No,,"Organics, Other"
 Alprazolam-D5,No,,Not Assigned
 Altitude,No,,Information
+Aluminum,Yes,Y,"Inorganics, Minor, Metals"
 Aluminum sulfate,Yes,,"Organics, Pesticide"
 "Aluminum, Organic + Inorganic Monomeric (reactive aluminum)",Yes,,"Organics, Other"
 "Aluminum, Organic Monomeric (reactive aluminum)",Yes,,"Organics, Other"
@@ -1232,8 +1141,10 @@ Amitriptyline (+/-)-E-10-hydroxylated,No,,Not Assigned
 Amitriptyline-d6,No,,Not Assigned
 Amitrole,Yes,,"Organics, Pesticide"
 Amlodipine,No,,Not Assigned
+Ammonia,Yes,Y,Nutrient
 Ammonia and ammonium,Yes,,Nutrient
 Ammonia uptake,No,,Physical
+Ammonia-nitrogen,Yes,Y,Nutrient
 Ammonium,Yes,,Nutrient
 Ammonium bromide,Yes,,Not Assigned
 Ammonium fluoride,No,,Not Assigned
@@ -1273,6 +1184,7 @@ Anthophyllite asbestos,No,,Not Assigned
 Anthracene,Yes,,"Organics, Other"
 Anthracene-d10,No,,Not Assigned
 Anthraquinone,Yes,,"Organics, Pesticide"
+Antimony,Yes,Y,"Inorganics, Minor, Non-metals"
 Antimony potassium tartrate,Yes,,"Organics, Pesticide"
 Antimony-124,Yes,,Radiochemical
 Antimony-125,No,,Radiochemical
@@ -1317,6 +1229,7 @@ Aroclor 1268,Yes,,"Organics, PCBs"
 Aroclor 5442,Yes,,"Organics, PCBs"
 Aroclor 5460,No,,"Organics, PCBs"
 Aromatics fraction,Yes,,Not Assigned
+Arsenic,Yes,Y,"Inorganics, Minor, Non-metals"
 Arsenic ion (3+),Yes,,"Inorganics, Minor, Metals"
 Arsenic ion (5+),Yes,,"Inorganics, Minor, Metals"
 Arsenic pentafluoride,Yes,,Not Assigned
@@ -1386,6 +1299,7 @@ Bank erosion stability (choice list),No,,Information
 Bank vegetative stability (choice list),No,,Information
 Barban,No,,"Organics, Pesticide"
 Barite,No,,Not Assigned
+Barium,Yes,Y,"Inorganics, Minor, Metals"
 Barium-133,Yes,,Radiochemical
 Barium-140,No,,Radiochemical
 Barium-lanthanum,Yes,,"Inorganics, Minor, Metals"
@@ -1617,17 +1531,12 @@ Benzene,No,,"Organics, Other"
 "Benzene, 1,1'-oxybis[2,4-dibromo-",No,,"Organics, PCBs"
 "Benzene, 1,1-oxybis[3,4-dibromo-",No,,Not Assigned
 "Benzene, 1,1'-oxybis[4-bromo-",No,,Not Assigned
-"Benzene, 1,2,3,4,5,6-hexabromo- ***retired**use Hexabromobenzene",Yes,,"Organics, Other"
-"Benzene, 1,2,3,4,5-pentabromo-6-(2,3,4,5-tetrabromophenoxy)-***retired***use Nonabromophenoxybenzene",No,,Not Assigned
-"Benzene, 1,2,3,4,5-pentabromo-6-(2,3,4,6-tetrabromophenoxy)-***retired***use BDE-207",No,,Not Assigned
 "Benzene, 1,2,3,4,5-pentabromo-6-(2,3,5,6-tetrabromophenoxy)-",No,,"Organics, PCBs"
 "Benzene, 1,2,3,4,5-pentabromo-6-(2,4,5-tribromophenoxy)-",No,,"Organics, PCBs"
-"Benzene, 1,2,3,4,5-pentabromo-6-(2,4-dibromophenoxy)-***retired***use 2,2',3,4,4',5,6-Heptabromodiphenyl ether",No,,"Organics, PCBs"
 "Benzene, 1,2,3,4,5-pentabromo-6-(3,4-dibromophenoxy)-",No,,Not Assigned
 "Benzene, 1,2,3,4,5-pentabromo-6-ethyl-",No,,Not Assigned
 "Benzene, 1,2,3,5-tetrabromo-4-(2,3,4,5-tetrabromophenoxy)-",No,,"Organics, PCBs"
 "Benzene, 1,2,3,5-tetrabromo-4-(2,3,4,6-tetrabromophenoxy)-",No,,"Organics, PCBs"
-"Benzene, 1,2,3,5-tetrabromo-4-(2,4,5-tribromophenoxy)-***retired***use 2,2',3,4,4',5',6-Heptabromodiphenyl ether",No,,"Organics, PCBs"
 "Benzene, 1,2,3,5-tetrabromo-4-(3,4,5-tribromophenoxy)-",No,,"Organics, PCBs"
 "Benzene, 1,2,3,5-tetrabromo-6-(2,4,6-tribromophenoxy)-",No,,Not Assigned
 "Benzene, 1,2,3-tribromo-4-(2,3,4-tribromophenoxy)-",No,,"Organics, PCBs"
@@ -1652,7 +1561,6 @@ Benzene,No,,"Organics, Other"
 "Benzene, 1,3,5-tribromo-2-(3,4-dibromophenoxy)-",No,,Not Assigned
 "Benzene, 1,3,5-tribromo-2-(4-bromophenoxy)-",No,,"Organics, PCBs"
 "Benzene, 1,3,5-tribromo-2-phenoxy-",No,,"Organics, PCBs"
-"Benzene, 1,3-dibromo-2-(2,4-dibromophenoxy)-***retired***use 2,2',4,6'-Tetrabromodiphenyl ether",No,,"Organics, PCBs"
 "Benzene, 1,3-dibromo-2-(3,4-dibromophenoxy)-",No,,"Organics, PCBs"
 "Benzene, 1,3-dibromo-2-(4-bromophenoxy)-",No,,"Organics, PCBs"
 "Benzene, 1,3-dibromo-2-phenoxy-",No,,Not Assigned
@@ -1662,8 +1570,6 @@ Benzene,No,,"Organics, Other"
 "Benzene, 1,4-dichloro-2-isocyanato-",Yes,,Not Assigned
 "Benzene, 1-bromo-2-(4-bromophenoxy)-",No,,Not Assigned
 "Benzene, 1-bromo-3-(4-bromophenoxy)-",No,,"Organics, PCBs"
-"Benzene, 1-bromo-4-phenoxy- (Benzene, 1-bromo-4-phenoxy-***retired***use p-Bromophenyl phenyl ether)",No,,"Organics, PCBs"
-"Benzene, 1-bromo-4-phenoxy-***retired***use p-Bromophenyl phenyl ether",Yes,,"Organics, PCBs"
 "Benzene, 1-chloro-2-isocyanato-",No,,Not Assigned
 "Benzene, 1-chloro-4-(methylsulfonyl)-",Yes,,Not Assigned
 "Benzene, 1-ethyl-3-(1-methylethyl)-",No,,Not Assigned
@@ -1724,6 +1630,7 @@ Benztropine-d3,No,,Not Assigned
 Benzyl alcohol,No,,"Organics, Other"
 Benzyl chloride,Yes,,"Organics, Other"
 Benzyl ethyl ether,Yes,,Not Assigned
+Beryllium,Yes,Y,"Inorganics, Minor, Metals"
 Beryllium-7,No,,Radiochemical
 Beta Cypermethrin,No,,"Organics, Pesticide"
 Beta particle,No,,Radiochemical
@@ -1835,9 +1742,11 @@ Butyltin trichloride,Yes,,Not Assigned
 Butyraldehyde,No,,Not Assigned
 Butyric acid,Yes,,"Organics, Other"
 C10 Hydrocarbons,No,,"Organics, Other"
-C10-16-Alkyldimethylamines oxides,Yes,,"Organics, Other"
 C10-C12 Aliphatics,Yes,,"Organics, Other"
 C10-C12 Aromatics,Yes,,"Organics, Other"
+C10-C16 Hydrocarbons,No,,"Organics, Other"
+C10-C16-Alkyldimethylamines oxides,Yes,,"Organics, Other"
+C10-C19 Hydrocarbons,No,,"Organics, Other"
 C12 Hydrocarbons,No,,"Organics, Other"
 C12-C13 Aromatics,Yes,,"Organics, Other"
 C12-C16 Aliphatics,Yes,,"Organics, Other"
@@ -1846,6 +1755,7 @@ C14 Hydrocarbons,No,,"Organics, Other"
 C16 Hydrocarbons,No,,"Organics, Other"
 C16-C21 Aliphatics,Yes,,"Organics, Other"
 C16-C21 Aromatics,Yes,,"Organics, Other"
+C16-C34 Hydrocarbons,No,,"Organics, Other"
 C18 Hydrocarbons,No,,"Organics, Other"
 C1-Acenaphthenes,No,,Not Assigned
 C1-Benzo[a]anthracenes/chrysenes,No,,Not Assigned
@@ -1857,15 +1767,14 @@ C1-C4 Fluoranthenes,Yes,,"Organics, Other"
 C1-C4 Phenanthrenes,Yes,,"Organics, Other"
 C1-Fluoranthenes/pyrenes,Yes,,"Organics, Other"
 C1-Fluorenes,Yes,,"Organics, Other"
-C1-Fluorenes***retired***use Methylfluorene,Yes,,"Organics, Other"
 C1-Phenanthrenes/anthracenes,Yes,,"Organics, Other"
 C20 Hydrocarbons,No,,"Organics, Other"
 C21-C34 Aliphatics,Yes,,"Organics, Other"
 C21-C34 Aromatics,Yes,,"Organics, Other"
 C22 Hydrocarbons,No,,"Organics, Other"
-C23-C32 Hydrocarbons,No,,Not Assigned
+C23-C32 Hydrocarbons,No,,"Organics, Other"
 C24 Hydrocarbons,Yes,,"Organics, Other"
-C24-C36 Hydrocarbons,No,,Not Assigned
+C24-C36 Hydrocarbons,No,,"Organics, Other"
 C26 Hydrocarbons,Yes,,"Organics, Other"
 C28 Hydrocarbons,Yes,,"Organics, Other"
 C29 Hydrocarbons,Yes,,"Organics, Other"
@@ -1883,6 +1792,7 @@ C31 Hydrocarbons,Yes,,"Organics, Other"
 C32 Hydrocarbons,Yes,,"Organics, Other"
 C33 Hydrocarbons,Yes,,"Organics, Other"
 C34 Hydrocarbons,Yes,,"Organics, Other"
+C34-50 Hydrocarbons,No,,"Organics, Other"
 C35 Hydrocarbons,Yes,,"Organics, Other"
 C3-Benzo[a]anthracenes/chrysenes,No,,Not Assigned
 C3-Chrysenes,Yes,,"Organics, Other"
@@ -1896,6 +1806,7 @@ C4-C6 Aliphatics,Yes,,"Organics, Other"
 C4-Chrysenes,Yes,,"Organics, Other"
 C4-Dibenzothiophenes,Yes,,"Organics, Other"
 C4-Fluoranthenes/pyrenes,No,,Not Assigned
+C4-Fluorenes,Yes,,"Organics, Other"
 C4-Naphthalenes,Yes,,"Organics, Other"
 C4-Phenanthrenes/anthracenes,Yes,,"Organics, Other"
 C5-C6 Aliphatics,Yes,,"Organics, Other"
@@ -1905,11 +1816,13 @@ C8-Alkylphenols,No,,"Organics, Other"
 C8-C10 Aliphatics,Yes,,"Organics, Other"
 C8-C10 Aromatics,Yes,,"Organics, Other"
 Cacodylic acid,No,,"Organics, Pesticide"
+Cadmium,Yes,Y,"Inorganics, Minor, Metals"
 Caffeine,No,,"Organics, Other"
 Caffeine-13C,No,,Not Assigned
 Caffeine-trimethyl-13C3,No,,Not Assigned
 Calcareous green algae,No,,Not Assigned
 Calcareous red algae,No,,Not Assigned
+Calcium,Yes,Y,Major ions
 Calcium carbonate,No,,Physical
 Calcium hydroxide,No,,Physical
 Calcium oxide,No,,Not Assigned
@@ -1977,6 +1890,7 @@ Cephalothin,Yes,,Not Assigned
 Cerium,No,,"Inorganics, Minor, Metals"
 Cerium-141,Yes,,Radiochemical
 Cerium-144,No,,Radiochemical
+Cesium,No,Y,"Inorganics, Minor, Metals"
 Cesium-134,No,,Radiochemical
 Cesium-136,Yes,,Not Assigned
 Cesium-137,No,,Radiochemical
@@ -2012,6 +1926,7 @@ Chlordiazepoxide hydrochloride,No,,Not Assigned
 Chlordimeform,No,,"Organics, Pesticide"
 Chlorfenson,No,,"Organics, Pesticide"
 Chlorfenvinphos,Yes,,"Organics, Pesticide"
+Chloride,Yes,Y,Major ions
 Chlorimuron-ethyl,Yes,,"Organics, Pesticide"
 "Chlorinated dioxins and furans -- 2,3,7,8 congeners only",No,,Not Assigned
 Chlorinated naphthalenes,Yes,,"Organics, Other"
@@ -2041,9 +1956,12 @@ Chloronitrobenzene,No,,Not Assigned
 Chlorophacinone,No,,Not Assigned
 Chlorophenol,No,,Not Assigned
 Chlorophyll,No,,Biological
+Chlorophyll a,No,Y,Biological
 Chlorophyll a - Periphyton (attached),No,,Biological
 Chlorophyll a - Phytoplankton (suspended),No,,Biological
 Chlorophyll a (probe relative fluorescence),No,,Biological
+Chlorophyll a (probe),No,Y,Biological
+"Chlorophyll a, corrected for pheophytin",No,Y,Biological
 "Chlorophyll a, free of pheophytin",No,,Biological
 "Chlorophyll a, uncorrected for pheophytin",No,,Biological
 Chlorophyll b,Yes,,Biological
@@ -2073,6 +1991,7 @@ Cholest-5-en-3-one,No,,Not Assigned
 Cholestane,No,,Not Assigned
 Cholesterol,No,,"Organics, Other"
 Cholesterol-d7,No,,"Organics, Other"
+Chromium,Yes,Y,"Inorganics, Minor, Metals"
 Chromium(III),Yes,,"Inorganics, Minor, Metals"
 Chromium(VI),Yes,,"Inorganics, Minor, Metals"
 Chromium-51,No,,Radiochemical
@@ -2132,6 +2051,7 @@ Cloud cover (choice list),No,,Physical
 Cloud type (choice list),No,,Physical
 Cloxacillin,No,,Not Assigned
 Coal,No,,"Organics, Other"
+Cobalt,No,Y,"Inorganics, Minor, Metals"
 Cobalt-57,Yes,,Radiochemical
 Cobalt-58,No,,Radiochemical
 Cobalt-60,No,,Radiochemical
@@ -2154,6 +2074,8 @@ Colored dissolved organic matter (CDOM),No,,Physical
 Compass / Tilt (probe),No,,Physical
 "compound ""C"" (part of chlordane total)",No,,Not Assigned
 "compound ""K"" (part of chlordane total)",No,,Not Assigned
+Conductivity,No,Y,Physical
+Copper,Yes,Y,"Inorganics, Minor, Metals"
 Copper Sulfate Pentahydrate,No,,Not Assigned
 Coprostan-3-one,No,,Not Assigned
 Coprosterol,Yes,,"Organics, Other"
@@ -2227,8 +2149,6 @@ Cyclotetramethylenetetranitramine,Yes,,"Organics, Other"
 Cyfluthrin,No,,"Organics, Pesticide"
 Cylindrospermopsin,No,,Not Assigned
 Cymene,Yes,,Not Assigned
-Cypermethrin (Cypermethrin***retired***use Beta Cypermethrin),Yes,,"Organics, Pesticide"
-Cypermethrin***retired***use Beta Cypermethrin,Yes,,"Organics, Pesticide"
 Cyprazine,No,,"Organics, Pesticide"
 Cyproconazole,No,,Not Assigned
 D9 (+/-)11-nor-9-carboxy-delta-THC,No,,Not Assigned
@@ -2286,6 +2206,7 @@ Depth of water column,No,,Not Assigned
 "Depth, data-logger (ported)",No,,Information
 "Depth, from below top of casing to water level",No,,Not Assigned
 "Depth, from ground surface to well water level",No,,Information
+"Depth, Secchi disk depth",No,Y,Information
 "Depth, Secchi disk depth (choice list)",No,,Information
 "Depth, snow cover",No,,Information
 "Depth, total, from below top of casing",No,,Not Assigned
@@ -2323,7 +2244,6 @@ Diatrizoic acid-d6,No,,Not Assigned
 Diazepam,No,,"Organics, Other"
 Diazepam-D5,No,,"Organics, Other"
 Diazinon,No,,"Organics, Pesticide"
-Diazinon (Diethyl-D10)***retired***use Diazinon-D10,No,,Not Assigned
 Diazinon-D10,No,,"Organics, Pesticide"
 Diazoxon,No,,"Organics, Pesticide"
 "Dibenz[a,c]anthracene",No,,Not Assigned
@@ -2396,6 +2316,7 @@ Dicrotophos,No,,"Organics, Pesticide"
 Dicyclohexyl adipate,No,,Not Assigned
 Dicyclohexyl phthalate,No,,Not Assigned
 Dicyclopentadiene,No,,Not Assigned
+Didecyl dimethyl ammonium,No,,Not Assigned
 Dieldrin,No,,"Organics, Pesticide"
 Diesel and residual range hydrocarbons,Yes,,Information
 Diesel fuel,Yes,,Information
@@ -2429,6 +2350,7 @@ Dihydrotestosterone-d4,No,,Not Assigned
 Diisobutyl phthalate,No,,"Organics, Pesticide"
 Diisobutylphenoxyethanol,Yes,,Not Assigned
 Diisooctyl phthalate,No,,Not Assigned
+Diisopropanolamine,No,,Not Assigned
 Diisopropyl adipate,Yes,,Not Assigned
 Diltiazem,No,,Not Assigned
 Diltiazem hydrochloride,No,,Not Assigned
@@ -2444,7 +2366,6 @@ Dimethoate,No,,"Organics, Pesticide"
 Dimethomorph,Yes,,"Organics, Pesticide"
 Dimethoxane,Yes,,"Organics, Pesticide"
 Dimethoxymethane,No,,"Organics, Other"
-"Dimethyl 1,4-dihydro-2,6-dimethyl-4-(2-nitrophenyl)-3,5-pyridinedicarboxylate***retired***use Nifedipine",No,,Not Assigned
 Dimethyl ether,No,,"Organics, Other"
 Dimethyl L-malate,Yes,,Not Assigned
 Dimethyl phthalate,Yes,,"Organics, Pesticide"
@@ -2501,6 +2422,8 @@ Dissolved gases,No,,Physical
 Dissolved Gases - Saturation,No,,Not Assigned
 Dissolved inorganic nitrogen/soluble reactive phosphorus ratio,No,,Stable Isotopes
 Dissolved Inorganic Nitrogen/Total Phosphorus ratio,No,,Stable Isotopes
+Dissolved oxygen (DO),No,Y,Physical
+Dissolved oxygen saturation,No,Y,Physical
 Dissolved oxygen uptake,No,,Physical
 Distance from/to,No,,Information
 "Distillates (petroleum), hydrofined lubricating-oil",No,,Not Assigned
@@ -2565,10 +2488,7 @@ Enflurane,Yes,,Not Assigned
 Enrofloxacin,No,,"Organics, Other"
 Enterobacter,No,,Microbiological
 Enterobacter aerogenes,No,,Microbiological
-Enterobacter aerogenes***retired***use Enterobacter aerogenes (Monera),No,,Not Assigned
 Enterobacter cloacae,No,,Microbiological
-Enterobacter cloacae***retired***use Enterobacter cloacae (Monera),No,,Not Assigned
-Enterobacter***retired***use Enterobacter (Monera),No,,Not Assigned
 Enterococcus,No,,Microbiological
 Epichlorohydrin,No,,"Organics, Pesticide"
 Epi-chlorotetracycline,No,,Not Assigned
@@ -2668,7 +2588,7 @@ Europium-154,No,,Radiochemical
 Europium-155,Yes,,Radiochemical
 Evaporation,No,,Physical
 Exchangeable phosphorus,No,,Not Assigned
-Extractable fuel hydrocarbons (C13-C22 DRO),No,,Not Assigned
+Extractable Hydrocarbons,No,,Not Assigned
 Ezetimibe,No,,Not Assigned
 Fadrozole,No,,Not Assigned
 Famotidine,No,,Not Assigned
@@ -2767,6 +2687,7 @@ Fluorene,Yes,,"Organics, Other"
 "Fluorene,2,4A-Dihydro-",No,,Not Assigned
 Fluorene-d10,No,,Not Assigned
 Fluorescein,Yes,,Not Assigned
+Fluoride,Yes,Y,Major ions
 Fluorine,No,,"Inorganics, Major, Non-metals"
 Fluorobenzene,No,,Not Assigned
 Fluoroboric acid,No,,Not Assigned
@@ -2871,8 +2792,11 @@ Halogen,Yes,,Not Assigned
 Halogenated organics,Yes,,"Organics, Other"
 Halon 1011,No,,"Organics, Other"
 Halosulfuron-methyl,Yes,,"Organics, Pesticide"
+"Hardness, Ca, Mg",No,Y,Physical
 "Hardness, Calcium",No,,Physical
+"Hardness, carbonate",No,Y,Physical
 "Hardness, magnesium",Yes,,Physical
+"Hardness, non-carbonate",No,Y,Physical
 Hartmannella,No,,Microbiological
 Hartmannella limax,No,,Microbiological
 Hartmannella vermiformis,No,,Microbiological
@@ -3008,8 +2932,10 @@ Indium,Yes,,"Inorganics, Minor, Metals"
 Indium-111,No,,Radiochemical
 Indole,No,,"Organics, Other"
 Inert gases,No,,Physical
+Inorganic carbon,Yes,Y,"Inorganics, Major, Non-metals"
 Inorganic monomeric aluminum,Yes,,"Inorganics, Minor, Metals"
 "Inorganic nitrogen (ammonia, nitrate and nitrite)",Yes,,Not Assigned
+Inorganic nitrogen (nitrate and nitrite),Yes,Y,Nutrient
 "Instream feature, stream substrate (choice list)",No,,Information
 Instream Snags,No,,Information
 Iodide,No,,Not Assigned
@@ -3025,6 +2951,7 @@ Iopamidol-d8,No,,Not Assigned
 Ioxynil,No,,"Organics, Pesticide"
 Iprodione,No,,"Organics, Pesticide"
 Iridium,No,,"Inorganics, Minor, Metals"
+Iron,Yes,Y,"Inorganics, Minor, Metals"
 Iron + aluminum mix,Yes,,Not Assigned
 Iron + manganese mix,Yes,,Not Assigned
 Iron sulfide (FeS),No,,Not Assigned
@@ -3072,6 +2999,7 @@ Ketoconazole,No,,Not Assigned
 Ketoprofen,No,,Not Assigned
 Kick Depth,No,,Physical
 Kick Time,No,,Physical
+Kjeldahl nitrogen,Yes,Y,Nutrient
 Klebsiella,No,,Microbiological
 Kojic acid,No,,Not Assigned
 Kresoxim-methyl,Yes,,"Organics, Pesticide"
@@ -3096,6 +3024,7 @@ L-Arginine-7-amido-4-methylcoumarin,No,,Not Assigned
 Larkspur alkaloid,Yes,,Not Assigned
 Larvae in Gill Chambers or Attached to Abdomen,No,,Not Assigned
 Lauric acid,No,,Not Assigned
+Lead,Yes,Y,"Inorganics, Minor, Metals"
 Lead monoxide,No,,Not Assigned
 Lead(II) chromate,No,,Not Assigned
 Lead-210,No,,Radiochemical
@@ -3139,6 +3068,7 @@ Linoleic acid,No,,Not Assigned
 Linuron,No,,"Organics, Pesticide"
 Lipids,No,,"Organics, Other"
 Liquid limit,No,,Not Assigned
+Lithium,Yes,Y,"Inorganics, Minor, Metals"
 Lithium-6,Yes,,Not Assigned
 Lithium-7,Yes,,Not Assigned
 Lithium-7/Lithium-6 ratio,Yes,,Stable Isotopes
@@ -3161,6 +3091,7 @@ m-(Trifluoromethyl)aniline,Yes,,Not Assigned
 "m,p-Xylene",No,,"Organics, Other"
 Macroinvertebrates,No,,Biological
 Macrophytes covering streambed (emergent and submerged) (choice list),No,,Information
+Magnesium,Yes,Y,Major ions
 Magnesium phosphide,No,,Not Assigned
 Magnetite (Fe3O4),No,,Not Assigned
 Malaoxon,Yes,,"Organics, Pesticide"
@@ -3170,6 +3101,7 @@ Maleic anhydride,Yes,,Not Assigned
 Mancozeb,No,,"Organics, Pesticide"
 Mandipropamid,No,,Not Assigned
 Maneb,No,,"Organics, Pesticide"
+Manganese,Yes,Y,"Inorganics, Minor, Metals"
 Manganese dimethyldithiocarbamate,No,,"Organics, Pesticide"
 Manganese-54,No,,Radiochemical
 Maple lactone,Yes,,Not Assigned
@@ -3218,6 +3150,7 @@ Menthol,No,,Not Assigned
 Meperidine,No,,Not Assigned
 Mephobarbital,No,,Not Assigned
 Meprobamate,No,,Not Assigned
+Mercury,Yes,Y,"Inorganics, Minor, Metals"
 Meropenem,Yes,,Not Assigned
 Merphos,No,,"Organics, Pesticide"
 Mesityl oxide,Yes,,Not Assigned
@@ -3311,6 +3244,7 @@ Methylene dithiocyanate,No,,"Organics, Pesticide"
 Methylfluorene,Yes,,"Organics, Other"
 Methylindan,Yes,,Not Assigned
 Methylindene,No,,Not Assigned
+Methylmercury(1+),Yes,Y,"Organics, Other"
 Methylnaphthalene,No,,"Organics, Other"
 Methylparaben,No,,"Organics, Other"
 Methylphenanthrene,Yes,,Not Assigned
@@ -3354,9 +3288,11 @@ Modafinil,No,,Not Assigned
 Modafinil acid,No,,Not Assigned
 Moisture content,No,,Physical
 Molinate,Yes,,"Organics, Pesticide"
+Molybdenum,Yes,Y,"Inorganics, Minor, Metals"
 Molybdenum-99,Yes,,Radiochemical
 Monensin,No,,Not Assigned
 Mono(2-ethylhexyl) adipate,No,,Not Assigned
+Monochlorobenzene,No,,Not Assigned
 Monochlorobiphenyl,No,,Not Assigned
 Monocrotophos,No,,"Organics, Pesticide"
 Monoethylglycinexylidide,No,,Not Assigned
@@ -3424,6 +3360,7 @@ Neptunium-237,No,,Radiochemical
 Neptunium-239,No,,Radiochemical
 Neutrals,No,,"Organics, Other"
 Nevirapine,No,,Not Assigned
+Nickel,Yes,Y,"Inorganics, Minor, Metals"
 Nickel-63,Yes,,Radiochemical
 Niclosamide,No,,Not Assigned
 Nicosulfuron,Yes,,"Organics, Pesticide"
@@ -3435,13 +3372,16 @@ Niobium,No,,"Inorganics, Minor, Metals"
 Niobium-94,Yes,,Radiochemical
 Niobium-95,No,,Radiochemical
 Nithiazine,No,,Not Assigned
+Nitrate,Yes,Y,Nutrient
 Nitrazepam,No,,Not Assigned
 Nitrilotriacetic acid,No,,Not Assigned
+Nitrite,Yes,Y,Nutrient
 Nitrobenzene,Yes,,"Organics, Other"
 Nitrobenzene-D5,No,,Not Assigned
 Nitrocyclohexane,Yes,,Not Assigned
 Nitrofen,No,,"Organics, Pesticide"
 Nitrofurantoin,Yes,,Not Assigned
+Nitrogen,Yes,Y,Nutrient
 Nitrogen Delta 15,No,,Stable Isotopes
 Nitrogen dioxide,No,,Not Assigned
 Nitrogen ion,Yes,,Not Assigned
@@ -3596,6 +3536,7 @@ o-Nitrotoluene,Yes,,"Organics, Other"
 Optical Brighteners (choice list),No,,Not Assigned
 Optical brighteners fluorescent whitening agents by fluorescence,No,,Physical
 Organic anions,Yes,,Physical
+Organic carbon,Yes,Y,"Organics, Other"
 Organic Nitrogen,Yes,,Nutrient
 Organic phosphorus,Yes,,Nutrient
 "Organics mix, unspecified",Yes,,Not Assigned
@@ -3604,6 +3545,7 @@ Organic phosphorus,Yes,,Nutrient
 Orlistat,No,,Not Assigned
 Ormetoprim,No,,"Organics, Other"
 ortho & para Xylene mix,Yes,,Not Assigned
+Orthophosphate,Yes,Y,Nutrient
 Oryzalin,No,,"Organics, Pesticide"
 Oseltamivir,No,,Not Assigned
 Osmium,No,,"Inorganics, Minor, Metals"
@@ -3621,6 +3563,7 @@ Oxazepam glucuronide,No,,Not Assigned
 Oxazepam-d5,No,,Not Assigned
 Oxcarbazepine,No,,Not Assigned
 Oxetane,No,,Not Assigned
+Oxidation reduction potential (ORP),No,Y,Physical
 Oxidized Nifedipine,No,,Not Assigned
 Oxolinic acid,No,,Not Assigned
 Oxychlordane,Yes,,"Organics, Pesticide"
@@ -3985,32 +3928,22 @@ Perfluoro-1-hexane [18O2]sulfonate,No,,Not Assigned
 Perfluorobutanesulfonate,No,,"Organics, Other"
 Perfluorobutanesulfonic acid,No,,"Organics, Other"
 Perfluorobutanoate,No,,"Organics, Other"
-Perfluorodecanoate (Perfluorodecanoate***retired***use Perfluorodecanoic acid),No,,"Organics, Other"
-Perfluorodecanoate***retired***use Perfluorodecanoic acid,No,,"Organics, Other"
 Perfluorodecanoic acid,No,,"Organics, Other"
 Perfluorododecanoate,No,,"Organics, Other"
-Perfluoroheptanoate (Perfluoroheptanoate***retired***use Perfluoroheptanoic acid),No,,"Organics, Other"
-Perfluoroheptanoate***retired***use Perfluoroheptanoic acid,No,,"Organics, Other"
 Perfluoroheptanoic acid,No,,"Organics, Other"
 Perfluorohexane,No,,"Organics, Other"
 Perfluorohexanesulfonate,No,,"Organics, Other"
 Perfluorohexanesulfonic acid,No,,"Organics, Other"
-Perfluorohexanoate (Perfluorohexanoate***retired*** use Perfluorohexanoic acid),No,,Not Assigned
-Perfluorohexanoate***retired*** use Perfluorohexanoic acid,No,,Not Assigned
 Perfluorohexanoic acid,No,,"Organics, Other"
 Perfluorolauric acid,No,,"Organics, Other"
 Perfluoromyristic acid,No,,"Organics, Other"
 Perfluorononanoate,No,,"Organics, Other"
-Perfluorononanoate***retired***use Perfluorononanoic acid,No,,"Organics, Other"
 Perfluorononanoic acid,No,,"Organics, Other"
 Perfluorooctane sulfonic acid,No,,"Organics, Other"
 Perfluorooctanesulfonamide,No,,"Organics, Other"
 Perfluorooctanesulfonate,No,,"Organics, Other"
 Perfluorooctanoate,No,,"Organics, Other"
-Perfluorooctanoate***retired***use Perfluorooctanoic acid,No,,"Organics, Other"
 Perfluorooctanoic acid,No,,"Organics, Other"
-Perfluoropentanoate Perfluoropentanoate***retired*** use Perfluorovaleric acid),No,,Not Assigned
-Perfluoropentanoate***retired*** use Perfluorovaleric acid,No,,Not Assigned
 Perfluorotridecanoic acid,No,,"Organics, Other"
 Perfluoroundecanoate,No,,"Organics, Other"
 Perfluorovaleric acid,No,,"Organics, Other"
@@ -4029,6 +3962,7 @@ Petroleum phenols,Yes,,Not Assigned
 Petroleum spirits,Yes,,Not Assigned
 Pfiesteria,No,,Microbiological
 Pfiesteria piscicida,No,,Microbiological
+pH,No,Y,Physical
 pH Saturated Paste,No,,Physical
 Phaeophyton - Periphyton (attached),No,,Biological
 Phaeophyton - Phytoplankton (suspended),No,,Biological
@@ -4038,7 +3972,6 @@ Phenanthrene,Yes,,"Organics, Other"
 Phenanthrene-d10,No,,"Organics, Other"
 Phenanthridine,No,,"Organics, Pesticide"
 Phenazopyridine,No,,Not Assigned
-"Phencyclidine hydrochloride***retired***use Piperidine, 1-(1-phenylcyclohexyl)-, hydrochloride",No,,Not Assigned
 Phendimetrazine,No,,Not Assigned
 Phenkapton,No,,Not Assigned
 Phenobarbital,No,,Not Assigned
@@ -4064,6 +3997,7 @@ Phenylnaphthalene,No,,Not Assigned
 Phenylpropanolamine,No,,Not Assigned
 Phenylpropanolamine hydrochloride,No,,Not Assigned
 Phenytoin,Yes,,"Organics, Other"
+Pheophytin,Yes,,Biological
 Pheophytin a,Yes,,Biological
 Pheophytin ratio,Yes,,Stable Isotopes
 Pheophytin/Chlorophyll ratio,No,,Stable Isotopes
@@ -4081,6 +4015,7 @@ Phosphate-phosphorus,Yes,,Nutrient
 Phosphine,No,,Not Assigned
 "Phosphoric acid, diethyl ester",No,,Not Assigned
 "Phosphorothioic acid, O-ethyl O-methyl S-propyl ester",Yes,,Not Assigned
+Phosphorus,Yes,Y,Nutrient
 "Phosphorus, hydrolyzable",Yes,,Nutrient
 "Phosphorus, hydrolyzable plus orthophosphate",Yes,,Nutrient
 "Phosphorus, Particulate Organic",Yes,,Nutrient
@@ -4162,6 +4097,7 @@ Pool Substrate,No,,Information
 "Population diversity, macroinvertebrates, # of species",No,,Physical
 "Population diversity, phytoplankton, # of species",No,,Physical
 "Population diversity, zooplankton, # of species",No,,Physical
+Potassium,No,Y,Major ions
 Potassium bisulfate,Yes,,Not Assigned
 Potassium bitartrate,Yes,,Not Assigned
 Potassium glycolate,Yes,,"Organics, Pesticide"
@@ -4266,7 +4202,6 @@ Pseudomonas fluorescens NCIB 12089,No,,Microbiological
 "Pseudomonas fluorescens PS 3732-3-7, (MON 11720)",No,,Microbiological
 "Pseudomonas fluorescens PS 3732-3-7, (MON 11730)",No,,Microbiological
 Pseudomonas syringae 742RS,Yes,,Microbiological
-Pseudomonas syringae 742RS***retired***use Pseudomonas,No,,Not Assigned
 "psi,psi-Carotene, 7,7,8,8,11,11,12,12,15,15-decahydro-",No,,Not Assigned
 p-Terphenyl,Yes,,Not Assigned
 p-Terphenyl-d14,No,,Not Assigned
@@ -4280,6 +4215,7 @@ Pump pressure head,No,,Physical
 Pumping head,No,,Physical
 Pumping rate,No,,Physical
 Purge Volume,No,,Not Assigned
+Purgeable Hydrocarbons,No,,Not Assigned
 p-Xylene,Yes,,"Organics, Other"
 Pymetrozine,Yes,,"Organics, Pesticide"
 Pyraclostrobin,No,,Not Assigned
@@ -4497,6 +4433,7 @@ Reproduction,No,,Biological
 Reservoir volume,No,,Information
 "Residence/flushing time, waterbody",No,,Information
 Residual Depth,No,,Physical
+Residue,Yes,,Physical
 Resistivity,No,,Physical
 Resmethrin,No,,Not Assigned
 Resorcinol,No,,Not Assigned
@@ -4520,6 +4457,7 @@ Rosuvastatin,No,,Not Assigned
 Rosuvastatin-d6,No,,Not Assigned
 Rotenone,No,,"Organics, Pesticide"
 Roxithromycin,No,,"Organics, Other"
+Rubidium,Yes,Y,"Inorganics, Minor, Metals"
 Ruthenium,No,,"Inorganics, Minor, Metals"
 Ruthenium-103,Yes,,Radiochemical
 Ruthenium-103/106,Yes,,Radiochemical
@@ -4565,6 +4503,7 @@ Sediment,No,,Not Assigned
 "Sediment, inorganic, classification (choice list)",No,,Physical
 "Sediment, organic, classification (choice list)",No,,Physical
 Sediment/ Substrate Odors (choice list),No,,Physical
+Selenium,Yes,Y,"Inorganics, Minor, Non-metals"
 Selenium-75,No,,Radiochemical
 Serratia,No,,Microbiological
 Sertraline,Yes,,"Organics, Other"
@@ -4584,10 +4523,12 @@ Significant(choice list),No,,Not Assigned
 Sildenafil,No,,Not Assigned
 Silica,No,,"Inorganics, Major, Non-metals"
 Silica gel treated n-hexane extractable material,No,,Not Assigned
+"Silica, reactive",No,,"Inorganics, Major, Non-metals"
 Silicate,No,,Not Assigned
 Silicate/dissolved inorganic nitrogen ratio,No,,Stable Isotopes
 Silicon,No,,"Inorganics, Major, Non-metals"
 Silt,No,,Physical
+Silver,Yes,Y,"Inorganics, Minor, Metals"
 Silver-108,Yes,,Radiochemical
 Silver-110,No,,Radiochemical
 Silvex,No,,"Organics, Pesticide"
@@ -4603,6 +4544,7 @@ Sitagliptin,No,,Not Assigned
 Slow Riffle,No,,Information
 "Sludge, substrate rock/bank cover - severity (choice list)",No,,Information
 S-Metolachlor,No,,Not Assigned
+Sodium,Yes,Y,Major ions
 Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)],No,,Physical
 Sodium C14-16-alkane hydroxy and C14-16-olefin sulfonates,Yes,,Not Assigned
 Sodium cacodylate,Yes,,"Organics, Pesticide"
@@ -4627,6 +4569,7 @@ Sodium-24,Yes,,Radiochemical
 Soil Water,No,,Not Assigned
 "Solar irradiation, global",No,,Physical
 "Solar irradiation, local",No,,Physical
+Soluble Reactive Phosphorus (SRP),Yes,Y,Nutrient
 Sorbitol,Yes,,Physical
 Sotalol,No,,"Organics, Other"
 Species Rank,No,,Physical
@@ -4669,6 +4612,7 @@ Streptomycin sulfate,Yes,,Not Assigned
 Streptozotocin,No,,Not Assigned
 Strobane,No,,"Organics, Pesticide"
 Strong acids,No,,Physical
+Strontium,No,Y,"Inorganics, Minor, Metals"
 Strontium-85,Yes,,Radiochemical
 "Strontium-87/Strontium-86, ratio",Yes,,Stable Isotopes
 Strontium-89,No,,Radiochemical
@@ -4736,10 +4680,12 @@ Sulfamethoxazole-13C6,No,,Not Assigned
 Sulfanilamide,No,,Not Assigned
 Sulfaquinoxaline,No,,Not Assigned
 sulfatase (corrected for carbon content),No,,Not Assigned
+Sulfate,Yes,Y,Major ions
 Sulfathiazole,Yes,,"Organics, Other"
 Sulfentrazone,No,,Not Assigned
 Sulfide,No,,"Inorganics, Major, Non-metals"
 Sulfite,No,,Not Assigned
+Sulfolane,No,,Not Assigned
 Sulfometuron methyl,No,,"Organics, Pesticide"
 Sulfosulfuron,No,,Not Assigned
 Sulfotep,Yes,,"Organics, Pesticide"
@@ -4812,6 +4758,7 @@ Temperature difference,No,,Physical
 "Temperature, sediment",No,,Physical
 "Temperature, soil",No,,Physical
 "Temperature, tissue",No,,Physical
+"Temperature, water",No,Y,Physical
 "Temperature, wet bulb",No,,Physical
 Teniposide,No,,Not Assigned
 Terbacil,No,,"Organics, Pesticide"
@@ -4848,7 +4795,6 @@ Tetrachlorocatechol,No,,Not Assigned
 Tetrachlorodibenzofuran,No,,"Organics, Other"
 Tetrachlorodibenzo-p-dioxin,No,,"Organics, Other"
 Tetrachloroethane,No,,"Organics, Pesticide"
-Tetrachloroethene,No,,Not Assigned
 Tetrachloroethylene,No,,"Organics, Other"
 Tetrachloroguaiacol,Yes,,Not Assigned
 Tetrachloro-m-xylene,No,,Not Assigned
@@ -4877,6 +4823,7 @@ Tetratetracontane,Yes,,Not Assigned
 Tetratriacontane,No,,"Organics, Other"
 Tetrodotoxin,No,,Not Assigned
 Tetryl,No,,"Organics, Other"
+Thallium,Yes,Y,"Inorganics, Minor, Metals"
 Thallium-201,No,,Radiochemical
 Thallium-208,Yes,,Radiochemical
 Thebaine,No,,Not Assigned
@@ -4910,6 +4857,7 @@ Thiophenol,No,,Not Assigned
 Thiosulfate,No,,"Inorganics, Major, Non-metals"
 Thiourea,No,,"Organics, Pesticide"
 Thiram,No,,Not Assigned
+Thorium,Yes,,"Inorganics, Minor, Metals"
 Thorium-227,Yes,,Radiochemical
 Thorium-228,No,,Radiochemical
 Thorium-230,No,,Radiochemical
@@ -4932,6 +4880,7 @@ Tin,Yes,,"Inorganics, Minor, Metals"
 Tin-113,Yes,,Radiochemical
 Tin-San,Yes,,"Organics, Pesticide"
 Tiotropium,No,,Not Assigned
+Titanium,Yes,Y,"Inorganics, Minor, Metals"
 Tolerance index,No,,Not Assigned
 Tolfenpyrad,No,,Not Assigned
 Toluene,No,,"Organics, Other"
@@ -4941,17 +4890,19 @@ Toluenediamine,Yes,,Not Assigned
 Toluic acid,No,,Not Assigned
 Toluidine,No,,Not Assigned
 Tolyl triazole,No,,Not Assigned
-"Tonalide***retired***use 6-Acetyl-1,1,2,4,4,7-hexamethyltetralin",No,,Not Assigned
 Topramezone,No,,Not Assigned
 Total BHCs + Lindane,No,,Not Assigned
+Total carbon,No,Y,Not Assigned
 Total Coliform,No,,Microbiological
 Total Dichloro Biphenyls,No,,Physical
 Total Differential Diagnosis,No,,Not Assigned
+Total dissolved solids,No,Y,Physical
 Total fixed solids,No,,Physical
 Total hardness,No,,Physical
 Total Heptachloro Biphenyls,No,,Not Assigned
 Total Hexachloro Biphenyls,No,,Not Assigned
 Total Monochloro Biphenyls,No,,Not Assigned
+"Total Nitrogen, mixed forms",Yes,,Nutrient
 Total Nitrogen/Total Phosphorus Ratio (TN:TP),No,,Physical
 Total Nonachloro Biphenyls,No,,Not Assigned
 Total nonfecal coliform,No,,Microbiological
@@ -4965,10 +4916,12 @@ Total PCBs,No,,Not Assigned
 Total PCBs + PCTs,No,,Not Assigned
 Total Pentachloro Biphenyls,No,,Not Assigned
 Total Petroleum Hydrocarbons (C6-C32 TPH),No,,Not Assigned
+"Total Phosphorus, mixed forms",Yes,,Nutrient
 Total Sample Volume,No,,Physical
 Total Sample Weight,No,,Physical
 Total solids,No,,Physical
 Total Sulfur minus Sulfate,No,,Physical
+Total suspended solids,No,Y,Physical
 Total Tetrachloro Biphenyls,No,,Not Assigned
 Total Trichloro Biphenyls,No,,Not Assigned
 Total volatile solids,No,,Physical
@@ -4985,58 +4938,34 @@ Toxicity water LC50,No,,Not Assigned
 Toxicity water microtox,No,,Not Assigned
 Toxicity water norm embryo,No,,Not Assigned
 "Toxicity, A. abdita, coefficient of variation",No,,Microbiological
-"Toxicity, A. abdita, coefficient of variation**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, A. verrilli, coefficient of variation",No,,Microbiological
-"Toxicity, A. verrilli, coefficient of variation**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
-"Toxicity, Daphnia magna acute**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, E. estuarius, coefficient of variation",No,,Microbiological
-"Toxicity, E. estuarius, coefficient of variation**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, L. plumulosus, coefficient of variation",No,,Microbiological
-"Toxicity, L. plumulosus, coefficient of variation**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, R. abronius, coefficient of variation",No,,Microbiological
-"Toxicity, R. abronius, coefficient of variation**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, Ampelisca abdita, control survival",No,,Microbiological
-"Toxicity, sediment, Ampelisca abdita, control survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, Ampelisca abdita, significant (choice list)",No,,Microbiological
 "Toxicity, sediment, Ampelisca abdita, survival",No,,Microbiological
-"Toxicity, sediment, Ampelisca abdita, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, Ampelisca verrilli, control survival",No,,Microbiological
-"Toxicity, sediment, Ampelisca verrilli, control survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, Ampelisca verrilli, significant (choice list)",No,,Microbiological
 "Toxicity, sediment, Ampelisca verrilli, survival",No,,Microbiological
-"Toxicity, sediment, Ampelisca verrilli, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
-"Toxicity, sediment, Arbacia punctulata, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, Eohaustorius estuarius, control survival",No,,Microbiological
-"Toxicity, sediment, Eohaustorius estuarius, control survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, Eohaustorius estuarius, significant (choice list)",No,,Microbiological
 "Toxicity, sediment, Eohaustorius estuarius, survival",No,,Microbiological
-"Toxicity, sediment, Eohaustorius estuarius, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
-"Toxicity, sediment, Hyalella azteca, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, L.plumulosus, control survival",No,,Microbiological
-"Toxicity, sediment, L.plumulosus, control survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, Leptocheirus plumulosus, significant (choice list)",No,,Microbiological
 "Toxicity, sediment, Leptocheirus plumulosus, survival",No,,Microbiological
-"Toxicity, sediment, Leptocheirus plumulosus, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, microtox, Vibrio fischeri, EC50",No,,Microbiological
-"Toxicity, sediment, microtox, Vibrio fischeri, EC50**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, sediment, microtox, Vibrio fischeri, significant (choice list)",No,,Microbiological
 "Toxicity, sediment, Rhepoxynius abronius, significant (choice list)",No,,Microbiological
 "Toxicity, sediment, Rhepoxynius abronius, survival",No,,Microbiological
-"Toxicity, sediment, Rhepoxynius abronius, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
-"Toxicity, sediment, Strongylocentrotus purpuratus, survival**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, water, 100%/ LC50 (% effluent) for Ceriodaphnia",No,,Microbiological
-"Toxicity, water, 100%/ LC50 (% effluent) for Ceriodaphnia**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 "Toxicity, water, Ceriodaphnia dubia, LC50",No,,Microbiological
-"Toxicity, water, Ceriodaphnia dubia, LC50**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
-"Toxicity, water, microtox, Vibrio fischeri, EC50**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
-"Toxicity, water, Strongylocentrotus purpuratus, norm. embryo**retired**useBiologicalSample,SubjectTaxon,IntentToxicity",No,,Not Assigned
 Tralkoxydim,No,,Not Assigned
 Tralkoxydim acid,No,,Not Assigned
 Tralomethrin,No,,"Organics, Pesticide"
 Tramadol,No,,Not Assigned
 "trans-1,2-Cyclohexanediol",Yes,,Not Assigned
 "trans-1,2-Dichlorocyclohexane",Yes,,Not Assigned
-"trans-1,2-Dichloroethene***retired***use trans-1,2-Dichloroethylene",Yes,,Not Assigned
 "trans-1,2-Dichloroethylene",Yes,,"Organics, Other"
 "trans-1,2-Dichloropropene",No,,"Organics, Pesticide"
 "trans-1,2-Dimethylcyclohexane",No,,Not Assigned
@@ -5134,6 +5063,7 @@ Trinitrotoluene,Yes,,"Organics, Other"
 Tripentyltin chloride,No,,Not Assigned
 Triphenyl phosphate,No,,"Organics, Other"
 Triphenylene,No,,Not Assigned
+Triphenyltin,No,,Not Assigned
 Tripropyltin chloride,No,,Not Assigned
 Tri-p-tolyl Phosphate,No,,Not Assigned
 "Tris(1,3-dichloro-2-propyl)phosphate",Yes,,"Organics, Other"
@@ -5146,6 +5076,7 @@ Tritriacontane,Yes,,Not Assigned
 True color,No,,Physical
 t-Stat,No,,Not Assigned
 Tungsten,No,,"Inorganics, Minor, Metals"
+Turbidity,No,Y,Physical
 Turbidity severity (choice list),No,,Physical
 Tylosin,Yes,,"Organics, Other"
 Tyrothricin,Yes,,Not Assigned
@@ -5154,6 +5085,7 @@ Undecane,Yes,,Not Assigned
 Undecanoic acid,Yes,,"Organics, Other"
 Undercut Banks (%),No,,Information
 Unknown Arsenic Species,No,,Not Assigned
+Uranium,No,Y,Radiochemical
 Uranium 238/234 ratio,Yes,,Stable Isotopes
 Uranium-233/234,No,,Radiochemical
 Uranium-234,No,,Radiochemical
@@ -5173,6 +5105,7 @@ Valacyclovir,No,,Not Assigned
 Valeric acid,Yes,,Not Assigned
 Valley Width Index,No,,Physical
 Valsartan,No,,Not Assigned
+Vanadium,No,Y,"Inorganics, Minor, Metals"
 Vanillin,No,,Not Assigned
 Vannella,No,,Microbiological
 Vannellidae,No,,Microbiological
@@ -5255,6 +5188,7 @@ Yttrium-90,Yes,,Radiochemical
 Zeaxanthin,No,,Not Assigned
 Zidovudine,No,,Not Assigned
 Zidovudine-d3,No,,Not Assigned
+Zinc,Yes,Y,"Inorganics, Minor, Metals"
 Zinc bacitracin,Yes,,Not Assigned
 Zinc dehydroabietylammonium 2-ethylhexanoate,Yes,,"Organics, Pesticide"
 Zinc phosphide,No,,"Organics, Pesticide"
@@ -5271,9 +5205,3 @@ Zone of Influence,No,,Physical
 Zooplankton,No,,Biological
 Zooplankton Density,No,,Biological
 Zooplankton Relative Density,No,,Biological
-C4-Fluorenes,Yes,,"Organics, Other"
-"Total Phosphorus, mixed forms",Yes,,Nutrient
-"Total Nitrogen, mixed forms",Yes,,Nutrient
-"Silica, reactive",No,,"Inorganics, Major, Non-metals"
-Residue,Yes,,Physical
-Thorium,Yes,,"Inorganics, Minor, Metals"

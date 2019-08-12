@@ -15,7 +15,7 @@
       "maxLength": 5
     }
   },
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
     "DatasetName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ProjectName",

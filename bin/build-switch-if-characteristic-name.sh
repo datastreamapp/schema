@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if ! [ -x "$(command -v jq)" ]; then
+  echo 'Error: jq is not installed.' >&2
+  exit 1
+fi
+
 LIST=$(grep "Yes" lib/CharacteristicName.csv | sed 's/,Yes.*//' | sed 's/"//g')
 JSON=$(jq -ncR '[inputs]' <<< "$LIST")
 
