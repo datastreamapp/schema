@@ -395,6 +395,10 @@
         "yd2",
         "yd3",
         "years",
+
+        "#/yr",
+        "uATM",
+
         "µg",
         "µg/cart",
         "µg/cm2",
@@ -596,7 +600,7 @@
       "Sample-Integrated Flow Proportioned",
       "Sample-Integrated Horizontal and Vertical Composite Profile",
       "Sample-Integrated Horizontal Profile",
-      "Sample-Integrated Time Series",
+      "Sample-Integrated Phenols Series",
       "Sample-Integrated Vertical Profile",
       "Sample-Negative Control",
       "Sample-Other",
@@ -634,6 +638,7 @@
       "Dissolved",
       "Extractable",
       "Filterable",
+      "Filtered",
       "Filtered, field",
       "Filtered, lab",
       "Fixed",
