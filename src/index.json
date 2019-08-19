@@ -113,7 +113,7 @@
       ]
     },
     "CharacteristicName": {
-      "$ref":"./definitions.enum-characteristic-name.json#/CharacteristicName",
+      "$ref": "./definitions.enum-characteristic-name.json#/CharacteristicName",
       "transform": [
         "trim",
         "toEnumCase"
@@ -154,10 +154,10 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
     },
     "ResultAnalyticalMethodID": {
-      "title":"Result Analytical Method ID",
-      "description":"",
-      "type":"string",
-      "maxLength":50
+      "title": "Result Analytical Method ID",
+      "description": "",
+      "type": "string",
+      "maxLength": 50
     },
     "ResultAnalyticalMethodName": {
       "title": "Result Analytical Method Name",
@@ -255,13 +255,14 @@
     }
   },
   "else": {
-
-  "if":{ "$ref":"./definitions.switch-if-characteristic-name.json"},
-  "then":{
-    "required": [
-      "ResultSampleFraction"
-    ]
-  },
+    "if": {
+      "$ref": "./definitions.switch-if-characteristic-name.json"
+    },
+    "then": {
+      "required": [
+        "ResultSampleFraction"
+      ]
+    },
     "else": {
       "if": {
         "required": [

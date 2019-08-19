@@ -1,7 +1,21 @@
 const expect = require('chai').expect
 
 const schema = require('../dist/json-schema')
-const validate = require('../dist/validate')
+//const validate = require('../dist/validate')
+
+// Start Manual
+const Ajv = require('ajv');
+
+const ajv = new Ajv({
+  v5: true,
+  format:'full',
+  coerceTypes: true,
+  allErrors: true,
+  useDefaults: true
+});
+require('ajv-keywords')(ajv, ['transform'])
+const validate = ajv.compile(schema);
+// End Manual
 
 const checkMissingProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
@@ -144,7 +158,7 @@ describe('DataStream Schema', function () {
     })
   })
 
-  describe('Should require based on switch', function() {
+  describe('Should require based on nested if (switch)', function() {
     it('ResultDetectionCondition true', function (done) {
       const valid = validate({
         'ResultDetectionCondition':'Present Above Quantification Limit'
