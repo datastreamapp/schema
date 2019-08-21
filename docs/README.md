@@ -16,29 +16,17 @@
 </p>
 
 ## Additions / Differences
+See [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279) for allowed value additions and subtraction.
 
 ### Project
 - `DatasetName` - Equivalent to `ProjectName` with maxLength set to 255.
 
-### Location
-- `MonitoringLocationRegion` - Equivalent to using `Monitoring Location County Code` from the WQX. Can be a Canadian Watershed, but left flexible to any type of region.
-- `MonitoringLocationType` - Added `Wetland` & `Lake/Pond` to the allowed values. Removed `Lake` and others.
-- `MonitoringLocationWaterbody` - Meta data
-
 ### Activity
-- `ActivityType` - Added `Quality Control` to the allowed values.
-- `ActivityMediaName` - Added `Surface Water`
-
 - `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
 - `ResultAnalyticalMethodName` - Added for readability
 - `ResultAnalyticalMethodID` - Removed allowed values
-- `ResultAnalyticalMethodContext` - Added `VMV` to allowed values.
-- `ResultUnit` / `ResultDetectionQuantitationLimitUnit` - Added `REL`,`CTU`,`HZN`.
-- `CharacteristicName` - Added `Silver Dioxide`, `Apparent Colour`, `Total Hardness`; Removed ones containing `***retired***`.
-- `LabratorySampleID` - Meta data
-
+- `LabratorySampleID` - Added to improve Metadata
 - `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`
-
 
 ### Naming
 We opted for `PascalCase` for header names to reduce `csv` parsing issues and improving `R` imports.
@@ -47,13 +35,13 @@ We opted for `PascalCase` for header names to reduce `csv` parsing issues and im
 In WQX the use of `State` and `County` are used. These are very `USA` specific, thus we have chosen to use `MonitoringLocationRegion` to allow for a broader meaning that can be applied internationally.
 
 ### Dates, Times, and Timezones
-In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated against timezone acronyms, these acronyms, however, do not scale internationally. Because of this, we've joined these fields into one, `Timestamp`, that will follow [`ISO 8601`](https://en.wikipedia.org/wiki/ISO_8601) standard (ex. 2018-02-14T18:59:59-0600).
+In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated against timezone acronyms, these acronyms, however, do not scale internationally. Because of this, we've joined these fields internally into one, `Timestamp`, that will follow [`ISO 8601`](https://en.wikipedia.org/wiki/ISO_8601) standard (ex. 2018-02-14T18:59:59-0600).
 
 Alternatively, the use of [`IANA Time Zone Database`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered, and opted against due to the increased complexity involved compared to `ISO 8601`.
 
 Both of these solutions also decrease errors with the uncertainty that can come up with daylight savings time.
 
-In the case where a latitude and longitude is present, we infer the timezone from the date at the location. Code snippet can be made available upon request.
+In the case where a latitude and longitude is present, we infer the timezone from the date at the location.
 
 ## Install
 ```bash
@@ -76,7 +64,7 @@ const ajv = new Ajv({
     allErrors: true,
     useDefaults: true
 });
-require('ajv-keywords')(ajv, ['transform']); // Optional
+require('ajv-keywords')(ajv, ['transform']); // Optional: `transform` removes strictness surrounding value character case.
 const validate = ajv.compile(jsonschema);
 
 let data = {}; // must not be const to allow coerce of types
@@ -87,12 +75,11 @@ Object.keys(data).forEach((key) => (data[key] == null || data[key] === '') && de
 const valid = validate(data);
 ```
 
-### Browser
+### Browser - WIP
 ```html
 <script src=""></script>
 ```
 ```js
-TODO
 const validate = require('@datastream/schema/validate');
 let data = {}; // must not be const to allow coerce of types
 const valid = validate(data);
@@ -103,13 +90,14 @@ const valid = validate(data);
 ### Development
 ```bash
 brew install jq nvm
-nvm get 8
+nvm get 10
+npm i
 ```
 
 ### Publishing
 ```bash
 # update version in `package.json`
-npm run build
+npm run test
 cd dist
 npm publish
 ```
