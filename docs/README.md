@@ -3,10 +3,12 @@
   <br/>
   <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/water-quality-exchange.gif?token=ABC9PNs8vDDUB-LYzDfSdeJ4lvH4JccXks5as_4dwA%3D%3D" alt="WQX Logo" width="200">
   <br/>
-  DataStream WQX<br />JSON Schema, JSON Table Schema, and CSV Template
+  DataStream Schema
   <br/>
   <br/>
 </h1>
+
+<p align="center">JSON Schema, JSON Table Schema, and CSV Template based on EPA WQX</p>
 
 <p align="center">
   <a href="https://github.com/gordonfn/datastream-wqx"><img src="https://img.shields.io/github/stars/gordonfn/datastream-wqx.svg?style=social&label=Stars" alt="Stars" /></a>
@@ -44,9 +46,17 @@ Both of these solutions also decrease errors with the uncertainty that can come 
 In the case where a latitude and longitude is present, we infer the timezone from the date at the location.
 
 ## Install
+You can download the compiled schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
 ```bash
+# Public
+$ npm i
+$ npm run build
+
+# Private
 $ npm i @datastream/schema
 ```
+
+
 
 ## Use
 ### CSV Template
