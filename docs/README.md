@@ -1,14 +1,12 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/datastream.svg?token=ABC9POoWo80cE0P25opVHbdsuQnW30g6ks5as_29wA%3D%3D" alt="DataStream Logo" width="200">
+  <img src="https://raw.githubusercontent.com/gordonfn/datastream-schema/master/docs/images/datastream.svg?token=AAIL2PBZU46OCA3XH2SPQBS5VNRQW" alt="DataStream Logo" width="200">
   <br/>
-  <img src="https://raw.githubusercontent.com/gordonfn/datastream-wqx/master/docs/images/water-quality-exchange.gif?token=ABC9PNs8vDDUB-LYzDfSdeJ4lvH4JccXks5as_4dwA%3D%3D" alt="WQX Logo" width="200">
-  <br/>
-  DataStream Schema
+  DataStream Data Model Schema
   <br/>
   <br/>
 </h1>
 
-<p align="center">JSON Schema, JSON Table Schema, and CSV Template based on EPA WQX</p>
+<p align="center">JSON Schema, JSON Table Schema, and CSV Template based on US EPA WQX</p>
 
 <p align="center">
   <!--<a href="https://github.com/gordonfn/datastream-wqx"><img src="https://img.shields.io/github/stars/gordonfn/datastream-wqx.svg?style=social&label=Stars" alt="Stars" /></a>-->
@@ -20,30 +18,7 @@
 ## Additions / Differences
 See [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279) for allowed value additions and subtraction.
 
-### Project
-- `DatasetName` - Equivalent to `ProjectName` with maxLength set to 255.
 
-### Activity
-- `ActivityDepthHeightMeasure` - Added maximum restriction due to only recording water samples.
-- `ResultAnalyticalMethodName` - Added for readability
-- `ResultAnalyticalMethodID` - Removed allowed values
-- `LabratorySampleID` - Added to improve Metadata
-- `ActivityStartTimeZone` / `ActivityEndTimeZone` / `AnalysisStartTimeZone` - Changed format to follow ISO 8601 ex `-0600`
-
-### Naming
-We opted for `PascalCase` for header names to reduce `csv` parsing issues and improving `R` imports.
-
-### Locations
-In WQX the use of `State` and `County` are used. These are very `USA` specific, thus we have chosen to use `MonitoringLocationRegion` to allow for a broader meaning that can be applied internationally.
-
-### Dates, Times, and Timezones
-In WQX the use is `Date`, `Time`, and `TimeZone`. `TimeZone` is validated against timezone acronyms, these acronyms, however, do not scale internationally. Because of this, we've joined these fields internally into one, `Timestamp`, that will follow [`ISO 8601`](https://en.wikipedia.org/wiki/ISO_8601) standard (ex. 2018-02-14T18:59:59-0600).
-
-Alternatively, the use of [`IANA Time Zone Database`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) notation was considered, and opted against due to the increased complexity involved compared to `ISO 8601`.
-
-Both of these solutions also decrease errors with the uncertainty that can come up with daylight savings time.
-
-In the case where a latitude and longitude is present, we infer the timezone from the date at the location.
 
 ## Install
 You can download the compiled schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
@@ -55,8 +30,6 @@ $ npm run build
 # Private
 $ npm i @datastream/schema
 ```
-
-
 
 ## Use
 ### CSV Template
