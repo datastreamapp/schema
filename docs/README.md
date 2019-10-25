@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/gordonfn/datastream-schema/master/docs/images/datastream.svg?token=AAIL2PBZU46OCA3XH2SPQBS5VNRQW" alt="DataStream Logo" width="200">
   <br/>
-  Data Model Schema
+  Data Model Schema for Water Quality Monitoring
   <br/>
   <br/>
 </h1>
@@ -15,7 +15,6 @@
   <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>-->
 </p>
 
-# DataStream Schema for Water Quality Monitoring
 In addition to DataStream's goals of increasing access to water quality data across Canada, we are also working to create standardization amongst the diverse landscape of water quality data schemas currently being used. 
 
 **We hope to do this by:**
@@ -33,19 +32,20 @@ DataStream was first piloted in the Mackenzie Basin through a unique collaborati
 * The model change and why?
 * who we worked with to develop it
 
-## Timeline (Lindsay and/or Carolyn can you fill this section in)
+### Timeline (Lindsay and/or Carolyn can you fill this section in)
 * a yearly breakdown of how long it's taken us to get to where we are today
 
-## Tips for Commenting on the Standard
+### Tips for Commenting on the Standard
 
 
-# Technical Information
 ## Additions / Differences
 The DataStream open data standard is an evolving and changing model and therefore is subject to various additions/differences over time. These changes most often deal with the addition or subtraction of allowed values. To see the most recent version number as well as any changes made since the last please see the [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
 
 ## Install
-
 You can download the compiled schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
+
+Alternatively, you can build it from the source:
+
 ```bash
 # Public
 $ npm i
