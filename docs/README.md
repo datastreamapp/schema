@@ -15,12 +15,36 @@
   <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>-->
 </p>
 
+# DataStream Schema for Water Quality Monitoring
+In addition to DataStream's goals of increasing access to water quality data across Canada, we are also working to create standardization amongst the diverse landscape of water quality data schemas currently being used. 
+
+**We hope to do this by:**
+* Creating a standard based on previously designed and used standards (in our case the WQX model from the USEPA)
+* Sharing this standard in a machine readable format so that it can easily be replicated
+* Allowing the standard to be open access so that others may help us build a tool that is useful for everyone
+
+## Background (Lindsay and/or Carolyn can you fill this section in)
+
+DataStream was first piloted in the Mackenzie Basin through a unique collaboration between The Gordon Foundation and the Government of the Northwest Territories, Mackenzie DataStream’s Founding Partner. Part of the collaboration of this process was the creation of a data model that would both meet the needs of those in the GNWT and 
+
+**Stuff that could be worth adding:**
+* where did the schema come from?
+* why wqx?
+* The model change and why?
+* who we worked with to develop it
+
+## Timeline (Lindsay and/or Carolyn can you fill this section in)
+* a yearly breakdown of how long it's taken us to get to where we are today
+
+## Tips for Commenting on the Standard
+
+
+# Technical Information
 ## Additions / Differences
-See [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279) for allowed value additions and subtraction.
-
-
+The DataStream open data standard is an evolving and changing model and therefore is subject to various additions/differences over time. These changes most often deal with the addition or subtraction of allowed values. To see the most recent version number as well as any changes made since the last please see the [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
 
 ## Install
+
 You can download the compiled schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
 ```bash
 # Public
@@ -33,7 +57,7 @@ $ npm i @datastream/schema
 
 ## Use
 ### CSV Template
-We're build out `csv` template to follow `R` import/export best practices. It can be found `@datastream/schema/csv/template.csv`.
+The `csv` template follows `R` import/export best practices and can be found `@datastream/schema/csv/template.csv`.
 
 ### NodeJS
 ```javascript
