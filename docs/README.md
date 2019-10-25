@@ -32,13 +32,22 @@ DataStream was first piloted in the Mackenzie Basin through a unique collaborati
 * The model change and why?
 * who we worked with to develop it
 
-### Timeline (Lindsay and/or Carolyn can you fill this section in)
+## Timeline (Lindsay and/or Carolyn can you fill this section in)
 * a yearly breakdown of how long it's taken us to get to where we are today
 
-### Tips for Commenting on the Standard
+## Tips for Commenting on the Standard
 
+If you wish to comment on the standard please create an issue [here](https://github.com/gordonfn/datastream-schema/issues)
 
-## Additions / Differences
+For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
+
+You can also email us at <datastream@gordonfn.org> or visit us at:
+
+* [Mackenzie DataStream](https://mackenziedatastream.ca/#/)
+* [Atlantic DataStream](https://atlanticdatastream.ca/#/)
+* [Lake Winnipeg DataStream(https://lakewinnipegdatastream.ca/#/)
+
+## Changelog
 The DataStream open data standard is an evolving and changing model and therefore is subject to various additions/differences over time. These changes most often deal with the addition or subtraction of allowed values. To see the most recent version number as well as any changes made since the last please see the [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
 
 ## Install
