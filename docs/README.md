@@ -44,7 +44,7 @@ The DataStream open data standard is an evolving and changing model and therefor
 ## Install
 You can download the compiled schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
 
-Alternatively, you can build it from the source:
+Alternatively, you can build it from the source to include in your project.
 
 ```bash
 # Public
