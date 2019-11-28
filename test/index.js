@@ -21,7 +21,8 @@ const checkMissingProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
     const error = validate.errors[i]
     if (error.keyword !== keyword) continue
-    if (error.params.missingProperty === property) return true
+    if (['required','dependencies'].includes(keyword) && error.params.missingProperty === property) return true
+    else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
   }
   return false
 }
@@ -34,7 +35,8 @@ describe('DataStream Schema', function () {
     expect(valid).to.equal(false)
 
     //expect(data.MonitoringLocationHorizontalCoordinateReferenceSystem).to.equal('UNKWN')
-    expect(Object.keys(data).length).to.equal(0)
+    expect(data.ResultValueType).to.equal('Actual')
+    expect(Object.keys(data).length).to.equal(1)
 
     done()
   })
@@ -60,7 +62,6 @@ describe('DataStream Schema', function () {
       "MonitoringLocationLatitude":"51.0486",
       "MonitoringLocationLongitude":"-114.0708",
       "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
-      "MonitoringLocationRegion":"Calgary",
       "MonitoringLocationType":"Atmosphere",
       "MonitoringLocationWaterbody":"Elbow River",
       "ActivityType":"Field Msr/Obs",
@@ -89,6 +90,17 @@ describe('DataStream Schema', function () {
     })
     //console.log(validate.errors)
     expect(valid).to.equal(true)
+    done()
+  })
+
+  it('Should reject additional headers', function (done) {
+    const valid = validate({
+      "MonitoringLocationWaterBody":"Lake"
+    })
+    expect(valid).to.equal(false)
+    expect(checkMissingProperty(validate.errors, 'additionalProperties', 'MonitoringLocationWaterBody')).to.equal(true)
+
+
     done()
   })
 

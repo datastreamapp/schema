@@ -15,7 +15,7 @@
       "maxLength": 5
     }
   },
-  "additionalProperties": true,
+  "additionalProperties": false,
   "properties": {
     "DatasetName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ProjectName",
@@ -40,12 +40,6 @@
         "trim",
         "toEnumCase"
       ]
-    },
-    "MonitoringLocationRegion": {
-      "title": "Monitoring Location Region",
-      "description": "Region name",
-      "type": "string",
-      "maxLength": 255
     },
     "MonitoringLocationType": {
       "$ref": "./definitions.json#/MonitoringLocationType",
@@ -105,13 +99,7 @@
         "toEnumCase"
       ]
     },
-    "ResultDetectionCondition": {
-      "$ref": "./definitions.json#/ResultDetectionCondition",
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ]
-    },
+
     "CharacteristicName": {
       "$ref": "./definitions.enum-characteristic-name.json#/CharacteristicName",
       "transform": [
@@ -120,7 +108,7 @@
       ]
     },
     "MethodSpeciation": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MethodSpeciation",
+      "$ref": "./definitions.json#/MethodSpeciation",
       "transform": [
         "trim",
         "toEnumCase"
@@ -143,6 +131,33 @@
         "toEnumCase"
       ]
     },
+    "ResultValueType": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValueType"
+    },
+    "ResultDetectionCondition": {
+      "$ref": "./definitions.json#/ResultDetectionCondition",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultDetectionQuantitationLimitMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
+    },
+    "ResultDetectionQuantitationLimitUnit": {
+      "$ref": "./definitions.json#/ResultDetectionQuantitationLimitUnit",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultDetectionQuantitationLimitType": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitType",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
     "ResultStatusID": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultStatusID",
       "transform": [
@@ -159,12 +174,6 @@
       "type": "string",
       "maxLength": 50
     },
-    "ResultAnalyticalMethodName": {
-      "title": "Result Analytical Method Name",
-      "description": "Name of the analytical method",
-      "type": "string",
-      "maxLength": 100
-    },
     "ResultAnalyticalMethodContext": {
       "$ref": "./definitions.json#/ResultAnalyticalMethodContext",
       "transform": [
@@ -172,14 +181,11 @@
         "toEnumCase"
       ]
     },
-    "LaboratoryName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
-    },
-    "LaboratorySampleID": {
-      "title": "Laboratory Sample ID",
-      "description": "Unique identifier for the lab sample",
+    "ResultAnalyticalMethodName": {
+      "title": "Result Analytical Method Name",
+      "description": "Name of the analytical method",
       "type": "string",
-      "maxLength": 60
+      "maxLength": 100
     },
     "AnalysisStartDate": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/AnalysisStartDate"
@@ -192,22 +198,14 @@
       "description": "",
       "$ref": "#/definitions/timezone"
     },
-    "ResultDetectionQuantitationLimitType": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitType",
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ]
+    "LaboratoryName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
     },
-    "ResultDetectionQuantitationLimitMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
-    },
-    "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "./definitions.json#/ResultDetectionQuantitationLimitUnit",
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ]
+    "LaboratorySampleID": {
+      "title": "Laboratory Sample ID",
+      "description": "Unique identifier for the lab sample",
+      "type": "string",
+      "maxLength": 60
     }
   },
   "required": [

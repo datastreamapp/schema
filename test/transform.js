@@ -32,7 +32,6 @@ describe('DataStream Schema', function () {
       "MonitoringLocationLatitude":"51.0486",
       "MonitoringLocationLongitude":"-114.0708",
       "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
-      "MonitoringLocationRegion":"Calgary",
       "MonitoringLocationType":"Atmosphere",
       "MonitoringLocationWaterbody":"Elbow River",
       "ActivityType":"Field Msr/Obs",
@@ -59,7 +58,7 @@ describe('DataStream Schema', function () {
       "AnalysisStartTime":"13:15:00",
       "AnalysisStartTimeZone":"-0600"
     })
-    console.log(validate.errors)
+    //console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })

@@ -1,7 +1,10 @@
 {
-  "name": "@datastream/schema",
-  "version": "1.5.1",
+  "name": "@gordonfn/schema",
+  "version": "1.6.1",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "main": "index.js",
   "scripts": {
     "prebuild": "./bin/build-init.sh && ./bin/build-switch-if-characteristic-name.sh && ./bin/build-enum-characteristic-name.sh ",
@@ -10,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://willfarrell@github.com/gordonfn/datastream-wqx.git"
+    "url": "git+https://github.com/gordonfn/schema.git"
   },
   "keywords": [
     "water quality exchange",
@@ -22,9 +25,9 @@
   "author": "willfarrell",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gordonfn/datastream-wqx/issues"
+    "url": "https://github.com/gordonfn/schema/issues"
   },
-  "homepage": "https://github.com/gordonfn/datastream-wqx#readme",
+  "homepage": "https://github.com/gordonfn/schema#readme",
   "devDependencies": {
     "ajv": "6.10.2",
     "ajv-istanbul": "0.1.0",
@@ -36,6 +39,6 @@
     "istanbul": "0.4.5",
     "json-schema-ref-parser": "7.1.0",
     "mocha": "6.2.0",
-    "wqx": "2.1.0-alpha.8"
+    "wqx": "2.1.0-alpha.9"
   }
 }

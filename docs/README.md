@@ -89,6 +89,14 @@ let data = {}; // must not be const to allow coerce of types
 const valid = validate(data);
 ```
 
+## Publish
+```bash
+# chagne version in package.json
+npm test
+cd dist
+npm publish
+```
+
 ## Contributing
 
 ### Commenting on the Standard
@@ -122,6 +130,7 @@ npm publish
 - [willfarrell](https://github.com/willfarrell)
 
 ## References
+- [DataStream Schema Google SpreadSheet](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?pli=1#gid=37982279)
 - [WQX](https://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 - [Watersheds](https://open.canada.ca/data/en/dataset/dc639a40-8893-11e0-96ca-6cf049291510) - possible list for `MonitoringLocationRegion`
