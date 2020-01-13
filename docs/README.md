@@ -18,9 +18,9 @@
 In addition to DataStream's goals of increasing access to water quality data across Canada, we are also working to create standardization amongst the diverse landscape of water quality data schemas currently being used. 
 
 **We hope to do this by:**
-* Creating a standard based on previously designed and used standards (in our case the WQX model from the USEPA)
-* Sharing this standard in a machine readable format so that it can easily be replicated
-* Allowing the standard to be open access so that others may help us build a tool that is useful for everyone
+* Creating a schema based on previously designed and used schemas (in our case the WQX model from the USEPA)
+* Sharing this schema in a machine readable format so that it can easily be replicated
+* Allowing the schema to be open access so that others may help us build a tool that is useful for everyone
 
 ## Background (Lindsay and/or Carolyn can you fill this section in)
 
@@ -36,7 +36,7 @@ DataStream was first piloted in the Mackenzie Basin through a unique collaborati
 * a yearly breakdown of how long it's taken us to get to where we are today
 
 ## Changelog
-The DataStream open data standard is an evolving and changing model and therefore is subject to various additions/differences over time. These changes most often deal with the addition or subtraction of allowed values. To see the most recent version number as well as any changes made since the last please see the [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
+The DataStream open data schema is an evolving and changing model and therefore is subject to various additions/differences over time. These changes most often deal with the addition or subtraction of allowed values. To see the most recent version number as well as any changes made since the last please see the [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
 
 ## Install
 You can download the compiled schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
@@ -99,9 +99,9 @@ npm publish
 
 ## Contributing
 
-### Commenting on the Standard
+### Commenting on the Schema
 
-If you wish to comment on the standard please create an issue [here](https://github.com/gordonfn/datastream-schema/issues)
+If you wish to comment on the schema please create an issue [here](https://github.com/gordonfn/datastream-schema/issues)
 
 * For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
 
