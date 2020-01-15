@@ -34,7 +34,7 @@ In 2018, The Gordon Foundation led a comprehensive review process to determine h
 DataStream’s open data schema (DS-WQX v1.0) was fully implemented across all regional DataStream platforms in 2019. 
 
 ## Changelog
-The DataStream open data schema is an evolving and changing model and therefore is subject to various additions/differences over time. These changes most often deal with the addition or subtraction of allowed values. To see the most recent version number as well as any changes made since the last please see the [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
+The DataStream open data schema will continue to evolve to meet user needs and therefore is subject to various updates over time. These changes most often deal with the addition of new allowed values. To view the most recent version, record of changes and version number please see the [DataStream Upload Template](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
 
 ## Dataset Metadata
 In addition to the observation-level information in DS-WQX, DataStream uses the following schema for dataset metadata.
