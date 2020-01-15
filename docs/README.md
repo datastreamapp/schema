@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/gordonfn/datastream-schema/master/docs/images/datastream.svg?token=AAIL2PBZU46OCA3XH2SPQBS5VNRQW" alt="DataStream Logo" width="200">
   <br/>
-  Data Model Schema for Water Quality Monitoring
+  DataStream Open Data Schema for Water Quality Data
   <br/>
   <br/>
 </h1>
@@ -15,33 +15,36 @@
   <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>-->
 </p>
 
-In addition to DataStream's goals of increasing access to water quality data across Canada, we are also working to create standardization amongst the diverse landscape of water quality data schemas currently being used. 
 
-**We hope to do this by:**
-* Creating a schema based on previously designed and used schemas (in our case the WQX model from the USEPA)
-* Sharing this schema in a machine readable format so that it can easily be replicated
-* Allowing the schema to be open access so that others may help us build a tool that is useful for everyone
+## DataStream 
 
-## Background (Lindsay and/or Carolyn can you fill this section in)
+DataStream (www.DataStream.org) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema – a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 3 million water quality observations have been published across DataStream’s three regional platforms (Mackenzie Basin, Lake Winnipeg Basin, and Atlantic Canada) by watershed groups, Indigenous organizations, researchers and governments at all levels. 
 
-DataStream was first piloted in the Mackenzie Basin through a unique collaboration between The Gordon Foundation and the Government of the Northwest Territories, Mackenzie DataStream’s Founding Partner. Part of the collaboration of this process was the creation of a data model that would both meet the needs of those in the GNWT and 
+[INSERT PIC]
 
-**Stuff that could be worth adding:**
-* where did the schema come from?
-* why wqx?
-* The model change and why?
-* who we worked with to develop it
+DataStream is led nationally by The Gordon Foundation and is carried out in collaboration with regional partners and monitoring networks. Data contributors maintain ownership of their data which are published under open data licenses. 
 
-## Timeline (Lindsay and/or Carolyn can you fill this section in)
-* a yearly breakdown of how long it's taken us to get to where we are today
+## DataStream Open Data Schema (DS-WQX)
+To ensure consistent formatting of water data and to avoid ambiguous or missing information, we developed an observation-level data schema based on the WQX standard for the Exchange of Water Quality Data. 
+
+The WQX schema was developed by the US Environmental Protection Agency (EPA) and the US Geological Society (USGS) and is an implementation of the ESAR (Environmental Sampling, Analysis and Results) data standard. It was designed to enable multiple monitoring entities to share results in a common format. 
+
+In 2018, The Gordon Foundation led a comprehensive review process to determine how this model could be adapted to best meet the needs of diverse water monitoring initiatives in Canada. DataStream’s science and technical advisory team, regional partners and collaborators, data contributors, government representatives as well as other members of the water community were engaged in this process. 
+
+DataStream’s open data schema (DS-WQX v1.0) was fully implemented across all regional DataStream platforms in 2019. 
 
 ## Changelog
 The DataStream open data schema is an evolving and changing model and therefore is subject to various additions/differences over time. These changes most often deal with the addition or subtraction of allowed values. To see the most recent version number as well as any changes made since the last please see the [Google Sheet Changelog](https://docs.google.com/spreadsheets/d/1gau2kMxcXiBu1ZdqpT-DO4zrRLNNzo8Ez32pweOYpro#gid=37982279).
 
-## Install
-You can download the compiled schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
+## Dataset Metadata
+In addition to the observation-level information in DS-WQX, DataStream uses the following schema for dataset metadata.
 
-Alternatively, you can build it from the source to include in your project.
+[INSERT TABLE]
+
+## Install
+You can download the compiled DS-WQX schema from [DataStream.org](www.datastream.org/cdn/json-schema.json).
+
+Alternately, you can build it from the source to include in your project.
 
 ```bash
 # Public
@@ -101,7 +104,7 @@ npm publish
 
 ### Commenting on the Schema
 
-If you wish to comment on the schema please create an issue [here](https://github.com/gordonfn/datastream-schema/issues)
+If you wish to comment on the schema please create an issue [here](https://github.com/gordonfn/datastream-schema/issues).
 
 * For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
 
