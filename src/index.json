@@ -136,7 +136,7 @@
       "description": "Qualifies process used in the determination of result value (eg. Actual, Estimated, Calculated).",
       "enum": [
         "Actual",
-        "Blank Corrected Calc",
+        "Blank Corrected",
         "Calculated",
         "Control Adjusted",
         "Estimated"
