@@ -140,6 +140,10 @@
         "Calculated",
         "Control Adjusted",
         "Estimated"
+      ],
+      "transform": [
+        "trim",
+        "toEnumCase"
       ]
     },
     "ResultDetectionCondition": {
@@ -309,7 +313,33 @@
             }
           ]
         },
-        "else": {}
+        "else": {
+          "if": {
+            "properties": {
+              "CharacteristicName": {
+                "enum": [
+                  "General observation (text)",
+                  "General pathology (text)",
+                  "RBP2, weather condition, general observation (text)",
+                  "Stream condition (text)",
+                  "USDA Soil Texture Classification",
+                  "Water appearance (text)",
+                  "Wind Condition",
+                  "Weather comments (text)"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "ResultValue": {
+                "type": "string",
+                "minimumLength": 1
+              }
+            }
+          },
+          "else": {}
+        }
       }
     }
   },
