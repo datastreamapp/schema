@@ -6,7 +6,7 @@
   <br/>
 </h1>
 
-<p align="center">JSON Schema, JSON Table Schema, and CSV Template based on WQX from the EPA & USGS</p>
+<p align="center">Download the latest version in [JSON Schema](https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.json), JSON Table Schema, and [CSV](https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.csv) template formats.</p>
 
 <p align="center">
   <!--<a href="https://github.com/gordonfn/datastream-wqx"><img src="https://img.shields.io/github/stars/gordonfn/datastream-wqx.svg?style=social&label=Stars" alt="Stars" /></a>-->
@@ -65,7 +65,7 @@ Bounding Box                 | Auto-generated | Geographic area covered by datas
 
 
 ## Install
-You can download the compiled DS-WQX schema from [S3](https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.json).
+You can download the compiled DS-WQX schema from above.
 
 Alternately, you can build it from the source to include in your project.
 
@@ -80,7 +80,7 @@ $ npm i @datastream/schema
 
 ## Use
 ### CSV Template
-The `csv` template follows `R` import/export best practices and can be found on [S3](https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.csv).
+The `csv` template follows `R` import/export best practices.
 
 ### NodeJS
 ```javascript
@@ -159,7 +159,6 @@ npm publish
 - [DataStream Schema Google SpreadSheet](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?pli=1#gid=37982279)
 - [WQX](https://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
-- [Watersheds](https://open.canada.ca/data/en/dataset/dc639a40-8893-11e0-96ca-6cf049291510) - possible list for `MonitoringLocationRegion`
 
 <div align="center">
   <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/wqx/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
