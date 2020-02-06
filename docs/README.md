@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/gordonfn/schema/master/docs/images/datastream.svg?sanitize=true" alt="DataStream Logo" width="200">
   <br/>
-  DataStream Open Data Schema for Water Quality Data
+  DataStream WQX Open Data Schema for Water Quality Data
   <br/>
   <br/>
 </h1>
@@ -14,7 +14,6 @@
   <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/dm/datastream-wqx.svg" alt="npm downloads"></a>-->
   <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>-->
 </p>
-
 
 ## DataStream 
 
