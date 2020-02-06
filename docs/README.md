@@ -1,12 +1,12 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/gordonfn/datastream-schema/master/docs/images/datastream.svg?token=AAIL2PBZU46OCA3XH2SPQBS5VNRQW" alt="DataStream Logo" width="200">
+  <img src="https://raw.githubusercontent.com/gordonfn/datastream-schema/master/docs/images/datastream.svg" alt="DataStream Logo" width="200">
   <br/>
   DataStream Open Data Schema for Water Quality Data
   <br/>
   <br/>
 </h1>
 
-<p align="center">JSON Schema, JSON Table Schema, and CSV Template based on US EPA WQX</p>
+<p align="center">JSON Schema, JSON Table Schema, and CSV Template based on WQX from the EPA & USGS</p>
 
 <p align="center">
   <!--<a href="https://github.com/gordonfn/datastream-wqx"><img src="https://img.shields.io/github/stars/gordonfn/datastream-wqx.svg?style=social&label=Stars" alt="Stars" /></a>-->
@@ -19,7 +19,10 @@
 ## DataStream 
 
 DataStream ([www.DataStream.org](http://gordonfoundation.ca/initiatives/datastream) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 3 million water quality observations have been published across DataStream’s three regional platforms-Mackenzie DataStream,  Lake Winnipeg DataStream , and Atlantic Canada) by watershed groups, Indigenous organizations, researchers and governments at all levels.
-[INSERT PIC]
+
+<!--<div align="center">
+  <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/wqx/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
+</div>-->
 
 DataStream is led nationally by [The Gordon Foundation](http://gordonfoundation.ca) and is carried out in collaboration with regional partners and monitoring networks. Data contributors maintain ownership of their data which are published under open data licenses.
 
@@ -157,3 +160,7 @@ npm publish
 - [WQX](https://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 - [Watersheds](https://open.canada.ca/data/en/dataset/dc639a40-8893-11e0-96ca-6cf049291510) - possible list for `MonitoringLocationRegion`
+
+<div align="center">
+  <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/wqx/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
+</div>
