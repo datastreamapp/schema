@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/gordonfn/schema/master/docs/images/datastream.svg?sanitize=true" alt="DataStream Logo" width="200">
+  <img src="https://raw.githubusercontent.com/gordonfn/schema/master/docs/images/datastream.svg?sanitize=true" alt="DataStream Logo" width="400">
   <br/>
   DataStream WQX Open Data Schema for Water Quality Data
   <br/>
