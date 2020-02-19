@@ -260,6 +260,15 @@ describe('DataStream Schema', function () {
     done()
   })
 
+  it('Should validate wrong time', function(done) {
+    const valid = validate({
+      "ActivityStartTime":"9:15.00"
+    })
+    console.log(validate.errors.filter((i) => i.keyword === 'pattern'))
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    done()
+  })
+
 })
 
 // Print out coverage report
