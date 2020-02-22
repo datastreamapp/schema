@@ -6,7 +6,7 @@
   <br/>
 </h1>
 
-<p align="center">Download the latest version in <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.json" target="_blank">JSON Schema</a>, JSON Table Schema, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v1.6.xlsx" target="_blank">Excel</a>, and <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.csv" target="_blank">CSV</a> template formats.</p>
+<p align="center">Download the latest version in <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.json" target="_blank">JSON Schema</a>, JSON Table Schema, [Google SpreadSheet](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?pli=1#gid=37982279), <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v1.6.xlsx" target="_blank">Excel</a>, and <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.csv" target="_blank">CSV</a> template formats.</p>
 
 <p align="center">
   <!--<a href="https://github.com/gordonfn/datastream-wqx"><img src="https://img.shields.io/github/stars/gordonfn/datastream-wqx.svg?style=social&label=Stars" alt="Stars" /></a>-->
@@ -155,7 +155,6 @@ npm publish
 - [willfarrell](https://github.com/willfarrell)
 
 ## References
-- [DataStream Schema Google SpreadSheet](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?pli=1#gid=37982279)
 - [WQX](https://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 
