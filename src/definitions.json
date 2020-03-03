@@ -759,6 +759,7 @@
   "ResultAnalyticalMethodContext": {
     "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultAnalyticalMethodContext",
     "enum": [
+      "EN",
       "VMV",
       "ABRAXIS LLC",
       "AFS",

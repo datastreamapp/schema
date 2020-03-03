@@ -232,117 +232,6 @@
     "ActivityStartDate",
     "CharacteristicName"
   ],
-  "oneOf": [
-    {
-      "required": [
-        "ResultValue"
-      ]
-    },
-    {
-      "required": [
-        "ResultDetectionCondition"
-      ]
-    }
-  ],
-  "if": {
-    "properties": {
-      "ResultDetectionCondition": {
-        "enum": [
-          "Present Above Quantification Limit",
-          "Present Below Quantification Limit"
-        ]
-      }
-    },
-    "required": [
-      "ResultDetectionCondition"
-    ]
-  },
-  "then": {
-    "dependencies": {
-      "ResultDetectionCondition": [
-        "ResultDetectionQuantitationLimitMeasure"
-      ]
-    }
-  },
-  "else": {
-    "if": {
-      "$ref": "./definitions.switch-if-characteristic-name.json"
-    },
-    "then": {
-      "required": [
-        "ResultSampleFraction"
-      ]
-    },
-    "else": {
-      "if": {
-        "required": [
-          "ResultAnalyticalMethodID"
-        ]
-      },
-      "then": {
-        "oneOf": [
-          {
-            "required": [
-              "ResultAnalyticalMethodID"
-            ]
-          },
-          {
-            "required": [
-              "ResultAnalyticalMethodName"
-            ]
-          }
-        ]
-      },
-      "else": {
-        "if": {
-          "required": [
-            "ResultAnalyticalMethodName"
-          ]
-        },
-        "then": {
-          "oneOf": [
-            {
-              "required": [
-                "ResultAnalyticalMethodID"
-              ]
-            },
-            {
-              "required": [
-                "ResultAnalyticalMethodName"
-              ]
-            }
-          ]
-        },
-        "else": {
-          "if": {
-            "properties": {
-              "CharacteristicName": {
-                "enum": [
-                  "General observation (text)",
-                  "General pathology (text)",
-                  "RBP2, weather condition, general observation (text)",
-                  "Stream condition (text)",
-                  "USDA Soil Texture Classification",
-                  "Water appearance (text)",
-                  "Wind Condition",
-                  "Weather comments (text)"
-                ]
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "ResultValue": {
-                "type": "string",
-                "minimumLength": 1
-              }
-            }
-          },
-          "else": {}
-        }
-      }
-    }
-  },
   "dependencies": {
     "ActivityDepthHeightMeasure": [
       "ActivityDepthHeightUnit"
@@ -360,5 +249,53 @@
     "AnalysisStartTime": [
       "AnalysisStartDate"
     ]
-  }
+  },
+  "allOf": [
+    {
+      "oneOf": [
+        {
+          "required": [
+            "ResultValue"
+          ]
+        },
+        {
+          "required": [
+            "ResultDetectionCondition"
+          ]
+        }
+      ]
+    },
+    {
+      "if": {
+        "properties": {
+          "ResultDetectionCondition": {
+            "enum": [
+              "Present Above Quantification Limit",
+              "Present Below Quantification Limit"
+            ]
+          }
+        },
+        "required": [
+          "ResultDetectionCondition"
+        ]
+      },
+      "then": {
+        "dependencies": {
+          "ResultDetectionCondition": [
+            "ResultDetectionQuantitationLimitMeasure"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "$ref": "./definitions.switch-if-characteristic-name.json"
+      },
+      "then": {
+        "required": [
+          "ResultSampleFraction"
+        ]
+      }
+    }
+  ]
 }
