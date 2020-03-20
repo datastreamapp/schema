@@ -315,7 +315,9 @@
             "enum": [
               "Not Detected",
               "Present Above Quantification Limit",
-              "Present Below Quantification Limit"
+              "Present Below Quantification Limit",
+              "Above Detection/Quantification Limit",
+              "Below Detection/Quantification Limit"
             ]
           }
         },
