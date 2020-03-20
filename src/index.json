@@ -240,14 +240,10 @@
       "ResultUnit"
     ],
     "ResultDetectionQuantitationLimitMeasure": [
-      "ResultDetectionQuantitationLimitUnit",
-      "ResultDetectionQuantitationLimitType"
-    ],
-    "ResultAnalyticalMethodID": [
-      "ResultAnalyticalMethodContext"
+      "ResultDetectionQuantitationLimitUnit"
     ],
     "AnalysisStartTime": [
-      "AnalysisStartDate"
+      "AnalysisStartTimeZone"
     ]
   },
   "allOf": [
@@ -267,9 +263,57 @@
     },
     {
       "if": {
+        "$ref": "./definitions.switch-if-characteristic-name.json"
+      },
+      "then": {
+        "required": [
+          "ResultSampleFraction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "ActivityType": {
+            "enum": [
+              "Sample-Composite With Parents",
+              "Sample-Composite Without Parents",
+              "Sample-Depletion Replicate",
+              "Sample-Field Split",
+              "Sample-Field Subsample",
+              "Sample-Integrated Cross-Sectional Profile",
+              "Sample-Integrated Flow Proportioned",
+              "Sample-Integrated Horizontal and Vertical Composite Profile",
+              "Sample-Integrated Horizontal Profile",
+              "Sample-Integrated Phenols Series",
+              "Sample-Integrated Vertical Profile",
+              "Sample-Negative Control",
+              "Sample-Other",
+              "Sample-Positive Control",
+              "Sample-Routine",
+              "Sample-Routine Resample"
+            ]
+          }
+        },
+        "required": [
+          "ActivityType"
+        ]
+      },
+      "then": {
+        "dependencies": {
+          "ActivityType": [
+            "ResultAnalyticalMethodID",
+            "ResultAnalyticalMethodContext"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
         "properties": {
           "ResultDetectionCondition": {
             "enum": [
+              "Not Detected",
               "Present Above Quantification Limit",
               "Present Below Quantification Limit"
             ]
@@ -282,19 +326,11 @@
       "then": {
         "dependencies": {
           "ResultDetectionCondition": [
-            "ResultDetectionQuantitationLimitMeasure"
+            "ResultDetectionQuantitationLimitType",
+            "ResultDetectionQuantitationLimitMeasure",
+            "ResultDetectionQuantitationLimitUnit"
           ]
         }
-      }
-    },
-    {
-      "if": {
-        "$ref": "./definitions.switch-if-characteristic-name.json"
-      },
-      "then": {
-        "required": [
-          "ResultSampleFraction"
-        ]
       }
     }
   ]

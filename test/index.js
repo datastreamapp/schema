@@ -17,12 +17,13 @@ require('ajv-keywords')(ajv, ['transform'])
 const validate = ajv.compile(schema)
 // End Manual
 
-const checkMissingProperty = (errors, keyword, property) => {
+const checkProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
     const error = validate.errors[i]
     if (error.keyword !== keyword) continue
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
+    else if(keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
   }
   return false
 }
@@ -48,7 +49,7 @@ describe('DataStream Schema', function () {
     // check required error out
     schema.required.forEach((property) => {
       if (property === 'MonitoringLocationHorizontalCoordinateReferenceSystem') return
-      expect(checkMissingProperty(validate.errors, 'required', property)).to.equal(true)
+      expect(checkProperty(validate.errors, 'required', property)).to.equal(true)
     })
 
     done()
@@ -98,19 +99,13 @@ describe('DataStream Schema', function () {
       'MonitoringLocationWaterBody': 'Lake'
     })
     expect(valid).to.equal(false)
-    expect(checkMissingProperty(validate.errors, 'additionalProperties', 'MonitoringLocationWaterBody')).to.equal(true)
+    expect(checkProperty(validate.errors, 'additionalProperties', 'MonitoringLocationWaterBody')).to.equal(true)
 
     done()
   })
 
   describe('Should enforce conditional required', function () {
-    it('NOT ResultValue & NOT ResultDetectionCondition', function (done) {
-      const valid = validate({})
-      expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(true)
-      done()
-    })
+
 
     it('ResultValue', function (done) {
       const valid = validate({
@@ -118,7 +113,7 @@ describe('DataStream Schema', function () {
         'ResultAnalyticalMethodID': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(false)
       done()
     })
 
@@ -127,15 +122,15 @@ describe('DataStream Schema', function () {
         'ResultDetectionCondition': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
       done()
     })
 
     it('NOT ResultAnalyticalMethodID & NOT ResultAnalyticalMethodName', function (done) {
       const valid = validate({})
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
       done()
     })
 
@@ -144,7 +139,7 @@ describe('DataStream Schema', function () {
         'ResultAnalyticalMethodID': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
       done()
     })
 
@@ -153,7 +148,7 @@ describe('DataStream Schema', function () {
         'ResultAnalyticalMethodName': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
       done()
     })
 
@@ -169,22 +164,79 @@ describe('DataStream Schema', function () {
     })
   })
 
-  describe('Should require based on nested if (switch)', function () {
-    it('ResultDetectionCondition true', function (done) {
+  describe('Should require allOf', function () {
+
+    // allOf/0
+    it('NOT ResultValue & NOT ResultDetectionCondition', function (done) {
+      const valid = validate({})
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
+      expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(true)
+      done()
+    })
+    it('ResultValue & ResultDetectionCondition', function (done) {
+      const valid = validate({
+        'ResultValue': 1,
+        'ResultDetectionCondition': 'Not Detected'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'oneOf', 0)).to.equal(true)
+      expect(checkProperty(validate.errors, 'oneOf', 1)).to.equal(true)
+      done()
+    })
+
+    // allOf/1
+    it('CharacteristicName true', function (done) {
+      const valid = validate({
+        'CharacteristicName': 'Silver'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(true)
+      done()
+    })
+
+    // allOf/2
+    it('ActivityType = Sample', function (done) {
+      const valid = validate({
+        'ActivityType': 'Sample-Other'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
+      done()
+    })
+
+    // allOf/3
+    it('ResultDetectionCondition = Not Detected', function (done) {
+      const valid = validate({
+        'ResultDetectionCondition': 'Not Detected'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+      done()
+    })
+
+    it('ResultDetectionCondition = Present Above Quantification Limit', function (done) {
       const valid = validate({
         'ResultDetectionCondition': 'Present Above Quantification Limit'
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
       done()
     })
 
-    it('ResultDetectionCondition true', function (done) {
+    it('ResultDetectionCondition = Present Below Quantification Limit', function (done) {
       const valid = validate({
         'ResultDetectionCondition': 'Present Below Quantification Limit'
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
       done()
     })
 
@@ -193,16 +245,9 @@ describe('DataStream Schema', function () {
         'ResultDetectionCondition': ''
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-      done()
-    })
-
-    it('CharacteristicName true', function (done) {
-      const valid = validate({
-        'CharacteristicName': 'Silver'
-      })
-      expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
       done()
     })
 
@@ -214,7 +259,7 @@ describe('DataStream Schema', function () {
         'ActivityDepthHeightMeasure': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ActivityDepthHeightUnit')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ActivityDepthHeightUnit')).to.equal(true)
       done()
     })
 
@@ -223,7 +268,7 @@ describe('DataStream Schema', function () {
         'ResultValue': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultUnit')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultUnit')).to.equal(true)
       done()
     })
 
@@ -232,17 +277,7 @@ describe('DataStream Schema', function () {
         'ResultDetectionQuantitationLimitMeasure': true
       })
       expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-      done()
-    })
-
-    it('ResultAnalyticalMethodID', function (done) {
-      const valid = validate({
-        'ResultAnalyticalMethodID': true
-      })
-      expect(valid).to.equal(false)
-      expect(checkMissingProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
       done()
     })
   })
