@@ -8,51 +8,57 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
 - Date, Time and Time Zone were changed to use the ISO 8601 format to allow ease parsing and universal readability
 
 ## Projects
-- **Project ID**: Removed, generated automatically internally to use UUID
-- **Project Name**: Renamed to `DatasetName`, increased max length to 255 (v3 increases to 512)
-- **Project Description**: Moved to `Abstract` of metadata input form
-- **Sampling Design Type**: Removed
-- **QAPP Approved Indicator**: Removed
-- **QAPP Approval Agency Name**: Removed
-- **Project Attachment File Name**: Removed
-- **Project Attachment Type**: Removed
+
+Column                           | WQX               | DS-WQX         | Changes
+---------------------------------|-------------------|----------------|----------------------------------------------------------
+**Project ID**                   | Required, Text    |                | Removed, generated automatically internally using UUID v4
+**Project Name**                 | Required, Text    | Required, Text | Renamed to `DatasetName`, increased max length to 255 (v3 increases to 512)
+**Project Description**          | Conditional, Text |                | Moved to metadata input form, renamed to `Abstract`
+**Sampling Design Type**         | Optional, Values  |                | Removed
+**QAPP Approved Indicator**      | Optional, Bool    |                | Removed
+**QAPP Approval Agency Name**    | Optional, Text    |                | Removed
+**Project Attachment File Name** | Conditional, Text |                | Removed
+**Project Attachment Type**      | Conditional, Text |                | Removed
+
+
 
 ## Monitoring Locations
-- **Monitoring Location ID**: No Change
-- **Monitoring Location Name**: No Change
-- **Monitoring Location Type**: Added new values
-  - `Ocean`
-  - `Estuary`
-- **Monitoring Location Description**: Removed
-- **HUC Eight-Digit Code**: Removed
-- **HUC Twelve-Digit Code**: Removed
-- **Tribal Land Indicator**: Removed, N/A
-- **Tribal Land Indicator**: Removed, N/A
-- **Alternate Monitoring Location ID**: Removed
-- **Alternate Monitoring Location Context**: Removed
-- **Monitoring Location Latitude**: No Change
-- **Monitoring Location Longitude**: No Change
-- **Monitoring Location Source Map Scale**: Removed, TODO
-- **Monitoring Location Horizontal Accuracy Measure Value**: Removed
-- **Monitoring Location Horizontal Accuracy Measure Unit Code**: Removed
-- **Monitoring Location Horizontal Collection Method**: Removed, TODO
-- **Monitoring Location Horizontal Coordinate Reference System**: No Change
-- **Monitoring Location Type**: ADDED TODO
-- **Monitoring Location Waterbody**: ADDED TODO
-- **Vertical Measure**: Removed
-- **Vertical Unit**: Removed
-- **Vertical Collection Method**: Removed
-- **Vertical Coordinate Reference System**: Removed
-- **Monitoring Location Country Code**: Removed
-- **Monitoring Location State Code**: Removed, can be auto generated internally
-- **Monitoring Location County Name**: Removed, US Specific, can be auto generated internally
-- **Well Type**: Removed
-- **Aquifer Name**: Removed
-- **Well Formation Type**: Removed
-- **Well Hole Depth Measure Value**: Removed
-- **Well Hole Depth Measure Unit**: Removed
-- **Monitoring Location Attachment File Name**: Removed
-- **Monitoring Location Attachment Type**: Removed
+
+Column                                                         | WQX                 | DS-WQX           | Changes
+---------------------------------------------------------------|---------------------|------------------|--------------------------------------------------------
+**Monitoring Location ID**                                     | Required, Text      | Required, Text   | None
+**Monitoring Location Name**                                   | Required, Text      | Required, Text   | None
+**Monitoring Location Type**                                   | Required, Values    | Required, Values | Added new values: `Estuary`, `Ocean`
+**Monitoring Location Description**                            | Optional, Text      |                  | Removed
+**HUC Eight-Digit Code**                                       | Optional, Text      |                  | Removed
+**HUC Twelve-Digit Code**                                      | Optional, Text      |                  | Removed
+**Tribal Land Indicator**                                      | Optional, Bool      |                  | Removed
+**Tribal Land Name**                                           | Optional, Text      |                  | Removed
+**Alternate Monitoring Location ID**                           | Optional, Text      |                  | Removed
+**Alternate Monitoring Location Context**                      | Conditional, Text   |                  | Removed
+**Monitoring Location Latitude**                               | Required, Number    | Required, Number | None
+**Monitoring Location Longitude**                              | Required, Number    | Required, Number | None
+**Monitoring Location Source Map Scale**                       | Conditional, Text   |                  | Removed
+**Monitoring Location Horizontal Accuracy Measure Value**      | Optional, Text      |                  | Removed
+**Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   |                  | Removed
+**Monitoring Location Horizontal Collection Method**           | Required, Values    |                  | Removed TODO Why
+**Monitoring Location Horizontal Coordinate Reference System** | Required, Values    | Required, Values | None
+**Monitoring Location Type**                                   |                     | Optional, Text   | Added TODO Why
+**Monitoring Location Waterbody**                              |                     | Optional, Text   | Added TODO Why
+**Vertical Measure**                                           | Optional, Number    |                  | Removed
+**Vertical Unit**                                              | Conditional, Values |                  | Removed
+**Vertical Collection Method**                                 | Conditional, Values |                  | Removed
+**Vertical Coordinate Reference System**                       | Conditional, Values |                  | Removed
+**Monitoring Location Country Code**                           | Optional, Values    |                  | Removed
+**Monitoring Location State Code**                             | Conditional, Values |                  | Removed, can be auto generated internally
+**Monitoring Location County Name**                            | Optional, Values    |                  | Removed, US Specific, can be auto generated internally
+**Well Type**                                                  | Optional, Values    |                  | Removed
+**Aquifer Name**                                               | Optional, Text      |                  | Removed
+**Well Formation Type**                                        | Optional, Values    |                  | Removed
+**Well Hole Depth Measure Value**                              | Optional, Number    |                  | Removed
+**Well Hole Depth Measure Unit**                               | Conditional, Values |                  | Removed
+**Monitoring Location Attachment File Name**                   | Optional, Text      |                  | Removed
+**Monitoring Location Attachment Type**                        | Conditional, Text   |                  | Removed
 
 ## Results
 - **Activity ID**: Removed, N/A
@@ -68,8 +74,8 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
 - **Activity End Time**: See `Activity Start Time`
 - **Activity End Time Zone**: See `Activity Start Time Zone`
 - **Activity Relative Depth Name**: Removed, TODO
-- **Activity Height/Depth Measure**: No Change
-- **Activity Height/Depth Unit**: No Change
+- **Activity Height/Depth Measure**: None
+- **Activity Height/Depth Unit**: None
 - **Activity Top Depth/Height Measure**: Removed, TODO
 - **Activity Top Depth/Height Unit**: Removed, TODO
 - **Activity Bottom Depth/Height Measure**: Removed, TODO
@@ -87,7 +93,7 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
 - **Activity Horizontal Collection Method**: Removed, TODO
 - **Activity Horizontal Coordinate Reference System**: Removed, TODO
 - **Sample Collection Method ID**: Removed TODO
-- **Sample Collection Equipment Name**: No change
+- **Sample Collection Equipment Name**: None
 - **Sample Collection Equipment Comment**: Removed TODO
 - **Sample Preparation Method ID**: Removed TODO
 - **Sample Container Type**: Removed TODO
@@ -136,7 +142,7 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
   - `uATM`:
   - TODO confirm list
 - **Result Qualifier**: Removed TODO
-- **Result Status ID**: No Change
+- **Result Status ID**: None
 - **Statistical Base Code**: Removed, TODO
 - **Result Value Type**: Changed, removed default value TODO
 - **Result Weight Basis**: Removed TODO
@@ -148,7 +154,7 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
 - **Confidence Interval**: Removed TODO
 - **Upper Confidence Limit**: Removed TODO
 - **Lower Confidence Limit**: Removed TODO
-- **Result Comment**: No Change
+- **Result Comment**: None
 - **Result Depth/Height Measure**: Removed TODO
 - **Result Depth/Height Unit**: Removed TODO
 - **Result Depth/Altitude Reference Point**: Removed TODO
@@ -160,7 +166,7 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
   - `EN`: TODO
   - `VMV`: TODO
 - **Result Analytical Method Name**: ADDED TODO
-- **Laboratory Name**: No Change
+- **Laboratory Name**: None
 - **Laboratory Sample ID**: ADDED TODO
 - **Analysis Start Date**: See `Activity Start Date`
 - **Analysis Start Time**: See `Activity Start Date`
@@ -169,8 +175,8 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
 - **Analysis End Time**: Removed TODO
 - **Analysis End Time Zone**: Removed TODO
 - **Result Laboratory Comment Code**: Removed TODO
-- **Result Detection/Quantitation Limit Type**: No Change
-- **Result Detection/Quantitation Limit Measure**: No Change
+- **Result Detection/Quantitation Limit Type**: None
+- **Result Detection/Quantitation Limit Measure**: None
 - **Result Detection/Quantitation Limit Unit**: See `Result Unit`
 - **Laboratory Accreditation Indicator**: Removed TODO
 - **Laboratory Accreditation Authority**: Removed TODO
