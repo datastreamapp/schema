@@ -60,136 +60,103 @@ Column                                                         | WQX            
 **Monitoring Location Attachment File Name**                   | Optional, Text      |                  | Removed
 **Monitoring Location Attachment Type**                        | Conditional, Text   |                  | Removed
 
-## Results
-- **Activity ID**: Removed, N/A
-- **Activity Type**: Added new values
-  - `Quality Control`: TODO
-- **Activity Media Name**: Added new values
-  - `Surface Water`: TODO
-- **Activity Media Subdivision Name**: Removed, TODO
-- **Activity Start Date**: Changed format to meet ISO 8601
-- **Activity Start Time**: Changed format to meet ISO 8601
-- **Activity Start Time Zone**: Removed, calculated internally using the Latitude and Longitude
-- **Activity End Date**: See `Activity Start Date`
-- **Activity End Time**: See `Activity Start Time`
-- **Activity End Time Zone**: See `Activity Start Time Zone`
-- **Activity Relative Depth Name**: Removed, TODO
-- **Activity Height/Depth Measure**: None
-- **Activity Height/Depth Unit**: None
-- **Activity Top Depth/Height Measure**: Removed, TODO
-- **Activity Top Depth/Height Unit**: Removed, TODO
-- **Activity Bottom Depth/Height Measure**: Removed, TODO
-- **Activity Bottom Depth/Height Measure Unit**: Removed, TODO
-- **Activity Depth Altitude Reference Point**: Removed, TODO
-- **Project ID**: See above
-- **Organization**: Removed, Included in the metadata input form
-- **Monitoring Location ID**: See Above
-- **Activity Comment**: Removed, TODO
-- **Activity Latitude**: Removed, TODO
-- **Activity Longitude**: Removed, TODO
-- **Activity Source Map Scale**: Removed, TODO
-- **Activity Horizontal Accuracy Measure**: Removed, TODO
-- **Activity Horizontal Accuracy Unit**: Removed, TODO
-- **Activity Horizontal Collection Method**: Removed, TODO
-- **Activity Horizontal Coordinate Reference System**: Removed, TODO
-- **Sample Collection Method ID**: Removed TODO
-- **Sample Collection Equipment Name**: None
-- **Sample Collection Equipment Comment**: Removed TODO
-- **Sample Preparation Method ID**: Removed TODO
-- **Sample Container Type**: Removed TODO
-- **Sample Container Color**: Removed TODO
-- **Chemical Preservative Used**: Removed TODO
-- **Thermal Preservative Used**: Removed TODO
-- **Sample Transport Storage Description**: Removed TODO
-- **Activity Attachment File Name**: Removed TODO
-- **Activity Attachment Type**: Removed TODO
-- **Data Logger Line**: Removed TODO
-- **Result Detection Condition**: Added new values
-  - `Not Reported`
-  - `Above Detection/Quantification Limit`: TODO
-  - `Below Detection/Quantification Limit`: TODO
-  - removed `Present Below Quantification Limit` & `Present Above Quantification Limit`
-- **Characteristic Name**: Added new values
-  - `Silver Dioxide`
-  - `Apparent Colour`
-  - `C4-Fluorenes`, `Total Phosphorus, mixed forms`, `Total Nitrogen, mixed forms`, `Silica, reactive`, `Residue`, `Thorium`
-  - `C10-C16 Hydrocarbons`, `C16-C34 Hydrocarbons`, `C10-C19 Hydrocarbons`, `C34-C50 Hydrocarbons`, `Purgeable hydrocarbons` 
-  - `Extractable hydrocarbons`, `Didecyl dimethyl ammonium chloride`, `Diisopropanolamine`, `Monochlorobenzene`, `Sulfolane`
-  - `Triphenyltin`, `3-Iodo-2-propynyl butyl carbamate`, `pheophytin`
-  - Removed all with `Retired` in the name
-  - Remove: `Gasoline range organics (C6-C12 GRO)`, `Extractable fuel hydrocarbons (C13-C22 DRO)`, and `Tetrachloroethene`
-  - Removed duplicate names for `Shannon & Wiener Macroinvert Taxonomic Diversity Index`, `Escherichia coli`, and `Enterococcusin`
-- **Method Speciation**: Added new values
-  - `as CN`: TODO
-- **Result Sample Fraction**: Added new values
-  - `Acid Soluble`:
-  - `Filtered, Lab`: TODO
-  - `Filtered, Field`: TODO
-  - `Unspecified`: TODO
-- **Result Value**: Modified, currently only allows numeric values
-- **Result Unit**: Added new values
-  - `REL`: TODO
-  - `CTU`: TODO
-  - `HZN`: TODO
-  - `L/mg-m`: TODO
-  - `ug/m2-hr`: TODO
-  - `mg/m2-hr`: TODO
-  - `mg/m2-day`: TODO
-  - `ug/cm2-day`: TODO
-  - `ng/m2-day`: TODO
-  - `TCU`: TODO
-  - `#/yr`:
-  - `uATM`:
-  - TODO confirm list
-- **Result Qualifier**: Removed TODO
-- **Result Status ID**: None
-- **Statistical Base Code**: Removed, TODO
-- **Result Value Type**: Changed, removed default value TODO
-- **Result Weight Basis**: Removed TODO
-- **Result Time Basis**: Removed TODO
-- **Result Temperature Basis**: Removed TODO
-- **Result Particle Size Basis**: Removed TODO
-- **Precision**: Removed TODO
-- **Bias**: Removed TODO
-- **Confidence Interval**: Removed TODO
-- **Upper Confidence Limit**: Removed TODO
-- **Lower Confidence Limit**: Removed TODO
-- **Result Comment**: None
-- **Result Depth/Height Measure**: Removed TODO
-- **Result Depth/Height Unit**: Removed TODO
-- **Result Depth/Altitude Reference Point**: Removed TODO
-- **Result Sampling Point Name**: Removed TODO
-- **Result Attachment File Name**: Removed TODO
-- **Result Attachment Type**: Removed TODO
-- **Result Analytical Method ID**: Changed, removed allowed list, any string accepted TODO
-- **Result Analytical Method Context**: Added new values
-  - `EN`: TODO
-  - `VMV`: TODO
-- **Result Analytical Method Name**: ADDED TODO
-- **Laboratory Name**: None
-- **Laboratory Sample ID**: ADDED TODO
-- **Analysis Start Date**: See `Activity Start Date`
-- **Analysis Start Time**: See `Activity Start Date`
-- **Analysis Start Time Zone**: Changed format to meet ISO 8601 over Time Zone Codes
-- **Analysis End Date**: Removed TODO
-- **Analysis End Time**: Removed TODO
-- **Analysis End Time Zone**: Removed TODO
-- **Result Laboratory Comment Code**: Removed TODO
-- **Result Detection/Quantitation Limit Type**: None
-- **Result Detection/Quantitation Limit Measure**: None
-- **Result Detection/Quantitation Limit Unit**: See `Result Unit`
-- **Laboratory Accreditation Indicator**: Removed TODO
-- **Laboratory Accreditation Authority**: Removed TODO
-- **Lab Sample Preparation Method ID**: Removed TODO
-- **Lab Sample Preparation Start Date**: Removed TODO
-- **Lab Sample Preparation Start Time**: Removed TODO
-- **Lab Sample Preparation Start Time Zone**: Removed TODO
-- **Lab Sample Preparation End Date**: Removed TODO
-- **Lab Sample Preparation End Time**: Removed TODO
-- **Lab Sample Preparation End Time Zone**: Removed TODO
-- **Substance Dilution Factor**: Removed TODO
-- **Activity Group ID**: Removed TODO
-- **Activity Group Name**: Removed TODO
-- **Activity Group Type**: Removed TODO
+## Physical-Chemistry Results
+Column                                              | WQX                 | DS-WQX              | Changes
+----------------------------------------------------|---------------------|---------------------|----------------------------------------------------------------
+**Activity ID**                                     | Required, Text      |                     | Removed TODO Why
+**Activity Type**                                   | Required, Values    | Required, Values    | Added `Quality Control` (TODO Why)
+**Activity Media Name**                             | Required, Values    | Required, Values    | Added `Surface Water` (TODO Why)
+**Activity Media Subdivision Name**                 | Optional, Values    |                     | Removed
+**Activity Start Date**                             | Required, Date      | Required, Date      | Changed format to meet ISO 8601
+**Activity Start Time**                             | Optional, Time      | Optional, Time      | Changed format to meet ISO 8601
+**Activity Start Time Zone**                        | Conditional, Text   |                     | Removed, calculated internally using the Latitude and Longitude
+**Activity End Date**                               | Required, Date      | Required, Date      | See `Activity Start Date`
+**Activity End Time**                               | Optional, Time      | Optional, Time      | See `Activity Start Time`
+**Activity End Time Zone**                          | Conditional, Text   |                     | See `Activity Start Time Zone`
+**Activity Relative Depth Name**                    | Optional, Values    |                     | Removed
+**Activity Height/Depth Measure**                   | Optional, Text      | Optional, Number    | Changed type to Number only
+**Activity Height/Depth Unit**                      | Conditional, Values | Conditional, Values | None
+**Activity Top Depth/Height Measure**               | Optional, Text      |                     | Removed
+**Activity Top Depth/Height Unit**                  | Conditional, Values |                     | Removed
+**Activity Bottom Depth/Height Measure**            | Optional, Text      |                     | Removed
+**Activity Bottom Depth/Height Measure Unit**       | Conditional, Values |                     | Removed
+**Activity Depth Altitude Reference Point**         | Conditional, Text   |                     | Removed
+**Project ID**                                      | Required, Values    |                     | See `Project ID`
+**Organization**                                    | Optional, Text      |                     | Removed, Included in the metadata input form
+**Monitoring Location ID**                          | Conditional, Values |                     | See `Monitoring Location ID`
+**Activity Comment**                                | Optional, Text      |                     | Removed
+**Activity Latitude**                               | Optional, Number    |                     | Removed
+**Activity Longitude**                              | Optional, Number    |                     | Removed
+**Activity Source Map Scale**                       | Conditional, Text   |                     | Removed 
+**Activity Horizontal Accuracy Measure**            | Optional, Number    |                     | Removed
+**Activity Horizontal Accuracy Unit**               | Conditional, Values |                     | Removed
+**Activity Horizontal Collection Method**           | Conditional, Values |                     | Removed
+**Activity Horizontal Coordinate Reference System** | Conditional, Values |                     | Removed
+**Sample Collection Method ID**                     | Conditional, Text   |                     | Removed
+**Sample Collection Equipment Name**                | Conditional, Values | Optional, Values    | None
+**Sample Collection Equipment Comment**             | Optional, Text      |                     | Removed 
+**Sample Preparation Method ID**                    | Optional, Text      |                     | Removed 
+**Sample Container Type**                           | Conditional, Values |                     | Removed 
+**Sample Container Color**                          | Conditional, Values |                     | Removed
+**Chemical Preservative Used**                      | Conditional, Text   |                     | Removed
+**Thermal Preservative Used**                       | Conditional, Values |                     | Removed
+**Sample Transport Storage Description**            | Conditional, Text   |                     | Removed
+**Activity Attachment File Name**                   | Optional, Text      |                     | Removed 
+**Activity Attachment Type**                        | Conditional, Text   |                     | Removed 
+**Data Logger Line**                                | Conditional, Text   |                     | Removed 
+**Result Detection Condition**                      | Conditional, Values | Conditional, Values | Added `Not Reported`. Replaced `Present Below Quantification Limit` with `Below Detection/Quantification Limit`, `Present Above Quantification Limit` with `Above Detection/Quantification Limit`
+**Characteristic Name**                             | Conditional, Values | Conditional, Values | Added new values: `Silver Dioxide`, `Apparent Colour`, `C4-Fluorenes`, `Total Phosphorus, mixed forms`, `Total Nitrogen, mixed forms`, `Silica, reactive`, `Residue`, `Thorium`, `C10-C16 Hydrocarbons`, `C16-C34 Hydrocarbons`, `C10-C19 Hydrocarbons`, `C34-C50 Hydrocarbons`, `Purgeable hydrocarbons`, `Extractable hydrocarbons`, `Didecyl dimethyl ammonium chloride`, `Diisopropanolamine`, `Monochlorobenzene`, `Sulfolane`, `Triphenyltin`, `3-Iodo-2-propynyl butyl carbamate`, `pheophytin`. Removed: `Gasoline range organics (C6-C12 GRO)`, `Extractable fuel hydrocarbons (C13-C22 DRO)`, and `Tetrachloroethene`, duplicate names for `Shannon & Wiener Macroinvert Taxonomic Diversity Index`, `Escherichia coli`, and `Enterococcusin`, all with `(Retired)` in the name
+**Method Speciation**                               | Conditional, Values | Conditional, Values | Added `as CN` (TODO Why)
+**Result Sample Fraction**                          | Optional, Values    | Optional, Values    | Added `Acid Soluble` (TODO Why), `Filtered, Lab` (TODO Why), `Filtered, Field` (TODO Why), `Unspecified` (TODO Why)
+**Result Value**                                    | Conditional, Text   | Conditional, Number | Modified, currently only allows numeric values
+**Result Unit**                                     | Conditional, Values | Conditional, Values | Added `REL`, `CTU`, `HZN`, `L/mg-m`, `ug/m2-hr`, `mg/m2-hr`, `mg/m2-day`, `ug/cm2-day`, `ng/m2-day`, `TCU`, `#/yr`, `uATM` (TODO Why)
+**Result Qualifier**                                | Optional, Values    |                     | Removed
+**Result Status ID**                                | Conditional, Values | Conditional, Values | None
+**Statistical Base Code**                           | Optional, Values    |                     | Removed
+**Result Value Type**                               | Conditional, Values | Conditional, Values | Changed, removed default value 
+**Result Weight Basis**                             | Optional, Values    |                     | Removed
+**Result Time Basis**                               | Optional, Values    |                     | Removed
+**Result Temperature Basis**                        | Optional, Values    |                     | Removed
+**Result Particle Size Basis**                      | Optional, Text      |                     | Removed
+**Precision**                                       | Optional, Text      |                     | Removed
+**Bias**                                            | Optional, Text      |                     | Removed
+**Confidence Interval**                             | Optional, Text      |                     | Removed
+**Upper Confidence Limit**                          | Optional, Text      |                     | Removed
+**Lower Confidence Limit**                          | Optional, Text      |                     | Removed
+**Result Comment**                                  | Optional, Text      | Optional, Text      | None
+**Result Depth/Height Measure**                     | Optional, Text      |                     | Removed
+**Result Depth/Height Unit**                        | Conditional, Values |                     | Removed
+**Result Depth/Altitude Reference Point**           | Optional, Text      |                     | Removed
+**Result Sampling Point Name**                      | Optional, Text      |                     | Removed
+**Result Attachment File Name**                     | Optional, Text      |                     | Removed
+**Result Attachment Type**                          | Conditional, Text   |                     | Removed
+**Result Analytical Method ID**                     | Conditional, Text   | Conditional, Text   | Changed, removed allowed list, any string accepted 
+**Result Analytical Method Context**                | Conditional, Text   | Conditional, Values | Added `EN` (TODO Why), `VMV` (TODO Why)
+**Result Analytical Method Name**                   |                     | Conditional, Text   | Added (TODO Why) 
+**Laboratory Name**                                 | Optional, Text      | Optional, Text      | None
+**Laboratory Sample ID**                            |                     | Optional, Text      | Added (TODO Why), same as `Activity ID`?
+**Analysis Start Date**                             | Optional, Date      | Optional, Date      | See `Activity Start Date`
+**Analysis Start Time**                             | Optional, Time      | Optional, Time      | See `Activity Start Date`
+**Analysis Start Time Zone**                        | Conditional, Values | Conditional, Text   | Changed format to meet ISO 8601 over Time Zone Codes
+**Analysis End Date**                               | Optional, Date      |                     | Removed
+**Analysis End Time**                               | Optional, Time      |                     | Removed
+**Analysis End Time Zone**                          | Conditional, Values |                     | Removed
+**Result Laboratory Comment Code**                  | Optional, Values    |                     | Removed
+**Result Detection/Quantitation Limit Type**        | Conditional, Values | Conditional, Values | None
+**Result Detection/Quantitation Limit Measure**     | Conditional, Text   | Conditional, Number | Modified, currently only allows numeric values
+**Result Detection/Quantitation Limit Unit**        | Conditional, Values | Conditional, Values | See `Result Unit`
+**Laboratory Accreditation Indicator**              | Optional, Bool      |                     | Removed 
+**Laboratory Accreditation Authority**              | Optional, Text      |                     | Removed
+**Lab Sample Preparation Method ID**                | Optional, Text      |                     | Removed
+**Lab Sample Preparation Start Date**               | Optional, Date      |                     | Removed
+**Lab Sample Preparation Start Time**               | Optional, Time      |                     | Removed
+**Lab Sample Preparation Start Time Zone**          | Conditional, Values |                     | Removed
+**Lab Sample Preparation End Date**                 | Optional, Date      |                     | Removed
+**Lab Sample Preparation End Time**                 | Optional, Time      |                     | Removed
+**Lab Sample Preparation End Time Zone**            | Conditional, Values |                     | Removed
+**Substance Dilution Factor**                       | Optional, Integer   |                     | Removed
+**Activity Group ID**                               | Conditional, Text   |                     | Removed
+**Activity Group Name**                             | Optional, Text      |                     | Removed
+**Activity Group Type**                             | Conditional, Values |                     | Removed
 
 See https://github.com/gordonfn/schema/releases for details on `Characteristic Name` grouping changes.
