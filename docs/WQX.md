@@ -43,7 +43,7 @@ Column                                                         | WQX            
 **Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   |                  | Removed
 **Monitoring Location Horizontal Collection Method**           | Required, Values    |                  | Removed TODO Why
 **Monitoring Location Horizontal Coordinate Reference System** | Required, Values    | Required, Values | None
-**Monitoring Location Type**                                   |                     | Optional, Text   | Added TODO Why
+**Monitoring Location Type**                                   |                     | Required, Text   | Added TODO Why
 **Monitoring Location Waterbody**                              |                     | Optional, Text   | Added TODO Why
 **Vertical Measure**                                           | Optional, Number    |                  | Removed
 **Vertical Unit**                                              | Conditional, Values |                  | Removed
