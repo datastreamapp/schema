@@ -223,10 +223,10 @@
   "required": [
     "DatasetName",
     "MonitoringLocationName",
+    "MonitoringLocationType",
     "MonitoringLocationLatitude",
     "MonitoringLocationLongitude",
     "MonitoringLocationHorizontalCoordinateReferenceSystem",
-    "MonitoringLocationType",
     "ActivityType",
     "ActivityMediaName",
     "ActivityStartDate",

@@ -26,7 +26,7 @@ Column                           | WQX               | DS-WQX         | Changes
 
 Column                                                         | WQX                 | DS-WQX           | Changes
 ---------------------------------------------------------------|---------------------|------------------|--------------------------------------------------------
-**Monitoring Location ID**                                     | Required, Text      | Required, Text   | None
+**Monitoring Location ID**                                     | Required, Text      | Optional, Text   | Changed, column is not being used for joining tables
 **Monitoring Location Name**                                   | Required, Text      | Required, Text   | None
 **Monitoring Location Type**                                   | Required, Values    | Required, Values | Added new values: `Estuary`, `Ocean`
 **Monitoring Location Description**                            | Optional, Text      |                  | Removed
@@ -43,7 +43,6 @@ Column                                                         | WQX            
 **Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   |                  | Removed
 **Monitoring Location Horizontal Collection Method**           | Required, Values    |                  | Removed TODO Why
 **Monitoring Location Horizontal Coordinate Reference System** | Required, Values    | Required, Values | None
-**Monitoring Location Type**                                   |                     | Required, Text   | Added TODO Why
 **Monitoring Location Waterbody**                              |                     | Optional, Text   | Added TODO Why
 **Vertical Measure**                                           | Optional, Number    |                  | Removed
 **Vertical Unit**                                              | Conditional, Values |                  | Removed
