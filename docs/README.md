@@ -126,7 +126,7 @@ npm publish
 
 ### Commenting on the Schema
 
-If you wish to comment on the schema please [open an issue](https://github.com/gordonfn/datastream-schema/issues).
+If you wish to comment on the schema please [open an issue](https://github.com/gordonfn/schema/issues).
 
 * For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
 
