@@ -64,9 +64,9 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
 - **Activity Start Date**: Changed format to meet ISO 8601
 - **Activity Start Time**: Changed format to meet ISO 8601
 - **Activity Start Time Zone**: Removed, calculated internally using the Latitude and Longitude
-- **Activity End Date**: Changed format to meet ISO 8601
-- **Activity End Time**: Changed format to meet ISO 8601
-- **Activity End Time Zone**: Removed, calculated internally using the Latitude and Longitude
+- **Activity End Date**: See `Activity Start Date`
+- **Activity End Time**: See `Activity Start Time`
+- **Activity End Time Zone**: See `Activity Start Time Zone`
 - **Activity Relative Depth Name**: Removed, TODO
 - **Activity Height/Depth Measure**: No Change
 - **Activity Height/Depth Unit**: No Change
@@ -162,8 +162,8 @@ To ensure a lower barrier to entry, multiple changes were made in the structure:
 - **Result Analytical Method Name**: ADDED TODO
 - **Laboratory Name**: No Change
 - **Laboratory Sample ID**: ADDED TODO
-- **Analysis Start Date**: Changed format to meet ISO 8601
-- **Analysis Start Time**: Changed format to meet ISO 8601
+- **Analysis Start Date**: See `Activity Start Date`
+- **Analysis Start Time**: See `Activity Start Date`
 - **Analysis Start Time Zone**: Changed format to meet ISO 8601 over Time Zone Codes
 - **Analysis End Date**: Removed TODO
 - **Analysis End Time**: Removed TODO
