@@ -132,7 +132,6 @@
       ]
     },
     "ResultValueType": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValueType",
       "description": "Qualifies process used in the determination of result value (eg. Actual, Estimated, Calculated).",
       "enum": [
         "Actual",
