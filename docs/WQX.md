@@ -28,7 +28,7 @@ Column                                                         | WQX            
 ---------------------------------------------------------------|---------------------|------------------|--------------------------------------------------------
 **Monitoring Location ID**                                     | Required, Text      | Optional, Text   | Changed, column is not being used for joining tables
 **Monitoring Location Name**                                   | Required, Text      | Required, Text   | None
-**Monitoring Location Type**                                   | Required, Values    | Required, Values | Added new values: `Estuary`, `Ocean`; Removed other values
+**Monitoring Location Type**                                   | Required, Values    | Required, Values | Reduced allowed values list
 **Monitoring Location Description**                            | Optional, Text      |                  | Removed
 **HUC Eight-Digit Code**                                       | Optional, Text      |                  | Removed
 **HUC Twelve-Digit Code**                                      | Optional, Text      |                  | Removed
