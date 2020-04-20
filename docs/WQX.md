@@ -17,8 +17,8 @@ Column                           | WQX               | DS-WQX         | Changes
 **Sampling Design Type**         | Optional, Values  |                | Removed
 **QAPP Approved Indicator**      | Optional, Bool    |                | Removed
 **QAPP Approval Agency Name**    | Optional, Text    |                | Removed
-**Project Attachment File Name** | Conditional, Text |                | Removed
-**Project Attachment Type**      | Conditional, Text |                | Removed
+**Project Attachment File Name** | Conditional, Text |                | Moved to separate work flow
+**Project Attachment Type**      | Conditional, Text |                | Moved to separate work flow
 
 
 
@@ -103,10 +103,10 @@ Column                                              | WQX                 | DS-W
 **Activity Attachment File Name**                   | Optional, Text      |                     | Removed 
 **Activity Attachment Type**                        | Conditional, Text   |                     | Removed 
 **Data Logger Line**                                | Conditional, Text   |                     | Removed 
-**Result Detection Condition**                      | Conditional, Values | Conditional, Values | Added `Not Reported`. Replaced `Present Below Quantification Limit` with `Below Detection/Quantification Limit`, `Present Above Quantification Limit` with `Above Detection/Quantification Limit`
+**Result Detection Condition**                      | Conditional, Values | Conditional, Values | Replaced `Present Below Quantification Limit` with `Below Detection/Quantification Limit`, `Present Above Quantification Limit` with `Above Detection/Quantification Limit`. Change was made to improve clarity.
 **Characteristic Name**                             | Conditional, Values | Required, Values    | Added new values: `Silver Dioxide`, `Apparent Colour`, `C4-Fluorenes`, `Total Phosphorus, mixed forms`, `Total Nitrogen, mixed forms`, `Silica, reactive`, `Residue`, `Thorium`, `C10-C16 Hydrocarbons`, `C16-C34 Hydrocarbons`, `C10-C19 Hydrocarbons`, `C34-C50 Hydrocarbons`, `Purgeable hydrocarbons`, `Extractable hydrocarbons`, `Didecyl dimethyl ammonium chloride`, `Diisopropanolamine`, `Monochlorobenzene`, `Sulfolane`, `Triphenyltin`, `3-Iodo-2-propynyl butyl carbamate`, `pheophytin`. Removed: `Gasoline range organics (C6-C12 GRO)`, `Extractable fuel hydrocarbons (C13-C22 DRO)`, and `Tetrachloroethene`, duplicate names for `Shannon & Wiener Macroinvert Taxonomic Diversity Index`, `Escherichia coli`, and `Enterococcusin`, all with `(Retired)` in the name
 **Method Speciation**                               | Conditional, Values | Conditional, Values | Added `as CN` to account for CCME cyanide requirement for method speciation
-**Result Sample Fraction**                          | Optional, Values    | Optional, Values    | Added `Filtered, Lab', `Filtered, Field` (these were added to WQX for nutrient data), and `Unspecified` to account for older data where the sample fraction may be unknown 
+**Result Sample Fraction**                          | Optional, Values    | Optional, Values    | Added `Unspecified` to account for older data where the sample fraction may be unknown 
 **Result Value**                                    | Conditional, Text   | Conditional, Number | Modified, currently only allows numeric values
 **Result Unit**                                     | Conditional, Values | Conditional, Values | Added `REL`, `CTU`, `HZN`, `L/mg-m` for UV absorbance not in L/mg-cm,  `TCU` for true color units, `#/yr` to account for flushing rate, and `uATM` to account for those using micro-atmospheres 
 **Result Qualifier**                                | Optional, Values    |                     | Removed
@@ -129,7 +129,7 @@ Column                                              | WQX                 | DS-W
 **Result Sampling Point Name**                      | Optional, Text      |                     | Removed
 **Result Attachment File Name**                     | Optional, Text      |                     | Removed
 **Result Attachment Type**                          | Conditional, Text   |                     | Removed
-**Result Analytical Method ID**                     | Conditional, Text   | Conditional, Text   | Changed, removed allowed list, any string accepted 
+**Result Analytical Method ID**                     | Conditional, Text   | Conditional, Text   | Changed, removed allowed list (US specific), any string accepted. 
 **Result Analytical Method Context**                | Conditional, Text   | Conditional, Values | Added `EN` to allow for European standards, and `VMV` to allow for value method variable codes used in Canada
 **Result Analytical Method Name**                   |                     | Conditional, Text   | Added as there is no look-up table of allowed method names to cross reference to get this information
 **Laboratory Name**                                 | Optional, Text      | Optional, Text      | None
