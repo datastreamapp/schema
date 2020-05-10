@@ -1,25 +1,10 @@
 {
-  "title": "DataStream",
-  "description": "DataStream WQX Results",
+  "title": "DataStream WQX",
   "type": "object",
-  "definitions": {
-    "time": {
-      "description": "ISO 8601 Time",
-      "type": "string",
-      "pattern": "^(2[0-3]|[01]?[0-9]):[0-5]?[0-9](:[0-5]?[0-9](\\.[0-9]+)?)?$"
-    },
-    "timezone": {
-      "description": "ISO 8601 Timezone",
-      "type": "string",
-      "pattern": "^(Z|[+-](0[0-9]|1[0-9]|2[0-4])([0-5][0-9]))$",
-      "maxLength": 5
-    }
-  },
   "additionalProperties": false,
   "properties": {
     "DatasetName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ProjectName",
-      "maxLength": 255
+      "$ref": "./definitions.json#/DatasetName"
     },
     "MonitoringLocationID": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
@@ -35,62 +20,54 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
     },
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationHorizontalCoordinateReferenceSystem",
+      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "MonitoringLocationType": {
-      "$ref": "./definitions.json#/MonitoringLocationType",
+      "$ref": "./values/MonitoringLocationType.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "MonitoringLocationWaterbody": {
-      "title": "Monitoring Location Waterbody",
-      "description": "Waterbody name at location",
-      "type": "string",
-      "maxLength": 255
+      "$ref": "./definitions.json#/MonitoringLocationWaterbody"
     },
     "ActivityType": {
-      "$ref": "./definitions.json#/ActivityType",
+      "$ref": "./values/ActivityType.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "ActivityMediaName": {
-      "$ref": "./definitions.json#/ActivityMediaName",
+      "$ref": "./values/ActivityMediaSubdivisionName.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "ActivityStartDate": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityStartDate"
+      "$ref": "./definitions.json#/date"
     },
     "ActivityStartTime": {
-      "$ref": "#/definitions/time"
+      "$ref": "./definitions.json#/time"
     },
     "ActivityEndDate": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityEndDate",
-      "$comment": "** Have it default to StartTimestamp"
+      "$ref": "./definitions.json#/date"
     },
     "ActivityEndTime": {
-      "$ref": "#/definitions/time"
+      "$ref": "./definitions.json#/time"
     },
     "ActivityDepthHeightMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
       "maximum": 0
     },
     "ActivityDepthHeightUnit": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightUnit",
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ]
+      "$ref": "./definitions.json#/unit"
     },
     "SampleCollectionEquipmentName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/SampleCollectionEquipmentName",
@@ -99,23 +76,22 @@
         "toEnumCase"
       ]
     },
-
     "CharacteristicName": {
-      "$ref": "./definitions.enum-characteristic-name.json#/CharacteristicName",
+      "$ref": "./values/CharacteristicName.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "MethodSpeciation": {
-      "$ref": "./definitions.json#/MethodSpeciation",
+      "$ref": "./values/MethodSpeciation.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "ResultSampleFraction": {
-      "$ref": "./definitions.json#/ResultSampleFraction",
+      "$ref": "./values/ResultSampleFraction.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
@@ -125,14 +101,13 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
     },
     "ResultUnit": {
-      "$ref": "./definitions.json#/ResultUnit",
+      "$ref": "./definitions.json#/unit",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "ResultValueType": {
-      "description": "Qualifies process used in the determination of result value (eg. Actual, Estimated, Calculated).",
       "enum": [
         "Actual",
         "Blank Corrected",
@@ -146,7 +121,7 @@
       ]
     },
     "ResultDetectionCondition": {
-      "$ref": "./definitions.json#/ResultDetectionCondition",
+      "$ref": "./values/ResultDetectionCondition.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
@@ -156,21 +131,21 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
     },
     "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "./definitions.json#/ResultDetectionQuantitationLimitUnit",
+      "$ref": "./definitions.json#/unit",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "ResultDetectionQuantitationLimitType": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitType",
+      "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "ResultStatusID": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultStatusID",
+      "$ref": "./values/ResultStatusID.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
@@ -180,43 +155,32 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
     },
     "ResultAnalyticalMethodID": {
-      "title": "Result Analytical Method ID",
-      "description": "",
-      "type": "string",
-      "maxLength": 50
+      "$ref": "./definitions.json#/ResultAnalyticalMethodID"
     },
     "ResultAnalyticalMethodContext": {
-      "$ref": "./definitions.json#/ResultAnalyticalMethodContext",
+      "$ref": "./values/ResultAnalyticalMethodContext.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
       ]
     },
     "ResultAnalyticalMethodName": {
-      "title": "Result Analytical Method Name",
-      "description": "Name of the analytical method",
-      "type": "string",
-      "maxLength": 100
+      "$ref": "./definitions.json#/ResultAnalyticalMethodName"
     },
     "AnalysisStartDate": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/AnalysisStartDate"
+      "$ref": "./definitions.json#/date"
     },
     "AnalysisStartTime": {
-      "$ref": "#/definitions/time"
+      "$ref": "./definitions.json#/time"
     },
     "AnalysisStartTimeZone": {
-      "title": "Analysis Start Timezone",
-      "description": "",
-      "$ref": "#/definitions/timezone"
+      "$ref": "./definitions.json#/timezone"
     },
     "LaboratoryName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
     },
     "LaboratorySampleID": {
-      "title": "Laboratory Sample ID",
-      "description": "Unique identifier for the lab sample",
-      "type": "string",
-      "maxLength": 60
+      "$ref": "./definitions.json#/LaboratorySampleID"
     }
   },
   "required": [
@@ -261,14 +225,7 @@
       ]
     },
     {
-      "if": {
-        "$ref": "./definitions.logic.characteristic-name.json"
-      },
-      "then": {
-        "required": [
-          "ResultSampleFraction"
-        ]
-      }
+      "ref": "../node_modules/wqx/required/Characteristic-SampleFraction.json"
     },
     {
       "if": {

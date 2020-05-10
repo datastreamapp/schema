@@ -1,0 +1,11 @@
+[
+  "Gasoline range organics (C6-C12 GRO)",
+  "Extractable fuel hydrocarbons (C13-C22 DRO)",
+  "Tetrachloroethene",
+
+  "USDA Soil Texture Classification",
+  "Wind Condition",
+  ".* (text)",
+  ".* (choice list)",
+  ".*retired.*"
+]

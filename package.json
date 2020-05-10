@@ -1,9 +1,9 @@
 {
   "name": "@gordonfn/schema",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "main": "index.js",
   "scripts": {
@@ -29,16 +29,14 @@
   },
   "homepage": "https://github.com/gordonfn/schema#readme",
   "devDependencies": {
-    "ajv": "6.10.2",
-    "ajv-istanbul": "0.1.0",
+    "ajv": "6.12.2",
     "ajv-keywords": "3.4.1",
     "ajv-pack": "0.3.1",
     "chai": "4.2.0",
-    "change-case": "3.1.0",
+    "change-case": "4.1.1",
     "glob": "7.1.4",
-    "istanbul": "0.4.5",
-    "json-schema-ref-parser": "7.1.0",
-    "mocha": "6.2.0",
-    "wqx": "2.1.0-alpha.9"
+    "json-schema-ref-parser": "9.0.1",
+    "mocha": "7.1.2",
+    "wqx": "2.1.0"
   }
 }

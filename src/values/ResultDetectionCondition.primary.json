@@ -1,0 +1,9 @@
+{
+  "title": "Result Detection Condition",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Present Below Quantification Limit"
+  ],
+  "maxLength": 35
+}

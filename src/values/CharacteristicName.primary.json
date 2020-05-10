@@ -1,0 +1,9 @@
+{
+  "title": "Characteristic",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Gasoline range organics (C6-C12 GRO)"
+  ],
+  "maxLength": 254
+}

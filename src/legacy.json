@@ -1,0 +1,258 @@
+{
+  "title": "DataStream WQX",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "DatasetName": {
+      "$ref": "./definitions.json#/DatasetName"
+    },
+    "MonitoringLocationID": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
+    },
+    "MonitoringLocationName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
+      "minLength": 1
+    },
+    "MonitoringLocationLatitude": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
+    },
+    "MonitoringLocationLongitude": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
+    },
+    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "MonitoringLocationType": {
+      "$ref": "./values/MonitoringLocationType.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "MonitoringLocationWaterbody": {
+      "$ref": "./definitions.json#/MonitoringLocationWaterbody"
+    },
+    "ActivityType": {
+      "$ref": "./values/ActivityType.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ActivityMediaName": {
+      "$ref": "./values/ActivityMediaSubdivisionName.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ActivityStartDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "ActivityStartTime": {
+      "$ref": "./definitions.json#/time"
+    },
+    "ActivityEndDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "ActivityEndTime": {
+      "$ref": "./definitions.json#/time"
+    },
+    "ActivityDepthHeightMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
+      "maximum": 0
+    },
+    "ActivityDepthHeightUnit": {
+      "$ref": "./definitions.json#/unit"
+    },
+    "SampleCollectionEquipmentName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/SampleCollectionEquipmentName",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "CharacteristicName": {
+      "$ref": "./values/CharacteristicName.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "MethodSpeciation": {
+      "$ref": "./values/MethodSpeciation.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultSampleFraction": {
+      "$ref": "./values/ResultSampleFraction.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultValue": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
+    },
+    "ResultUnit": {
+      "$ref": "./definitions.json#/unit",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultValueType": {
+      "enum": [
+        "Actual",
+        "Blank Corrected",
+        "Calculated",
+        "Control Adjusted",
+        "Estimated"
+      ],
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultDetectionCondition": {
+      "$ref": "./values/ResultDetectionCondition.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultDetectionQuantitationLimitMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
+    },
+    "ResultDetectionQuantitationLimitUnit": {
+      "$ref": "./definitions.json#/unit",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultDetectionQuantitationLimitType": {
+      "$ref": "./values/ResultDetectionQuantitationLimitType.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultStatusID": {
+      "$ref": "./values/ResultStatusID.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultComment": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
+    },
+    "ResultAnalyticalMethodID": {
+      "$ref": "./definitions.json#/ResultAnalyticalMethodID"
+    },
+    "ResultAnalyticalMethodContext": {
+      "$ref": "./values/ResultAnalyticalMethodContext.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
+    },
+    "ResultAnalyticalMethodName": {
+      "$ref": "./definitions.json#/ResultAnalyticalMethodName"
+    },
+    "AnalysisStartDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "AnalysisStartTime": {
+      "$ref": "./definitions.json#/time"
+    },
+    "AnalysisStartTimeZone": {
+      "$ref": "./definitions.json#/timezone"
+    },
+    "LaboratoryName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
+    },
+    "LaboratorySampleID": {
+      "$ref": "./definitions.json#/LaboratorySampleID"
+    }
+  },
+  "required": [
+    "DatasetName",
+    "MonitoringLocationName",
+    "MonitoringLocationType",
+    "MonitoringLocationLatitude",
+    "MonitoringLocationLongitude",
+    "MonitoringLocationHorizontalCoordinateReferenceSystem",
+    "ActivityType",
+    "ActivityMediaName",
+    "ActivityStartDate",
+    "CharacteristicName"
+  ],
+  "dependencies": {
+    "ActivityDepthHeightMeasure": [
+      "ActivityDepthHeightUnit"
+    ],
+    "ResultValue": [
+      "ResultUnit"
+    ],
+    "ResultDetectionQuantitationLimitMeasure": [
+      "ResultDetectionQuantitationLimitUnit"
+    ],
+    "AnalysisStartTime": [
+      "AnalysisStartTimeZone"
+    ]
+  },
+  "allOf": [
+    {
+      "oneOf": [
+        {
+          "required": [
+            "ResultValue"
+          ]
+        },
+        {
+          "required": [
+            "ResultDetectionCondition"
+          ]
+        }
+      ]
+    },
+    {
+      "$todo": "./logic/if-char-then-ResultSampleFraction"
+    },
+    {
+      "if": {
+        "properties": {
+          "ResultDetectionCondition": {
+            "enum": [
+              "Not Detected",
+              "Present Above Quantification Limit",
+              "Present Below Quantification Limit",
+              "Above Detection/Quantification Limit",
+              "Below Detection/Quantification Limit"
+            ]
+          }
+        },
+        "required": [
+          "ResultDetectionCondition"
+        ]
+      },
+      "then": {
+        "dependencies": {
+          "ResultDetectionCondition": [
+            "ResultDetectionQuantitationLimitType",
+            "ResultDetectionQuantitationLimitMeasure",
+            "ResultDetectionQuantitationLimitUnit"
+          ]
+        }
+      }
+    }
+  ]
+}
