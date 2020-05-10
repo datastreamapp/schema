@@ -94,7 +94,7 @@ columns.forEach(col => {
   subtractions.forEach(item => {
     const index = object.enum.indexOf(item)
     if(index !== -1) {
-      object.enum = object.enum.splice(index, 1)
+      object.enum.splice(index, 1)
     }
   })
 

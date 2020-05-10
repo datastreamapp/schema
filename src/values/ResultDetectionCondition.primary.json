@@ -3,7 +3,27 @@
   "description": "",
   "type": "string",
   "enum": [
-    "Present Below Quantification Limit"
+    "Above Detection/Quantification Limit",
+    "Above Operating Range",
+    "Below Daily Detection Limit",
+    "Below Detection Limit",
+    "Below Detection/Quantification Limit",
+    "Below Long-term Blank-basd Dt Limit",
+    "Below Method Detection Limit",
+    "Below Reporting Limit",
+    "Below Sample-specific Detect Limit",
+    "Below System Detection Limit",
+    "Between Inst Detect and Quant Limit",
+    "Detected Not Quantified",
+    "High Moisture",
+    "Not Detected",
+    "Not Detected at Detection Limit",
+    "Not Detected at Reporting Limit",
+    "Not Present",
+    "Not Reported",
+    "Reported in Raw Data (attached)",
+    "Trace",
+    "Value Decensored"
   ],
   "maxLength": 35
 }

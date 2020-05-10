@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 
-const schema = require('../dist/json-schema')
+const schema = require('../dist/json-schema/index.json')
 //const validate = require('../dist/validate')
 
 // Start Manual
@@ -36,8 +36,8 @@ describe('DataStream Schema', function () {
     expect(valid).to.equal(false)
 
     //expect(data.MonitoringLocationHorizontalCoordinateReferenceSystem).to.equal('UNKWN')
-    expect(data.ResultValueType).to.equal('Actual')
-    expect(Object.keys(data).length).to.equal(1)
+    //expect(data.ResultValueType).to.equal('Actual') // WQX only right now
+    //expect(Object.keys(data).length).to.equal(1)
 
     done()
   })
@@ -66,15 +66,15 @@ describe('DataStream Schema', function () {
       'MonitoringLocationType': 'Atmosphere',
       'MonitoringLocationWaterbody': 'Elbow River',
       'ActivityType': 'Field Msr/Obs',
-      'ActivityMediaName': 'Water',
+      'ActivityMediaName': 'Surface Water',
       'ActivityDepthHeightMeasure': '-34',
       'ActivityDepthHeightUnit': 'm',
       'SampleCollectionEquipmentName': 'Bongo Net',
-      'CharacteristicName': 'Aluminum',
+      'CharacteristicName': 'Silver Dioxide',
       'MethodSpeciation': 'as B',
       'ResultSampleFraction': 'Dissolved',
       'ResultValue': '99.99',
-      'ResultUnit': 'µg',
+      'ResultUnit': 'ug',
       'ResultStatusID': 'Accepted',
       'ResultComment': 'None at this time',
       'ResultAnalyticalMethodID': '1',

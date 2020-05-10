@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 
-const schema = require('../dist/json-schema')
+const schema = require('../dist/json-schema/index.json')
 const Ajv = require('ajv');
 
 const ajv = new Ajv({
@@ -35,7 +35,7 @@ describe('DataStream Schema', function () {
       "MonitoringLocationType":"Atmosphere",
       "MonitoringLocationWaterbody":"Elbow River",
       "ActivityType":"Field Msr/Obs",
-      "ActivityMediaName":"Water",
+      "ActivityMediaName":"surface Water",
       "ActivityDepthHeightMeasure":"-34",
       "ActivityDepthHeightUnit":"m",
       "SampleCollectionEquipmentName":"Bongo Net",

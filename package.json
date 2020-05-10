@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "prebuild": "./bin/build-init.sh && bin/build-logic-characteristic-name.sh && ./bin/build-enum-characteristic-name.sh ",
+    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js",
     "build": "npm run prebuild && node ./bin/build.js",
     "test": "npm run build && mocha"
   },
