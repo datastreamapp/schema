@@ -225,7 +225,7 @@
       ]
     },
     {
-      "$todo": "./logic/if-char-then-ResultSampleFraction"
+      "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
       "if": {

@@ -225,7 +225,7 @@
       ]
     },
     {
-      "ref": "../node_modules/wqx/required/Characteristic-SampleFraction.json"
+      "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
       "if": {

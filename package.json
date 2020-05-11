@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js",
+    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
     "build": "npm run prebuild && node ./bin/build.js",
     "test": "npm run build && mocha"
   },
@@ -37,6 +37,6 @@
     "glob": "7.1.4",
     "json-schema-ref-parser": "9.0.1",
     "mocha": "7.1.2",
-    "wqx": "2.1.0"
+    "wqx": "2.1.1"
   }
 }

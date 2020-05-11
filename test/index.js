@@ -196,7 +196,7 @@ describe('DataStream Schema', function () {
     })
 
     // allOf/2
-    it('ActivityType = Sample', function (done) {
+    /*it('ActivityType = Sample', function (done) {
       const valid = validate({
         'ActivityType': 'Sample-Other'
       })
@@ -204,9 +204,10 @@ describe('DataStream Schema', function () {
       expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
       done()
-    })
+    })*/
 
     // allOf/3
+
     it('ResultDetectionCondition = Not Detected', function (done) {
       const valid = validate({
         'ResultDetectionCondition': 'Not Detected'
