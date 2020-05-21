@@ -156,7 +156,7 @@ Column                                              | WQX                      |
 **Substance Dilution Factor**                       | Optional, Integer        |                     | Removed
 **Activity Group ID**                               | Conditional, Text        |                     | Removed
 **Activity Group Name**                             | Optional, Text           |                     | Removed
-**Activity Group Type**                             | Conditional, Values      |                     | Removed
+**Activity Group Type**                             | Conditional, Values      |                     | Removed, can be auto generated internally
 
 See https://github.com/gordonfn/schema/releases for details on `Characteristic Name` grouping changes.
 

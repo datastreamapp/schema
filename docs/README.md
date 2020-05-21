@@ -87,12 +87,12 @@ const Ajv = require('ajv');
 const jsonschema = require('@datastream/schema/json-schema');
 
 const ajv = new Ajv({
-    v5: true,
-    format:'full',
-    coerceTypes: true,
-    allErrors: true,
-    useDefaults: true
-});
+ schemaId: 'auto',
+ format: 'full',
+ coerceTypes: true,
+ allErrors: true,
+ useDefaults: true
+})
 require('ajv-keywords')(ajv, ['transform']); // Optional: `transform` removes strictness surrounding value character case.
 const validate = ajv.compile(jsonschema);
 

@@ -405,7 +405,9 @@
     "yd",
     "yd2",
     "yd3",
-    "years"
+    "years",
+    "µS/cm",
+    "µg/l"
   ],
   "maxLength": 11
 }
