@@ -1,4 +1,5 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "DataStream WQX",
   "type": "object",
   "additionalProperties": false,
@@ -33,9 +34,6 @@
         "toEnumCase"
       ]
     },
-    "MonitoringLocationWaterbody": {
-      "$ref": "./definitions.json#/MonitoringLocationWaterbody"
-    },
     "ActivityType": {
       "$ref": "./values/ActivityType.primary.json",
       "transform": [
@@ -63,8 +61,7 @@
       "$ref": "./definitions.json#/time"
     },
     "ActivityDepthHeightMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
-      "maximum": 0
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
     },
     "ActivityDepthHeightUnit": {
       "$ref": "./definitions.json#/unit"
@@ -185,6 +182,7 @@
   },
   "required": [
     "DatasetName",
+    "MonitoringLocationID",
     "MonitoringLocationName",
     "MonitoringLocationType",
     "MonitoringLocationLatitude",
@@ -225,34 +223,16 @@
       ]
     },
     {
+      "$ref": "./logic/CharacteristicName-MethodSpeciation.json"
+    },
+    {
       "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
-      "if": {
-        "properties": {
-          "ResultDetectionCondition": {
-            "enum": [
-              "Not Detected",
-              "Present Above Quantification Limit",
-              "Present Below Quantification Limit",
-              "Above Detection/Quantification Limit",
-              "Below Detection/Quantification Limit"
-            ]
-          }
-        },
-        "required": [
-          "ResultDetectionCondition"
-        ]
-      },
-      "then": {
-        "dependencies": {
-          "ResultDetectionCondition": [
-            "ResultDetectionQuantitationLimitType",
-            "ResultDetectionQuantitationLimitMeasure",
-            "ResultDetectionQuantitationLimitUnit"
-          ]
-        }
-      }
+      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit.json"
+    },
+    {
+      "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
     }
   ]
 }

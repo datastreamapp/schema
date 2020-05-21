@@ -1,0 +1,34 @@
+{
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Temperature",
+          "Temperature difference",
+          "Temperature, air",
+          "Temperature, dew point air",
+          "Temperature, hyporheic",
+          "Temperature, sample",
+          "Temperature, sediment",
+          "Temperature, soil",
+          "Temperature, tissue",
+          "Temperature, water",
+          "Temperature, wet bulb"
+        ]
+      },
+      "ResultUnit": {
+        "enum": ["deg C"]
+      }
+    },
+    "required": ["CharacteristicName","ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "minimum": -100,
+        "maximum": 100
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}

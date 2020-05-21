@@ -7,5 +7,6 @@
   "Wind Condition",
   ".* (text)",
   ".* (choice list)",
-  ".*retired.*"
+  ".*retired.*",
+  ".* (Y/N)"
 ]

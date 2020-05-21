@@ -17,7 +17,7 @@ const ajv = new Ajv({
 
 const writeFile = util.promisify(fs.writeFile)
 
-console.log('Compile: JSON Schema & JSON Table Schema & CSV Template')
+console.log('Compile: JSON Schema & CSV Template')
 
 const process = async (src, dist, minify = false) => {
   let schema = {}

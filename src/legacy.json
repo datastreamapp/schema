@@ -1,7 +1,8 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "DataStream WQX",
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
     "DatasetName": {
       "$ref": "./definitions.json#/DatasetName"
@@ -33,9 +34,6 @@
         "toEnumCase"
       ]
     },
-    "MonitoringLocationWaterbody": {
-      "$ref": "./definitions.json#/MonitoringLocationWaterbody"
-    },
     "ActivityType": {
       "$ref": "./values/ActivityType.legacy.json",
       "transform": [
@@ -63,8 +61,7 @@
       "$ref": "./definitions.json#/time"
     },
     "ActivityDepthHeightMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
-      "maximum": 0
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
     },
     "ActivityDepthHeightUnit": {
       "$ref": "./definitions.json#/unit"
@@ -182,77 +179,5 @@
     "LaboratorySampleID": {
       "$ref": "./definitions.json#/LaboratorySampleID"
     }
-  },
-  "required": [
-    "DatasetName",
-    "MonitoringLocationName",
-    "MonitoringLocationType",
-    "MonitoringLocationLatitude",
-    "MonitoringLocationLongitude",
-    "MonitoringLocationHorizontalCoordinateReferenceSystem",
-    "ActivityType",
-    "ActivityMediaName",
-    "ActivityStartDate",
-    "CharacteristicName"
-  ],
-  "dependencies": {
-    "ActivityDepthHeightMeasure": [
-      "ActivityDepthHeightUnit"
-    ],
-    "ResultValue": [
-      "ResultUnit"
-    ],
-    "ResultDetectionQuantitationLimitMeasure": [
-      "ResultDetectionQuantitationLimitUnit"
-    ],
-    "AnalysisStartTime": [
-      "AnalysisStartTimeZone"
-    ]
-  },
-  "allOf": [
-    {
-      "oneOf": [
-        {
-          "required": [
-            "ResultValue"
-          ]
-        },
-        {
-          "required": [
-            "ResultDetectionCondition"
-          ]
-        }
-      ]
-    },
-    {
-      "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
-    },
-    {
-      "if": {
-        "properties": {
-          "ResultDetectionCondition": {
-            "enum": [
-              "Not Detected",
-              "Present Above Quantification Limit",
-              "Present Below Quantification Limit",
-              "Above Detection/Quantification Limit",
-              "Below Detection/Quantification Limit"
-            ]
-          }
-        },
-        "required": [
-          "ResultDetectionCondition"
-        ]
-      },
-      "then": {
-        "dependencies": {
-          "ResultDetectionCondition": [
-            "ResultDetectionQuantitationLimitType",
-            "ResultDetectionQuantitationLimitMeasure",
-            "ResultDetectionQuantitationLimitUnit"
-          ]
-        }
-      }
-    }
-  ]
+  }
 }

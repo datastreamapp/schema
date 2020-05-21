@@ -33,7 +33,6 @@ describe('DataStream Schema', function () {
       "MonitoringLocationLongitude":"-114.0708",
       "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
       "MonitoringLocationType":"Atmosphere",
-      "MonitoringLocationWaterbody":"Elbow River",
       "ActivityType":"Field Msr/Obs",
       "ActivityMediaName":"surface Water",
       "ActivityDepthHeightMeasure":"-34",

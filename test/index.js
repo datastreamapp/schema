@@ -24,6 +24,7 @@ const checkProperty = (errors, keyword, property) => {
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
     else if(keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
+    else if(keyword === 'anyOf') return true
   }
   return false
 }
@@ -64,7 +65,6 @@ describe('DataStream Schema', function () {
       'MonitoringLocationLongitude': '-114.0708',
       'MonitoringLocationHorizontalCoordinateReferenceSystem': 'AMSMA',
       'MonitoringLocationType': 'Atmosphere',
-      'MonitoringLocationWaterbody': 'Elbow River',
       'ActivityType': 'Field Msr/Obs',
       'ActivityMediaName': 'Surface Water',
       'ActivityDepthHeightMeasure': '-34',
@@ -167,14 +167,14 @@ describe('DataStream Schema', function () {
   describe('Should require allOf', function () {
 
     // allOf/0
-    it('NOT ResultValue & NOT ResultDetectionCondition', function (done) {
+    it('NOT ResultValue AND NOT ResultDetectionCondition', function (done) {
       const valid = validate({})
       expect(valid).to.equal(false)
       expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
       expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(true)
       done()
     })
-    it('ResultValue & ResultDetectionCondition', function (done) {
+    it('ResultValue AND ResultDetectionCondition', function (done) {
       const valid = validate({
         'ResultValue': 1,
         'ResultDetectionCondition': 'Not Detected'
@@ -186,7 +186,17 @@ describe('DataStream Schema', function () {
     })
 
     // allOf/1
-    it('CharacteristicName true', function (done) {
+    it('CharacteristicName AND MedthodSpeciation', function (done) {
+      const valid = validate({
+        'CharacteristicName': 'Nitrogen'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'MethodSpeciation')).to.equal(true)
+      done()
+    })
+
+    // allOf/2
+    it('CharacteristicName AND ResultSampleFraction', function (done) {
       const valid = validate({
         'CharacteristicName': 'Silver'
       })
@@ -195,19 +205,7 @@ describe('DataStream Schema', function () {
       done()
     })
 
-    // allOf/2
-    /*it('ActivityType = Sample', function (done) {
-      const valid = validate({
-        'ActivityType': 'Sample-Other'
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
-      done()
-    })*/
-
     // allOf/3
-
     it('ResultDetectionCondition = Not Detected', function (done) {
       const valid = validate({
         'ResultDetectionCondition': 'Not Detected'
@@ -249,6 +247,17 @@ describe('DataStream Schema', function () {
       expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+      done()
+    })
+
+    // allOf/4
+    it('ActivityType = Sample', function (done) {
+      const valid = validate({
+        'ActivityType': 'Sample-Other'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'anyOf')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
       done()
     })
 

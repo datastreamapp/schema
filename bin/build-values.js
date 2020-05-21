@@ -2,6 +2,7 @@ const fs = require('fs')
 
 const columns = [
   'MeasurementUnit',
+  'ActivityGroupType',
   'MonitoringLocationHorizontalCoordinateReferenceSystem',
   'MonitoringLocationType',
   'ActivityType',
@@ -24,6 +25,7 @@ const wqx = {
   'MonitoringLocationHorizontalCoordinateReferenceSystem':'HorizontalReferenceDatum',
   'MonitoringLocationType':'MonitoringLocationType',
   'ActivityType':'ActivityType',
+  'ActivityGroupType':'ActivityGroupType',
   'ActivityMediaName':'ActivityMedia',
   'ActivityMediaSubdivisionName':'ActivityMediaSubdivision',
   'SampleCollectionEquipmentName':'SampleCollectionEquipment',
@@ -37,66 +39,80 @@ const wqx = {
   'ResultDetectionQuantitationLimitType':'DetectionQuantitationLimitType',
 }
 
-columns.forEach(col => {
-  console.log(col)
-  let object = require(`wqx/values/${wqx[col]}.json`)
 
+const additions = (column, list) => {
   try {
-    const additions = require(`../src/addition/${col}.json`)
-    object.enum = object.enum.concat(additions)
+    const additions = require(`../src/addition/${column}.json`)
+    list = list.concat(additions)
   } catch(e) {
     console.log(`|-> Skip additions`)
   }
 
-  object.enum.sort()
-  const length = object.enum.length
-  const uniqueEnum = [...new Set(object.enum)]
+  const length = list.length
+  const uniqueEnum = [...new Set(list.sort())]
   if (uniqueEnum.length < length) {
     console.log(`|-> There are ${length - uniqueEnum.length} duplicates:`)
     const duplicates = []
-    for(let i = 1, l = object.enum.length; i<l; i++) {
-      if (object.enum[i-1] === object.enum[i]) {
-        duplicates.push(object.enum[i])
+    for(let i = 1, l = list.length; i<l; i++) {
+      if (list[i-1] === list[i]) {
+        duplicates.push(list[i])
       }
     }
     console.log(`|   "${duplicates.join('", "')}"`)
   }
-  object.enum = uniqueEnum
+  return uniqueEnum
+}
 
-  fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), {encoding: 'utf8'})
-
+const subtractions = (column, list = []) => {
+  let arr = []
   try {
-    object.enum = require(`./src/override/${col}`)
-  } catch(e) {
-    console.log(`|-> Skip override`)
-  }
-
-  let subtractions = []
-  try {
-    subtractions = subtractions.concat(require(`../src/subtraction/${col}.json`))
+    arr = subtractions.concat(require(`../src/subtraction/${column}.json`))
   } catch(e) {
     console.log(`|-> Skip subtractions`)
   }
 
-  subtractions.filter(item => item.includes('.*')).forEach(pattern => {
+  arr.filter(item => item.includes('.*')).forEach(pattern => {
     pattern = new RegExp(pattern)
     console.log(`|-> Subtracting by ${pattern}`)
-    subtractions = subtractions.concat(object.enum.filter(item => item.match(pattern) !== null))
+    arr = arr.concat(list.filter(item => item.match(pattern) !== null))
   })
 
   try {
-    subtractions = subtractions.concat(require(`wqx/deprecated/${wqx[col]}.json`))
+    arr = arr.concat(require(`wqx/deprecated/${column}.json`))
   } catch(e) {
     console.log(`|-> Skip deprecated`)
   }
 
-  if (subtractions.length) console.log(`|-> Subtracting ${subtractions.length} items`)
-  subtractions.forEach(item => {
-    const index = object.enum.indexOf(item)
+  if (arr.length) console.log(`|-> Subtracting ${arr.length} items`)
+  arr.forEach(item => {
+    const index = list.indexOf(item)
     if(index !== -1) {
-      object.enum.splice(index, 1)
+      list.splice(index, 1)
     }
   })
 
+  return list
+}
+
+columns.forEach(col => {
+  console.log(col)
+  let object = require(`wqx/values/${wqx[col]}.json`)
+
+  object.enum = additions(col, object.enum)
+
+  fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), {encoding: 'utf8'})
+
+  try {
+    object.enum = require(`./src/subset`)
+  } catch(e) {
+    console.log(`|-> Skip subset`)
+  }
+
+  object.enum = subtractions(col, object.enum)
+
   fs.writeFileSync(__dirname + `/../src/values/${col}.primary.json`, JSON.stringify(object, null, 2), {encoding: 'utf8'})
 })
+
+// Groupings
+
+module.exports = {additions, subtractions}

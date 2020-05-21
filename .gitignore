@@ -1,6 +1,6 @@
 # Build Files
 dist/
-
+bin/db
 
 # Logs
 logs

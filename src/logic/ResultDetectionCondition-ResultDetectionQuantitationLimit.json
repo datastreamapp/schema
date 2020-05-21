@@ -1,0 +1,27 @@
+{
+  "if": {
+    "properties": {
+      "ResultDetectionCondition": {
+        "enum": [
+          "Not Detected",
+          "Present Above Quantification Limit",
+          "Present Below Quantification Limit",
+          "Above Detection/Quantification Limit",
+          "Below Detection/Quantification Limit"
+        ]
+      }
+    },
+    "required": [
+      "ResultDetectionCondition"
+    ]
+  },
+  "then": {
+    "dependencies": {
+      "ResultDetectionCondition": [
+        "ResultDetectionQuantitationLimitType",
+        "ResultDetectionQuantitationLimitMeasure",
+        "ResultDetectionQuantitationLimitUnit"
+      ]
+    }
+  }
+}
