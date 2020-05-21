@@ -1,6 +1,6 @@
 {
   "name": "@gordonfn/schema",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

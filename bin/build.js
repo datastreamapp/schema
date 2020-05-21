@@ -57,7 +57,7 @@ const process = async (src, dist, minify = false) => {
 const csv = async () => {
   const object = require(__dirname + `/../src/primary.json`)
   let csv = `"` + Object.keys(object.properties).join(`","`) + `"` + '\r\n'
-  await writeFile(__dirname + `/../dist/csv/template.csv`, csv, {encoding: 'utf8'})
+  await writeFile(__dirname + `/../dist/csv/headers.csv`, csv, {encoding: 'utf8'})
 }
 
 csv()
