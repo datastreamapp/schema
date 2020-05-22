@@ -64,7 +64,8 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
     },
     "ActivityDepthHeightUnit": {
-      "$ref": "./definitions.json#/unit"
+      "type": "string",
+      "enum": ["m","ft","cm"]
     },
     "SampleCollectionEquipmentName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/SampleCollectionEquipmentName",
@@ -98,7 +99,7 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
     },
     "ResultUnit": {
-      "$ref": "./definitions.json#/unit",
+      "$ref": "./values/MeasurementUnit.legacy.json",
       "transform": [
         "trim",
         "toEnumCase"
@@ -128,7 +129,7 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
     },
     "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "./definitions.json#/unit",
+      "$ref": "./values/MeasurementUnit.legacy.json",
       "transform": [
         "trim",
         "toEnumCase"

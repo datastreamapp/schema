@@ -26,9 +26,6 @@
     "maxLength": 60
   },
 
-  "unit": {
-    "$ref": "./values/MeasurementUnit.primary.json"
-  },
   "date": {
     "type": "string",
     "format": "date"
