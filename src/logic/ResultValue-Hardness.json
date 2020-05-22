@@ -14,7 +14,7 @@
   "then": {
     "properties": {
       "ResultValue": {
-        "minimumExclusive": 0
+        "exclusiveMinimum": 0
       }
     },
     "required": ["ResultValue"]

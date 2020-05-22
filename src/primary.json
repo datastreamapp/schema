@@ -234,6 +234,21 @@
     },
     {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
+    },
+    {
+      "$ref": "./logic/ResultValue-DissolvedOxygen.json"
+    },
+    {
+      "$ref": "./logic/ResultValue-DissolvedOxygenSaturation.json"
+    },
+    {
+      "$ref": "./logic/ResultValue-Hardness.json"
+    },
+    {
+      "$ref": "./logic/ResultValue-pH.json"
+    },
+    {
+      "$ref": "./logic/ResultValue-Temperature.json"
     }
   ]
 }
