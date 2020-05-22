@@ -12,6 +12,7 @@
     "Extractable",
     "Field",
     "Filterable",
+    "Filtered",
     "Filtered, field",
     "Filtered, lab",
     "Fixed",

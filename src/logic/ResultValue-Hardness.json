@@ -3,7 +3,9 @@
     "properties": {
       "CharacteristicName": {
         "enum": [
-          "Dissolved oxygen (DO)"
+          "Hardness",
+          "Hardness, total by calculation",
+          "Total hardness"
         ]
       }
     },
@@ -11,12 +13,10 @@
   },
   "then": {
     "properties": {
-      "ResultUnit": {
-        "not": {
-          "enum": ["%"]
-        }
+      "ResultValue": {
+        "minimumExclusive": 0
       }
     },
-    "required": ["ResultUnit"]
+    "required": ["ResultValue"]
   }
 }

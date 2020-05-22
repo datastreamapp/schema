@@ -3,20 +3,21 @@
     "properties": {
       "CharacteristicName": {
         "enum": [
-          "Dissolved oxygen (DO)"
+          "Dissolved oxygen saturation"
         ]
+      },
+      "ResultUnit": {
+        "enum": ["%"]
       }
     },
     "required": ["CharacteristicName"]
   },
   "then": {
     "properties": {
-      "ResultUnit": {
-        "not": {
-          "enum": ["%"]
-        }
+      "ResultValue": {
+        "minimum": 0
       }
     },
-    "required": ["ResultUnit"]
+    "required": ["ResultValue"]
   }
 }

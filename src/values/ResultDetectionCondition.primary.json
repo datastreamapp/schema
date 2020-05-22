@@ -21,8 +21,6 @@
     "Not Detected at Reporting Limit",
     "Not Present",
     "Not Reported",
-    "Present Above Quantification Limit",
-    "Present Below Quantification Limit",
     "Reported in Raw Data (attached)",
     "Trace",
     "Value Decensored"

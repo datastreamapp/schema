@@ -26,7 +26,7 @@ Column                           | WQX               | DS-WQX         | Changes
 
 Column                                                         | WQX                 | DS-WQX           | Changes
 ---------------------------------------------------------------|---------------------|------------------|--------------------------------------------------------
-**Monitoring Location ID**                                     | Required, Text      | Optional, Text   | Changed, column is not being used for joining tables
+**Monitoring Location ID**                                     | Required, Text      | Required, Text   | None
 **Monitoring Location Name**                                   | Required, Text      | Required, Text   | None
 **Monitoring Location Type**                                   | Required, Values    | Required, Values | [Subset](../src/subset/MonitoringLoationType.json)
 **Monitoring Location Description**                            | Optional, Text      |                  | Removed
@@ -43,29 +43,28 @@ Column                                                         | WQX            
 **Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   |                  | Removed
 **Monitoring Location Horizontal Collection Method**           | Required, Values    |                  | Removed, DataStream uses GPS based locations (lat/lng), not addresses, zip/postal code, etc
 **Monitoring Location Horizontal Coordinate Reference System** | Required, Values    | Required, Values | None
-**Monitoring Location Waterbody**                              |                     | Optional, Text   | Added, carried over from legacy DataStream schema for search purposes
-**Vertical Measure**                                           | Optional, Number    |                  | Removed (GW?)
-**Vertical Unit**                                              | Conditional, Values |                  | Removed (GW?)
-**Vertical Collection Method**                                 | Conditional, Values |                  | Removed (GW?)
-**Vertical Coordinate Reference System**                       | Conditional, Values |                  | Removed (GW?)
+**Vertical Measure**                                           | Optional, Number    |                  | Removed (Possible future use with Ground Water)
+**Vertical Unit**                                              | Conditional, Values |                  | Removed (Possible future use with Ground Water)
+**Vertical Collection Method**                                 | Conditional, Values |                  | Removed (Possible future use with Ground Water)
+**Vertical Coordinate Reference System**                       | Conditional, Values |                  | Removed (Possible future use with Ground Water)
 **Monitoring Location Country Code**                           | Optional, Values    |                  | Removed
 **Monitoring Location State Code**                             | Conditional, Values |                  | Removed, can be auto generated internally
 **Monitoring Location County Name**                            | Optional, Values    |                  | Removed, can be auto generated internally
-**Well Type**                                                  | Optional, Values    |                  | Removed (GW)
-**Aquifer Name**                                               | Optional, Text      |                  | Removed (GW), can be auto generated internally
-**Well Formation Type**                                        | Optional, Values    |                  | Removed (GW)
-**Well Hole Depth Measure Value**                              | Optional, Number    |                  | Removed (GW)
-**Well Hole Depth Measure Unit**                               | Conditional, Values |                  | Removed (GW)
+**Well Type**                                                  | Optional, Values    |                  | Removed (Possible future use with Ground Water)
+**Aquifer Name**                                               | Optional, Text      |                  | Removed (Possible future use with Ground Water), can be auto generated internally if Aquifer geometries are obtained.
+**Well Formation Type**                                        | Optional, Values    |                  | Removed (Possible future use with Ground Water)
+**Well Hole Depth Measure Value**                              | Optional, Number    |                  | Removed (Possible future use with Ground Water)
+**Well Hole Depth Measure Unit**                               | Conditional, Values |                  | Removed (Possible future use with Ground Water)
 **Monitoring Location Attachment File Name**                   | Optional, Text      |                  | Removed
 **Monitoring Location Attachment Type**                        | Conditional, Text   |                  | Removed
 
 ## Physical-Chemistry Results
 Column                                              | WQX                      | DS-WQX              | Changes
 ----------------------------------------------------|--------------------------|---------------------|----------------------------------------------------------------
-**Activity ID**                                     | Required, Text           |                     | Removed, duplication of information, WQX concatonates location ID, date and time to create Activity ID 
+**Activity ID**                                     | Required, Text           |                     | Removed, duplication of information, WQX concatenates location ID, date and time to create Activity ID 
 **Activity Type**                                   | Required, Values         | Required, Values    | [Additions](../src/addition/ActivityType.json)
-**Activity Media Name**                             | Required, Values         | Required, Values    | Using subset of `Activity Media Subdivision Name` for simplicity, see [override](src/subset/ActivityMediaSubdivisionName.json)
-**Activity Media Subdivision Name**                 | Optional, Values         |                     | Removed, see above
+**Activity Media Name**                             | Required, Values         | Required, Values    | Removed, generated internally from `Activity Media Subdivision Name` mapping
+**Activity Media Subdivision Name**                 | Optional, Values         | Required, Values    | Renamed to `Activity Media Name` for simplicity, see [Subset](src/subset/ActivityMediaSubdivisionName.json)
 **Activity Start Date**                             | Required, Date           | Required, Date      | Changed format to meet ISO 8601
 **Activity Start Time**                             | Optional, Time           | Optional, Time      | Changed format to meet ISO 8601
 **Activity Start Time Zone**                        | Conditional, Text        |                     | Removed, calculated internally using the Latitude and Longitude
@@ -92,7 +91,7 @@ Column                                              | WQX                      |
 **Activity Horizontal Collection Method**           | Conditional, Values      |                     | Removed
 **Activity Horizontal Coordinate Reference System** | Conditional, Values      |                     | Removed
 **Sample Collection Method ID**                     | Conditional, Values/Text |                     | Removed
-**Sample Collection Equipment Name**                | Conditional, Values      | Optional, Values    | None, removed condition on `Sample Collection Method ID` as it's not included (TODO revisit)
+**Sample Collection Equipment Name**                | Conditional, Values      | Optional, Values    | None, removed condition on `Sample Collection Method ID` as it's not included
 **Sample Collection Equipment Comment**             | Optional, Text           |                     | Removed 
 **Sample Preparation Method ID**                    | Optional, Text           |                     | Removed 
 **Sample Container Type**                           | Conditional, Values      |                     | Removed 
@@ -110,7 +109,7 @@ Column                                              | WQX                      |
 **Result Value**                                    | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values
 **Result Unit**                                     | Conditional, Values      | Conditional, Values | [Additions](../src/addition/MeasurmentUnit.json), Added `L/mg-m` for UV absorbance not in `L/mg-cm`, `#/yr` to account for flushing rate, and `uATM` to account for those using micro-atmospheres 
 **Result Qualifier**                                | Optional, Values         |                     | Removed
-**Result Status ID**                                | Conditional, Values      | Optional, Values    | Modified to be optional (All data published to DataStream is available to public; data with WQX value of 'preliminary' was not made publically accessible via STORET)
+**Result Status ID**                                | Conditional, Values      | Optional, Values    | [**TODO**] Modified to be optional (All data published to DataStream is available to public; data with WQX value of 'preliminary' was not made publically accessible via STORET)
 **Statistical Base Code**                           | Optional, Values         |                     | Removed
 **Result Value Type**                               | Conditional, Values      | Optional, Values    | Changed, removed default value making it optional
 **Result Weight Basis**                             | Optional, Values         |                     | Removed
@@ -129,9 +128,9 @@ Column                                              | WQX                      |
 **Result Sampling Point Name**                      | Optional, Text           |                     | Removed
 **Result Attachment File Name**                     | Optional, Text           |                     | Removed
 **Result Attachment Type**                          | Conditional, Text        |                     | Removed
-**Result Analytical Method ID**                     | Conditional, Values/Text | Conditional, Text   | Changed, removed allowed list (US specific), any string accepted. (revisit)
+**Result Analytical Method ID**                     | Conditional, Values/Text | Conditional, Text   | Changed, removed allowed list (US specific), any string accepted.
 **Result Analytical Method Context**                | Conditional, Values/Text | Conditional, Values | [Additions](../src/addition/ResultAnalyticalMethodContext.json), Added `EN` to allow for European standards, and `VMV` to allow for value method variable codes used in Canada
-**Result Analytical Method Name**                   |                          | Conditional, Text   | Added as there is no look-up table of allowed method names to cross reference to get this information at the time. Now exists (revisit)
+**Result Analytical Method Name**                   |                          | Conditional, Text   | Added as there is no look-up table of allowed method names to cross reference to get this information at the time.
 **Laboratory Name**                                 | Optional, Text           | Optional, Text      | None
 **Laboratory Sample ID**                            |                          | Optional, Text      | Added, is reported by labs and helpful for some data stewards 
 **Analysis Start Date**                             | Optional, Date           | Optional, Date      | See `Activity Start Date`

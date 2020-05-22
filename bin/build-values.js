@@ -40,7 +40,18 @@ const wqx = {
 }
 
 
+
 const additions = (column, list) => {
+
+  // Looks for retired values and adds non-retired value
+  if (column === 'CharacteristicName') {
+    for (const item of list) {
+      const index = item.indexOf('***retired***')
+      if (index === -1) continue;
+      list.push(item.substr(0, index))
+    }
+  }
+
   try {
     const additions = require(`../src/addition/${column}.json`)
     list = list.concat(additions)
@@ -65,8 +76,18 @@ const additions = (column, list) => {
 
 const subtractions = (column, list = []) => {
   let arr = []
+
+  // Remove retired items from list
+  if (column === 'CharacteristicName') {
+    for(const item of list) {
+      const index = item.indexOf('***retired***')
+      if (index === -1) continue;
+      arr.push(item.substr(0,index))
+    }
+  }
+
   try {
-    arr = subtractions.concat(require(`../src/subtraction/${column}.json`))
+    arr = arr.concat(require(`../src/subtraction/${column}.json`))
   } catch(e) {
     console.log(`|-> Skip subtractions`)
   }
