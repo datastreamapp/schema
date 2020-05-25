@@ -12,9 +12,7 @@
   "then": {
     "properties": {
       "ResultUnit": {
-        "not": {
-          "enum": ["%"]
-        }
+        "enum": ["ug/l","mg/L"]
       }
     },
     "required": ["ResultUnit"]

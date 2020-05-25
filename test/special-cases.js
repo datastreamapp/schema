@@ -26,6 +26,7 @@ const checkProperty = (errors, keyword, property) => {
     else if (keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
     else if (keyword === 'anyOf') return true
     else if (keyword === 'not' && error.dataPath.includes(property)) return true
+    else if (keyword === 'enum' && error.dataPath.includes(property)) return true
     else if (keyword === 'minimum' && error.dataPath.includes(property)) return true
     else if (keyword === 'exclusiveMinimum' && error.dataPath.includes(property)) return true
     else if (keyword === 'maximum' && error.dataPath.includes(property)) return true
@@ -46,7 +47,7 @@ describe('Special Logic Cases', function () {
       'ResultUnit': '%'
     })
     expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'not', 'ResultUnit')).to.equal(true)
+    expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
     done()
   })
 
