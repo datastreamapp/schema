@@ -5,9 +5,12 @@
         "enum": [
           "Dissolved oxygen (DO)"
         ]
+      },
+      "ResultUnit": {
+        "enum": ["%"]
       }
     },
-    "required": ["CharacteristicName"]
+    "required": ["CharacteristicName","ResultUnit"]
   },
   "then": {
     "properties": {
