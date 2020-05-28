@@ -12,7 +12,7 @@
   "then": {
     "properties": {
       "ResultUnit": {
-        "enum": ["ug/l","mg/L"]
+        "enum": ["mg/l","ppm"]
       }
     },
     "required": ["ResultUnit"]

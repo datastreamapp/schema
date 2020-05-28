@@ -17,7 +17,7 @@
     "title": "Result Analytical Method Name",
     "description": "Name of the analytical method",
     "type": "string",
-    "maxLength": 100
+    "maxLength": 150
   },
   "LaboratorySampleID": {
     "title": "Laboratory Sample ID",

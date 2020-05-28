@@ -256,7 +256,7 @@ describe('DataStream Schema', function () {
         'ActivityType': 'Sample-Other'
       })
       expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'anyOf')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
       done()
     })

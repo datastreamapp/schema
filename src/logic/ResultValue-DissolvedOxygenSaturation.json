@@ -10,7 +10,7 @@
         "enum": ["%"]
       }
     },
-    "required": ["CharacteristicName"]
+    "required": ["CharacteristicName","ResultUnit"]
   },
   "then": {
     "properties": {

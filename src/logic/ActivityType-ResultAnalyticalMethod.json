@@ -2,7 +2,7 @@
   "if": {
     "properties": {
       "ActivityType": {
-        "pattern":"^Sample.*$"
+        "pattern": "^Sample.*$"
       }
     },
     "required": [
@@ -10,28 +10,11 @@
     ]
   },
   "then": {
-    "allOf": [
-      {
-        "anyOf": [
-          {
-            "required": [
-              "ResultAnalyticalMethodID"
-            ]
-          },
-          {
-            "required": [
-              "ResultAnalyticalMethodName"
-            ]
-          }
-        ]
-      },
-      {
-        "dependencies": {
-          "ActivityType": [
-            "ResultAnalyticalMethodContext"
-          ]
-        }
-      }
-    ]
+    "dependencies": {
+      "ActivityType": [
+        "ResultAnalyticalMethodID",
+        "ResultAnalyticalMethodContext"
+      ]
+    }
   }
 }
