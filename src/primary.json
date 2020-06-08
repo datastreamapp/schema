@@ -192,7 +192,9 @@
     "ActivityType",
     "ActivityMediaName",
     "ActivityStartDate",
-    "CharacteristicName"
+    "CharacteristicName",
+    "ResultStatusID",
+    "ResultValueType"
   ],
   "dependencies": {
     "ActivityDepthHeightMeasure": [
