@@ -109,9 +109,9 @@ Column                                              | WQX                      |
 **Result Value**                                    | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values
 **Result Unit**                                     | Conditional, Values      | Conditional, Values | [Additions](../src/addition/MeasurmentUnit.json), Added `L/mg-m` for UV absorbance not in `L/mg-cm`, `#/yr` to account for flushing rate, and `uATM` to account for those using micro-atmospheres 
 **Result Qualifier**                                | Optional, Values         |                     | Removed
-**Result Status ID**                                | Conditional, Values      | Optional, Values    | [**TODO**] Modified to be optional (All data published to DataStream is available to public; data with WQX value of 'preliminary' was not made publically accessible via STORET)
+**Result Status ID**                                | Conditional, Values      | Required, Values    | Changed, made required always because it is best practice
 **Statistical Base Code**                           | Optional, Values         |                     | Removed
-**Result Value Type**                               | Conditional, Values      | Optional, Values    | Changed, removed default value making it optional
+**Result Value Type**                               | Conditional, Values      | Required, Values    | Changed, made required always because default value could be miss used
 **Result Weight Basis**                             | Optional, Values         |                     | Removed
 **Result Time Basis**                               | Optional, Values         |                     | Removed
 **Result Temperature Basis**                        | Optional, Values         |                     | Removed

@@ -43,6 +43,7 @@ describe('DataStream Schema', function () {
       "ResultSampleFraction":"Dissolved",
       "ResultValue":"99.99",
       "ResultUnit":"#/100ml",
+      'ResultValueType':'Actual',
       "ResultStatusID":"Accepted",
       "ResultComment":"None at this time",
       "ResultAnalyticalMethodID":"1",
