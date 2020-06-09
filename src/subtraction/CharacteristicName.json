@@ -2,7 +2,14 @@
   "Gasoline range organics (C6-C12 GRO)",
   "Extractable fuel hydrocarbons (C13-C22 DRO)",
   "Tetrachloroethene",
-
+  "Nitrogen, mixed forms (NH3), (NH4), organic, (NO2) and (NO3)",
+  "Phosphate-phosphorus",
+  "Phosphorus",
+  "Ammonia-nitrogen",
+  "Nitrogen",
+  "Nutrient-nitrogen",
+  "Phosphorus, Particulate Organic",
+  
   "USDA Soil Texture Classification",
   "Wind Condition",
   ".* (text)",
