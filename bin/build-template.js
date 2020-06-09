@@ -19,7 +19,7 @@ const buildCharacteristics = () => {
   let csv = 'CharacteristicName,MethodSpeciation,SampleFraction,Group\n'
 
   for(const value of characteristics) {
-    csv += `"${value}",${methodSpeciation.includes(value) ? '"Yes"' : '"No"'},${sampleFraction.includes(value) ? '"Yes"' : '"No"'},"${characteristicGroup[value] || ''}"\n`
+    csv += `"${value}",${methodSpeciation.includes(value) ? '"Yes"' : '"No"'},${sampleFraction.includes(value) ? '"Yes"' : '"No"'},"${characteristicGroup[value] || 'Not Assigned'}"\n`
   }
 
   fs.writeFileSync(__dirname + `/template/Characteristics.csv`,csv, {encoding: 'utf8'})
@@ -31,7 +31,7 @@ const buildAllowed = () => {
   for(const key of Object.keys(schema.properties)) {
     let {type, enum: allowed, maxLength} = schema.properties[key]
     if (Array.isArray(allowed)) allowed = allowed.map(value => `"${value}"`).join(',')
-    csv += `${key},${type},${maxLength || ''},${allowed || ''}\n`
+    csv += `${key},${maxLength || ''},${allowed || ''}\n`
   }
 
   fs.writeFileSync(__dirname + `/template/AllowedValues.csv`,csv, {encoding: 'utf8'})
