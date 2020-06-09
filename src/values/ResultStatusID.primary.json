@@ -6,11 +6,7 @@
     "Accepted",
     "Final",
     "Preliminary",
-    "Provisional",
-    "Raw",
     "Rejected",
-    "Supervised",
-    "Unreviewed",
     "Validated"
   ],
   "maxLength": 11

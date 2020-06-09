@@ -124,7 +124,7 @@ columns.forEach(col => {
   fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), {encoding: 'utf8'})
 
   try {
-    object.enum = require(`./src/subset`)
+    object.enum = require(`../src/subset/${col}.json`)
   } catch(e) {
     console.log(`|-> Skip subset`)
   }
