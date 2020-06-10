@@ -17,7 +17,7 @@
   "Sulfolane",
   "Triphenyltin",
   "3-Iodo-2-propynyl butyl carbamate",
-  "pheophytin",
+  "Pheophytin",
   "2,3,6-Trichlorotoluene",
   "2,4,5-Trichlorotoluene",
   ".alpha.,2,6-Trichlorotoluene",
@@ -26,5 +26,6 @@
   "Particulate inorganic matter",
   "Particulate organic matter",
   "Langelier Saturation Index",
-  ".gamma.-Hexachlorocyclohexane"
+  ".gamma.-Hexachlorocyclohexane",
+  "Pseudomonas aeruginosa"
 ]
