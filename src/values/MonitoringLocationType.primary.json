@@ -8,6 +8,7 @@
     "Lake/Pond",
     "Ocean",
     "River/Stream",
+    "Unspecified",
     "Wetland"
   ],
   "maxLength": 40

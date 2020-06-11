@@ -64,7 +64,7 @@ describe('DataStream Schema', function () {
       'MonitoringLocationLatitude': '51.0486',
       'MonitoringLocationLongitude': '-114.0708',
       'MonitoringLocationHorizontalCoordinateReferenceSystem': 'AMSMA',
-      'MonitoringLocationType': 'Atmosphere',
+      'MonitoringLocationType': 'Ocean',
       'ActivityType': 'Field Msr/Obs',
       'ActivityMediaName': 'Surface Water',
       'ActivityDepthHeightMeasure': '-34',
@@ -189,7 +189,7 @@ describe('DataStream Schema', function () {
     // allOf/1
     it('CharacteristicName AND MedthodSpeciation', function (done) {
       const valid = validate({
-        'CharacteristicName': 'Nitrogen'
+        'CharacteristicName': 'Nitrate'
       })
       expect(valid).to.equal(false)
       expect(checkProperty(validate.errors, 'required', 'MethodSpeciation')).to.equal(true)
@@ -312,36 +312,9 @@ describe('DataStream Schema', function () {
     done()
   })
 
-  /*it('Should fail manual test', function (done) {
+  /*it('Should pass manual test', function (done) {
     const valid = validate(
-      {
-        'DatasetName': 'Lac La Biche County Lake Water Quality Monitoring Program',
-        'MonitoringLocationName': 'Lac La Biche East',
-        'MonitoringLocationLatitude': 54.83068572,
-        'MonitoringLocationLongitude': -111.9159406,
-        'MonitoringLocationHorizontalCoordinateReferenceSystem': 'WGS84',
-        'MonitoringLocationType': 'Lake/Pond',
-        'MonitoringLocationWaterbody': 'Lac La Biche',
-        'ActivityType': 'Sample-Composite Without Parents',
-        'ActivityMediaName': 'Surface Water',
-        'ActivityStartDate': '2011-07-25',
-        'ActivityStartTime': '13:30:00',
-        'SampleCollectionEquipmentName': 'Kemmerer Bottle',
-        'CharacteristicName': 'Hydroxide',
-        'ResultSampleFraction': 'Total',
-        'ResultValueType': 'Actual',
-        'ResultDetectionCondition': 'Below Detection/Quantification Limit',
-        'ResultDetectionQuantitationLimitMeasure': 5,
-        'ResultDetectionQuantitationLimitUnit': 'mg/l',
-        'ResultDetectionQuantitationLimitType': 'Method Detection Level',
-        'ResultComment': 'A composite sample taken from 3 locations around the lake.',
-        'ResultAnalyticalMethodID': '4500-H, 2510, 2320',
-        'ResultAnalyticalMethodContext': 'APHA',
-        'ResultAnalyticalMethodName': 'pH, Conductivity and Total Alkalinity',
-        'AnalysisStartDate': '2011-07-29',
-        'LaboratoryName': 'ALS',
-        'LaboratorySampleID': 'L1037374-1'
-      }
+      {'DatasetName': 'PROVINCIAL (STREAM) WATER QUALITY MONITORING NETWORK (PWQMN)', 'MonitoringLocationID': '17002113002', 'MonitoringLocationName': 'Hwys 7 and 35, upstrm Lindsay', 'MonitoringLocationLatitude': 44.32767014, 'MonitoringLocationLongitude': -78.73027636, 'MonitoringLocationHorizontalCoordinateReferenceSystem': 'UNKWN', 'MonitoringLocationType': 'Unspecified', 'ActivityType': 'Sample-Routine', 'ActivityMediaName': 'Surface Water', 'ActivityStartDate': '2017-04-11', 'SampleCollectionEquipmentName': 'Water Bottle', 'CharacteristicName': 'Total hardness', 'ResultValueType': 'Actual', 'ResultDetectionCondition': 'Below Detection/Quantification Limit', 'ResultDetectionQuantitationLimitMeasure': 1.0, 'ResultDetectionQuantitationLimitUnit': 'mg/l', 'ResultDetectionQuantitationLimitType': 'Method Detection Level', 'ResultStatusID': 'Accepted', 'ResultComment': 'LESS THAN METHOD DETECTION LIMIT', 'ResultAnalyticalMethodID': 'E3497', 'ResultAnalyticalMethodContext': 'PROPRIETARY', 'ResultAnalyticalMethodName': 'THE DETERMINATION OF METALS IN WATER BY INDUCTIVELY COUPLED PLASMA - OPTICAL EMISSION SPECTROSCOPY (ICP-OES)', 'LaboratoryName': 'Ontario Ministry Labs', 'LaboratorySampleID': 'C237623'}
     )
     console.log(JSON.stringify(validate.errors, null, 2))
     expect(0).to.equal(1)

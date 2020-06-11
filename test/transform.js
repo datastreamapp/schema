@@ -32,7 +32,7 @@ describe('DataStream Schema', function () {
       "MonitoringLocationLatitude":"51.0486",
       "MonitoringLocationLongitude":"-114.0708",
       "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
-      "MonitoringLocationType":"Atmosphere",
+      "MonitoringLocationType":"ocean",
       "ActivityType":"Field Msr/Obs",
       "ActivityMediaName":"surface Water",
       "ActivityDepthHeightMeasure":"-34",
