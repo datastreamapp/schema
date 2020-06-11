@@ -10,11 +10,22 @@
     ]
   },
   "then": {
-    "dependencies": {
-      "ActivityType": [
-        "ResultAnalyticalMethodID",
-        "ResultAnalyticalMethodContext"
-      ]
-    }
+    "oneOf": [
+      {
+        "dependencies": {
+          "ActivityType": [
+            "ResultAnalyticalMethodID",
+            "ResultAnalyticalMethodContext"
+          ]
+        }
+      },
+      {
+        "dependencies": {
+          "ActivityType": [
+            "ResultAnalyticalMethodName"
+          ]
+        }
+      }
+    ]
   }
 }

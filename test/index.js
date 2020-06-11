@@ -252,13 +252,40 @@ describe('DataStream Schema', function () {
     })
 
     // allOf/4
-    it('ActivityType = Sample', function (done) {
-      const valid = validate({
+    it('ActivityType = Sample for ResultAnalyticalMethodID', function (done) {
+      let valid = validate({
         'ActivityType': 'Sample-Other'
       })
       expect(valid).to.equal(false)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
+
+      valid = validate({
+        'ActivityType': 'Sample-Other',
+        'ResultAnalyticalMethodID':'0',
+        'ResultAnalyticalMethodContext':'ENV'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(false)
+
+      done()
+    })
+
+    it('ActivityType = Sample for ResultAnalyticalMethodName', function (done) {
+      let valid = validate({
+        'ActivityType': 'Sample-Other'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(true)
+
+      valid = validate({
+        'ActivityType': 'Sample-Other',
+        'ResultAnalyticalMethodName':'Unspecified'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(false)
+
       done()
     })
 
