@@ -12,6 +12,10 @@
     },
     "MonitoringLocationName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
       "minLength": 1
     },
     "MonitoringLocationLatitude": {
