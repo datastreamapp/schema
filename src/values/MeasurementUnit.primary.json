@@ -3,6 +3,7 @@
   "description": "",
   "type": "string",
   "enum": [
+    "#/100 gal",
     "#/100L",
     "#/100ml",
     "#/10l",

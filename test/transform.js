@@ -37,7 +37,7 @@ describe('DataStream Schema', function () {
       "ActivityMediaName":"surface Water",
       "ActivityDepthHeightMeasure":"-34",
       "ActivityDepthHeightUnit":"m",
-      "SampleCollectionEquipmentName":"Bongo Net",
+      "SampleCollectionEquipmentName":"bucket",
       "CharacteristicName":"aluminum",
       "MethodSpeciation":"as B",
       "ResultSampleFraction":"Dissolved",

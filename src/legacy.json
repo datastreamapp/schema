@@ -71,7 +71,7 @@
       "enum": ["m","ft","cm"]
     },
     "SampleCollectionEquipmentName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/SampleCollectionEquipmentName",
+      "$ref": "./values/SampleCollectionEquipmentName.legacy.json",
       "transform": [
         "trim",
         "toEnumCase"
@@ -109,13 +109,7 @@
       ]
     },
     "ResultValueType": {
-      "enum": [
-        "Actual",
-        "Blank Corrected",
-        "Calculated",
-        "Control Adjusted",
-        "Estimated"
-      ],
+      "$ref": "./values/ResultValueType.legacy.json",
       "transform": [
         "trim",
         "toEnumCase"

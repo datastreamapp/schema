@@ -69,7 +69,7 @@ describe('DataStream Schema', function () {
       'ActivityMediaName': 'Surface Water',
       'ActivityDepthHeightMeasure': '-34',
       'ActivityDepthHeightUnit': 'm',
-      'SampleCollectionEquipmentName': 'Bongo Net',
+      'SampleCollectionEquipmentName': 'Bucket',
       'CharacteristicName': 'Silver Dioxide',
       'MethodSpeciation': 'as B',
       'ResultSampleFraction': 'Dissolved',
