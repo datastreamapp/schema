@@ -13,8 +13,7 @@
     "MonitoringLocationName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
       "transform": [
-        "trim",
-        "toEnumCase"
+        "trim"
       ],
       "minLength": 1
     },
