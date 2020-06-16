@@ -1,4 +1,4 @@
-{
+[
  ”Field Msr/Obs-Habitat Assessment”,
  ”Field Msr/Obs-Incidental”,
  ”Quality Control”,
@@ -23,4 +23,4 @@
  ”Quality Control Sample-Lab Surrogate Method Blank”,
  ”Sample-Integrated Horizontal and Vertical Composite Profile”,
  ”Sample-Routine Resample”
-}
+]
