@@ -60,7 +60,7 @@ const additions = (column, list) => {
   }
 
   const length = list.length
-  const uniqueEnum = [...new Set(list.sort())]
+  const uniqueEnum = [...new Set(list.sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'})))]
   if (uniqueEnum.length < length) {
     console.log(`|-> There are ${length - uniqueEnum.length} duplicates:`)
     const duplicates = []
