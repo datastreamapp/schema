@@ -62,6 +62,14 @@ Version Number               | Auto-generated | Version number of the dataset
 DOI                          | Auto-generated | Digital Object Identifier (assigned by DataStream unless a pre-existing DOI for data is entered)
 Bounding Box                 | Auto-generated | Geographic area covered by dataset 
 
+## Special Case Tests
+In addition to our schema enforcing allowed values the column conditional logic; we have included additional check for common errors.
+
+- `Dissolved oxygen (DO)` should not be in `%`
+- `Dissolved oxygen saturation` should not be less than `0%`
+- `Hardness` should not be less than or equal to `0`
+- `pH` should be within `0` and `14`
+- `Temperature` should be within `-100 degC` and `100 degC`
 
 ## Install
 You can download the compiled DS-WQX schema from above.
