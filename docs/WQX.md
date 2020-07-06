@@ -81,7 +81,7 @@ Column                                              | WQX                      |
 **Activity Depth Altitude Reference Point**         | Conditional, Text        |                     | Removed
 **Project ID**                                      | Required, Values         |                     | See `Project ID` above
 **Organization**                                    | Optional, Text           |                     | Removed, Included in the metadata input form
-**Monitoring Location ID**                          | Conditional, Values      | Optional, Text      | See `Monitoring Location ID` above
+**Monitoring Location ID**                          | Conditional, Values      | Required, Text      | See `Monitoring Location ID` above
 **Activity Comment**                                | Optional, Text           |                     | Removed
 **Activity Latitude**                               | Optional, Number         |                     | Removed
 **Activity Longitude**                              | Optional, Number         |                     | Removed

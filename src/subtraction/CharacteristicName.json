@@ -14,8 +14,8 @@
   
   "USDA Soil Texture Classification",
   "Wind Condition",
-  ".* (text)",
-  ".* (choice list)",
+  ".* \\(text\\)",
+  ".* \\(choice list\\)",
   ".*retired.*",
-  ".* (Y/N)"
+  ".* \\(Y/N\\)"
 ]
