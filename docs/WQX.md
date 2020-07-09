@@ -102,7 +102,7 @@ Column                                              | WQX                      |
 **Activity Attachment File Name**                   | Optional, Text           |                     | Removed 
 **Activity Attachment Type**                        | Conditional, Text        |                     | Removed 
 **Data Logger Line**                                | Conditional, Text        |                     | Removed 
-**Result Detection Condition**                      | Conditional, Values      | Conditional, Values | [Subset](../src/subset/ResultDetectionCondition.json), Added `Below Detection/Quantification Limit`, `Above Detection/Quantification Limit`. Change was made to improve clarity.
+**Result Detection Condition**                      | Conditional, Values      | Conditional, Values | [Subset](../src/subset/ResultDetectionCondition.json), Added `Below Detection/Quantification Limit`, `Above Detection/Quantification Limit`. Change was made to improve clarity. Changed the definitions for `Not Detected ` and `Detected Not Quantified` to reflect prescence/abscence to improve clarity.
 **Characteristic Name**                             | Conditional, Values      | Required, Values    | [Additions](../src/addition/CharacteristicName.json), [Subtractions](../src/subtraction/CharacteristicName.json)
 **Method Speciation**                               | Conditional, Values      | Optional, Values    | [Additions](../src/addition/MethodSpeciation.json), Added `as CN` to account for CCME cyanide requirement for method speciation
 **Result Sample Fraction**                          | Conditional, Values      | Conditional, Values | [Additions](../src/addition/ResultSampleFraction.json), Added `Unspecified` to account for older data where the sample fraction may be unknown 
@@ -141,7 +141,7 @@ Column                                              | WQX                      |
 **Analysis End Time Zone**                          | Conditional, Values      |                     | Removed
 **Result Laboratory Comment Code**                  | Optional, Values         |                     | Removed
 **Result Detection/Quantitation Limit Type**        | Conditional, Values      | Conditional, Values | [Subset](../src/subset/ResultDetectionQuantitationLimitType.json)
-**Result Detection/Quantitation Limit Measure**     | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values. Characteristic Names that require text have been removed.
+**Result Detection/Quantitation Limit Measure**     | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values. Characteristic Names that require text have been removed. Only required when `Below Detection/Quantification Limit` or `Above Detection/Quantification Limit` exists as detection condition.
 **Result Detection/Quantitation Limit Unit**        | Conditional, Values      | Conditional, Values | See `Result Unit`
 **Laboratory Accreditation Indicator**              | Optional, Bool           |                     | Removed 
 **Laboratory Accreditation Authority**              | Optional, Text           |                     | Removed
