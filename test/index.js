@@ -22,9 +22,12 @@ const checkProperty = (errors, keyword, property) => {
     const error = validate.errors[i]
     if (error.keyword !== keyword) continue
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
+    //else if (keyword === 'enum' && error.params.allowedValues.length && error.dataPath === `.${property}`) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
-    else if(keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
-    else if(keyword === 'anyOf') return true
+    else if (keyword === 'propertyNames' && error.params.propertyName === property) return true
+    //else if(keyword === 'if' && error.params.failingKeyword === 'then' && error.schemaPath === property ) return true
+    else if (keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
+    else if (keyword === 'anyOf') return true
   }
   return false
 }
@@ -75,7 +78,7 @@ describe('DataStream Schema', function () {
       'ResultSampleFraction': 'Dissolved',
       'ResultValue': '99.99',
       'ResultUnit': 'ug',
-      'ResultValueType':'Actual',
+      'ResultValueType': 'Actual',
       'ResultStatusID': 'Accepted',
       'ResultComment': 'None at this time',
       'ResultAnalyticalMethodID': '1',
@@ -106,7 +109,6 @@ describe('DataStream Schema', function () {
   })
 
   describe('Should enforce conditional required', function () {
-
 
     it('ResultValue', function (done) {
       const valid = validate({
@@ -207,14 +209,14 @@ describe('DataStream Schema', function () {
     })
 
     // allOf/3
-    it('ResultDetectionCondition = Not Detected', function (done) {
+    it('ResultDetectionCondition false', function (done) {
       const valid = validate({
-        'ResultDetectionCondition': 'Not Detected'
+        'ResultDetectionCondition': ''
       })
       expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
       done()
     })
 
@@ -240,18 +242,57 @@ describe('DataStream Schema', function () {
       done()
     })
 
-    it('ResultDetectionCondition false', function (done) {
-      const valid = validate({
-        'ResultDetectionCondition': ''
+    // allOf/4
+    it('ResultDetectionCondition = Not Detected', function (done) {
+      // pass
+      let valid = validate({
+        'ResultDetectionCondition': 'Not Detected',
       })
       expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+
+      // fail
+      valid = validate({
+        'ResultDetectionCondition': 'Not Detected',
+        'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
+        'ResultDetectionQuantitationLimitMeasure': 0,
+        'ResultDetectionQuantitationLimitUnit': 'None'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
       done()
     })
 
-    // allOf/4
+    it('ResultDetectionCondition = Detected Not Quantified', function (done) {
+      // pass
+      let valid = validate({
+        'ResultDetectionCondition': 'Detected Not Quantified',
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+
+      // fail
+      valid = validate({
+        'ResultDetectionCondition': 'Detected Not Quantified',
+        'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
+        'ResultDetectionQuantitationLimitMeasure': 0,
+        'ResultDetectionQuantitationLimitUnit': 'None'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+
+      done()
+    })
+
+    // allOf/5
     it('ActivityType = Sample for ResultAnalyticalMethodID', function (done) {
       let valid = validate({
         'ActivityType': 'Sample-Other'
@@ -262,8 +303,8 @@ describe('DataStream Schema', function () {
 
       valid = validate({
         'ActivityType': 'Sample-Other',
-        'ResultAnalyticalMethodID':'0',
-        'ResultAnalyticalMethodContext':'ENV'
+        'ResultAnalyticalMethodID': '0',
+        'ResultAnalyticalMethodContext': 'ENV'
       })
       expect(valid).to.equal(false)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(false)
@@ -281,7 +322,7 @@ describe('DataStream Schema', function () {
 
       valid = validate({
         'ActivityType': 'Sample-Other',
-        'ResultAnalyticalMethodName':'Unspecified'
+        'ResultAnalyticalMethodName': 'Unspecified'
       })
       expect(valid).to.equal(false)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(false)

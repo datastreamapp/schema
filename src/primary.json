@@ -229,7 +229,10 @@
       "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
-      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit.json"
+      "$ref": "logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-include.json"
+    },
+    {
+      "$ref": "logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-exclude.json"
     },
     {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
