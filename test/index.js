@@ -128,43 +128,6 @@ describe('DataStream Schema', function () {
       expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
       done()
     })
-
-    it('NOT ResultAnalyticalMethodID & NOT ResultAnalyticalMethodName', function (done) {
-      const valid = validate({})
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
-      done()
-    })
-
-    it('ResultAnalyticalMethodID', function (done) {
-      const valid = validate({
-        'ResultAnalyticalMethodID': true
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
-      done()
-    })
-
-    it('ResultAnalyticalMethodName', function (done) {
-      const valid = validate({
-        'ResultAnalyticalMethodName': true
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
-      done()
-    })
-
-    it('ResultAnalyticalMethodID & ResultAnalyticalMethodName', function (done) {
-      const valid = validate({
-        'ResultAnalyticalMethodID': true,
-        'ResultAnalyticalMethodName': true
-      })
-      expect(valid).to.equal(false)
-      //console.log(JSON.stringify(validate.errors, null, 2))
-      // TODO add test
-      done()
-    })
   })
 
   describe('Should require allOf', function () {

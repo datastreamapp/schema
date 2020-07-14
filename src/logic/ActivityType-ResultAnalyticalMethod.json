@@ -16,7 +16,9 @@
           "ActivityType": [
             "ResultAnalyticalMethodID",
             "ResultAnalyticalMethodContext"
-          ]
+          ],
+          "ResultAnalyticalMethodID": ["ResultAnalyticalMethodContext"],
+          "ResultAnalyticalMethodContext": ["ResultAnalyticalMethodID"]
         }
       },
       {
