@@ -63,8 +63,8 @@ Column                                              | WQX                      |
 ----------------------------------------------------|--------------------------|---------------------|----------------------------------------------------------------
 **Activity ID**                                     | Required, Text           |                     | Removed, duplication of information, WQX concatenates location ID, date and time to create Activity ID 
 **Activity Type**                                   | Required, Values         | Required, Values    | [Additions](../src/addition/ActivityType.json)
-**Activity Media Name**                             | Required, Values         | Required, Values    | Removed, generated internally from `Activity Media Subdivision Name` mapping
-**Activity Media Subdivision Name**                 | Optional, Values         | Required, Values    | Renamed to `Activity Media Name` for simplicity, see [Subset](src/subset/ActivityMediaSubdivisionName.json)
+**Activity Media Name**                             | Required, Values         | Required, Values    | Removed
+**Activity Media Subdivision Name**                 | Optional, Values         | Required, Values    | Renamed to `Activity Media Name` for simplicity, see [Subset](src/subset/ActivityMediaName.json)
 **Activity Start Date**                             | Required, Date           | Required, Date      | Changed format to meet ISO 8601
 **Activity Start Time**                             | Optional, Time           | Optional, Time      | Changed format to meet ISO 8601
 **Activity Start Time Zone**                        | Conditional, Text        |                     | Removed, calculated internally using the Latitude and Longitude
@@ -109,7 +109,7 @@ Column                                              | WQX                      |
 **Result Value**                                    | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values
 **Result Unit**                                     | Conditional, Values      | Conditional, Values | [Additions](../src/addition/MeasurmentUnit.json), Added `L/mg-m` for UV absorbance not in `L/mg-cm`, `#/yr` to account for flushing rate, and `uATM` to account for those using micro-atmospheres 
 **Result Qualifier**                                | Optional, Values         |                     | Removed
-**Result Status ID**                                | Conditional, Values      | Required, Values    | Changed, made required always because it is best practice
+**Result Status ID**                                | Conditional, Values      | Optional, Values    | Changed, made optional due to ambiguous values
 **Statistical Base Code**                           | Optional, Values         |                     | Removed
 **Result Value Type**                               | Conditional, Values      | Required, Values    | Changed, made required always because default value could be miss used
 **Result Weight Basis**                             | Optional, Values         |                     | Removed

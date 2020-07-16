@@ -45,7 +45,7 @@
       ]
     },
     "ActivityMediaName": {
-      "$ref": "./values/ActivityMediaSubdivisionName.primary.json",
+      "$ref": "./values/ActivityMediaName.primary.json",
       "transform": [
         "trim",
         "toEnumCase"
@@ -190,7 +190,6 @@
     "ActivityMediaName",
     "ActivityStartDate",
     "CharacteristicName",
-    "ResultStatusID",
     "ResultValueType"
   ],
   "dependencies": {

@@ -45,7 +45,7 @@
       ]
     },
     "ActivityMediaName": {
-      "$ref": "./values/ActivityMediaSubdivisionName.legacy.json",
+      "$ref": "./values/ActivityMediaName.legacy.json",
       "transform": [
         "trim",
         "toEnumCase"

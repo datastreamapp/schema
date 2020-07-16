@@ -1,11 +1,14 @@
 {
-  "title": "Activity Media",
+  "title": "Activity Media Subdivision",
   "description": "",
   "type": "string",
   "enum": [
-    "Air",
-    "Sediment",
-    "Water"
+    "Ambient Air",
+    "Ocean Water",
+    "Pore Water",
+    "Subsurface Soil/Sediment",
+    "Surface Water",
+    "Surface Water Sediment"
   ],
-  "maxLength": 10
+  "maxLength": 45
 }
