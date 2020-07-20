@@ -11,6 +11,15 @@
   "Nutrient-nitrogen",
   "Phosphorus, Particulate Organic",
   "Temperature",
+  "Nitrate + Nitrite",
+  "Inorganic nitrogen (NO2, NO3, & NH3)",
+  "Inorganic phosphorus",
+  "Total Kjeldahl nitrogen (Organic N & NH3)",
+  "Total Particulate Nitrogen",
+  "Total Particulate Phosphorus",
+  "Particulate Inorganic Phosphorus",
+  
+
   
   "USDA Soil Texture Classification",
   "Wind Condition",
