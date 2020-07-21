@@ -131,7 +131,7 @@ Column                                              | WQX                      |
 **Result Analytical Method ID**                     | Conditional, Values/Text | Conditional, Text   | Changed, removed allowed list (US specific), any string accepted.
 **Result Analytical Method Context**                | Conditional, Values/Text | Conditional, Values | [Additions](../src/addition/ResultAnalyticalMethodContext.json), Added `EN` to allow for European standards, `PROPRIETARY` for internal standards specific to the organization, `SM` for Standard Method, and `VMV` to allow for value method variable codes used in Canada
 **Result Analytical Method Name**                   |                          | Conditional, Text   | Added as there is no look-up table of allowed method names to cross reference to get this information at the time.
-**Laboratory Name**                                 | Optional, Text           | Optional, Text      | None
+**Laboratory Name**                                 | Optional, Text           | Conditional, Text   | Required if Activity Type starts with `Sample`
 **Laboratory Sample ID**                            |                          | Optional, Text      | Added, is reported by labs and helpful for some data stewards 
 **Analysis Start Date**                             | Optional, Date           | Optional, Date      | See `Activity Start Date`
 **Analysis Start Time**                             | Optional, Time           | Optional, Time      | See `Activity Start Date`
