@@ -7,12 +7,10 @@
           "Ammonia and ammonium",
           "Ammonium",
           "Ammonium nitrate",
-          "Inorganic nitrogen (NO2, NO3, & NH3)",
           "Inorganic nitrogen (ammonia, nitrate and nitrite)",
           "Inorganic nitrogen (nitrate and nitrite)",
           "Kjeldahl nitrogen",
           "Nitrate",
-          "Nitrate + Nitrite",
           "Nitrite",
           "Organic Nitrogen",
           "Organic phosphorus",
@@ -22,9 +20,7 @@
           "Radium",
           "Soluble Reactive Phosphorus (SRP)",
           "Total Kjeldahl nitrogen",
-          "Total Kjeldahl nitrogen (Organic N & NH3)",
           "Total Nitrogen, mixed forms",
-          "Total Particulate Phosphorus",
           "Total Phosphorus, mixed forms"
         ]
       }

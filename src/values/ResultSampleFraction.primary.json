@@ -3,6 +3,7 @@
   "description": "",
   "type": "string",
   "enum": [
+    "Acid Soluble",
     "Bioavailable",
     "Comb Available",
     "Dissolved",
