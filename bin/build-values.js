@@ -37,34 +37,51 @@ const wqx = {
   'ResultDetectionQuantitationLimitType':'DetectionQuantitationLimitType',
 }
 
+const retire = (column, list) => {
+  if (column !== 'CharacteristicName')  return []
 
+  const arr = []
 
-const additions = (column, list) => {
+  // Remove retired items from list
+   for(const item of list) {
+      const index = item.indexOf('***retired***')
+      if (index === -1) continue;
+      arr.push(item.substr(0,index))
+    }
+   return arr
+}
 
+const additions = (column, list = []) => {
+  let arr = []
   // Looks for retired values and adds non-retired value
   if (column === 'CharacteristicName') {
     for (const item of list) {
       const index = item.indexOf('***retired***')
-      if (index === -1) continue;
-      list.push(item.substr(0, index))
+      if (index === -1) {
+        arr.push(item);
+        continue;
+      }
+      arr.push(item.substr(0, index))
     }
+  } else {
+    arr = list
   }
 
   try {
     const additions = require(`../src/addition/${column}.json`)
-    list = list.concat(additions)
+    arr = arr.concat(additions)
   } catch(e) {
     console.log(`|-> Skip additions`)
   }
 
   const length = list.length
-  const uniqueEnum = [...new Set(list.sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'})))]
+  const uniqueEnum = [...new Set(arr.sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'})))]
   if (uniqueEnum.length < length) {
     console.log(`|-> There are ${length - uniqueEnum.length} duplicates:`)
     const duplicates = []
-    for(let i = 1, l = list.length; i<l; i++) {
-      if (list[i-1] === list[i]) {
-        duplicates.push(list[i])
+    for(let i = 1, l = arr.length; i<l; i++) {
+      if (arr[i-1] === arr[i]) {
+        duplicates.push(arr[i])
       }
     }
     console.log(`|   "${duplicates.join('", "')}"`)
@@ -72,16 +89,11 @@ const additions = (column, list) => {
   return uniqueEnum
 }
 
-const subtractions = (column, list = []) => {
+const subtractions = (column, list = [], retired = []) => {
   let arr = []
 
-  // Remove retired items from list
   if (column === 'CharacteristicName') {
-    for(const item of list) {
-      const index = item.indexOf('***retired***')
-      if (index === -1) continue;
-      arr.push(item.substr(0,index))
-    }
+    arr = retired
   }
 
   try {
@@ -117,6 +129,8 @@ columns.forEach(col => {
   console.log(col)
   let object = require(`wqx/values/${wqx[col]}.json`)
 
+  const retired = retire(col, object.enum)
+
   object.enum = additions(col, object.enum)
 
   fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), {encoding: 'utf8'})
@@ -127,7 +141,7 @@ columns.forEach(col => {
     console.log(`|-> Skip subset`)
   }
 
-  object.enum = subtractions(col, object.enum)
+  object.enum = subtractions(col, object.enum, retired)
 
   fs.writeFileSync(__dirname + `/../src/values/${col}.primary.json`, JSON.stringify(object, null, 2), {encoding: 'utf8'})
 })
