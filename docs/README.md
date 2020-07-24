@@ -6,13 +6,13 @@
   <br/>
 </h1>
 
-<p align="center">Download the latest version in <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.json" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?pli=1#gid=37982279" target="_blank">Google SpreadSheet</a>, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v1.6.xlsx" target="_blank">Excel</a>, and <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.csv" target="_blank">CSV</a> template formats.</p>
+<p align="center">Download the latest version in <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v2.0.json" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1P4GcY5R2LbGGiT6aFwkQDA8dP8im0S6MyeBFvOEkjJg" target="_blank">Google SpreadSheet</a>, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v2.0.xlsb" target="_blank">Excel</a>, and <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v2.0.csv" target="_blank">CSV</a> template formats.</p>
 
 <p align="center">
-  <!--<a href="https://github.com/gordonfn/datastream-wqx"><img src="https://img.shields.io/github/stars/gordonfn/datastream-wqx.svg?style=social&label=Stars" alt="Stars" /></a>-->
-  <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/v/datastream-wqx.svg" alt="npm version"></a>-->
-  <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/dm/datastream-wqx.svg" alt="npm downloads"></a>-->
-  <!--<a href="https://www.npmjs.com/package/datastream-wqx"><img src="https://img.shields.io/npm/l/datastream-wqx.svg" alt="npm license" /></a>-->
+  <!--<a href="https://github.com/gordonfn/schema"><img src="https://img.shields.io/github/stars/gordonfn/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
+  <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/v/schema.svg" alt="npm version"></a>-->
+  <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/dm/schema.svg" alt="npm downloads"></a>-->
+  <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/l/schema.svg" alt="npm license" /></a>-->
 </p>
 
 ## DataStream 
