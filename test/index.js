@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 
-const schema = require('../dist/json-schema')
+const schema = require('../dist/json-schema/index.json')
 //const validate = require('../dist/validate')
 
 // Start Manual
@@ -22,8 +22,12 @@ const checkProperty = (errors, keyword, property) => {
     const error = validate.errors[i]
     if (error.keyword !== keyword) continue
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
+    //else if (keyword === 'enum' && error.params.allowedValues.length && error.dataPath === `.${property}`) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
-    else if(keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
+    else if (keyword === 'propertyNames' && error.params.propertyName === property) return true
+    //else if(keyword === 'if' && error.params.failingKeyword === 'then' && error.schemaPath === property ) return true
+    else if (keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
+    else if (keyword === 'anyOf') return true
   }
   return false
 }
@@ -36,8 +40,8 @@ describe('DataStream Schema', function () {
     expect(valid).to.equal(false)
 
     //expect(data.MonitoringLocationHorizontalCoordinateReferenceSystem).to.equal('UNKWN')
-    expect(data.ResultValueType).to.equal('Actual')
-    expect(Object.keys(data).length).to.equal(1)
+    //expect(data.ResultValueType).to.equal('Actual') // WQX only right now
+    //expect(Object.keys(data).length).to.equal(1)
 
     done()
   })
@@ -63,18 +67,18 @@ describe('DataStream Schema', function () {
       'MonitoringLocationLatitude': '51.0486',
       'MonitoringLocationLongitude': '-114.0708',
       'MonitoringLocationHorizontalCoordinateReferenceSystem': 'AMSMA',
-      'MonitoringLocationType': 'Atmosphere',
-      'MonitoringLocationWaterbody': 'Elbow River',
+      'MonitoringLocationType': 'Ocean',
       'ActivityType': 'Field Msr/Obs',
-      'ActivityMediaName': 'Water',
+      'ActivityMediaName': 'Surface Water',
       'ActivityDepthHeightMeasure': '-34',
       'ActivityDepthHeightUnit': 'm',
-      'SampleCollectionEquipmentName': 'Bongo Net',
-      'CharacteristicName': 'Aluminum',
+      'SampleCollectionEquipmentName': 'Bucket',
+      'CharacteristicName': 'Silver Dioxide',
       'MethodSpeciation': 'as B',
       'ResultSampleFraction': 'Dissolved',
       'ResultValue': '99.99',
-      'ResultUnit': 'µg',
+      'ResultUnit': 'ug',
+      'ResultValueType': 'Actual',
       'ResultStatusID': 'Accepted',
       'ResultComment': 'None at this time',
       'ResultAnalyticalMethodID': '1',
@@ -106,7 +110,6 @@ describe('DataStream Schema', function () {
 
   describe('Should enforce conditional required', function () {
 
-
     it('ResultValue', function (done) {
       const valid = validate({
         'ResultValue': true,
@@ -125,56 +128,19 @@ describe('DataStream Schema', function () {
       expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
       done()
     })
-
-    it('NOT ResultAnalyticalMethodID & NOT ResultAnalyticalMethodName', function (done) {
-      const valid = validate({})
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
-      done()
-    })
-
-    it('ResultAnalyticalMethodID', function (done) {
-      const valid = validate({
-        'ResultAnalyticalMethodID': true
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName')).to.equal(false)
-      done()
-    })
-
-    it('ResultAnalyticalMethodName', function (done) {
-      const valid = validate({
-        'ResultAnalyticalMethodName': true
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodID')).to.equal(false)
-      done()
-    })
-
-    it('ResultAnalyticalMethodID & ResultAnalyticalMethodName', function (done) {
-      const valid = validate({
-        'ResultAnalyticalMethodID': true,
-        'ResultAnalyticalMethodName': true
-      })
-      expect(valid).to.equal(false)
-      //console.log(JSON.stringify(validate.errors, null, 2))
-      // TODO add test
-      done()
-    })
   })
 
   describe('Should require allOf', function () {
 
     // allOf/0
-    it('NOT ResultValue & NOT ResultDetectionCondition', function (done) {
+    it('NOT ResultValue AND NOT ResultDetectionCondition', function (done) {
       const valid = validate({})
       expect(valid).to.equal(false)
       expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
       expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(true)
       done()
     })
-    it('ResultValue & ResultDetectionCondition', function (done) {
+    it('ResultValue AND ResultDetectionCondition', function (done) {
       const valid = validate({
         'ResultValue': 1,
         'ResultDetectionCondition': 'Not Detected'
@@ -186,7 +152,17 @@ describe('DataStream Schema', function () {
     })
 
     // allOf/1
-    it('CharacteristicName true', function (done) {
+    it('CharacteristicName AND MedthodSpeciation', function (done) {
+      const valid = validate({
+        'CharacteristicName': 'Nitrate'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'MethodSpeciation')).to.equal(true)
+      done()
+    })
+
+    // allOf/2
+    it('CharacteristicName AND ResultSampleFraction', function (done) {
       const valid = validate({
         'CharacteristicName': 'Silver'
       })
@@ -195,26 +171,15 @@ describe('DataStream Schema', function () {
       done()
     })
 
-    // allOf/2
-    it('ActivityType = Sample', function (done) {
-      const valid = validate({
-        'ActivityType': 'Sample-Other'
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
-      done()
-    })
-
     // allOf/3
-    it('ResultDetectionCondition = Not Detected', function (done) {
+    it('ResultDetectionCondition false', function (done) {
       const valid = validate({
-        'ResultDetectionCondition': 'Not Detected'
+        'ResultDetectionCondition': ''
       })
       expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
       done()
     })
 
@@ -240,14 +205,91 @@ describe('DataStream Schema', function () {
       done()
     })
 
-    it('ResultDetectionCondition false', function (done) {
-      const valid = validate({
-        'ResultDetectionCondition': ''
+    // allOf/4
+    it('ResultDetectionCondition = Not Detected', function (done) {
+      // pass
+      let valid = validate({
+        'ResultDetectionCondition': 'Not Detected',
       })
       expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+
+      // fail
+      valid = validate({
+        'ResultDetectionCondition': 'Not Detected',
+        'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
+        'ResultDetectionQuantitationLimitMeasure': 0,
+        'ResultDetectionQuantitationLimitUnit': 'None'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+      done()
+    })
+
+    it('ResultDetectionCondition = Detected Not Quantified', function (done) {
+      // pass
+      let valid = validate({
+        'ResultDetectionCondition': 'Detected Not Quantified',
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+
+      // fail
+      valid = validate({
+        'ResultDetectionCondition': 'Detected Not Quantified',
+        'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
+        'ResultDetectionQuantitationLimitMeasure': 0,
+        'ResultDetectionQuantitationLimitUnit': 'None'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+
+      done()
+    })
+
+    // allOf/5
+    it('ActivityType = Sample for ResultAnalyticalMethodID', function (done) {
+      let valid = validate({
+        'ActivityType': 'Sample-Other'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
+
+      valid = validate({
+        'ActivityType': 'Sample-Other',
+        'ResultAnalyticalMethodID': '0',
+        'ResultAnalyticalMethodContext': 'ENV'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(false)
+
+      done()
+    })
+
+    it('ActivityType = Sample for ResultAnalyticalMethodName', function (done) {
+      let valid = validate({
+        'ActivityType': 'Sample-Other'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(true)
+
+      valid = validate({
+        'ActivityType': 'Sample-Other',
+        'ResultAnalyticalMethodName': 'Unspecified'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(false)
+
       done()
     })
 
@@ -301,36 +343,9 @@ describe('DataStream Schema', function () {
     done()
   })
 
-  /*it('Should fail manual test', function (done) {
+  /*it('Should pass manual test', function (done) {
     const valid = validate(
-      {
-        'DatasetName': 'Lac La Biche County Lake Water Quality Monitoring Program',
-        'MonitoringLocationName': 'Lac La Biche East',
-        'MonitoringLocationLatitude': 54.83068572,
-        'MonitoringLocationLongitude': -111.9159406,
-        'MonitoringLocationHorizontalCoordinateReferenceSystem': 'WGS84',
-        'MonitoringLocationType': 'Lake/Pond',
-        'MonitoringLocationWaterbody': 'Lac La Biche',
-        'ActivityType': 'Sample-Composite Without Parents',
-        'ActivityMediaName': 'Surface Water',
-        'ActivityStartDate': '2011-07-25',
-        'ActivityStartTime': '13:30:00',
-        'SampleCollectionEquipmentName': 'Kemmerer Bottle',
-        'CharacteristicName': 'Hydroxide',
-        'ResultSampleFraction': 'Total',
-        'ResultValueType': 'Actual',
-        'ResultDetectionCondition': 'Below Detection/Quantification Limit',
-        'ResultDetectionQuantitationLimitMeasure': 5,
-        'ResultDetectionQuantitationLimitUnit': 'mg/l',
-        'ResultDetectionQuantitationLimitType': 'Method Detection Level',
-        'ResultComment': 'A composite sample taken from 3 locations around the lake.',
-        'ResultAnalyticalMethodID': '4500-H, 2510, 2320',
-        'ResultAnalyticalMethodContext': 'APHA',
-        'ResultAnalyticalMethodName': 'pH, Conductivity and Total Alkalinity',
-        'AnalysisStartDate': '2011-07-29',
-        'LaboratoryName': 'ALS',
-        'LaboratorySampleID': 'L1037374-1'
-      }
+      {'DatasetName': 'PROVINCIAL (STREAM) WATER QUALITY MONITORING NETWORK (PWQMN)', 'MonitoringLocationID': '17002113002', 'MonitoringLocationName': 'Hwys 7 and 35, upstrm Lindsay', 'MonitoringLocationLatitude': 44.32767014, 'MonitoringLocationLongitude': -78.73027636, 'MonitoringLocationHorizontalCoordinateReferenceSystem': 'UNKWN', 'MonitoringLocationType': 'Unspecified', 'ActivityType': 'Sample-Routine', 'ActivityMediaName': 'Surface Water', 'ActivityStartDate': '2017-04-11', 'SampleCollectionEquipmentName': 'Water Bottle', 'CharacteristicName': 'Total hardness', 'ResultValueType': 'Actual', 'ResultDetectionCondition': 'Below Detection/Quantification Limit', 'ResultDetectionQuantitationLimitMeasure': 1.0, 'ResultDetectionQuantitationLimitUnit': 'mg/l', 'ResultDetectionQuantitationLimitType': 'Method Detection Level', 'ResultStatusID': 'Accepted', 'ResultComment': 'LESS THAN METHOD DETECTION LIMIT', 'ResultAnalyticalMethodID': 'E3497', 'ResultAnalyticalMethodContext': 'PROPRIETARY', 'ResultAnalyticalMethodName': 'THE DETERMINATION OF METALS IN WATER BY INDUCTIVELY COUPLED PLASMA - OPTICAL EMISSION SPECTROSCOPY (ICP-OES)', 'LaboratoryName': 'Ontario Ministry Labs', 'LaboratorySampleID': 'C237623'}
     )
     console.log(JSON.stringify(validate.errors, null, 2))
     expect(0).to.equal(1)

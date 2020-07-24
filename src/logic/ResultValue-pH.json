@@ -1,0 +1,22 @@
+{
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": ["pH"]
+      },
+      "ResultUnit": {
+        "enum": ["None"]
+      }
+    },
+    "required": ["CharacteristicName","ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "minimum": 0,
+        "maximum": 14
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}

@@ -1,6 +1,7 @@
 # Build Files
 dist/
-
+bin/db
+bin/template
 
 # Logs
 logs

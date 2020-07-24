@@ -1,0 +1,35 @@
+{
+  "if": {
+    "properties": {
+      "ActivityType": {
+        "pattern": "^Sample.*$"
+      }
+    },
+    "required": [
+      "ActivityType"
+    ]
+  },
+  "then": {
+    "anyOf": [
+      {
+        "dependencies": {
+          "ActivityType": [
+            "LaboratoryName",
+            "ResultAnalyticalMethodID",
+            "ResultAnalyticalMethodContext"
+          ],
+          "ResultAnalyticalMethodID": ["ResultAnalyticalMethodContext"],
+          "ResultAnalyticalMethodContext": ["ResultAnalyticalMethodID"]
+        }
+      },
+      {
+        "dependencies": {
+          "ActivityType": [
+            "LaboratoryName",
+            "ResultAnalyticalMethodName"
+          ]
+        }
+      }
+    ]
+  }
+}

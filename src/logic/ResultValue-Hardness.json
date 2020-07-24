@@ -1,0 +1,22 @@
+{
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Hardness",
+          "Hardness, total by calculation",
+          "Total hardness"
+        ]
+      }
+    },
+    "required": ["CharacteristicName","ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "exclusiveMinimum": 0
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}

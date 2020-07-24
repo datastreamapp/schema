@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 
-const schema = require('../dist/json-schema')
+const schema = require('../dist/json-schema/index.json')
 const Ajv = require('ajv');
 
 const ajv = new Ajv({
@@ -32,18 +32,18 @@ describe('DataStream Schema', function () {
       "MonitoringLocationLatitude":"51.0486",
       "MonitoringLocationLongitude":"-114.0708",
       "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
-      "MonitoringLocationType":"Atmosphere",
-      "MonitoringLocationWaterbody":"Elbow River",
+      "MonitoringLocationType":"ocean",
       "ActivityType":"Field Msr/Obs",
-      "ActivityMediaName":"Water",
+      "ActivityMediaName":"surface Water",
       "ActivityDepthHeightMeasure":"-34",
       "ActivityDepthHeightUnit":"m",
-      "SampleCollectionEquipmentName":"Bongo Net",
+      "SampleCollectionEquipmentName":"bucket",
       "CharacteristicName":"aluminum",
       "MethodSpeciation":"as B",
       "ResultSampleFraction":"Dissolved",
       "ResultValue":"99.99",
       "ResultUnit":"#/100ml",
+      'ResultValueType':'Actual',
       "ResultStatusID":"Accepted",
       "ResultComment":"None at this time",
       "ResultAnalyticalMethodID":"1",

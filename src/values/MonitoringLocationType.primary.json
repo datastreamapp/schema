@@ -1,0 +1,15 @@
+{
+  "title": "Monitoring Location Type",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Estuary",
+    "Great Lake",
+    "Lake/Pond",
+    "Ocean",
+    "River/Stream",
+    "Unspecified",
+    "Wetland"
+  ],
+  "maxLength": 40
+}

@@ -6,7 +6,7 @@
   <br/>
 </h1>
 
-<p align="center">Download the latest version in <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.json" target="_blank">JSON Schema</a>, JSON Table Schema, <a href="https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?pli=1#gid=37982279" target="_blank">Google SpreadSheet</a>, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v1.6.xlsx" target="_blank">Excel</a>, and <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.csv" target="_blank">CSV</a> template formats.</p>
+<p align="center">Download the latest version in <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.json" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?pli=1#gid=37982279" target="_blank">Google SpreadSheet</a>, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v1.6.xlsx" target="_blank">Excel</a>, and <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v1.6.csv" target="_blank">CSV</a> template formats.</p>
 
 <p align="center">
   <!--<a href="https://github.com/gordonfn/datastream-wqx"><img src="https://img.shields.io/github/stars/gordonfn/datastream-wqx.svg?style=social&label=Stars" alt="Stars" /></a>-->
@@ -62,6 +62,14 @@ Version Number               | Auto-generated | Version number of the dataset
 DOI                          | Auto-generated | Digital Object Identifier (assigned by DataStream unless a pre-existing DOI for data is entered)
 Bounding Box                 | Auto-generated | Geographic area covered by dataset 
 
+## Special Case Tests
+In addition to our schema enforcing allowed values the column conditional logic; we have included additional check for common errors.
+
+- `Dissolved oxygen (DO)` should not be in `%`
+- `Dissolved oxygen saturation` should not be less than `0%`
+- `Hardness` should not be less than or equal to `0`
+- `pH` should be within `0` and `14`
+- `Temperature` should be within `-100 degC` and `100 degC`
 
 ## Install
 You can download the compiled DS-WQX schema from above.
@@ -87,12 +95,12 @@ const Ajv = require('ajv');
 const jsonschema = require('@datastream/schema/json-schema');
 
 const ajv = new Ajv({
-    v5: true,
-    format:'full',
-    coerceTypes: true,
-    allErrors: true,
-    useDefaults: true
-});
+ schemaId: 'auto',
+ format: 'full',
+ coerceTypes: true,
+ allErrors: true,
+ useDefaults: true
+})
 require('ajv-keywords')(ajv, ['transform']); // Optional: `transform` removes strictness surrounding value character case.
 const validate = ajv.compile(jsonschema);
 

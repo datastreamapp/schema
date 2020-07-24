@@ -2,8 +2,6 @@ const util = require('util')
 const path = require('path')
 const fs = require('fs')
 
-const changeCase = require('change-case')
-const glob = util.promisify(require('glob'))
 const $RefParser = require('json-schema-ref-parser')
 const Ajv = require('ajv')
 const pack = require('ajv-pack')
@@ -19,22 +17,57 @@ const ajv = new Ajv({
 
 const writeFile = util.promisify(fs.writeFile)
 
-console.log('Compile: JSON Schema & JSON Table Schema & CSV Template')
+console.log('Compile: JSON Schema & CSV Template')
 
-const srcGlob = __dirname + '/../src/*.json'    // Note files starting w/ `definitions.` will be skipped in code
-const validateFile = __dirname + '/../dist/validate/index.js'
-const csvFile = __dirname + '/../dist/csv/template.csv'
-const sqlFile = __dirname + '/../dist/sql/index.sql'
-const jsonSchemaDir = __dirname + '/../dist/json-schema'
-const jsonTableSchemaDir = __dirname + '/../dist/json-table-schema'
+const process = async (src, dist, minify = false) => {
+  let schema = {}
+  try {
+    schema = await $RefParser.dereference(__dirname + `/../src/${src}.json`)
+  } catch(e) {
+    console.error(e, e.toJSON())
+  }
 
-const replace = (str) => {
-  // fix typos in wqx allowed values
-  return str
-  //.replace('ug/l', 'µg/l'); // opted to keep u
+  let json
+  if (minify) {
+    delete schema.title
+    delete schema.description
+    for (let key in schema.properties) {
+      delete schema.properties[key].title
+      delete schema.properties[key].description
 
+      const keys = Object.keys(schema.properties[key])
+      if(keys.includes('enum') && keys.includes('maxLength')) {
+        delete schema.properties[key].maxLength
+      }
+    }
+    json = JSON.stringify(schema)
+  } else {
+    json = JSON.stringify(schema, null, 2)
+  }
+
+  const validate = ajv.compile(schema)
+  const code = pack(ajv, validate)
+
+  await Promise.all([
+    writeFile(__dirname + `/../dist/${dist}/index.js`, code, {encoding: 'utf8'}),
+    writeFile(__dirname + `/../dist/${dist}/index.json`, json, {encoding: 'utf8'})
+  ])
 }
 
+const csv = async () => {
+  const object = require(__dirname + `/../src/primary.json`)
+  let csv = `"` + Object.keys(object.properties).join(`","`) + `"` + '\r\n'
+  await writeFile(__dirname + `/../dist/csv/headers.csv`, csv, {encoding: 'utf8'})
+}
+
+csv()
+process('primary', 'json-schema', true)
+process('legacy', 'json-schema-legacy', true)
+
+
+//csv
+
+/*
 glob(srcGlob)
   .then((files) => {
     const arr = []
@@ -46,121 +79,25 @@ glob(srcGlob)
       console.log('Processing:', file)
 
       const jsonSchemaFileJSON = jsonSchemaDir + '/' + file
-      const jsonSchemaFileJS = jsonSchemaDir + '/' + file.substr(0,file.length-2)
-      const jsonTableSchemaFile = jsonTableSchemaDir + '/' + file
 
       const deref = $RefParser.dereference(filePath)
         .then((schemaJSON) => {
           //console.log(schemaFile, schemaJSON);
 
-          const columns = Object.keys(schemaJSON.properties)
+          // ## csv
+          let csv = `"` + Object.keys(schemaJSON.properties).join(`","`) + `"` + '\r\n'
 
           // ## json-schema
-          // ensure maxLength is right
+          delete schemaJSON.title
+          delete schemaJSON.description
           for (let key in schemaJSON.properties) {
-            const maxLength = schemaJSON.properties[key].maxLength || 0;
-            (schemaJSON.properties[key].enum || []).forEach((value) => {
-              schemaJSON.properties[key].maxLength = Math.max(schemaJSON.properties[key].maxLength || 0, value.length);
-              if (value.length > maxLength) console.log('WARN maxLength on', key, 'should be', schemaJSON.properties[key].maxLength)
-            })
-          }
+            delete schemaJSON.properties[key].title
+            delete schemaJSON.properties[key].description
 
-          // ## csv
-          let csv = `"` + columns.join(`","`) + `"` + '\r\n'
-
-          // ## json-schema -> json-schema-table
-          const table = {
-            fields: []
-          }
-          for (let i = 0, l = columns.length; i < l; i++) {
-            const key = columns[i]
-            const field = schemaJSON.properties[key]
-            const column = {
-              name: key,
-              title: field.title,
-              description: field.description,
-              type: field.type,
-              constraints: {
-                required: (schemaJSON.required.indexOf(key) !== -1) ? true : null
-              }
-            }
-            if (field.hasOwnProperty('format')) {
-              column.format = field.format
-              if (field.format === 'date-time') {
-                column.format = field.format.replace('-', '')
-              }
-            }
-
-            const constraints = ['minLength', 'maxLength', 'minimum', 'maximum', 'pattern', 'enum']
-            for (let j = 0, m = constraints.length; j < m; j++) {
-              if (field.hasOwnProperty(constraints[j])) {
-                column.constraints[constraints[j]] = field[constraints[j]]
-              }
-            }
-
-            table.fields.push(column)
-          }
-
-          // ## sql
-          let sql = `
-CREATE SCHEMA IF NOT EXISTS datastream;
-CREATE TABLE IF NOT EXISTS datastream.samples (
-  project_id     UUID NOT NULL,
-`
-          for (let i = 0, l = columns.length; i < l; i++) {
-            const key = columns[i]
-            if (key.indexOf('Time') !== -1) continue   // covered by previous column (DateTime)
-            sql += `  ${changeCase.snake(key.replace('Date', 'Timestamp'))}`
-
-            const field = schemaJSON.properties[key]
-
-            if (field.type === 'string' && field.maxLength) {
-              sql += ` VARCHAR(${field.maxLength})`
-            } else if (field.type === 'string' && field.format === 'date') {
-              sql += ` TIMESTAMP WITH TIME ZONE`
-            } else if (field.type === 'string') {
-              sql += ` TEXT`
-            } else if (field.type === 'number') {
-              sql += ` NUMERIC`
-            }
-
-            if (field.default) {
-              sql += ` DEFAULT '${field.default}'`
-            } else if (schemaJSON.required.indexOf(key) !== -1) {
-              sql += ` NOT NULL`
-            }
-
-            if (i !== columns.length -1) {
-              sql += `,
-`
+            if(schemaJSON.properties[key].enum && schemaJSON.properties[key].maxLength) {
+              delete schemaJSON.properties[key].maxLength
             }
           }
-          sql += `
-);
-
-CREATE UNIQUE INDEX IF NOT EXISTS sample_pkey ON datastream.samples (
-  project_id,
-  monitoring_location_latitude,
-  monitoring_location_longitude,
-  activity_start_timestamp,
-  activity_end_timestamp,
-  activity_type,
-  characteristic_name,
-  method_speciation,
-  result_sample_fraction,
-  result_analytical_method_id
-);
-CREATE INDEX IF NOT EXISTS sample_project_id_idx ON datastream.samples (project_id);
-CREATE INDEX IF NOT EXISTS sample_monitoring_location_latitude_idx ON datastream.samples (monitoring_location_latitude);
-CREATE INDEX IF NOT EXISTS sample_monitoring_location_longitude_idx ON datastream.samples (monitoring_location_longitude);
-CREATE INDEX IF NOT EXISTS sample_activity_start_timestamp_idx ON datastream.samples (activity_start_timestamp);
-CREATE INDEX IF NOT EXISTS sample_activity_end_timestamp_idx ON datastream.samples (activity_end_timestamp);
-CREATE INDEX IF NOT EXISTS sample_activity_type_idx ON datastream.samples (activity_type);
-CREATE INDEX IF NOT EXISTS sample_characteristic_name_idx ON datastream.samples (characteristic_name);
-CREATE INDEX IF NOT EXISTS sample_method_speciation_idx ON datastream.samples (method_speciation);
-CREATE INDEX IF NOT EXISTS sample_result_sample_fraction_idx ON datastream.samples (result_sample_fraction);
-CREATE INDEX IF NOT EXISTS sample_result_analytical_method_id_idx ON datastream.samples (result_analytical_method_id);
-`
 
           // compiled ajv
           const validate = ajv.compile(schemaJSON)
@@ -169,10 +106,7 @@ CREATE INDEX IF NOT EXISTS sample_result_analytical_method_id_idx ON datastream.
           return Promise.all([
             writeFile(validateFile, replace(moduleCode), {encoding: 'utf8'}),
             writeFile(csvFile, csv, {encoding: 'utf8'}),
-            writeFile(jsonSchemaFileJSON, replace(JSON.stringify(schemaJSON, null, 2)), {encoding: 'utf8'}),
-            writeFile(jsonSchemaFileJS, `module.exports = ${replace(JSON.stringify(schemaJSON, null, 2))}`, {encoding: 'utf8'}),
-            writeFile(jsonTableSchemaFile, replace(JSON.stringify(table, null, 2)), {encoding: 'utf8'}),
-            writeFile(sqlFile, sql, {encoding: 'utf8'})
+            writeFile(jsonSchemaFileJSON, replace(JSON.stringify(schemaJSON, null, 2)), {encoding: 'utf8'})
           ])
         })
         .catch((err) => {
@@ -197,3 +131,4 @@ CREATE INDEX IF NOT EXISTS sample_result_analytical_method_id_idx ON datastream.
 
     console.log('Done!')
   })
+*/

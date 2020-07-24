@@ -1,0 +1,23 @@
+{
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Dissolved oxygen saturation"
+        ]
+      },
+      "ResultUnit": {
+        "enum": ["%"]
+      }
+    },
+    "required": ["CharacteristicName","ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "minimum": 0
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}
