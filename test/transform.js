@@ -1,6 +1,7 @@
 const expect = require('chai').expect
 
-const schema = require('../dist/json-schema/index.json')
+const schemaPrimary = require('../dist/json-schema/index.json')
+const schemaLegacy = require('../dist/json-schema-legacy/index.json')
 const Ajv = require('ajv');
 
 const ajv = new Ajv({
@@ -11,21 +12,13 @@ const ajv = new Ajv({
   useDefaults: true
 });
 require('ajv-keywords')(ajv, ['transform'])
-const validate = ajv.compile(schema);
-
-const checkMissingProperty = (errors, keyword, property) => {
-  for (let i = errors.length; i--; i) {
-    const error = validate.errors[i]
-    if (error.keyword !== keyword) continue
-    if (error.params.missingProperty === property) return true
-  }
-  return false
-}
+const validatePrimary = ajv.compile(schemaPrimary);
+const validateLegacy = ajv.compile(schemaLegacy);
 
 describe('DataStream Schema', function () {
 
-  it('Should transform values', function (done) {
-    const valid = validate({
+  it('Should transform values (primary)', function (done) {
+    const valid = validatePrimary({
       "DatasetName":"Test",
       "MonitoringLocationID":"A1",
       "MonitoringLocationName":"A1 Test",
@@ -58,7 +51,44 @@ describe('DataStream Schema', function () {
       "AnalysisStartTime":"13:15:00",
       "AnalysisStartTimeZone":"-0600"
     })
-    //console.log(validate.errors)
+    expect(valid).to.equal(true)
+    done()
+  })
+
+  it('Should transform values (legacy)', function (done) {
+    const valid = validateLegacy({
+      "DatasetName":"Test",
+      "MonitoringLocationID":"A1",
+      "MonitoringLocationName":"A1 Test",
+      "MonitoringLocationLatitude":"51.0486",
+      "MonitoringLocationLongitude":"-114.0708",
+      "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
+      "MonitoringLocationType":"ocean",
+      "ActivityType":"Field Msr/Obs",
+      "ActivityMediaName":"pore water",
+      "ActivityDepthHeightMeasure":"-34",
+      "ActivityDepthHeightUnit":"m",
+      "SampleCollectionEquipmentName":"bucket",
+      "CharacteristicName":"aluminum",
+      "MethodSpeciation":"as B",
+      "ResultSampleFraction":"Dissolved",
+      "ResultValue":"99.99",
+      "ResultUnit":"#/100ml",
+      'ResultValueType':'Actual',
+      "ResultStatusID":"Accepted",
+      "ResultComment":"None at this time",
+      "ResultAnalyticalMethodID":"1",
+      "ResultAnalyticalMethodContext":"APHA",
+      "ActivityStartDate":"2018-02-23",
+      "ActivityStartTime":"13:15:00",
+      "ActivityEndDate":"2018-02-23",
+      "ActivityEndTime":"13:15:00",
+      "LaboratoryName":"Farrell Labs",
+      "LaboratorySampleID":"101010011110",
+      "AnalysisStartDate":"2018-02-23",
+      "AnalysisStartTime":"13:15:00",
+      "AnalysisStartTimeZone":"-0600"
+    })
     expect(valid).to.equal(true)
     done()
   })
