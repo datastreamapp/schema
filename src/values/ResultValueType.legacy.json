@@ -4,6 +4,7 @@
   "type": "string",
   "enum": [
     "Actual",
+    "Blank Corrected",
     "Blank Corrected Calc",
     "Calculated",
     "Control Adjusted",
