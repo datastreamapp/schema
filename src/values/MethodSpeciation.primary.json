@@ -37,7 +37,7 @@
     "as SO3",
     "as SO4",
     "as U3O8",
-    "None"
+    "Unspecified"
   ],
   "maxLength": 16
 }
