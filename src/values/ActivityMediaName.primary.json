@@ -5,7 +5,7 @@
   "enum": [
     "Ambient Air",
     "Ocean Water",
-    "Pore Water",
+    "Porewater",
     "Subsurface Soil/Sediment",
     "Surface Water",
     "Surface Water Sediment"
