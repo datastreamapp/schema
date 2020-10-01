@@ -37,6 +37,6 @@
     "glob": "7.1.4",
     "json-schema-ref-parser": "9.0.1",
     "mocha": "7.1.2",
-    "wqx": "3.0.0"
+    "wqx": "3.0.2"
   }
 }
