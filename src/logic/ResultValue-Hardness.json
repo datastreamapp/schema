@@ -9,12 +9,12 @@
         ]
       }
     },
-    "required": ["CharacteristicName","ResultUnit"]
+    "required": ["CharacteristicName"]
   },
   "then": {
     "properties": {
       "ResultValue": {
-        "exclusiveMinimum": 0
+        "inclusiveMinimum": 0
       }
     },
     "required": ["ResultValue"]
