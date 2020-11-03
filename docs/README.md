@@ -17,7 +17,7 @@
 
 ## DataStream 
 
-DataStream ([www.DataStream.org](http://gordonfoundation.ca/initiatives/datastream)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 3 million water quality observations have been published across DataStream’s three regional platforms (Mackenzie DataStream,  Lake Winnipeg DataStream, and Atlantic DataStream) by watershed groups, Indigenous organizations, researchers and governments at all levels.
+DataStream ([DataStream.org](http://gordonfoundation.ca/initiatives/datastream)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 9 million water quality observations have been published across DataStream’s three regional platforms (Mackenzie DataStream,  Lake Winnipeg DataStream, and Atlantic DataStream) by watershed groups, Indigenous organizations, researchers and governments at all levels.
 
 <!--<div align="center">
   <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/wqx/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
@@ -92,7 +92,7 @@ The `csv` template follows `R` import/export best practices.
 ### NodeJS
 ```javascript
 const Ajv = require('ajv');
-const jsonschema = require('@datastream/schema/json-schema');
+const jsonschema = require('@datastream/schema/json-schema/index.json');
 
 const ajv = new Ajv({
  schemaId: 'auto',
@@ -117,7 +117,7 @@ const valid = validate(data);
 <script src=""></script>
 ```
 ```js
-const validate = require('@datastream/schema/validate');
+const validate = require('@datastream/schema/json-schema');
 let data = {}; // must not be const to allow coerce of types
 const valid = validate(data);
 ```

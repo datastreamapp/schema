@@ -3,10 +3,6 @@
     "type": "string",
     "maxLength": 512
   },
-  "ActivityDepthHeightUnit": {
-    "type": "string",
-    "enum": ["m","ft"]
-  },
   "ResultAnalyticalMethodID": {
     "title": "Result Analytical Method ID",
     "description": "",

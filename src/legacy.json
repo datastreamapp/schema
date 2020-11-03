@@ -67,8 +67,11 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
     },
     "ActivityDepthHeightUnit": {
-      "type": "string",
-      "enum": ["m","ft","cm"]
+      "$ref": "./values/MeasurementUnit.legacy.json",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ]
     },
     "SampleCollectionEquipmentName": {
       "$ref": "./values/SampleCollectionEquipmentName.legacy.json",
