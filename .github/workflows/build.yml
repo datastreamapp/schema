@@ -1,9 +1,9 @@
 name: build
 
 on:
-  schedule:
-    - cron: '0 1 * * 6'
   workflow_dispatch:
+  repository_dispatch:
+    types:[wqx]
 
 jobs:
   build:
@@ -54,3 +54,11 @@ jobs:
         run: |
           cd dist
           npm publish
+      -
+        if: env.change
+        name: Trigger @gordonfn/normalize rebuild
+        run: |
+          curl -X POST https://api.github.com/repos/gordonfn/normalize/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.GITHUB_TOKEN }} \
+          --data '{"event_type": "schema", "client_payload": {}'
