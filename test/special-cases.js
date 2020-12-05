@@ -65,15 +65,16 @@ describe('Special Logic Cases', function () {
   })
 
   // #/allOf/7
-  it('Hardness should be > 0', function (done) {
+  it('Hardness should be >= 0', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'Hardness',
-      'ResultValue': '0',
+      'ResultValue': '-1',
       'ResultUnit': 'mg/L'
     })
+
     expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'exclusiveMinimum', 'ResultValue')).to.equal(true)
+    expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(true)
     done()
   })
 

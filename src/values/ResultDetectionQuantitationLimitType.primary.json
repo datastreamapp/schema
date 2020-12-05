@@ -6,7 +6,8 @@
     "Blank-adjusted method detect limit",
     "Lower Reporting Limit",
     "Method Detection Level",
-    "Sample Detection Limit"
+    "Sample Detection Limit",
+    "Upper Reporting Limit"
   ],
   "maxLength": 34
 }
