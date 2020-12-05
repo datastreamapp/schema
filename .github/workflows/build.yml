@@ -1,0 +1,56 @@
+name: build
+
+on:
+  schedule:
+    - cron: '0 1 * * 6'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 12.x
+      -
+        name: Create .npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${NPM_GITHUB_TOKEN}" >> .npmrc &&
+          echo "@gordonfn:registry=https://npm.pkg.github.com" >> .npmrc
+          echo ".npmrc" >> .gitignore
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
+      -
+        name: Install dependencies
+        run: |
+          npm install
+          npm update wqx
+      -
+        name: Build and test allowed values
+        run: |
+          npm run test
+          echo "change=$(git status --porcelain)" >> $GITHUB_ENV
+      -
+        if: env.change
+        name: Version bump
+        run: |
+          echo "tag=$(npm version patch)" >> $GITHUB_ENV
+      - if: env.change
+        name: Commit Changes
+        run: |
+          git add -A
+          git commit -a -m 'ci: update allowed values'
+          git tag ${{ env.tag }}
+          git status
+          git push "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_REF#refs/*/} --follow-tags --force --tags
+      -
+        if: env.change
+        name: Publish
+        run: |
+          cd dist
+          npm publish
