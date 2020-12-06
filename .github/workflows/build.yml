@@ -22,16 +22,25 @@ jobs:
       -
         name: Create .npmrc
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${NPM_GITHUB_TOKEN}" >> .npmrc &&
+          echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> .npmrc &&
           echo "@gordonfn:registry=https://npm.pkg.github.com" >> .npmrc
           echo ".npmrc" >> .gitignore
         env:
           NPM_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
       -
+        name: Cache npm
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      -
         name: Install dependencies
         run: |
           npm install
           npm update wqx
+          npm audit fix
       -
         name: Build and test allowed values
         run: |
@@ -56,6 +65,15 @@ jobs:
         run: |
           cd dist
           npm publish
+
+      -
+        name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: |
+            dist/csv/
+            dist/json-schema/
+
       -
         if: env.change
         name: Trigger @gordonfn/normalize rebuild
