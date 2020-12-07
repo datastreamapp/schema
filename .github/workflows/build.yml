@@ -22,11 +22,9 @@ jobs:
       -
         name: Create .npmrc
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> .npmrc &&
+          echo "//npm.pkg.github.com/:_authToken=${{ github.token }}" >> .npmrc &&
           echo "@gordonfn:registry=https://npm.pkg.github.com" >> .npmrc
           echo ".npmrc" >> .gitignore
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_GITHUB_TOKEN }}
       -
         name: Cache npm
         uses: actions/cache@v2
