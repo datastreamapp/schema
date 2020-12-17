@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+mkdir -p bin/template
+
 rm -rf dist
 
 mkdir -p dist/csv

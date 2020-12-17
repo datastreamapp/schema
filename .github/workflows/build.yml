@@ -49,7 +49,8 @@ jobs:
         name: Version bump
         run: |
           echo "tag=$(npm version patch)" >> $GITHUB_ENV
-      - if: env.change
+      -
+        if: env.change
         name: Commit Changes
         run: |
           git add -A
@@ -63,7 +64,6 @@ jobs:
         run: |
           cd dist
           npm publish
-
       -
         name: Upload Artifact
         uses: actions/upload-artifact@v2
@@ -71,7 +71,6 @@ jobs:
           path: |
             dist/csv/
             dist/json-schema/
-
       -
         if: env.change
         name: Trigger @gordonfn/normalize rebuild
