@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "prettier-standard '{dist,src}/**/*.{js,json}'",
+    "lint": "prettier-standard 'src/**/*.json'",
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
     "build": "node ./bin/build.js && node ./bin/build-template.js",
     "test": "npm run build && mocha"
@@ -51,7 +51,7 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.{js,json}": [
+    "src/**/*.json": [
       "prettier-standard",
       "git add"
     ]
