@@ -7,6 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "lint": "prettier-standard '{dist,src}/**/*.{js,json}'",
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
     "build": "node ./bin/build.js && node ./bin/build-template.js",
     "test": "npm run build && mocha"
@@ -29,14 +30,36 @@
   },
   "homepage": "https://github.com/gordonfn/schema#readme",
   "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
     "ajv": "6.12.2",
     "ajv-keywords": "3.4.1",
     "ajv-pack": "0.3.1",
     "chai": "4.2.0",
     "change-case": "4.1.1",
     "glob": "7.1.4",
+    "husky": "4.3.6",
     "json-schema-ref-parser": "9.0.1",
+    "lint-staged": "10.5.3",
     "mocha": "7.1.2",
+    "prettier-standard-cli": "16.0.4",
     "wqx": "3.0.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,json}": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
   }
 }

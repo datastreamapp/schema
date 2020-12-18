@@ -2,15 +2,13 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": [
-          "Dissolved oxygen saturation"
-        ]
+        "enum": ["Dissolved oxygen saturation"]
       },
       "ResultUnit": {
         "enum": ["%"]
       }
     },
-    "required": ["CharacteristicName","ResultUnit"]
+    "required": ["CharacteristicName", "ResultUnit"]
   },
   "then": {
     "properties": {

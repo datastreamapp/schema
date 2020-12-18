@@ -10,9 +10,7 @@
         ]
       }
     },
-    "required": [
-      "ResultDetectionCondition"
-    ]
+    "required": ["ResultDetectionCondition"]
   },
   "then": {
     "dependencies": {

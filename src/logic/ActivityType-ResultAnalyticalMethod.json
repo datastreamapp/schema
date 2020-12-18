@@ -5,9 +5,7 @@
         "pattern": "^Sample.*$"
       }
     },
-    "required": [
-      "ActivityType"
-    ]
+    "required": ["ActivityType"]
   },
   "then": {
     "anyOf": [
@@ -24,10 +22,7 @@
       },
       {
         "dependencies": {
-          "ActivityType": [
-            "LaboratoryName",
-            "ResultAnalyticalMethodName"
-          ]
+          "ActivityType": ["LaboratoryName", "ResultAnalyticalMethodName"]
         }
       }
     ]

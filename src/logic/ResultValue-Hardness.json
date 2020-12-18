@@ -2,11 +2,7 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": [
-          "Hardness",
-          "Hardness, total by calculation",
-          "Total hardness"
-        ]
+        "enum": ["Hardness", "Hardness, total by calculation", "Total hardness"]
       }
     },
     "required": ["CharacteristicName"]

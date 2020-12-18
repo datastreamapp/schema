@@ -2,12 +2,6 @@
   "title": "Result Status",
   "description": "",
   "type": "string",
-  "enum": [
-    "Accepted",
-    "Final",
-    "Preliminary",
-    "Rejected",
-    "Validated"
-  ],
+  "enum": ["Accepted", "Final", "Preliminary", "Rejected", "Validated"],
   "maxLength": 11
 }

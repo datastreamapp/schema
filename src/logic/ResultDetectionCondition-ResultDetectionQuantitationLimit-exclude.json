@@ -2,20 +2,19 @@
   "if": {
     "properties": {
       "ResultDetectionCondition": {
-        "enum": [
-          "Detected Not Quantified",
-          "Not Detected"
-        ]
+        "enum": ["Detected Not Quantified", "Not Detected"]
       }
     },
-    "required": [
-      "ResultDetectionCondition"
-    ]
+    "required": ["ResultDetectionCondition"]
   },
   "then": {
     "propertyNames": {
       "not": {
-        "enum": ["ResultDetectionQuantitationLimitType","ResultDetectionQuantitationLimitMeasure","ResultDetectionQuantitationLimitUnit"]
+        "enum": [
+          "ResultDetectionQuantitationLimitType",
+          "ResultDetectionQuantitationLimitMeasure",
+          "ResultDetectionQuantitationLimitUnit"
+        ]
       }
     }
   }
