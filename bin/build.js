@@ -55,6 +55,7 @@ const process = async (src, dist, minify = false) => {
 
   const validate = ajv.compile(schema)
   const code = standaloneCode(ajv, validate)
+  ajv.removeSchema()
 
   await writeFile(path.join(__dirname, `/../dist/${dist}/index.js`), code, {encoding: 'utf8'})
 }

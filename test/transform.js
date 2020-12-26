@@ -13,7 +13,9 @@ const ajv = new Ajv({
 });
 require('ajv-keywords')(ajv, ['transform'])
 const validatePrimary = ajv.compile(schemaPrimary);
+ajv.removeSchema()
 const validateLegacy = ajv.compile(schemaLegacy);
+ajv.removeSchema()
 
 describe('DataStream Schema', function () {
 
@@ -49,7 +51,7 @@ describe('DataStream Schema', function () {
       "LaboratorySampleID":"101010011110",
       "AnalysisStartDate":"2018-02-23",
       "AnalysisStartTime":"13:15:00",
-      "AnalysisStartTimeZone":"-0600"
+      "AnalysisStartTimeZone":"-06:00"
     })
     expect(valid).to.equal(true)
     done()
@@ -87,7 +89,7 @@ describe('DataStream Schema', function () {
       "LaboratorySampleID":"101010011110",
       "AnalysisStartDate":"2018-02-23",
       "AnalysisStartTime":"13:15:00",
-      "AnalysisStartTimeZone":"-0600"
+      "AnalysisStartTimeZone":"-06:00"
     })
     expect(valid).to.equal(true)
     done()

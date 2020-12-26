@@ -15,6 +15,7 @@ const ajv = new Ajv({
 })
 require('ajv-keywords')(ajv, ['transform'])
 const validate = ajv.compile(schema)
+ajv.removeSchema()
 // End Manual
 
 const checkProperty = (errors, keyword, property) => {
