@@ -2,6 +2,7 @@ const util = require('util')
 const path = require('path')
 const fs = require('fs')
 
+const version = require('package.json').version
 const $RefParser = require('json-schema-ref-parser')
 const Ajv = require('ajv')
 const pack = require('ajv-pack')
@@ -23,6 +24,7 @@ const process = async (src, dist, minify = false) => {
   let schema = {}
   try {
     schema = await $RefParser.dereference(__dirname + `/../src/${src}.json`)
+    schema.description = schema.description.replace('{version}', version)
   } catch(e) {
     console.error(e, e.toJSON())
   }
