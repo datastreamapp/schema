@@ -2,10 +2,10 @@ const util = require('util')
 const path = require('path')
 const fs = require('fs')
 
-const version = require('package.json').version
 const $RefParser = require('json-schema-ref-parser')
 const Ajv = require('ajv')
 const pack = require('ajv-pack')
+const version = require('../package.json').version
 
 const ajv = new Ajv({
   v5: true,
