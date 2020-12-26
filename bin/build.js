@@ -15,7 +15,6 @@ const ajv = new Ajv({
   useDefaults: true,
   sourceCode: true    // this option is required
 })
-
 const writeFile = util.promisify(fs.writeFile)
 
 console.log('Compile: JSON Schema & CSV Template')
@@ -49,6 +48,7 @@ const process = async (src, dist, minify = false) => {
 
   const validate = ajv.compile(schema)
   const code = pack(ajv, validate)
+  ajv.removeSchema()
 
   await Promise.all([
     writeFile(__dirname + `/../dist/${dist}/index.js`, code, {encoding: 'utf8'}),

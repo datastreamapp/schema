@@ -25,9 +25,13 @@
         ]
       }
     },
-    "required": ["CharacteristicName"]
+    "required": [
+      "CharacteristicName"
+    ]
   },
   "then": {
-    "required": ["MethodSpeciation"]
+    "required": [
+      "MethodSpeciation"
+    ]
   }
 }

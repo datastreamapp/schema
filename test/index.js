@@ -15,6 +15,7 @@ const ajv = new Ajv({
 })
 require('ajv-keywords')(ajv, ['transform'])
 const validate = ajv.compile(schema)
+ajv.removeSchema()
 // End Manual
 
 const checkProperty = (errors, keyword, property) => {
@@ -91,7 +92,7 @@ describe('DataStream Schema', function () {
       'LaboratorySampleID': '101010011110',
       'AnalysisStartDate': '2018-02-23',
       'AnalysisStartTime': '13:15:00',
-      'AnalysisStartTimeZone': '-0600'
+      'AnalysisStartTimeZone': '-06:00'
     })
     //console.log(validate.errors)
     expect(valid).to.equal(true)
@@ -337,7 +338,43 @@ describe('DataStream Schema', function () {
 
   it('Should validate wrong time', function (done) {
     const valid = validate({
-      'ActivityStartTime': '9:15.00'
+      'ActivityStartTime': '9:15.00',
+      'ActivityEndTime': '13:15.00.000',
+      'AnalysisStartTime': '2.15'
+    })
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(3)
+    done()
+  })
+
+  it('Should validate timezone', function (done) {
+    let valid = validate({
+      'AnalysisStartTimeZone': 'Z'
+    })
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+
+    valid = validate({
+      'AnalysisStartTimeZone': '+02:15'
+    })
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+
+    valid = validate({
+      'AnalysisStartTimeZone': '-02:15'
+    })
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+    done()
+  })
+
+  it('Should validate wrong timezone', function (done) {
+    let valid = validate({
+      'AnalysisStartTimeZone': 'z'
+    })
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    valid = validate({
+      'AnalysisStartTimeZone': '9:45'
+    })
+    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    valid = validate({
+      'AnalysisStartTimeZone': '-00:00:00'
     })
     expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
     done()
