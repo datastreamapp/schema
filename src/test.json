@@ -1,0 +1,136 @@
+{
+  "$id": "http://datastream.org/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataStream Schema",
+  "description": "Water Quality Data Schema based on WQX. Version: {version}",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "DatasetName": {
+      "$ref": "./definitions.json#/DatasetName"
+    },
+    "MonitoringLocationID": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
+    },
+    "MonitoringLocationName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
+      "transform": ["trim"],
+      "minLength": 1
+    },
+    "MonitoringLocationLatitude": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
+    },
+    "MonitoringLocationLongitude": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
+    },
+    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "MonitoringLocationType": {
+      "$ref": "./values/MonitoringLocationType.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ActivityType": {
+      "$ref": "./values/ActivityType.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ActivityMediaName": {
+      "$ref": "./values/ActivityMediaName.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ActivityStartDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "ActivityStartTime": {
+      "$ref": "./definitions.json#/time"
+    },
+    "ActivityEndDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "ActivityEndTime": {
+      "$ref": "./definitions.json#/time"
+    },
+    "ActivityDepthHeightMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
+    },
+    "ActivityDepthHeightUnit": {
+      "$ref": "./values/MeasurementUnit.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "SampleCollectionEquipmentName": {
+      "$ref": "./values/SampleCollectionEquipmentName.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "CharacteristicName": {
+      "$ref": "./values/CharacteristicName.test.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "MethodSpeciation": {
+      "$ref": "./values/MethodSpeciation.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultSampleFraction": {
+      "$ref": "./values/ResultSampleFraction.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultValue": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
+    },
+    "ResultUnit": {
+      "$ref": "./values/MeasurementUnit.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultValueType": {
+      "$ref": "./values/ResultValueType.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultDetectionCondition": {
+      "$ref": "./values/ResultDetectionCondition.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultDetectionQuantitationLimitMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
+    },
+    "ResultDetectionQuantitationLimitUnit": {
+      "$ref": "./values/MeasurementUnit.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultDetectionQuantitationLimitType": {
+      "$ref": "./values/ResultDetectionQuantitationLimitType.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultStatusID": {
+      "$ref": "./values/ResultStatusID.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultComment": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
+    },
+    "ResultAnalyticalMethodID": {
+      "$ref": "./definitions.json#/ResultAnalyticalMethodID"
+    },
+    "ResultAnalyticalMethodContext": {
+      "$ref": "./values/ResultAnalyticalMethodContext.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "ResultAnalyticalMethodName": {
+      "$ref": "./definitions.json#/ResultAnalyticalMethodName"
+    },
+    "AnalysisStartDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "AnalysisStartTime": {
+      "$ref": "./definitions.json#/time"
+    },
+    "AnalysisStartTimeZone": {
+      "$ref": "./definitions.json#/timezone"
+    },
+    "LaboratoryName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
+    },
+    "LaboratorySampleID": {
+      "$ref": "./definitions.json#/LaboratorySampleID"
+    }
+  }
+}
