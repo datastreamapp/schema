@@ -1,22 +1,6 @@
 const expect = require('chai').expect
 
-const schema = require('../dist/json-schema/index.json')
-//const validate = require('../dist/validate')
-
-// Start Manual
-const Ajv = require('ajv')
-
-const ajv = new Ajv({
-  v5: true,
-  format: 'full',
-  coerceTypes: true,
-  allErrors: true,
-  useDefaults: true
-})
-require('ajv-keywords')(ajv, ['transform'])
-const validate = ajv.compile(schema)
-ajv.removeSchema()
-// End Manual
+const validate = require('../dist/json-schema')
 
 const checkProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
@@ -38,7 +22,7 @@ const checkProperty = (errors, keyword, property) => {
 
 describe('Special Logic Cases', function () {
 
-  // #/allOf/5
+  // #/allOf/6
   it('Should prevent Dissolved oxygen (DO) in %', function (done) {
 
     // TODO will need custom error message
@@ -47,12 +31,13 @@ describe('Special Logic Cases', function () {
       'ResultValue': '1',
       'ResultUnit': '%'
     })
+    console.log(validate.errors)
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
     done()
   })
 
-  // #/allOf/6
+  // #/allOf/7
   it('Dissolved oxygen saturation should not allow negatives', function (done) {
 
     const valid = validate({
@@ -60,6 +45,7 @@ describe('Special Logic Cases', function () {
       'ResultValue': '-2',
       'ResultUnit': '%'
     })
+    console.log(validate.errors)
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(true)
     done()

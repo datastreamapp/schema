@@ -12,6 +12,7 @@ const ajv = new Ajv({
   coerceTypes: true,
   allErrors: true,
   useDefaults: "empty",
+  loopEnum: 500,
   code: {
     source: true
   }
@@ -66,7 +67,6 @@ const csv = async () => {
   await writeFile(path.join(__dirname, `/../dist/csv/headers.csv`), csv, {encoding: 'utf8'})
 }
 
-//csv()
-// process('primary', 'json-schema', true)
-// process('legacy', 'json-schema-legacy', true)
-process('test', 'json-schema', true)
+csv()
+process('primary', 'json-schema', true)
+process('legacy', 'json-schema-legacy', true)

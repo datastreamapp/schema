@@ -1,21 +1,7 @@
 const expect = require('chai').expect
 
-const schemaPrimary = require('../dist/json-schema/index.json')
-const schemaLegacy = require('../dist/json-schema-legacy/index.json')
-const Ajv = require('ajv');
-
-const ajv = new Ajv({
-  v5: true,
-  format:'full',
-  coerceTypes: true,
-  allErrors: true,
-  useDefaults: true
-});
-require('ajv-keywords')(ajv, ['transform'])
-const validatePrimary = ajv.compile(schemaPrimary);
-ajv.removeSchema()
-const validateLegacy = ajv.compile(schemaLegacy);
-ajv.removeSchema()
+const validatePrimary = require('../dist/json-schema')
+const validateLegacy = require('../dist/json-schema-legacy')
 
 describe('DataStream Schema', function () {
 

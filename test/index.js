@@ -1,22 +1,7 @@
 const expect = require('chai').expect
 
 const schema = require('../dist/json-schema/index.json')
-//const validate = require('../dist/validate')
-
-// Start Manual
-const Ajv = require('ajv')
-
-const ajv = new Ajv({
-  v5: true,
-  format: 'full',
-  coerceTypes: true,
-  allErrors: true,
-  useDefaults: true
-})
-require('ajv-keywords')(ajv, ['transform'])
-const validate = ajv.compile(schema)
-ajv.removeSchema()
-// End Manual
+const validate = require('../dist/json-schema')
 
 const checkProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
