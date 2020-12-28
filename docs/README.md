@@ -15,7 +15,7 @@
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/l/schema.svg" alt="npm license" /></a>-->
 </p>
 
-## DataStream 
+## DataStream
 
 DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 9 million water quality observations have been published across DataStream’s three regional platforms (Mackenzie DataStream,  Lake Winnipeg DataStream, and Atlantic DataStream) by watershed groups, Indigenous organizations, researchers and governments at all levels.
 
@@ -63,7 +63,7 @@ DOI                          | Auto-generated | Digital Object Identifier (assig
 Bounding Box                 | Auto-generated | Geographic area covered by dataset 
 
 ## Special Case Tests
-In addition to our schema enforcing allowed values the column conditional logic; we have included additional check for common errors.
+In addition to our schema enforcing allowed values the column conditional logic; we have included additional check for common errors to the frontend flavour of our schema.
 
 - `Dissolved oxygen (DO)` should not be in `%`
 - `Dissolved oxygen saturation` should not be less than `0%`
@@ -80,9 +80,10 @@ Alternately, you can build it from the source to include in your project.
 # Public
 $ npm i
 $ npm run build
+$ cat dist/json-schema/index.json
 
 # Private
-$ npm i @datastream/schema
+$ npm i @gordonfn/schema
 ```
 
 ## Use
@@ -98,7 +99,7 @@ if (!valid) console.error(validate.errors)
 ```
 
 ### Schema Flavours
-Supports JSON Schema Draft 2019-09 Specification in non-strict mode.
+Supports JSON Schema Draft 2019-09 Specification in non-strict mode. Strict mode removes `if`, `then`, `additionalProperties` from the schema.
 
 - `primary`: This includes only JSON schema specification supported parameters
 - `frontend`: Includes value coercion and supplementary conditional checks
@@ -122,14 +123,16 @@ If you wish to comment on the schema please [open an issue](https://github.com/g
 
 You can also email us at <datastream@gordonfn.org> or visit us at:
 
-* [Atlantic DataStream](https://atlanticdatastream.ca/)
-* [Lake Winnipeg DataStream](https://lakewinnipegdatastream.ca/)
-* [Mackenzie DataStream](https://mackenziedatastream.ca/)
+* [DataStream](https://datastream.org)
+* [Atlantic DataStream](https://atlanticdatastream.ca)
+* [Great Lakes DataStream](https://greatlakesdatastream.ca) (Coming Fall 2021)
+* [Lake Winnipeg DataStream](https://lakewinnipegdatastream.ca)
+* [Mackenzie DataStream](https://mackenziedatastream.ca)
 
 ### Development
 ```bash
-brew install jq nvm
-nvm get 10
+brew install nvm
+nvm get 12
 npm i
 ```
 
