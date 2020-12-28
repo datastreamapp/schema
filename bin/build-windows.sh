@@ -4,7 +4,8 @@ mkdir .\\bin\\template
 
 mkdir -p .\\dist\\csv
 mkdir -p .\\dist\\json-schema
-mkdir -p .\\dist\\json-schema-legacy
+mkdir -p .\\dist\\json-schema\\frontend
+mkdir -p .\\dist\\json-schema\\backend
 
 node .\\bin\\build-values.js
 node .\\bin\\build-logic.js

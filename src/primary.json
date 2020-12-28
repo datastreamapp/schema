@@ -14,7 +14,6 @@
     },
     "MonitoringLocationName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
-      "transform": ["trim"],
       "minLength": 1
     },
     "MonitoringLocationLatitude": {
@@ -24,20 +23,16 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
     },
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json"
     },
     "MonitoringLocationType": {
-      "$ref": "./values/MonitoringLocationType.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/MonitoringLocationType.primary.json"
     },
     "ActivityType": {
-      "$ref": "./values/ActivityType.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ActivityType.primary.json"
     },
     "ActivityMediaName": {
-      "$ref": "./values/ActivityMediaName.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ActivityMediaName.primary.json"
     },
     "ActivityStartDate": {
       "$ref": "./definitions.json#/date"
@@ -173,28 +168,13 @@
       "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
-      "$ref": "logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-include.json"
+      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-include.json"
     },
     {
-      "$ref": "logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-exclude.json"
+      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-exclude.json"
     },
     {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
-    },
-    {
-      "$ref": "./logic/ResultValue-DissolvedOxygen.json"
-    },
-    {
-      "$ref": "./logic/ResultValue-DissolvedOxygenSaturation.json"
-    },
-    {
-      "$ref": "./logic/ResultValue-Hardness.json"
-    },
-    {
-      "$ref": "./logic/ResultValue-pH.json"
-    },
-    {
-      "$ref": "./logic/ResultValue-Temperature.json"
     }
   ]
 }

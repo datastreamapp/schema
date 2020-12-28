@@ -3,12 +3,9 @@
     "properties": {
       "CharacteristicName": {
         "enum": ["pH"]
-      },
-      "ResultUnit": {
-        "enum": ["None"]
       }
     },
-    "required": ["CharacteristicName", "ResultUnit"]
+    "required": ["CharacteristicName", "ResultValue"]
   },
   "then": {
     "properties": {

@@ -1,12 +1,12 @@
 const expect = require('chai').expect
 
-const validatePrimary = require('../dist/json-schema')
-const validateLegacy = require('../dist/json-schema-legacy')
+const validateFrontend = require('../dist/json-schema/frontend')
+const validateBackend = require('../dist/json-schema/backend')
 
 describe('DataStream Schema', function () {
 
-  it('Should transform values (primary)', function (done) {
-    const valid = validatePrimary({
+  it('Should transform values (frontend)', function (done) {
+    const valid = validateFrontend({
       "DatasetName":"Test",
       "MonitoringLocationID":"A1",
       "MonitoringLocationName":"A1 Test",
@@ -43,8 +43,8 @@ describe('DataStream Schema', function () {
     done()
   })
 
-  it('Should transform values (legacy)', function (done) {
-    const valid = validateLegacy({
+  it('Should transform values (backend)', function (done) {
+    const valid = validateBackend({
       "DatasetName":"Test",
       "MonitoringLocationID":"A1",
       "MonitoringLocationName":"A1 Test",

@@ -7,25 +7,11 @@ const $RefParser = require('json-schema-ref-parser')  // TODO remove if possible
 const Ajv = require('ajv').default
 const standaloneCode = require("ajv/dist/standalone").default
 
-const ajv = new Ajv({
-  strict: false,  // require `if`,`then`,`else`, `additionalProperties`
-  coerceTypes: true,
-  allErrors: true,
-  useDefaults: "empty",
-  loopEnum: 500,
-  code: {
-    source: true
-  }
-})
-require('ajv-formats')(ajv, ['date'])
-//require('ajv-formats-draft2019')(ajv, [])
-require('ajv-keywords/dist/keywords/transform')(ajv)
-
 const writeFile = util.promisify(fs.writeFile)
 
 console.log('Compile: JSON Schema & CSV Template')
 
-const process = async (src, dist, minify = false) => {
+const process = async (src, dist, minify = false, ajv) => {
   let schema = {}
   try {
     schema = await $RefParser.dereference(__dirname + `/../src/${src}.json`)
@@ -68,5 +54,51 @@ const csv = async () => {
 }
 
 csv()
-process('primary', 'json-schema', true)
-process('legacy', 'json-schema-legacy', true)
+
+// Primary
+const ajvPrimary = new Ajv({
+  strict: false,
+  coerceTypes: false,
+  allErrors: true,
+  useDefaults: "empty",
+  loopEnum: 1500,
+  code: {
+    source: true
+  }
+})
+require('ajv-formats')(ajvPrimary, ['date'])
+//require('ajv-formats-draft2019')(ajvPrimary, [])
+
+process('primary', 'json-schema', true, ajvPrimary)
+
+// Frontend
+const ajvFrontend = new Ajv({
+  strict: false,
+  coerceTypes: true,
+  allErrors: true,
+  useDefaults: "empty",
+  loopEnum: 1500,
+  code: {
+    source: true
+  }
+})
+require('ajv-formats')(ajvFrontend, ['date'])
+//require('ajv-formats-draft2019')(ajvFrontend, [])
+require('ajv-keywords/dist/keywords/transform')(ajvFrontend)
+process('frontend', 'json-schema/frontend', true, ajvFrontend)
+
+// Backend
+const ajvBackend = new Ajv({
+  strict: false,
+  coerceTypes: true,
+  allErrors: true,
+  useDefaults: "empty",
+  loopEnum: 1500,
+  code: {
+    source: true
+  }
+})
+require('ajv-formats')(ajvBackend, ['date'])
+//require('ajv-formats-draft2019')(ajvBackend, [])
+require('ajv-keywords/dist/keywords/transform')(ajvBackend)
+process('backend', 'json-schema/backend', true, ajvBackend)

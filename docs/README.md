@@ -89,42 +89,24 @@ $ npm i @datastream/schema
 ### CSV Template
 The `csv` template follows `R` import/export best practices.
 
-### NodeJS
+### JavaScript
 ```javascript
-const Ajv = require('ajv');
-const jsonschema = require('@datastream/schema/json-schema/index.json');
-
-const ajv = new Ajv({
- schemaId: 'auto',
- format: 'full',
- coerceTypes: true,
- allErrors: true,
- useDefaults: true
-})
-require('ajv-keywords')(ajv, ['transform']); // Optional: `transform` removes strictness surrounding value character case.
-const validate = ajv.compile(jsonschema);
-
-let data = {}; // must not be const to allow coerce of types
-
-// like data will be coming from csv and will have blanks in the form of empty string
-Object.keys(data).forEach((key) => (data[key] == null || data[key] === '') && delete data[key]);
-
+import validate from '@gordonfn/schema'
+const data = {}; // Single row of data
 const valid = validate(data);
+if (!valid) console.error(validate.errors)
 ```
 
-### Browser - WIP
-```html
-<script src=""></script>
-```
-```js
-const validate = require('@datastream/schema/json-schema');
-let data = {}; // must not be const to allow coerce of types
-const valid = validate(data);
-```
+### Schema Flavours
+Supports JSON Schema Draft 2019-09 Specification in non-strict mode.
+
+- `primary`: This includes only JSON schema specification supported parameters
+- `frontend`: Includes value coercion and supplementary conditional checks
+- `backend`: Includes all possible allowed values, value coercion and no conditional logic.
 
 ## Publish
 ```bash
-# chagne version in package.json
+# change version in package.json
 npm test
 cd dist
 npm publish

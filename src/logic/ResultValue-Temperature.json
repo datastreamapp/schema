@@ -20,7 +20,7 @@
         "enum": ["deg C"]
       }
     },
-    "required": ["CharacteristicName", "ResultUnit"]
+    "required": ["CharacteristicName", "ResultUnit", "ResultValue"]
   },
   "then": {
     "properties": {

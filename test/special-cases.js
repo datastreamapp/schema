@@ -1,6 +1,40 @@
 const expect = require('chai').expect
 
-const validate = require('../dist/json-schema')
+const validate = require('../dist/json-schema/frontend')
+
+const defaultObject = {
+  //"DatasetName":"Test",
+  "MonitoringLocationID":"A1",
+  "MonitoringLocationName":"A1 Test",
+  "MonitoringLocationLatitude":"51.0486",
+  "MonitoringLocationLongitude":"-114.0708",
+  "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
+  "MonitoringLocationType":"ocean",
+  "ActivityType":"Field Msr/Obs",
+  "ActivityMediaName":"surface Water",
+  "ActivityDepthHeightMeasure":"-34",
+  "ActivityDepthHeightUnit":"m",
+  "SampleCollectionEquipmentName":"bucket",
+  "CharacteristicName":"aluminum",
+  "MethodSpeciation":"as B",
+  "ResultSampleFraction":"Dissolved",
+  "ResultValue":"99.99",
+  "ResultUnit":"#/100ml",
+  'ResultValueType':'Actual',
+  "ResultStatusID":"Accepted",
+  "ResultComment":"None at this time",
+  "ResultAnalyticalMethodID":"1",
+  "ResultAnalyticalMethodContext":"APHA",
+  "ActivityStartDate":"2018-02-23",
+  "ActivityStartTime":"13:15:00",
+  "ActivityEndDate":"2018-02-23",
+  "ActivityEndTime":"13:15:00",
+  "LaboratoryName":"Farrell Labs",
+  "LaboratorySampleID":"101010011110",
+  "AnalysisStartDate":"2018-02-23",
+  "AnalysisStartTime":"13:15:00",
+  "AnalysisStartTimeZone":"-06:00"
+}
 
 const checkProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
@@ -31,21 +65,19 @@ describe('Special Logic Cases', function () {
       'ResultValue': '1',
       'ResultUnit': '%'
     })
-    console.log(validate.errors)
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
     done()
   })
 
   // #/allOf/7
-  it('Dissolved oxygen saturation should not allow negatives', function (done) {
+  it('Dissolved oxygen saturation should >= 0', function (done) {
 
-    const valid = validate({
+    const valid = validate(Object.assign({}, defaultObject, {
       'CharacteristicName': 'Dissolved oxygen saturation',
       'ResultValue': '-2',
       'ResultUnit': '%'
-    })
-    console.log(validate.errors)
+    }))
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(true)
     done()
@@ -66,7 +98,7 @@ describe('Special Logic Cases', function () {
   })
 
   // #/allOf/8
-  it('pH should be in range (min)', function (done) {
+  it('pH should be >= 0', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'pH',

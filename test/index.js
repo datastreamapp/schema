@@ -1,7 +1,7 @@
 const expect = require('chai').expect
 
 const schema = require('../dist/json-schema/index.json')
-const validate = require('../dist/json-schema')
+const validate = require('../dist/json-schema/frontend')
 
 const checkProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
@@ -79,7 +79,7 @@ describe('DataStream Schema', function () {
       'AnalysisStartTime': '13:15:00',
       'AnalysisStartTimeZone': '-06:00'
     })
-    //console.log(validate.errors)
+    console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })
