@@ -2,6 +2,7 @@
   "2,5-Dibromobenzoic Acid",
   "4,4'-Dibromobiphenyl",
   "Silver Dioxide",
+  "Apparent Colour",
   "C4-Fluorenes",
   "Silica, reactive",
   "Residue",
@@ -27,5 +28,6 @@
   "Particulate inorganic matter",
   "Particulate organic matter",
   "Langelier Saturation Index",
-  ".gamma.-Hexachlorocyclohexane"
+  ".gamma.-Hexachlorocyclohexane",
+  "Apparent Colour"
 ]

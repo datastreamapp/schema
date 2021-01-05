@@ -19,6 +19,8 @@
   "Total Particulate Phosphorus",
   "Particulate Inorganic Phosphorus",
 
+  "Apparent Colour",
+
   "USDA Soil Texture Classification",
   "Wind Condition",
   ".* \\(text\\)",
