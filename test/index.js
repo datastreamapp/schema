@@ -8,7 +8,7 @@ const checkProperty = (errors, keyword, property) => {
     const error = validate.errors[i]
     if (error.keyword !== keyword) continue
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
-    //else if (keyword === 'enum' && error.params.allowedValues.length && error.dataPath === `.${property}`) return true
+    else if (keyword === 'enum' && error.params.allowedValues.length && error.dataPath === `/${property}`) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
     else if (keyword === 'propertyNames' && error.params.propertyName === property) return true
     //else if(keyword === 'if' && error.params.failingKeyword === 'then' && error.schemaPath === property ) return true
@@ -114,31 +114,13 @@ describe('DataStream Schema', function () {
       expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
       done()
     })
+
   })
 
   describe('Should require allOf', function () {
 
     // allOf/0
-    it('NOT ResultValue AND NOT ResultDetectionCondition', function (done) {
-      const valid = validate({})
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
-      expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(true)
-      done()
-    })
-    it('ResultValue AND ResultDetectionCondition', function (done) {
-      const valid = validate({
-        'ResultValue': 1,
-        'ResultDetectionCondition': 'Not Detected'
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'oneOf', 0)).to.equal(true)
-      expect(checkProperty(validate.errors, 'oneOf', 1)).to.equal(true)
-      done()
-    })
-
-    // allOf/1
-    it('CharacteristicName AND MedthodSpeciation', function (done) {
+    it('CharacteristicName AND MethodSpeciation', function (done) {
       const valid = validate({
         'CharacteristicName': 'Nitrate'
       })
@@ -147,7 +129,7 @@ describe('DataStream Schema', function () {
       done()
     })
 
-    // allOf/2
+    // allOf/1
     it('CharacteristicName AND ResultSampleFraction', function (done) {
       const valid = validate({
         'CharacteristicName': 'Silver'
@@ -158,16 +140,37 @@ describe('DataStream Schema', function () {
     })
 
     // allOf/3
-    it('ResultDetectionCondition false', function (done) {
-      const valid = validate({
-        'ResultDetectionCondition': ''
-      })
+    it('NOT ResultValue AND NOT ResultDetectionCondition, ResultDetectionQuantitationLimit is optional', function (done) {
+      const valid = validate({})
       expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
+      expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(true)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
       expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
       done()
     })
+    it('ResultValue AND ResultDetectionCondition, ResultDetectionQuantitationLimit is optional', function (done) {
+      const valid = validate({
+        'ResultValue': 1,
+        'ResultDetectionCondition': 'Not Reported'
+      })
+      expect(valid).to.equal(false)
+      expect(checkProperty(validate.errors, 'enum', 'ResultValue')).to.equal(true)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionCondition')).to.equal(true)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(false)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
+      done()
+    })
+
+    // allOf/4
 
     it('ResultDetectionCondition = Present Above Quantification Limit', function (done) {
       const valid = validate({
@@ -182,6 +185,7 @@ describe('DataStream Schema', function () {
 
     it('ResultDetectionCondition = Present Below Quantification Limit', function (done) {
       const valid = validate({
+        'ResultValue':1,
         'ResultDetectionCondition': 'Present Below Quantification Limit'
       })
       expect(valid).to.equal(false)
@@ -193,50 +197,31 @@ describe('DataStream Schema', function () {
 
     // allOf/4
     it('ResultDetectionCondition = Not Detected', function (done) {
-      // pass
       let valid = validate({
-        'ResultDetectionCondition': 'Not Detected',
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
-
-      // fail
-      valid = validate({
         'ResultDetectionCondition': 'Not Detected',
         'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
         'ResultDetectionQuantitationLimitMeasure': 0,
         'ResultDetectionQuantitationLimitUnit': 'None'
       })
       expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+
       done()
     })
 
     it('ResultDetectionCondition = Detected Not Quantified', function (done) {
-      // pass
       let valid = validate({
-        'ResultDetectionCondition': 'Detected Not Quantified',
-      })
-      expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
-
-      // fail
-      valid = validate({
         'ResultDetectionCondition': 'Detected Not Quantified',
         'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
         'ResultDetectionQuantitationLimitMeasure': 0,
         'ResultDetectionQuantitationLimitUnit': 'None'
       })
       expect(valid).to.equal(false)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-      expect(checkProperty(validate.errors, 'propertyNames', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+      expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
 
       done()
     })

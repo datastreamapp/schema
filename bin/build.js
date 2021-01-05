@@ -3,7 +3,7 @@ const path = require('path')
 const fs = require('fs')
 
 const version = require('../package.json').version
-const $RefParser = require('json-schema-ref-parser')  // TODO remove if possible, may be built into ajv now
+const $RefParser = require('json-schema-ref-parser')
 const Ajv = require('ajv').default
 const standaloneCode = require("ajv/dist/standalone").default
 
@@ -12,9 +12,9 @@ const writeFile = util.promisify(fs.writeFile)
 console.log('Compile: JSON Schema & CSV Template')
 
 const process = async (src, dist, minify = false, ajv) => {
-  let schema = {}
+  let schema = {} // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
   try {
-    schema = await $RefParser.dereference(__dirname + `/../src/${src}.json`)
+    schema = await $RefParser.dereference(__dirname + `/../src/${src}.json`)  // deprecate if/when possible
     schema.description = schema.description.replace('{version}', version)
   } catch(e) {
     console.error(e, e.toJSON())

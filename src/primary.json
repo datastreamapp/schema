@@ -152,26 +152,19 @@
   },
   "allOf": [
     {
-      "oneOf": [
-        {
-          "required": ["ResultValue"]
-        },
-        {
-          "required": ["ResultDetectionCondition"]
-        }
-      ]
-    },
-    {
       "$ref": "./logic/CharacteristicName-MethodSpeciation.json"
     },
     {
       "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
-      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-include.json"
+      "$ref": "./logic/ResultDetectionCondition-ResultValue.json"
     },
     {
-      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-exclude.json"
+      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below.json"
+    },
+    {
+      "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect.json"
     },
     {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"

@@ -1,0 +1,28 @@
+{
+  "if": {
+    "properties": {
+      "ResultDetectionCondition": {
+        "enum": [
+          "Detected Not Quantified",
+          "Not Detected"
+        ]
+      }
+    },
+    "required": [
+      "ResultDetectionCondition"
+    ]
+  },
+  "then": {
+    "properties": {
+      "ResultDetectionQuantitationLimitType": {
+        "enum": [null, ""]
+      },
+      "ResultDetectionQuantitationLimitMeasure": {
+        "enum": [null, ""]
+      },
+      "ResultDetectionQuantitationLimitUnit": {
+        "enum": [null, ""]
+      }
+    }
+  }
+}
