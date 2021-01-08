@@ -146,6 +146,7 @@ columns.forEach(col => {
   const retired = retire(col, object.enum)
 
   object.enum = additions(col, object.enum)
+  object.maxLength = Math.max(...(object.enum.map(el => el.length)))  // catch any additions that may be longer
 
   fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
 
