@@ -2,6 +2,8 @@ const expect = require('chai').expect
 
 const schema = require('../dist/json-schema/index.json')
 const validate = require('../dist/json-schema/frontend')
+const validateStrict = require('../dist/json-schema')
+const validateBackend = require('../dist/json-schema/backend')
 
 const checkProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {
@@ -79,7 +81,7 @@ describe('DataStream Schema', function () {
       'AnalysisStartTime': '13:15:00',
       'AnalysisStartTimeZone': '-06:00'
     })
-    console.log(validate.errors)
+    //console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })
@@ -316,37 +318,104 @@ describe('DataStream Schema', function () {
     done()
   })
 
-  it('Should validate timezone', function (done) {
-    let valid = validate({
+  it('Should validate timezone (strict)', function (done) {
+    let valid = validateStrict({
       'AnalysisStartTimeZone': 'Z'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
 
-    valid = validate({
+    valid = validateStrict({
       'AnalysisStartTimeZone': '+02:15'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
 
-    valid = validate({
+    valid = validateStrict({
       'AnalysisStartTimeZone': '-02:15'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+
     done()
   })
 
-  it('Should validate wrong timezone', function (done) {
-    let valid = validate({
+  it('Should validate wrong timezone (strict)', function (done) {
+    let valid = validateStrict({
       'AnalysisStartTimeZone': 'z'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
-    valid = validate({
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    valid = validateStrict({
       'AnalysisStartTimeZone': '9:45'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
-    valid = validate({
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    valid = validateStrict({
       'AnalysisStartTimeZone': '-00:00:00'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+
+    valid = validateStrict({
+      'AnalysisStartTimeZone': '-0215'
+    })
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+
+    valid = validateStrict({
+      'AnalysisStartTimeZone': '-215'
+    })
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+
+    valid = validateStrict({
+      'AnalysisStartTimeZone': '-2:15'
+    })
+    expect(validateStrict.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+
+    done()
+  })
+
+  it('Should validate timezone (loose)', function (done) {
+    let valid = validateBackend({
+      'AnalysisStartTimeZone': 'Z'
+    })
+    expect(validateBackend.errors).to.equal(null)
+
+    valid = validateBackend({
+      'AnalysisStartTimeZone': '+02:15'
+    })
+    expect(validateBackend.errors).to.equal(null)
+
+    valid = validateBackend({
+      'AnalysisStartTimeZone': '-02:15'
+    })
+    expect(validateBackend.errors).to.equal(null)
+
+    valid = validateBackend({
+      'AnalysisStartTimeZone': '-0215'
+    })
+    expect(validateBackend.errors).to.equal(null)
+
+    valid = validateBackend({
+      'AnalysisStartTimeZone': '-215'
+    })
+    expect(validateBackend.errors).to.equal(null)
+
+    valid = validateBackend({
+      'AnalysisStartTimeZone': '-2:15'
+    })
+    expect(validateBackend.errors).to.equal(null)
+
+    done()
+  })
+
+  it('Should validate wrong timezone (loose)', function (done) {
+    let valid = validateBackend({
+      'AnalysisStartTimeZone': 'z'
+    })
+    expect(validateBackend.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    valid = validateBackend({
+      'AnalysisStartTimeZone': '9:45'
+    })
+    expect(validateBackend.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
+    valid = validateBackend({
+      'AnalysisStartTimeZone': '-00:00:00'
+    })
+    expect(validateBackend.errors.filter((i) => i.keyword === 'pattern').length).to.equal(1)
     done()
   })
 

@@ -124,7 +124,7 @@
       "$ref": "./definitions.json#/time"
     },
     "AnalysisStartTimeZone": {
-      "$ref": "./definitions.json#/timezone"
+      "$ref": "./definitions.json#/timezone-loose"
     },
     "LaboratoryName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"

@@ -31,7 +31,12 @@
     "pattern": "^(2[0-3]|[01]?[0-9]):[0-5]?[0-9](:[0-5]?[0-9](\\.[0-9]+)?)?$",
     "maxLength": 12
   },
-  "timezone": {
+  "timezone-loose": {
+    "type": "string",
+    "pattern": "^(Z|[+-]([0-9]|0[0-9]|1[0-9]|2[0-4]):?[0-5][0-9])$",
+    "maxLength": 6
+  },
+  "timezone-strict": {
     "type": "string",
     "pattern": "^(Z|[+-](0[0-9]|1[0-9]|2[0-4]):[0-5][0-9])$",
     "maxLength": 6
