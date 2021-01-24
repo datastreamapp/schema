@@ -58,7 +58,7 @@ csv()
 // Primary
 const ajvPrimary = new Ajv({
   strict: false,
-  coerceTypes: false,
+  coerceTypes: true,
   allErrors: true,
   useDefaults: "empty",
   loopEnum: 1500,

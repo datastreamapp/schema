@@ -3,7 +3,7 @@ const expect = require('chai').expect
 const validateFrontend = require('../dist/json-schema/frontend')
 const validateBackend = require('../dist/json-schema/backend')
 
-describe('DataStream Schema', function () {
+describe('Data Coercion', function () {
 
   it('Should transform values (frontend)', function (done) {
     const valid = validateFrontend({
@@ -80,7 +80,6 @@ describe('DataStream Schema', function () {
     expect(valid).to.equal(true)
     done()
   })
-
 
 })
 

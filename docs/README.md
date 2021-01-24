@@ -71,6 +71,9 @@ In addition to our schema enforcing allowed values the column conditional logic;
 - `pH` should be within `0` and `14`
 - `Temperature` should be within `-100 degC` and `100 degC`
 
+## Testing
+We aim to have our test be as robust as possible. This is accomplished by having acceptance and rejection tests.
+
 ## Install
 You can download the compiled DS-WQX schema from above.
 

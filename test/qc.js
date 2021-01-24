@@ -54,12 +54,11 @@ const checkProperty = (errors, keyword, property) => {
   return false
 }
 
-describe('Special Logic Cases', function () {
+describe('Quality Control Checks', function () {
 
   // #/allOf/6
-  it('Should prevent Dissolved oxygen (DO) in %', function (done) {
+  it('Should reject Dissolved oxygen (DO) in %', function (done) {
 
-    // TODO will need custom error message
     const valid = validate({
       'CharacteristicName': 'Dissolved oxygen (DO)',
       'ResultValue': '1',
@@ -69,9 +68,20 @@ describe('Special Logic Cases', function () {
     expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
     done()
   })
+  it('Should accept Dissolved oxygen (DO) in mg/L', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'Dissolved oxygen (DO)',
+      'ResultValue': '1',
+      'ResultUnit': 'mg/L'
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(false)
+    done()
+  })
 
   // #/allOf/7
-  it('Dissolved oxygen saturation should >= 0', function (done) {
+  it('Should reject Dissolved oxygen saturation < 0', function (done) {
 
     const valid = validate(Object.assign({}, defaultObject, {
       'CharacteristicName': 'Dissolved oxygen saturation',
@@ -82,9 +92,20 @@ describe('Special Logic Cases', function () {
     expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(true)
     done()
   })
+  it('Should accept Dissolved oxygen saturation >= 0', function (done) {
+
+    const valid = validate(Object.assign({}, defaultObject, {
+      'CharacteristicName': 'Dissolved oxygen saturation',
+      'ResultValue': '0',
+      'ResultUnit': '%'
+    }))
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(false)
+    done()
+  })
 
   // #/allOf/7
-  it('Hardness should be >= 0', function (done) {
+  it('Should reject Hardness < 0', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'Hardness',
@@ -97,8 +118,21 @@ describe('Special Logic Cases', function () {
     done()
   })
 
+  it('Should accept Hardness >= 0', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'Hardness',
+      'ResultValue': '0',
+      'ResultUnit': 'mg/L'
+    })
+
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(false)
+    done()
+  })
+
   // #/allOf/8
-  it('pH should be >= 0', function (done) {
+  it('Should reject pH below range', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'pH',
@@ -109,7 +143,7 @@ describe('Special Logic Cases', function () {
     expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(true)
     done()
   })
-  it('pH should be in range (max)', function (done) {
+  it('Should reject pH above range', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'pH',
@@ -120,9 +154,20 @@ describe('Special Logic Cases', function () {
     expect(checkProperty(validate.errors, 'maximum', 'ResultValue')).to.equal(true)
     done()
   })
+  it('Should accept pH within range', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'pH',
+      'ResultValue': '7',
+      'ResultUnit': 'None'
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'maximum', 'ResultValue')).to.equal(false)
+    done()
+  })
 
   // #/allOf/9
-  it('Temperature should be in range (min)', function (done) {
+  it('Should reject Temperature below range', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'Temperature',
@@ -133,7 +178,7 @@ describe('Special Logic Cases', function () {
     expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(true)
     done()
   })
-  it('Temperature should be in range (max)', function (done) {
+  it('Should reject Temperature above range', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'Temperature',
@@ -142,6 +187,17 @@ describe('Special Logic Cases', function () {
     })
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'maximum', 'ResultValue')).to.equal(true)
+    done()
+  })
+  it('Should accept Temperature within range', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'Temperature',
+      'ResultValue': '0',
+      'ResultUnit': 'deg C'
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'maximum', 'ResultValue')).to.equal(false)
     done()
   })
 
