@@ -1,7 +1,9 @@
 const fs = require('fs')
 
 const columns = [
-  'MeasurementUnit',
+  'ResultUnit',
+  'ResultDetectionQuantitationLimitUnit',
+  'ActivityDepthHeightUnit',
   'ActivityGroupType',
   'MonitoringLocationHorizontalCoordinateReferenceSystem',
   'MonitoringLocationType',
@@ -20,7 +22,9 @@ const columns = [
 
 // DS to WQX values name mapping
 const wqx = {
-  'MeasurementUnit': 'MeasurementUnit',
+  'ResultUnit': 'MeasurementUnit',
+  'ResultDetectionQuantitationLimitUnit': 'MeasurementUnit',
+  'ActivityDepthHeightUnit': 'MeasurementUnit',
   'MonitoringLocationHorizontalCoordinateReferenceSystem': 'HorizontalReferenceDatum',
   'MonitoringLocationType': 'MonitoringLocationType',
   'ActivityType': 'ActivityType',

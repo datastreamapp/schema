@@ -1,0 +1,11 @@
+{
+  "title": "Measurement Unit",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "m",
+    "cm",
+    "ft"
+  ],
+  "maxLength": 11
+}
