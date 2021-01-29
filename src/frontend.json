@@ -59,13 +59,13 @@
           "$ref": "./definitions.json#/date"
         },
         "ActivityStartTime": {
-          "$ref": "./definitions.json#/time"
+          "$ref": "./definitions.json#/time-loose"
         },
         "ActivityEndDate": {
           "$ref": "./definitions.json#/date"
         },
         "ActivityEndTime": {
-          "$ref": "./definitions.json#/time"
+          "$ref": "./definitions.json#/time-loose"
         },
         "ActivityDepthHeightMeasure": {
           "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
@@ -173,7 +173,7 @@
           "$ref": "./definitions.json#/date"
         },
         "AnalysisStartTime": {
-          "$ref": "./definitions.json#/time"
+          "$ref": "./definitions.json#/time-loose"
         },
         "AnalysisStartTimeZone": {
           "$ref": "./definitions.json#/timezone-loose"

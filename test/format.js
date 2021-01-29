@@ -22,9 +22,9 @@ const checkProperty = (errors, keyword, property) => {
 
 describe('Formatting', function () {
 
+  // TODO update to included strict and loose time format
   it('Should accept time formats', function (done) {
-    let valid = validate({
-
+    validate({
       'ActivityStartTime': '9:15:00',
       'ActivityEndTime': '13:15:00.000',
       'AnalysisStartTime': '2:15'
@@ -34,7 +34,7 @@ describe('Formatting', function () {
   })
 
   it('Should reject time formats', function (done) {
-    let valid = validate({
+    validate({
       'ActivityStartTime': '9:15.00',
       'ActivityEndTime': '13:15.00.000',
       'AnalysisStartTime': '2.15'
