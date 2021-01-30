@@ -38,29 +38,7 @@ DataStream’s open data schema (DS-WQX v1.0) was fully implemented across all r
 The DataStream open data schema will continue to evolve to meet user needs and therefore is subject to various updates over time (e.g. addition of new allowed values). To view the most recent version number and record of changes please see the [DataStream Upload Template](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?usp=sharing).
 
 ## Dataset Metadata
-In addition to the observation-level information in DS-WQX, DataStream uses the following schema for dataset metadata.
-
-Field                        | Mandatory      | Description
------------------------------|----------------|-------------
-Dataset Name                 | Yes            | A short self-explanatory title of the dataset
-Citation                     | Yes            | How the data should be cited if it is used by others 
-Data Steward Email           | Yes            | Email address publically associated with the dataset
-Data Upload Organization     | Yes            | The name of the organization (or researcher) that is uploading the data to DataStream
-Abstract                     | Yes            | A description of the dataset including purpose and nature of monitoring efforts
-Data Collection Organization | Yes            | Name of the organization or other parties responsible for collecting the data
-Data Collection Information  | No             | Information about how the data were collected such as sampling methods, equipment, calibration, QA/QC protocols
-Data Processing              | No             | Description of data cleaning, processing and/or QA/QC that was done to the data
-Funding Sources              | No             | Funders of the monitoring project
-Other Data Sources           | No             | Cite any third party sources of data included in the dataset
-ISO Category                 | Yes            | ISO 19115 Topic Category (dropdown list)
-Keywords                     | No             | Keywords related to the dataset
-Licensing & Attribution      | Yes            | Choose from Attribution License (ODC-By) or Public-Domain Dedication and License (PDDL) or Open Government license 
-Data Disclaimer              | No             | Any additional disclaimer text regarding the data that is not covered in data license
-Date Published               | Auto-generated | Date the dataset is published on DataStream 
-Date Last Updated            | Auto-generated | Date of last update to the dataset on DataStream
-Version Number               | Auto-generated | Version number of the dataset
-DOI                          | Auto-generated | Digital Object Identifier (assigned by DataStream unless a pre-existing DOI for data is entered)
-Bounding Box                 | Auto-generated | Geographic area covered by dataset 
+In addition to the observation-level information in DS-WQX, DataStream uses dataset level metadata. [DataStream Metadata](https://github.com/gordonfn/metadata)
 
 ## Special Case Tests
 In addition to our schema enforcing allowed values the column conditional logic; we have included additional check for common errors to the frontend flavour of our schema.
