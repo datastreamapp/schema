@@ -7,12 +7,16 @@ function onwarn (warning, warn) {
   warn(warning);
 }
 
+// TODO update file paths to all be at root
 export default [{
   input: 'dist/json-schema/index.js',
+  name: 'primary'
 },{
   input: 'dist/json-schema/frontend/index.js',
+  name: 'frontend'
 },{
   input: 'dist/json-schema/backend/index.js',
+  name: 'backend'
 }].map(bundle => ({
   input: bundle.input,
   output: [{
@@ -20,8 +24,9 @@ export default [{
     entryFileNames: '[name].js',
     format: 'cjs'
   },{
-    dir: bundle.input.replace('/index.js', ''),
-    entryFileNames: '[name].mjs',
+    // When included in a browser facing app and using rollup, can't use sub folders
+    dir: 'dist/json-schema',
+    entryFileNames: bundle.name+'.mjs',
     format: 'es'
   }],
   plugins: [
