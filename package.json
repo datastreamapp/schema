@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "prettier-standard 'src/**/*.json'",
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
-    "build": "node ./bin/build.js && node ./bin/build-template.js",
+    "build": "node ./bin/build.js && rollup --config bin/rollup.js  --environment INCLUDE_DEPS,BUILD:production && node ./bin/build-template.js",
     "test": "npm run build && c8 mocha"
   },
   "repository": {
@@ -32,6 +32,8 @@
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
+    "@rollup/plugin-commonjs": "17.1.0",
+    "@rollup/plugin-node-resolve": "11.1.1",
     "ajv": "7.0.2",
     "ajv-formats": "1.5.1",
     "ajv-formats-draft2019": "1.4.3",
@@ -45,6 +47,8 @@
     "lint-staged": "10.5.3",
     "mocha": "7.1.2",
     "prettier-standard-cli": "16.0.4",
+    "rollup": "2.38.4",
+    "rollup-plugin-terser": "7.0.2",
     "wqx": "3.0.3"
   },
   "commitlint": {
