@@ -1,9 +1,5 @@
-//import json from '@rollup/plugin-json'
-// import globals from 'rollup-plugin-node-globals'
 import resolve from '@rollup/plugin-node-resolve'
-// import builtins from 'rollup-plugin-node-builtins'
 import commonjs from '@rollup/plugin-commonjs'
-// import autoNamedExports from 'rollup-plugin-auto-named-exports'
 import {terser} from 'rollup-plugin-terser'
 
 function onwarn (warning, warn) {
@@ -29,16 +25,8 @@ export default [{
     format: 'es'
   }],
   plugins: [
-    //babel(),
-    //json(),
-    //builtins(),	// Polyfill node
-    resolve(/*{
-      mainFields:['module', 'main','browser'],
-      browser:true
-    }*/),	//
-    commonjs(),	// For PapaParse & schema
-    //autoNamedExports(),
-    //globals(),
+    resolve(),
+    commonjs(),
     terser(),
   ],
   onwarn,
