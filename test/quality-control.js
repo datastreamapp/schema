@@ -1,24 +1,24 @@
 const expect = require('chai').expect
 
-const validate = require('../dist/json-schema/frontend')
+const validate = require('../dist/json-schema/quality-control')
 
 const defaultObject = {
   //"DatasetName":"Test",
   "MonitoringLocationID":"A1",
   "MonitoringLocationName":"A1 Test",
-  "MonitoringLocationLatitude":"51.0486",
-  "MonitoringLocationLongitude":"-114.0708",
+  "MonitoringLocationLatitude":51.0486,
+  "MonitoringLocationLongitude":-114.0708,
   "MonitoringLocationHorizontalCoordinateReferenceSystem":"AMSMA",
   "MonitoringLocationType":"ocean",
   "ActivityType":"Field Msr/Obs",
   "ActivityMediaName":"surface Water",
-  "ActivityDepthHeightMeasure":"-34",
+  "ActivityDepthHeightMeasure":-34,
   "ActivityDepthHeightUnit":"m",
   "SampleCollectionEquipmentName":"bucket",
   "CharacteristicName":"aluminum",
   "MethodSpeciation":"as B",
   "ResultSampleFraction":"Dissolved",
-  "ResultValue":"99.99",
+  "ResultValue":99.99,
   "ResultUnit":"#/100ml",
   'ResultValueType':'Actual',
   "ResultStatusID":"Accepted",
@@ -61,9 +61,10 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'Dissolved oxygen (DO)',
-      'ResultValue': '1',
+      'ResultValue': 1,
       'ResultUnit': '%'
     })
+    console.log(validate.errors)
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
     done()
@@ -72,11 +73,10 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'Dissolved oxygen (DO)',
-      'ResultValue': '1',
+      'ResultValue': 1,
       'ResultUnit': 'mg/L'
     })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(false)
+    expect(valid).to.equal(true)
     done()
   })
 
@@ -85,7 +85,7 @@ describe('Quality Control Checks', function () {
 
     const valid = validate(Object.assign({}, defaultObject, {
       'CharacteristicName': 'Dissolved oxygen saturation',
-      'ResultValue': '-2',
+      'ResultValue': -2,
       'ResultUnit': '%'
     }))
     expect(valid).to.equal(false)
@@ -96,11 +96,11 @@ describe('Quality Control Checks', function () {
 
     const valid = validate(Object.assign({}, defaultObject, {
       'CharacteristicName': 'Dissolved oxygen saturation',
-      'ResultValue': '0',
+      'ResultValue': 0,
       'ResultUnit': '%'
     }))
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(false)
+    console.log(validate.errors)
+    expect(valid).to.equal(true)
     done()
   })
 
@@ -109,7 +109,7 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'Hardness',
-      'ResultValue': '-1',
+      'ResultValue': -1,
       'ResultUnit': 'mg/L'
     })
 
@@ -122,12 +122,10 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'Hardness',
-      'ResultValue': '0',
+      'ResultValue': 0,
       'ResultUnit': 'mg/L'
     })
-
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(false)
+    expect(valid).to.equal(true)
     done()
   })
 
@@ -136,7 +134,7 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'pH',
-      'ResultValue': '-1',
+      'ResultValue': -1,
       'ResultUnit': 'None'
     })
     expect(valid).to.equal(false)
@@ -147,7 +145,7 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'pH',
-      'ResultValue': '15',
+      'ResultValue': 15,
       'ResultUnit': 'None'
     })
     expect(valid).to.equal(false)
@@ -158,11 +156,10 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'pH',
-      'ResultValue': '7',
+      'ResultValue': 7,
       'ResultUnit': 'None'
     })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'maximum', 'ResultValue')).to.equal(false)
+    expect(valid).to.equal(true)
     done()
   })
 
@@ -170,8 +167,8 @@ describe('Quality Control Checks', function () {
   it('Should reject Temperature below range', function (done) {
 
     const valid = validate({
-      'CharacteristicName': 'Temperature',
-      'ResultValue': '-101',
+      'CharacteristicName': 'Temperature, water',
+      'ResultValue': -101,
       'ResultUnit': 'deg C'
     })
     expect(valid).to.equal(false)
@@ -181,8 +178,8 @@ describe('Quality Control Checks', function () {
   it('Should reject Temperature above range', function (done) {
 
     const valid = validate({
-      'CharacteristicName': 'Temperature',
-      'ResultValue': '101',
+      'CharacteristicName': 'Temperature, water',
+      'ResultValue': 101,
       'ResultUnit': 'deg C'
     })
     expect(valid).to.equal(false)
@@ -192,12 +189,11 @@ describe('Quality Control Checks', function () {
   it('Should accept Temperature within range', function (done) {
 
     const valid = validate({
-      'CharacteristicName': 'Temperature',
-      'ResultValue': '0',
+      'CharacteristicName': 'Temperature, water',
+      'ResultValue': 0,
       'ResultUnit': 'deg C'
     })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'maximum', 'ResultValue')).to.equal(false)
+    expect(valid).to.equal(true)
     done()
   })
 

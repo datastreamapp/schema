@@ -233,16 +233,16 @@
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
     },
     {
-      "$ref": "./logic/ResultValue-DissolvedOxygen.json"
+      "$ref": "./logic/QC-ResultValue-DissolvedOxygen.json"
     },
     {
-      "$ref": "./logic/ResultValue-MinimumZero.json"
+      "$ref": "./logic/QC-ResultValue-MinimumZero.json"
     },
     {
-      "$ref": "./logic/ResultValue-pH.json"
+      "$ref": "./logic/QC-ResultValue-pH.json"
     },
     {
-      "$ref": "./logic/ResultValue-Temperature.json"
+      "$ref": "./logic/QC-ResultValue-Temperature.json"
     }
   ]
 }

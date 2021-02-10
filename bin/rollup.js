@@ -17,6 +17,9 @@ export default [{
 },{
   input: 'dist/json-schema/backend/index.js',
   name: 'backend'
+},{
+  input: 'dist/json-schema/quality-control/index.js',
+  name: 'quality-control'
 }].map(bundle => ({
   input: bundle.input,
   output: [{

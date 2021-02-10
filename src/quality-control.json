@@ -1,0 +1,132 @@
+{
+  "$id": "http://datastream.org/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataStream Quality Control",
+  "description": "Quality Control Checks for a single observation",
+  "type": "object",
+  "properties": {
+    "DatasetName": {
+      "$ref": "./definitions.json#/DatasetName"
+    },
+    "MonitoringLocationID": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
+    },
+    "MonitoringLocationName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
+      "minLength": 1
+    },
+    "MonitoringLocationLatitude": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
+    },
+    "MonitoringLocationLongitude": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
+    },
+    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json",
+    },
+    "MonitoringLocationType": {
+      "$ref": "./values/MonitoringLocationType.primary.json"
+    },
+    "ActivityType": {
+      "$ref": "./values/ActivityType.primary.json"
+    },
+    "ActivityMediaName": {
+      "$ref": "./values/ActivityMediaName.primary.json"
+    },
+    "ActivityStartDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "ActivityStartTime": {
+      "$ref": "./definitions.json#/time-loose"
+    },
+    "ActivityEndDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "ActivityEndTime": {
+      "$ref": "./definitions.json#/time-loose"
+    },
+    "ActivityDepthHeightMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
+    },
+    "ActivityDepthHeightUnit": {
+      "$ref": "./values/ActivityDepthHeightUnit.primary.json"
+    },
+    "SampleCollectionEquipmentName": {
+      "$ref": "./values/SampleCollectionEquipmentName.primary.json"
+    },
+    "CharacteristicName": {
+      "$ref": "./values/CharacteristicName.primary.json"
+    },
+    "MethodSpeciation": {
+      "$ref": "./values/MethodSpeciation.primary.json"
+    },
+    "ResultSampleFraction": {
+      "$ref": "./values/ResultSampleFraction.primary.json"
+    },
+    "ResultValue": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
+    },
+    "ResultUnit": {
+      "$ref": "./values/ResultUnit.primary.json"
+    },
+    "ResultValueType": {
+      "$ref": "./values/ResultValueType.primary.json"
+    },
+    "ResultDetectionCondition": {
+      "$ref": "./values/ResultDetectionCondition.primary.json"
+    },
+    "ResultDetectionQuantitationLimitMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
+    },
+    "ResultDetectionQuantitationLimitUnit": {
+      "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json"
+    },
+    "ResultDetectionQuantitationLimitType": {
+      "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json"
+    },
+    "ResultStatusID": {
+      "$ref": "./values/ResultStatusID.primary.json"
+    },
+    "ResultComment": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
+    },
+    "ResultAnalyticalMethodID": {
+      "$ref": "./definitions.json#/ResultAnalyticalMethodID"
+    },
+    "ResultAnalyticalMethodContext": {
+      "$ref": "./values/ResultAnalyticalMethodContext.primary.json"
+    },
+    "ResultAnalyticalMethodName": {
+      "$ref": "./definitions.json#/ResultAnalyticalMethodName"
+    },
+    "AnalysisStartDate": {
+      "$ref": "./definitions.json#/date"
+    },
+    "AnalysisStartTime": {
+      "$ref": "./definitions.json#/time-loose"
+    },
+    "AnalysisStartTimeZone": {
+      "$ref": "./definitions.json#/timezone-loose"
+    },
+    "LaboratoryName": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
+    },
+    "LaboratorySampleID": {
+      "$ref": "./definitions.json#/LaboratorySampleID"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "./logic/QC-ResultValue-DissolvedOxygen.json"
+    },
+    {
+      "$ref": "./logic/QC-ResultValue-MinimumZero.json"
+    },
+    {
+      "$ref": "./logic/QC-ResultValue-pH.json"
+    },
+    {
+      "$ref": "./logic/QC-ResultValue-Temperature.json"
+    }
+  ]
+}

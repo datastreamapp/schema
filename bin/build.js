@@ -12,6 +12,7 @@ const writeFile = util.promisify(fs.writeFile)
 console.log('Compile: JSON Schema & CSV Template')
 
 const process = async (src, dist, minify = false, ajv) => {
+  console.log('process', src, minify)
   let schema = {} // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
   try {
     schema = await $RefParser.dereference(__dirname + `/../src/${src}.json`)  // deprecate if/when possible
@@ -21,7 +22,7 @@ const process = async (src, dist, minify = false, ajv) => {
   }
 
   let json
-  if (minify) {
+  if (minify === true) {
     //delete schema.title
     //delete schema.description
     for (let key in schema.properties) {
@@ -31,6 +32,27 @@ const process = async (src, dist, minify = false, ajv) => {
       const keys = Object.keys(schema.properties[key])
       if(keys.includes('enum') && keys.includes('maxLength')) {
         delete schema.properties[key].maxLength
+      }
+    }
+    json = JSON.stringify(schema)
+  } else if (minify === 'allOf') {
+    //delete schema.title
+    //delete schema.description
+    for (let key in schema.allOf[0].properties) {
+      delete schema.allOf[0].properties[key].title
+      delete schema.allOf[0].properties[key].description
+
+      const keys = Object.keys(schema.allOf[0].properties[key])
+      if(keys.includes('enum') && keys.includes('maxLength')) {
+        delete schema.allOf[0].properties[key].maxLength
+      }
+    }
+    json = JSON.stringify(schema)
+  } else if (minify === 'typeOnly') {
+    // used for Quality Control, don't need to recheck enum and lengths
+    for (let key in schema.properties) {
+      schema.properties[key] = {
+        type: schema.properties[key].type
       }
     }
     json = JSON.stringify(schema)
@@ -58,7 +80,7 @@ csv()
 // Primary
 const ajvPrimary = new Ajv({
   strict: false,
-  coerceTypes: true,
+  coerceTypes: false, // Keep it strict
   allErrors: true,
   useDefaults: "empty",
   loopEnum: 1500,
@@ -85,7 +107,7 @@ const ajvFrontend = new Ajv({
 require('ajv-formats')(ajvFrontend, ['date'])
 //require('ajv-formats-draft2019')(ajvFrontend, [])
 require('ajv-keywords/dist/keywords/transform')(ajvFrontend)
-process('frontend', 'json-schema/frontend', true, ajvFrontend)
+process('frontend', 'json-schema/frontend', 'allOf', ajvFrontend)
 
 // Backend
 const ajvBackend = new Ajv({
@@ -102,3 +124,19 @@ require('ajv-formats')(ajvBackend, ['date'])
 //require('ajv-formats-draft2019')(ajvBackend, [])
 require('ajv-keywords/dist/keywords/transform')(ajvBackend)
 process('backend', 'json-schema/backend', true, ajvBackend)
+
+// Quality Control
+const ajvQualityControl = new Ajv({
+  strict: false,
+  coerceTypes: false, // will already be coerced types
+  allErrors: true,
+  useDefaults: "empty",
+  loopEnum: 1500,
+  code: {
+    source: true
+  }
+})
+require('ajv-formats')(ajvQualityControl, ['date'])
+//require('ajv-formats-draft2019')(ajvQualityControl, [])
+require('ajv-keywords/dist/keywords/transform')(ajvQualityControl)
+process('quality-control', 'json-schema/quality-control', 'typeOnly', ajvQualityControl)
