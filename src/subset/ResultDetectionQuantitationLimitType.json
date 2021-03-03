@@ -2,5 +2,7 @@
   "Blank-adjusted method detect limit",
   "Method Detection Level",
   "Reporting Limit",
-  "Sample Detection Limit"
+  "Sample Detection Limit",
+  "Lower Reporting Limit",
+  "Upper Reporting Limit"
 ]
