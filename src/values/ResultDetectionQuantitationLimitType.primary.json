@@ -4,10 +4,9 @@
   "type": "string",
   "enum": [
     "Blank-adjusted method detect limit",
-    "Lower Reporting Limit",
     "Method Detection Level",
-    "Sample Detection Limit",
-    "Upper Reporting Limit"
+    "Reporting Limit",
+    "Sample Detection Limit"
   ],
   "maxLength": 34
 }
