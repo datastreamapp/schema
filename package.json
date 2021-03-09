@@ -1,16 +1,24 @@
 {
-  "name": "@gordonfn/schema",
+  "name": "@gordonfn/schema-monorepo",
   "version": "2.2.3",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "lint": "prettier-standard 'src/**/*.json'",
-    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
-    "build": "node ./bin/build.js && rollup --config bin/rollup.js  --environment INCLUDE_DEPS,BUILD:production && node ./bin/build-template.js",
-    "test": "npm run build && c8 mocha"
+    "install": "lerna bootstrap",
+    "lint": "prettier-standard '*/**/*.{js,json}'",
+    "lint2": "prettier --write --loglevel=warn --no-semi --single-quote '*/**/*.{js,json}' && standard --fix '*/**/*.{js,json}'",
+    "test": "lerna exec --bail --concurrency 5 npm run test",
+    "lerna:rm": "npm run lerna:rm:node_modules && npm run lerna:rm:lock",
+    "lerna:rm:lock": "lerna exec -- rm -rf package-lock.json",
+    "lerna:rm:node_modules": "lerna exec -- rm -rf node_modules",
+    "lerna:update": "lerna exec --bail --concurrency 5 npm update",
+    "lerna:outdated": "lerna exec --concurrency 2 npm outdated",
+    "lerna:audit": "lerna exec --concurrency 2 npm audit fix",
+    "lerna:sync": "lerna exec --bail --concurrency 2 npm install && lerna publish --yes --skip-npm --skip-git --repo-version $npm_package_version",
+    "lerna:publish": "lerna publish --yes --no-git-tag-version --no-push --registry https://npm.pkg.github.com/ --repo-version $npm_package_version"
   },
   "repository": {
     "type": "git",
@@ -20,7 +28,8 @@
     "water quality exchange",
     "WQX",
     "jsonschema",
-    "jsontableschema",
+    "data-schema",
+    "meta-schema",
     "datastream"
   ],
   "author": "willfarrell",
@@ -30,26 +39,18 @@
   },
   "homepage": "https://github.com/gordonfn/schema#readme",
   "devDependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@rollup/plugin-commonjs": "17.1.0",
-    "@rollup/plugin-node-resolve": "11.1.1",
-    "ajv": "7.0.2",
-    "ajv-formats": "1.5.1",
-    "ajv-formats-draft2019": "1.4.3",
-    "ajv-keywords": "4.0.0",
-    "c8": "7.4.0",
-    "chai": "4.2.0",
-    "change-case": "4.1.1",
-    "glob": "7.1.4",
-    "husky": "4.3.6",
-    "json-schema-ref-parser": "9.0.1",
-    "lint-staged": "10.5.3",
-    "mocha": "7.1.2",
-    "prettier-standard-cli": "16.0.4",
-    "rollup": "2.38.4",
-    "rollup-plugin-terser": "7.0.2",
-    "wqx": "3.0.3"
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "ava": "^3.15.0",
+    "c8": "^7.6.0",
+    "chai": "^4.3.3",
+    "husky": "^5.1.3",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.5.4",
+    "mocha": "^8.3.0",
+    "prettier": "2.2.1",
+    "sinon": "^9.2.4",
+    "standard": "16.0.3"
   },
   "commitlint": {
     "extends": [

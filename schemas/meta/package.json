@@ -1,0 +1,39 @@
+{
+  "name": "@gordonfn/meta-schema",
+  "version": "2.2.3",
+  "description": "DataStream Metadata Schema",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
+    "build": "node ./bin/build.js && rollup --config bin/rollup.js  --environment INCLUDE_DEPS,BUILD:production && node ./bin/build-template.js",
+    "test": "npm run build && c8 mocha"
+  },
+  "author": "willfarrell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gordonfn/schema/issues"
+  },
+  "homepage": "https://github.com/gordonfn/schema#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "17.1.0",
+    "@rollup/plugin-node-resolve": "11.1.1",
+    "ajv": "7.0.2",
+    "ajv-formats": "1.5.1",
+    "ajv-formats-draft2019": "1.4.3",
+    "ajv-keywords": "4.0.0",
+    "change-case": "4.1.1",
+    "glob": "7.1.4",
+    "json-schema-ref-parser": "9.0.1",
+    "lint-staged": "10.5.3",
+    "rollup": "2.38.4",
+    "rollup-plugin-terser": "7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:gordonfn/schema",
+    "directory": "schema/meta"
+  }
+}

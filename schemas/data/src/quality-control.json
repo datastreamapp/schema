@@ -117,16 +117,16 @@
   },
   "allOf": [
     {
-      "$ref": "./logic/QC-ResultValue-DissolvedOxygen.json"
+      "$ref": "./logic/quality-control/ResultValue-DissolvedOxygen.json"
     },
     {
-      "$ref": "./logic/QC-ResultValue-MinimumZero.json"
+      "$ref": "./logic/quality-control/ResultValue-MinimumZero.json"
     },
     {
-      "$ref": "./logic/QC-ResultValue-pH.json"
+      "$ref": "./logic/quality-control/ResultValue-pH.json"
     },
     {
-      "$ref": "./logic/QC-ResultValue-Temperature.json"
+      "$ref": "./logic/quality-control/ResultValue-Temperature.json"
     }
   ]
 }
