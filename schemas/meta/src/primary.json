@@ -1,0 +1,84 @@
+{
+  "type": "object",
+  "properties": {
+    "ID": {
+      "$ref": "./definitions.json#/ID"
+    },
+    "DatasetName": {
+      "$ref": "./definitions.json#/DatasetName"
+    },
+    "Version": {
+      "$ref": "./definitions.json#/Version"
+    },
+    "Abstract": {
+      "$ref": "./definitions.json#/Abstract"
+    },
+    "DataStewardEmail": {
+      "$ref": "./definitions.json#/DataStewardEmail"
+    },
+    "DataUploadOrganization": {
+      "$ref": "./definitions.json#/DataUploadOrganization"
+    },
+    "DataCollectionOrganization": {
+      "$ref": "./definitions.json#/DataCollectionOrganization"
+    },
+    "DataCollectionInformation": {
+      "$ref": "./definitions.json#/DataCollectionInformation"
+    },
+    "DataProcessing": {
+      "$ref": "./definitions.json#/DataProcessing"
+    },
+    "OtherDataSources": {
+      "$ref": "./definitions.json#/OtherDataSources"
+    },
+    "FundingSources": {
+      "$ref": "./definitions.json#/FundingSources"
+    },
+    "Licence": {
+      "$ref": "./definitions.json#/Licence"
+    },
+    "Disclaimer": {
+      "$ref": "./definitions.json#/Disclaimer"
+    },
+    "TopicCategoryCode": {
+      "$ref": "./definitions.json#/TopicCategoryCode"
+    },
+    "MaintenanceFrequencyCode": {
+      "$ref": "./definitions.json#/MaintenanceFrequencyCode"
+    },
+    "ProgressCode": {
+      "$ref": "./definitions.json#/ProgressCode"
+    },
+    "Keywords": {
+      "$ref": "./definitions.json#/Keywords"
+    },
+    "Citation": {
+      "$ref": "./definitions.json#/Citation"
+    },
+    "DOI": {
+      "$ref": "./definitions.json#/DOI"
+    },
+    "DataSourceURL": {
+      "$ref": "./definitions.json#/DataSourceURL"
+    },
+    "TemporalExtent": {
+      "$ref": "./definitions.json#/TemporalExtent"
+    },
+    "SpatialExtent": {
+      "$ref": "./definitions.json#/SpatialExtent"
+    },
+    "VerticalExtent": {
+      "$ref": "./definitions.json#/VerticalExtent"
+    },
+    "CreateTimestamp": {
+      "$ref": "./definitions.json#/CreateTimestamp"
+    },
+    "PublishTimestamp": {
+      "$ref": "./definitions.json#/PublishTimestamp"
+    },
+    "UpdateTimestamp": {
+      "$ref": "./definitions.json#/UpdateTimestamp"
+    }
+  },
+  "required": ["DatasetName", "Abstract", "TopicCategoryCode"]
+}

@@ -1,9 +1,9 @@
 const expect = require('chai').expect
 
-const schema = require('../dist/json-schema/index.json')
-let validate = require('../dist/json-schema/frontend')
-let validateStrict = require('../dist/json-schema')
-let validateBackend = require('../dist/json-schema/backend')
+const schema = require('../primary/index.json')
+let validate = require('../frontend')
+let validateStrict = require('../primary')
+let validateBackend = require('../backend')
 
 const checkProperty = (errors, keyword, property) => {
   for (let i = errors.length; i--; i) {

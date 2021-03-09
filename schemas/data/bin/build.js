@@ -11,7 +11,7 @@ const writeFile = util.promisify(fs.writeFile)
 
 console.log('Compile: JSON Schema & CSV Template')
 
-const process = async (src, dist, minify = false, ajv) => {
+const process = async (src, minify = false, ajv) => {
   console.log('process', src, minify)
   let schema = {} // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
   try {
@@ -60,22 +60,22 @@ const process = async (src, dist, minify = false, ajv) => {
     json = JSON.stringify(schema, null, 2)
   }
 
-  await writeFile(path.join(__dirname, `/../dist/${dist}/index.json`), json, {encoding: 'utf8'})
+  await writeFile(path.join(__dirname, `/../${src}/index.json`), json, {encoding: 'utf8'})
 
   const validate = ajv.compile(schema)
   const code = standaloneCode(ajv, validate)
   ajv.removeSchema()
 
-  await writeFile(path.join(__dirname, `/../dist/${dist}/index.js`), code, {encoding: 'utf8'})
+  await writeFile(path.join(__dirname, `/../${src}/index.js`), code, {encoding: 'utf8'})
 }
 
-const csv = async () => {
-  const object = require(path.join(__dirname, `/../src/primary.json`))
-  let csv = `"` + Object.keys(object.properties).join(`","`) + `"` + '\r\n'
-  await writeFile(path.join(__dirname, `/../dist/csv/headers.csv`), csv, {encoding: 'utf8'})
-}
-
-csv()
+// const csv = async () => {
+//   const object = require(path.join(__dirname, `/../src/primary.json`))
+//   let csv = `"` + Object.keys(object.properties).join(`","`) + `"` + '\r\n'
+//   await writeFile(path.join(__dirname, `/../dist/csv/headers.csv`), csv, {encoding: 'utf8'})
+// }
+//
+// csv()
 
 // Primary
 const ajvPrimary = new Ajv({
@@ -91,7 +91,7 @@ const ajvPrimary = new Ajv({
 require('ajv-formats')(ajvPrimary, ['date'])
 //require('ajv-formats-draft2019')(ajvPrimary, [])
 
-process('primary', 'json-schema', true, ajvPrimary)
+process('primary', true, ajvPrimary)
 
 // Frontend
 const ajvFrontend = new Ajv({
@@ -107,7 +107,7 @@ const ajvFrontend = new Ajv({
 require('ajv-formats')(ajvFrontend, ['date'])
 //require('ajv-formats-draft2019')(ajvFrontend, [])
 require('ajv-keywords/dist/keywords/transform')(ajvFrontend)
-process('frontend', 'json-schema/frontend', 'allOf', ajvFrontend)
+process('frontend',  'allOf', ajvFrontend)
 
 // Backend
 const ajvBackend = new Ajv({
@@ -123,7 +123,7 @@ const ajvBackend = new Ajv({
 require('ajv-formats')(ajvBackend, ['date'])
 //require('ajv-formats-draft2019')(ajvBackend, [])
 require('ajv-keywords/dist/keywords/transform')(ajvBackend)
-process('backend', 'json-schema/backend', true, ajvBackend)
+process('backend',  true, ajvBackend)
 
 // Quality Control
 const ajvQualityControl = new Ajv({
@@ -139,4 +139,4 @@ const ajvQualityControl = new Ajv({
 require('ajv-formats')(ajvQualityControl, ['date'])
 //require('ajv-formats-draft2019')(ajvQualityControl, [])
 require('ajv-keywords/dist/keywords/transform')(ajvQualityControl)
-process('quality-control', 'json-schema/quality-control', 'typeOnly', ajvQualityControl)
+process('quality-control',  'typeOnly', ajvQualityControl)

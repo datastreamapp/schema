@@ -1,4 +1,8 @@
 # Build Files
-dist/
 bin/db
 bin/template
+
+primary
+frontend
+backend
+quality-control

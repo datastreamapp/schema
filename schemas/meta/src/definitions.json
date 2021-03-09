@@ -1,3 +1,222 @@
 {
-
+  "ID": {
+    "title": "Dataset ID",
+    "type": "string",
+    "format": "uuid"
+  },
+  "DatasetName": {
+    "title": "Dataset Name",
+    "description": "A short self-explanatory title of the dataset",
+    "type": "string",
+    "maxLength": 512
+  },
+  "Version": {
+    "title": "Version",
+    "description": "semver format",
+    "type": "string",
+    "pattern": "[0-9]+.[0-9]+.[0-9]+"
+  },
+  "Abstract": {
+    "title": "Abstract",
+    "type": "string"
+  },
+  "DataStewardEmail": {
+    "title": "Data Steward Email",
+    "description": "Email address publicly associated with the dataset",
+    "type": "string",
+    "format": "email"
+  },
+  "DataUploadOrganization": {
+    "title": "Data Upload Organization",
+    "description": "The name of the organization (or researcher) that is uploading the data to DataStream",
+    "type": "string"
+  },
+  "DataCollectionOrganization": {
+    "title": "Data Collection Organization",
+    "description": "Name of the organization or other parties responsible for collecting the data",
+    "type": "string"
+  },
+  "DataCollectionInformation": {
+    "title": "Data Collection Information",
+    "description": "Information about how the data were collected such as sampling methods, equipment, calibration, QA/QC protocols",
+    "type": "string"
+  },
+  "DataProcessing": {
+    "title": "Data Processing",
+    "description": "Description of data cleaning, processing and/or QA/QC that was done to the data",
+    "type": "string"
+  },
+  "OtherDataSources": {
+    "title": "Other Data Sources",
+    "description": "Cite any third party sources of data included in the dataset",
+    "type": "string"
+  },
+  "FundingSources": {
+    "title": "Funding Sources",
+    "description": "Funders of the monitoring project",
+    "type": "string"
+  },
+  "Licence": {
+    "title": "Licence & Attribution",
+    "description": "Choose from Attribution Licence (ODC-By), Public-Domain Dedication and Licence (ODC-PDDL) or Open Government Licence (OGL)",
+    "type": "string",
+    "enum": [
+      "odc-by",
+      "odc-pddl",
+      "ogl"
+    ]
+  },
+  "Disclaimer": {
+    "title": "Disclaimer",
+    "description": "Any additional disclaimer text regarding the data that is not covered in data licence",
+    "type": "string"
+  },
+  "TopicCategoryCode": {
+    "title": "Topic Category",
+    "description": "ISO 19115 MD_TopicCategoryCode: high-level geographic data thematic classification to assist in the grouping and search of available geographic data sets. Can be used to group keywords as well. Listed examples are not exhaustive.",
+    "type": "array",
+    "items": {
+      "type": "string",
+      "enum": [
+        "climatologyMeteorologyAtmosphere",
+        "inlandWaters",
+        "oceans"
+      ]
+    },
+    "minItems": 1
+  },
+  "MaintenanceFrequencyCode": {
+    "title": "Maintenance Frequency",
+    "description": "ISO 19115 MD_MaintenanceFrequencyCode: frequency with which modifications and deletions are made to the data after it is first produced",
+    "type": "string",
+    "enum": [
+      "continual",
+      "daily",
+      "weekly",
+      "fortnightly",
+      "monthly",
+      "quarterly",
+      "biannually",
+      "annually",
+      "asNeeded",
+      "irregular",
+      "notPlanned",
+      "unknown"
+    ]
+  },
+  "ProgressCode": {
+    "title": "ProgressCode",
+    "description": "ISO 19115 MD_ProgressCode: status of the dataset or progress of a review",
+    "type": "string",
+    "enum": [
+      "completed",
+      "historicalArchive",
+      "obsolete",
+      "onGoing",
+      "planned",
+      "required",
+      "underDevelopment",
+      "final",
+      "pending",
+      "retired",
+      "superseded",
+      "tentative",
+      "valid",
+      "accepted",
+      "notAccepted",
+      "withdrawn",
+      "proposed",
+      "deprecated"
+    ]
+  },
+  "Keywords": {
+    "title": "Keywords",
+    "type": "array",
+    "items": {
+      "type": "string"
+    },
+    "default": []
+  },
+  "Citation": {
+    "title": "Citation",
+    "description": "How the data should be cited if it is used by others. Default: {Organization}. {Publication Year}. \"{Dataset Name}\" (dataset). {Version}. DataStream. {DOI}.",
+    "type": [
+      "null",
+      "string"
+    ],
+    "default": null
+  },
+  "DOI": {
+    "title": "Digital Object Identifier (DOI)",
+    "description": "Digital Object Identifier from DataCite",
+    "type": "string",
+    "format": "uri",
+    "maxLength": 256
+  },
+  "DataSourceURL": {
+    "title": "Data Source URL",
+    "description": "When data is being cross-posted from another Open Data Platform",
+    "type": "string",
+    "format": "uri"
+  },
+  "TemporalExtent": {
+    "title": "Temporal Extent",
+    "type": "array",
+    "items": {
+      "type": "string",
+      "format": "datetime"
+    },
+    "minItems": 2,
+    "maxItems": 2
+  },
+  "SpatialExtent": {
+    "title": "Spatial Extent",
+    "type": "array",
+    "items": [
+      {
+        "type": "number",
+        "minimum": -180,
+        "maximum": 180
+      },
+      {
+        "type": "number",
+        "minimum": -90,
+        "maximum": 90
+      },
+      {
+        "type": "number",
+        "minimum": -180,
+        "maximum": 180
+      },
+      {
+        "type": "number",
+        "minimum": -90,
+        "maximum": 90
+      }
+    ],
+    "minItems": 4,
+    "maxItems": 4
+  },
+  "VerticalExtent": {
+    "title": "Vertical Extent",
+    "type": "array",
+    "items": {
+      "type": ["number","null"]
+    },
+    "default": [null,null],
+    "minItems": 2,
+    "maxItems": 2
+  },
+  "CreateTimestamp": {
+    "type": "string",
+    "format": "datetime"
+  },
+  "PublishTimestamp": {
+    "type": "string",
+    "format": "datetime"
+  },
+  "UpdateTimestamp": {
+    "type": "string",
+    "format": "datetime"
+  }
 }

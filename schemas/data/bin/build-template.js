@@ -1,5 +1,5 @@
 const fs = require('fs')
-const schema = require('../dist/json-schema/index.json')
+const schema = require('../primary/index.json')
 const characteristics = require('../src/values/CharacteristicName.primary.json').enum
 const methodSpeciation = require('../src/logic/CharacteristicName-MethodSpeciation.json').if.properties.CharacteristicName.enum
 const sampleFraction = require('../src/logic/CharacteristicName-ResultSampleFraction.json').if.properties.CharacteristicName.enum

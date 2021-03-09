@@ -7,18 +7,17 @@ function onwarn (warning, warn) {
   warn(warning);
 }
 
-// TODO update file paths to all be at root
 export default [{
-  input: 'dist/json-schema/index.js',
+  input: 'primary/index.js',
   name: 'primary'
 },{
-  input: 'dist/json-schema/frontend/index.js',
+  input: 'frontend/index.js',
   name: 'frontend'
 },{
-  input: 'dist/json-schema/backend/index.js',
+  input: 'backend/index.js',
   name: 'backend'
 },{
-  input: 'dist/json-schema/quality-control/index.js',
+  input: 'quality-control/index.js',
   name: 'quality-control'
 }].map(bundle => ({
   input: bundle.input,

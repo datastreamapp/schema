@@ -6,6 +6,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "main": "index.js",
+  "files": [],
   "scripts": {
     "lint": "prettier-standard 'src/**/*.json'",
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
