@@ -1,6 +1,6 @@
 const expect = require('chai').expect
 
-const validate = require('../dist/json-schema/quality-control')
+const validate = require('../quality-control')
 
 const defaultObject = {
   //"DatasetName":"Test",

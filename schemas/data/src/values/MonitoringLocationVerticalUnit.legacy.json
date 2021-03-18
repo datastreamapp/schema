@@ -1,0 +1,10 @@
+{
+  "title": "Measurement Unit",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "m",
+    "MASL"
+  ],
+  "maxLength": 4
+}

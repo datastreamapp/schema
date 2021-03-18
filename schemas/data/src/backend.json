@@ -27,6 +27,20 @@
       "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json",
       "transform": ["trim", "toEnumCase"]
     },
+    "MonitoringLocationHorizontalAccuracyMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure"
+    },
+    "MonitoringLocationHorizontalAccuracyUnit": {
+      "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
+    "MonitoringLocationVerticalMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure"
+    },
+    "MonitoringLocationVerticalUnit": {
+      "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json",
+      "transform": ["trim", "toEnumCase"]
+    },
     "MonitoringLocationType": {
       "$ref": "./values/MonitoringLocationType.legacy.json",
       "transform": ["trim", "toEnumCase"]

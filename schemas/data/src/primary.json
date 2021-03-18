@@ -25,6 +25,18 @@
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
       "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json"
     },
+    "MonitoringLocationHorizontalAccuracyMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure"
+    },
+    "MonitoringLocationHorizontalAccuracyUnit": {
+      "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
+    },
+    "MonitoringLocationVerticalMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure"
+    },
+    "MonitoringLocationVerticalUnit": {
+      "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
+    },
     "MonitoringLocationType": {
       "$ref": "./values/MonitoringLocationType.primary.json"
     },
@@ -143,6 +155,8 @@
     "ResultValueType"
   ],
   "dependencies": {
+    "MonitoringLocationHorizontalAccuracyMeasure": ["MonitoringLocationHorizontalAccuracyUnit"],
+    "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
     "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
     "ResultValue": ["ResultUnit"],
     "ResultDetectionQuantitationLimitMeasure": [

@@ -91,7 +91,7 @@ const ajvPrimary = new Ajv({
 require('ajv-formats')(ajvPrimary, ['date'])
 //require('ajv-formats-draft2019')(ajvPrimary, [])
 
-process('primary', true, ajvPrimary)
+process('primary', false, ajvPrimary)
 
 // Frontend
 const ajvFrontend = new Ajv({

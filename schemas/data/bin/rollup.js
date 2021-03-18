@@ -22,14 +22,14 @@ export default [{
 }].map(bundle => ({
   input: bundle.input,
   output: [{
+    // When included in a browser facing app and using rollup, can't use sub folders
+    dir: bundle.input.replace('/index.js', ''),
+    entryFileNames: '[name].mjs',
+    format: 'es'
+  },{
     dir: bundle.input.replace('/index.js', ''),
     entryFileNames: '[name].js',
     format: 'cjs'
-  },{
-    // When included in a browser facing app and using rollup, can't use sub folders
-    dir: 'dist/json-schema',
-    entryFileNames: bundle.name+'.mjs',
-    format: 'es'
   }],
   plugins: [
     resolve(),

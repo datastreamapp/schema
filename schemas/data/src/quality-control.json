@@ -22,7 +22,19 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
     },
     "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json",
+      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json"
+    },
+    "MonitoringLocationHorizontalAccuracyMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure"
+    },
+    "MonitoringLocationHorizontalAccuracyUnit": {
+      "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
+    },
+    "MonitoringLocationVerticalMeasure": {
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure"
+    },
+    "MonitoringLocationVerticalUnit": {
+      "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
     },
     "MonitoringLocationType": {
       "$ref": "./values/MonitoringLocationType.primary.json"
@@ -117,16 +129,34 @@
   },
   "allOf": [
     {
-      "$ref": "./logic/quality-control/ResultValue-DissolvedOxygen.json"
+      "$ref": "./logic/quality-control/ActivityStartTime-Format.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultValue-MinimumZero.json"
+      "$ref": "./logic/quality-control/ActivityEndTime-Format.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultValue-pH.json"
+      "$ref": "./logic/quality-control/AnalysisStartTime-Format.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultValue-Temperature.json"
+      "$ref": "./logic/quality-control/AnalysisStartTimeZone-Range.json"
+    },
+    {
+      "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenMinimum.json"
+    },
+    {
+      "$ref": "./logic/quality-control/ResultValue-HardnessMinimum.json"
+    },
+    {
+      "$ref": "./logic/quality-control/ResultValue-pHRange.json"
+    },
+    {
+      "$ref": "./logic/quality-control/ResultValue-TemperatureRange.json"
+    },
+    {
+      "$ref": "./logic/quality-control/ResultUnit-Allowed.json"
+    },
+    {
+      "$ref": "./logic/quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
     }
   ]
 }

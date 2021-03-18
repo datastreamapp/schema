@@ -1,7 +1,7 @@
 const expect = require('chai').expect
 
-const validateFrontend = require('../dist/json-schema/frontend')
-const validateBackend = require('../dist/json-schema/backend')
+const validateFrontend = require('../frontend')
+const validateBackend = require('../backend')
 
 describe('Data Coercion', function () {
 

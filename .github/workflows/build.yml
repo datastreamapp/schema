@@ -69,8 +69,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           path: |
-            dist/csv/
-            dist/json-schema/
+            primary/
+            frontend/
+            backend/
+            quality-control/
       -
         if: env.change
         name: Trigger @gordonfn/normalize rebuild

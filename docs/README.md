@@ -61,7 +61,7 @@ Alternately, you can build it from the source to include in your project.
 # Public
 $ npm i
 $ npm run build
-$ cat dist/json-schema/index.json
+$ cat primary.json
 
 # Private
 $ npm i @gordonfn/schema

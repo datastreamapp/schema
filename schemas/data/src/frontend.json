@@ -34,6 +34,26 @@
             "toEnumCase"
           ]
         },
+        "MonitoringLocationHorizontalAccuracyMeasure": {
+          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure"
+        },
+        "MonitoringLocationHorizontalAccuracyUnit": {
+          "$ref": "./values/MonitoringLocationVerticalUnit.primary.json",
+          "transform": [
+            "trim",
+            "toEnumCase"
+          ]
+        },
+        "MonitoringLocationVerticalMeasure": {
+          "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure"
+        },
+        "MonitoringLocationVerticalUnit": {
+          "$ref": "./values/MonitoringLocationVerticalUnit.primary.json",
+          "transform": [
+            "trim",
+            "toEnumCase"
+          ]
+        },
         "MonitoringLocationType": {
           "$ref": "./values/MonitoringLocationType.primary.json",
           "transform": [
@@ -200,6 +220,8 @@
         "ResultValueType"
       ],
       "dependencies": {
+        "MonitoringLocationHorizontalAccuracyMeasure": ["MonitoringLocationHorizontalAccuracyUnit"],
+        "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
         "ActivityDepthHeightMeasure": [
           "ActivityDepthHeightUnit"
         ],
@@ -233,16 +255,23 @@
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultValue-DissolvedOxygen.json"
-    },
-    {
-      "$ref": "./logic/quality-control/ResultValue-MinimumZero.json"
-    },
-    {
-      "$ref": "./logic/quality-control/ResultValue-pH.json"
-    },
-    {
-      "$ref": "./logic/quality-control/ResultValue-Temperature.json"
+      "allOf": [
+        {
+          "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenMinimum.json"
+        },
+        {
+          "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenMinimum.json"
+        },
+        {
+          "$ref": "./logic/quality-control/ResultValue-HardnessMinimum.json"
+        },
+        {
+          "$ref": "./logic/quality-control/ResultValue-pHRange.json"
+        },
+        {
+          "$ref": "./logic/quality-control/ResultValue-TemperatureRange.json"
+        }
+      ]
     }
   ]
 }
