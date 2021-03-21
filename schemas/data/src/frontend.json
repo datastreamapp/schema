@@ -253,25 +253,6 @@
     },
     {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
-    },
-    {
-      "allOf": [
-        {
-          "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenMinimum.json"
-        },
-        {
-          "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenMinimum.json"
-        },
-        {
-          "$ref": "./logic/quality-control/ResultValue-HardnessMinimum.json"
-        },
-        {
-          "$ref": "./logic/quality-control/ResultValue-pHRange.json"
-        },
-        {
-          "$ref": "./logic/quality-control/ResultValue-TemperatureRange.json"
-        }
-      ]
     }
   ]
 }

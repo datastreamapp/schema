@@ -48,14 +48,14 @@ const process = async (src, minify = false, ajv) => {
       }
     }
     json = JSON.stringify(schema)
-  } else if (minify === 'typeOnly') {
-    // used for Quality Control, don't need to recheck enum and lengths
-    for (let key in schema.properties) {
-      schema.properties[key] = {
-        type: schema.properties[key].type
-      }
-    }
-    json = JSON.stringify(schema)
+  // } else if (minify === 'typeOnly') {
+  //   // used for Quality Control, don't need to recheck enum and lengths
+  //   for (let key in schema.properties) {
+  //     schema.properties[key] = {
+  //       type: schema.properties[key].type
+  //     }
+  //   }
+  //   json = JSON.stringify(schema)
   } else {
     json = JSON.stringify(schema, null, 2)
   }
@@ -139,4 +139,4 @@ const ajvQualityControl = new Ajv({
 require('ajv-formats')(ajvQualityControl, ['date'])
 //require('ajv-formats-draft2019')(ajvQualityControl, [])
 require('ajv-keywords/dist/keywords/transform')(ajvQualityControl)
-process('quality-control',  'typeOnly', ajvQualityControl)
+process('quality-control',  false, ajvQualityControl)
