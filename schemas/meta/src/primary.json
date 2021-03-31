@@ -7,17 +7,23 @@
     "DatasetName": {
       "$ref": "./definitions.json#/ContributorInput/DatasetName"
     },
-    "Abstract": {
-      "$ref": "./definitions.json#/ContributorInput/Abstract"
-    },
     "DataStewardEmail": {
       "$ref": "./definitions.json#/ContributorInput/DataStewardEmail"
+    },
+    "DataCollectionOrganization": {
+      "$ref": "./definitions.json#/ContributorInput/DataCollectionOrganization"
     },
     "DataUploadOrganization": {
       "$ref": "./definitions.json#/ContributorInput/DataUploadOrganization"
     },
-    "DataCollectionOrganization": {
-      "$ref": "./definitions.json#/ContributorInput/DataCollectionOrganization"
+    "ProgressCode": {
+      "$ref": "./definitions.json#/ContributorInput/ProgressCode"
+    },
+    "MaintenanceFrequencyCode": {
+      "$ref": "./definitions.json#/ContributorInput/MaintenanceFrequencyCode"
+    },
+    "Abstract": {
+      "$ref": "./definitions.json#/ContributorInput/Abstract"
     },
     "DataCollectionInformation": {
       "$ref": "./definitions.json#/ContributorInput/DataCollectionInformation"
@@ -25,11 +31,17 @@
     "DataProcessing": {
       "$ref": "./definitions.json#/ContributorInput/DataProcessing"
     },
+    "FundingSources": {
+      "$ref": "./definitions.json#/ContributorInput/FundingSources"
+    },
+    "DataSourceURL": {
+      "$ref": "./definitions.json#/ContributorInput/DataSourceURL"
+    },
     "OtherDataSources": {
       "$ref": "./definitions.json#/ContributorInput/OtherDataSources"
     },
-    "FundingSources": {
-      "$ref": "./definitions.json#/ContributorInput/FundingSources"
+    "Citation": {
+      "$ref": "./definitions.json#/ContributorInput/Citation"
     },
     "Licence": {
       "$ref": "./definitions.json#/ContributorInput/Licence"
@@ -40,21 +52,16 @@
     "TopicCategoryCode": {
       "$ref": "./definitions.json#/ContributorInput/TopicCategoryCode"
     },
-    "MaintenanceFrequencyCode": {
-      "$ref": "./definitions.json#/ContributorInput/MaintenanceFrequencyCode"
-    },
-    "ProgressCode": {
-      "$ref": "./definitions.json#/ContributorInput/ProgressCode"
-    },
     "Keywords": {
       "$ref": "./definitions.json#/ContributorInput/Keywords"
-    },
-    "Citation": {
-      "$ref": "./definitions.json#/ContributorInput/Citation"
-    },
-    "DataSourceURL": {
-      "$ref": "./definitions.json#/ContributorInput/DataSourceURL"
     }
   },
-  "required": ["DatasetName", "Abstract", "Licence", "TopicCategoryCode", "Citation"]
+  "required": [
+    "DatasetName",
+    "DataStewardEmail", "DataUploadOrganization", "DataCollectionOrganization",
+    "ProgressCode","MaintenanceFrequencyCode",
+    "Abstract",
+    "Citation", "Licence",
+    "TopicCategoryCode"
+  ]
 }

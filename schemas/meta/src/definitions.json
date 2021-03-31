@@ -3,110 +3,33 @@
     "DatasetName": {
       "title": "Dataset Name",
       "description": "A short self-explanatory title of the dataset",
-      "$comments": "major",
+      "$semver": "major",
       "type": "string",
       "maxLength": 512
-    },
-    "Abstract": {
-      "title": "Abstract",
-      "$comments": "minor",
-      "type": "string"
     },
     "DataStewardEmail": {
       "title": "Data Steward Email",
       "description": "Email address publicly associated with the dataset",
-      "$comments": "minor",
+      "$semver": "minor",
       "type": "string",
       "format": "email"
-    },
-    "DataUploadOrganization": {
-      "title": "Data Upload Organization",
-      "description": "The name of the organization (or researcher) that is uploading the data to DataStream",
-      "$comments": "minor",
-      "type": "string"
     },
     "DataCollectionOrganization": {
       "title": "Data Collection Organization",
       "description": "Name of the organization or other parties responsible for collecting the data",
-      "$comments": "minor",
+      "$semver": "major",
       "type": "string"
     },
-    "DataCollectionInformation": {
-      "title": "Data Collection Information",
-      "description": "Information about how the data were collected such as sampling methods, equipment, calibration, QA/QC protocols",
-      "$comments": "minor",
+    "DataUploadOrganization": {
+      "title": "Data Upload Organization",
+      "description": "The name of the organization (or researcher) that is uploading the data to DataStream",
+      "$semver": "minor",
       "type": "string"
-    },
-    "DataProcessing": {
-      "title": "Data Processing",
-      "description": "Description of data cleaning, processing and/or QA/QC that was done to the data",
-      "$comments": "minor",
-      "type": "string"
-    },
-    "OtherDataSources": {
-      "title": "Other Data Sources",
-      "description": "Cite any third party sources of data included in the dataset",
-      "$comments": "minor",
-      "type": "string"
-    },
-    "FundingSources": {
-      "title": "Funding Sources",
-      "description": "Funders of the monitoring project",
-      "$comments": "minor",
-      "type": "string"
-    },
-    "Licence": {
-      "title": "Licence & Attribution",
-      "description": "Choose from Attribution Licence (ODC-By), Public-Domain Dedication and Licence (ODC-PDDL) or Open Government Licence (OGL)",
-      "$comments": "major",
-      "type": "string",
-      "format": "uri"
-    },
-    "Disclaimer": {
-      "title": "Disclaimer",
-      "description": "Any additional disclaimer text regarding the data that is not covered in data licence",
-      "$comments": "minor",
-      "type": "string"
-    },
-    "TopicCategoryCode": {
-      "title": "Topic Category",
-      "description": "ISO 19115 MD_TopicCategoryCode: high-level geographic data thematic classification to assist in the grouping and search of available geographic data sets. Can be used to group keywords as well. Listed examples are not exhaustive.",
-      "$comments": "patch",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "climatologyMeteorologyAtmosphere",
-          "inlandWaters",
-          "oceans"
-        ]
-      },
-      "minItems": 1
-    },
-    "MaintenanceFrequencyCode": {
-      "title": "Maintenance Frequency",
-      "description": "ISO 19115 MD_MaintenanceFrequencyCode: frequency with which modifications and deletions are made to the data after it is first produced",
-      "$comments": "patch",
-      "type": "string",
-      "enum": [
-        "continual",
-        "daily",
-        "weekly",
-        "fortnightly",
-        "monthly",
-        "quarterly",
-        "biannually",
-        "annually",
-        "asNeeded",
-        "irregular",
-        "notPlanned",
-        "unknown"
-      ]
     },
     "ProgressCode": {
       "title": "ProgressCode",
       "description": "ISO 19115 MD_ProgressCode: status of the dataset or progress of a review",
-      "$comments": "patch",
+      "$semver": "patch",
       "type": "string",
       "enum": [
         "completed",
@@ -129,27 +52,104 @@
         "deprecated"
       ]
     },
-    "Keywords": {
-      "title": "Keywords",
-      "$comments": "patch",
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "default": []
+    "MaintenanceFrequencyCode": {
+      "title": "Maintenance Frequency",
+      "description": "ISO 19115 MD_MaintenanceFrequencyCode: frequency with which modifications and deletions are made to the data after it is first produced",
+      "$semver": "patch",
+      "type": "string",
+      "enum": [
+        "continual",
+        "daily",
+        "weekly",
+        "fortnightly",
+        "monthly",
+        "quarterly",
+        "biannually",
+        "annually",
+        "asNeeded",
+        "irregular",
+        "notPlanned",
+        "unknown"
+      ]
     },
-    "Citation": {
-      "title": "Citation",
-      "description": "How the data should be cited if it is used by others. Supports allowed variables. Default `Chicago`: {Organization}. {Publication Year}. \"{DatasetName}\" (dataset). {Version}. DataStream. {DOI}.",
-      "$comments": "minor",
+    "Abstract": {
+      "title": "Abstract",
+      "$semver": "minor",
+      "type": "string"
+    },
+    "DataCollectionInformation": {
+      "title": "Data Collection Information",
+      "description": "Information about how the data were collected such as sampling methods, equipment, calibration, QA/QC protocols",
+      "$semver": "minor",
+      "type": "string"
+    },
+    "DataProcessing": {
+      "title": "Data Processing",
+      "description": "Description of data cleaning, processing and/or QA/QC that was done to the data",
+      "$semver": "minor",
+      "type": "string"
+    },
+    "FundingSources": {
+      "title": "Funding Sources",
+      "description": "Funders of the monitoring project",
+      "$semver": "minor",
       "type": "string"
     },
     "DataSourceURL": {
       "title": "Data Source URL",
       "description": "When data is being cross-posted from another Open Data Platform",
-      "$comments": "minor",
+      "$semver": "minor",
       "type": "string",
       "format": "uri"
+    },
+    "OtherDataSources": {
+      "title": "Other Data Sources",
+      "description": "Cite any third party sources of data included in the dataset",
+      "$semver": "minor",
+      "type": "string"
+    },
+    "Citation": {
+      "title": "Citation",
+      "description": "How the data should be cited if it is used by others. Supports allowed variables. Default `Chicago`: {CollectionOrganization}. {Publication Year}. \"{DatasetName}\" (dataset). {Version}. DataStream. {DOI}.",
+      "$semver": "major",
+      "type": "string"
+    },
+    "Licence": {
+      "title": "Licence & Attribution",
+      "description": "Choose from Attribution Licence (ODC-By), Public-Domain Dedication and Licence (ODC-PDDL) or Open Government Licence (OGL)",
+      "$semver": "major",
+      "type": "string",
+      "format": "uri"
+    },
+    "Disclaimer": {
+      "title": "Disclaimer",
+      "description": "Any additional disclaimer text regarding the data that is not covered in data licence",
+      "$comments": "major",
+      "type": "string"
+    },
+    "TopicCategoryCode": {
+      "title": "Topic Category",
+      "description": "ISO 19115 MD_TopicCategoryCode: high-level geographic data thematic classification to assist in the grouping and search of available geographic data sets. Can be used to group keywords as well. Listed examples are not exhaustive.",
+      "$semver": "patch",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "climatologyMeteorologyAtmosphere",
+          "inlandWaters",
+          "oceans"
+        ]
+      },
+      "minItems": 1
+    },
+    "Keywords": {
+      "title": "Keywords",
+      "$semver": "patch",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
     }
   },
   "ContributorPublish": {
@@ -168,11 +168,11 @@
       "maxLength": 9
     },
     "DOI": {
-      "title": "Digital Object Identifier (DOI) Suffix",
+      "title": "Digital Object Identifier (DOI)",
       "description": "Digital Object Identifier from DataCite",
       "type": "string",
       "format": "uri",
-      "pattern": "https://doi.org/10.[0-9]+/[a-z0-9-]+"
+      "pattern": "https://doi\.org/10\.[0-9]{5}/[a-z]{4}-[a-z]{4}"
     },
     "Version": {
       "title": "Version",
