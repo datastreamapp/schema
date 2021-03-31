@@ -29,11 +29,11 @@ Funding Sources              | No             | Funders of the monitoring projec
 Other Data Sources           | No             | Cite any third party sources of data included in the dataset
 Topic Category               | Yes            | ISO 19115 Topic Category (dropdown list)
 Keywords                     | No             | Keywords related to the dataset
-Licensing & Attribution      | Yes            | Choose from Attribution Licence (ODC-By) or Public-Domain Dedication and Licence (PDDL) or Open Government licence
+Licencing & Attribution      | Yes            | Choose from Attribution Licence (ODC-By) or Public-Domain Dedication and Licence (ODC-PDDL) or Open Government licence (OGL)
 Data Disclaimer              | No             | Any additional disclaimer text regarding the data that is not covered in data licence
 Data Source URL              | No             | When data is being cross-posted from another Open Data Platform
 Monitoring Active            | Yes            | Indicates if a dataset if being actively monitored and will likely have updates in the future
-Citation                     | Auto-generated | How the data should be cited if it is used by others, can be overritten by uploader
+Citation                     | No/Auto-generated | How the data should be cited if it is used by others, can be overritten by uploader
 Date Published               | Auto-generated | Date the dataset is published on DataStream
 Date Last Updated            | Auto-generated | Date of last update to the dataset on DataStream
 Version Number               | Auto-generated | Version number of the dataset

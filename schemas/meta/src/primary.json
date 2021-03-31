@@ -1,84 +1,60 @@
 {
+  "$id": "http://datastream.org/meta-schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DataStream Metadata Schema",
   "type": "object",
   "properties": {
-    "ID": {
-      "$ref": "./definitions.json#/ID"
-    },
     "DatasetName": {
-      "$ref": "./definitions.json#/DatasetName"
-    },
-    "Version": {
-      "$ref": "./definitions.json#/Version"
+      "$ref": "./definitions.json#/ContributorInput/DatasetName"
     },
     "Abstract": {
-      "$ref": "./definitions.json#/Abstract"
+      "$ref": "./definitions.json#/ContributorInput/Abstract"
     },
     "DataStewardEmail": {
-      "$ref": "./definitions.json#/DataStewardEmail"
+      "$ref": "./definitions.json#/ContributorInput/DataStewardEmail"
     },
     "DataUploadOrganization": {
-      "$ref": "./definitions.json#/DataUploadOrganization"
+      "$ref": "./definitions.json#/ContributorInput/DataUploadOrganization"
     },
     "DataCollectionOrganization": {
-      "$ref": "./definitions.json#/DataCollectionOrganization"
+      "$ref": "./definitions.json#/ContributorInput/DataCollectionOrganization"
     },
     "DataCollectionInformation": {
-      "$ref": "./definitions.json#/DataCollectionInformation"
+      "$ref": "./definitions.json#/ContributorInput/DataCollectionInformation"
     },
     "DataProcessing": {
-      "$ref": "./definitions.json#/DataProcessing"
+      "$ref": "./definitions.json#/ContributorInput/DataProcessing"
     },
     "OtherDataSources": {
-      "$ref": "./definitions.json#/OtherDataSources"
+      "$ref": "./definitions.json#/ContributorInput/OtherDataSources"
     },
     "FundingSources": {
-      "$ref": "./definitions.json#/FundingSources"
+      "$ref": "./definitions.json#/ContributorInput/FundingSources"
     },
     "Licence": {
-      "$ref": "./definitions.json#/Licence"
+      "$ref": "./definitions.json#/ContributorInput/Licence"
     },
     "Disclaimer": {
-      "$ref": "./definitions.json#/Disclaimer"
+      "$ref": "./definitions.json#/ContributorInput/Disclaimer"
     },
     "TopicCategoryCode": {
-      "$ref": "./definitions.json#/TopicCategoryCode"
+      "$ref": "./definitions.json#/ContributorInput/TopicCategoryCode"
     },
     "MaintenanceFrequencyCode": {
-      "$ref": "./definitions.json#/MaintenanceFrequencyCode"
+      "$ref": "./definitions.json#/ContributorInput/MaintenanceFrequencyCode"
     },
     "ProgressCode": {
-      "$ref": "./definitions.json#/ProgressCode"
+      "$ref": "./definitions.json#/ContributorInput/ProgressCode"
     },
     "Keywords": {
-      "$ref": "./definitions.json#/Keywords"
+      "$ref": "./definitions.json#/ContributorInput/Keywords"
     },
     "Citation": {
-      "$ref": "./definitions.json#/Citation"
-    },
-    "DOI": {
-      "$ref": "./definitions.json#/DOI"
+      "$ref": "./definitions.json#/ContributorInput/Citation"
     },
     "DataSourceURL": {
-      "$ref": "./definitions.json#/DataSourceURL"
-    },
-    "TemporalExtent": {
-      "$ref": "./definitions.json#/TemporalExtent"
-    },
-    "SpatialExtent": {
-      "$ref": "./definitions.json#/SpatialExtent"
-    },
-    "VerticalExtent": {
-      "$ref": "./definitions.json#/VerticalExtent"
-    },
-    "CreateTimestamp": {
-      "$ref": "./definitions.json#/CreateTimestamp"
-    },
-    "PublishTimestamp": {
-      "$ref": "./definitions.json#/PublishTimestamp"
-    },
-    "UpdateTimestamp": {
-      "$ref": "./definitions.json#/UpdateTimestamp"
+      "$ref": "./definitions.json#/ContributorInput/DataSourceURL"
     }
   },
-  "required": ["DatasetName", "Abstract", "TopicCategoryCode"]
+  "required": ["DatasetName", "Abstract", "Licence", "TopicCategoryCode", "Citation"]
 }
