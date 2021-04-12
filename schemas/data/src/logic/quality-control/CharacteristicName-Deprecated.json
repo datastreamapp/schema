@@ -1,5 +1,10 @@
 {
+  "errorMessage": "",
   "not": {
-
+    "properties": {
+      "CharacteristicName": {
+        "enum": []
+      }
+    }
   }
 }
