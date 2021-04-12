@@ -1,0 +1,19 @@
+{
+  "errorMessage": "ResultValue is below zero for a unit that may not make sense.",
+  "if": {
+    "properties": {
+      "ResultUnit": {
+        "enum": ["mg/L", "ppm"]
+      }
+    },
+    "required": ["ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "minimum": 0
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}

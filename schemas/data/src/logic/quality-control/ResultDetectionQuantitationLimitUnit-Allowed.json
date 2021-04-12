@@ -1,0 +1,16 @@
+{
+  "errorMessage": "ResultDetectionQuantitationLimitUnit is not needed when ResultDetectionQuantitationLimitMeasure is not set.",,
+  "not": {
+    "properties": {
+      "ResultDetectionQuantitationLimitMeasure": {
+        "enum": [null,""]
+      },
+      "ResultDetectionQuantitationLimitUnit": {
+        "not": {
+          "enum": [null,""]
+        }
+      }
+    },
+    "required": ["ResultDetectionQuantitationLimitUnit"]
+  }
+}

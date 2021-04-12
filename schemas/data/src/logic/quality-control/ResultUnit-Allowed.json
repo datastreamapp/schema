@@ -1,0 +1,16 @@
+{
+  "errorMessage": "ResultUnit is not needed when ResultValue is not set.",
+  "not": {
+    "properties": {
+      "ResultValue": {
+        "enum": [null,""]
+      },
+      "ResultUnit": {
+        "not": {
+          "enum": [null,""]
+        }
+      }
+    },
+    "required": ["ResultUnit"]
+  }
+}

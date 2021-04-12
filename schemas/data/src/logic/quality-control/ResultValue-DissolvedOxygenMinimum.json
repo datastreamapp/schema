@@ -1,0 +1,21 @@
+{
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": ["Dissolved oxygen (DO)"]
+      },
+      "ResultUnit": {
+        "enum": ["%"]
+      }
+    },
+    "required": ["CharacteristicName", "ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultUnit": {
+        "enum": ["mg/l", "ppm"]
+      }
+    },
+    "required": ["ResultUnit"]
+  }
+}

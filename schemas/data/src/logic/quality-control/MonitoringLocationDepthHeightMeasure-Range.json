@@ -1,0 +1,35 @@
+{
+  "errorMessage": "",
+  "allOf": [
+    {
+      "description": "Saint Lawrence River",
+      "properties": {
+        "MonitoringLocationType": {
+          "enum": ["River/Stream"]
+        },
+        "MonitoringLocationDepthHeight": {
+          "minimum": -65
+        },
+        "MonitoringLocationDepthHeightUnit": {
+          "enum": ["m"]
+        }
+      },
+      "require": ["MonitoringLocationType","MonitoringLocationDepthHeightMeasure","MonitoringLocationDepthHeightUnit"]
+    },
+    {
+      "description": "Great Slave Lake",
+      "properties": {
+        "MonitoringLocationType": {
+          "enum": ["Lake/Pond","Lake","Great Lake"]
+        },
+        "MonitoringLocationDepthHeight": {
+          "minimum": -615
+        },
+        "MonitoringLocationDepthHeightUnit": {
+          "enum": ["m"]
+        }
+      },
+      "require": ["MonitoringLocationType","MonitoringLocationDepthHeightMeasure","MonitoringLocationDepthHeightUnit"]
+    }
+  ]
+}

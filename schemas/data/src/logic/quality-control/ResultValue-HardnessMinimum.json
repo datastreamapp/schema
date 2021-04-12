@@ -1,0 +1,29 @@
+{
+  "errorMessage": "",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Hardness",
+          "Hardness, total by calculation",
+          "Total hardness",
+          "Dissolved oxygen saturation"
+        ]
+      }
+    },
+    "required": [
+      "CharacteristicName",
+      "ResultValue"
+    ]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "minimum": 0
+      }
+    },
+    "required": [
+      "ResultValue"
+    ]
+  }
+}

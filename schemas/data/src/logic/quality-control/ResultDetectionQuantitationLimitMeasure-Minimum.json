@@ -1,0 +1,18 @@
+{
+  "if": {
+    "properties": {
+      "ResultDetectionQuantitationLimitUnit": {
+        "enum": ["mg/L"]
+      }
+    },
+    "required": ["ResultDetectionQuantitationLimitUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultDetectionQuantitationLimitMeasure": {
+        "minimum": 0
+      }
+    },
+    "required": ["ResultDetectionQuantitationLimitMeasure"]
+  }
+}

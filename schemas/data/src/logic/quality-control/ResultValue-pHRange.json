@@ -1,0 +1,20 @@
+{
+  "errorMessage": "pH `ResultValue` is outside the accepted allowed range (0 - 14).",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": ["pH"]
+      }
+    },
+    "required": ["CharacteristicName", "ResultValue"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "minimum": 0,
+        "maximum": 14
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}
