@@ -1,5 +1,5 @@
 {
-  "errorMessage": "ResultDetectionQuantitationLimitUnit is not needed when ResultDetectionQuantitationLimitMeasure is not set.",,
+  "errorMessage": "ResultDetectionQuantitationLimitUnit is not needed when ResultDetectionQuantitationLimitMeasure is not set.",
   "not": {
     "properties": {
       "ResultDetectionQuantitationLimitMeasure": {
