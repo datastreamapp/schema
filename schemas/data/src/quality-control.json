@@ -132,7 +132,7 @@
   },
   "allOf": [
     {
-      "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenMinimum.json"
+      "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenUnit.json"
     },
     {
       "$ref": "./logic/quality-control/ResultValue-HardnessMinimum.json"
