@@ -7,14 +7,14 @@
         "MonitoringLocationType": {
           "enum": ["River/Stream"]
         },
-        "MonitoringLocationDepthHeight": {
+        "ActivityDepthHeightMeasure": {
           "minimum": -65
         },
-        "MonitoringLocationDepthHeightUnit": {
+        "ActivityDepthHeightUnit": {
           "enum": ["m"]
         }
       },
-      "require": ["MonitoringLocationType","MonitoringLocationDepthHeightMeasure","MonitoringLocationDepthHeightUnit"]
+      "require": ["MonitoringLocationType","ActivityDepthHeightMeasure","ActivityDepthHeightUnit"]
     },
     {
       "description": "Great Slave Lake",
@@ -22,14 +22,14 @@
         "MonitoringLocationType": {
           "enum": ["Lake/Pond","Lake","Great Lake"]
         },
-        "MonitoringLocationDepthHeight": {
+        "ActivityDepthHeightMeasure": {
           "minimum": -615
         },
-        "MonitoringLocationDepthHeightUnit": {
+        "ActivityDepthHeightUnit": {
           "enum": ["m"]
         }
       },
-      "require": ["MonitoringLocationType","MonitoringLocationDepthHeightMeasure","MonitoringLocationDepthHeightUnit"]
+      "require": ["MonitoringLocationType","ActivityDepthHeightMeasure","ActivityDepthHeightUnit"]
     }
   ]
 }
