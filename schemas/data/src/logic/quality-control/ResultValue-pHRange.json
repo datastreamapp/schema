@@ -3,7 +3,8 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": ["pH"]
+        "enum": ["pH", 
+                 "pH, lab"]
       }
     },
     "required": ["CharacteristicName", "ResultValue"]
