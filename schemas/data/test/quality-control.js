@@ -50,11 +50,23 @@ const checkProperty = (errors, keyword, property) => {
     else if (keyword === 'exclusiveMinimum' && error.dataPath.includes(property)) return true
     else if (keyword === 'maximum' && error.dataPath.includes(property)) return true
     else if (keyword === 'exclusiveMaximum' && error.dataPath.includes(property)) return true
+    else if (keyword === 'pattern') return true
   }
   return false
 }
 
 describe('Quality Control Checks', function () {
+
+  it('Should reject improperly formatted time', function (done) {
+    const valid = validate({
+      'ActivityStartDate': '2020-01-01',
+      'ActivityStartTime': '9:30:00'
+    })
+    console.log(validate.errors)
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'ActivityStartTime')).to.equal(true)
+    done()
+  })
 
   // #/allOf/6
   it('Should reject Dissolved oxygen (DO) in %', function (done) {
@@ -64,7 +76,6 @@ describe('Quality Control Checks', function () {
       'ResultValue': 1,
       'ResultUnit': '%'
     })
-    console.log(validate.errors)
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
     done()
