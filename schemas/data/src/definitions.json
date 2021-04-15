@@ -15,6 +15,10 @@
     "type": "string",
     "maxLength": 300
   },
+  "LaboratoryName": {
+    "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName",
+    "maxLength": 100
+  },
   "LaboratorySampleID": {
     "title": "Laboratory Sample ID",
     "description": "Unique identifier for the lab sample",

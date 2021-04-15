@@ -199,7 +199,7 @@
           "$ref": "./definitions.json#/timezone-loose"
         },
         "LaboratoryName": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName"
+          "$ref": "./definitions.json#/LaboratoryName"
         },
         "LaboratorySampleID": {
           "$ref": "./definitions.json#/LaboratorySampleID"
