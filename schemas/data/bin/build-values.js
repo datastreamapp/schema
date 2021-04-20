@@ -28,8 +28,8 @@ const wqx = {
   'ResultDetectionQuantitationLimitUnit': 'MeasurementUnit',
   'ActivityDepthHeightUnit': 'MeasurementUnit',
   'MonitoringLocationHorizontalCoordinateReferenceSystem': 'HorizontalReferenceDatum',
-  'MonitoringLocationHorizontalAccuracyUnit':'MeasurementUnit',
-  'MonitoringLocationVerticalUnit':'MeasurementUnit',
+  'MonitoringLocationHorizontalAccuracyUnit': 'MeasurementUnit',
+  'MonitoringLocationVerticalUnit': 'MeasurementUnit',
   'MonitoringLocationType': 'MonitoringLocationType',
   'ActivityType': 'ActivityType',
   'ActivityGroupType': 'ActivityGroupType',
@@ -63,13 +63,23 @@ const additions = (column, list = []) => {
   let arr = []
   // Looks for retired values and adds non-retired value
   if (column === 'CharacteristicName') {
-    for (const item of list) {
+    let previous, retiredDuplicates = []
+    for (let item of list) {
       const index = item.indexOf('***retired***')
-      if (index === -1) {
-        arr.push(item)
-        continue
+      if (index !== -1) {
+        item = item.substr(0, index)
+        if (!previous.localeCompare(item, undefined, { sensitivity: 'base' })) {  // 0 == same
+          retiredDuplicates.push(item)
+          item = null
+        }
       }
-      arr.push(item.substr(0, index))
+      if (item) {
+        arr.push(item)
+        previous = item
+      }
+    }
+    if (retiredDuplicates.length) {
+      console.log(`|** Retired Duplicates: "${retiredDuplicates.join('", "')}"`)
     }
   } else {
     arr = list
@@ -91,14 +101,16 @@ const additions = (column, list = []) => {
         duplicates.push(arr[i])
       }
     }
-    console.log(`|   "${duplicates.join('", "')}"`)
+    if (duplicates.length) {
+      console.log(`|** Duplicates "${duplicates.join('", "')}"`)
+    }
   }
 
   // remove mixcase duplicates
   for (let i = 1, l = uniqueEnum.length; i < l; i++) {
     if (uniqueEnum[i - 1].localeCompare(uniqueEnum[i], undefined, { sensitivity: 'base' }) !== -1) {
-      duplicates.push(uniqueEnum[i-1])
-      uniqueEnum[i-1] = null
+      duplicates.push(uniqueEnum[i - 1])
+      uniqueEnum[i - 1] = null
     }
   }
   uniqueEnum = uniqueEnum.filter((v) => v !== null)
