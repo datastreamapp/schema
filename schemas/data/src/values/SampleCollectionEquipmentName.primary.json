@@ -10,6 +10,7 @@
     "Kemmerer Bottle",
     "Nansen Bottle",
     "Niskin Bottle",
+    "Osterberg Piston Sampler",
     "pH Paper",
     "Polar Orga. Chem. Integrative Sampler",
     "Probe/Sensor",
@@ -35,7 +36,8 @@
     "Water Bottle",
     "Water Sampler (Other)",
     "WBH-96",
-    "Whirl-pak bag"
+    "Whirl-pak bag",
+    "Wide mouth glass jar"
   ],
   "maxLength": 40
 }

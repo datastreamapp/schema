@@ -35,9 +35,9 @@
     "glob": "7.1.6",
     "json-schema-ref-parser": "9.0.7",
     "lint-staged": "10.5.4",
-    "rollup": "2.41.5",
+    "rollup": "2.45.2",
     "rollup-plugin-terser": "7.0.2",
-    "wqx": "3.0.3"
+    "wqx": "3.0.4"
   },
   "repository": {
     "type": "git",
