@@ -65,7 +65,7 @@ describe('Required / Dependencies', function () {
       'ActivityDepthHeightMeasure': '-34',
       'ActivityDepthHeightUnit': 'm',
       'SampleCollectionEquipmentName': 'Bucket',
-      'CharacteristicName': 'Silver Dioxide',
+      'CharacteristicName': 'Zinc-64',
       'MethodSpeciation': 'as B',
       'ResultSampleFraction': 'Dissolved',
       'ResultValue': '99.99',
