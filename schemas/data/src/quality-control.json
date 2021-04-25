@@ -132,22 +132,22 @@
   },
   "allOf": [
     {
-      "$ref": "./logic/quality-control/ResultValue-DissolvedOxygenUnit.json"
+      "$ref": "./quality-control/ResultValue-DissolvedOxygenUnit.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultValue-HardnessMinimum.json"
+      "$ref": "./quality-control/ResultValue-HardnessMinimum.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultValue-pHRange.json"
+      "$ref": "./quality-control/ResultValue-pHRange.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultValue-TemperatureRange.json"
+      "$ref": "./quality-control/ResultValue-TemperatureRange.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultUnit-Allowed.json"
+      "$ref": "./quality-control/ResultUnit-Allowed.json"
     },
     {
-      "$ref": "./logic/quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
+      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
     }
   ]
 }

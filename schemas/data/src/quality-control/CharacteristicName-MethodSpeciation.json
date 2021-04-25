@@ -1,0 +1,47 @@
+{
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "not": {
+          "enum": [
+            "Ammonia",
+            "Ammonia and ammonium",
+            "Ammonium",
+            "Ammonium nitrate",
+            "Inorganic nitrogen (ammonia, nitrate and nitrite)",
+            "Inorganic nitrogen (nitrate and nitrite)",
+            "Kjeldahl nitrogen",
+            "Nitrate",
+            "Nitrite",
+            "Organic Nitrogen",
+            "Organic phosphorus",
+            "Orthophosphate",
+            "Phosphorus, hydrolyzable",
+            "Polyphosphate",
+            "Radium",
+            "Soluble Reactive Phosphorus (SRP)",
+            "Total Kjeldahl nitrogen",
+            "Total Nitrogen, mixed forms",
+            "Total Phosphorus, mixed forms"
+          ]
+        }
+      }
+    },
+    "required": [
+      "CharacteristicName"
+    ]
+  },
+  "then": {
+    "properties": {
+      "MethodSpeciation": {
+        "enum": [
+          null,
+          ""
+        ]
+      }
+    },
+    "required": [
+      "MethodSpeciation"
+    ]
+  }
+}

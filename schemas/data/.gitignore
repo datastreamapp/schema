@@ -6,4 +6,4 @@ primary
 frontend
 backend
 quality-control
-!src/logic/quality-control
+!src/quality-control
