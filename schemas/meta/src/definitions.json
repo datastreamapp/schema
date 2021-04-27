@@ -12,7 +12,8 @@
       "description": "Email address publicly associated with the dataset",
       "$semver": "minor",
       "type": "string",
-      "format": "email"
+      "format": "email",
+      "maxLength": 256
     },
     "DataCollectionOrganization": {
       "title": "Data Collection Organization",
@@ -110,7 +111,7 @@
     },
     "Citation": {
       "title": "Citation",
-      "description": "How the data should be cited if it is used by others. Supports allowed variables. Default `Chicago`: {CollectionOrganization}. {Publication Year}. \"{DatasetName}\" (dataset). {Version}. DataStream. {DOI}.",
+      "description": "How the data should be cited if it is used by others. Supports allowed variables. Default `Chicago`: {CollectionOrganization}. {PublishYear}. \"{DatasetName}\" (dataset). {Version}. DataStream. {DOI}.",
       "$semver": "major",
       "type": "string"
     },
