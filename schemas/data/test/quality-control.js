@@ -44,12 +44,12 @@ const checkProperty = (errors, keyword, property) => {
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
     else if (keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
     else if (keyword === 'anyOf') return true
-    else if (keyword === 'not' && error.dataPath.includes(property)) return true
-    else if (keyword === 'enum' && error.dataPath.includes(property)) return true
-    else if (keyword === 'minimum' && error.dataPath.includes(property)) return true
-    else if (keyword === 'exclusiveMinimum' && error.dataPath.includes(property)) return true
-    else if (keyword === 'maximum' && error.dataPath.includes(property)) return true
-    else if (keyword === 'exclusiveMaximum' && error.dataPath.includes(property)) return true
+    else if (keyword === 'not' && error.instancePath.includes(property)) return true
+    else if (keyword === 'enum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'minimum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'exclusiveMinimum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'maximum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'exclusiveMaximum' && error.instancePath.includes(property)) return true
     else if (keyword === 'pattern') return true
   }
   return false
@@ -62,7 +62,6 @@ describe('Quality Control Checks', function () {
       'ActivityStartDate': '2020-01-01',
       'ActivityStartTime': '9:30:00'
     })
-    console.log(validate.errors)
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'pattern', 'ActivityStartTime')).to.equal(true)
     done()
@@ -110,7 +109,6 @@ describe('Quality Control Checks', function () {
       'ResultValue': 0,
       'ResultUnit': '%'
     }))
-    console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })

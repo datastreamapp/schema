@@ -10,7 +10,7 @@ const checkProperty = (errors, keyword, property) => {
     const error = validate.errors[i]
     if (error.keyword !== keyword) continue
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
-    else if (keyword === 'enum' && error.params.allowedValues.length && error.dataPath === `/${property}`) return true
+    else if (keyword === 'enum' && error.params.allowedValues.length && error.instancePath === `/${property}`) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
     else if (keyword === 'propertyNames' && error.params.propertyName === property) return true
     //else if(keyword === 'if' && error.params.failingKeyword === 'then' && error.schemaPath === property ) return true
@@ -65,7 +65,7 @@ describe('Required / Dependencies', function () {
       'ActivityDepthHeightMeasure': '-34',
       'ActivityDepthHeightUnit': 'm',
       'SampleCollectionEquipmentName': 'Bucket',
-      'CharacteristicName': 'Zinc-64',
+      'CharacteristicName': 'Sulfur',
       'MethodSpeciation': 'as B',
       'ResultSampleFraction': 'Dissolved',
       'ResultValue': '99.99',
@@ -85,7 +85,7 @@ describe('Required / Dependencies', function () {
       'AnalysisStartTime': '13:15:00',
       'AnalysisStartTimeZone': '-06:00'
     })
-    //console.log(validate.errors)
+    console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })
