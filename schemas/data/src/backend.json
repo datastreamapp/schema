@@ -7,7 +7,8 @@
   "additionalProperties": true,
   "properties": {
     "DatasetName": {
-      "$ref": "./definitions.json#/DatasetName"
+      "$ref": "./definitions.json#/DatasetName",
+      "transform": ["trim"]
     },
     "MonitoringLocationID": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"

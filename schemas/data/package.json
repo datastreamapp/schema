@@ -25,19 +25,19 @@
   },
   "homepage": "https://github.com/gordonfn/schema#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "17.1.0",
-    "@rollup/plugin-node-resolve": "11.2.0",
-    "ajv": "7.2.1",
-    "ajv-formats": "1.5.1",
+    "@rollup/plugin-commonjs": "19.0.0",
+    "@rollup/plugin-node-resolve": "13.0.0",
+    "ajv": "8.2.0",
+    "ajv-formats": "2.1.0",
     "ajv-formats-draft2019": "1.4.3",
-    "ajv-keywords": "4.0.0",
+    "ajv-keywords": "5.0.0",
     "change-case": "4.1.2",
-    "glob": "7.1.6",
+    "glob": "7.1.7",
     "json-schema-ref-parser": "9.0.7",
-    "lint-staged": "10.5.4",
-    "rollup": "2.45.2",
+    "lint-staged": "11.0.0",
+    "rollup": "2.47.0",
     "rollup-plugin-terser": "7.0.2",
-    "wqx": "3.0.4"
+    "wqx": "3.0.5"
   },
   "repository": {
     "type": "git",
