@@ -42,6 +42,7 @@
       "description": "ISO 19115 Maintenance Frequency code indicating the frequency with which modifications and deletions are made to the data after it is first produced",
       "$semver": "patch",
       "type": "string",
+      "default": "unknown",
       "enum": [
         "continual",
         "daily",
