@@ -29,19 +29,17 @@
     },
     "ProgressCode": {
       "title": "Monitoring Program Progress",
-      "description": "ISO 19115 Progress Code indicating the status of the dataset",
+      "description": "ISO 19115 Progress code indicating the status of the dataset",
       "$semver": "patch",
       "type": "string",
       "enum": [
         "completed",
-        "historicalArchive",
-        "onGoing",
-        "underDevelopment"
+        "onGoing"
       ]
     },
     "MaintenanceFrequencyCode": {
       "title": "Maintenance Frequency",
-      "description": "ISO 19115 Maintenance Frequency Code indicating the frequency with which modifications and deletions are made to the data after it is first produced",
+      "description": "ISO 19115 Maintenance Frequency code indicating the frequency with which modifications and deletions are made to the data after it is first produced",
       "$semver": "patch",
       "type": "string",
       "enum": [
@@ -54,7 +52,6 @@
         "biannually",
         "annually",
         "asNeeded",
-        "irregular",
         "unknown"
       ]
     },
