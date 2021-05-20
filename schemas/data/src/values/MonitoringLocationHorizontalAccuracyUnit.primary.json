@@ -5,5 +5,5 @@
   "enum": [
     "m"
   ],
-  "maxLength": 2
+  "maxLength": 1
 }

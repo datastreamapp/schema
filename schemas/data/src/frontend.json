@@ -41,7 +41,7 @@
           "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure"
         },
         "MonitoringLocationHorizontalAccuracyUnit": {
-          "$ref": "./values/MonitoringLocationVerticalUnit.primary.json",
+          "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.primary.json",
           "transform": [
             "trim",
             "toEnumCase"

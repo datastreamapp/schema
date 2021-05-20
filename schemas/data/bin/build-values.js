@@ -1,32 +1,13 @@
 const fs = require('fs')
 
-const columns = [
-  'ResultUnit',
-  'ResultDetectionQuantitationLimitUnit',
-  'ActivityDepthHeightUnit',
-  'ActivityGroupType',
-  'MonitoringLocationHorizontalCoordinateReferenceSystem',
+const subsetOnly = [
   'MonitoringLocationHorizontalAccuracyUnit',
   'MonitoringLocationVerticalUnit',
-  'MonitoringLocationType',
-  'ActivityType',
-  'ActivityMediaName',
-  'SampleCollectionEquipmentName',
-  'ResultDetectionCondition',
-  'CharacteristicName',
-  'MethodSpeciation',
-  'ResultSampleFraction',
-  'ResultStatusID',
-  'ResultValueType',
-  'ResultAnalyticalMethodContext',
-  'ResultDetectionQuantitationLimitType',
+  'ActivityDepthHeightUnit'
 ]
 
 // DS to WQX values name mapping
 const wqx = {
-  'ResultUnit': 'MeasurementUnit',
-  'ResultDetectionQuantitationLimitUnit': 'MeasurementUnit',
-  'ActivityDepthHeightUnit': 'MeasurementUnit',
   'MonitoringLocationHorizontalCoordinateReferenceSystem': 'HorizontalReferenceDatum',
   'MonitoringLocationHorizontalAccuracyUnit': 'MeasurementUnit',
   'MonitoringLocationVerticalUnit': 'MeasurementUnit',
@@ -34,15 +15,18 @@ const wqx = {
   'ActivityType': 'ActivityType',
   'ActivityGroupType': 'ActivityGroupType',
   'ActivityMediaName': 'ActivityMediaSubdivision',
+  'ActivityDepthHeightUnit': 'MeasurementUnit',
   'SampleCollectionEquipmentName': 'SampleCollectionEquipment',
-  'ResultDetectionCondition': 'ResultDetectionCondition',
   'CharacteristicName': 'Characteristic',
   'MethodSpeciation': 'MethodSpeciation',
   'ResultSampleFraction': 'SampleFraction',
-  'ResultStatusID': 'ResultStatus',
+  'ResultUnit': 'MeasurementUnit',
   'ResultValueType': 'ResultValueType',
-  'ResultAnalyticalMethodContext': 'AnalyticalMethodContext',
+  'ResultDetectionCondition': 'ResultDetectionCondition',
+  'ResultDetectionQuantitationLimitUnit': 'MeasurementUnit',
   'ResultDetectionQuantitationLimitType': 'DetectionQuantitationLimitType',
+  'ResultStatusID': 'ResultStatus',
+  'ResultAnalyticalMethodContext': 'AnalyticalMethodContext',
 }
 
 const retire = (column, list) => {
@@ -167,13 +151,20 @@ const subtractions = (column, list = [], retired = []) => {
   return list
 }
 
-columns.forEach(col => {
+Object.keys(wqx).forEach(col => {
   console.log(col)
-  let object = require(`wqx/values/${wqx[col]}.json`)
+  let object = JSON.parse(JSON.stringify(require(`wqx/values/${wqx[col]}.json`)))
 
   const retired = retire(col, object.enum)
 
   object.enum = additions(col, object.enum)
+
+  if (subsetOnly.includes(col)) {
+    try {
+      object.enum = require(`../src/subset/${col}.json`)
+    } catch (e) {}
+  }
+
   object.maxLength = Math.max(...(object.enum.map(el => el.length)))  // catch any additions that may be longer
 
   fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
