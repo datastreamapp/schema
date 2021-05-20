@@ -92,6 +92,14 @@ const additions = (column, list = []) => {
     console.log(`|-> Skip additions`)
   }
 
+  // TODO only have apply to legacy
+  try {
+    const deprecated = require(`../src/deprecated/${column}.json`)
+    arr = arr.concat(deprecated)
+  } catch (e) {
+    console.log(`|-> Skip deprecated`)
+  }
+
   // remove exact duplicates
   const duplicates = []
   let uniqueEnum = [...new Set(arr.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })))]

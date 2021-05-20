@@ -1,6 +1,6 @@
 {
   "name": "@gordonfn/data-schema",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
@@ -27,7 +27,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "19.0.0",
     "@rollup/plugin-node-resolve": "13.0.0",
-    "ajv": "8.3.0",
+    "ajv": "8.4.0",
     "ajv-formats": "2.1.0",
     "ajv-formats-draft2019": "1.4.3",
     "ajv-keywords": "5.0.0",
@@ -35,7 +35,7 @@
     "glob": "7.1.7",
     "json-schema-ref-parser": "9.0.7",
     "lint-staged": "11.0.0",
-    "rollup": "2.47.0",
+    "rollup": "2.48.0",
     "rollup-plugin-terser": "7.0.2",
     "wqx": "3.0.5"
   },

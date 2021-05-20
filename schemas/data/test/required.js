@@ -69,7 +69,7 @@ describe('Required / Dependencies', function () {
       'MethodSpeciation': 'as B',
       'ResultSampleFraction': 'Dissolved',
       'ResultValue': '99.99',
-      'ResultUnit': 'ug',
+      'ResultUnit': 'ug/l',
       'ResultValueType': 'Actual',
       'ResultStatusID': 'Accepted',
       'ResultComment': 'None at this time',
@@ -85,7 +85,6 @@ describe('Required / Dependencies', function () {
       'AnalysisStartTime': '13:15:00',
       'AnalysisStartTimeZone': '-06:00'
     })
-    console.log(validate.errors)
     expect(valid).to.equal(true)
     done()
   })
