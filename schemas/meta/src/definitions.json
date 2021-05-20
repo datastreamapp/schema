@@ -113,7 +113,7 @@
     },
     "TopicCategoryCode": {
       "title": "Topic Category",
-      "description": "ISO 19115 MD_TopicCategoryCode: high-level geographic data thematic classification to assist in the grouping and search of available geographic data sets. Can be used to group keywords as well. Listed examples are not exhaustive.",
+      "description": "ISO 19115 Topic Category Code indicating the high-level geographic data thematic classification to assist in the grouping and search of available geographic data sets. Can be used to group keywords as well. Listed examples are not exhaustive.",
       "$semver": "patch",
       "type": "array",
       "items": {
