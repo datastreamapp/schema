@@ -6,16 +6,23 @@ let validateStrict = require('../primary')
 let validateBackend = require('../backend')
 
 const checkProperty = (errors, keyword, property) => {
-  for (let i = errors.length; i--; i) {
-    const error = validate.errors[i]
+  for (const error of errors) {
+    if (error.keyword === 'errorMessage') {
+      const nested = checkProperty(error.params.errors, keyword, property)
+      if (nested) return nested
+    }
     if (error.keyword !== keyword) continue
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
-    else if (keyword === 'enum' && error.params.allowedValues.length && error.dataPath === `/${property}`) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
-    else if (keyword === 'propertyNames' && error.params.propertyName === property) return true
-    //else if(keyword === 'if' && error.params.failingKeyword === 'then' && error.schemaPath === property ) return true
     else if (keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
     else if (keyword === 'anyOf') return true
+    else if (keyword === 'not' && error.instancePath.includes(property)) return true
+    else if (keyword === 'enum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'minimum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'exclusiveMinimum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'maximum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'exclusiveMaximum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'pattern') return true
   }
   return false
 }
@@ -29,7 +36,9 @@ describe('Formatting', function () {
       'ActivityEndTime': '13:15:00.000',
       'AnalysisStartTime': '2:15'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(0)
+    expect(checkProperty(validate.errors, 'pattern', 'ActivityStartTime')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'ActivityEndTime')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'AnalysisStartTime')).to.equal(false)
     done()
   })
 
@@ -39,7 +48,10 @@ describe('Formatting', function () {
       'ActivityEndTime': '13:15.00.000',
       'AnalysisStartTime': '2.15'
     })
-    expect(validate.errors.filter((i) => i.keyword === 'pattern').length).to.equal(3)
+    console.log(JSON.stringify(validate.errors, null, 2))
+    expect(checkProperty(validate.errors, 'pattern', 'ActivityStartTime')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'ActivityEndTime')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'AnalysisStartTime')).to.equal(true)
     done()
   })
 

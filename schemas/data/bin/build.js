@@ -106,6 +106,7 @@ const ajvFrontend = new Ajv({
 })
 require('ajv-formats')(ajvFrontend, ['date'])
 //require('ajv-formats-draft2019')(ajvFrontend, [])
+require("ajv-errors")(ajvFrontend)
 require('ajv-keywords/dist/keywords/transform')(ajvFrontend)
 process('frontend',  'allOf', ajvFrontend)
 
@@ -138,5 +139,6 @@ const ajvQualityControl = new Ajv({
 })
 require('ajv-formats')(ajvQualityControl, ['date'])
 //require('ajv-formats-draft2019')(ajvQualityControl, [])
+require("ajv-errors")(ajvQualityControl)
 require('ajv-keywords/dist/keywords/transform')(ajvQualityControl)
 process('quality-control',  false, ajvQualityControl)

@@ -6,20 +6,14 @@
           "Ammonia",
           "Ammonia and ammonium",
           "Ammonium",
-          "Ammonium nitrate",
-          "Inorganic nitrogen (ammonia, nitrate and nitrite)",
           "Inorganic nitrogen (nitrate and nitrite)",
           "Kjeldahl nitrogen",
           "Nitrate",
           "Nitrite",
           "Organic Nitrogen",
-          "Organic phosphorus",
           "Orthophosphate",
           "Phosphorus, hydrolyzable",
-          "Polyphosphate",
-          "Radium",
           "Soluble Reactive Phosphorus (SRP)",
-          "Total Kjeldahl nitrogen",
           "Total Nitrogen, mixed forms",
           "Total Phosphorus, mixed forms"
         ]
@@ -33,5 +27,7 @@
     "required": [
       "MethodSpeciation"
     ]
-  }
+  },
+  "$generated": "build-logic.js",
+  "errorMessage": "MethodSpeciation required for selected CharacteristicName"
 }

@@ -1,4 +1,5 @@
 {
+  "errorMessage": "ResultDetectionCondition requires ResultDetectionQuantitationLimit columns",
   "if": {
     "properties": {
       "ResultDetectionCondition": {

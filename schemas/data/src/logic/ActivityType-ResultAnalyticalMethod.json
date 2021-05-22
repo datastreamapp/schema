@@ -1,4 +1,5 @@
 {
+  "errorMessage": "ActivityType of group Sample requires LaboratoryName with ResultAnalyticalMethod Name or ID & Context",
   "if": {
     "properties": {
       "ActivityType": {

@@ -37,8 +37,11 @@ const defaultObject = {
 }
 
 const checkProperty = (errors, keyword, property) => {
-  for (let i = errors.length; i--; i) {
-    const error = validate.errors[i]
+  for (const error of errors) {
+    if (error.keyword === 'errorMessage') {
+      const nested = checkProperty(error.params.errors, keyword, property)
+      if (nested) return nested
+    }
     if (error.keyword !== keyword) continue
     if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
     else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true

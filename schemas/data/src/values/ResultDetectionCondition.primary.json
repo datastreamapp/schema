@@ -3,8 +3,8 @@
   "description": "",
   "type": "string",
   "enum": [
-    "Below Detection/Quantification Limit",
     "Above Detection/Quantification Limit",
+    "Below Detection/Quantification Limit",
     "Detected Not Quantified",
     "Not Detected",
     "Not Reported"

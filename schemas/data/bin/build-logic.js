@@ -1,22 +1,27 @@
 const fs = require('fs')
-const { subtractions } = require('./build-values')
+const { subset } = require('./build-lib')
 
 const wqxRequiredIf = async (file) => {
   console.log(file)
   const object = require(`wqx/required/${file}.json`)
 
-  const column = file.split('-')[0]
-  const list = [...new Set(object.if.properties[column].enum.sort())]
-  object.if.properties[column].enum = subtractions(column, list)
+  const [columnFrom, columnTo] = file.split('-')
+  const list = [...new Set(object.if.properties[columnFrom].enum.sort())]
+  object.if.properties[columnFrom].enum = subset(columnFrom, list)
+
+  object.$generated = 'build-logic.js'
+  object.errorMessage =`${columnTo} required for selected CharacteristicName`
 
   fs.writeFileSync(__dirname + `/../src/logic/${file}.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
 
   const qc = {
+    '$generated':'build-logic.js',
+    'errorMessage': `${columnTo} should be empty for selected CharacteristicName`,
     'if': {
       'properties': {
         'CharacteristicName': {
           'not': {
-            'enum': list
+            'enum': object.if.properties[columnFrom].enum
           }
         }
       },
@@ -26,13 +31,11 @@ const wqxRequiredIf = async (file) => {
     },
     'then': {
       'properties': {
-        [file.split('-')[1]]: {
+        [columnTo]: {
           'enum': [null, '']
         }
       },
-      'required': [
-        'MethodSpeciation'
-      ]
+      'required': [columnTo]
     }
   }
   fs.writeFileSync(__dirname + `/../src/quality-control/${file}.json`, JSON.stringify(qc, null, 2), { encoding: 'utf8' })

@@ -1,4 +1,5 @@
 {
+  "errorMessage": "only one of ResultValue or ResultDetectionCondition can be set at once",
   "oneOf": [
     {
       "properties": {

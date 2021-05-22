@@ -3,9 +3,9 @@
   "description": "",
   "type": "string",
   "enum": [
-    "m",
     "cm",
-    "ft"
+    "ft",
+    "m"
   ],
   "maxLength": 2
 }

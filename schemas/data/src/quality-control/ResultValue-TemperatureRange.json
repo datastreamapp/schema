@@ -1,5 +1,5 @@
 {
-  "errorMessage": "Temperature is outside an expected range (-100 - 100).",
+  "errorMessage": "Temperature is outside an expected range (-100 to 100).",
   "if": {
     "properties": {
       "CharacteristicName": {
