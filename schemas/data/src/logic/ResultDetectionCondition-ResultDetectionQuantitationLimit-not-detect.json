@@ -1,5 +1,7 @@
 {
-  "errorMessage": "ResultDetectionCondition of non-detect should not have ResultDetectionQuantitationLimit columns set",
+  "title": "ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect",
+  "description": "When ResultDetectionCondition is non-detect, `ResultDetectionQuantitationLimit*` should not be set.",
+  "errorMessage": "requires ResultDetectionQuantitationLimit columns to be empty when ResultDetectionCondition is non-detect",
   "if": {
     "properties": {
       "ResultDetectionCondition": {

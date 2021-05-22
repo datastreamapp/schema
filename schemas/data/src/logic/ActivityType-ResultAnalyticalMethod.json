@@ -1,5 +1,7 @@
 {
-  "errorMessage": "ActivityType of group Sample requires LaboratoryName with ResultAnalyticalMethod Name or ID & Context",
+  "title": "ActivityType-ResultAnalyticalMethod",
+  "description": "When `ActivityType` starts with `Sample*`, `LaboratoryName` and `ResultAnalyticalMethod*` columns are need to provide necessary metadata.",
+  "errorMessage": "requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with `Sample`",
   "if": {
     "properties": {
       "ActivityType": {

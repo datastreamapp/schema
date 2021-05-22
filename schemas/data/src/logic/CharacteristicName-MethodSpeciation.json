@@ -1,4 +1,8 @@
 {
+  "$generated": "build-logic.js",
+  "title": "CharacteristicName-MethodSpeciation",
+  "description": "Certain CharacteristicName require MethodSpeciation to improve observation context",
+  "errorMessage": "MethodSpeciation required for selected CharacteristicName",
   "if": {
     "properties": {
       "CharacteristicName": {
@@ -27,7 +31,5 @@
     "required": [
       "MethodSpeciation"
     ]
-  },
-  "$generated": "build-logic.js",
-  "errorMessage": "MethodSpeciation required for selected CharacteristicName"
+  }
 }

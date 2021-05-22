@@ -3,31 +3,39 @@ const { subset } = require('./build-lib')
 
 const wqxRequiredIf = async (file) => {
   console.log(file)
-  const object = require(`wqx/required/${file}.json`)
-
   const [columnFrom, columnTo] = file.split('-')
+
+  const logicJSON = require(__dirname + `/../src/logic/${file}.json`)
+
+  const object = {
+    $generated: 'build-logic.js',
+    title: logicJSON.title,
+    description: logicJSON.description,
+    errorMessage: logicJSON.errorMessage,
+    ...require(`wqx/required/${file}.json`)
+  }
+
   const list = [...new Set(object.if.properties[columnFrom].enum.sort())]
   object.if.properties[columnFrom].enum = subset(columnFrom, list)
 
-  object.$generated = 'build-logic.js'
-  object.errorMessage =`${columnTo} required for selected CharacteristicName`
-
   fs.writeFileSync(__dirname + `/../src/logic/${file}.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
 
+
+  const qcJSON = require(__dirname + `/../src/quality-control/${file}.json`)
   const qc = {
-    '$generated':'build-logic.js',
-    'errorMessage': `${columnTo} should be empty for selected CharacteristicName`,
+    '$generated': 'build-logic.js',
+    title: qcJSON.title,
+    description: qcJSON.description,
+    errorMessage: qcJSON.errorMessage,
     'if': {
       'properties': {
-        'CharacteristicName': {
+        [columnFrom]: {
           'not': {
             'enum': object.if.properties[columnFrom].enum
           }
         }
       },
-      'required': [
-        'CharacteristicName'
-      ]
+      'required': [columnFrom]
     },
     'then': {
       'properties': {

@@ -1,4 +1,8 @@
 {
+  "$generated": "build-logic.js",
+  "title": "CharacteristicName-ResultSampleFraction",
+  "description": "Certain CharacteristicName require ResultSampleFraction to improve observation context",
+  "errorMessage": "ResultSampleFraction required for selected CharacteristicName",
   "if": {
     "properties": {
       "CharacteristicName": {
@@ -169,7 +173,5 @@
     "required": [
       "ResultSampleFraction"
     ]
-  },
-  "$generated": "build-logic.js",
-  "errorMessage": "ResultSampleFraction required for selected CharacteristicName"
+  }
 }

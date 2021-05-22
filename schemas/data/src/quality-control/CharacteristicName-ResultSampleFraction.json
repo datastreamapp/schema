@@ -1,5 +1,7 @@
 {
   "$generated": "build-logic.js",
+  "title": "CharacteristicName-ResultSampleFraction",
+  "description": "Certain CharacteristicName should not have ResultSampleFraction to improve observation context",
   "errorMessage": "ResultSampleFraction should be empty for selected CharacteristicName",
   "if": {
     "properties": {

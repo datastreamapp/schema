@@ -1,4 +1,7 @@
 {
+  "title": "ResultDetectionQuantitationLimitMinimumMeasure",
+  "description": "",
+  "errorMessage": "selected unit cannot have a measure below zero",
   "if": {
     "properties": {
       "ResultDetectionQuantitationLimitUnit": {

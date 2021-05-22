@@ -1,5 +1,7 @@
 {
   "$generated": "build-logic.js",
+  "title": "CharacteristicName-MethodSpeciation",
+  "description": "Certain CharacteristicName should not have MethodSpeciation to improve observation context",
   "errorMessage": "MethodSpeciation should be empty for selected CharacteristicName",
   "if": {
     "properties": {

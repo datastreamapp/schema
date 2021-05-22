@@ -1,5 +1,7 @@
 {
-  "errorMessage": "ResultDetectionCondition requires ResultDetectionQuantitationLimit columns",
+  "title": "ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below",
+  "description": "When ResultDetectionCondition is above or below, `ResultDetectionQuantitationLimit*` should be set.",
+  "errorMessage": "requires ResultDetectionQuantitationLimit columns when ResultDetectionCondition is above or below limits",
   "if": {
     "properties": {
       "ResultDetectionCondition": {

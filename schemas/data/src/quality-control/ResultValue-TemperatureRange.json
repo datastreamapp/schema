@@ -1,4 +1,6 @@
 {
+  "title": "Temperature Range",
+  "description": "",
   "errorMessage": "Temperature is outside an expected range (-100 to 100).",
   "if": {
     "properties": {

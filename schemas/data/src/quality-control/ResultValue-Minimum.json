@@ -1,5 +1,7 @@
 {
-  "errorMessage": "ResultValue is below zero for a unit that may not make sense.",
+  "title": "Result Minimum Measure",
+  "description": "",
+  "errorMessage": "selected unit cannot have a measure below zero",
   "if": {
     "properties": {
       "ResultUnit": {
