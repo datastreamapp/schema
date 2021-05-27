@@ -37,6 +37,7 @@ const defaultObject = {
 }
 
 const checkProperty = (errors, keyword, property) => {
+  if (errors === null) return false
   for (const error of errors) {
     if (error.keyword === 'errorMessage') {
       const nested = checkProperty(error.params.errors, keyword, property)
@@ -70,7 +71,7 @@ describe('Quality Control Checks', function () {
     done()
   })
 
-  // #/allOf/6
+  // ResultValue-DissolvedOxygenUnit
   it('Should reject Dissolved oxygen (DO) in %', function (done) {
 
     const valid = validate({
@@ -93,30 +94,19 @@ describe('Quality Control Checks', function () {
     done()
   })
 
-  // #/allOf/7
+  // ResultValue-HardnessMinimum
   it('Should reject Dissolved oxygen saturation < 0', function (done) {
 
     const valid = validate(Object.assign({}, defaultObject, {
       'CharacteristicName': 'Dissolved oxygen saturation',
       'ResultValue': -2,
-      'ResultUnit': '%'
+      'ResultUnit': 'ppm'
     }))
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'minimum', 'ResultValue')).to.equal(true)
     done()
   })
-  it('Should accept Dissolved oxygen saturation >= 0', function (done) {
 
-    const valid = validate(Object.assign({}, defaultObject, {
-      'CharacteristicName': 'Dissolved oxygen saturation',
-      'ResultValue': 0,
-      'ResultUnit': '%'
-    }))
-    expect(valid).to.equal(true)
-    done()
-  })
-
-  // #/allOf/7
   it('Should reject Hardness < 0', function (done) {
 
     const valid = validate({
@@ -141,7 +131,7 @@ describe('Quality Control Checks', function () {
     done()
   })
 
-  // #/allOf/8
+  // ResultValue-pHRange
   it('Should reject pH below range', function (done) {
 
     const valid = validate({
@@ -175,7 +165,7 @@ describe('Quality Control Checks', function () {
     done()
   })
 
-  // #/allOf/9
+  // ResultValue-TemperatureRange
   it('Should reject Temperature below range', function (done) {
 
     const valid = validate({
@@ -209,5 +199,51 @@ describe('Quality Control Checks', function () {
     done()
   })
 
+  // ResultUnit-Allowed
+  it('Should accept when ResultValue & ResultUnit exist', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'Temperature, water',
+      'ResultValue': 0,
+      'ResultUnit': 'deg C'
+    })
+    console.log(JSON.stringify(validate.errors, null, 2))
+    expect(valid).to.equal(true)
+    done()
+  })
+  it('Should reject when ResultUnit exists without ResultValue', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'Temperature, water',
+      'ResultUnit': 'deg C'
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
+    expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
+    done()
+  })
+
+  //ResultDetectionQuantitationLimitUnit-Allowed
+  it('Should accept when ResultDetectionQuantitationLimitMeasure & ResultDetectionQuantitationLimitUnit exist', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'Temperature, water',
+      'ResultDetectionQuantitationLimitMeasure': 0,
+      'ResultDetectionQuantitationLimitUnit': 'deg C'
+    })
+    expect(valid).to.equal(true)
+    done()
+  })
+  it('Should reject when ResultDetectionQuantitationLimitUnit exists without ResultDetectionQuantitationLimitMeasure', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'Temperature, water',
+      'ResultDetectionQuantitationLimitUnit': 'deg C'
+    })
+    expect(valid).to.equal(true)
+    expect(checkProperty(validate.errors, 'required', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+    done()
+  })
 
 })

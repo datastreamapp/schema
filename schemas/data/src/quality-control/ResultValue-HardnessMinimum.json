@@ -1,5 +1,7 @@
 {
-  "errorMessage": "",
+  "title": "",
+  "description": "",
+  "errorMessage": "selected CharacteristicName cannot have a ResultValue below zero",
   "if": {
     "properties": {
       "CharacteristicName": {

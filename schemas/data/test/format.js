@@ -48,7 +48,6 @@ describe('Formatting', function () {
       'ActivityEndTime': '13:15.00.000',
       'AnalysisStartTime': '2.15'
     })
-    console.log(JSON.stringify(validate.errors, null, 2))
     expect(checkProperty(validate.errors, 'pattern', 'ActivityStartTime')).to.equal(true)
     expect(checkProperty(validate.errors, 'pattern', 'ActivityEndTime')).to.equal(true)
     expect(checkProperty(validate.errors, 'pattern', 'AnalysisStartTime')).to.equal(true)

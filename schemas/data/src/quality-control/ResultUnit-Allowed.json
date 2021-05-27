@@ -1,16 +1,19 @@
 {
-  "errorMessage": "ResultUnit is not needed when ResultValue is not set.",
-  "not": {
-    "properties": {
-      "ResultValue": {
-        "enum": [null,""]
-      },
-      "ResultUnit": {
-        "not": {
+  "title": "NoResultUnit",
+  "description": "",
+  "errorMessage": "ResultUnit is not needed when ResultValue is not set or ResultValue is missing.",
+  "oneOf": [
+    {
+      "required": ["ResultValue","ResultUnit"]
+    },{
+      "properties": {
+        "ResultValue": {
+          "enum": [null,""]
+        },
+        "ResultUnit": {
           "enum": [null,""]
         }
       }
-    },
-    "required": ["ResultUnit"]
-  }
+    }
+  ]
 }
