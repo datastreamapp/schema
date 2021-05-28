@@ -237,7 +237,9 @@
         "AnalysisStartTime": [
           "AnalysisStartTimeZone"
         ]
-      }
+      },
+      "errorMessage":
+           {"additionalProperties":"Should not have additional properties"}
     },
     {
       "$ref": "./logic/CharacteristicName-MethodSpeciation.json"
