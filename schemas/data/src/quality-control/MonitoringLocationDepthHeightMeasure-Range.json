@@ -1,5 +1,5 @@
 {
-  "errorMessage": "",
+  "errorMessage": "Depth should not exceed max depth of selected waterbody",
   "allOf": [
     {
       "description": "Saint Lawrence River",
