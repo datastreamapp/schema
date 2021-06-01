@@ -1,5 +1,5 @@
 {
-  "errorMessage": "",
+  "errorMessage": "CharacteristicName has been deprecated",
   "not": {
     "properties": {
       "CharacteristicName": {
