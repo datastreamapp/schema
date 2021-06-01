@@ -2,10 +2,10 @@
 
 mkdir .\\bin\\template
 
-mkdir -p .\\dist\\csv
-mkdir -p .\\dist\\json-schema
-mkdir -p .\\dist\\json-schema\\frontend
-mkdir -p .\\dist\\json-schema\\backend
+mkdir -p primary
+mkdir -p frontend
+mkdir -p backend
+mkdir -p quality-control
 
 node .\\bin\\build-values.js
 node .\\bin\\build-logic.js
