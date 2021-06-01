@@ -6,9 +6,6 @@
     "properties": {
       "CharacteristicName": {
         "enum": [
-          "Hardness",
-          "Hardness, total by calculation",
-          "Total hardness",
           "Dissolved oxygen saturation"
         ]
       }
