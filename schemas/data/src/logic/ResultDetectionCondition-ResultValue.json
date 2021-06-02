@@ -1,7 +1,7 @@
 {
   "title": "ResultDetectionCondition-ResultValue",
-  "description": "Either ResultValue or ResultDetectionCondition should be set.",
-  "errorMessage": "requires only one of ResultValue or ResultDetectionCondition to be set",
+  "description": "You may only have ResultValue OR ResultDetectionCondition populated for a single observation.",
+  "errorMessage": "Only one of ResultValue or ResultDetectionCondition should be populated",
   "oneOf": [
     {
       "properties": {
