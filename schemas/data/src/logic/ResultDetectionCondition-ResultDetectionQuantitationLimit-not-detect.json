@@ -1,7 +1,7 @@
 {
   "title": "ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect",
-  "description": "When ResultDetectionCondition is non-detect, `ResultDetectionQuantitationLimit*` should not be set.",
-  "errorMessage": "requires ResultDetectionQuantitationLimit columns to be empty when ResultDetectionCondition is non-detect",
+  "description": "When ResultDetectionCondition is set to 'Not Detected' this means data was not detected, and 'Detected Not Quantified' means data was not quantified within the defined laboratory reporting limits or method detection limits. For these cases, ResultDetectionQuantitationLimit fields should be left blank.",
+  "errorMessage": "When ResultDetectionCondition is set to 'Not Detected' or 'Detected Not Quantified' the ResultDetectionQuantitationLimit fields should not be populated",
   "if": {
     "properties": {
       "ResultDetectionCondition": {
