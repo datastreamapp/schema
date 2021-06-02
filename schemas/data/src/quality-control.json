@@ -121,7 +121,7 @@
     },
     "AnalysisStartTimeZone": {
       "errorMessage": {
-        "enum": "does not match on of the allowed Canadian time zones (-02:30 to -08:00)"
+        "enum": "Does not match the allowed Canadian time zones (-02:30 to -08:00)"
       },
       "type": "string",
       "enum": ["-02:30","-03:00","-03:30","-04:00","-05:00","-06:00","-07:00","-08:00"]
