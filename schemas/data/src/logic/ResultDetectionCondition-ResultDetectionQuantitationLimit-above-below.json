@@ -1,7 +1,7 @@
 {
   "title": "ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below",
-  "description": "When ResultDetectionCondition is above or below, `ResultDetectionQuantitationLimit*` should be set.",
-  "errorMessage": "requires ResultDetectionQuantitationLimit columns when ResultDetectionCondition is above or below limits",
+  "description": "When the ResultDetectionCondition is set to 'Below Detection/Quantification Limit' or 'Above Detection/Quantification Limit' for a data point  'ResultDetectionQuantitationLimitMeasure' and  'ResultDetectionQuantitationLimitUnit' should be populated.",
+  "errorMessage": "ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits",
   "if": {
     "properties": {
       "ResultDetectionCondition": {
