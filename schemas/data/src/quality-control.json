@@ -138,7 +138,7 @@
       "$ref": "./quality-control/ResultValue-DissolvedOxygenUnit.json"
     },
     {
-      "$ref": "./quality-control/ResultValue-HardnessMinimum.json"
+      "$ref": "./quality-control/ResultValue-DOSatMinimum.json"
     },
     {
       "$ref": "./quality-control/ResultValue-pHRange.json"
