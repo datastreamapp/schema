@@ -1,8 +1,8 @@
 {
   "$generated": "build-logic.js",
   "title": "CharacteristicName-ResultSampleFraction",
-  "description": "Certain CharacteristicName should not have ResultSampleFraction to improve observation context",
-  "errorMessage": "ResultSampleFraction should be empty for selected CharacteristicName",
+  "description": "This characteristic is not typically associated with a sample fraction (e.g., E.coli would not be measured as 'Total' or 'Dissolved') and this field may not be relevant.",
+  "errorMessage": "ResultSampleFraction may not be relevant for selected CharacteristicName",
   "if": {
     "properties": {
       "CharacteristicName": {
