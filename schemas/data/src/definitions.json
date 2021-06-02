@@ -27,14 +27,14 @@
   },
   "date": {
     "errorMessage": {
-      "pattern": "must match format '1999-12-31'"
+      "pattern": "Must match format  YYYY-MM-DD (i.e. 1999-12-31)"
     },
     "type": "string",
     "format": "date"
   },
   "time-loose": {
     "errorMessage": {
-      "pattern": "must match format '23:59:59'"
+      "pattern": "Must match format HH:MM:SS (i.e. 23:59:59)"
     },
     "type": "string",
     "pattern": "^(2[0-3]|[01]?[0-9]):[0-5]?[0-9](:[0-5]?[0-9](\\.[0-9]{1,3})?)?$",
@@ -42,7 +42,7 @@
   },
   "time-strict": {
     "errorMessage": {
-      "pattern": "must match format '23:59:59'"
+      "pattern": "Times earlier than 12:00:00 should include a leading zero"
     },
     "type": "string",
     "pattern": "^(2[0-3]|[01][0-9]):[0-5][0-9](:[0-5][0-9](\\.[0-9]{1,3})?)?$",
@@ -58,7 +58,7 @@
   },
   "timezone-strict": {
     "errorMessage": {
-      "pattern": "must match format '-06:00'"
+      "pattern": "Must match format -HH:MM (i.e. -06:00)"
     },
     "type": "string",
     "pattern": "^(Z|[+-](0[0-9]|1[0-9]|2[0-4]):[0-5][0-9])$",
