@@ -239,7 +239,7 @@
         ]
       },
       "errorMessage":
-           {"additionalProperties":"Should not have additional properties"}
+           {"additionalProperties":"Should not have columns outside of schema/template"}
     },
     {
       "$ref": "./logic/CharacteristicName-MethodSpeciation.json"
