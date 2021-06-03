@@ -1,5 +1,5 @@
 {
-  "errorMessage": "Depth should not exceed max depth of selected waterbody",
+  "errorMessage": "Depth should not exceed the maximum depth associated with the selected MonitoringLocationType (i.e. River/stream, Lake/pond)",
   "allOf": [
     {
       "description": "Saint Lawrence River",
