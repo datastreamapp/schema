@@ -1,5 +1,5 @@
 {
-  "errorMessage": "CharacteristicName has been deprecated",
+  "errorMessage": "CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.",
   "not": {
     "properties": {
       "CharacteristicName": {
