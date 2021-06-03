@@ -20,6 +20,10 @@ const wqxRequiredIf = async (file) => {
 
   fs.writeFileSync(__dirname + `/../src/logic/${file}.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
 
+  // Special Case - MethodSpeciation/ResultSampleFraction is optional for a CharacteristicName
+    const optional = require(__dirname + `/../src/quality-control/partial/${file}.json`)
+    object.if.properties[columnFrom].enum = object.if.properties[columnFrom].enum.concat(optional.enum)
+
 
   const qcJSON = require(__dirname + `/../src/quality-control/${file}.json`)
   const qc = {

@@ -1,0 +1,8 @@
+{
+  "$comment": "Used in build-logic.js",
+  "enum": [
+    "Hardness",
+    "Hardness, total by calculation",
+    "Total hardness"
+  ]
+}
