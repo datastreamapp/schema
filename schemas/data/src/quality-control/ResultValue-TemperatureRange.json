@@ -1,6 +1,6 @@
 {
   "title": "Temperature Range",
-  "description": "",
+  "description": "Ambient temperatures have an expected range of -100 to 100 deg C.",
   "errorMessage": "Temperature is outside an expected range (-100 to 100).",
   "if": {
     "properties": {
