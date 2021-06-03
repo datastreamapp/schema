@@ -1,11 +1,54 @@
 {
   "title": "ResultDetectionQuantitationLimitMinimumMeasure",
-  "description": "",
-  "errorMessage": "selected unit cannot have a measure below zero",
+  "description": "Some water quality measurements, for example concentrations, should not have a value lower than zero. Please review these data points and correct as necessary.",
+  "errorMessage": "ResultDetectionQuantitationLimitMeasure should not be below zero for the selected ResultDetectionQuantitationLimitUnit",
   "if": {
     "properties": {
       "ResultDetectionQuantitationLimitUnit": {
-        "enum": ["mg/L"]
+        "enum": [  
+          "#/100ml",
+  "#/ml",
+  "CFU",
+  "cfu/100ml",
+  "count",
+  "CU",
+  "eq/L",
+  "FNU",
+  "FTU",
+  "g/l",
+  "HU",
+  "JTU",
+  "meq/L",
+  "mg/g",
+  "mg/kg",
+  "mg/l",
+  "mg/m3",
+  "mg/ml",
+  "mmol/L",
+  "Mole/l",
+  "MPN",
+  "MPN/100ml",
+  "mS/cm",
+  "ng/l",
+  "NTU",
+  "PCU",
+  "pg/l",
+  "ppb",
+  "ppm",
+  "ppt",
+  "PSU",
+  "RFU",
+  "S/m",
+  "TCU",
+  "TU",
+  "ueq/L",
+  "ug/g",
+  "ug/l",
+  "umho/cm",
+  "umol/L",
+  "umol/S/m2", 
+  "uS/cm"
+]
       }
     },
     "required": ["ResultDetectionQuantitationLimitUnit"]
