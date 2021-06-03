@@ -6,6 +6,7 @@ let validateStrict = require('../primary')
 let validateBackend = require('../backend')
 
 const checkProperty = (errors, keyword, property) => {
+  if (errors === null) return false
   for (const error of errors) {
     if (error.keyword === 'errorMessage') {
       const nested = checkProperty(error.params.errors, keyword, property)
@@ -22,6 +23,7 @@ const checkProperty = (errors, keyword, property) => {
     else if (keyword === 'exclusiveMinimum' && error.instancePath.includes(property)) return true
     else if (keyword === 'maximum' && error.instancePath.includes(property)) return true
     else if (keyword === 'exclusiveMaximum' && error.instancePath.includes(property)) return true
+    else if (keyword === 'false schema' && error.instancePath.includes(property)) return true
     else if (keyword === 'pattern') return true
   }
   return false
@@ -93,8 +95,8 @@ describe('Conditional Logic', function () {
       'ResultValue': 1,
       'ResultDetectionCondition': 'Not Reported'
     })
-    expect(checkProperty(validate.errors, 'enum', 'ResultValue')).to.equal(true)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionCondition')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultValue')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionCondition')).to.equal(true)
     done()
   })
 
@@ -166,9 +168,9 @@ describe('Conditional Logic', function () {
       'ResultDetectionQuantitationLimitUnit': 'None'
     })
     expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
 
     done()
   })
@@ -193,9 +195,9 @@ describe('Conditional Logic', function () {
       'ResultDetectionQuantitationLimitUnit': 'None'
     })
     expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitType')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
 
     done()
   })

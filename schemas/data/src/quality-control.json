@@ -124,7 +124,16 @@
         "enum": "Does not match the allowed Canadian time zones (-02:30 to -08:00)"
       },
       "type": "string",
-      "enum": ["-02:30","-03:00","-03:30","-04:00","-05:00","-06:00","-07:00","-08:00"]
+      "enum": [
+        "-02:30",
+        "-03:00",
+        "-03:30",
+        "-04:00",
+        "-05:00",
+        "-06:00",
+        "-07:00",
+        "-08:00"
+      ]
     },
     "LaboratoryName": {
       "type": "string"
@@ -135,28 +144,34 @@
   },
   "allOf": [
     {
-      "$ref": "./quality-control/ResultValue-DissolvedOxygenUnit.json"
+      "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
+    },
+    {
+      "$ref": "./quality-control/CharacteristicName-ResultSampleFraction.json"
+    },
+    {
+      "$ref": "./quality-control/ResultDetectionQuantitationLimitMeasure-Minimum.json"
+    },
+    {
+      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
+    },
+    {
+      "$ref": "./quality-control/ResultUnit-Allowed.json"
     },
     {
       "$ref": "./quality-control/ResultValue-DOSatMinimum.json"
+    },
+    {
+      "$ref": "./quality-control/ResultValue-DissolvedOxygenUnit.json"
+    },
+    {
+      "$ref": "./quality-control/ResultValue-Minimum.json"
     },
     {
       "$ref": "./quality-control/ResultValue-pHRange.json"
     },
     {
       "$ref": "./quality-control/ResultValue-TemperatureRange.json"
-    },
-    {
-      "$ref": "./quality-control/ResultUnit-Allowed.json"
-    },
-    {
-      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
-    },
-        {
-      "$ref": "./quality-control/ResultValue-Minimum.json"
-    },
-    {
-      "$ref": "./quality-control/ResultDetectionQuantitationLimitMeasure-Minimum.json"
     }
   ]
 }

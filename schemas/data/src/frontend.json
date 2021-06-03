@@ -12,7 +12,7 @@
           "$ref": "./definitions.json#/DatasetName",
           "transform": [
             "trim"
-          ],
+          ]
         },
         "MonitoringLocationID": {
           "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
@@ -223,8 +223,12 @@
         "ResultValueType"
       ],
       "dependencies": {
-        "MonitoringLocationHorizontalAccuracyMeasure": ["MonitoringLocationHorizontalAccuracyUnit"],
-        "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
+        "MonitoringLocationHorizontalAccuracyMeasure": [
+          "MonitoringLocationHorizontalAccuracyUnit"
+        ],
+        "MonitoringLocationVerticalMeasure": [
+          "MonitoringLocationVerticalUnit"
+        ],
         "ActivityDepthHeightMeasure": [
           "ActivityDepthHeightUnit"
         ],
@@ -238,8 +242,9 @@
           "AnalysisStartTimeZone"
         ]
       },
-      "errorMessage":
-           {"additionalProperties":"Should not have columns outside of schema/template"}
+      "errorMessage": {
+        "additionalProperties": "Should not have columns outside of schema/template"
+      }
     },
     {
       "$ref": "./logic/CharacteristicName-MethodSpeciation.json"

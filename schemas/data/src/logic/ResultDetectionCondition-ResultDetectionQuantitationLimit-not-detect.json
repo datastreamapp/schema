@@ -17,15 +17,9 @@
   },
   "then": {
     "properties": {
-      "ResultDetectionQuantitationLimitType": {
-        "enum": [null, ""]
-      },
-      "ResultDetectionQuantitationLimitMeasure": {
-        "enum": [null, ""]
-      },
-      "ResultDetectionQuantitationLimitUnit": {
-        "enum": [null, ""]
-      }
+      "ResultDetectionQuantitationLimitType": false,
+      "ResultDetectionQuantitationLimitMeasure": false,
+      "ResultDetectionQuantitationLimitUnit": false
     }
   }
 }

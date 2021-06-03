@@ -173,15 +173,7 @@
   },
   "then": {
     "properties": {
-      "ResultSampleFraction": {
-        "enum": [
-          null,
-          ""
-        ]
-      }
-    },
-    "required": [
-      "ResultSampleFraction"
-    ]
+      "ResultSampleFraction": false
+    }
   }
 }

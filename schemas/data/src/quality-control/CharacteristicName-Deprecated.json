@@ -1,4 +1,6 @@
 {
+  "title": "CharacteristicName-Deprecated",
+  "description": "possible future use to allow CharacteristicName planned to be removed to warn leading up to removal",
   "errorMessage": "CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.",
   "not": {
     "properties": {

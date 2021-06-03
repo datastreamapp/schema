@@ -5,9 +5,7 @@
   "oneOf": [
     {
       "properties": {
-        "ResultDetectionCondition": {
-          "enum": [null,""]
-        }
+        "ResultDetectionCondition": false
       },
       "required": [
         "ResultValue"
@@ -15,9 +13,7 @@
     },
     {
       "properties": {
-        "ResultValue": {
-          "enum": [null,""]
-        }
+        "ResultValue": false
       },
       "required": [
         "ResultDetectionCondition"

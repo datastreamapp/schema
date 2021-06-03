@@ -4,15 +4,15 @@
   "errorMessage": "ResultDetectionQuantitationLimitUnit is not needed when ResultDetectionQuantitationLimitMeasure is not populated",
   "oneOf": [
     {
-      "required": ["ResultDetectionQuantitationLimitMeasure","ResultDetectionQuantitationLimitUnit"]
-    },{
+      "required": [
+        "ResultDetectionQuantitationLimitMeasure",
+        "ResultDetectionQuantitationLimitUnit"
+      ]
+    },
+    {
       "properties": {
-        "ResultDetectionQuantitationLimitMeasure": {
-          "enum": [null,""]
-        },
-        "ResultDetectionQuantitationLimitUnit": {
-          "enum": [null,""]
-        }
+        "ResultDetectionQuantitationLimitMeasure": false,
+        "ResultDetectionQuantitationLimitUnit": false
       }
     }
   ]

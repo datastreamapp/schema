@@ -5,53 +5,55 @@
   "if": {
     "properties": {
       "ResultDetectionQuantitationLimitUnit": {
-        "enum": [  
+        "enum": [
           "#/100ml",
-  "#/ml",
-  "CFU",
-  "cfu/100ml",
-  "count",
-  "CU",
-  "eq/L",
-  "FNU",
-  "FTU",
-  "g/l",
-  "HU",
-  "JTU",
-  "meq/L",
-  "mg/g",
-  "mg/kg",
-  "mg/l",
-  "mg/m3",
-  "mg/ml",
-  "mmol/L",
-  "Mole/l",
-  "MPN",
-  "MPN/100ml",
-  "mS/cm",
-  "ng/l",
-  "NTU",
-  "PCU",
-  "pg/l",
-  "ppb",
-  "ppm",
-  "ppt",
-  "PSU",
-  "RFU",
-  "S/m",
-  "TCU",
-  "TU",
-  "ueq/L",
-  "ug/g",
-  "ug/l",
-  "umho/cm",
-  "umol/L",
-  "umol/S/m2", 
-  "uS/cm"
-]
+          "#/ml",
+          "CFU",
+          "cfu/100ml",
+          "count",
+          "CU",
+          "eq/L",
+          "FNU",
+          "FTU",
+          "g/l",
+          "HU",
+          "JTU",
+          "meq/L",
+          "mg/g",
+          "mg/kg",
+          "mg/l",
+          "mg/m3",
+          "mg/ml",
+          "mmol/L",
+          "Mole/l",
+          "MPN",
+          "MPN/100ml",
+          "mS/cm",
+          "ng/l",
+          "NTU",
+          "PCU",
+          "pg/l",
+          "ppb",
+          "ppm",
+          "ppt",
+          "PSU",
+          "RFU",
+          "S/m",
+          "TCU",
+          "TU",
+          "ueq/L",
+          "ug/g",
+          "ug/l",
+          "umho/cm",
+          "umol/L",
+          "umol/S/m2",
+          "uS/cm"
+        ]
       }
     },
-    "required": ["ResultDetectionQuantitationLimitUnit"]
+    "required": [
+      "ResultDetectionQuantitationLimitUnit"
+    ]
   },
   "then": {
     "properties": {
@@ -59,6 +61,8 @@
         "minimum": 0
       }
     },
-    "required": ["ResultDetectionQuantitationLimitMeasure"]
+    "required": [
+      "ResultDetectionQuantitationLimitMeasure"
+    ]
   }
 }
