@@ -151,6 +151,12 @@
     },
     {
       "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
+    },
+        {
+      "$ref": "./quality-control/ResultValue-Minimum.json"
+    },
+    {
+      "$ref": "./quality-control/ResultDetectionQuantitationLimitMeasure-Minimum.json"
     }
   ]
 }
