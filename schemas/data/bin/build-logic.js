@@ -60,6 +60,6 @@ const wqxRequiredIf = async (file) => {
 //wqxRequiredIf('ActivityType-MonitoringLocation','CharacteristicName',['MonitoringLocation'])
 //wqxRequiredIf('Characteristic-AnalyticalMethod','CharacteristicName',['ResultAnalyticalMethodID','ResultAnalyticalMethodContext'])
 wqxRequiredIf('CharacteristicName-MethodSpeciation')
-wqxRequiredIf('CharacteristicName-ResultSampleFraction')
+//wqxRequiredIf('CharacteristicName-ResultSampleFraction')
 
 

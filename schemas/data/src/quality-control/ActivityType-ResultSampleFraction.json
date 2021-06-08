@@ -1,0 +1,25 @@
+{
+  "title": "ActivityType-ResultSampleFraction",
+  "description": "This characteristic is not typically associated with a sample fraction (e.g., E.coli would not be measured as 'Total' or 'Dissolved') and this field may not be relevant.",
+  "errorMessage": "ResultSampleFraction may not be relevant for selected ActivityType",
+  "if": {
+    "properties": {
+      "ActivityType": {
+        "enum": [
+          "Field Msr/Obs",
+          "Field Msr/Obs-Portable Data Logger",
+          "Quality Control Field Replicate Msr/Obs",
+          "Quality Control Field Replicate Portable Data Logger"
+        ]
+      }
+    },
+    "required": [
+      "ActivityMediaName"
+    ]
+  },
+  "then": {
+    "properties": {
+      "ResultSampleFraction": false
+    }
+  }
+}
