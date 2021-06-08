@@ -1,6 +1,6 @@
 {
   "title": "ActivityType-ResultSampleFraction",
-  "description": "This characteristic is not typically associated with a sample fraction (e.g., E.coli would not be measured as 'Total' or 'Dissolved') and this field may not be relevant.",
+  "description": "Field measurements and observations are not typically associated with a sample fraction as they are measured in place and don't undergo filtration steps.",
   "errorMessage": "ResultSampleFraction may not be relevant for selected ActivityType",
   "if": {
     "properties": {
