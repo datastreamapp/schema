@@ -23,7 +23,16 @@
             "Total Phosphorus, mixed forms",
             "Hardness",
             "Hardness, total by calculation",
-            "Total hardness"
+            "Total hardness",
+            "Hardness, Ca, Mg",
+            "Hardness, Calcium",
+            "Hardness, carbonate",
+            "Hardness, non-carbonate",
+            "Alkalinity, bicarbonate",
+            "Alkalinity, carbonate",
+            "Alkalinity, Hydroxide",
+            "Alkalinity, Phenolphthalein (total hydroxide+1/2 carbonate)",
+            "Alkalinity, total"
           ]
         }
       }
