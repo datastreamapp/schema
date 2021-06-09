@@ -96,8 +96,6 @@ describe('Quality Control Checks', function () {
   //   done()
   // })
 
-
-
   it('Should reject improperly formatted time', function (done) {
     const valid = validate({
       'ActivityStartDate': '2020-01-01',
@@ -105,6 +103,28 @@ describe('Quality Control Checks', function () {
     })
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'pattern', 'ActivityStartTime')).to.equal(true)
+    done()
+  })
+
+
+  // ActivityType-ResultSampleFraction
+  it('Should reject ResultSampleFraction when its not expected', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'pH'
+    })
+    expect(valid).to.equal(true)
+    done()
+  })
+  it('Should accept ResultSampleFraction when its not expected', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'pH',
+      'ResultSampleFraction': 'Total',
+      'ActivityType': 'Field Msr/Obs'
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultSampleFraction')).to.equal(true)
     done()
   })
 
@@ -120,26 +140,6 @@ describe('Quality Control Checks', function () {
     done()
   })
   it('Should accept MethodSpeciation when its expected', function (done) {
-
-    const valid = validate({
-      'CharacteristicName': 'pH'
-    })
-    expect(valid).to.equal(true)
-    done()
-  })
-
-  // CharacteristicName-ResultSampleFraction
-  it('Should reject ResultSampleFraction when its not expected', function (done) {
-
-    const valid = validate({
-      'CharacteristicName': 'pH',
-      'ResultSampleFraction': 'Total'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultSampleFraction')).to.equal(true)
-    done()
-  })
-  it('Should accept ResultSampleFraction when its not expected', function (done) {
 
     const valid = validate({
       'CharacteristicName': 'pH'
