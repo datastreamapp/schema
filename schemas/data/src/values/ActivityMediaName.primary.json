@@ -6,10 +6,10 @@
     "Ambient Air",
     "Ocean Water",
     "Porewater",
+    "Stormwater",
     "Subsurface Soil/Sediment",
     "Surface Water",
-    "Surface Water Sediment",
-    "Stormwater"
+    "Surface Water Sediment"
   ],
   "maxLength": 45
 }
