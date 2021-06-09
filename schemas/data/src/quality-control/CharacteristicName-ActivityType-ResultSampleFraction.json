@@ -1,0 +1,85 @@
+{
+  "title": "CharacteristicName-ActivityType-ResultSampleFraction",
+  "description": "Field measurements and observations are not typically associated with a sample fraction as they are measured in place and don't undergo filtration steps.",
+  "errorMessage": "ResultSampleFraction may not be relevant for selected ActivityType or CharacteristicName",
+  "if": {
+    "oneOf": [
+      {
+        "properties": {
+          "CharacteristicName": {
+            "not": {
+              "enum": [
+                "Ammonia",
+                "Ammonium",
+                "Inorganic nitrogen ammonia, nitrate and nitrite)",
+                "Inorganic nitrogen nitrate and nitrite)",
+                "Kjeldahl nitrogen",
+                "Nitrate",
+                "Nitrite",
+                "Total nitrogen, mixed forms",
+                "Organic Nitrogen",
+                "Organic Phosphorus",
+                "Orthophosphate",
+                "Total phosphorus, mixed forms",
+                "Soluble Reactive Phosphorus (SRP)"
+              ]
+            }
+          },
+          "ActivityType": {
+            "enum": [
+              "Field Msr/Obs",
+              "Field Msr/Obs-Portable Data Logger",
+              "Quality Control Field Replicate Msr/Obs",
+              "Quality Control Field Replicate Portable Data Logger"
+            ]
+          }
+        },
+        "required": [
+          "CharacteristicName",
+          "ActivityType"
+        ]
+      },
+      {
+        "properties": {
+          "CharacteristicName": {
+            "enum": [
+              "Ammonia",
+              "Ammonium",
+              "Inorganic nitrogen ammonia, nitrate and nitrite)",
+              "Inorganic nitrogen nitrate and nitrite)",
+              "Kjeldahl nitrogen",
+              "Nitrate",
+              "Nitrite",
+              "Total nitrogen, mixed forms",
+              "Organic Nitrogen",
+              "Organic Phosphorus",
+              "Orthophosphate",
+              "Total phosphorus, mixed forms",
+              "Soluble Reactive Phosphorus (SRP)"
+            ]
+          },
+          "ResultSampleFraction": {
+            "not": {
+              "enum": [
+                "Filtered",
+                "Unfiltered",
+                "Filtered, lab",
+                "Filtered, field",
+                "Non-filterable"
+              ]
+            }
+          }
+        },
+        "required": [
+          "CharacteristicName",
+          "ResultSampleFraction"
+        ]
+      }
+    ]
+  },
+  "then": {
+    "properties": {
+      "ResultSampleFraction": false
+    }
+  }
+}

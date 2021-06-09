@@ -144,10 +144,10 @@
   },
   "allOf": [
     {
-      "$ref": "./quality-control/ActivityType-ResultSampleFraction.json"
+      "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
     },
     {
-      "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
+      "$ref": "./quality-control/CharacteristicName-ActivityType-ResultSampleFraction.json"
     },
     {
       "$ref": "./quality-control/ResultDetectionQuantitationLimitMeasure-Minimum.json"
