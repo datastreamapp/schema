@@ -106,6 +106,28 @@ describe('Quality Control Checks', function () {
     done()
   })
 
+  // ActivityType-ResultSampleFraction
+  it('Should reject ResultSampleFraction when ActivityType is set to field', function (done) {
+
+    const valid = validate({
+      'ActivityType': 'Field Msr/Obs',
+      'ResultSampleFraction':'Filtered'
+    })
+    console.log(JSON.stringify(validate.errors, null, 2))
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultSampleFraction')).to.equal(true)
+    done()
+  })
+
+  it('Should accept empty ResultSampleFraction when ActivityType is set to field', function (done) {
+
+    const valid = validate({
+      'ActivityType': 'Field Msr/Obs',
+    })
+    expect(valid).to.equal(true)
+    done()
+  })
+
   // CharacteristicName-MethodSpeciation
   it('Should reject MethodSpeciation when its not expected', function (done) {
 
@@ -126,41 +148,6 @@ describe('Quality Control Checks', function () {
     done()
   })
 
-  // CharacteristicName-ActivityType-ResultSampleFraction
-  it('Should reject ResultSampleFraction when ActivityType is set to field', function (done) {
-
-    const valid = validate({
-      'CharacteristicName': 'pH',
-      'ActivityType': 'Field Msr/Obs',
-      'ResultSampleFraction': 'Total'
-    })
-    console.log(JSON.stringify(validate.errors, null, 2))
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultSampleFraction')).to.equal(true)
-    done()
-  })
-
-  it('Should reject ResultSampleFraction when nutrient data has not allowed sample fraction', function (done) {
-
-    const valid = validate({
-      'CharacteristicName': 'Ammonia',
-      'ResultSampleFraction':'Total'
-    })
-    console.log(JSON.stringify(validate.errors, null, 2))
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultSampleFraction')).to.equal(true)
-    done()
-  })
-
-  it('Should accept ResultSampleFraction when its not expected', function (done) {
-
-    const valid = validate({
-      'CharacteristicName': 'pH',
-      'ResultSampleFraction': 'Total'
-    })
-    expect(valid).to.equal(true)
-    done()
-  })
 
   // MonitoringLocationDepthHeightMeasure - TODO future?
 

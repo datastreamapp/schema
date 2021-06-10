@@ -57,7 +57,7 @@ describe('Conditional Logic', function () {
     done()
   })
 
-  // allOf/2
+  // CharacteristicName-ResultSampleFraction
   it('Should accept CharacteristicName AND NOT ResultSampleFraction', function (done) {
     let valid = validate({
       'CharacteristicName': 'Dissolved oxygen (DO)'
@@ -77,6 +77,26 @@ describe('Conditional Logic', function () {
     let valid = validate({
       'CharacteristicName': 'Silver',
       'ResultSampleFraction': 'Dissolved'
+    })
+    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
+    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
+    done()
+  })
+
+  // CharacteristicName-Nutrient-ResultSampleFraction
+  it('Should reject Nutrient CharacteristicName AND ResultSampleFraction', function (done) {
+    let valid = validate({
+      'CharacteristicName': 'Ammonia',
+      'ResultSampleFraction': 'Total'
+    })
+    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
+    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
+    done()
+  })
+  it('Should accept Nutrient CharacteristicName AND filter ResultSampleFraction', function (done) {
+    let valid = validate({
+      'CharacteristicName': 'Ammonia',
+      'ResultSampleFraction': 'Filtered'
     })
     expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
     expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
