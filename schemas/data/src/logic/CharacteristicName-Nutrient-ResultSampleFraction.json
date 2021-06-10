@@ -1,0 +1,56 @@
+{
+  "title": "CharacteristicName-Nutrient-ResultSampleFraction",
+  "description": "",
+  "errorMessage": "Nutrient CharacteristicName should only use ResultSampleFraction filters",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Ammonia",
+          "Ammonium",
+          "Inorganic nitrogen ammonia, nitrate and nitrite)",
+          "Inorganic nitrogen nitrate and nitrite)",
+          "Kjeldahl nitrogen",
+          "Nitrate",
+          "Nitrite",
+          "Total nitrogen, mixed forms",
+          "Organic Nitrogen",
+          "Organic Phosphorus",
+          "Orthophosphate",
+          "Total phosphorus, mixed forms",
+          "Soluble Reactive Phosphorus (SRP)"
+        ]
+      },
+      "ActivityType": {
+        "not": {
+          "enum": [
+            "Field Msr/Obs",
+            "Field Msr/Obs-Portable Data Logger",
+            "Quality Control Field Replicate Msr/Obs",
+            "Quality Control Field Replicate Portable Data Logger"
+          ]
+        }
+      }
+    },
+    "required": [
+      "CharacteristicName",
+      "ActivityType"
+    ]
+  },
+  "then": {
+    "properties": {
+      "ResultSampleFraction": {
+        "enum": [
+          "Filtered",
+          "Unfiltered",
+          "Filtered, lab",
+          "Filtered, field",
+          "Non-filterable"
+        ]
+      }
+    },
+    "required": [
+      "ResultSampleFraction"
+    ]
+  }
+}

@@ -253,6 +253,9 @@
       "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
+      "$ref": "./logic/CharacteristicName-Nutrient-ResultSampleFraction.json"
+    },
+    {
       "$ref": "./logic/ResultDetectionCondition-ResultValue.json"
     },
     {

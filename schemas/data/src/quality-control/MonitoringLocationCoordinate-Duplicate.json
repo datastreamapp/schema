@@ -1,0 +1,6 @@
+{
+  "title": "MonitoringLocationCoordinate-Duplicate",
+  "description": "Detects where there are two MonitoringLocationLatitude & MonitoringLocationLongitude associated with the same MonitoringLocationID",
+  "errorMessage": "Multiple MonitoringLocation coordinates (Latitude, Longitude) are used with the same MonitoringLocationID",
+  "$comment": "See data-quality-control.js for implementation"
+}
