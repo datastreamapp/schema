@@ -1,7 +1,7 @@
 {
   "title": "CharacteristicName-Nutrient-ResultSampleFraction",
   "description": "",
-  "errorMessage": "Nutrient CharacteristicName should only use ResultSampleFraction filters",
+  "errorMessage": "ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see resources page or contact us)",
   "if": {
     "properties": {
       "CharacteristicName": {
