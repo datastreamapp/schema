@@ -23,7 +23,7 @@ export default ['primary', 'frontend', 'backend', 'quality-control']
     plugins: [
       resolve(),
       commonjs(),
-      terser(),
+      terser(), // TODO change to esbuild
     ],
     onwarn,
   }))
