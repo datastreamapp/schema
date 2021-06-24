@@ -6,6 +6,7 @@ const methodSpeciationOptional = require('../src/quality-control/partial/Charact
 const sampleFraction = require('../src/logic/CharacteristicName-ResultSampleFraction.json').if.properties.CharacteristicName.enum
 const sampleFractionOptional = require('../src/quality-control/partial/CharacteristicName-ResultSampleFraction-Optional.json').enum
 const characteristicGroup = require('wqx/groups/CharacteristicName.json')
+const characteristicCASNumber = require('wqx/groups/CASNumber.json')
 
 const buildUnits = () => {
   let csv = 'Unit\n'
@@ -18,7 +19,7 @@ const buildUnits = () => {
 }
 
 const buildCharacteristics = () => {
-  let csv = 'CharacteristicName,MethodSpeciation,SampleFraction,Group\n'
+  let csv = 'CharacteristicName,MethodSpeciation,SampleFraction,Group,CASNumber\n'
 
   for(const value of characteristics) {
     let methodSpeciationRequired = methodSpeciation.includes(value) ? '"Yes"' : '"No"'
@@ -30,7 +31,7 @@ const buildCharacteristics = () => {
     if (sampleFractionRequired === '"No"' && sampleFractionOptional.includes(value)) {
       sampleFractionRequired = '"May"'
     }
-    csv += `"${value}",${methodSpeciationRequired},${sampleFractionRequired},"${characteristicGroup[value] || 'Not Assigned'}"\n`
+    csv += `"${value}",${methodSpeciationRequired},${sampleFractionRequired},"${characteristicGroup[value] || 'Not Assigned'}",${characteristicCASNumber[value] || ''}\n`
   }
 
   fs.writeFileSync(__dirname + `/template/Characteristics.csv`,csv, {encoding: 'utf8'})
