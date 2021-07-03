@@ -38,7 +38,7 @@
     "lint-staged": "^11.0.0",
     "rollup": "^2.51.1",
     "rollup-plugin-terser": "^7.0.2",
-    "wqx": "^3.0.13"
+    "wqx": "^3.0.16"
   },
   "repository": {
     "type": "git",
