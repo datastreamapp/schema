@@ -3,10 +3,12 @@
   "description": "",
   "type": "string",
   "enum": [
+    "Atmosphere",
     "Estuary",
     "Great Lake",
     "Lake/Pond",
     "Ocean",
+    "Pond-Stormwater",
     "Reservoir",
     "River/Stream",
     "Spring",
