@@ -2,10 +2,10 @@ name: build
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 1 * * 6'
-  repository_dispatch:
-    types: [wqx]
+  #schedule:
+  #  - cron: '0 1 * * 6'
+  #repository_dispatch:
+  #  types: [wqx]
 
 jobs:
   build:
