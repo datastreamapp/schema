@@ -7,10 +7,12 @@
   "additionalProperties": false,
   "properties": {
     "DatasetName": {
-      "$ref": "./definitions.json#/DatasetName"
+      "$ref": "./definitions.json#/DatasetName",
+      "minLength": 1
     },
     "MonitoringLocationID": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID",
+      "minLength": 1
     },
     "MonitoringLocationName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
@@ -62,54 +64,43 @@
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
     },
     "ActivityDepthHeightUnit": {
-      "$ref": "./values/ActivityDepthHeightUnit.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ActivityDepthHeightUnit.primary.json"
     },
     "SampleCollectionEquipmentName": {
-      "$ref": "./values/SampleCollectionEquipmentName.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/SampleCollectionEquipmentName.primary.json"
     },
     "CharacteristicName": {
-      "$ref": "./values/CharacteristicName.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/CharacteristicName.primary.json"
     },
     "MethodSpeciation": {
-      "$ref": "./values/MethodSpeciation.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/MethodSpeciation.primary.json"
     },
     "ResultSampleFraction": {
-      "$ref": "./values/ResultSampleFraction.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultSampleFraction.primary.json"
     },
     "ResultValue": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
     },
     "ResultUnit": {
-      "$ref": "./values/ResultUnit.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultUnit.primary.json"
     },
     "ResultValueType": {
-      "$ref": "./values/ResultValueType.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultValueType.primary.json"
     },
     "ResultDetectionCondition": {
-      "$ref": "./values/ResultDetectionCondition.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultDetectionCondition.primary.json"
     },
     "ResultDetectionQuantitationLimitMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
     },
     "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json"
     },
     "ResultDetectionQuantitationLimitType": {
-      "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json"
     },
     "ResultStatusID": {
-      "$ref": "./values/ResultStatusID.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultStatusID.primary.json"
     },
     "ResultComment": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
@@ -118,8 +109,7 @@
       "$ref": "./definitions.json#/ResultAnalyticalMethodID"
     },
     "ResultAnalyticalMethodContext": {
-      "$ref": "./values/ResultAnalyticalMethodContext.primary.json",
-      "transform": ["trim", "toEnumCase"]
+      "$ref": "./values/ResultAnalyticalMethodContext.primary.json"
     },
     "ResultAnalyticalMethodName": {
       "$ref": "./definitions.json#/ResultAnalyticalMethodName"

@@ -11,12 +11,12 @@
       "transform": ["trim"]
     },
     "MonitoringLocationID": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID"
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID",
+      "transform": ["trim"]
     },
     "MonitoringLocationName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
-      "transform": ["trim"],
-      "minLength": 1
+      "transform": ["trim"]
     },
     "MonitoringLocationLatitude": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
@@ -120,17 +120,20 @@
       "transform": ["trim", "toEnumCase"]
     },
     "ResultComment": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment",
+      "transform": ["trim"]
     },
     "ResultAnalyticalMethodID": {
-      "$ref": "./definitions.json#/ResultAnalyticalMethodID"
+      "$ref": "./definitions.json#/ResultAnalyticalMethodID",
+      "transform": ["trim"]
     },
     "ResultAnalyticalMethodContext": {
       "$ref": "./values/ResultAnalyticalMethodContext.legacy.json",
       "transform": ["trim", "toEnumCase"]
     },
     "ResultAnalyticalMethodName": {
-      "$ref": "./definitions.json#/ResultAnalyticalMethodName"
+      "$ref": "./definitions.json#/ResultAnalyticalMethodName",
+      "transform": ["trim"]
     },
     "AnalysisStartDate": {
       "$ref": "./definitions.json#/date"
@@ -142,10 +145,12 @@
       "$ref": "./definitions.json#/timezone-loose"
     },
     "LaboratoryName": {
-      "$ref": "./definitions.json#/LaboratoryName"
+      "$ref": "./definitions.json#/LaboratoryName",
+      "transform": ["trim"]
     },
     "LaboratorySampleID": {
-      "$ref": "./definitions.json#/LaboratorySampleID"
+      "$ref": "./definitions.json#/LaboratorySampleID",
+      "transform": ["trim"]
     }
   }
 }
