@@ -27,7 +27,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
-    "ajv": "^8.6.0",
+    "ajv": "^8.6.2",
     "ajv-errors": "^3.0.0",
     "ajv-formats": "^2.1.0",
     "ajv-formats-draft2019": "^1.4.3",
@@ -38,7 +38,7 @@
     "lint-staged": "^11.0.0",
     "rollup": "^2.51.1",
     "rollup-plugin-terser": "^7.0.2",
-    "wqx": "^3.0.16"
+    "wqx": "^3.0.18"
   },
   "repository": {
     "type": "git",

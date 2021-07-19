@@ -156,13 +156,13 @@
       "description": "Digital Object Identifier from DataCite",
       "type": "string",
       "format": "uri",
-      "pattern": "https://doi\.org/10\.[0-9]{5}/[a-z]{4}-[a-z]{4}"
+      "pattern": "https://doi\\.org/10\\.[0-9]{5}/[a-z]{4}-[a-z]{2}[0-9]{2}"
     },
     "Version": {
       "title": "Version",
       "description": "semver format",
       "type": "string",
-      "pattern": "[0-9]+.[0-9]+.[0-9]+(+[0-9]+)?"
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(\\+[0-9]+)?$"
     },
     "Integration": {
       "title": "Integration Config",
