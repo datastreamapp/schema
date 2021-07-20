@@ -1,0 +1,31 @@
+{
+  "title": "WhiteSpace",
+  "description": "",
+  "errorMessage": "Leading or trailing white space detected in character string",
+  "properties": {
+    "DatasetName": {
+      "$ref": "../definitions.json#/trim"
+    },
+    "MonitoringLocationID": {
+      "$ref": "../definitions.json#/trim"
+    },
+    "MonitoringLocationName": {
+      "$ref": "../definitions.json#/trim"
+    },
+    "ResultComment": {
+      "$ref": "../definitions.json#/trim"
+    },
+    "ResultAnalyticalMethodID": {
+      "$ref": "../definitions.json#/trim"
+    },
+    "ResultAnalyticalMethodName": {
+      "$ref": "../definitions.json#/trim"
+    },
+    "LaboratoryName": {
+      "$ref": "../definitions.json#/trim"
+    },
+    "LaboratorySampleID": {
+      "$ref": "../definitions.json#/trim"
+    }
+  }
+}

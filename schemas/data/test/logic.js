@@ -86,6 +86,7 @@ describe('Conditional Logic', function () {
   // CharacteristicName-Nutrient-ResultSampleFraction
   it('Should reject Nutrient CharacteristicName AND ResultSampleFraction', function (done) {
     let valid = validate({
+      'ActivityMediaName':'Surface Water',
       'CharacteristicName': 'Ammonia',
       'ResultSampleFraction': 'Total'
     })
@@ -95,8 +96,19 @@ describe('Conditional Logic', function () {
   })
   it('Should accept Nutrient CharacteristicName AND filter ResultSampleFraction', function (done) {
     let valid = validate({
+      'ActivityMediaName':'Surface Water',
       'CharacteristicName': 'Ammonia',
       'ResultSampleFraction': 'Filtered'
+    })
+    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
+    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
+    done()
+  })
+  it('accept accept Nutrient Sediment', function (done) {
+    let valid = validate({
+      'ActivityMediaName':'Surface Water Sediment',
+      'CharacteristicName': 'Ammonia',
+      'ResultSampleFraction': 'Total'
     })
     expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
     expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
@@ -274,6 +286,56 @@ describe('Conditional Logic', function () {
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(false)
 
+    done()
+  })
+
+  // CSV Injection
+  it('Should reject columns with potential csv injection', function (done) {
+
+    const valid = validate({
+      'DatasetName': '=equals',
+      'MonitoringLocationID': '+positive',
+      'MonitoringLocationName': '-negative',
+      'ResultComment': '@at  ',
+      'ResultAnalyticalMethodID': `
+carriage return`,
+      'ResultAnalyticalMethodName': "\ncarriage return",
+      'LaboratoryName': "\rcarriage return",
+      'LaboratorySampleID': "\ttab",
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'DatasetName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultComment')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'LaboratoryName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID')).to.equal(true)
+    done()
+  })
+
+  it('Should accept columns without potential csv injection', function (done) {
+
+    const valid = validate({
+      'DatasetName': '~',
+      'MonitoringLocationID': '1',
+      'MonitoringLocationName': '&',
+      'ResultComment': '$',
+      'ResultAnalyticalMethodID': '#',
+      'ResultAnalyticalMethodName': '|',
+      'LaboratoryName': '_',
+      'LaboratorySampleID': '*',
+    })
+    console.log(valid, JSON.stringify(validate.errors, null, 2))
+    expect(checkProperty(validate.errors, 'pattern', 'DatasetName')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationName')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultComment')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'LaboratoryName')).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID')).to.equal(false)
     done()
   })
 

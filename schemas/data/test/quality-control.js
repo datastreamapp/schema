@@ -2,6 +2,7 @@ const expect = require('chai').expect
 
 const validate = require('../quality-control')
 const schema = require('../quality-control/index.json')
+//console.log(valid, JSON.stringify(validate.errors, null, 2))
 
 const defaultObject = {
   //"DatasetName":"Test",
@@ -66,7 +67,6 @@ describe('Quality Control Checks', function () {
   it('Should accept with empty object', function(done) {
     const obj = {}
     const valid = validate(obj)
-    console.log(valid, JSON.stringify(validate.errors, null, 2))
     expect(valid).to.equal(true)
     done()
   })
@@ -77,7 +77,6 @@ describe('Quality Control Checks', function () {
       obj[key] = undefined
     }
     const valid = validate(obj)
-    console.log(valid, JSON.stringify(validate.errors, null, 2))
     expect(valid).to.equal(true)
     done()
   })
@@ -113,7 +112,6 @@ describe('Quality Control Checks', function () {
       'ActivityType': 'Field Msr/Obs',
       'ResultSampleFraction':'Filtered'
     })
-    console.log(JSON.stringify(validate.errors, null, 2))
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'false schema', 'ResultSampleFraction')).to.equal(true)
     done()
@@ -346,6 +344,46 @@ describe('Quality Control Checks', function () {
       'CharacteristicName': 'Temperature, water',
       'ResultValue': 0,
       'ResultUnit': 'deg C'
+    })
+    expect(valid).to.equal(true)
+    done()
+  })
+
+  // WhiteSpace
+  it('Should reject columns with extra whitespace', function (done) {
+
+    const valid = validate({
+      'DatasetName': '  sum',
+      'MonitoringLocationID': 'sum  ',
+      'MonitoringLocationName': '  sum',
+      'ResultComment': 'sum  ',
+      'ResultAnalyticalMethodID': '  sum  ',
+      'ResultAnalyticalMethodName': 'sum  ',
+      'LaboratoryName': '  sum',
+      'LaboratorySampleID': '  sum  ',
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'pattern', 'DatasetName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultComment')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'LaboratoryName')).to.equal(true)
+    expect(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID')).to.equal(true)
+    done()
+  })
+  it('Should accept columns without extra whitespace', function (done) {
+
+    const valid = validate({
+      'DatasetName': 'sum',
+      'MonitoringLocationID': 'sum',
+      'MonitoringLocationName': 'sum',
+      'ResultComment': 'sum',
+      'ResultAnalyticalMethodID': 'sum',
+      'ResultAnalyticalMethodName': 'sum',
+      'LaboratoryName': 'sum',
+      'LaboratorySampleID': 'sum',
     })
     expect(valid).to.equal(true)
     done()

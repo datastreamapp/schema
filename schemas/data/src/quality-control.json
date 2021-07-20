@@ -172,6 +172,9 @@
     },
     {
       "$ref": "./quality-control/ResultValue-TemperatureRange.json"
+    },
+    {
+      "$ref": "./quality-control/WhiteSpace.json"
     }
   ]
 }

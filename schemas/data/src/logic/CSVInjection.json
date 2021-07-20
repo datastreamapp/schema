@@ -1,0 +1,31 @@
+{
+  "title": "CSVInjection",
+  "description": "CSV files can trigger injection attacks when opened using spreadsheet software. https://owasp.org/www-community/attacks/CSV_Injection",
+  "errorMessage": "Invalid starting character. `=`, `+`, `-`, `@`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns",
+  "properties": {
+    "DatasetName": {
+      "$ref": "../definitions.json#/csv-injection"
+    },
+    "MonitoringLocationID": {
+      "$ref": "../definitions.json#/csv-injection"
+    },
+    "MonitoringLocationName": {
+      "$ref": "../definitions.json#/csv-injection"
+    },
+    "ResultComment": {
+      "$ref": "../definitions.json#/csv-injection"
+    },
+    "ResultAnalyticalMethodID": {
+      "$ref": "../definitions.json#/csv-injection"
+    },
+    "ResultAnalyticalMethodName": {
+      "$ref": "../definitions.json#/csv-injection"
+    },
+    "LaboratoryName": {
+      "$ref": "../definitions.json#/csv-injection"
+    },
+    "LaboratorySampleID": {
+      "$ref": "../definitions.json#/csv-injection"
+    }
+  }
+}

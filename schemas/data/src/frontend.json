@@ -286,6 +286,9 @@
     },
     {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
+    },
+    {
+      "$ref": "logic/CSVInjection.json"
     }
   ]
 }
