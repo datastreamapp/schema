@@ -1,6 +1,6 @@
 {
   "title": "WhiteSpace",
-  "description": "",
+  "description": "Leading or trailing white space (i.e., spaces inserted before or after your character string) can cause issues with data management.",
   "errorMessage": "Leading or trailing white space detected in character string",
   "properties": {
     "DatasetName": {
