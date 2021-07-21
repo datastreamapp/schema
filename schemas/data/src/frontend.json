@@ -10,23 +10,14 @@
       "properties": {
         "DatasetName": {
           "$ref": "./definitions.json#/DatasetName",
-          "transform": [
-            "trim"
-          ],
           "minLength": 1
         },
         "MonitoringLocationID": {
           "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID",
-          "transform": [
-            "trim"
-          ],
           "minLength": 1
         },
         "MonitoringLocationName": {
           "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
-          "transform": [
-            "trim"
-          ],
           "minLength": 1
         },
         "MonitoringLocationLatitude": {
@@ -182,16 +173,10 @@
           ]
         },
         "ResultComment": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment",
-          "transform": [
-            "trim"
-          ]
+          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
         },
         "ResultAnalyticalMethodID": {
-          "$ref": "./definitions.json#/ResultAnalyticalMethodID",
-          "transform": [
-            "trim"
-          ]
+          "$ref": "./definitions.json#/ResultAnalyticalMethodID"
         },
         "ResultAnalyticalMethodContext": {
           "$ref": "./values/ResultAnalyticalMethodContext.primary.json",
@@ -201,10 +186,7 @@
           ]
         },
         "ResultAnalyticalMethodName": {
-          "$ref": "./definitions.json#/ResultAnalyticalMethodName",
-          "transform": [
-            "trim"
-          ]
+          "$ref": "./definitions.json#/ResultAnalyticalMethodName"
         },
         "AnalysisStartDate": {
           "$ref": "./definitions.json#/date"
@@ -216,16 +198,10 @@
           "$ref": "./definitions.json#/timezone-loose"
         },
         "LaboratoryName": {
-          "$ref": "./definitions.json#/LaboratoryName",
-          "transform": [
-            "trim"
-          ]
+          "$ref": "./definitions.json#/LaboratoryName"
         },
         "LaboratorySampleID": {
-          "$ref": "./definitions.json#/LaboratorySampleID",
-          "transform": [
-            "trim"
-          ]
+          "$ref": "./definitions.json#/LaboratorySampleID"
         }
       },
       "required": [
