@@ -1,3 +1,6 @@
+.npmrc
+coverage
+
 # Logs
 logs
 *.log

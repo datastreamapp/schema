@@ -1,0 +1,72 @@
+name: data-schema Update WQX
+# Consider deprecated - manual review of WQX required
+
+on:
+  workflow_dispatch:
+#  repository_dispatch:
+#    types: [wqx]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 14.x
+      -
+        name: Create .npmrc
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ github.token }}" >> ~/.npmrc
+          echo "@gordonfn:registry=https://npm.pkg.github.com" >> ~/.npmrc
+          echo ".npmrc" >> .gitignore
+      -
+        name: Cache npm
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+#      -
+#        name: Install dependencies
+#        run: |
+#          npm install
+#          npm update wqx
+#      -
+#        name: Build and test allowed values
+#        run: |
+#          npm test
+      -
+        name: Check for file changes
+        run: |
+          git status --porcelain
+          echo "change=$(git status --porcelain | wc -l)" >> $GITHUB_ENV
+      -
+        if: env.change != 0
+        name: Commit & push changes
+        run: |
+          git config --local user.name ${{ github.actor }}
+          git config --local user.email github-actions@datastream.org
+          git add -A
+          git commit -a -m 'ci: update wqx'
+          git push "https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_REF#refs/*/} --follow-tags --force --tags
+
+#      -
+#        if: env.change
+#        name: Publish
+#        run: |
+#          npm publish
+
+#      -
+#        if: env.change
+#        name: Trigger @gordonfn/normalize rebuild
+#        run: |
+#          curl -X POST https://api.github.com/repos/gordonfn/normalize/dispatches \
+#          -H 'Accept: application/vnd.github.everest-preview+json' \
+#          -u ${{ secrets.GITHUB_TOKEN }} \
+#          --data '{"event_type": "schema", "client_payload": {}'

@@ -88,32 +88,51 @@ describe('Conditional Logic', function () {
     let valid = validate({
       'ActivityMediaName':'Surface Water',
       'CharacteristicName': 'Ammonia',
+      'ActivityType': '',
       'ResultSampleFraction': 'Total'
     })
     expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
     expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
+    expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(true)
     done()
   })
   it('Should accept Nutrient CharacteristicName AND filter ResultSampleFraction', function (done) {
     let valid = validate({
       'ActivityMediaName':'Surface Water',
       'CharacteristicName': 'Ammonia',
+      'ActivityType': '',
       'ResultSampleFraction': 'Filtered'
     })
     expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
     expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
+    expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(false)
     done()
   })
-  it('accept accept Nutrient Sediment', function (done) {
+  it('Should accept Nutrient Sediment', function (done) {
     let valid = validate({
       'ActivityMediaName':'Surface Water Sediment',
       'CharacteristicName': 'Ammonia',
+      'ActivityType': '',
       'ResultSampleFraction': 'Total'
     })
     expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
     expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
+    expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(false)
     done()
   })
+  // it('Should accept Nutrient Sediment with no sample fraction', function (done) {
+  //   let valid = validate({
+  //     'ActivityMediaName':'Surface Water Sediment',
+  //     'CharacteristicName': 'Total Nitrogen, mixed forms',
+  //     'ActivityType': '',
+  //     'ResultSampleFraction': ''
+  //   })
+  //   console.log(validate.errors)
+  //   expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
+  //   expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
+  //   expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(false)
+  //   done()
+  // })
 
   // allOf/3
   it('Should reject NOT ResultValue AND NOT ResultDetectionCondition', function (done) {
@@ -327,7 +346,7 @@ carriage return`,
       'LaboratoryName': '_',
       'LaboratorySampleID': '*',
     })
-    console.log(valid, JSON.stringify(validate.errors, null, 2))
+    //console.log(valid, JSON.stringify(validate.errors, null, 2))
     expect(checkProperty(validate.errors, 'pattern', 'DatasetName')).to.equal(false)
     expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID')).to.equal(false)
     expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationName')).to.equal(false)
