@@ -1,11 +1,12 @@
 const fs = require('fs')
 
-const {subsetOnly, wqx, getList, sort, retire, additions, subtractions} = require('./build-lib')
+const {subsetOnly, wqx, getList, sort, retire, override, additions, subtractions} = require('./build-lib')
 
 Object.keys(wqx).forEach(col => {
   console.log(col)
   let object = JSON.parse(JSON.stringify(require(`wqx/values/${wqx[col]}.json`)))
 
+  object.enum = override(col, object.enum)
   const retired = retire(col, object.enum)
 
   object.enum = additions(col, object.enum)

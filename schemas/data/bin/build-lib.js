@@ -45,7 +45,6 @@ const sort = (list) => {
 
 const retire = (column, list) => {
   if (column !== 'CharacteristicName') return []
-
   const arr = []
 
   // Remove retired items from list
@@ -55,6 +54,23 @@ const retire = (column, list) => {
     arr.push(item.substr(0, index))
   }
   return arr
+}
+
+const override = (column, list = []) => {
+  let overrides = {}
+  if (['MonitoringLocationHorizontalAccuracyUnit','MonitoringLocationVerticalUnit','ActivityDepthHeightUnit','ResultUnit','ResultDetectionQuantitationLimitUnit'].includes(column)) overrides = {'% saturatn**':'% saturatn'}
+
+  if (!Object.keys(overrides).length) return list
+
+  // Remove retired items from list
+  list = list.map(item => {
+    if (overrides[item]) {
+      console.log(`|-> Override '${item}' with '${overrides[item]}'`)
+      item = overrides[item]
+    }
+    return item
+  })
+  return list
 }
 
 const additions = (column, list = []) => {
@@ -183,4 +199,4 @@ const subtractions = (column, list = [], retired = []) => {
   return list
 }
 
-module.exports = { getList, sort, retire, additions, subset, subtractions, subsetOnly, wqx }
+module.exports = { getList, sort, retire, override, additions, subset, subtractions, subsetOnly, wqx }
