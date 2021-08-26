@@ -65,7 +65,7 @@
     "maxLength": 6
   },
   "csv-injection": {
-    "pattern": "^[^\\t\\n\\r=+\\-@]{1}"
+    "pattern": "^[^ \\t\\n\\r=+\\-@]{1}"
   },
   "trim": {
     "pattern": "(^[^\\s]+|[^\\s]+$)"

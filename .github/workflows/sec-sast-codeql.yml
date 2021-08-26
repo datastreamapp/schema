@@ -1,14 +1,14 @@
-name: "Static Analysis Security Testing"
+name: "Security: CodeQL Static Application Security Testing"
 
 on:
   workflow_dispatch:
-  push:
-  pull_request:
-#  schedule:
-#    - cron:  '0 0 * * *'
+  #push:
+  #pull_request:
+  #schedule:
+  #  - cron:  '0 0 * * 0'
 
 jobs:
-  CodeQL-Build:
+  Scan:
     # CodeQL runs on ubuntu-latest, windows-latest, and macos-latest
     runs-on: ubuntu-latest
 

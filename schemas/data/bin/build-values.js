@@ -25,3 +25,14 @@ Object.keys(wqx).forEach(col => {
 
   fs.writeFileSync(__dirname + `/../src/values/${col}.primary.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
 })
+
+// Check CharacteristicNameGroups
+let characteristicNameGroups = require(`wqx/groups/CharacteristicName.json`)
+let characteristicNames = require(`../src/values/CharacteristicName.primary.json`)
+characteristicNames = characteristicNames.enum
+
+for(const characteristicName of characteristicNames) {
+  if (!characteristicNameGroups[characteristicName] || characteristicNameGroups[characteristicName] === 'Not Assigned') {
+    console.log('CharacteristicNameGroups Not Assigned', characteristicName)
+  }
+}

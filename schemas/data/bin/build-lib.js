@@ -58,7 +58,9 @@ const retire = (column, list) => {
 
 const override = (column, list = []) => {
   let overrides = {}
-  if (['MonitoringLocationHorizontalAccuracyUnit','MonitoringLocationVerticalUnit','ActivityDepthHeightUnit','ResultUnit','ResultDetectionQuantitationLimitUnit'].includes(column)) overrides = {'% saturatn**':'% saturatn'}
+  if (['MonitoringLocationHorizontalAccuracyUnit','MonitoringLocationVerticalUnit','ActivityDepthHeightUnit','ResultUnit','ResultDetectionQuantitationLimitUnit'].includes(column)) {
+    overrides = {'% saturatn**':'% saturatn'}
+  }
 
   if (!Object.keys(overrides).length) return list
 

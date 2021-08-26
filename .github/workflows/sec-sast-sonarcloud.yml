@@ -1,0 +1,25 @@
+name: "Security: SonarCloud Static Application Security Testing"
+
+on:
+  workflow_dispatch:
+  #push:
+  #pull_request:
+  #schedule:
+  #  - cron:  '0 0 * * 0'
+
+jobs:
+  Scan:
+    # CodeQL runs on ubuntu-latest, windows-latest, and macos-latest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 5
+
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
