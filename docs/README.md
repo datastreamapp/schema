@@ -15,7 +15,12 @@
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/l/schema.svg" alt="npm license" /></a>-->
 </p>
 
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgordonfn%2Fschema.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgordonfn%2Fschema?ref=badge_large)
+
 ## DataStream
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgordonfn%2Fschema.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgordonfn%2Fschema?ref=badge_shield)
+
 
 DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 9 million water quality observations have been published across DataStream’s three regional platforms (Mackenzie DataStream,  Lake Winnipeg DataStream, and Atlantic DataStream) by watershed groups, Indigenous organizations, researchers and governments at all levels.
 
