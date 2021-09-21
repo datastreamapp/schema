@@ -28,6 +28,7 @@ const process = async (src, delKeys = ['$generated'], minify = false, ajv) => {
   let json = JSON.stringify(schema, null, minify ? 0: 2)
 
   await writeFile(path.join(__dirname, `/../${src}/index.json`), json, { encoding: 'utf8' })
+  await writeFile(path.join(__dirname, `/../${src}/index.json.js`), 'export default '+json, { encoding: 'utf8' })
 
   const validate = ajv.compile(schema)
   const code = standaloneCode(ajv, validate)

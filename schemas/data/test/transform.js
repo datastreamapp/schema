@@ -7,7 +7,7 @@ describe('Data Coercion', function () {
 
   it('Should transform values (frontend)', function (done) {
     const valid = validateFrontend({
-      "DatasetName":" Test ",
+      "DatasetName":"Test ",
       "MonitoringLocationID":"A1 ",
       "MonitoringLocationName":"A1 Test",
       "MonitoringLocationLatitude":"51.0486",
@@ -26,10 +26,10 @@ describe('Data Coercion', function () {
       "ResultUnit":"#/100Ml",
       'ResultValueType':'actual',
       "ResultStatusID":"accepted",
-      "ResultComment":"  None at this time",
-      "ResultAnalyticalMethodID":"  1",
+      "ResultComment":"None at this time  ",
+      "ResultAnalyticalMethodID":"1  ",
       "ResultAnalyticalMethodContext":"APHA",
-      "ResultAnalyticalMethodName":"  Alpha",
+      "ResultAnalyticalMethodName":"Alpha  ",
       "ActivityStartDate":"2018-02-23",
       "ActivityStartTime":"13:15:00",
       "ActivityEndDate":"2018-02-23",
