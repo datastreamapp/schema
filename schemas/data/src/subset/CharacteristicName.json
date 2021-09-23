@@ -1,5 +1,5 @@
 [
- ".alpha.,2,6-Trichlorotoluene",
+".alpha.,2,6-Trichlorotoluene",
 ".alpha.-Endosulfan",
 ".alpha.-Hexachlorocyclohexane",
 ".beta.-Endosulfan",
@@ -206,7 +206,7 @@
 "Gas Range Organics (C6-C10)",
 "Germanium",
 "Glyphosate",
-"Grain size, coarse sand (>=630 to 2000 um)"
+"Grain size, coarse sand (>=630 to 2000 um)",
 "Gran acid neutralizing capacity",
 "Hafnium",
 "Hardness, Ca, Mg",
@@ -435,5 +435,5 @@
 "Ytterbium",
 "Yttrium",
 "Zinc",
-"Zirconium",
+"Zirconium"
 ]
