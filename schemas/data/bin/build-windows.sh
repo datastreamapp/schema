@@ -2,6 +2,8 @@
 
 mkdir .\\bin\\template
 
+npm install
+
 mkdir -p primary
 mkdir -p frontend
 mkdir -p backend
