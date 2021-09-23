@@ -4,7 +4,7 @@ const characteristics = require('../src/values/CharacteristicName.primary.json')
 const methodSpeciation = require('../src/logic/CharacteristicName-MethodSpeciation.json').if.properties.CharacteristicName.enum
 const methodSpeciationOptional = require('../src/quality-control/partial/CharacteristicName-MethodSpeciation-Optional.json').enum
 const sampleFraction = require('../src/logic/CharacteristicName-ResultSampleFraction.json').if.properties.CharacteristicName.enum
-const sampleFractionOptional = require('../src/quality-control/partial/CharacteristicName-ResultSampleFraction-Optional.json').enum
+//const sampleFractionOptional = require('../src/quality-control/partial/CharacteristicName-ResultSampleFraction-Optional.json').enum
 const characteristicGroup = require('wqx/groups/CharacteristicName.json')
 const characteristicCASNumber = require('wqx/groups/CASNumber.json')
 
@@ -28,9 +28,9 @@ const buildCharacteristics = () => {
     }
 
     let sampleFractionRequired = sampleFraction.includes(value) ? '"Yes"' : '"No"'
-    if (sampleFractionRequired === '"No"' && sampleFractionOptional.includes(value)) {
-      sampleFractionRequired = '"May"'
-    }
+    // if (sampleFractionRequired === '"No"' && sampleFractionOptional.includes(value)) {
+    //   sampleFractionRequired = '"May"'
+    // }
     csv += `"${value}",${methodSpeciationRequired},${sampleFractionRequired},"${characteristicGroup[value] || 'Not Assigned'}",${characteristicCASNumber[value] || ''}\n`
   }
 
