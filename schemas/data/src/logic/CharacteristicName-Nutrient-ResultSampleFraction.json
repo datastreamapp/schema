@@ -56,7 +56,8 @@
           "Unfiltered",
           "Filtered, lab",
           "Filtered, field",
-          "Non-Filterable (Particle)"
+          "Non-Filterable (Particle)",
+          "Unspecified"
         ]
       }
     },
