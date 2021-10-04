@@ -10,7 +10,8 @@
     "Stormwater",
     "Subsurface Soil/Sediment",
     "Surface Water",
-    "Surface Water Sediment"
+    "Surface Water Sediment",
+    "groundwater"
   ],
   "maxLength": 45
 }
