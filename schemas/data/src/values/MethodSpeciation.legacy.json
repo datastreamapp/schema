@@ -79,8 +79,8 @@
     "as Ti",
     "as Tl",
     "as U3O8",
-    "None",
-    "Unspecified"
+    "as Unspecified",
+    "None"
   ],
   "maxLength": 16
 }
