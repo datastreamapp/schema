@@ -131,7 +131,7 @@ const additions = (column, list = []) => {
   // remove exact duplicates
   const duplicates = []
   let uniqueEnum = [...new Set(arr.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })))]
-  if (uniqueEnum.length < list.length) {
+  if (uniqueEnum.length < arr.length) {
     for (let i = 1, l = arr.length; i < l; i++) {
       if (arr[i - 1] === arr[i]) {
         duplicates.push(arr[i])
