@@ -8,10 +8,18 @@
       "CharacteristicName": {
         "enum": [
           "Ammonia",
+          "Ammonia and ammonium",
           "Ammonium",
+          "Inorganic nitrogen (nitrate and nitrite)",
+          "Kjeldahl nitrogen",
           "Nitrate",
           "Nitrite",
-          "Orthophosphate"
+          "Organic Nitrogen",
+          "Orthophosphate",
+          "Phosphorus, hydrolyzable",
+          "Soluble Reactive Phosphorus (SRP)",
+          "Total Nitrogen, mixed forms",
+          "Total Phosphorus, mixed forms"
         ]
       }
     },

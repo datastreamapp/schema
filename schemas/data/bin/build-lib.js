@@ -32,7 +32,11 @@ const getList = (type, column, list = []) => {
     const list = require(`../src/${type}/${column}.json`)
     return [...new Set(sort(list))]
   } catch (e) {
-    console.log(`|-> Skip ${type}`)
+    if (e.message.includes('Cannot find module')){
+      console.log(`|-> Skip ${type}`)
+    } else {
+      console.log(`|-> Error ${type}`, e.message)
+    }
     return list
   }
 }
@@ -105,7 +109,11 @@ const additions = (column, list = []) => {
     const additions = require(`../src/addition/${column}.json`)
     arr = arr.concat(additions)
   } catch (e) {
-    console.log(`|-> Skip additions`)
+    if (e.message.includes('Cannot find module')){
+      console.log(`|-> Skip additions`)
+    } else {
+      console.log(`|-> Error additions`, e.message)
+    }
   }
 
   // TODO only have apply to legacy
@@ -113,7 +121,11 @@ const additions = (column, list = []) => {
     const deprecated = require(`../src/deprecated/${column}.json`)
     arr = arr.concat(deprecated)
   } catch (e) {
-    console.log(`|-> Skip deprecated`)
+    if (e.message.includes('Cannot find module')){
+      console.log(`|-> Skip deprecated`)
+    } else {
+      console.log(`|-> Error deprecated`, e.message)
+    }
   }
 
   // remove exact duplicates
@@ -175,7 +187,11 @@ const subtractions = (column, list = [], retired = []) => {
   try {
     arr = arr.concat(require(`../src/subtraction/${column}.json`))
   } catch (e) {
-    console.log(`|-> Skip subtractions`)
+    if (e.message.includes('Cannot find module')){
+      console.log(`|-> Skip subtractions`)
+    } else {
+      console.log(`|-> Error subtractions`, e.message)
+    }
   }
 
   arr.filter(item => item.includes('.*')).forEach(pattern => {
@@ -187,7 +203,11 @@ const subtractions = (column, list = [], retired = []) => {
   try {
     arr = arr.concat(require(`wqx/deprecated/${column}.json`))
   } catch (e) {
-    console.log(`|-> Skip deprecated`)
+    if (e.message.includes('Cannot find module')){
+      console.log(`|-> Skip deprecated`)
+    } else {
+      console.log(`|-> Error deprecated`, e.message)
+    }
   }
 
   if (arr.length) console.log(`|-> Subtracting ${arr.length} items`)
