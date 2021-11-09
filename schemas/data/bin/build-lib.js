@@ -92,6 +92,8 @@ const additions = (column, list = []) => {
           retiredDuplicates.push(item)
           item = null
         }
+        // remove edge case
+        if (item === 'Perfluoroheptanesulfonic Acid') item = null
       }
       if (item) {
         arr.push(item)

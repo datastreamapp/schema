@@ -3,6 +3,7 @@
   "description": "",
   "type": "string",
   "enum": [
+    "#/100L",
     "#/100ml",
     "#/ml",
     "%",
@@ -37,6 +38,7 @@
     "mg/g",
     "mg/kg",
     "mg/l",
+    "mg/m2",
     "mg/m3",
     "mg/ml",
     "ml",
@@ -63,6 +65,7 @@
     "RFU",
     "S/m",
     "TCU",
+    "TON",
     "TU",
     "uATM",
     "uE/m2/sec",
