@@ -104,7 +104,10 @@ const additions = (column, list = []) => {
       }
     }
     if (retiredDuplicates.length) {
-      console.log(`|** Retired Duplicates: "${retiredDuplicates.length < 25 ? retiredDuplicates.join('", "') : retiredDuplicates.length}"`)
+      console.log(`|** Retired Duplicates: ${retiredDuplicates.length}`)
+      if (retiredDuplicates.length < 25) {
+        console.log(`|   "${retiredDuplicates.join('", "')}"`)
+      }
     }
   } else {
     arr = list
@@ -134,23 +137,27 @@ const additions = (column, list = []) => {
   }
 
   // remove exact duplicates
-  const duplicates = []
+  const exactDuplicates = []
   let uniqueEnum = [...new Set(arr.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })))]
   if (uniqueEnum.length < arr.length) {
     for (let i = 1, l = arr.length; i < l; i++) {
       if (arr[i - 1] === arr[i]) {
-        duplicates.push(arr[i])
+        exactDuplicates.push(arr[i])
       }
     }
-    if (duplicates.length) {
-      console.log(`|** Duplicates "${duplicates.length < 25 ? duplicates.join('", "') : duplicates.length}"`)
+    if (exactDuplicates.length) {
+      console.log(`|** Exact Duplicates: ${exactDuplicates.length}`)
+      if (exactDuplicates.length < 25) {
+        console.log(`|   "${exactDuplicates.join('", "')}"`)
+      }
     }
   }
 
   // remove mixcase duplicates
+  const mixedCaseDuplicates = []
   for (let i = 1, l = uniqueEnum.length; i < l; i++) {
     if (uniqueEnum[i - 1].localeCompare(uniqueEnum[i], undefined, { sensitivity: 'base' }) !== -1) {
-      duplicates.push(uniqueEnum[i - 1])
+      mixedCaseDuplicates.push(uniqueEnum[i - 1])
       uniqueEnum[i - 1] = null
     }
     if (uniqueEnum[i] !== uniqueEnum[i].trim()) {
@@ -160,10 +167,10 @@ const additions = (column, list = []) => {
   }
   uniqueEnum = uniqueEnum.filter((v) => v !== null)
 
-  if (duplicates.length) {
-    console.log(`|-> There are ${duplicates.length} duplicates:`)
-    if (duplicates.length < 25) {
-      console.log(`|   "${duplicates.join('", "')}"`)
+  if (mixedCaseDuplicates.length) {
+    console.log(`|** Mixed Case Duplicates: ${mixedCaseDuplicates.length}`)
+    if (mixedCaseDuplicates.length < 25) {
+      console.log(`|   "${mixedCaseDuplicates.join('", "')}"`)
     }
   }
 

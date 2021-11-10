@@ -1,6 +1,6 @@
 {
   "name": "@gordonfn/data-schema",
-  "version": "2.6.5",
+  "version": "2.6.6",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
