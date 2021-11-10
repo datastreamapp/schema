@@ -1,10 +1,16 @@
 const fs = require('fs')
 
-const {subsetOnly, wqx, getList, sort, retire, override, additions, subtractions} = require('./build-lib')
+const {subsetOnly, wqx, getList, sort, retire, override, additions, subtractions, subset} = require('./build-lib')
 
 Object.keys(wqx).forEach(col => {
   console.log(col)
   let object = JSON.parse(JSON.stringify(require(`wqx/values/${wqx[col]}.json`)))
+
+  // Add alias
+  // if (col === 'CharacteristicName') {
+  //   const alias = JSON.parse(JSON.stringify(require(`wqx/values/CharacteristicAlias.json`)))
+  //   object.enum = object.enum.concat(alias.enum)
+  // }
 
   object.enum = override(col, object.enum)
   const retired = retire(col, object.enum)
@@ -20,7 +26,7 @@ Object.keys(wqx).forEach(col => {
 
   fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
 
-  object.enum = getList('subset', col, object.enum)
+  object.enum = subset(col, object.enum) // getList('subset', col, object.enum)
   object.enum = subtractions(col, object.enum, retired)
 
   fs.writeFileSync(__dirname + `/../src/values/${col}.primary.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
