@@ -4,28 +4,28 @@
   "errorMessage": "Leading or trailing white space detected in character string",
   "properties": {
     "DatasetName": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     },
     "MonitoringLocationID": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     },
     "MonitoringLocationName": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     },
     "ResultComment": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     },
     "ResultAnalyticalMethodID": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     },
     "ResultAnalyticalMethodName": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     },
     "LaboratoryName": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     },
     "LaboratorySampleID": {
-      "$ref": "../definitions.json#/trim"
+      "$ref": "../definitions.json#/definitions/trim"
     }
   }
 }
