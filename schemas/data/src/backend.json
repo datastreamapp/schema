@@ -9,28 +9,28 @@
       "additionalProperties": true,
       "properties": {
         "DatasetName": {
-          "$ref": "./definitions.json#/DatasetName",
+          "$ref": "./definitions.json#/columns/DatasetName",
           "transform": [
             "trim"
           ]
         },
         "MonitoringLocationID": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID",
+          "$ref": "./definitions.json#/columns/MonitoringLocationID",
           "transform": [
             "trim"
           ]
         },
         "MonitoringLocationName": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
+          "$ref": "./definitions.json#/columns/MonitoringLocationName",
           "transform": [
             "trim"
           ]
         },
         "MonitoringLocationLatitude": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
+          "$ref": "./definitions.json#/columns/MonitoringLocationLatitude"
         },
         "MonitoringLocationLongitude": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
+          "$ref": "./definitions.json#/columns/MonitoringLocationLongitude"
         },
         "MonitoringLocationHorizontalCoordinateReferenceSystem": {
           "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json",
@@ -40,7 +40,7 @@
           ]
         },
         "MonitoringLocationHorizontalAccuracyMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure"
+          "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalAccuracyMeasure"
         },
         "MonitoringLocationHorizontalAccuracyUnit": {
           "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.legacy.json",
@@ -50,7 +50,7 @@
           ]
         },
         "MonitoringLocationVerticalMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure"
+          "$ref": "./definitions.json#/columns/MonitoringLocationVerticalMeasure"
         },
         "MonitoringLocationVerticalUnit": {
           "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json",
@@ -81,19 +81,19 @@
           ]
         },
         "ActivityStartDate": {
-          "$ref": "./definitions.json#/date"
+          "$ref": "./definitions.json#/columns/ActivityStartDate"
         },
         "ActivityStartTime": {
-          "$ref": "./definitions.json#/time-loose"
+          "$ref": "./definitions.json#/definitions/time-loose"
         },
         "ActivityEndDate": {
-          "$ref": "./definitions.json#/date"
+          "$ref": "./definitions.json#/columns/ActivityEndDate"
         },
         "ActivityEndTime": {
-          "$ref": "./definitions.json#/time-loose"
+          "$ref": "./definitions.json#/definitions/time-loose"
         },
         "ActivityDepthHeightMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
+          "$ref": "./definitions.json#/columns/ActivityDepthHeightMeasure"
         },
         "ActivityDepthHeightUnit": {
           "$ref": "./values/ActivityDepthHeightUnit.legacy.json",
@@ -131,7 +131,7 @@
           ]
         },
         "ResultValue": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
+          "$ref": "./definitions.json#/columns/ResultValue"
         },
         "ResultUnit": {
           "$ref": "./values/ResultUnit.legacy.json",
@@ -155,7 +155,7 @@
           ]
         },
         "ResultDetectionQuantitationLimitMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
+          "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitMeasure"
         },
         "ResultDetectionQuantitationLimitUnit": {
           "$ref": "./values/ResultDetectionQuantitationLimitUnit.legacy.json",
@@ -179,13 +179,13 @@
           ]
         },
         "ResultComment": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment",
+          "$ref": "./definitions.json#/columns/ResultComment",
           "transform": [
             "trim"
           ]
         },
         "ResultAnalyticalMethodID": {
-          "$ref": "./definitions.json#/ResultAnalyticalMethodID",
+          "$ref": "./definitions.json#/columns/ResultAnalyticalMethodID",
           "transform": [
             "trim"
           ]
@@ -198,28 +198,28 @@
           ]
         },
         "ResultAnalyticalMethodName": {
-          "$ref": "./definitions.json#/ResultAnalyticalMethodName",
+          "$ref": "./definitions.json#/columns/ResultAnalyticalMethodName",
           "transform": [
             "trim"
           ]
         },
         "AnalysisStartDate": {
-          "$ref": "./definitions.json#/date"
+          "$ref": "./definitions.json#/columns/AnalysisStartDate"
         },
         "AnalysisStartTime": {
-          "$ref": "./definitions.json#/time-loose"
+          "$ref": "./definitions.json#/definitions/time-loose"
         },
         "AnalysisStartTimeZone": {
-          "$ref": "./definitions.json#/timezone-loose"
+          "$ref": "./definitions.json#/definitions/timezone-loose"
         },
         "LaboratoryName": {
-          "$ref": "./definitions.json#/LaboratoryName",
+          "$ref": "./definitions.json#/columns/LaboratoryName",
           "transform": [
             "trim"
           ]
         },
         "LaboratorySampleID": {
-          "$ref": "./definitions.json#/LaboratorySampleID",
+          "$ref": "./definitions.json#/columns/LaboratorySampleID",
           "transform": [
             "trim"
           ]

@@ -16,7 +16,7 @@ const wqxRequiredIf = async (file) => {
   }
 
   const list = [...new Set(object.if.properties[columnFrom].enum.sort())]
-  object.if.properties[columnFrom].enum = subset(columnFrom, list)
+  object.if.properties[columnFrom].enum = subset(columnFrom, list, false)
 
   fs.writeFileSync(__dirname + `/../src/logic/${file}.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
 

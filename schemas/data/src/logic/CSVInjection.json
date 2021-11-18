@@ -4,28 +4,28 @@
   "errorMessage": "Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns",
   "properties": {
     "DatasetName": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     },
     "MonitoringLocationID": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     },
     "MonitoringLocationName": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     },
     "ResultComment": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     },
     "ResultAnalyticalMethodID": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     },
     "ResultAnalyticalMethodName": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     },
     "LaboratoryName": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     },
     "LaboratorySampleID": {
-      "$ref": "../definitions.json#/csv-injection"
+      "$ref": "../definitions.json#/definitions/csv-injection"
     }
   }
 }

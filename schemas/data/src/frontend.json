@@ -9,85 +9,82 @@
       "additionalProperties": false,
       "properties": {
         "DatasetName": {
-          "$ref": "./definitions.json#/DatasetName",
-          "minLength": 1
+          "$ref": "./definitions.json#/columns/DatasetName"
         },
         "MonitoringLocationID": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID",
-          "minLength": 1
+          "$ref": "./definitions.json#/columns/MonitoringLocationID"
         },
         "MonitoringLocationName": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
-          "minLength": 1
+          "$ref": "./definitions.json#/columns/MonitoringLocationName"
         },
         "MonitoringLocationLatitude": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
+          "$ref": "./definitions.json#/columns/MonitoringLocationLatitude"
         },
         "MonitoringLocationLongitude": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
+          "$ref": "./definitions.json#/columns/MonitoringLocationLongitude"
         },
         "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-          "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json",
+          "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalCoordinateReferenceSystem",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "MonitoringLocationHorizontalAccuracyMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure"
+          "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalAccuracyMeasure"
         },
         "MonitoringLocationHorizontalAccuracyUnit": {
-          "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.primary.json",
+          "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalAccuracyUnit",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "MonitoringLocationVerticalMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure"
+          "$ref": "./definitions.json#/columns/MonitoringLocationVerticalMeasure"
         },
         "MonitoringLocationVerticalUnit": {
-          "$ref": "./values/MonitoringLocationVerticalUnit.primary.json",
+          "$ref": "./definitions.json#/columns/MonitoringLocationVerticalUnit",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "MonitoringLocationType": {
-          "$ref": "./values/MonitoringLocationType.primary.json",
+          "$ref": "./definitions.json#/columns/MonitoringLocationType",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ActivityType": {
-          "$ref": "./values/ActivityType.primary.json",
+          "$ref": "./definitions.json#/columns/ActivityType",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ActivityMediaName": {
-          "$ref": "./values/ActivityMediaName.primary.json",
+          "$ref": "./definitions.json#/columns/ActivityMediaName",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ActivityStartDate": {
-          "$ref": "./definitions.json#/date"
+          "$ref": "./definitions.json#/columns/ActivityStartDate"
         },
         "ActivityStartTime": {
-          "$ref": "./definitions.json#/time-loose"
+          "$ref": "./definitions.json#/definitions/time-loose"
         },
         "ActivityEndDate": {
-          "$ref": "./definitions.json#/date"
+          "$ref": "./definitions.json#/columns/ActivityEndDate"
         },
         "ActivityEndTime": {
-          "$ref": "./definitions.json#/time-loose"
+          "$ref": "./definitions.json#/definitions/time-loose"
         },
         "ActivityDepthHeightMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"
+          "$ref": "./definitions.json#/columns/ActivityDepthHeightMeasure"
         },
         "ActivityDepthHeightUnit": {
           "$ref": "./values/ActivityDepthHeightUnit.primary.json",
@@ -97,111 +94,111 @@
           ]
         },
         "SampleCollectionEquipmentName": {
-          "$ref": "./values/SampleCollectionEquipmentName.primary.json",
+          "$ref": "./definitions.json#/columns/SampleCollectionEquipmentName",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "CharacteristicName": {
-          "$ref": "./values/CharacteristicName.primary.json",
+          "$ref": "./definitions.json#/columns/CharacteristicName",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "MethodSpeciation": {
-          "$ref": "./values/MethodSpeciation.primary.json",
+          "$ref": "./definitions.json#/columns/MethodSpeciation",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultSampleFraction": {
-          "$ref": "./values/ResultSampleFraction.primary.json",
+          "$ref": "./definitions.json#/columns/ResultSampleFraction",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultValue": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue"
+          "$ref": "./definitions.json#/columns/ResultValue"
         },
         "ResultUnit": {
-          "$ref": "./values/ResultUnit.primary.json",
+          "$ref": "./definitions.json#/columns/ResultUnit",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultValueType": {
-          "$ref": "./values/ResultValueType.primary.json",
+          "$ref": "./definitions.json#/columns/ResultValueType",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultDetectionCondition": {
-          "$ref": "./values/ResultDetectionCondition.primary.json",
+          "$ref": "./definitions.json#/columns/ResultDetectionCondition",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultDetectionQuantitationLimitMeasure": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure"
+          "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitMeasure"
         },
         "ResultDetectionQuantitationLimitUnit": {
-          "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json",
+          "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitUnit",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultDetectionQuantitationLimitType": {
-          "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json",
+          "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitType",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultStatusID": {
-          "$ref": "./values/ResultStatusID.primary.json",
+          "$ref": "./definitions.json#/columns/ResultStatusID",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultComment": {
-          "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
+          "$ref": "./definitions.json#/columns/ResultComment"
         },
         "ResultAnalyticalMethodID": {
-          "$ref": "./definitions.json#/ResultAnalyticalMethodID"
+          "$ref": "./definitions.json#/columns/ResultAnalyticalMethodID"
         },
         "ResultAnalyticalMethodContext": {
-          "$ref": "./values/ResultAnalyticalMethodContext.primary.json",
+          "$ref": "./definitions.json#/columns/ResultAnalyticalMethodContext",
           "transform": [
             "trim",
             "toEnumCase"
           ]
         },
         "ResultAnalyticalMethodName": {
-          "$ref": "./definitions.json#/ResultAnalyticalMethodName"
+          "$ref": "./definitions.json#/columns/ResultAnalyticalMethodName"
         },
         "AnalysisStartDate": {
-          "$ref": "./definitions.json#/date"
+          "$ref": "./definitions.json#/columns/AnalysisStartDate"
         },
         "AnalysisStartTime": {
-          "$ref": "./definitions.json#/time-loose"
+          "$ref": "./definitions.json#/definitions/time-loose"
         },
         "AnalysisStartTimeZone": {
-          "$ref": "./definitions.json#/timezone-loose"
+          "$ref": "./definitions.json#/definitions/timezone-loose"
         },
         "LaboratoryName": {
-          "$ref": "./definitions.json#/LaboratoryName"
+          "$ref": "./definitions.json#/columns/LaboratoryName"
         },
         "LaboratorySampleID": {
-          "$ref": "./definitions.json#/LaboratorySampleID"
+          "$ref": "./definitions.json#/columns/LaboratorySampleID"
         }
       },
       "required": [

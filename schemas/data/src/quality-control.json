@@ -49,14 +49,14 @@
     },
     "ActivityStartTime": {
       "type": "string",
-      "$ref": "./definitions.json#/time-strict"
+      "$ref": "./definitions.json#/columns/ActivityStartTime"
     },
     "ActivityEndDate": {
       "type": "string"
     },
     "ActivityEndTime": {
       "type": "string",
-      "$ref": "./definitions.json#/time-strict"
+      "$ref": "./definitions.json#/columns/ActivityEndTime"
     },
     "ActivityDepthHeightMeasure": {
       "type": "number"
@@ -117,7 +117,7 @@
     },
     "AnalysisStartTime": {
       "type": "string",
-      "$ref": "./definitions.json#/time-strict"
+      "$ref": "./definitions.json#/columns/AnalysisStartTime"
     },
     "AnalysisStartTimeZone": {
       "errorMessage": {
