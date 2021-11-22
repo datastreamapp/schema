@@ -82,7 +82,8 @@
     "as Tl",
     "as U3O8",
     "as Unspecified",
-    "None"
+    "None",
+    "Unspecified"
   ],
   "maxLength": 16
 }
