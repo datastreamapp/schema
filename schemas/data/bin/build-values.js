@@ -5,6 +5,7 @@ const {subsetOnly, wqx, getList, sort, retire, override, additions, subtractions
 Object.keys(wqx).forEach(col => {
   console.log(col)
   let object = JSON.parse(JSON.stringify(require(`wqx/values/${wqx[col]}.json`)))
+  delete object.$id
 
   // Add alias
   // if (col === 'CharacteristicName') {
