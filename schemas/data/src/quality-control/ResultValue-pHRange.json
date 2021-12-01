@@ -6,7 +6,9 @@
     "properties": {
       "CharacteristicName": {
         "enum": ["pH", 
-                 "pH, lab"]
+                 "pH, lab",
+                 "pH, saturated"
+        ]
       }
     },
     "required": ["CharacteristicName", "ResultValue"]
@@ -16,6 +18,9 @@
       "ResultValue": {
         "minimum": 0,
         "maximum": 14
+      },
+      "ResultUnit": {
+        "enum": ["None"]
       }
     },
     "required": ["ResultValue"]

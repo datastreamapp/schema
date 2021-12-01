@@ -83,6 +83,7 @@
     "as U3O8",
     "as Unspecified",
     "None",
+    "unknown",
     "Unspecified"
   ],
   "maxLength": 16
