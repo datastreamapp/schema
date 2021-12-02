@@ -153,7 +153,10 @@
       "$ref": "./quality-control/ResultDetectionQuantitationLimitMeasure-Minimum.json"
     },
     {
-      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
+      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-None.json"
+    },
+    {
+      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-NoValue.json"
     },
     {
       "$ref": "./quality-control/ResultUnit-None.json"

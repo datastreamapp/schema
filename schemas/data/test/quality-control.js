@@ -170,7 +170,29 @@ describe('Quality Control Checks', function () {
     done()
   })
 
-  //ResultDetectionQuantitationLimitUnit-Allowed
+  // ResultDetectionQuantitationLimitUnit-None
+  it('Should accept when CharacteristicName is pH and ResultDetectionQuantitationLimitUnit is None', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'pH',
+      'ResultDetectionQuantitationLimitUnit': 'None'
+    })
+    expect(valid).to.equal(true)
+    done()
+  })
+  it('Should reject when CharacteristicName is pH and ResultDetectionQuantitationLimitUnit is not None', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'pH',
+      'ResultDetectionQuantitationLimitUnit': 'mg/L'
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+    done()
+  })
+
+  //ResultDetectionQuantitationLimitUnit-NoValue
   it('Should accept when ResultDetectionQuantitationLimitMeasure & ResultDetectionQuantitationLimitUnit exist', function (done) {
 
     const valid = validate({
