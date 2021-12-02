@@ -18,9 +18,6 @@
       "ResultValue": {
         "minimum": 0,
         "maximum": 14
-      },
-      "ResultUnit": {
-        "enum": ["None"]
       }
     },
     "required": ["ResultValue"]
