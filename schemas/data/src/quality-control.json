@@ -156,7 +156,10 @@
       "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Allowed.json"
     },
     {
-      "$ref": "./quality-control/ResultUnit-Allowed.json"
+      "$ref": "./quality-control/ResultUnit-None.json"
+    },
+    {
+      "$ref": "./quality-control/ResultUnit-NoValue.json"
     },
     {
       "$ref": "./quality-control/ResultValue-DOSatMinimum.json"

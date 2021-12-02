@@ -193,7 +193,29 @@ describe('Quality Control Checks', function () {
     done()
   })
 
-  // ResultUnit-Allowed
+  // ResultUnit-None
+  it('Should accept when CharacteristicName is pH and ResultUnit is None', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'pH',
+      'ResultUnit': 'None'
+    })
+    expect(valid).to.equal(true)
+    done()
+  })
+  it('Should reject when CharacteristicName is pH and ResultUnit is not None', function (done) {
+
+    const valid = validate({
+      'CharacteristicName': 'pH',
+      'ResultUnit': 'mg/L'
+    })
+    expect(valid).to.equal(false)
+    expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
+    expect(checkProperty(validate.errors, 'false schema', 'ResultUnit')).to.equal(true)
+    done()
+  })  
+
+  // ResultUnit-NoValue
   it('Should accept when ResultValue & ResultUnit exist', function (done) {
 
     const valid = validate({
