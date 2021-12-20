@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/gordonfn/metadata/main/docs/images/datastream.svg?sanitize=true" alt="DataStream Logo" width="400">
+  <img src="https://raw.githubusercontent.com/gordonfn/schema/main/docs/images/datastream.svg?sanitize=true" alt="DataStream Logo" width="400">
   <br/>
   DataStream Metadata
   <br/>
