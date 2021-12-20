@@ -65,7 +65,8 @@ const override = (column, list = []) => {
   if (['MonitoringLocationHorizontalAccuracyUnit', 'MonitoringLocationVerticalUnit', 'ActivityDepthHeightUnit', 'ResultUnit', 'ResultDetectionQuantitationLimitUnit'].includes(column)) {
     overrides = {
       '% saturatn**': '% saturatn',
-      'gpm**': 'gpm'
+      'gpm**': 'gpm',
+      'std*********': 'std'
     }
   }
 
