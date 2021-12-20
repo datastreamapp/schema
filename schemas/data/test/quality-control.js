@@ -175,6 +175,7 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'pH',
+      'ResultDetectionQuantitationLimitMeasure': 7,
       'ResultDetectionQuantitationLimitUnit': 'None'
     })
     expect(valid).to.equal(true)
@@ -184,11 +185,12 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'pH',
+      'ResultDetectionQuantitationLimitMeasure': 7,
       'ResultDetectionQuantitationLimitUnit': 'mg/L'
     })
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
+    //expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
     done()
   })
 
@@ -220,6 +222,7 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'pH',
+      'ResultValue': 7,
       'ResultUnit': 'None'
     })
     expect(valid).to.equal(true)
@@ -229,11 +232,12 @@ describe('Quality Control Checks', function () {
 
     const valid = validate({
       'CharacteristicName': 'pH',
+      'ResultValue': 7,
       'ResultUnit': 'mg/L'
     })
     expect(valid).to.equal(false)
     expect(checkProperty(validate.errors, 'enum', 'ResultUnit')).to.equal(true)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultUnit')).to.equal(true)
+    //expect(checkProperty(validate.errors, 'false schema', 'ResultUnit')).to.equal(true)
     done()
   })  
 

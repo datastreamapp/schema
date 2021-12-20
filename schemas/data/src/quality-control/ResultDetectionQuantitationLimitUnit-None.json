@@ -1,21 +1,26 @@
 {
-  "title": "",
+  "title": "Unit Should be `None`",
   "description": "Characteristics that require None as unit.",
   "errorMessage": "The unit for the CharacteristicName should be None",
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": ["pH", "pH, lab", "pH, saturated", "Langelier Saturation Index"]
+        "enum": [
+          "pH",
+          "pH, lab",
+          "pH, saturated",
+          "Langelier Saturation Index"
+        ]
       }
     },
-    "required": ["CharacteristicName"]
+    "required": ["CharacteristicName","ResultDetectionQuantitationLimitMeasure"]
   },
   "then": {
     "properties": {
-      "ResulDetectionQuantitationLimitUnit": {
+      "ResultDetectionQuantitationLimitUnit": {
         "enum": ["None"]
       }
     },
-    "required": ["ResulDetectionQuantitationLimitUnit"]
+    "required": ["ResultDetectionQuantitationLimitUnit"]
   }
 }
