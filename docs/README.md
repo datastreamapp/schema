@@ -6,7 +6,7 @@
   <br/>
 </h1>
 
-<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1P4GcY5R2LbGGiT6aFwkQDA8dP8im0S6MyeBFvOEkjJg" target="_blank">Google SpreadSheet</a>, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v2.0.xlsb" target="_blank">Excel</a>, and <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/schema-v2.0.csv" target="_blank">CSV</a> template formats.</p>
+<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1P4GcY5R2LbGGiT6aFwkQDA8dP8im0S6MyeBFvOEkjJg" target="_blank">Google SpreadSheet</a>, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v2.0.xlsb" target="_blank">Excel</a> template formats.</p>
 
 <p align="center">
   <!--<a href="https://github.com/gordonfn/schema"><img src="https://img.shields.io/github/stars/gordonfn/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
