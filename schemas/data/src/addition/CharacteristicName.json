@@ -1,7 +1,4 @@
 [
-  "C4-Fluorenes",
-  "Thorium",
-  "m- & p-Chlorophenol",
   "2,4- & 2,5-Dichlorophenol",
   "2,3,4,5- & 2,3,5,6- Tetrachlorophenol",
   "BDE-049",
@@ -9,5 +6,9 @@
   "BDE-077",
   "BDE-126",
   "BDE-183",
-  "BDE-206"
+  "BDE-206",
+  "C4-Fluorenes",
+  "Fluorescent dissolved organic matter (FDOM)",
+  "m- & p-Chlorophenol",
+  "Thorium"
 ]
