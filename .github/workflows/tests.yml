@@ -1,4 +1,4 @@
-name: Run tests on data-schema
+name: Run tests
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  update:
+  tests:
     runs-on: ubuntu-latest
     steps:
       -
@@ -36,9 +36,8 @@ jobs:
         name: Install dependencies
         run: |
           npm install
-      # TODO update to test all schemas
+
       -
         name: Build and test
         run: |
-          cd schemas/data
           npm test
