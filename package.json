@@ -5,11 +5,16 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "type": "module",
   "main": "",
   "scripts": {
+    "prepare": "husky install",
+    "commit-msg": "commitlint --config commitlint.config.cjs --edit",
+    "pre-commit": "npm run lint:js",
+    "lint": "npm run lint:js && npm run lint:tf",
+    "lint:js": "lint-staged",
+    "lint:tf": "terraform fmt -recursive -write",
     "install": "lerna bootstrap",
-    "lint": "prettier-standard '*/**/*.{js,json}'",
-    "lint2": "prettier --write --loglevel=warn --no-semi --single-quote '*/**/*.{js,json}' && standard --fix '*/**/*.{js,json}'",
     "test": "lerna exec --bail --concurrency 5 c8 npm run test",
     "lerna:rm": "npm run lerna:rm:node_modules && npm run lerna:rm:lock",
     "lerna:rm:lock": "lerna exec -- rm -rf package-lock.json",
@@ -46,25 +51,10 @@
     "chai": "^4.3.3",
     "lerna": "^4.0.0",
     "mocha": "^8.3.0",
+    "husky": "7.0.4",
+    "lint-staged": "^12.0.0",
     "prettier": "^2.2.1",
     "sinon": "^9.2.4",
     "standard": "^16.0.3"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "src/**/*.json": [
-      "prettier-standard",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
   }
 }
