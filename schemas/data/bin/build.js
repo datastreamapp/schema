@@ -1,5 +1,5 @@
 const util = require('util')
-const path = require('path')
+const { join } = require('path')
 const fs = require('fs')
 
 const version = require('../package.json').version
@@ -15,26 +15,36 @@ const process = async (src, delKeys = ['$generated'], minify = false, ajv) => {
   console.log('process', src, delKeys, minify)
   let schema = {} // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
   try {
-    schema = await $RefParser.dereference(__dirname + `/../src/${src}.json`)  // deprecate if/when possible
+    schema = await $RefParser.dereference(
+      join(__dirname, `/../src/${src}.json`)
+    ) // deprecate if/when possible
     schema.description = schema.description.replace('{version}', version)
   } catch (e) {
     console.error(e, e.toJSON())
   }
 
-  delKeys.forEach(delKey => {
+  delKeys.forEach((delKey) => {
     deleteKey(schema, delKey)
   })
 
-  let json = JSON.stringify(schema, null, minify ? 0: 2)
+  const json = JSON.stringify(schema, null, minify ? 0 : 2)
 
-  await writeFile(path.join(__dirname, `/../${src}/index.json`), json, { encoding: 'utf8' })
-  await writeFile(path.join(__dirname, `/../${src}/index.json.js`), 'export default '+json, { encoding: 'utf8' })
+  await writeFile(join(__dirname, `/../${src}/index.json`), json, {
+    encoding: 'utf8'
+  })
+  await writeFile(
+    join(__dirname, `/../${src}/index.json.mjs`),
+    'export default ' + json,
+    { encoding: 'utf8' }
+  )
 
   const validate = ajv.compile(schema)
   const code = standaloneCode(ajv, validate)
   ajv.removeSchema()
 
-  await writeFile(path.join(__dirname, `/../${src}/index.js`), code, { encoding: 'utf8' })
+  await writeFile(join(__dirname, `/../${src}/index.js`), code, {
+    encoding: 'utf8'
+  })
 }
 
 const deleteKey = (obj, delKey) => {
@@ -69,12 +79,13 @@ const ajvPrimary = new Ajv({
   useDefaults: 'empty',
   code: {
     source: true
+    // esm: true
   }
 })
 require('ajv-formats')(ajvPrimary, ['date'])
-//require('ajv-formats-draft2019')(ajvPrimary, [])
-//require("ajv-errors")(ajvPrimary)
-//require('ajv-keywords/dist/keywords/transform')(ajvPrimary)
+// require('ajv-formats-draft2019')(ajvPrimary, [])
+// require("ajv-errors")(ajvPrimary)
+// require('ajv-keywords/dist/keywords/transform')(ajvPrimary)
 process('primary', ['$generated', 'errorMessage'], false, ajvPrimary)
 
 // Frontend
@@ -85,10 +96,11 @@ const ajvFrontend = new Ajv({
   useDefaults: 'empty',
   code: {
     source: true
+    // esm: true
   }
 })
 require('ajv-formats')(ajvFrontend, ['date'])
-//require('ajv-formats-draft2019')(ajvFrontend, [])
+// require('ajv-formats-draft2019')(ajvFrontend, [])
 require('ajv-errors')(ajvFrontend)
 require('ajv-keywords/dist/keywords/transform')(ajvFrontend)
 process('frontend', ['$generated', 'title', 'description'], true, ajvFrontend)
@@ -102,12 +114,18 @@ const ajvBackend = new Ajv({
   loopEnum: 1500,
   code: {
     source: true
+    // esm: true
   }
 })
 require('ajv-formats')(ajvBackend, ['date'])
-//require('ajv-formats-draft2019')(ajvBackend, [])
+// require('ajv-formats-draft2019')(ajvBackend, [])
 require('ajv-keywords/dist/keywords/transform')(ajvBackend)
-process('backend', ['$generated', 'errorMessage', 'title', 'description'], true, ajvBackend)
+process(
+  'backend',
+  ['$generated', 'errorMessage', 'title', 'description'],
+  true,
+  ajvBackend
+)
 
 // Quality Control
 const ajvQualityControl = new Ajv({
@@ -117,10 +135,11 @@ const ajvQualityControl = new Ajv({
   useDefaults: 'empty',
   code: {
     source: true
+    // esm: true
   }
 })
 require('ajv-formats')(ajvQualityControl, ['date'])
-//require('ajv-formats-draft2019')(ajvQualityControl, [])
+// require('ajv-formats-draft2019')(ajvQualityControl, [])
 require('ajv-errors')(ajvQualityControl)
 require('ajv-keywords/dist/keywords/transform')(ajvQualityControl)
 process('quality-control', ['$generated'], true, ajvQualityControl)
