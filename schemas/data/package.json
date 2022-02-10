@@ -1,6 +1,6 @@
 {
   "name": "@gordonfn/data-schema",
-  "version": "2.6.8",
+  "version": "2.6.10",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
@@ -37,7 +37,7 @@
     "json-schema-ref-parser": "^9.0.9",
     "rollup": "^2.56.0",
     "rollup-plugin-terser": "^7.0.2",
-    "wqx": "^3.0.32"
+    "wqx": "^3.0.40"
   },
   "repository": {
     "type": "git",
