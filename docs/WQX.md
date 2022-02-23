@@ -39,8 +39,8 @@ Column                                                         | WQX            
 **Monitoring Location Latitude**                               | Required, Number    | Required, Number | None
 **Monitoring Location Longitude**                              | Required, Number    | Required, Number | None
 **Monitoring Location Source Map Scale**                       | Conditional, Text   |                  | Removed
-**Monitoring Location Horizontal Accuracy Measure Value**      | Optional, Text      |                  | Removed
-**Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   |                  | Removed
+**Monitoring Location Horizontal Accuracy Measure Value**      | Optional, Values    |                  | None
+**Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   |                  | [Subset](../schemas/data/src/subset/MonitoringLocationHorizontalAccuracyUnit.json)
 **Monitoring Location Horizontal Collection Method**           | Required, Values    |                  | Removed, DataStream uses GPS based locations (lat/lng), not addresses, zip/postal code, etc
 **Monitoring Location Horizontal Coordinate Reference System** | Required, Values    | Required, Values | None
 **Vertical Measure**                                           | Optional, Number    |                  | Removed (Possible future use with Ground Water)
@@ -62,9 +62,9 @@ Column                                                         | WQX            
 Column                                              | WQX                      | DS-WQX              | Changes
 ----------------------------------------------------|--------------------------|---------------------|----------------------------------------------------------------
 **Activity ID**                                     | Required, Text           |                     | Removed, duplication of information, WQX concatenates location ID, date and time to create Activity ID 
-**Activity Type**                                   | Required, Values         | Required, Values    | [Additions](../src/addition/ActivityType.json)
+**Activity Type**                                   | Required, Values         | Required, Values    | [Additions](../schemas/data/src/addition/ActivityType.json)
 **Activity Media Name**                             | Required, Values         | Required, Values    | Removed
-**Activity Media Subdivision Name**                 | Optional, Values         | Required, Values    | Renamed to `Activity Media Name` for simplicity, see [Subset](src/subset/ActivityMediaName.json)
+**Activity Media Subdivision Name**                 | Optional, Values         | Required, Values    | Renamed to `Activity Media Name` for simplicity, see [Subset](../schemas/data/src/subset/ActivityMediaName.json)
 **Activity Start Date**                             | Required, Date           | Required, Date      | Changed format to meet ISO 8601
 **Activity Start Time**                             | Optional, Time           | Optional, Time      | Changed format to meet ISO 8601
 **Activity Start Time Zone**                        | Conditional, Text        |                     | Removed, calculated internally using the Latitude and Longitude
@@ -73,7 +73,7 @@ Column                                              | WQX                      |
 **Activity End Time Zone**                          | Conditional, Text        |                     | See `Activity Start Time Zone`
 **Activity Relative Depth Name**                    | Optional, Values         |                     | Removed
 **Activity Height/Depth Measure**                   | Optional, Text           | Optional, Number    | Changed type to Number only
-**Activity Height/Depth Unit**                      | Conditional, Values      | Conditional, Values | None
+**Activity Height/Depth Unit**                      | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ActivityDepthHeightUnit.json)
 **Activity Top Depth/Height Measure**               | Optional, Text           |                     | Removed
 **Activity Top Depth/Height Unit**                  | Conditional, Values      |                     | Removed
 **Activity Bottom Depth/Height Measure**            | Optional, Text           |                     | Removed
@@ -91,7 +91,7 @@ Column                                              | WQX                      |
 **Activity Horizontal Collection Method**           | Conditional, Values      |                     | Removed
 **Activity Horizontal Coordinate Reference System** | Conditional, Values      |                     | Removed
 **Sample Collection Method ID**                     | Conditional, Values/Text |                     | Removed
-**Sample Collection Equipment Name**                | Conditional, Values      | Optional, Values    | None, removed condition on `Sample Collection Method ID` as it's not included
+**Sample Collection Equipment Name**                | Conditional, Values      | Optional, Values    | [Subset](../schemas/data/src/subset/SampleCollectionEquipmentName.json), removed condition on `Sample Collection Method ID` as it's not included
 **Sample Collection Equipment Comment**             | Optional, Text           |                     | Removed 
 **Sample Preparation Method ID**                    | Optional, Text           |                     | Removed 
 **Sample Container Type**                           | Conditional, Values      |                     | Removed 
@@ -102,14 +102,14 @@ Column                                              | WQX                      |
 **Activity Attachment File Name**                   | Optional, Text           |                     | Removed 
 **Activity Attachment Type**                        | Conditional, Text        |                     | Removed 
 **Data Logger Line**                                | Conditional, Text        |                     | Removed 
-**Result Detection Condition**                      | Conditional, Values      | Conditional, Values | [Subset](../src/subset/ResultDetectionCondition.json), Added `Below Detection/Quantification Limit`, `Above Detection/Quantification Limit`. Change was made to improve clarity. Changed the definitions for `Not Detected ` and `Detected Not Quantified` to reflect prescence/abscence to improve clarity.
-**Characteristic Name**                             | Conditional, Values      | Required, Values    | [Additions](../src/addition/CharacteristicName.json), [Subtractions](../src/subtraction/CharacteristicName.json)
-**Method Speciation**                               | Conditional, Values      | Optional, Values    | [Additions](../src/addition/MethodSpeciation.json), Added `as CN` to account for CCME cyanide requirement for method speciation
-**Result Sample Fraction**                          | Conditional, Values      | Conditional, Values | [Additions](../src/addition/ResultSampleFraction.json), Added `Unspecified` to account for older data where the sample fraction may be unknown 
+**Result Detection Condition**                      | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ResultDetectionCondition.json), Added `Below Detection/Quantification Limit`, `Above Detection/Quantification Limit`. Change was made to improve clarity. Changed the definitions for `Not Detected ` and `Detected Not Quantified` to reflect prescence/abscence to improve clarity.
+**Characteristic Name**                             | Conditional, Values      | Required, Values    | [Subset](../schemas/data/src/subset/CharacteristicName.json)
+**Method Speciation**                               | Conditional, Values      | Optional, Values    | [Subset](../schemas/data/src/subset/MethodSpeciation.json), Added `as CN` to account for CCME cyanide requirement for method speciation
+**Result Sample Fraction**                          | Conditional, Values      | Conditional, Values | [Additions](../schemas/data/src/addition/ResultSampleFraction.json), Added `Unspecified` to account for older data where the sample fraction may be unknown 
 **Result Value**                                    | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values
-**Result Unit**                                     | Conditional, Values      | Conditional, Values | [Additions](../src/addition/MeasurmentUnit.json), Added `L/mg-m` for UV absorbance not in `L/mg-cm`, `#/yr` to account for flushing rate, and `uATM` to account for those using micro-atmospheres 
+**Result Unit**                                     | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ResultUnit.json), Added `L/mg-m` for UV absorbance not in `L/mg-cm`, `#/yr` to account for flushing rate, and `uATM` to account for those using micro-atmospheres 
 **Result Qualifier**                                | Optional, Values         |                     | Removed
-**Result Status ID**                                | Conditional, Values      | Optional, Values    | Changed, made optional due to ambiguous values
+**Result Status ID**                                | Conditional, Values      | Optional, Values    | [Subset](../schemas/data/src/subset/ResultStatusID.json), Changed, made optional due to ambiguous values
 **Statistical Base Code**                           | Optional, Values         |                     | Removed
 **Result Value Type**                               | Conditional, Values      | Required, Values    | Changed, made required always because default value could be miss used
 **Result Weight Basis**                             | Optional, Values         |                     | Removed
@@ -129,7 +129,7 @@ Column                                              | WQX                      |
 **Result Attachment File Name**                     | Optional, Text           |                     | Removed
 **Result Attachment Type**                          | Conditional, Text        |                     | Removed
 **Result Analytical Method ID**                     | Conditional, Values/Text | Conditional, Text   | Changed, removed allowed list (US specific), any string accepted.
-**Result Analytical Method Context**                | Conditional, Values/Text | Conditional, Values | [Additions](../src/addition/ResultAnalyticalMethodContext.json), Added `EN` to allow for European standards, `PROPRIETARY` for internal standards specific to the organization, `SM` for Standard Method, and `VMV` to allow for value method variable codes used in Canada
+**Result Analytical Method Context**                | Conditional, Values/Text | Conditional, Values | [Subset](../schemas/data/src/subset/ResultAnalyticalMethodContext.json), Added `EN` to allow for European standards, `PROPRIETARY` for internal standards specific to the organization and `VMV` to allow for value method variable codes used in Canada
 **Result Analytical Method Name**                   |                          | Conditional, Text   | Added as there is no look-up table of allowed method names to cross reference to get this information at the time.
 **Laboratory Name**                                 | Optional, Text           | Conditional, Text   | Required if Activity Type starts with `Sample`
 **Laboratory Sample ID**                            |                          | Optional, Text      | Added, is reported by labs and helpful for some data stewards 
@@ -140,7 +140,7 @@ Column                                              | WQX                      |
 **Analysis End Time**                               | Optional, Time           |                     | Removed
 **Analysis End Time Zone**                          | Conditional, Values      |                     | Removed
 **Result Laboratory Comment Code**                  | Optional, Values         |                     | Removed
-**Result Detection/Quantitation Limit Type**        | Conditional, Values      | Conditional, Values | [Subset](../src/subset/ResultDetectionQuantitationLimitType.json)
+**Result Detection/Quantitation Limit Type**        | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ResultDetectionQuantitationLimitType.json), replaced `Upper Reporting Limit` and `Lower Reporting Limit` with `Reporting Limit`.
 **Result Detection/Quantitation Limit Measure**     | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values. Characteristic Names that require text have been removed. Only required when `Below Detection/Quantification Limit` or `Above Detection/Quantification Limit` exists as detection condition.
 **Result Detection/Quantitation Limit Unit**        | Conditional, Values      | Conditional, Values | See `Result Unit`
 **Laboratory Accreditation Indicator**              | Optional, Bool           |                     | Removed 
