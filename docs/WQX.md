@@ -28,7 +28,7 @@ Column                                                         | WQX            
 ---------------------------------------------------------------|---------------------|------------------|--------------------------------------------------------
 **Monitoring Location ID**                                     | Required, Text      | Required, Text   | None
 **Monitoring Location Name**                                   | Required, Text      | Required, Text   | None
-**Monitoring Location Type**                                   | Required, Values    | Required, Values | [Subset](../schemas/data/subset/MonitoringLoationType.json)
+**Monitoring Location Type**                                   | Required, Values    | Required, Values | [Subset](../schemas/data/src/subset/MonitoringLocationType.json)
 **Monitoring Location Description**                            | Optional, Text      |                  | Removed
 **HUC Eight-Digit Code**                                       | Optional, Text      |                  | Removed
 **HUC Twelve-Digit Code**                                      | Optional, Text      |                  | Removed
