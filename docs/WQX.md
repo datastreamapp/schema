@@ -39,8 +39,8 @@ Column                                                         | WQX            
 **Monitoring Location Latitude**                               | Required, Number    | Required, Number | None
 **Monitoring Location Longitude**                              | Required, Number    | Required, Number | None
 **Monitoring Location Source Map Scale**                       | Conditional, Text   |                  | Removed
-**Monitoring Location Horizontal Accuracy Measure Value**      | Optional, Values    |                  | None
-**Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   |                  | [Subset](../schemas/data/src/subset/MonitoringLocationHorizontalAccuracyUnit.json)
+**Monitoring Location Horizontal Accuracy Measure Value**      | Optional, Values    | Optional, Values | None
+**Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   | Conditional, Values | [Subset](../schemas/data/src/subset/MonitoringLocationHorizontalAccuracyUnit.json)
 **Monitoring Location Horizontal Collection Method**           | Required, Values    |                  | Removed, DataStream uses GPS based locations (lat/lng), not addresses, zip/postal code, etc
 **Monitoring Location Horizontal Coordinate Reference System** | Required, Values    | Required, Values | None
 **Vertical Measure**                                           | Optional, Number    |                  | Removed (Possible future use with Ground Water)
