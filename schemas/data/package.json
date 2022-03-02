@@ -1,6 +1,6 @@
 {
-  "name": "@gordonfn/data-schema",
-  "version": "2.6.10",
+  "name": "@datastreamapp/data-schema",
+  "version": "2.6.11",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
@@ -21,9 +21,9 @@
   "author": "willfarrell",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gordonfn/schema/issues"
+    "url": "https://github.com/datastreamapp/schema/issues"
   },
-  "homepage": "https://github.com/gordonfn/schema#readme",
+  "homepage": "https://github.com/datastreamapp/schema#readme",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.0",
@@ -35,13 +35,13 @@
     "change-case": "^4.1.2",
     "glob": "^7.1.7",
     "json-schema-ref-parser": "^9.0.9",
-    "rollup": "^2.56.0",
+    "rollup": "^2.69.0",
     "rollup-plugin-terser": "^7.0.2",
     "wqx": "^3.0.45"
   },
   "repository": {
     "type": "git",
-    "url": "github:gordonfn/schema",
-    "directory": "schema/data"
+    "url": "github:datastreamapp/schema",
+    "directory": "schemas/data"
   }
 }

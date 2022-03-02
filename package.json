@@ -1,10 +1,8 @@
 {
-  "name": "@gordonfn/schema-monorepo",
-  "version": "2.6.10",
+  "name": "@datastream/schema-monorepo",
+  "version": "2.6.11",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
+  "private": true,
   "type": "module",
   "main": "",
   "scripts": {
@@ -27,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gordonfn/schema.git"
+    "url": "git+https://github.com/datastreamapp/schema.git"
   },
   "keywords": [
     "water quality exchange",
@@ -40,9 +38,9 @@
   "author": "willfarrell",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gordonfn/schema/issues"
+    "url": "https://github.com/datastreamapp/schema/issues"
   },
-  "homepage": "https://github.com/gordonfn/schema#readme",
+  "homepage": "https://github.com/datastreamapp/schema#readme",
   "devDependencies": {
     "@commitlint/cli": "^16.0.0",
     "@commitlint/config-conventional": "^16.0.0",
