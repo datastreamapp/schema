@@ -37,7 +37,7 @@
     "json-schema-ref-parser": "^9.0.9",
     "rollup": "^2.56.0",
     "rollup-plugin-terser": "^7.0.2",
-    "wqx": "^3.0.40"
+    "wqx": "^3.0.45"
   },
   "repository": {
     "type": "git",
