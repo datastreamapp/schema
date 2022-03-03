@@ -42,11 +42,7 @@
         }
       }
     },
-    "required": [
-      "ActivityMediaName",
-      "CharacteristicName",
-      "ActivityType"
-    ]
+    "required": ["ActivityMediaName", "CharacteristicName", "ActivityType"]
   },
   "then": {
     "properties": {
@@ -61,8 +57,6 @@
         ]
       }
     },
-    "required": [
-      "ResultSampleFraction"
-    ]
+    "required": ["ResultSampleFraction"]
   }
 }

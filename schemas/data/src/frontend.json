@@ -25,51 +25,33 @@
         },
         "MonitoringLocationHorizontalCoordinateReferenceSystem": {
           "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalCoordinateReferenceSystem",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationHorizontalAccuracyMeasure": {
           "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalAccuracyMeasure"
         },
         "MonitoringLocationHorizontalAccuracyUnit": {
           "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalAccuracyUnit",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationVerticalMeasure": {
           "$ref": "./definitions.json#/columns/MonitoringLocationVerticalMeasure"
         },
         "MonitoringLocationVerticalUnit": {
           "$ref": "./definitions.json#/columns/MonitoringLocationVerticalUnit",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationType": {
           "$ref": "./definitions.json#/columns/MonitoringLocationType",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ActivityType": {
           "$ref": "./definitions.json#/columns/ActivityType",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ActivityMediaName": {
           "$ref": "./definitions.json#/columns/ActivityMediaName",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ActivityStartDate": {
           "$ref": "./definitions.json#/columns/ActivityStartDate"
@@ -88,86 +70,53 @@
         },
         "ActivityDepthHeightUnit": {
           "$ref": "./values/ActivityDepthHeightUnit.primary.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "SampleCollectionEquipmentName": {
           "$ref": "./definitions.json#/columns/SampleCollectionEquipmentName",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "CharacteristicName": {
           "$ref": "./definitions.json#/columns/CharacteristicName",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MethodSpeciation": {
           "$ref": "./definitions.json#/columns/MethodSpeciation",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultSampleFraction": {
           "$ref": "./definitions.json#/columns/ResultSampleFraction",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultValue": {
           "$ref": "./definitions.json#/columns/ResultValue"
         },
         "ResultUnit": {
           "$ref": "./definitions.json#/columns/ResultUnit",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultValueType": {
           "$ref": "./definitions.json#/columns/ResultValueType",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionCondition": {
           "$ref": "./definitions.json#/columns/ResultDetectionCondition",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionQuantitationLimitMeasure": {
           "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitMeasure"
         },
         "ResultDetectionQuantitationLimitUnit": {
           "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitUnit",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionQuantitationLimitType": {
           "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitType",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultStatusID": {
           "$ref": "./definitions.json#/columns/ResultStatusID",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultComment": {
           "$ref": "./definitions.json#/columns/ResultComment"
@@ -177,10 +126,7 @@
         },
         "ResultAnalyticalMethodContext": {
           "$ref": "./definitions.json#/columns/ResultAnalyticalMethodContext",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultAnalyticalMethodName": {
           "$ref": "./definitions.json#/columns/ResultAnalyticalMethodName"
@@ -219,21 +165,13 @@
         "MonitoringLocationHorizontalAccuracyMeasure": [
           "MonitoringLocationHorizontalAccuracyUnit"
         ],
-        "MonitoringLocationVerticalMeasure": [
-          "MonitoringLocationVerticalUnit"
-        ],
-        "ActivityDepthHeightMeasure": [
-          "ActivityDepthHeightUnit"
-        ],
-        "ResultValue": [
-          "ResultUnit"
-        ],
+        "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
+        "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
+        "ResultValue": ["ResultUnit"],
         "ResultDetectionQuantitationLimitMeasure": [
           "ResultDetectionQuantitationLimitUnit"
         ],
-        "AnalysisStartTime": [
-          "AnalysisStartTimeZone"
-        ]
+        "AnalysisStartTime": ["AnalysisStartTimeZone"]
       },
       "errorMessage": {
         "additionalProperties": "Should not have columns outside of schema/template"

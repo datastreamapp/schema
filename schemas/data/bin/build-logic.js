@@ -1,50 +1,73 @@
-const fs = require('fs')
-const { subset } = require('./build-lib')
+import { readFile, writeFile } from 'fs/promises'
+import { dirname, join } from 'path'
+import { fileURLToPath } from 'url'
+import { subset } from './build-lib.js'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const wqxRequiredIf = async (file) => {
   console.log(file)
   const [columnFrom, columnTo] = file.split('-')
 
-  const logicJSON = require(__dirname + `/../src/logic/${file}.json`)
+  const logicJSON = await readFile(
+    join(__dirname, `/../src/logic/${file}.json`)
+  )
+    .then((res) => JSON.parse(res))
+    .catch(() => ({}))
+  const { default: required } = await import(`wqx/required/${file}.json.js`)
 
   const object = {
     $generated: 'build-logic.js',
     title: logicJSON.title,
     description: logicJSON.description,
     errorMessage: logicJSON.errorMessage,
-    ...require(`wqx/required/${file}.json`)
+    ...required
   }
 
   const list = [...new Set(object.if.properties[columnFrom].enum.sort())]
-  object.if.properties[columnFrom].enum = subset(columnFrom, list, false)
+  object.if.properties[columnFrom].enum = await subset(columnFrom, list, false)
 
-  fs.writeFileSync(__dirname + `/../src/logic/${file}.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
+  await writeFile(
+    join(__dirname, `/../src/logic/${file}.json`),
+    JSON.stringify(object, null, 2),
+    { encoding: 'utf8' }
+  )
 
   // Special Case - MethodSpeciation/ResultSampleFraction is optional for a CharacteristicName
-  const optional = require(__dirname + `/../src/quality-control/partial/${file}-Optional.json`)
-  object.if.properties[columnFrom].enum = object.if.properties[columnFrom].enum.concat(optional.enum)
+  const optional = await readFile(
+    join(__dirname, `/../src/quality-control/partial/${file}-Optional.json`)
+  )
+    .then((res) => JSON.parse(res))
+    .catch(() => ({}))
+  object.if.properties[columnFrom].enum = object.if.properties[
+    columnFrom
+  ].enum.concat(optional.enum)
 
-  const qcJSON = require(__dirname + `/../src/quality-control/${file}.json`)
+  const qcJSON = await readFile(
+    join(__dirname, `/../src/quality-control/${file}.json`)
+  )
+    .then((res) => JSON.parse(res))
+    .catch(() => ({}))
   const qc = {
-    '$generated': 'build-logic.js',
+    $generated: 'build-logic.js',
     title: qcJSON.title,
     description: qcJSON.description,
     errorMessage: qcJSON.errorMessage,
-    'if': {
-      'properties': {
+    if: {
+      properties: {
         [columnFrom]: {
-          'not': {
-            'enum': object.if.properties[columnFrom].enum
+          not: {
+            enum: object.if.properties[columnFrom].enum
           }
         }
       },
-      'required': [columnFrom]
+      required: [columnFrom]
     },
-    'then': {
-      //'oneOf': [{
-        'properties': {
-          [columnTo]: false
-        }
+    then: {
+      // 'oneOf': [{
+      properties: {
+        [columnTo]: false
+      }
       //  'required': [columnTo]
       // }, {
       //   'not': {
@@ -53,13 +76,15 @@ const wqxRequiredIf = async (file) => {
       // }]
     }
   }
-  fs.writeFileSync(__dirname + `/../src/quality-control/${file}.json`, JSON.stringify(qc, null, 2), { encoding: 'utf8' })
+  await writeFile(
+    join(__dirname, `/../src/quality-control/${file}.json`),
+    JSON.stringify(qc, null, 2),
+    { encoding: 'utf8' }
+  )
 }
 
-//wqxRequiredIf('ActivityType-AnalyticalMethod','CharacteristicName',['AnalyticalMethodtype'])
-//wqxRequiredIf('ActivityType-MonitoringLocation','CharacteristicName',['MonitoringLocation'])
-//wqxRequiredIf('Characteristic-AnalyticalMethod','CharacteristicName',['ResultAnalyticalMethodID','ResultAnalyticalMethodContext'])
+// wqxRequiredIf('ActivityType-AnalyticalMethod','CharacteristicName',['AnalyticalMethodtype'])
+// wqxRequiredIf('ActivityType-MonitoringLocation','CharacteristicName',['MonitoringLocation'])
+// wqxRequiredIf('Characteristic-AnalyticalMethod','CharacteristicName',['ResultAnalyticalMethodID','ResultAnalyticalMethodContext'])
 wqxRequiredIf('CharacteristicName-MethodSpeciation')
-//wqxRequiredIf('CharacteristicName-ResultSampleFraction')
-
-
+// wqxRequiredIf('CharacteristicName-ResultSampleFraction')

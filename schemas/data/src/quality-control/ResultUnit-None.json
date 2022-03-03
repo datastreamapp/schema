@@ -5,15 +5,10 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": [
-          "pH",
-          "pH, lab",
-          "pH, saturated",
-          "Langelier Saturation Index"
-        ]
+        "enum": ["pH", "pH, lab", "pH, saturated", "Langelier Saturation Index"]
       }
     },
-    "required": ["CharacteristicName","ResultValue"]
+    "required": ["CharacteristicName", "ResultValue"]
   },
   "then": {
     "properties": {

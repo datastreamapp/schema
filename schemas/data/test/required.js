@@ -1,9 +1,6 @@
-const expect = require('chai').expect
+import test from 'ava'
 
-const schema = require('../primary/index.json')
-let validate = require('../frontend')
-let validateStrict = require('../primary')
-let validateBackend = require('../backend')
+import validate from '../frontend/index.js'
 
 const checkProperty = (errors, keyword, property) => {
   if (errors === null) return false
@@ -13,170 +10,237 @@ const checkProperty = (errors, keyword, property) => {
       if (nested) return nested
     }
     if (error.keyword !== keyword) continue
-    if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
-    else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
-    else if (keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
-    else if (keyword === 'anyOf') return true
-    else if (keyword === 'not' && error.instancePath.includes(property)) return true
-    else if (keyword === 'enum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'minimum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'exclusiveMinimum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'maximum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'exclusiveMaximum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'false schema' && error.instancePath.includes(property)) return true
-    else if (keyword === 'pattern') return true
+    if (
+      ['required', 'dependencies'].includes(keyword) &&
+      error.params.missingProperty === property
+    ) {
+      return true
+    } else if (
+      keyword === 'additionalProperties' &&
+      error.params.additionalProperty === property
+    ) {
+      return true
+    } else if (
+      keyword === 'oneOf' &&
+      error.params.passingSchemas.includes(property)
+    ) {
+      return true
+    } else if (keyword === 'anyOf') return true
+    else if (keyword === 'not' && error.instancePath.includes(property)) {
+      return true
+    } else if (keyword === 'enum' && error.instancePath.includes(property)) {
+      return true
+    } else if (keyword === 'minimum' && error.instancePath.includes(property)) {
+      return true
+    } else if (
+      keyword === 'exclusiveMinimum' &&
+      error.instancePath.includes(property)
+    ) {
+      return true
+    } else if (keyword === 'maximum' && error.instancePath.includes(property)) {
+      return true
+    } else if (
+      keyword === 'exclusiveMaximum' &&
+      error.instancePath.includes(property)
+    ) {
+      return true
+    } else if (
+      keyword === 'false schema' &&
+      error.instancePath.includes(property)
+    ) {
+      return true
+    } else if (keyword === 'pattern') return true
   }
   return false
 }
 
-describe('Required / Dependencies', function () {
+test('Should not set any defaults', async (t) => {
+  const data = {}
+  const valid = validate(data)
+  t.false(valid)
+  t.deepEqual(data, {})
+})
 
-  it('Should not set any defaults', function (done) {
-    let data = {}
-    let valid = validate(data)
-    expect(data).to.deep.equal({})
+test('Should require properties', async (t) => {
+  const valid = validate({})
+  t.is(valid, false)
 
-    done()
+  // #/allOf/0
+  t.is(checkProperty(validate.errors, 'required', 'DatasetName'), true)
+  t.is(
+    checkProperty(validate.errors, 'required', 'MonitoringLocationID'),
+    true
+  )
+  t.is(
+    checkProperty(validate.errors, 'required', 'MonitoringLocationName'),
+    true
+  )
+  t.is(
+    checkProperty(validate.errors, 'required', 'MonitoringLocationType'),
+    true
+  )
+  t.is(
+    checkProperty(validate.errors, 'required', 'MonitoringLocationLatitude'),
+    true
+  )
+  t.is(
+    checkProperty(validate.errors, 'required', 'MonitoringLocationLongitude'),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'required',
+      'MonitoringLocationHorizontalCoordinateReferenceSystem'
+    ),
+    true
+  )
+  t.is(checkProperty(validate.errors, 'required', 'ActivityType'), true)
+  t.is(checkProperty(validate.errors, 'required', 'ActivityMediaName'), true)
+  t.is(checkProperty(validate.errors, 'required', 'ActivityStartDate'), true)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), true)
+  t.is(checkProperty(validate.errors, 'required', 'ResultValueType'), true)
+})
+
+test('Should not require properties', async (t) => {
+  const valid = validate({
+    DatasetName: 'Test',
+    MonitoringLocationID: 'A1',
+    MonitoringLocationName: 'A1 Test',
+    MonitoringLocationLatitude: '51.0486',
+    MonitoringLocationLongitude: '-114.0708',
+    MonitoringLocationHorizontalCoordinateReferenceSystem: 'AMSMA',
+    MonitoringLocationType: 'Ocean',
+    ActivityType: 'Field Msr/Obs',
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightMeasure: '-34',
+    ActivityDepthHeightUnit: 'm',
+    SampleCollectionEquipmentName: 'Bucket',
+    CharacteristicName: 'Sulfur',
+    MethodSpeciation: 'as B',
+    ResultSampleFraction: 'Dissolved',
+    ResultValue: '99.99',
+    ResultUnit: 'ug/l',
+    ResultValueType: 'Actual',
+    ResultStatusID: 'Accepted',
+    ResultComment: 'None at this time',
+    ResultAnalyticalMethodID: '1',
+    ResultAnalyticalMethodContext: 'APHA',
+    ActivityStartDate: '2018-02-23',
+    ActivityStartTime: '13:15:00',
+    ActivityEndDate: '2018-02-23',
+    ActivityEndTime: '13:15:00',
+    LaboratoryName: 'Farrell Labs',
+    LaboratorySampleID: '101010011110',
+    AnalysisStartDate: '2018-02-23',
+    AnalysisStartTime: '13:15:00',
+    AnalysisStartTimeZone: '-06:00'
   })
+  t.is(valid, true)
+})
 
-  it('Should require properties', function (done) {
-    let valid = validate({})
-    expect(valid).to.equal(false)
-
-    // #/allOf/0
-    expect(checkProperty(validate.errors, 'required', 'DatasetName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'MonitoringLocationID')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'MonitoringLocationName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'MonitoringLocationType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'MonitoringLocationLatitude')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'MonitoringLocationLongitude')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'MonitoringLocationHorizontalCoordinateReferenceSystem')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'ActivityType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'ActivityMediaName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'ActivityStartDate')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'ResultValueType')).to.equal(true)
-
-    done()
+test('Should reject additional headers', async (t) => {
+  const valid = validate({
+    MonitoringLocationWaterBody: 'Lake'
   })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'additionalProperties',
+      'MonitoringLocationWaterBody'
+    ),
+    true
+  )
+})
 
-  it('Should not require properties', function (done) {
-    let valid = validate({
-      'DatasetName': 'Test',
-      'MonitoringLocationID': 'A1',
-      'MonitoringLocationName': 'A1 Test',
-      'MonitoringLocationLatitude': '51.0486',
-      'MonitoringLocationLongitude': '-114.0708',
-      'MonitoringLocationHorizontalCoordinateReferenceSystem': 'AMSMA',
-      'MonitoringLocationType': 'Ocean',
-      'ActivityType': 'Field Msr/Obs',
-      'ActivityMediaName': 'Surface Water',
-      'ActivityDepthHeightMeasure': '-34',
-      'ActivityDepthHeightUnit': 'm',
-      'SampleCollectionEquipmentName': 'Bucket',
-      'CharacteristicName': 'Sulfur',
-      'MethodSpeciation': 'as B',
-      'ResultSampleFraction': 'Dissolved',
-      'ResultValue': '99.99',
-      'ResultUnit': 'ug/l',
-      'ResultValueType': 'Actual',
-      'ResultStatusID': 'Accepted',
-      'ResultComment': 'None at this time',
-      'ResultAnalyticalMethodID': '1',
-      'ResultAnalyticalMethodContext': 'APHA',
-      'ActivityStartDate': '2018-02-23',
-      'ActivityStartTime': '13:15:00',
-      'ActivityEndDate': '2018-02-23',
-      'ActivityEndTime': '13:15:00',
-      'LaboratoryName': 'Farrell Labs',
-      'LaboratorySampleID': '101010011110',
-      'AnalysisStartDate': '2018-02-23',
-      'AnalysisStartTime': '13:15:00',
-      'AnalysisStartTimeZone': '-06:00'
-    })
-    expect(valid).to.equal(true)
-    done()
+test('Should reject ActivityDepthHeightMeasure AND NOT ActivityDepthHeightUnit', async (t) => {
+  const valid = validate({
+    ActivityDepthHeightMeasure: true
   })
+  t.is(valid, false)
+  t.is(
+    checkProperty(validate.errors, 'dependencies', 'ActivityDepthHeightUnit'),
+    true
+  )
+})
+test('Should accept ActivityDepthHeightMeasure AND ActivityDepthHeightUnit', async (t) => {
+  const valid = validate({
+    ActivityDepthHeightMeasure: true,
+    ActivityDepthHeightUnit: true
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(validate.errors, 'dependencies', 'ActivityDepthHeightUnit'),
+    false
+  )
+})
 
-  it('Should reject additional headers', function (done) {
-    let valid = validate({
-      'MonitoringLocationWaterBody': 'Lake'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'additionalProperties', 'MonitoringLocationWaterBody')).to.equal(true)
+test('Should reject ResultValue AND NOT ResultUnit', async (t) => {
+  const valid = validate({
+    ResultValue: true
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'dependencies', 'ResultUnit'), true)
+})
+test('Should reject ResultValue AND ResultUnit', async (t) => {
+  const valid = validate({
+    ResultValue: true,
+    ResultUnit: true
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'dependencies', 'ResultUnit'), false)
+})
 
-    done()
+test('Should reject ResultDetectionQuantitationLimitMeasure AND NOT ResultDetectionQuantitationLimitUnit', async (t) => {
+  const valid = validate({
+    ResultDetectionQuantitationLimitMeasure: true
   })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+})
+test('Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQuantitationLimitUnit', async (t) => {
+  const valid = validate({
+    ResultDetectionQuantitationLimitMeasure: true,
+    ResultDetectionQuantitationLimitUnit: true
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    false
+  )
+})
 
-  it('Should reject ActivityDepthHeightMeasure AND NOT ActivityDepthHeightUnit', function (done) {
-    let valid = validate({
-      'ActivityDepthHeightMeasure': true
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ActivityDepthHeightUnit')).to.equal(true)
-    done()
+test('Should reject AnalysisStartTime AND NOT AnalysisStartTimeZone', async (t) => {
+  const valid = validate({
+    AnalysisStartTime: true
   })
-  it('Should accept ActivityDepthHeightMeasure AND ActivityDepthHeightUnit', function (done) {
-    let valid = validate({
-      'ActivityDepthHeightMeasure': true,
-      'ActivityDepthHeightUnit': true
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ActivityDepthHeightUnit')).to.equal(false)
-    done()
-  })
+  t.false(valid)
+  t.is(
+    checkProperty(validate.errors, 'dependencies', 'AnalysisStartTimeZone'),
+    true
+  )
+})
 
-  it('Should reject ResultValue AND NOT ResultUnit', function (done) {
-    let valid = validate({
-      'ResultValue': true
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultUnit')).to.equal(true)
-    done()
+test('Should accept AnalysisStartTime AND AnalysisStartTimeZone', async (t) => {
+  const valid = validate({
+    AnalysisStartTime: true,
+    AnalysisStartTimeZone: true
   })
-  it('Should reject ResultValue AND ResultUnit', function (done) {
-    let valid = validate({
-      'ResultValue': true,
-      'ResultUnit': true
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultUnit')).to.equal(false)
-    done()
-  })
-
-  it('Should reject ResultDetectionQuantitationLimitMeasure AND NOT ResultDetectionQuantitationLimitUnit', function (done) {
-    let valid = validate({
-      'ResultDetectionQuantitationLimitMeasure': true
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
-    done()
-  })
-  it('Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQuantitationLimitUnit', function (done) {
-    let valid = validate({
-      'ResultDetectionQuantitationLimitMeasure': true,
-      ResultDetectionQuantitationLimitUnit: true
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
-    done()
-  })
-
-  it('Should reject AnalysisStartTime AND NOT AnalysisStartTimeZone', function (done) {
-    let valid = validate({
-      'AnalysisStartTime': true
-    })
-    expect(checkProperty(validate.errors, 'dependencies', 'AnalysisStartTimeZone')).to.equal(true)
-    done()
-  })
-
-  it('Should accept AnalysisStartTime AND AnalysisStartTimeZone', function (done) {
-    let valid = validate({
-      'AnalysisStartTime': true,
-      AnalysisStartTimeZone: true
-    })
-    expect(checkProperty(validate.errors, 'dependencies', 'AnalysisStartTimeZone')).to.equal(false)
-    done()
-  })
-
+  t.false(valid)
+  t.is(
+    checkProperty(validate.errors, 'dependencies', 'AnalysisStartTimeZone'),
+    false
+  )
 })

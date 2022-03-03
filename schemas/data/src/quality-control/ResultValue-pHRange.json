@@ -5,10 +5,7 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": ["pH", 
-                 "pH, lab",
-                 "pH, saturated"
-        ]
+        "enum": ["pH", "pH, lab", "pH, saturated"]
       }
     },
     "required": ["CharacteristicName", "ResultValue"]

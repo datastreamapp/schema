@@ -9,7 +9,7 @@
   "scripts": {
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
     "build": "node ./bin/build.js && rollup --config bin/rollup.js  --environment INCLUDE_DEPS,BUILD:production && node ./bin/build-template.js",
-    "test": "npm run build && c8 mocha"
+    "test": "npm run build && c8 ava"
   },
   "author": "willfarrell",
   "license": "MIT",

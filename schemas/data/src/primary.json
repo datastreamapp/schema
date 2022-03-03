@@ -142,7 +142,9 @@
     "ResultValueType"
   ],
   "dependencies": {
-    "MonitoringLocationHorizontalAccuracyMeasure": ["MonitoringLocationHorizontalAccuracyUnit"],
+    "MonitoringLocationHorizontalAccuracyMeasure": [
+      "MonitoringLocationHorizontalAccuracyUnit"
+    ],
     "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
     "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
     "ResultValue": ["ResultUnit"],
