@@ -14,21 +14,21 @@ import ajvErrors from "ajv-errors";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const version = await readFile(join(__dirname, "../package.json"))
-  .then((res) => JSON.parse(res))
+  .then((res) => JSON.parse(res).version)
   .catch(() => "0.0.0");
 
 console.log("Compile: JSON Schema & CSV Template");
 
 const process = async (src, delKeys = ["$generated"], minify = false, ajv) => {
-  console.log("process", src, delKeys, minify);
+  console.log("process", version, src, delKeys, minify);
   let schema = {}; // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
   try {
     schema = await $RefParser.dereference(
       join(__dirname, `/../src/${src}.json`)
     ); // deprecate if/when possible
-    schema.description = schema.description.replace("{version}", version);
+    schema.version = version
   } catch (e) {
-    console.error(e, e.toJSON());
+    console.error(e);
   }
 
   delKeys.forEach((delKey) => {
