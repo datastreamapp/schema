@@ -132,3 +132,9 @@ npm publish
 <div align="center">
   <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/schema/main/docs/images/the-gordon-foundation.svg?sanitize=true" alt="The Gordon Foundation Logo" width="200"></a>
 </div>
+
+## Citation
+
+If you use this schema, please cite it as below.
+
+DataStream Initiative. (2022). DataStream WQX Schema (v. 2.6.10). GitHub. https://github.com/datastreamapp/schema
