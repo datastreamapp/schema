@@ -28,8 +28,8 @@ for (const col of Object.keys(wqx)) {
   //   object.enum = object.enum.concat(alias.enum)
   // }
 
-  object.enum = await override(col, object.enum);
   const retired = await retire(col, object.enum);
+  object.enum = await override(col, object.enum);
 
   object.enum = await additions(col, object.enum);
 
@@ -48,6 +48,7 @@ for (const col of Object.keys(wqx)) {
 
   object.enum = await subset(col, object.enum); // getList('subset', col, object.enum)
   object.enum = await subtractions(col, object.enum, retired);
+  object.enum = await override(col, object.enum);
 
   await writeFile(
     join(__dirname, `/../src/values/${col}.primary.json`),

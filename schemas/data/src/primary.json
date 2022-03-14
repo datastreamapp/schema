@@ -1,8 +1,7 @@
 {
-  "$id": "http://datastream.org/schema",
+  "$id": "https://datastream.org/schema",
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "DataStream Data Schema",
-  "description": "Water Quality Data Schema based on WQX. Version: {version}",
   "description": "Water Quality Data Schema based on WQX.",
   "version": "",
   "type": "object",

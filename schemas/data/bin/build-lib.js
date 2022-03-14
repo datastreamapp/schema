@@ -59,14 +59,24 @@ export const sort = (list) => {
 }
 
 export const retire = (column, list) => {
-  if (column !== 'CharacteristicName') return []
+  if (![
+    // ***retired***
+    'CharacteristicName',
+    // **$
+    'MonitoringLocationHorizontalAccuracyUnit',
+    'MonitoringLocationVerticalUnit',
+    'ActivityDepthHeightUnit',
+    'ResultUnit',
+    'ResultDetectionQuantitationLimitUnit'
+  ].includes(column)) return []
   const arr = []
 
   // Remove retired items from list
+  const pattern = /(\*{3}retired\*{3}|\*+)$/
   for (const item of list) {
-    const index = item.indexOf('***retired***')
-    if (index === -1) continue
-    arr.push(item.substring(0, index))
+    if (pattern.test(item)) {
+      arr.push(item.replace(pattern, ''))
+    }
   }
   return arr
 }
@@ -239,11 +249,7 @@ export const subset = async (column, list = [], log = true) => {
 }
 
 export const subtractions = async (column, list = [], retired = []) => {
-  let arr = []
-
-  if (column === 'CharacteristicName') {
-    arr = retired
-  }
+  let arr = retired
 
   try {
     arr = arr.concat(

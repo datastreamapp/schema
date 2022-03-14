@@ -40,7 +40,7 @@
     "json-schema-ref-parser": "^9.0.9",
     "rollup": "^2.69.0",
     "rollup-plugin-esbuild": "^4.8.2",
-    "wqx": "^3.0.45"
+    "wqx": "^3.0.47"
   },
   "repository": {
     "type": "git",
