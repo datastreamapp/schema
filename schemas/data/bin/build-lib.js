@@ -68,34 +68,39 @@ export const retire = (column, list) => {
     'ActivityDepthHeightUnit',
     'ResultUnit',
     'ResultDetectionQuantitationLimitUnit'
-  ].includes(column)) return []
+  ].includes(column)) return [[], list]
   const arr = []
-
   // Remove retired items from list
-  const pattern = /(\*{3}retired\*{3}|\*+)$/
-  for (const item of list) {
+  const pattern = /(\*{3,10}retired\*{3}.*|\*{3}duplicate\*{3}|[*]+)$/
+  list = list.map(item => {
     if (pattern.test(item)) {
-      arr.push(item.replace(pattern, ''))
+      item = item.replace(pattern, '').trim()
+      arr.push(item)
     }
-  }
-  return arr
+    return item
+  })
+  return [arr, list]
 }
 
-export const override = (column, list = []) => {
+/*export const override = (column, list = []) => {
   let overrides = {}
   if (
     [
-      'MonitoringLocationHorizontalAccuracyUnit',
-      'MonitoringLocationVerticalUnit',
-      'ActivityDepthHeightUnit',
-      'ResultUnit',
-      'ResultDetectionQuantitationLimitUnit'
+      // 'MonitoringLocationHorizontalAccuracyUnit',
+      // 'MonitoringLocationVerticalUnit',
+      // 'ActivityDepthHeightUnit',
+      // 'ResultUnit',
+      // 'ResultDetectionQuantitationLimitUnit'
     ].includes(column)
   ) {
     overrides = {
-      '% saturatn**': '% saturatn',
-      'gpm**': 'gpm',
-      'std*********': 'std'
+      // '% saturatn**': '% saturatn',
+      // 'gpm**': 'gpm',
+      // 'std*********': 'std',
+      // 'kg/t CaCO3**': 'kg/t CaCO3',
+      // 'mg N/l******': 'mg N/l',
+      // 'mg/l CaCO3**': 'mg/l CaCO3',
+      // 'tCaCO3/Kt***': 'tCaCO3/Kt'
     }
   }
 
@@ -110,7 +115,7 @@ export const override = (column, list = []) => {
     return item
   })
   return list
-}
+}*/
 
 export const additions = async (column, list = []) => {
   let arr = []
