@@ -1,39 +1,27 @@
-import { readFile, writeFile } from "fs/promises";
-import { dirname, join } from "path";
-import { fileURLToPath } from "url";
+import { readFile, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const schema = await readFile(join(__dirname,"../primary/index.json"))
   .then((res) => JSON.parse(res))
   .catch(() => ({}));
-const characteristics = await readFile(join(__dirname,
-  "../src/values/CharacteristicName.primary.json"
-))
+const characteristics = await readFile(join(__dirname, "../src/values/CharacteristicName.primary.json"))
   .then((res) => JSON.parse(res).enum)
   .catch(() => []);
-const methodSpeciation = await readFile(join(__dirname,
-  "../src/logic/CharacteristicName-MethodSpeciation.json"
-))
+const methodSpeciation = await readFile(join(__dirname, "../src/logic/CharacteristicName-MethodSpeciation.json"))
   .then((res) => JSON.parse(res).if.properties.CharacteristicName.enum)
   .catch(() => []);
-const methodSpeciationOptional = await readFile(join(__dirname,
-  "../src/quality-control/partial/CharacteristicName-MethodSpeciation-Optional.json"
-))
+const methodSpeciationOptional = await readFile(join(__dirname, "../src/quality-control/partial/CharacteristicName-MethodSpeciation-Optional.json"))
   .then((res) => JSON.parse(res).enum)
   .catch(() => []);
-const sampleFraction = await readFile(join(__dirname,
-  "../src/logic/CharacteristicName-ResultSampleFraction.json"
-))
+const sampleFraction = await readFile(join(__dirname, "../src/logic/CharacteristicName-ResultSampleFraction.json"))
   .then((res) => JSON.parse(res).if.properties.CharacteristicName.enum)
   .catch(() => []);
 //const sampleFractionOptional = await readFile('../src/quality-control/partial/CharacteristicName-ResultSampleFraction-Optional.json').then(res => JSON.parse(res).enum).catch(() => ([]))
-const characteristicGroup = await readFile("wqx/groups/CharacteristicName.json")
-  .then((res) => JSON.parse(res))
-  .catch(() => ({}));
-const characteristicCASNumber = await readFile("wqx/groups/CASNumber.json")
-  .then((res) => JSON.parse(res))
-  .catch(() => ({}));
+import characteristicGroup from "wqx/groups/CharacteristicName.json.js"
+import characteristicCASNumber from "wqx/groups/CASNumber.json.js"
 
 const buildUnits = async () => {
   let csv = "Unit\n";
@@ -68,6 +56,7 @@ const buildCharacteristics = async () => {
     // if (sampleFractionRequired === '"No"' && sampleFractionOptional.includes(value)) {
     //   sampleFractionRequired = '"May"'
     // }
+
     csv += `"${value}",${methodSpeciationRequired},${sampleFractionRequired},"${
       characteristicGroup[value] || "Not Assigned"
     }",${characteristicCASNumber[value] || ""}\n`;
