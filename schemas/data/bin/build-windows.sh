@@ -15,4 +15,4 @@ node .\\bin\\build-logic.js
 node .\\bin\\build.js
 node .\\bin\\build-template.js
 
-mocha
+ava

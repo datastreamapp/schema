@@ -1,9 +1,6 @@
-const expect = require('chai').expect
+import test from 'ava'
 
-const schema = require('../primary/index.json')
-let validate = require('../frontend')
-let validateStrict = require('../primary')
-let validateBackend = require('../backend')
+import validate from '../frontend/index.js'
 
 const checkProperty = (errors, keyword, property) => {
   if (errors === null) return false
@@ -13,349 +10,592 @@ const checkProperty = (errors, keyword, property) => {
       if (nested) return nested
     }
     if (error.keyword !== keyword) continue
-    if (['required', 'dependencies'].includes(keyword) && error.params.missingProperty === property) return true
-    else if (keyword === 'additionalProperties' && error.params.additionalProperty === property) return true
-    else if (keyword === 'oneOf' && error.params.passingSchemas.includes(property)) return true
-    else if (keyword === 'anyOf') return true
-    else if (keyword === 'not' && error.instancePath.includes(property)) return true
-    else if (keyword === 'enum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'minimum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'exclusiveMinimum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'maximum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'exclusiveMaximum' && error.instancePath.includes(property)) return true
-    else if (keyword === 'false schema' && error.instancePath.includes(property)) return true
-    else if (keyword === 'pattern') return true
+    if (
+      ['required', 'dependencies'].includes(keyword) &&
+      error.params.missingProperty === property
+    ) {
+      return true
+    } else if (
+      keyword === 'additionalProperties' &&
+      error.params.additionalProperty === property
+    ) {
+      return true
+    } else if (
+      keyword === 'oneOf' &&
+      error.params.passingSchemas.includes(property)
+    ) {
+      return true
+    } else if (keyword === 'anyOf') return true
+    else if (keyword === 'not' && error.instancePath.includes(property)) {
+      return true
+    } else if (keyword === 'enum' && error.instancePath.includes(property)) {
+      return true
+    } else if (keyword === 'minimum' && error.instancePath.includes(property)) {
+      return true
+    } else if (
+      keyword === 'exclusiveMinimum' &&
+      error.instancePath.includes(property)
+    ) {
+      return true
+    } else if (keyword === 'maximum' && error.instancePath.includes(property)) {
+      return true
+    } else if (
+      keyword === 'exclusiveMaximum' &&
+      error.instancePath.includes(property)
+    ) {
+      return true
+    } else if (
+      keyword === 'false schema' &&
+      error.instancePath.includes(property)
+    ) {
+      return true
+    } else if (keyword === 'pattern') return true
   }
   return false
 }
 
-describe('Conditional Logic', function () {
-
-  // allOf/1
-  it('Should accept CharacteristicName AND NOT MethodSpeciation', function (done) {
-    let valid = validate({
-      'CharacteristicName': 'Calcium'
-    })
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'MethodSpeciation')).to.equal(false)
-    done()
+// allOf/1
+test('Should accept CharacteristicName AND NOT MethodSpeciation', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Calcium'
   })
-  it('Should reject CharacteristicName AND NOT MethodSpeciation', function (done) {
-    let valid = validate({
-      'CharacteristicName': 'Nitrate'
-    })
-    expect(checkProperty(validate.errors, 'required', 'MethodSpeciation')).to.equal(true)
-    done()
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), false)
+})
+test('Should reject CharacteristicName AND NOT MethodSpeciation', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Nitrate'
   })
-  it('Should accept CharacteristicName AND MethodSpeciation', function (done) {
-    let valid = validate({
-      'CharacteristicName': 'Nitrate',
-      'MethodSpeciation': 'as N'
-    })
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'MethodSpeciation')).to.equal(false)
-    done()
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), true)
+})
+test('Should accept CharacteristicName AND MethodSpeciation', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Nitrate',
+    MethodSpeciation: 'as N'
   })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), false)
+})
 
-  // CharacteristicName-ResultSampleFraction
-  it('Should accept CharacteristicName AND NOT ResultSampleFraction', function (done) {
-    let valid = validate({
-      'CharacteristicName': 'Dissolved oxygen (DO)'
-    })
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
-    done()
+// CharacteristicName-ResultSampleFraction
+test('Should accept CharacteristicName AND NOT ResultSampleFraction', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Dissolved oxygen (DO)'
   })
-  it('Should rejects CharacteristicName AND NOT ResultSampleFraction', function (done) {
-    let valid = validate({
-      'CharacteristicName': 'Silver'
-    })
-    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(true)
-    done()
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
+    false
+  )
+})
+test('Should rejects CharacteristicName AND NOT ResultSampleFraction', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Silver'
   })
-  it('Should accept CharacteristicName AND ResultSampleFraction', function (done) {
-    let valid = validate({
-      'CharacteristicName': 'Silver',
-      'ResultSampleFraction': 'Dissolved'
-    })
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
-    done()
+  t.false(valid)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
+    true
+  )
+})
+test('Should accept CharacteristicName AND ResultSampleFraction', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Silver',
+    ResultSampleFraction: 'Dissolved'
   })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
+    false
+  )
+})
 
-  // CharacteristicName-Nutrient-ResultSampleFraction
-  it('Should reject Nutrient CharacteristicName AND ResultSampleFraction', function (done) {
-    let valid = validate({
-      'ActivityMediaName':'Surface Water',
-      'CharacteristicName': 'Ammonia',
-      'ActivityType': '',
-      'ResultSampleFraction': 'Total'
-    })
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(true)
-    done()
+// CharacteristicName-Nutrient-ResultSampleFraction
+test('Should reject Nutrient CharacteristicName AND ResultSampleFraction', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    CharacteristicName: 'Ammonia',
+    ActivityType: '',
+    ResultSampleFraction: 'Total'
   })
-  it('Should accept Nutrient CharacteristicName AND filter ResultSampleFraction', function (done) {
-    let valid = validate({
-      'ActivityMediaName':'Surface Water',
-      'CharacteristicName': 'Ammonia',
-      'ActivityType': '',
-      'ResultSampleFraction': 'Filtered'
-    })
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(false)
-    done()
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
+    false
+  )
+  t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), true)
+})
+test('Should accept Nutrient CharacteristicName AND filter ResultSampleFraction', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    CharacteristicName: 'Ammonia',
+    ActivityType: '',
+    ResultSampleFraction: 'Filtered'
   })
-  it('Should accept Nutrient Sediment', function (done) {
-    let valid = validate({
-      'ActivityMediaName':'Surface Water Sediment',
-      'CharacteristicName': 'Ammonia',
-      'ActivityType': '',
-      'ResultSampleFraction': 'Total'
-    })
-    expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(false)
-    done()
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
+    false
+  )
+  t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
+})
+test('Should accept Nutrient Sediment', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water Sediment',
+    CharacteristicName: 'Ammonia',
+    ActivityType: '',
+    ResultSampleFraction: 'Total'
   })
-  // it('Should accept Nutrient Sediment with no sample fraction', function (done) {
-  //   let valid = validate({
-  //     'ActivityMediaName':'Surface Water Sediment',
-  //     'CharacteristicName': 'Total Nitrogen, mixed forms',
-  //     'ActivityType': '',
-  //     'ResultSampleFraction': ''
-  //   })
-  //   console.log(validate.errors)
-  //   expect(checkProperty(validate.errors, 'required', 'CharacteristicName')).to.equal(false)
-  //   expect(checkProperty(validate.errors, 'required', 'ResultSampleFraction')).to.equal(false)
-  //   expect(checkProperty(validate.errors, 'enum', 'ResultSampleFraction')).to.equal(false)
-  //   done()
-  // })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
+    false
+  )
+  t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
+})
+// test('Should accept Nutrient Sediment with no sample fraction', async (t) => {
+//   let valid = validate({
+//     'ActivityMediaName':'Surface Water Sediment',
+//     'CharacteristicName': 'Total Nitrogen, mixed forms',
+//     'ActivityType': '',
+//     'ResultSampleFraction': ''
+//   })
+//   console.log(validate.errors)
+//   t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+//   t.is(checkProperty(validate.errors, 'required', 'ResultSampleFraction'), false)
+//   t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
+//
+// })
 
-  // allOf/3
-  it('Should reject NOT ResultValue AND NOT ResultDetectionCondition', function (done) {
-    let valid = validate({})
-    expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(true)
-    expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(true)
-    done()
+// allOf/3
+test('Should reject NOT ResultValue AND NOT ResultDetectionCondition', async (t) => {
+  const valid = validate({})
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), true)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultDetectionCondition'),
+    true
+  )
+})
+test('Should reject ResultValue AND ResultDetectionCondition', async (t) => {
+  const valid = validate({
+    ResultValue: 1,
+    ResultDetectionCondition: 'Not Reported'
   })
-  it('Should reject ResultValue AND ResultDetectionCondition', function (done) {
-    let valid = validate({
-      'ResultValue': 1,
-      'ResultDetectionCondition': 'Not Reported'
-    })
-    expect(checkProperty(validate.errors, 'false schema', 'ResultValue')).to.equal(true)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionCondition')).to.equal(true)
-    done()
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'false schema', 'ResultValue'), true)
+  t.is(
+    checkProperty(validate.errors, 'false schema', 'ResultDetectionCondition'),
+    true
+  )
+})
+
+test('Should accept ResultValue OR ResultDetectionCondition', async (t) => {
+  let valid = validate({
+    ResultValue: 1
   })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), false)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultDetectionCondition'),
+    false
+  )
+  t.is(checkProperty(validate.errors, 'enum', 'ResultValue'), false)
+  t.is(
+    checkProperty(validate.errors, 'enum', 'ResultDetectionCondition'),
+    false
+  )
 
-  it('Should accept ResultValue OR ResultDetectionCondition', function (done) {
-    let valid = validate({
-      'ResultValue': 1,
-    })
-    expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultValue')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionCondition')).to.equal(false)
-
-    valid = validate({
-      'ResultDetectionCondition': 'Not Reported'
-    })
-    expect(checkProperty(validate.errors, 'required', 'ResultValue')).to.equal(false)
-    expect(checkProperty(validate.errors, 'required', 'ResultDetectionCondition')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultValue')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionCondition')).to.equal(false)
-    done()
+  valid = validate({
+    ResultDetectionCondition: 'Not Reported'
   })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), false)
+  t.is(
+    checkProperty(validate.errors, 'required', 'ResultDetectionCondition'),
+    false
+  )
+  t.is(checkProperty(validate.errors, 'enum', 'ResultValue'), false)
+  t.is(
+    checkProperty(validate.errors, 'enum', 'ResultDetectionCondition'),
+    false
+  )
+})
 
-  // allOf/4
+// allOf/4
 
-  it('Should reject ResultDetectionCondition = Present Above Quantification Limit', function (done) {
-    let valid = validate({
-      'ResultDetectionCondition': 'Present Above Quantification Limit'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
-    done()
+test('Should reject ResultDetectionCondition = Present Above Quantification Limit', async (t) => {
+  const valid = validate({
+    ResultDetectionCondition: 'Present Above Quantification Limit'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+})
 
-  it('Should reject ResultDetectionCondition = Present Below Quantification Limit', function (done) {
-    let valid = validate({
-      'ResultValue': 1,
-      'ResultDetectionCondition': 'Present Below Quantification Limit'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
-    done()
+test('Should reject ResultDetectionCondition = Present Below Quantification Limit', async (t) => {
+  const valid = validate({
+    ResultValue: 1,
+    ResultDetectionCondition: 'Present Below Quantification Limit'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+})
 
-  it('Should accept ResultDetectionCondition', function (done) {
-    let valid = validate({
-      'ResultValue': 1,
-      'ResultDetectionCondition': 'Present Below Quantification Limit',
-      'ResultDetectionQuantitationLimitType':'A',
-      'ResultDetectionQuantitationLimitMeasure':1,
-      'ResultDetectionQuantitationLimitUnit':'mg/L'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitType')).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
-    done()
+test('Should accept ResultDetectionCondition', async (t) => {
+  const valid = validate({
+    ResultValue: 1,
+    ResultDetectionCondition: 'Present Below Quantification Limit',
+    ResultDetectionQuantitationLimitType: 'A',
+    ResultDetectionQuantitationLimitMeasure: 1,
+    ResultDetectionQuantitationLimitUnit: 'mg/L'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    false
+  )
+})
 
-  // allOf/4
-  it('Should reject ResultDetectionCondition = Not Detected', function (done) {
-    let valid = validate({
-      'ResultDetectionCondition': 'Not Detected',
-      'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
-      'ResultDetectionQuantitationLimitMeasure': 0,
-      'ResultDetectionQuantitationLimitUnit': 'None'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
-
-    done()
+// allOf/4
+test('Should reject ResultDetectionCondition = Not Detected', async (t) => {
+  const valid = validate({
+    ResultDetectionCondition: 'Not Detected',
+    ResultDetectionQuantitationLimitType: 'Sample Detection Limit',
+    ResultDetectionQuantitationLimitMeasure: 0,
+    ResultDetectionQuantitationLimitUnit: 'None'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'false schema',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'false schema',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'false schema',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+})
 
-  it('Should accept ResultDetectionCondition = Not Detected', function (done) {
-    let valid = validate({
-      'ResultDetectionCondition': 'Not Detected'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
-
-    done()
+test('Should accept ResultDetectionCondition = Not Detected', async (t) => {
+  const valid = validate({
+    ResultDetectionCondition: 'Not Detected'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    false
+  )
+})
 
-  it('Should reject ResultDetectionCondition = Detected Not Quantified', function (done) {
-    let valid = validate({
-      'ResultDetectionCondition': 'Detected Not Quantified',
-      'ResultDetectionQuantitationLimitType': 'Sample Detection Limit',
-      'ResultDetectionQuantitationLimitMeasure': 0,
-      'ResultDetectionQuantitationLimitUnit': 'None'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitType')).to.equal(true)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitMeasure')).to.equal(true)
-    expect(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit')).to.equal(true)
-
-    done()
+test('Should reject ResultDetectionCondition = Detected Not Quantified', async (t) => {
+  const valid = validate({
+    ResultDetectionCondition: 'Detected Not Quantified',
+    ResultDetectionQuantitationLimitType: 'Sample Detection Limit',
+    ResultDetectionQuantitationLimitMeasure: 0,
+    ResultDetectionQuantitationLimitUnit: 'None'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'false schema',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'false schema',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'false schema',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+})
 
-  it('Should accept ResultDetectionCondition = Detected Not Quantified', function (done) {
-    let valid = validate({
-      'ResultDetectionCondition': 'Detected Not Quantified'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitType')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitMeasure')).to.equal(false)
-    expect(checkProperty(validate.errors, 'enum', 'ResultDetectionQuantitationLimitUnit')).to.equal(false)
-
-    done()
+test('Should accept ResultDetectionCondition = Detected Not Quantified', async (t) => {
+  const valid = validate({
+    ResultDetectionCondition: 'Detected Not Quantified'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    false
+  )
+})
 
-  // allOf/5
-  it('Should reject ActivityType = Sample for ResultAnalyticalMethodID', function (done) {
-    let valid = validate({
-      'ActivityType': 'Sample-Other'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(true)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(true)
-    done()
+// allOf/5
+test('Should reject ActivityType = Sample for ResultAnalyticalMethodID', async (t) => {
+  const valid = validate({
+    ActivityType: 'Sample-Other'
   })
-  it('Should accept ActivityType = Sample for ResultAnalyticalMethodID', function (done) {
-    let valid = validate({
-      'ActivityType': 'Sample-Other',
-      'ResultAnalyticalMethodID': '0',
-      'ResultAnalyticalMethodContext': 'ENV'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID')).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodContext')).to.equal(false)
-
-    done()
+  t.false(valid)
+  t.is(
+    checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID'),
+    true
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultAnalyticalMethodContext'
+    ),
+    true
+  )
+})
+test('Should accept ActivityType = Sample for ResultAnalyticalMethodID', async (t) => {
+  const valid = validate({
+    ActivityType: 'Sample-Other',
+    ResultAnalyticalMethodID: '0',
+    ResultAnalyticalMethodContext: 'ENV'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID'),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultAnalyticalMethodContext'
+    ),
+    false
+  )
+})
 
-  it('Should reject ActivityType = Sample for ResultAnalyticalMethodName', function (done) {
-    let valid = validate({
-      'ActivityType': 'Sample-Other'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(true)
-    done()
+test('Should reject ActivityType = Sample for ResultAnalyticalMethodName', async (t) => {
+  const valid = validate({
+    ActivityType: 'Sample-Other'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultAnalyticalMethodName'
+    ),
+    true
+  )
+})
 
-  it('Should accept ActivityType = Sample for ResultAnalyticalMethodName', function (done) {
-    let valid = validate({
-      'ActivityType': 'Sample-Other',
-      'ResultAnalyticalMethodName': 'Unspecified'
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodName')).to.equal(false)
-
-    done()
+test('Should accept ActivityType = Sample for ResultAnalyticalMethodName', async (t) => {
+  const valid = validate({
+    ActivityType: 'Sample-Other',
+    ResultAnalyticalMethodName: 'Unspecified'
   })
+  t.false(valid)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultAnalyticalMethodName'
+    ),
+    false
+  )
+})
 
-  // CSV Injection
-  it('Should reject columns with potential csv injection', function (done) {
-
-    const valid = validate({
-      'DatasetName': '=equals',
-      'MonitoringLocationID': '+positive',
-      'MonitoringLocationName': '-negative',
-      'ResultComment': '@at  ',
-      'ResultAnalyticalMethodID': `
+// CSV Injection
+test('Should reject columns with potential csv injection', async (t) => {
+  const valid = validate({
+    DatasetName: '=equals',
+    MonitoringLocationID: '+positive',
+    MonitoringLocationName: '-negative',
+    ResultComment: '@at  ',
+    ResultAnalyticalMethodID: `
 carriage return`,
-      'ResultAnalyticalMethodName': "\ncarriage return",
-      'LaboratoryName': "\rcarriage return",
-      'LaboratorySampleID': "\ttab",
-    })
-    expect(valid).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'DatasetName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID')).to.equal(true)
-    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'pattern', 'ResultComment')).to.equal(true)
-    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID')).to.equal(true)
-    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'pattern', 'LaboratoryName')).to.equal(true)
-    expect(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID')).to.equal(true)
-    done()
+    ResultAnalyticalMethodName: '\ncarriage return',
+    LaboratoryName: '\rcarriage return',
+    LaboratorySampleID: '\ttab'
   })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'pattern', 'DatasetName'), true)
+  t.is(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'), true)
+  t.is(
+    checkProperty(validate.errors, 'pattern', 'MonitoringLocationName'),
+    true
+  )
+  t.is(checkProperty(validate.errors, 'pattern', 'ResultComment'), true)
+  t.is(
+    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID'),
+    true
+  )
+  t.is(
+    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName'),
+    true
+  )
+  t.is(checkProperty(validate.errors, 'pattern', 'LaboratoryName'), true)
+  t.is(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'), true)
+})
 
-  it('Should accept columns without potential csv injection', function (done) {
-
-    const valid = validate({
-      'DatasetName': '~',
-      'MonitoringLocationID': '1',
-      'MonitoringLocationName': '&',
-      'ResultComment': '$',
-      'ResultAnalyticalMethodID': '#',
-      'ResultAnalyticalMethodName': '|',
-      'LaboratoryName': '_',
-      'LaboratorySampleID': '*',
-    })
-    //console.log(valid, JSON.stringify(validate.errors, null, 2))
-    expect(checkProperty(validate.errors, 'pattern', 'DatasetName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID')).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'MonitoringLocationName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'ResultComment')).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID')).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'LaboratoryName')).to.equal(false)
-    expect(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID')).to.equal(false)
-    done()
+test('Should accept columns without potential csv injection', async (t) => {
+  const valid = validate({
+    DatasetName: '~',
+    MonitoringLocationID: '1',
+    MonitoringLocationName: '&',
+    ResultComment: '$',
+    ResultAnalyticalMethodID: '#',
+    ResultAnalyticalMethodName: '|',
+    LaboratoryName: '_',
+    LaboratorySampleID: '*'
   })
-
+  t.false(valid)
+  // console.log(valid, JSON.stringify(validate.errors, null, 2))
+  t.is(checkProperty(validate.errors, 'pattern', 'DatasetName'), false)
+  t.is(
+    checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'),
+    false
+  )
+  t.is(
+    checkProperty(validate.errors, 'pattern', 'MonitoringLocationName'),
+    false
+  )
+  t.is(checkProperty(validate.errors, 'pattern', 'ResultComment'), false)
+  t.is(
+    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID'),
+    false
+  )
+  t.is(
+    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName'),
+    false
+  )
+  t.is(checkProperty(validate.errors, 'pattern', 'LaboratoryName'), false)
+  t.is(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'), false)
 })

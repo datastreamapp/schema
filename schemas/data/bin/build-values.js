@@ -1,11 +1,26 @@
-const fs = require('fs')
+import { readFile, writeFile } from "fs/promises";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 
-const {subsetOnly, wqx, getList, sort, retire, override, additions, subtractions, subset} = require('./build-lib')
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-Object.keys(wqx).forEach(col => {
-  console.log(col)
-  let object = JSON.parse(JSON.stringify(require(`wqx/values/${wqx[col]}.json`)))
-  delete object.$id
+import {
+  subsetOnly,
+  wqx,
+  getList,
+  sort,
+  retire,
+  override,
+  additions,
+  subtractions,
+  subset,
+} from "./build-lib.js";
+
+for (const col of Object.keys(wqx)) {
+  console.log(col);
+  let object = await import(`wqx/values/${wqx[col]}.json.js`);
+  object = { ...object.default };
+  delete object.$id;
 
   // Add alias
   // if (col === 'CharacteristicName') {
@@ -13,33 +28,49 @@ Object.keys(wqx).forEach(col => {
   //   object.enum = object.enum.concat(alias.enum)
   // }
 
-  object.enum = override(col, object.enum)
-  const retired = retire(col, object.enum)
+  const retired = await retire(col, object.enum);
+  object.enum = await override(col, object.enum);
 
-  object.enum = additions(col, object.enum)
+  object.enum = await additions(col, object.enum);
 
   if (subsetOnly.includes(col)) {
-    object.enum = getList('subset', col, object.enum)
+    object.enum = await getList("subset", col, object.enum);
   }
 
-  object.enum = [...new Set(sort(object.enum))]
-  object.maxLength = Math.max(...(object.enum.map(el => el.length)))  // catch any additions that may be longer
+  object.enum = [...new Set(sort(object.enum))];
+  object.maxLength = Math.max(...object.enum.map((el) => el.length)); // catch any additions that may be longer
 
-  fs.writeFileSync(__dirname + `/../src/values/${col}.legacy.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
+  await writeFile(
+    join(__dirname, `/../src/values/${col}.legacy.json`),
+    JSON.stringify(object, null, 2),
+    { encoding: "utf8" }
+  );
 
-  object.enum = subset(col, object.enum) // getList('subset', col, object.enum)
-  object.enum = subtractions(col, object.enum, retired)
+  object.enum = await subset(col, object.enum); // getList('subset', col, object.enum)
+  object.enum = await subtractions(col, object.enum, retired);
+  object.enum = await override(col, object.enum);
 
-  fs.writeFileSync(__dirname + `/../src/values/${col}.primary.json`, JSON.stringify(object, null, 2), { encoding: 'utf8' })
-})
+  await writeFile(
+    join(__dirname, `/../src/values/${col}.primary.json`),
+    JSON.stringify(object, null, 2),
+    { encoding: "utf8" }
+  );
+}
 
 // Check CharacteristicNameGroups
-let characteristicNameGroups = require(`wqx/groups/CharacteristicName.json`)
-let characteristicNames = require(`../src/values/CharacteristicName.primary.json`)
-characteristicNames = characteristicNames.enum
+let characteristicNameGroups = await import(
+  `wqx/groups/CharacteristicName.json.js`
+);
+let characteristicNames = await readFile(
+  join(__dirname, `../src/values/CharacteristicName.primary.json`)
+).then((res) => JSON.parse(res));
+characteristicNames = characteristicNames.enum;
 
-for(const characteristicName of characteristicNames) {
-  if (!characteristicNameGroups[characteristicName] || characteristicNameGroups[characteristicName] === 'Not Assigned') {
-    console.log('CharacteristicNameGroups Not Assigned', characteristicName)
+for (const characteristicName of characteristicNames) {
+  if (
+    !characteristicNameGroups[characteristicName] ||
+    characteristicNameGroups[characteristicName] === "Not Assigned"
+  ) {
+    console.log("CharacteristicNameGroups Not Assigned", characteristicName);
   }
 }
