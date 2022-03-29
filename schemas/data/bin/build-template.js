@@ -41,25 +41,25 @@ const buildCharacteristics = async () => {
 
   for (const value of characteristics) {
     let methodSpeciationRequired = methodSpeciation.includes(value)
-      ? '"Yes"'
-      : '"No"';
+      ? 'Yes'
+      : 'No';
     if (
-      methodSpeciationRequired === '"No"' &&
+      methodSpeciationRequired === 'No' &&
       methodSpeciationOptional.includes(value)
     ) {
-      methodSpeciationRequired = '"May"';
+      methodSpeciationRequired = 'May';
     }
 
     let sampleFractionRequired = sampleFraction.includes(value)
-      ? '"Yes"'
-      : '"No"';
+      ? 'Yes'
+      : 'No';
     // if (sampleFractionRequired === '"No"' && sampleFractionOptional.includes(value)) {
     //   sampleFractionRequired = '"May"'
     // }
 
-    csv += `"${value}",${methodSpeciationRequired},${sampleFractionRequired},"${
+    csv += `"${value}","${methodSpeciationRequired}","${sampleFractionRequired}","${
       characteristicGroup[value] || "Not Assigned"
-    }",${characteristicCASNumber[value] || ""}\n`;
+    }","${characteristicCASNumber[value] || ""}"\n`;
   }
 
   await writeFile(join(__dirname, `/template/Characteristics.csv`), csv, {
