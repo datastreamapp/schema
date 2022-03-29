@@ -4,27 +4,27 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const schema = await readFile("../primary/index.json")
+const schema = await readFile(join(__dirname,"../primary/index.json"))
   .then((res) => JSON.parse(res))
   .catch(() => ({}));
-const characteristics = await readFile(
+const characteristics = await readFile(join(__dirname,
   "../src/values/CharacteristicName.primary.json"
-)
+))
   .then((res) => JSON.parse(res).enum)
   .catch(() => []);
-const methodSpeciation = await readFile(
+const methodSpeciation = await readFile(join(__dirname,
   "../src/logic/CharacteristicName-MethodSpeciation.json"
-)
+))
   .then((res) => JSON.parse(res).if.properties.CharacteristicName.enum)
   .catch(() => []);
-const methodSpeciationOptional = await readFile(
+const methodSpeciationOptional = await readFile(join(__dirname,
   "../src/quality-control/partial/CharacteristicName-MethodSpeciation-Optional.json"
-)
+))
   .then((res) => JSON.parse(res).enum)
   .catch(() => []);
-const sampleFraction = await readFile(
+const sampleFraction = await readFile(join(__dirname,
   "../src/logic/CharacteristicName-ResultSampleFraction.json"
-)
+))
   .then((res) => JSON.parse(res).if.properties.CharacteristicName.enum)
   .catch(() => []);
 //const sampleFractionOptional = await readFile('../src/quality-control/partial/CharacteristicName-ResultSampleFraction-Optional.json').then(res => JSON.parse(res).enum).catch(() => ([]))
