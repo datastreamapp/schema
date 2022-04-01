@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'fs/promises'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
-import { subset } from './build-lib.js'
+import { subset, sort } from './build-lib.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -24,7 +24,7 @@ const wqxRequiredIf = async (file) => {
     ...required
   }
 
-  const list = [...new Set(object.if.properties[columnFrom].enum.sort())]
+  const list = [...new Set(sort(object.if.properties[columnFrom].enum))]
   object.if.properties[columnFrom].enum = await subset(columnFrom, list, false)
 
   await writeFile(
