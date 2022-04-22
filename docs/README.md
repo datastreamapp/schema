@@ -17,7 +17,7 @@
 
 ## DataStream
 
-DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 9 million water quality observations have been published across DataStream’s three regional platforms (Mackenzie DataStream,  Lake Winnipeg DataStream, Great Lakes DataStream, and Atlantic DataStream) by watershed groups, Indigenous organizations, researchers and governments at all levels.
+DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality and sediment quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. Water monitoring groups across Canada — including communities, researchers, Indigenous nations and governments at all levels — are using DataStream to publish their data.
 
 <!--<div align="center">
   <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/schema/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
