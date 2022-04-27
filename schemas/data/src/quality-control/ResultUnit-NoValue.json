@@ -4,8 +4,9 @@
   "errorMessage": "ResultUnit is not needed when ResultValue is not populated",
   "oneOf": [
     {
-      "required": ["ResultValue","ResultUnit"]
-    },{
+      "required": ["ResultValue", "ResultUnit"]
+    },
+    {
       "properties": {
         "ResultValue": false,
         "ResultUnit": false

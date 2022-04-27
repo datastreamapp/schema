@@ -1,6 +1,6 @@
 {
-  "$id": "http://datastream.org/schema#",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://datastream.org/schema",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "title": "DataStream Schema",
   "description": "Water Quality Data Schema based on WQX. Version: {version}",
   "type": "object",
@@ -10,21 +10,15 @@
       "properties": {
         "DatasetName": {
           "$ref": "./definitions.json#/columns/DatasetName",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         },
         "MonitoringLocationID": {
           "$ref": "./definitions.json#/columns/MonitoringLocationID",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         },
         "MonitoringLocationName": {
           "$ref": "./definitions.json#/columns/MonitoringLocationName",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         },
         "MonitoringLocationLatitude": {
           "$ref": "./definitions.json#/columns/MonitoringLocationLatitude"
@@ -34,51 +28,33 @@
         },
         "MonitoringLocationHorizontalCoordinateReferenceSystem": {
           "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationHorizontalAccuracyMeasure": {
           "$ref": "./definitions.json#/columns/MonitoringLocationHorizontalAccuracyMeasure"
         },
         "MonitoringLocationHorizontalAccuracyUnit": {
           "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationVerticalMeasure": {
           "$ref": "./definitions.json#/columns/MonitoringLocationVerticalMeasure"
         },
         "MonitoringLocationVerticalUnit": {
           "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationType": {
           "$ref": "./values/MonitoringLocationType.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ActivityType": {
           "$ref": "./values/ActivityType.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ActivityMediaName": {
           "$ref": "./values/ActivityMediaName.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ActivityStartDate": {
           "$ref": "./definitions.json#/columns/ActivityStartDate"
@@ -97,111 +73,69 @@
         },
         "ActivityDepthHeightUnit": {
           "$ref": "./values/ActivityDepthHeightUnit.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "SampleCollectionEquipmentName": {
           "$ref": "./values/SampleCollectionEquipmentName.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "CharacteristicName": {
           "$ref": "./values/CharacteristicName.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "MethodSpeciation": {
           "$ref": "./values/MethodSpeciation.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultSampleFraction": {
           "$ref": "./values/ResultSampleFraction.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultValue": {
           "$ref": "./definitions.json#/columns/ResultValue"
         },
         "ResultUnit": {
           "$ref": "./values/ResultUnit.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultValueType": {
           "$ref": "./values/ResultValueType.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionCondition": {
           "$ref": "./values/ResultDetectionCondition.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionQuantitationLimitMeasure": {
           "$ref": "./definitions.json#/columns/ResultDetectionQuantitationLimitMeasure"
         },
         "ResultDetectionQuantitationLimitUnit": {
           "$ref": "./values/ResultDetectionQuantitationLimitUnit.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionQuantitationLimitType": {
           "$ref": "./values/ResultDetectionQuantitationLimitType.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultStatusID": {
           "$ref": "./values/ResultStatusID.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultComment": {
           "$ref": "./definitions.json#/columns/ResultComment",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         },
         "ResultAnalyticalMethodID": {
           "$ref": "./definitions.json#/columns/ResultAnalyticalMethodID",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         },
         "ResultAnalyticalMethodContext": {
           "$ref": "./values/ResultAnalyticalMethodContext.legacy.json",
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ]
+          "transform": ["trim", "toEnumCase"]
         },
         "ResultAnalyticalMethodName": {
           "$ref": "./definitions.json#/columns/ResultAnalyticalMethodName",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         },
         "AnalysisStartDate": {
           "$ref": "./definitions.json#/columns/AnalysisStartDate"
@@ -214,15 +148,11 @@
         },
         "LaboratoryName": {
           "$ref": "./definitions.json#/columns/LaboratoryName",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         },
         "LaboratorySampleID": {
           "$ref": "./definitions.json#/columns/LaboratorySampleID",
-          "transform": [
-            "trim"
-          ]
+          "transform": ["trim"]
         }
       }
     },

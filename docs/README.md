@@ -6,7 +6,7 @@
   <br/>
 </h1>
 
-<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1P4GcY5R2LbGGiT6aFwkQDA8dP8im0S6MyeBFvOEkjJg" target="_blank">Google SpreadSheet</a>, <a href="https://s3.ca-central-1.amazonaws.com/datastream-atlantic-upload-template/DataStream Upload Template - Public v2.0.xlsb" target="_blank">Excel</a> template formats.</p>
+<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1OwGkUTyVC3tZ9N_we8uX1kpsPejZnSsgcaTjrlGBxoc" target="_blank">Google SpreadSheet</a>, <a href="https://gordonfoundation.sharepoint.com/:x:/g/EZb37KU78zdNjyVkGoaGJIgBtr8pKrS1S_py6X30A7mgZg" target="_blank">Excel</a> template formats.</p>
 
 <p align="center">
   <!--<a href="https://github.com/gordonfn/schema"><img src="https://img.shields.io/github/stars/gordonfn/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
@@ -17,7 +17,7 @@
 
 ## DataStream
 
-DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 9 million water quality observations have been published across DataStream’s three regional platforms (Mackenzie DataStream,  Lake Winnipeg DataStream, Great Lakes DataStream, and Atlantic DataStream) by watershed groups, Indigenous organizations, researchers and governments at all levels.
+DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality and sediment quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. Water monitoring groups across Canada — including communities, researchers, Indigenous nations and governments at all levels — are using DataStream to publish their data.
 
 <!--<div align="center">
   <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/schema/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
@@ -132,3 +132,9 @@ npm publish
 <div align="center">
   <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/schema/main/docs/images/the-gordon-foundation.svg?sanitize=true" alt="The Gordon Foundation Logo" width="200"></a>
 </div>
+
+## Citation
+
+If you use this schema, please cite it as below.
+
+DataStream Initiative. (2022). DataStream WQX Schema (v. 2.6.10). GitHub. https://github.com/datastreamapp/schema

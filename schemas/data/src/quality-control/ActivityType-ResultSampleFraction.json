@@ -13,9 +13,7 @@
         ]
       }
     },
-    "required": [
-      "ActivityType"
-    ]
+    "required": ["ActivityType"]
   },
   "then": {
     "properties": {

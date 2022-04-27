@@ -1,67 +1,75 @@
-const util = require('util')
-const { join } = require('path')
-const fs = require('fs')
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+import { readFile, writeFile } from "fs/promises";
 
-const version = require('../package.json').version
-const $RefParser = require('json-schema-ref-parser')
-const Ajv = require('ajv').default
-const standaloneCode = require('ajv/dist/standalone').default
+import $RefParser from "json-schema-ref-parser";
+import { default as Ajv } from "ajv";
+import standaloneCode from "ajv/dist/standalone/index.js";
 
-const writeFile = util.promisify(fs.writeFile)
+import ajvFormats from "ajv-formats";
+// import ajvFormatsDraft2019 from 'ajv-formats-draft2019'
+import transformKeyword from "ajv-keywords/dist/definitions/transform.js";
+import ajvErrors from "ajv-errors";
 
-console.log('Compile: JSON Schema & CSV Template')
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const process = async (src, delKeys = ['$generated'], minify = false, ajv) => {
-  console.log('process', src, delKeys, minify)
-  let schema = {} // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
+const version = await readFile(join(__dirname, "../package.json"))
+  .then((res) => JSON.parse(res).version)
+  .catch(() => "0.0.0");
+
+console.log("Compile: JSON Schema & CSV Template");
+
+const process = async (src, delKeys = ["$generated"], minify = false, ajv) => {
+  console.log("process", version, src, delKeys, minify);
+  let schema = {}; // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
   try {
     schema = await $RefParser.dereference(
       join(__dirname, `/../src/${src}.json`)
-    ) // deprecate if/when possible
-    schema.description = schema.description.replace('{version}', version)
+    ); // deprecate if/when possible
+    schema.version = version
   } catch (e) {
-    console.error(e, e.toJSON())
+    console.error(e);
   }
 
   delKeys.forEach((delKey) => {
-    deleteKey(schema, delKey)
-  })
+    deleteKey(schema, delKey);
+  });
 
-  const json = JSON.stringify(schema, null, minify ? 0 : 2)
+  const json = JSON.stringify(schema, null, minify ? 0 : 2);
 
   await writeFile(join(__dirname, `/../${src}/index.json`), json, {
-    encoding: 'utf8'
-  })
+    encoding: "utf8",
+  });
   await writeFile(
-    join(__dirname, `/../${src}/index.json.mjs`),
-    'export default ' + json,
-    { encoding: 'utf8' }
-  )
+    join(__dirname, `/../${src}/index.json.js`),
+    "export default " + json,
+    { encoding: "utf8" }
+  );
 
-  const validate = ajv.compile(schema)
-  const code = standaloneCode(ajv, validate)
-  ajv.removeSchema()
+  const validate = ajv.compile(schema);
+  const code = standaloneCode(ajv, validate);
+  ajv.removeSchema();
 
   await writeFile(join(__dirname, `/../${src}/index.js`), code, {
-    encoding: 'utf8'
-  })
-}
+    encoding: "utf8",
+  });
+};
 
 const deleteKey = (obj, delKey) => {
-  if (typeof obj !== 'object') return
+  if (typeof obj !== "object") return;
   for (const key in obj) {
     if (key === delKey) {
-      delete obj[key]
+      delete obj[key];
     }
     if (Array.isArray(obj[key])) {
       for (const value of obj[key]) {
-        deleteKey(value, delKey)
+        deleteKey(value, delKey);
       }
-    } else if (typeof obj[key] === 'object') {
-      deleteKey(obj[key], delKey)
+    } else if (typeof obj[key] === "object") {
+      deleteKey(obj[key], delKey);
     }
   }
-}
+};
 
 // const csv = async () => {
 //   const object = require(path.join(__dirname, `/../src/primary.json`))
@@ -76,70 +84,70 @@ const ajvPrimary = new Ajv({
   strict: false,
   coerceTypes: false, // Keep it strict
   allErrors: true,
-  useDefaults: 'empty',
+  useDefaults: "empty",
+  keywords: [transformKeyword()],
   code: {
-    source: true
-    // esm: true
-  }
-})
-require('ajv-formats')(ajvPrimary, ['date'])
-// require('ajv-formats-draft2019')(ajvPrimary, [])
-// require("ajv-errors")(ajvPrimary)
-// require('ajv-keywords/dist/keywords/transform')(ajvPrimary)
-process('primary', ['$generated', 'errorMessage'], false, ajvPrimary)
+    source: true,
+    //esm: true
+  },
+});
+ajvFormats(ajvPrimary, ["date"]);
+// ajvFormatsDraft2019(ajvPrimary, [])
+// ajvErrors(ajvPrimary)
+process("primary", ["$generated", "errorMessage"], false, ajvPrimary);
 
 // Frontend
 const ajvFrontend = new Ajv({
   strict: false,
   coerceTypes: true,
   allErrors: true,
-  useDefaults: 'empty',
+  useDefaults: "empty",
+  keywords: [transformKeyword()],
   code: {
-    source: true
-    // esm: true
-  }
-})
-require('ajv-formats')(ajvFrontend, ['date'])
-// require('ajv-formats-draft2019')(ajvFrontend, [])
-require('ajv-errors')(ajvFrontend)
-require('ajv-keywords/dist/keywords/transform')(ajvFrontend)
-process('frontend', ['$generated', 'title', 'description'], true, ajvFrontend)
+    source: true,
+    //esm: true
+  },
+});
+ajvFormats(ajvFrontend, ["date"]);
+// ajvFormatsDraft2019(ajvFrontend, [])
+ajvErrors(ajvFrontend);
+process("frontend", ["$generated", "title", "description"], true, ajvFrontend);
 
 // Backend
 const ajvBackend = new Ajv({
   strict: false,
   coerceTypes: true,
   allErrors: true,
-  useDefaults: 'empty',
+  useDefaults: "empty",
   loopEnum: 1500,
+  keywords: [transformKeyword()],
   code: {
-    source: true
-    // esm: true
-  }
-})
-require('ajv-formats')(ajvBackend, ['date'])
-// require('ajv-formats-draft2019')(ajvBackend, [])
-require('ajv-keywords/dist/keywords/transform')(ajvBackend)
+    source: true,
+    //esm: true
+  },
+});
+ajvFormats(ajvBackend, ["date"]);
+// ajvFormatsDraft2019(ajvBackend, [])
 process(
-  'backend',
-  ['$generated', 'errorMessage', 'title', 'description'],
+  "backend",
+  ["$generated", "errorMessage", "title", "description"],
   true,
   ajvBackend
-)
+);
 
 // Quality Control
 const ajvQualityControl = new Ajv({
   strict: false,
   coerceTypes: false, // will already be coerced types
   allErrors: true,
-  useDefaults: 'empty',
+  useDefaults: "empty",
+  keywords: [transformKeyword()],
   code: {
-    source: true
-    // esm: true
-  }
-})
-require('ajv-formats')(ajvQualityControl, ['date'])
-// require('ajv-formats-draft2019')(ajvQualityControl, [])
-require('ajv-errors')(ajvQualityControl)
-require('ajv-keywords/dist/keywords/transform')(ajvQualityControl)
-process('quality-control', ['$generated'], true, ajvQualityControl)
+    source: true,
+    //esm: true
+  },
+});
+ajvFormats(ajvQualityControl, ["date"]);
+// ajvFormatsDraft2019(ajvQualityControl, [])
+ajvErrors(ajvQualityControl);
+process("quality-control", ["$generated"], true, ajvQualityControl);

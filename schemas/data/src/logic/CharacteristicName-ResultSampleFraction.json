@@ -165,13 +165,9 @@
         ]
       }
     },
-    "required": [
-      "CharacteristicName"
-    ]
+    "required": ["CharacteristicName"]
   },
   "then": {
-    "required": [
-      "ResultSampleFraction"
-    ]
+    "required": ["ResultSampleFraction"]
   }
 }

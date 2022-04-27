@@ -7,17 +7,13 @@
       "properties": {
         "ResultDetectionCondition": false
       },
-      "required": [
-        "ResultValue"
-      ]
+      "required": ["ResultValue"]
     },
     {
       "properties": {
         "ResultValue": false
       },
-      "required": [
-        "ResultDetectionCondition"
-      ]
+      "required": ["ResultDetectionCondition"]
     }
   ]
 }
