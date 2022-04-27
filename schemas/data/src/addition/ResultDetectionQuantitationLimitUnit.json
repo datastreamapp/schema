@@ -1,3 +1,8 @@
 [
-  "TCU", "kPa"
+    "kPa",
+    "per mil AIR",
+    "per mil VPDB",
+    "per mil VSMOW",
+    "TCU",
+    "units/m"
 ]

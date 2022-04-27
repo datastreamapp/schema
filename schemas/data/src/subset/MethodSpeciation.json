@@ -33,5 +33,15 @@
   "as SO3",
   "as SO4",
   "as U3O8",
-  "as Unspecified"
+  "as Unspecified",
+  "of CH4",
+  "of CO2",
+  "of H2O",
+  "of Inorg C",
+  "of NH3",
+  "of NO3",
+  "of Org N",
+  "of Org C",
+  "of PO4",
+  "of SO4"
 ]
