@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/datastreamapp/schema#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-replace": "4.0.0",
     "ajv": "^8.6.2",
@@ -36,7 +36,7 @@
     "ajv-formats-draft2019": "^1.4.3",
     "ajv-keywords": "^5.0.0",
     "change-case": "^4.1.2",
-    "glob": "^7.1.7",
+    "glob": "^8.0.0",
     "json-schema-ref-parser": "^9.0.9",
     "rollup": "^2.69.0",
     "rollup-plugin-esbuild": "^4.8.2",

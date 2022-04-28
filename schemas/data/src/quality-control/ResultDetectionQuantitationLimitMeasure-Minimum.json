@@ -4,6 +4,9 @@
   "errorMessage": "ResultDetectionQuantitationLimitMeasure should not be below zero for the selected ResultDetectionQuantitationLimitUnit",
   "if": {
     "properties": {
+      "ResultDetectionQuantitationLimitMeasure": {
+        "type": "number"
+      },
       "ResultDetectionQuantitationLimitUnit": {
         "enum": [
           "#/100ml",
@@ -51,7 +54,7 @@
         ]
       }
     },
-    "required": ["ResultDetectionQuantitationLimitUnit"]
+    "required": ["ResultDetectionQuantitationLimitMeasure","ResultDetectionQuantitationLimitUnit"]
   },
   "then": {
     "properties": {

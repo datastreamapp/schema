@@ -10,6 +10,8 @@
           "Ammonia",
           "Ammonia and ammonium",
           "Ammonium",
+          "Carbon-13/Carbon-12 ratio",
+          "Deuterium",
           "Inorganic nitrogen (nitrate and nitrite)",
           "Kjeldahl nitrogen",
           "Nitrate",
@@ -17,8 +19,10 @@
           "Organic Nitrogen",
           "Organic phosphorus",
           "Orthophosphate",
+          "Oxygen Delta 18",
           "Phosphorus, hydrolyzable",
           "Soluble Reactive Phosphorus (SRP)",
+          "Sulfur-34",
           "Total Nitrogen, mixed forms",
           "Total Phosphorus, mixed forms"
         ]

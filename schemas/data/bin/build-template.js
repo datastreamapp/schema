@@ -22,12 +22,13 @@ const sampleFraction = await readFile(join(__dirname, "../src/logic/Characterist
 //const sampleFractionOptional = await readFile('../src/quality-control/partial/CharacteristicName-ResultSampleFraction-Optional.json').then(res => JSON.parse(res).enum).catch(() => ([]))
 import characteristicGroup from "wqx/groups/CharacteristicName.json.js"
 import characteristicCASNumber from "wqx/groups/CASNumber.json.js"
+import unitDescriptions from "wqx/descriptions/MeasurementUnit.json.js"
 
 const buildUnits = async () => {
-  let csv = "Unit\n";
+  let csv = "Unit,Description\n";
 
   for (const value of schema.properties.ResultUnit.enum) {
-    csv += `"${value}"\n`;
+    csv += `"${value}","${unitDescriptions[value] ?? ''}"\n`;
   }
 
   await writeFile(join(__dirname, `/template/Units.csv`), csv, {

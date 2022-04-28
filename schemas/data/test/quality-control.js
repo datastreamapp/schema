@@ -190,6 +190,20 @@ test('Should accept ResultDetectionQuantitationLimit when measure is above 0', a
   })
   t.is(valid, true)
 })
+test('Should ignore ResultDetectionQuantitationLimit when measure is not defined', async (t) => {
+  const valid = validate({
+    ResultDetectionQuantitationLimitUnit: 'mg/l'
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'minimum',
+      'ResultDetectionQuantitationLimitMeasure'
+    ),
+    false
+  )
+})
 
 // ResultDetectionQuantitationLimitUnit-None
 test('Should accept when CharacteristicName is pH and ResultDetectionQuantitationLimitUnit is None', async (t) => {
@@ -341,6 +355,13 @@ test('Should accept Result when measure is above 0', async (t) => {
     ResultUnit: 'mg/l'
   })
   t.is(valid, true)
+})
+test('Should ignore Result when measure is not defined', async (t) => {
+  const valid = validate({
+    ResultUnit: '#/100ml'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
 })
 
 // ResultValue-pHRange

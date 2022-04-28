@@ -4,6 +4,9 @@
   "errorMessage": "ResultValue should not be below zero for the selected ResultUnit",
   "if": {
     "properties": {
+      "ResultValue": {
+        "type": "number"
+      },
       "ResultUnit": {
         "enum": [
           "#/100ml",
@@ -51,7 +54,7 @@
         ]
       }
     },
-    "required": ["ResultUnit"]
+    "required": ["ResultValue","ResultUnit"]
   },
   "then": {
     "properties": {
