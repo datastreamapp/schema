@@ -25,6 +25,7 @@
   "as OH",
   "as P",
   "as PO4",
+  "as Ra",
   "as Ra226",
   "as S",
   "as Se",
@@ -33,5 +34,16 @@
   "as SO3",
   "as SO4",
   "as U3O8",
-  "as Unspecified"
+  "as Unspecified",
+  "of CH4",
+  "of CO2",
+  "of H2O",
+  "of Inorganic C",
+  "of NH4",
+  "of NO3",
+  "of Organic N",
+  "of Organic C",
+  "of PO4",
+  "of SO4",
+  "of Unspecified"
 ]
