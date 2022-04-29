@@ -57,7 +57,7 @@
     "MD DNR",
     "MI DEQ SURFACE WATER",
     "MICROLOGY LABS",
-    "MODERN WATER***retired***use MWI",
+    "MODERN WATER",
     "MODIFIED COLITAG",
     "MWI",
     "NCASI",
@@ -116,5 +116,5 @@
     "WEST INC",
     "YSI"
   ],
-  "maxLength": 32
+  "maxLength": 20
 }

@@ -62,6 +62,7 @@ export const retire = (column, list) => {
   if (![
     // ***retired***
     'CharacteristicName',
+    'ResultAnalyticalMethodContext',
     // **$
     'MonitoringLocationHorizontalAccuracyUnit',
     'MonitoringLocationVerticalUnit',
