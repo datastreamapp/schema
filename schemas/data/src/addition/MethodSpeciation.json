@@ -4,11 +4,12 @@
     "of CH4",
     "of CO2",
     "of H2O",
-    "of Inorg C",
-    "of NH3",
+    "of Inorganic C",
+    "of NH4",
     "of NO3",
-    "of Org N",
-    "of Org C",
+    "of Organic N",
+    "of Organic C",
     "of PO4",
-    "of SO4"
+    "of SO4",
+    "of Unspecified"
 ]
