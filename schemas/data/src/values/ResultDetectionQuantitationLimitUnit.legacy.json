@@ -328,6 +328,9 @@
     "PCU",
     "per m",
     "per mil",
+    "per mil AIR",
+    "per mil VPDB",
+    "per mil VSMOW",
     "per nm",
     "pfu/100ml",
     "pg",
@@ -429,5 +432,5 @@
     "µg/l",
     "µS/cm"
   ],
-  "maxLength": 11
+  "maxLength": 13
 }

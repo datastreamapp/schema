@@ -133,7 +133,7 @@ export const additions = async (column, list = []) => {
           item = null
         }
         // remove edge case
-        if (item === 'Perfluoroheptanesulfonic Acid') item = null
+        if (['Perfluoroheptanesulfonic Acid','P-Chlorophenol'].includes(item)) item = null
       }
       if (item) {
         arr.push(item)
@@ -196,8 +196,8 @@ export const additions = async (column, list = []) => {
     }
     if (exactDuplicates.length) {
       console.log(`|** Exact Duplicates: ${exactDuplicates.length}`)
-      if (exactDuplicates.length < 25) {
-        console.log(`|   "${exactDuplicates.join('", "')}"`)
+      if (exactDuplicates.length < 65) {
+        console.log(`|   "${exactDuplicates.join('",\n    "')}"`)
       }
     }
   }
