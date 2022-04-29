@@ -1,6 +1,6 @@
 {
   "name": "@datastream/schema-monorepo",
-  "version": "2.6.14",
+  "version": "2.7.0",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "private": true,
   "type": "module",
