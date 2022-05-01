@@ -1,4 +1,5 @@
 {
+  "$id": "https://datastream.org/data-schema/values/MonitoringLocationHorizontalCoordinateReferenceSystem.json",
   "title": "Horizontal Reference Datum",
   "description": "",
   "type": "string",

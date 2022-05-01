@@ -1,4 +1,5 @@
 {
+  "$id": "https://datastream.org/data-schema/values/ResultAnalyticalMethodContext.json",
   "title": "Analytical Method Context",
   "description": "",
   "type": "string",

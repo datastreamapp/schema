@@ -1,4 +1,5 @@
 {
+  "$id": "https://datastream.org/data-schema/values/MethodSpeciation.json",
   "title": "Method Speciation",
   "description": "",
   "type": "string",

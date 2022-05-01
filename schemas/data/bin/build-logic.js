@@ -17,7 +17,8 @@ const wqxRequiredIf = async (file) => {
   const { default: required } = await import(`wqx/required/${file}.json.js`)
 
   const object = {
-    $generated: 'build-logic.js',
+    $id: `https://datastream.org/data-schema/logic/${file}.json`,
+    __generated: 'build-logic.js',
     title: logicJSON.title,
     description: logicJSON.description,
     errorMessage: logicJSON.errorMessage,
@@ -49,7 +50,8 @@ const wqxRequiredIf = async (file) => {
     .then((res) => JSON.parse(res))
     .catch(() => ({}))
   const qc = {
-    $generated: 'build-logic.js',
+    $id: `https://datastream.org/data-schema/quality-control/${file}.json`,
+    __generated: 'build-logic.js',
     title: qcJSON.title,
     description: qcJSON.description,
     errorMessage: qcJSON.errorMessage,

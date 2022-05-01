@@ -1,4 +1,5 @@
 {
+  "$id": "https://datastream.org/data-schema/values/ActivityGroupType.json",
   "title": "Activity Group Type",
   "description": "",
   "type": "string",

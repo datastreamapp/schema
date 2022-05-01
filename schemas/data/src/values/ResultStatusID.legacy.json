@@ -1,4 +1,5 @@
 {
+  "$id": "https://datastream.org/data-schema/values/ResultStatusID.json",
   "title": "Result Status",
   "description": "",
   "type": "string",
