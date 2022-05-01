@@ -5,6 +5,7 @@
   "if": {
     "properties": {
       "ActivityType": {
+        "type": "string",
         "pattern": "^Sample.*$"
       }
     },

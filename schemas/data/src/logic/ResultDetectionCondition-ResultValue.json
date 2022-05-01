@@ -5,13 +5,15 @@
   "oneOf": [
     {
       "properties": {
+        "ResultValue": {},
         "ResultDetectionCondition": false
       },
       "required": ["ResultValue"]
     },
     {
       "properties": {
-        "ResultValue": false
+        "ResultValue": false,
+        "ResultDetectionCondition": {}
       },
       "required": ["ResultDetectionCondition"]
     }
