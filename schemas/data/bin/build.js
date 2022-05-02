@@ -13,13 +13,14 @@ import ajvErrors from "ajv-errors";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const version = await readFile(join(__dirname, "../package.json"))
-  .then((res) => JSON.parse(res).version)
+const readJSON = async (path) => readFile(join(__dirname, path)).then((res) => JSON.parse(res))
+
+const version = await readJSON("../package.json").then(res => res.version)
   .catch(() => "0.0.0");
 
 console.log("Compile: JSON Schema & CSV Template");
 
-const process = async (src, delKeys = ["$generated"], minify = false, ajv) => {
+const process = async (src, delKeys = ["__generated"], minify = false, ajv) => {
   console.log("process", version, src, delKeys, minify);
   let schema = {}; // JSON.parse(fs.readFileSync(path.join(__dirname, `/../src/${src}.json`)))
   try {
@@ -85,7 +86,7 @@ const ajvPrimary = new Ajv({
   coerceTypes: false, // Keep it strict
   allErrors: true,
   useDefaults: "empty",
-  keywords: [transformKeyword()],
+  keywords: [],
   code: {
     source: true,
     //esm: true
@@ -94,7 +95,7 @@ const ajvPrimary = new Ajv({
 ajvFormats(ajvPrimary, ["date"]);
 // ajvFormatsDraft2019(ajvPrimary, [])
 // ajvErrors(ajvPrimary)
-process("primary", ["$generated", "errorMessage"], false, ajvPrimary);
+process("primary", ["__generated", "errorMessage"], false, ajvPrimary);
 
 // Frontend
 const ajvFrontend = new Ajv({
@@ -111,7 +112,7 @@ const ajvFrontend = new Ajv({
 ajvFormats(ajvFrontend, ["date"]);
 // ajvFormatsDraft2019(ajvFrontend, [])
 ajvErrors(ajvFrontend);
-process("frontend", ["$generated", "title", "description"], true, ajvFrontend);
+process("frontend", ["__generated", "title", "description"], true, ajvFrontend);
 
 // Backend
 const ajvBackend = new Ajv({
@@ -130,7 +131,7 @@ ajvFormats(ajvBackend, ["date"]);
 // ajvFormatsDraft2019(ajvBackend, [])
 process(
   "backend",
-  ["$generated", "errorMessage", "title", "description"],
+  ["__generated", "errorMessage", "title", "description"],
   true,
   ajvBackend
 );
@@ -150,4 +151,4 @@ const ajvQualityControl = new Ajv({
 ajvFormats(ajvQualityControl, ["date"]);
 // ajvFormatsDraft2019(ajvQualityControl, [])
 ajvErrors(ajvQualityControl);
-process("quality-control", ["$generated"], true, ajvQualityControl);
+process("quality-control", ["__generated"], true, ajvQualityControl);
