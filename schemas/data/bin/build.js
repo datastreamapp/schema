@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 import { readFile, writeFile } from "fs/promises";
 
 import $RefParser from "json-schema-ref-parser";
-import { default as Ajv } from "ajv";
+import { default as Ajv } from "ajv/dist/2020.js";
 import standaloneCode from "ajv/dist/standalone/index.js";
 
 import ajvFormats from "ajv-formats";
