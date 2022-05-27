@@ -15,5 +15,9 @@
     "ug/dm2/day",
     "Mgal/day",
     "1000m3/day",
-    "m3/yr"
+    "m3/yr",
+    "#/min",
+    "#/hr",
+    "#/day",
+    "#/sec"
 ]

@@ -1,20 +1,11 @@
 [
-    "kPa",
     "per mil AIR",
     "per mil VPDB",
     "per mil VSMOW",
     "TCU",
-    "units/m", 
-    "m3/week",
-    "fibers/cm3",
-    "kg/day",
-    "mg/dm2/month",
-    "m3/month",
-    "ML/day",
-    "ug/dm2/month",
-    "ug/dm2/day",
-    "Mgal/day",
-    "1000m3/day",
-    "m3/yr"
+    "#/min",
+    "#/hr",
+    "#/day",
+    "#/sec"
 ]
 
