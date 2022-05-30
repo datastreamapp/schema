@@ -147,6 +147,13 @@ test('Should accept empty ResultSampleFraction when ActivityType is set to field
 })
 
 // CharacteristicName-MethodSpeciation
+test('Should accept CharacteristicName-MethodSpeciation when its not expected', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Ammonia',
+    MethodSpeciation: 'as N'
+  })
+  t.is(valid, true)
+})
 test('Should reject MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
@@ -161,6 +168,12 @@ test('Should reject MethodSpeciation when its not expected', async (t) => {
 test('Should accept MethodSpeciation when its expected', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH'
+  })
+  t.is(valid, true)
+})
+test('Should accept MethodSpeciation when its not expected', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Ammonia'
   })
   t.is(valid, true)
 })

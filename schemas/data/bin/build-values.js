@@ -59,15 +59,17 @@ for (const col of Object.keys(wqx)) {
 }
 
 // Check CharacteristicNameGroups
-let characteristicNameGroups = await import(
-  `wqx/groups/CharacteristicName.json.js`
-);
+let characteristicNameGroups = await readFile(
+  join(__dirname, `../node_modules/wqx/groups/CharacteristicName.json`)
+).then((res) => JSON.parse(res))
+
 let characteristicNames = await readFile(
   join(__dirname, `../src/values/CharacteristicName.primary.json`)
-).then((res) => JSON.parse(res));
+).then((res) => JSON.parse(res))
 characteristicNames = characteristicNames.enum;
 
 for (const characteristicName of characteristicNames) {
+  //console.log(characteristicName, characteristicNameGroups[characteristicName])
   if (
     !characteristicNameGroups[characteristicName] ||
     characteristicNameGroups[characteristicName] === "Not Assigned"
