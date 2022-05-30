@@ -137,4 +137,4 @@ npm publish
 
 If you use this schema, please cite it as below.
 
-DataStream Initiative. (2022). DataStream WQX Schema (v. 2.6.10). GitHub. https://github.com/datastreamapp/schema
+DataStream Initiative. ([Year]). DataStream WQX Schema ([current version]). GitHub. https://github.com/datastreamapp/schema
