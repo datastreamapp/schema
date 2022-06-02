@@ -4,6 +4,7 @@
   "description": "",
   "type": "string",
   "enum": [
+    "as %CaCO3",
     "as Al",
     "as ANC",
     "as As",
