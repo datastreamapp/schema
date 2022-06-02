@@ -6,6 +6,9 @@
   "enum": [
     "#/100L",
     "#/100ml",
+    "#/day",
+    "#/hr",
+    "#/min",
     "#/ml",
     "%",
     "Bq/L",
@@ -25,6 +28,7 @@
     "FTU",
     "g/l",
     "g/m2",
+    "gal/min",
     "ha",
     "hours",
     "HU",
@@ -37,6 +41,7 @@
     "l",
     "L/mg-cm",
     "L/mg-m",
+    "l/min",
     "l/sec",
     "m",
     "m/sec",
@@ -89,15 +94,17 @@
     "uE/m2/sec",
     "ueq/L",
     "ug",
+    "ug/cm2",
     "ug/g",
+    "ug/kg",
     "ug/l",
     "ug/m3",
-    "umho/cm",
     "umol/L",
     "umol/S/m2",
     "units/cm",
     "units/m",
-    "uS/cm"
+    "uS/cm",
+    "uS/m"
   ],
   "maxLength": 13
 }

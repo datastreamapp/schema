@@ -1,0 +1,113 @@
+{
+  "Inorganics, Major, Metals": [
+    "ug/L",
+    "ug/g",
+    "umol/L",
+    "%"
+  ],
+  "Inorganics, Major, Non-metals": [
+    "ug/L",
+    "ug/g",
+    "umol/L",
+    "%"
+  ],
+  "Inorganics, Minor, Metals": [
+    "ug/L",
+    "ug/g",
+    "umol/L",
+    "%"
+  ],
+  "Inorganics, Minor, Non-metals": [
+    "ug/L",
+    "ug/g",
+    "umol/L",
+    "%"
+  ],
+  "Major ions": [
+    "mg/L",
+    "mg/kg",
+    "umol/L",
+    "%"
+  ],
+  "Nutrient": [
+    "mg/L",
+    "mg/kg",
+    "umol/L",
+    "%"
+  ],
+  "Biological": [
+    "mg/L",
+    "mg/kg",
+    "umol/L",
+    "%"
+  ],
+  "Information": [
+    "m",
+    "m2"
+  ],
+  "Microbiological": [
+    "MPN",
+    "#/100mL",
+    "MPN/100mL",
+    "CFU/100mL"
+  ],
+  "PFAS,Perfluorinated Alkyl Substance": [
+    "ug/L"
+  ],
+  "PFOA, Perfluorooctanoic Acid": [
+    "ug/L"
+  ],
+  "Physical": [
+    "mg/L",
+    "mg/kg",
+    "umol/L",
+    "deg C",
+    "m/s",
+    "mL",
+    "L/mg-m",
+    "units/cm",
+    "TCU",
+    "m",
+    "m2"
+  ],
+  "Organics, Other": [
+    "ng/L",
+    "ng/kg",
+    "umol/L",
+    "%"
+  ],
+  "Organics, Pesticide": [
+    "ng/L",
+    "ng/kg",
+    "umol/L",
+    "%"
+  ],
+  "Organics, PCBs": [
+    "ng/L",
+    "ng/kg",
+    "umol/L",
+    "%"
+  ],
+  "Radiochemical": [
+    "pCi/L",
+    "TU",
+    "permille",
+    "%"
+  ],
+  "Stable Isotopes": [
+    "mg/L",
+    "mg/kg",
+    "umol/L",
+    "pCi/L",
+    "TU",
+    "permille",
+    "%"
+  ],
+  "Not Assigned": [
+    "mg/L",
+    "mg/kg",
+    "umol/L",
+    "m3/s"
+  ],
+  
+}

@@ -12,10 +12,11 @@
     "primary",
     "frontend",
     "backend",
-    "quality-control"
+    "quality-control",
+    "lookup"
   ],
   "scripts": {
-    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js",
+    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js",
     "build": "node ./bin/build.js && rollup --config bin/rollup.js --environment INCLUDE_DEPS,BUILD:production",
     "test": "npm run build && ava"
   },
