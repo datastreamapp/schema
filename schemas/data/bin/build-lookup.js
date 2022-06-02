@@ -39,3 +39,13 @@ for (const characteristicName of characteristicNames) {
   }
 }
 
+for (const path of [
+  join(__dirname, `/../lookup/CharacteristicName-CharacteristicNameGroup.json`),
+  join(__dirname, `/../lookup/CharacteristicName-MeasureUnit.json`),
+  join(__dirname, `/../lookup/CharacteristicNameGroup-MeasureUnit.json`),
+]) {
+  const json = await readFile(path).then((res) => JSON.parse(res))
+  await writeFile(path+'.js', `export default ${JSON.stringify(json, null, 2)}`, {
+    encoding: "utf8",
+  });
+}
