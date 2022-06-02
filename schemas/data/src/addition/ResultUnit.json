@@ -4,8 +4,6 @@
     "per mil VSMOW",
     "TCU",
     "uS/m",
-    "#/min",
-    "#/hr",
-    "#/day"
+    "#/sec"
 ]
 
