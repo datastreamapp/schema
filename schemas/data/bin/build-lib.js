@@ -72,14 +72,31 @@ export const retire = (column, list) => {
   ].includes(column)) return [[], list]
   const arr = []
   // Remove retired items from list
-  const pattern = /(\*{3,10}retired\*{3}.*|\*{3}duplicate\*{3}|[*]+)$/
-  list = list.map(item => {
-    if (pattern.test(item)) {
-      item = item.replace(pattern, '').trim()
-      arr.push(item)
-    }
-    return item
-  })
+  const pattern = /\s*(\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[*]+)$/
+  list = list
+    .filter(item => ![
+      // retired, but not removed yet
+      '1-Decanesulfonic acid, 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heptadecafluoro-',
+      '1-Octanesulfonamide, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-',
+      '1,2-Benzenedicarboxamide, N2-[1,1-dimethyl-2-(methylsulfonyl)ethyl]-3-iodo-N1-[2-methyl-4-[1,2,2,2-tetrafluoro-1-(trifluoromethyl)ethyl]phenyl]-',
+      'Heptanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,7-tridecafluoro-',
+      'Hexadecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,16-hentriacontafluoro-',
+      'Nonanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,9-heptadecafluoro-',
+      'Octadecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,18-pentatriacontafluoro-',
+      'Pentanoic acid, 2,2,3,3,4,4,5,5,5-nonafluoro-',
+      // retired more than once
+      'Perfluorodecanesulfonic acid ***retired***use 1-Decanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heneicosafluoro',
+      // duplicate, but not removed yet
+      'Benzenamine, 2,3-dimethyl-4-[(1,1,2,2-tetrafluoroethyl)thio]-',
+      'Benzenamine, 2,5-dimethyl-4-[(1,1,2,2-tetrafluoroethyl)thio]-'
+    ].includes(item))
+    .map(item => {
+      if (pattern.test(item)) {
+        item = item.replace(pattern, '').trim()
+        arr.push(item)
+      }
+      return item
+    })
   return [arr, list]
 }
 
@@ -134,7 +151,7 @@ export const additions = async (column, list = []) => {
           item = null
         }
         // remove edge case
-        if (['Perfluoroheptanesulfonic Acid','P-Chlorophenol'].includes(item)) item = null
+        if (['Perfluoroheptanesulfonic Acid', 'P-Chlorophenol'].includes(item)) item = null
       }
       if (item) {
         arr.push(item)
@@ -150,6 +167,7 @@ export const additions = async (column, list = []) => {
   } else {
     arr = list
   }
+  //console.log('arr', 'Ethyl tert-butyl ether', arr.indexOf('ethyl tert-butyl ether'))
 
   try {
     const additions = await readFile(
@@ -158,6 +176,7 @@ export const additions = async (column, list = []) => {
       .then((res) => JSON.parse(res))
       .catch(() => [])
     arr = arr.concat(additions)
+    //console.log('additions', 'Ethyl tert-butyl ether', additions.indexOf('ethyl tert-butyl ether'))
   } catch (e) {
     if (e.message.includes('Cannot find module')) {
       console.log('|-> Skip additions')
@@ -174,6 +193,7 @@ export const additions = async (column, list = []) => {
       .then((res) => JSON.parse(res))
       .catch(() => [])
     arr = arr.concat(deprecated)
+    //console.log('deprecated', 'Ethyl tert-butyl ether', deprecated.indexOf('ethyl tert-butyl ether'))
   } catch (e) {
     if (e.message.includes('Cannot find module')) {
       console.log('|-> Skip deprecated')
@@ -182,25 +202,38 @@ export const additions = async (column, list = []) => {
     }
   }
 
-  // remove exact duplicates
-  const exactDuplicates = []
+
+
+  // trailing Whitespace
+  arr = arr.map(item => {
+    if (item !== item.trim()) {
+      console.log(`|** Trailing Whitespace: "${item}"`)
+      item = item.trim()
+    }
+    return item
+  })
+
   let uniqueEnum = [
     ...new Set(
       arr.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
     )
   ]
+
+  // remove exact duplicates
+  const exactDuplicates = []
   if (uniqueEnum.length < arr.length) {
     for (let i = 1, l = arr.length; i < l; i++) {
       if (arr[i - 1] === arr[i]) {
         exactDuplicates.push(arr[i])
+        console.log(`|** Exact Duplicates: "${arr[i]}"`)
       }
     }
-    if (exactDuplicates.length) {
+    /*if (exactDuplicates.length) {
       console.log(`|** Exact Duplicates: ${exactDuplicates.length}`)
       if (exactDuplicates.length < 65) {
         console.log(`|   "${exactDuplicates.join('",\n    "')}"`)
       }
-    }
+    }*/
   }
 
   // remove mixcase duplicates
@@ -212,21 +245,19 @@ export const additions = async (column, list = []) => {
       }) !== -1
     ) {
       mixedCaseDuplicates.push(uniqueEnum[i - 1])
+      console.log(`|** Mixed Case Duplicates: - "${uniqueEnum[i - 1]}"`)
+      console.log(`|** Mixed Case Duplicates: + "${uniqueEnum[i]}"`)
       uniqueEnum[i - 1] = null
-    }
-    if (uniqueEnum[i] !== uniqueEnum[i].trim()) {
-      console.log(`|** Trailing Whitespace: "${uniqueEnum[i]}"`)
-      uniqueEnum[i] = uniqueEnum[i].trim()
     }
   }
   uniqueEnum = uniqueEnum.filter((v) => v !== null)
 
-  if (mixedCaseDuplicates.length) {
+  /*if (mixedCaseDuplicates.length) {
     console.log(`|** Mixed Case Duplicates: ${mixedCaseDuplicates.length}`)
     if (mixedCaseDuplicates.length < 25) {
       console.log(`|   "${mixedCaseDuplicates.join('", "')}"`)
     }
-  }
+  }*/
 
   return uniqueEnum
 }

@@ -62,6 +62,16 @@ for (const col of Object.keys(wqx)) {
 let characteristicNameGroups = await readFile(
   join(__dirname, `../node_modules/wqx/groups/CharacteristicName.json`)
 ).then((res) => JSON.parse(res))
+let characteristicNameGroupsLocal = await readFile(
+  join(__dirname, `../src/groups/CharacteristicName.json`)
+).then((res) => JSON.parse(res))
+
+for(const key in characteristicNameGroupsLocal) {
+  if (characteristicNameGroups[key]) {
+    console.log(`CharacteristicNameGroup "${key}":"${characteristicNameGroups[key]}" replace with "${characteristicNameGroupsLocal[key]}"`)
+  }
+  characteristicNameGroups[key] = characteristicNameGroupsLocal[key]
+}
 
 let characteristicNames = await readFile(
   join(__dirname, `../src/values/CharacteristicName.primary.json`)
