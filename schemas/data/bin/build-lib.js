@@ -1,6 +1,6 @@
-import { readFile } from 'fs/promises'
-import { dirname, join } from 'path'
-import { fileURLToPath } from 'url'
+import { readFile } from 'node:fs/promises'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -97,6 +97,8 @@ export const retire = (column, list) => {
       }
       return item
     })
+
+  //console.log('retire', '#/sec', arr.indexOf('#/sec'), arr)
   return [arr, list]
 }
 
@@ -167,7 +169,7 @@ export const additions = async (column, list = []) => {
   } else {
     arr = list
   }
-  //console.log('arr', 'Ethyl tert-butyl ether', arr.indexOf('ethyl tert-butyl ether'))
+  //console.log('arr', '#/sec', arr.indexOf('#/sec'))
 
   try {
     const additions = await readFile(
@@ -176,7 +178,7 @@ export const additions = async (column, list = []) => {
       .then((res) => JSON.parse(res))
       .catch(() => [])
     arr = arr.concat(additions)
-    //console.log('additions', 'Ethyl tert-butyl ether', additions.indexOf('ethyl tert-butyl ether'))
+    //console.log('additions', '#/sec', additions.indexOf('#/sec'))
   } catch (e) {
     if (e.message.includes('Cannot find module')) {
       console.log('|-> Skip additions')
@@ -193,7 +195,7 @@ export const additions = async (column, list = []) => {
       .then((res) => JSON.parse(res))
       .catch(() => [])
     arr = arr.concat(deprecated)
-    //console.log('deprecated', 'Ethyl tert-butyl ether', deprecated.indexOf('ethyl tert-butyl ether'))
+    //console.log('deprecated', '#/sec', deprecated.indexOf('#/sec'))
   } catch (e) {
     if (e.message.includes('Cannot find module')) {
       console.log('|-> Skip deprecated')
@@ -201,8 +203,6 @@ export const additions = async (column, list = []) => {
       console.log('|-> Error deprecated', e.message)
     }
   }
-
-
 
   // trailing Whitespace
   arr = arr.map(item => {
@@ -265,6 +265,8 @@ export const additions = async (column, list = []) => {
 export const subset = async (column, list = [], log = true) => {
   const allowed = await getList('subset', column)
   if (!allowed.length) return list
+
+  //console.log('subset', '#/sec', allowed.indexOf('#/sec'))
 
   const subsetList = []
   for (const value of allowed) {

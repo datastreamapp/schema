@@ -1,6 +1,6 @@
 import { readFile, writeFile } from 'fs/promises'
-import { dirname, join } from 'path'
-import { fileURLToPath } from 'url'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { subset, sort } from './build-lib.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -25,7 +25,12 @@ const wqxRequiredIf = async (file) => {
     ...required
   }
 
+  // TODO - remove once included in WQX look up
+  object.if.properties[columnFrom].enum.push('Nitrogen-15/Nitrogen-14 ratio')
+  object.if.properties[columnFrom].enum.push('Sulfur Delta 34')
+
   const list = [...new Set(sort(object.if.properties[columnFrom].enum))]
+
   object.if.properties[columnFrom].enum = await subset(columnFrom, list, false)
 
   await writeFile(

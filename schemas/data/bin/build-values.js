@@ -28,7 +28,7 @@ for (const col of Object.keys(wqx)) {
   //   object.enum = object.enum.concat(alias.enum)
   // }
 
-  const [retired, list] = await retire(col, object.enum);
+  let [retired, list] = await retire(col, object.enum);
   object.enum = list
   //object.enum = await override(col, object.enum);
 
@@ -48,7 +48,12 @@ for (const col of Object.keys(wqx)) {
   );
 
   object.enum = await subset(col, object.enum); // getList('subset', col, object.enum)
-  object.enum = await subtractions(col, object.enum, retired);
+
+  // remove subset values from retire list
+  const subsetList = await getList('subset', col)
+  retired = retired.filter((item) => !subsetList.includes(item))
+
+  object.enum = await subtractions(col, object.enum, retired)
   //object.enum = await override(col, object.enum);
 
   await writeFile(
