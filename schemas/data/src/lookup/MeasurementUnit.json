@@ -1,7 +1,8 @@
 {
-  "per mil AIR": "",
-  "per mil VPDB": "",
-  "per mil VSMOW": "",
-  "TCU": "",
-  "uS/m": ""
+  "per mil AIR": "Parts per thousand, compared to the isotope reference standard atmospheric nitrogen gas (AIR)",
+  "per mil VPDB": "Parts per thousand, compared to the isotope reference Vienna Pee Dee Belemnite (VPDB)",
+  "per mil VSMOW": "Parts per thousand, compared to the isotope reference standard Vienna Standard Mean Ocean Water (VSMOW)",
+  "TCU": "True colour units, equivalent to one Hazen unit and to one Pt-Co unit",
+  "uS/m": "Electric Resistivity, Micro-Siemens per metre",
+  "#/sec": "Counts or units per second"
 }
