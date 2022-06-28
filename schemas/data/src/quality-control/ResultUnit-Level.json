@@ -1,0 +1,21 @@
+{
+  "title": "Unit Should be an elevation",
+  "description": "Characteristics that require elevation as unit.",
+  "errorMessage": "The unit for the CharacteristicName should be an elevation.",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": []
+      }
+    },
+    "required": ["CharacteristicName", "ResultValue"]
+  },
+  "then": {
+    "properties": {
+      "ResultUnit": {
+        "enum": ["MASL"]
+      }
+    },
+    "required": ["ResultUnit"]
+  }
+}

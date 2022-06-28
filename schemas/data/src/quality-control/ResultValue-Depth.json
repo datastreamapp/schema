@@ -1,0 +1,26 @@
+{
+  "title": "Depth",
+  "description": "Depths must be measured relative to the surface",
+  "errorMessage": "Depth is outside an expected range (<0).",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Depth",
+          "Depth, bottom",
+          "Depth, Secchi disk depth",
+          "Depth, snow cover"
+        ]
+      }
+    },
+    "required": ["CharacteristicName", "ResultValue"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "maximum": 0
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}
