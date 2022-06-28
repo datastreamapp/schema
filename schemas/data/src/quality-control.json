@@ -159,10 +159,16 @@
       "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-NoValue.json"
     },
     {
+      "$ref": "./quality-control/ResultUnit-Elevation.json"
+    },
+    {
       "$ref": "./quality-control/ResultUnit-None.json"
     },
     {
       "$ref": "./quality-control/ResultUnit-NoValue.json"
+    },
+    {
+      "$ref": "./quality-control/ResultValue-DepthMaximum.json"
     },
     {
       "$ref": "./quality-control/ResultValue-DOSatMinimum.json"
