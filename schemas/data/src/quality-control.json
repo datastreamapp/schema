@@ -159,9 +159,6 @@
       "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-NoValue.json"
     },
     {
-      "$ref": "./quality-control/ResultUnit-Elevation.json"
-    },
-    {
       "$ref": "./quality-control/ResultUnit-None.json"
     },
     {

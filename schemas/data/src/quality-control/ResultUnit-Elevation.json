@@ -1,7 +1,7 @@
 {
   "title": "Unit Should be an elevation",
   "description": "Characteristics that require elevation as unit.",
-  "errorMessage": "The unit for the CharacteristicName should be an elevation.",
+  "errorMessage": "The unit for the CharacteristicName should be an elevation. ** TODO: MASL not a unit, needs to be added to QC rule lists",
   "if": {
     "properties": {
       "CharacteristicName": {
