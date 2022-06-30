@@ -9,7 +9,8 @@
           "Depth",
           "Depth, bottom",
           "Depth, Secchi disk depth",
-          "Depth, snow cover"
+          "Depth, snow cover",
+          "Depth of water column"
         ]
       }
     },

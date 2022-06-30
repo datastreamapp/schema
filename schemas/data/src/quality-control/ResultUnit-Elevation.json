@@ -5,7 +5,10 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": []
+        "enum": [
+          "Water level",
+          "Water level (probe)"
+        ]
       }
     },
     "required": ["CharacteristicName", "ResultValue"]
