@@ -1,0 +1,24 @@
+{
+  "title": "Unit Should be an elevation",
+  "description": "Characteristics that require elevation as unit.",
+  "errorMessage": "The unit for the CharacteristicName should be an elevation. ** TODO: MASL not a unit, needs to be added to QC rule lists",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Water level",
+          "Water level (probe)"
+        ]
+      }
+    },
+    "required": ["CharacteristicName", "ResultValue"]
+  },
+  "then": {
+    "properties": {
+      "ResultUnit": {
+        "enum": ["MASL"]
+      }
+    },
+    "required": ["ResultUnit"]
+  }
+}

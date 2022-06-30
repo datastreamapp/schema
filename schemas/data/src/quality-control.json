@@ -165,6 +165,9 @@
       "$ref": "./quality-control/ResultUnit-NoValue.json"
     },
     {
+      "$ref": "./quality-control/ResultValue-DepthMaximum.json"
+    },
+    {
       "$ref": "./quality-control/ResultValue-DOSatMinimum.json"
     },
     {
