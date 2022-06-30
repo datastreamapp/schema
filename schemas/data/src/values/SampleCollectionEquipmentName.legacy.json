@@ -4,6 +4,7 @@
   "description": "",
   "type": "string",
   "enum": [
+    "6 Inch Core",
     "A-Frame Net",
     "Activity Trap",
     "Anchor Box Dredge",
@@ -48,6 +49,7 @@
     "Dip Net",
     "Dip Pole",
     "Disposable plastic scoop",
+    "Diver",
     "Draw Down",
     "Drift Gill Net",
     "Drilled Sampler",
@@ -92,6 +94,7 @@
     "Kemmerer Bottle",
     "Kick Net",
     "Kullenberg Gravity Corer",
+    "Large Van Veen Grab",
     "Larval Light Fish Trap",
     "Long Line",
     "Marmap Neuston Net",
