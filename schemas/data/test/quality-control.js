@@ -126,7 +126,7 @@ test('Should reject improperly formatted time', async (t) => {
   t.is(checkProperty(validate.errors, 'pattern', 'ActivityStartTime'), true)
 })
 
-// ActivityType-ResultSampleFraction
+// *** ActivityType-ResultSampleFraction *** //
 test('Should reject ResultSampleFraction when ActivityType is set to field', async (t) => {
   const valid = validate({
     ActivityType: 'Field Msr/Obs',
@@ -146,7 +146,7 @@ test('Should accept empty ResultSampleFraction when ActivityType is set to field
   t.is(valid, true)
 })
 
-// CharacteristicName-MethodSpeciation
+// *** CharacteristicName-MethodSpeciation *** //
 test('Should accept CharacteristicName-MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
     CharacteristicName: 'Ammonia',
@@ -180,7 +180,7 @@ test('Should accept MethodSpeciation when its not expected', async (t) => {
 
 // MonitoringLocationDepthHeightMeasure - TODO future?
 
-// ResultDetectionQuantitationLimitMeasure-Minimum
+// *** ResultDetectionQuantitationLimitMeasure-Minimum *** //
 test('Should reject ResultDetectionQuantitationLimit when measure is below 0', async (t) => {
   const valid = validate({
     ResultDetectionQuantitationLimitMeasure: -1,
@@ -218,7 +218,7 @@ test('Should ignore ResultDetectionQuantitationLimit when measure is not defined
   )
 })
 
-// ResultDetectionQuantitationLimitUnit-None
+// *** ResultDetectionQuantitationLimitUnit-None *** //
 test('Should accept when CharacteristicName is pH and ResultDetectionQuantitationLimitUnit is None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
@@ -245,7 +245,7 @@ test('Should reject when CharacteristicName is pH and ResultDetectionQuantitatio
   // t.is(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit'), true)
 })
 
-// ResultDetectionQuantitationLimitUnit-NoValue
+// *** ResultDetectionQuantitationLimitUnit-NoValue *** //
 test('Should accept when ResultDetectionQuantitationLimitMeasure & ResultDetectionQuantitationLimitUnit exist', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
@@ -278,7 +278,26 @@ test('Should reject when ResultDetectionQuantitationLimitUnit exists without Res
   )
 })
 
-// ResultUnit-None
+// *** ResultUnit-Elevation *** //
+/*test('Should reject Water level in m', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Water level',
+    ResultValue: 1800,
+    ResultUnit: 'm'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+})
+test('Should accept Water level in MASL', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Water level',
+    ResultValue: 1800,
+    ResultUnit: 'MASL'
+  })
+  t.is(valid, true)
+})*/
+
+// *** ResultUnit-None *** //
 test('Should accept when CharacteristicName is pH and ResultUnit is None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
@@ -298,7 +317,7 @@ test('Should reject when CharacteristicName is pH and ResultUnit is not None', a
   // t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
 })
 
-// ResultUnit-NoValue
+// *** ResultUnit-NoValue *** //
 test('Should accept when ResultValue & ResultUnit exist', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
@@ -317,7 +336,26 @@ test('Should reject when ResultUnit exists without ResultValue', async (t) => {
   t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
 })
 
-// ResultValue-DissolvedOxygenUnit
+// *** ResultValue-DepthMaximum *** //
+test('Should reject Depth at 1 m', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Depth',
+    ResultValue: 1,
+    ResultUnit: 'm'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
+})
+test('Should accept Depth at -1 ft', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Depth',
+    ResultValue: -1,
+    ResultUnit: 'ft'
+  })
+  t.is(valid, true)
+})
+
+// *** ResultValue-DissolvedOxygenUnit *** //
 test('Should reject Dissolved oxygen (DO) in %', async (t) => {
   const valid = validate({
     CharacteristicName: 'Dissolved oxygen (DO)',
@@ -336,24 +374,26 @@ test('Should accept Dissolved oxygen (DO) in mg/L', async (t) => {
   t.is(valid, true)
 })
 
-// ResultValue-DOSatMinimum - TODO
-/*test('Should reject Result when measure is below 0', async (t) => {
+// *** ResultValue-DOSatMinimum *** //
+test('Should reject Dissolved oxygen saturation when measure is below 0', async (t) => {
   const valid = validate({
+    CharacteristicName: 'Dissolved oxygen saturation',
     ResultValue: -1,
     ResultUnit: 'mg/l'
   })
   t.is(valid, false)
   t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
 })
-test('Should accept Result when measure is above 0', async (t) => {
+test('Should accept Dissolved oxygen saturation when measure is above 0', async (t) => {
   const valid = validate({
+    CharacteristicName: 'Dissolved oxygen saturation',
     ResultValue: 1,
     ResultUnit: 'mg/l'
   })
   t.is(valid, true)
-})*/
+})
 
-// ResultValue-Minimum
+// *** ResultValue-Minimum *** //
 test('Should reject Result when measure is below 0', async (t) => {
   const valid = validate({
     ResultValue: -1,
@@ -377,7 +417,7 @@ test('Should ignore Result when measure is not defined', async (t) => {
   t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
 })
 
-// ResultValue-pHRange
+// *** ResultValue-pHRange *** //
 test('Should reject pH below range', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
@@ -405,7 +445,7 @@ test('Should accept pH within range', async (t) => {
   t.is(valid, true)
 })
 
-// ResultValue-TemperatureRange
+// *** ResultValue-TemperatureRange *** //
 test('Should reject Temperature below range', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
@@ -433,7 +473,7 @@ test('Should accept Temperature within range', async (t) => {
   t.is(valid, true)
 })
 
-// WhiteSpace
+// *** WhiteSpace *** //
 test('Should reject columns with extra whitespace', async (t) => {
   const valid = validate({
     DatasetName: '  sum',

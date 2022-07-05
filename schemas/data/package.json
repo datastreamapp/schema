@@ -1,6 +1,6 @@
 {
   "name": "@datastreamapp/data-schema",
-  "version": "2.8.2",
+  "version": "2.9.0",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
@@ -18,7 +18,7 @@
   "scripts": {
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js",
     "build": "node ./bin/build.js && rollup --config bin/rollup.js --environment INCLUDE_DEPS,BUILD:production",
-    "test": "npm run build && ava",
+    "test": "npm run build && c8 ava",
     "prepublish": "npm test"
   },
   "author": "willfarrell",
