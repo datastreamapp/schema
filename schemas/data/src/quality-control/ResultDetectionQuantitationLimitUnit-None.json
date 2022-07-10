@@ -1,6 +1,7 @@
 {
-  "title": "Unit Should be `None`",
-  "description": "Characteristics that require None as unit.",
+  "$id": "https://datastream.org/data-schema/quality-control/ResultDetectionQuantitationLimitUnit-None.json",
+  "title": "ResultDetectionQuantitationLimitUnit-None",
+  "description": "Characteristics that require `None` as unit.",
   "errorMessage": "The unit for the CharacteristicName should be None",
   "if": {
     "properties": {

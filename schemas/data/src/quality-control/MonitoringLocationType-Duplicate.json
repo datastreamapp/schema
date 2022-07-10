@@ -1,4 +1,5 @@
 {
+  "$id": "https://datastream.org/data-schema/quality-control/MonitoringLocationType-Duplicate.json",
   "title": "MonitoringLocationType-Duplicate",
   "description": "Detects where there are two MonitoringLocationType associated with the same MonitoringLocationID",
   "errorMessage": "Multiple MonitoringLocationTypes are used with the same MonitoringLocationID",

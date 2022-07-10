@@ -1,6 +1,7 @@
 {
-  "title": "NoResultDetectionQuantitationLimitUnit",
-  "description": "When the ResultDetectionQuantitationLimitMeasure has not been populated, the associated unit should also be blank.",
+  "$id": "https://datastream.org/data-schema/quality-control/ResultDetectionQuantitationLimitUnit-NoValue.json",
+  "title": "ResultDetectionQuantitationLimitUnit-NoValue",
+  "description": "When the `ResultDetectionQuantitationLimitMeasure` has not been populated, the associated unit should also be blank.",
   "errorMessage": "ResultDetectionQuantitationLimitUnit is not needed when ResultDetectionQuantitationLimitMeasure is not populated",
   "oneOf": [
     {

@@ -1,8 +1,11 @@
 {
+  "$id": "https://datastream.org/data-schema/quality-control/MonitoringLocationType-ActivityDepthHeightMeasure-Minimum.json",
+  "title": "MonitoringLocationType-ActivityDepthHeightMeasure-Minimum",
+  "description": "Ensure depths are not too deep",
   "errorMessage": "Depth should not exceed the maximum depth associated with the selected MonitoringLocationType (i.e. River/stream, Lake/pond)",
   "allOf": [
     {
-      "description": "Saint Lawrence River",
+      "description": "Saint Lawrence River, Canada",
       "properties": {
         "MonitoringLocationType": {
           "enum": ["River/Stream"]
@@ -21,13 +24,32 @@
       ]
     },
     {
-      "description": "Great Slave Lake",
+      "description": "Great Slave Lake, Canada",
       "properties": {
         "MonitoringLocationType": {
           "enum": ["Lake/Pond", "Lake", "Great Lake"]
         },
         "ActivityDepthHeightMeasure": {
           "minimum": -615
+        },
+        "ActivityDepthHeightUnit": {
+          "enum": ["m"]
+        }
+      },
+      "require": [
+        "MonitoringLocationType",
+        "ActivityDepthHeightMeasure",
+        "ActivityDepthHeightUnit"
+      ]
+    },
+    {
+      "description": "Mariana Trench",
+      "properties": {
+        "MonitoringLocationType": {
+          "enum": ["Ocean"]
+        },
+        "ActivityDepthHeightMeasure": {
+          "minimum": -3688
         },
         "ActivityDepthHeightUnit": {
           "enum": ["m"]

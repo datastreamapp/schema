@@ -165,22 +165,22 @@
       "$ref": "./quality-control/ResultUnit-NoValue.json"
     },
     {
-      "$ref": "./quality-control/ResultValue-DepthMaximum.json"
+      "$ref": "./quality-control/ResultValue-Depth-Maximum.json"
     },
     {
-      "$ref": "./quality-control/ResultValue-DOSatMinimum.json"
+      "$ref": "./quality-control/ResultValue-DOSaturation-Minimum.json"
     },
     {
-      "$ref": "./quality-control/ResultValue-DissolvedOxygenUnit.json"
+      "$ref": "./quality-control/ResultValue-DissolvedOxygen-Unit.json"
     },
     {
       "$ref": "./quality-control/ResultValue-Minimum.json"
     },
     {
-      "$ref": "./quality-control/ResultValue-pHRange.json"
+      "$ref": "./quality-control/ResultValue-pH-Range.json"
     },
     {
-      "$ref": "./quality-control/ResultValue-TemperatureRange.json"
+      "$ref": "./quality-control/ResultValue-Temperature-Range.json"
     },
     {
       "$ref": "./quality-control/WhiteSpace.json"
