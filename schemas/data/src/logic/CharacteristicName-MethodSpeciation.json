@@ -54,6 +54,9 @@
     ]
   },
   "then": {
+    "properties": {
+      "MethodSpeciation": {}
+    },
     "required": [
       "MethodSpeciation"
     ]
