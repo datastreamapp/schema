@@ -35,6 +35,7 @@ const process = async (src, delKeys = ["__generated"], minify = false, ajv) => {
   delKeys.forEach((delKey) => {
     deleteKey(schema, delKey);
   });
+  deleteKey(schema.properties, '$id');
 
   const json = JSON.stringify(schema, null, minify ? 0 : 2);
 
