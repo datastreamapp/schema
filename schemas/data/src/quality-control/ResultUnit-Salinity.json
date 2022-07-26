@@ -16,7 +16,7 @@
   "then": {
     "properties": {
       "ResultUnit": {
-        "enum": ["ppth","ppm"]
+        "enum": ["ppth","ppm","PSU"]
       }
     },
     "required": ["ResultUnit"]
