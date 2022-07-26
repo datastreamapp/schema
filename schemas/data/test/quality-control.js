@@ -336,6 +336,25 @@ test('Should reject when ResultUnit exists without ResultValue', async (t) => {
   t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
 })
 
+// *** ResultUnit-Salinity *** //
+test('Should accept when Salinity and expected unit', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Salinity',
+    ResultValue: 0,
+    ResultUnit: 'PSU'
+  })
+  t.is(valid, true)
+})
+test('Should reject when Salinity and `ppt`', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Salinity',
+    ResultUnit: 'ppt'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), true)
+  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+})
+
 // *** ResultValue-DepthMaximum *** //
 test('Should reject Depth at 1 m', async (t) => {
   const valid = validate({

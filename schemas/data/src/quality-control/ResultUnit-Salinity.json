@@ -1,14 +1,13 @@
 {
   "$id": "https://datastream.org/data-schema/quality-control/ResultUnit-Elevation.json",
-  "title": "ResultUnit-Elevation",
-  "description": "Characteristics that require elevation as unit.",
-  "errorMessage": "The unit for the CharacteristicName should be an elevation. ** TODO: MASL not a unit, needs to be added to QC rule lists",
+  "title": "ResultUnit-Salinity",
+  "description": "ResultUnit that require special unit notation.",
+  "errorMessage": "The unit for the CharacteristicName ResultUnit should not be ppt.",
   "if": {
     "properties": {
       "CharacteristicName": {
         "enum": [
-          "Water level",
-          "Water level (probe)"
+          "Salinity"
         ]
       }
     },
@@ -17,7 +16,7 @@
   "then": {
     "properties": {
       "ResultUnit": {
-        "enum": ["MASL"]
+        "enum": ["ppth","ppm","PSU"]
       }
     },
     "required": ["ResultUnit"]
