@@ -1,0 +1,24 @@
+{
+  "$id": "https://datastream.org/data-schema/quality-control/ResultDetectionQuantitationLimitUnit-Salinity.json",
+  "title": "ResultDetectionQuantitationLimitUnit-Salinity",
+  "description": "ResultDetectionQuantitationLimitUnit that require special unit notation.",
+  "errorMessage": "ResultDetectionQuantitationLimitUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million) or PSU (practical salinity unit)",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Salinity"
+        ]
+      }
+    },
+    "required": ["CharacteristicName", "ResultDetectionQuantitationLimitUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultDetectionQuantitationLimitUnit": {
+        "enum": ["ppth","ppm","PSU"]
+      }
+    },
+    "required": ["ResultDetectionQuantitationLimitUnit"]
+  }
+}

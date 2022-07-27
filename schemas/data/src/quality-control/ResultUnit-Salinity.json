@@ -1,8 +1,8 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/ResultUnit-Elevation.json",
+  "$id": "https://datastream.org/data-schema/quality-control/ResultUnit-Salinity.json",
   "title": "ResultUnit-Salinity",
   "description": "ResultUnit that require special unit notation.",
-  "errorMessage": "The unit for the CharacteristicName ResultUnit should not be ppt.",
+  "errorMessage": "ResultUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million) or PSU (practical salinity unit)",
   "if": {
     "properties": {
       "CharacteristicName": {
