@@ -202,10 +202,10 @@
       "$ref": "./logic/CSVInjection.json"
     },
     {
-      "$ref": "./quality-control/ResultUnit-Salinity.json"
+      "$ref": "./logic/ResultUnit-Salinity.json"
     },
     {
-      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Salinity.json"
+      "$ref": "./logic/ResultDetectionQuantitationLimitUnit-Salinity.json"
     }
   ]
 }

@@ -599,3 +599,64 @@ test('Should accept columns without potential csv injection', async (t) => {
   t.is(checkProperty(validate.errors, 'pattern', 'LaboratoryName'), false)
   t.is(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'), false)
 })
+
+// *** ResultUnit-Salinity *** //
+test('Should accept when Salinity and expected unit', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Salinity',
+    ResultValue: 0,
+    ResultUnit: 'PSU'
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultUnit'
+    ),
+    false
+  )
+})
+test('Should reject when Salinity and `ppt`', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Salinity',
+    ResultUnit: 'ppt'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+})
+
+
+// *** ResultDetectionQuantitationLimitUnit-Salinity *** //
+test('Should accept when Salinity and expected ResultDetectionQuantitationLimitUnit', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Salinity',
+    ResultDetectionQuantitationLimitMeasure: 0,
+    ResultDetectionQuantitationLimitUnit: 'PSU'
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    false
+  )
+})
+test('Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Salinity',
+    ResultDetectionQuantitationLimitMeasure: 0,
+    ResultDetectionQuantitationLimitUnit: 'ppt'
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+})

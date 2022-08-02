@@ -159,12 +159,6 @@
       "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-NoValue.json"
     },
     {
-      "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-Salinity.json"
-    },
-    {
-      "$ref": "./quality-control/ResultUnit-Salinity.json"
-    },
-    {
       "$ref": "./quality-control/ResultUnit-None.json"
     },
     {

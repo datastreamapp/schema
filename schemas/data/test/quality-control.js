@@ -278,32 +278,6 @@ test('Should reject when ResultDetectionQuantitationLimitUnit exists without Res
   )
 })
 
-// *** ResultDetectionQuantitationLimitUnit-Salinity *** //
-test('Should accept when Salinity and expected ResultDetectionQuantitationLimitUnit', async (t) => {
-  const valid = validate({
-    CharacteristicName: 'Salinity',
-    ResultDetectionQuantitationLimitMeasure: 0,
-    ResultDetectionQuantitationLimitUnit: 'PSU'
-  })
-  t.is(valid, true)
-})
-test('Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`', async (t) => {
-  const valid = validate({
-    CharacteristicName: 'Salinity',
-    ResultDetectionQuantitationLimitMeasure: 0,
-    ResultDetectionQuantitationLimitUnit: 'ppt'
-  })
-  console.log(validate.errors)
-  t.is(valid, false)
-  t.is(
-    checkProperty(
-      validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitUnit'
-    ),
-    true
-  )
-})
 
 // *** ResultUnit-Elevation *** //
 /*test('Should reject Water level in m', async (t) => {
@@ -361,25 +335,6 @@ test('Should reject when ResultUnit exists without ResultValue', async (t) => {
   t.is(valid, false)
   t.is(checkProperty(validate.errors, 'required', 'ResultValue'), true)
   t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
-})
-
-// *** ResultUnit-Salinity *** //
-test('Should accept when Salinity and expected unit', async (t) => {
-  const valid = validate({
-    CharacteristicName: 'Salinity',
-    ResultValue: 0,
-    ResultUnit: 'PSU'
-  })
-  t.is(valid, true)
-})
-test('Should reject when Salinity and `ppt`', async (t) => {
-  const valid = validate({
-    CharacteristicName: 'Salinity',
-    ResultUnit: 'ppt'
-  })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), true)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
 })
 
 // *** ResultValue-DepthMaximum *** //
