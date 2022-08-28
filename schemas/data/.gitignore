@@ -3,6 +3,7 @@ bin/db
 bin/template
 
 primary
+extract
 frontend
 backend
 quality-control
