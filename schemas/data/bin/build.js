@@ -115,7 +115,12 @@ const ajvExtract = new Ajv({
 ajvFormats(ajvExtract, ['date'])
 // ajvFormatsDraft2019(ajvExtract, [])
 ajvErrors(ajvExtract)
-process('extract', ['__generated', 'title', 'description'], true, ajvExtract)
+process(
+  'extract',
+  ['__generated', 'title', 'description', 'version'],
+  true,
+  ajvExtract
+)
 
 // Frontend
 const ajvFrontend = new Ajv({
@@ -132,7 +137,12 @@ const ajvFrontend = new Ajv({
 ajvFormats(ajvFrontend, ['date'])
 // ajvFormatsDraft2019(ajvFrontend, [])
 ajvErrors(ajvFrontend)
-process('frontend', ['__generated', 'title', 'description'], true, ajvFrontend)
+process(
+  'frontend',
+  ['__generated', 'title', 'description', 'version'],
+  true,
+  ajvFrontend
+)
 
 // Backend
 const ajvBackend = new Ajv({
@@ -151,7 +161,7 @@ ajvFormats(ajvBackend, ['date'])
 // ajvFormatsDraft2019(ajvBackend, [])
 process(
   'backend',
-  ['__generated', 'errorMessage', 'title', 'description'],
+  ['__generated', 'errorMessage', 'title', 'description', 'version'],
   true,
   ajvBackend
 )
@@ -171,4 +181,4 @@ const ajvQualityControl = new Ajv({
 ajvFormats(ajvQualityControl, ['date'])
 // ajvFormatsDraft2019(ajvQualityControl, [])
 ajvErrors(ajvQualityControl)
-process('quality-control', ['__generated'], true, ajvQualityControl)
+process('quality-control', ['__generated', 'version'], true, ajvQualityControl)
