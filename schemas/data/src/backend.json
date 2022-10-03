@@ -1,6 +1,10 @@
 {
-  "$id": "https://datastream.org/schema",
+  "$id": "https://datastream.org/schema/data/backend",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$vocabulary": {
+    "https://ajv.js.org/packages/ajv-formats.html#date":true,
+    "https://ajv.js.org/packages/ajv-keywords.html#transform":true
+  },
   "title": "DataStream Schema",
   "description": "Water Quality Data Schema based on WQX. Version: {version}",
   "type": "object",

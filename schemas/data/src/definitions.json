@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/definitions.json",
+  "$id": "https://datastream.org/schema/data/definitions",
   "columns": {
     "DatasetName": {
       "type": "string",
