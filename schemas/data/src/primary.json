@@ -162,6 +162,9 @@
       "$ref": "./logic/CharacteristicName-MethodSpeciation.json"
     },
     {
+      "$ref": "./logic/CharacteristicName-Isotope-MethodSpeciation.json"
+    },
+    {
       "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
     },
     {
