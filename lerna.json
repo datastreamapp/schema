@@ -1,4 +1,6 @@
 {
-  "packages": ["schemas/*"],
-  "version": "2.6.10"
+  "packages": [
+    "schemas/*"
+  ],
+  "version": "2.11.0"
 }

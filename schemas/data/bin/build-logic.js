@@ -6,7 +6,6 @@ import { subset, sort } from './build-lib.js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const wqxRequiredIf = async (file) => {
-  console.log(file)
   const [columnFrom, columnTo] = file.split('-')
 
   const logicJSON = await readFile(
@@ -26,8 +25,28 @@ const wqxRequiredIf = async (file) => {
   }
 
   // TODO - remove once included in WQX look up
-  object.if.properties[columnFrom].enum.push('Nitrogen-15/Nitrogen-14 ratio')
-  object.if.properties[columnFrom].enum.push('Sulfur Delta 34')
+  if (file === 'CharacteristicName-MethodSpeciation') {
+    const stableIsotopes = await readFile(
+      join(
+        __dirname,
+        `/../src/logic/CharacteristicName-StableIsotope-MethodSpeciation.json`
+      )
+    )
+      .then((res) => JSON.parse(res))
+      .catch(() => ({}))
+
+    for (const characteristicName of stableIsotopes.if.properties
+      .CharacteristicName.enum) {
+      if (!object.if.properties[columnFrom].enum.includes(characteristicName)) {
+        console.log(
+          'CharacteristicName-MethodSpeciation missing (StableIsotope rule)',
+          characteristicName
+        )
+        object.if.properties[columnFrom].enum.push(characteristicName)
+      }
+    }
+  }
+  // END TODO
 
   const list = [...new Set(sort(object.if.properties[columnFrom].enum))]
 

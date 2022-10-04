@@ -97,10 +97,7 @@ test('Should rejects CharacteristicName AND NOT ResultSampleFraction', async (t)
     CharacteristicName: 'Silver'
   })
   t.false(valid)
-  t.is(
-    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
-    true
-  )
+  t.is(checkProperty(validate.errors, 'required', 'ResultSampleFraction'), true)
 })
 test('Should accept CharacteristicName AND ResultSampleFraction', async (t) => {
   const valid = validate({
@@ -113,6 +110,34 @@ test('Should accept CharacteristicName AND ResultSampleFraction', async (t) => {
     checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
     false
   )
+})
+
+// CharacteristicName-StableIsotope-ResultSampleFraction
+test('Should reject StableIsotope CharacteristicName, MethodSpeciation required', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Nitrogen Delta 15'
+  })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), true)
+})
+test('Should reject StableIsotope CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Nitrogen Delta 15',
+    MethodSpeciation: 'as NH4'
+  })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(checkProperty(validate.errors, 'enum', 'MethodSpeciation'), true)
+})
+test('Should accept StableIsotope CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Nitrogen Delta 15',
+    MethodSpeciation: 'of NH4'
+  })
+  t.false(valid)
+  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), false)
 })
 
 // CharacteristicName-Nutrient-ResultSampleFraction
@@ -579,10 +604,7 @@ test('Should accept columns without potential csv injection', async (t) => {
   t.false(valid)
   // console.log(valid, JSON.stringify(validate.errors, null, 2))
   t.is(checkProperty(validate.errors, 'pattern', 'DatasetName'), false)
-  t.is(
-    checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'),
-    false
-  )
+  t.is(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'), false)
   t.is(
     checkProperty(validate.errors, 'pattern', 'MonitoringLocationName'),
     false
@@ -608,14 +630,7 @@ test('Should accept when Salinity and expected unit', async (t) => {
     ResultUnit: 'PSU'
   })
   t.is(valid, false)
-  t.is(
-    checkProperty(
-      validate.errors,
-      'enum',
-      'ResultUnit'
-    ),
-    false
-  )
+  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), false)
 })
 test('Should reject when Salinity and `ppt`', async (t) => {
   const valid = validate({
@@ -625,7 +640,6 @@ test('Should reject when Salinity and `ppt`', async (t) => {
   t.is(valid, false)
   t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
 })
-
 
 // *** ResultDetectionQuantitationLimitUnit-Salinity *** //
 test('Should accept when Salinity and expected ResultDetectionQuantitationLimitUnit', async (t) => {
