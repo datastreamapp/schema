@@ -1,0 +1,50 @@
+{
+  "$id": "https://datastream.org/data-schema/logic/CharacteristicName-StableIsotope-MethodSpeciation.json",
+  "title": "CharacteristicName-StableIsotope-MethodSpeciation",
+  "description": "As per isotope guideance table 3",
+  "errorMessage": "MethodSpeciation required for selected CharacteristicName",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Nitrogen-15",
+          "Nitrogen-15/Nitrogen-14 ratio",
+          "Nitrogen Delta 15",
+          "Oxygen",
+          "Oxygen-18/Oxygen-16 ratio",
+          "Oxygen Delta 18",
+          "Deuterium",
+          "Deuterium/Hydrogen ratio",
+          "Deuterium, delta",
+          "Sulfur-34",
+          "Sulfur-34/Sulfur-32 ratio",
+          "Sulfur Delta 34",
+          "Carbon-13",
+          "Carbon-13/Carbon-12 ratio",
+          "Carbon Delta 13"
+        ]
+      }
+    },
+    "required": ["CharacteristicName"]
+  },
+  "then": {
+    "properties": {
+      "MethodSpeciation": {
+        "enum": [
+          "of CH4",
+          "of CO2",
+          "of H2O",
+          "of Inorganic C",
+          "of NH4",
+          "of NO3",
+          "of Organic C",
+          "of Organic N",
+          "of PO4",
+          "of SO4",
+          "of Unspecified"
+        ]
+      }
+    },
+    "required": ["MethodSpeciation"]
+  }
+}

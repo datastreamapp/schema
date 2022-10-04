@@ -2,9 +2,9 @@
   "$id": "https://datastream.org/schema/data/frontend",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$vocabulary": {
-    "https://ajv.js.org/packages/ajv-formats.html#date":true,
-    "https://ajv.js.org/packages/ajv-keywords.html#transform":true,
-    "https://ajv.js.org/packages/ajv-errors.html":true
+    "https://ajv.js.org/packages/ajv-formats.html#date": true,
+    "https://ajv.js.org/packages/ajv-keywords.html#transform": true,
+    "https://ajv.js.org/packages/ajv-errors.html": true
   },
   "title": "DataStream Schema",
   "description": "Water Quality Data Schema based on WQX. Version: {version}",
@@ -186,7 +186,7 @@
       "$ref": "./logic/CharacteristicName-MethodSpeciation.json"
     },
     {
-      "$ref": "./logic/CharacteristicName-Isotope-MethodSpeciation.json"
+      "$ref": "./logic/CharacteristicName-StableIsotope-MethodSpeciation.json"
     },
     {
       "$ref": "./logic/CharacteristicName-ResultSampleFraction.json"
