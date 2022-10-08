@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/values/MethodSpeciation.json",
+  "$id": "https://datastream.org/schema/data/values/MethodSpeciation.json",
   "title": "Method Speciation",
   "description": "",
   "type": "string",
@@ -100,6 +100,7 @@
     "of Organic C",
     "of Organic N",
     "of PO4",
+    "of S",
     "of SO4",
     "of Unspecified",
     "unknown",

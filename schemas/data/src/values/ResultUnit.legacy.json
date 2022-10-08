@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/values/ResultUnit.json",
+  "$id": "https://datastream.org/schema/data/values/ResultUnit.json",
   "title": "Measurement Unit",
   "description": "",
   "type": "string",
@@ -345,6 +345,7 @@
     "per m",
     "per mil",
     "per mil AIR",
+    "per mil VCDT",
     "per mil VPDB",
     "per mil VSMOW",
     "per nm",

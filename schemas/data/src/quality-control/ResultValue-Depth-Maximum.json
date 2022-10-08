@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/ResultValue-Depth-Maximum.json",
+  "$id": "https://datastream.org/schema/data/quality-control/ResultValue-Depth-Maximum.json",
   "title": "ResultValue-Depth-Maximum",
   "description": "Depths must be measured relative to the surface",
   "errorMessage": "Depth is outside an expected range (<0).",

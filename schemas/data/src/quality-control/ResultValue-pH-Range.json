@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/ResultValue-pH-Range.json",
+  "$id": "https://datastream.org/schema/data/quality-control/ResultValue-pH-Range.json",
   "title": "ResultValue-pH-Range",
   "description": "pH values cannot be less than zero or greater than 14.",
   "errorMessage": "pH ResultValue is outside the accepted allowed range (0 to 14)",

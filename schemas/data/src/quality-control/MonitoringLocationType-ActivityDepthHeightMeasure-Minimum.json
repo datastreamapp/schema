@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/MonitoringLocationType-ActivityDepthHeightMeasure-Minimum.json",
+  "$id": "https://datastream.org/schema/data/quality-control/MonitoringLocationType-ActivityDepthHeightMeasure-Minimum.json",
   "title": "MonitoringLocationType-ActivityDepthHeightMeasure-Minimum",
   "description": "Ensure depths are not too deep",
   "errorMessage": "Depth should not exceed the maximum depth associated with the selected MonitoringLocationType (i.e. River/stream, Lake/pond)",

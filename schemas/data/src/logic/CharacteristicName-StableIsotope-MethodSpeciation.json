@@ -1,8 +1,8 @@
 {
-  "$id": "https://datastream.org/data-schema/logic/CharacteristicName-StableIsotope-MethodSpeciation.json",
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-StableIsotope-MethodSpeciation.json",
   "title": "CharacteristicName-StableIsotope-MethodSpeciation",
   "description": "As per isotope guideance table 3",
-  "errorMessage": "MethodSpeciation required for selected CharacteristicName",
+  "errorMessage": "Isotope MethodSpeciation required for selected CharacteristicName",
   "if": {
     "properties": {
       "CharacteristicName": {
@@ -10,7 +10,7 @@
           "Nitrogen-15",
           "Nitrogen-15/Nitrogen-14 ratio",
           "Nitrogen Delta 15",
-          "Oxygen",
+          "Oxygen-18",
           "Oxygen-18/Oxygen-16 ratio",
           "Oxygen Delta 18",
           "Deuterium",
@@ -40,6 +40,7 @@
           "of Organic C",
           "of Organic N",
           "of PO4",
+          "of S",
           "of SO4",
           "of Unspecified"
         ]

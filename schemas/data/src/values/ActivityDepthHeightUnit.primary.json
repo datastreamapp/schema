@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/values/ActivityDepthHeightUnit.json",
+  "$id": "https://datastream.org/schema/data/values/ActivityDepthHeightUnit.json",
   "title": "Measurement Unit",
   "description": "",
   "type": "string",

@@ -1,6 +1,6 @@
 {
   "name": "@datastream/schema-monorepo",
-  "version": "2.11.0",
+  "version": "2.11.1",
   "description": "DataStream Water Quality Exchange (WQX): JSON Schema and JSON Table Schema for DataStream",
   "private": true,
   "type": "module",
@@ -44,6 +44,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
+    "ajv-transpiler": "file:../../willfarrell/ajv-transpiler",
+    "ajv-ftl-i18n": "file:../../willfarrell/ajv-ftl-i18n",
     "ava": "^4.0.0",
     "c8": "^7.6.0",
     "lerna": "^4.0.0",

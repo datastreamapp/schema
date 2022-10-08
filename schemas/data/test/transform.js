@@ -21,7 +21,7 @@ test('Should transform values (frontend)', async (t) => {
     MethodSpeciation: 'as B',
     ResultSampleFraction: 'dissolved',
     ResultValue: '99.99',
-    ResultUnit: '#/100Ml',
+    ResultUnit: '#/100Ml ',
     ResultValueType: 'actual',
     ResultStatusID: 'accepted',
     ResultComment: 'None at this time  ',

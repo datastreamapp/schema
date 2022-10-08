@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/ResultUnit-NoValue.json",
+  "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-NoValue.json",
   "title": "ResultUnit-NoValue",
   "description": "If the ResultValue is blank for a data point (e.g. when the result is above or below a detection limit or otherwise not quantified), the ResultUnit should also be blank for that data point.",
   "errorMessage": "ResultUnit is not needed when ResultValue is not populated",

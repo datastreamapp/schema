@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/ResultUnit-None.json",
+  "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-None.json",
   "title": "ResultUnit-None",
   "description": "Characteristics that require None as unit.",
   "errorMessage": "The unit for the CharacteristicName should be None",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/logic/CharacteristicName-Nutrient-ResultSampleFraction.json",
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-Nutrient-ResultSampleFraction.json",
   "title": "CharacteristicName-Nutrient-ResultSampleFraction",
   "description": "",
   "errorMessage": "ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see resources page or contact us)",

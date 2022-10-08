@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/values/ResultSampleFraction.json",
+  "$id": "https://datastream.org/schema/data/values/ResultSampleFraction.json",
   "title": "Sample Fraction",
   "description": "",
   "type": "string",

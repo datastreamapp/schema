@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/ResultDetectionQuantitationLimitMinimumMeasure-Minimum.json",
+  "$id": "https://datastream.org/schema/data/quality-control/ResultDetectionQuantitationLimitMinimumMeasure-Minimum.json",
   "title": "ResultDetectionQuantitationLimitMinimumMeasure-Minimum",
   "description": "Some water quality measurements, for example concentrations, should not have a value lower than zero. Please review these data points and correct as necessary.",
   "errorMessage": "ResultDetectionQuantitationLimitMeasure should not be below zero for the selected ResultDetectionQuantitationLimitUnit",

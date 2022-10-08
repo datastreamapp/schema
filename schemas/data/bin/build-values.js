@@ -20,7 +20,7 @@ for (const col of Object.keys(wqx)) {
   console.log(col);
   let object = await import(`wqx/values/${wqx[col]}.json.js`);
   object = { ...object.default };
-  object.$id = `https://datastream.org/data-schema/values/${col}.json`;
+  object.$id = `https://datastream.org/schema/data/values/${col}.json`;
 
   // Add alias
   // if (col === 'CharacteristicName') {

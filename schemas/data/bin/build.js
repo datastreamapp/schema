@@ -42,7 +42,7 @@ const process = async (src, delKeys = ['__generated'], minify = false, ajv) => {
   const json = JSON.stringify(schema, null, minify ? 0 : 2)
 
   await writeFile(join(__dirname, `/../${src}/index.json`), json, {
-    encoding: 'utf8',
+    encoding: 'utf8'
   })
   await writeFile(
     join(__dirname, `/../${src}/index.json.js`),
@@ -55,7 +55,7 @@ const process = async (src, delKeys = ['__generated'], minify = false, ajv) => {
   ajv.removeSchema()
 
   await writeFile(join(__dirname, `/../${src}/index.js`), code, {
-    encoding: 'utf8',
+    encoding: 'utf8'
   })
 }
 
@@ -89,11 +89,12 @@ const ajvPrimary = new Ajv({
   coerceTypes: false, // Keep it strict
   allErrors: true,
   useDefaults: 'empty',
+  //loopEnum: 1500,
   keywords: [],
   code: {
-    source: true,
+    source: true
     //esm: true
-  },
+  }
 })
 ajvFormats(ajvPrimary, ['date'])
 // ajvFormatsDraft2019(ajvPrimary, [])
@@ -106,11 +107,12 @@ const ajvExtract = new Ajv({
   coerceTypes: true,
   allErrors: true,
   useDefaults: 'empty',
+  //loopEnum: 1500,
   keywords: [],
   code: {
-    source: true,
+    source: true
     //esm: true
-  },
+  }
 })
 ajvFormats(ajvExtract, ['date'])
 // ajvFormatsDraft2019(ajvExtract, [])
@@ -128,11 +130,12 @@ const ajvFrontend = new Ajv({
   coerceTypes: true,
   allErrors: true,
   useDefaults: 'empty',
+  //loopEnum: 1500,
   keywords: [transformKeyword()],
   code: {
-    source: true,
+    source: true
     //esm: true
-  },
+  }
 })
 ajvFormats(ajvFrontend, ['date'])
 // ajvFormatsDraft2019(ajvFrontend, [])
@@ -153,9 +156,9 @@ const ajvBackend = new Ajv({
   loopEnum: 1500,
   keywords: [transformKeyword()],
   code: {
-    source: true,
+    source: true
     //esm: true
-  },
+  }
 })
 ajvFormats(ajvBackend, ['date'])
 // ajvFormatsDraft2019(ajvBackend, [])
@@ -174,9 +177,9 @@ const ajvQualityControl = new Ajv({
   useDefaults: 'empty',
   keywords: [transformKeyword()],
   code: {
-    source: true,
+    source: true
     //esm: true
-  },
+  }
 })
 ajvFormats(ajvQualityControl, ['date'])
 // ajvFormatsDraft2019(ajvQualityControl, [])

@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/logic/ResultDetectionCondition-ResultValue.json",
+  "$id": "https://datastream.org/schema/data/logic/ResultDetectionCondition-ResultValue.json",
   "title": "ResultDetectionCondition-ResultValue",
   "description": "You may only have ResultValue OR ResultDetectionCondition populated for a single observation.",
   "errorMessage": "Only one of ResultValue or ResultDetectionCondition should be populated",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/quality-control/ResultUnit-Salinity.json",
+  "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-Salinity.json",
   "title": "ResultUnit-Salinity",
   "description": "ResultUnit that require special unit notation.",
   "errorMessage": "ResultUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million) or PSU (practical salinity unit)",

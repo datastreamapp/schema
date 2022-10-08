@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/logic/CharacteristicName-MethodSpeciation.json",
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-MethodSpeciation.json",
   "__generated": "build-logic.js",
   "title": "CharacteristicName-MethodSpeciation",
   "description": "Certain characteristics, particularly nutrient parameters, require a method speciation (e.g., 'as N', or 'as NO3' for nitrate). This information is related to how the parameter was analyzed. For more guidance regarding how to map nutrient parameters please visit DataStream's [Best Practices Guide for Nutrient Data](https://datastream.cdn.prismic.io/datastream%2F9d12bb3f-e456-4de0-9613-f8f7e50f221a_datastream+nutrient+data+best+practices+guide_march2019.pdf) located on the Resources page.",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/data-schema/values/ActivityType.json",
+  "$id": "https://datastream.org/schema/data/values/ActivityType.json",
   "title": "Activity Type",
   "description": "",
   "type": "string",
