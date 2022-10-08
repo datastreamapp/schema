@@ -80,25 +80,3 @@ test('Should transform values (backend)', async (t) => {
   console.log(valid, JSON.stringify(validateBackend.errors, null, 2))
   t.is(valid, true)
 })
-
-// Print out coverage report
-// const collector = new istanbul.Collector();
-// const reporter = new istanbul.Reporter();
-// const sync = true;
-//
-// collector.add(global.__coverage__);
-//
-// reporter.add('text');
-// reporter.addAll([ 'lcov', 'html' ]);
-//
-// const oldLog = console.log;
-// let logged;
-// console.log = (str) => {
-//     logged = str;
-// };
-//
-// reporter.write(collector, sync, function () {
-//     console.log = oldLog;
-//     console.log('Coverage Report');
-//     console.log(logged);
-// });

@@ -1,0 +1,64 @@
+#!/usr/bin/env sh
+
+maxEnumLength=1200
+
+validate () {
+	echo validate
+}
+
+deref () {
+	src=$1
+	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?, '$2')'
+	opts=${*:3}
+	echo $opts
+	
+	cp src/${src}.json ${src}/index.json
+	id=$(jq -r '.["$id"]' ${src}/index.json)
+	echo $id
+	
+	cd src
+	# TODO update to handle passed in refs
+	../../../../../willfarrell/ajv-transpiler/cli.js deref ../${src}/index.json ${opts} -o ../${src}/index.json
+	cd ..
+	
+	jq "${cmd}" ${src}/index.json > ${src}/index.tmp.json
+	mv ${src}/index.tmp.json ${src}/index.json
+	jq --arg id ${id} '{"$id":$id} + .' ${src}/index.json > ${src}/index.tmp.json
+	mv ${src}/index.tmp.json ${src}/index.json
+}
+
+transpile () {
+	src=$1
+	cmd='del(.. | .["$vocabulary"]?, .["$comment"]?, .title?, .description?, .__generated?'$2')'
+	opts=${*:3}
+	
+	jq "${cmd}" ${src}/index.json > ${src}/index.js
+	# -r node_modules/wqx/json-schema/definitions.json
+	../../../../willfarrell/ajv-transpiler/cli.js transpile ${src}/index.js ${opts} \
+		-r src/definitions.json  \
+		-o ${src}/index.js
+}
+
+# primary - strict
+deref primary '.errorMessage?'
+## Add version
+version=$(jq -r '.version' package.json)
+jq --arg version ${version} '{"$comment":$version} + .' primary/index.json > primary/index.tmp.json
+mv primary/index.tmp.json primary/index.json
+
+# extract - strict, w/ coerce
+deref extract '.title?, .description?'
+transpile extract '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults --all-errors
+
+# frontend
+deref frontend '.title?, .description?'
+transpile frontend '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults --all-errors
+
+# backend
+deref backend '.title?, .description?, .errorMessage?'
+transpile backend ', .errorMessage?' --loop-enum ${maxEnumLength} --coerce-types --use-defaults --all-errors
+
+# quality-control
+deref quality-control '.__?'
+transpile quality-control '' --loop-enum ${maxEnumLength} --all-errors
+

@@ -1,6 +1,6 @@
 {
   "$id": "https://datastream.org/schema/data/logic/CharacteristicName-ResultSampleFraction.json",
-  "__generated": "build-logic.js",
+  "$comment": "TODO: re-automate",
   "title": "CharacteristicName-ResultSampleFraction",
   "description": "Certain characteristics require a sample fraction, for example metals (e.g. 'Dissolved' or 'Total') and nutrient parameters (e.g. 'Filtered' or 'Unfiltered'). This information is related to the level of filtration of the sample prior to analysis. For more guidance regarding how to map nutrient parameters please visit DataStream's [Best Practices Guide for Nutrient Data](https://datastream.cdn.prismic.io/datastream%2F9d12bb3f-e456-4de0-9613-f8f7e50f221a_datastream+nutrient+data+best+practices+guide_march2019.pdf) located on the Resources page.",
   "errorMessage": "ResultSampleFraction required for selected CharacteristicName",

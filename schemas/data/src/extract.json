@@ -1,8 +1,13 @@
 {
   "$id": "https://datastream.org/schema",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$vocabulary": {
+    "https://ajv.js.org/packages/ajv-formats.html#date": true,
+    "https://ajv.js.org/options.html#coercetypes": true,
+    "https://ajv.js.org/packages/ajv-errors.html": true
+  },
   "title": "DataStream Schema",
-  "description": "Water Quality Data Schema based on WQX. Version: {version}",
+  "description": "Water Quality Data Schema based on WQX",
   "type": "object",
   "allOf": [
     {
@@ -51,13 +56,13 @@
           "$ref": "./definitions.json#/columns/ActivityStartDate"
         },
         "ActivityStartTime": {
-          "$ref": "./definitions.json#/definitions/time-loose"
+          "$ref": "./definitions.json#/definitions/time-strict"
         },
         "ActivityEndDate": {
           "$ref": "./definitions.json#/columns/ActivityEndDate"
         },
         "ActivityEndTime": {
-          "$ref": "./definitions.json#/definitions/time-loose"
+          "$ref": "./definitions.json#/definitions/time-strict"
         },
         "ActivityDepthHeightMeasure": {
           "$ref": "./definitions.json#/columns/ActivityDepthHeightMeasure"
@@ -117,10 +122,10 @@
           "$ref": "./definitions.json#/columns/AnalysisStartDate"
         },
         "AnalysisStartTime": {
-          "$ref": "./definitions.json#/definitions/time-loose"
+          "$ref": "./definitions.json#/definitions/time-strict"
         },
         "AnalysisStartTimeZone": {
-          "$ref": "./definitions.json#/definitions/timezone-loose"
+          "$ref": "./definitions.json#/definitions/timezone-strict"
         },
         "LaboratoryName": {
           "$ref": "./definitions.json#/columns/LaboratoryName"

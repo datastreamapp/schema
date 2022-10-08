@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js",
-    "build": "node ./bin/build.js && rollup --config bin/rollup.js --environment INCLUDE_DEPS,BUILD:production",
+    "build": "./bin/build",
     "test": "npm run build && c8 ava",
     "prepublish": "npm test"
   },
@@ -28,22 +28,11 @@
     "url": "https://github.com/datastreamapp/schema/issues"
   },
   "homepage": "https://github.com/datastreamapp/schema#readme",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^13.0.0",
-    "@rollup/plugin-replace": "^4.0.0",
-    "ajv": "^8.6.2",
-    "ajv-cli": "github:willfarrell/ajv-cli#feature/code-esm",
-    "ajv-errors": "^3.0.0",
-    "ajv-formats": "^2.1.0",
-    "ajv-formats-draft2019": "^1.4.3",
-    "ajv-keywords": "^5.0.0",
-    "change-case": "^4.1.2",
-    "glob": "^8.0.0",
-    "json-schema-ref-parser": "^9.0.9",
-    "rollup": "^2.78.1",
-    "rollup-plugin-esbuild": "^4.10.1",
+  "dependencies": {
     "wqx": "^3.0.74"
+  },
+  "devDependencies": {
+    "change-case": "^4.1.2"
   },
   "repository": {
     "type": "git",

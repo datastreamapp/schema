@@ -1,7 +1,7 @@
 import test from 'ava'
 
 import validate from '../frontend/index.js'
-import validateStrict from '../primary/index.js'
+import validateStrict from '../extract/index.js'
 import validateBackend from '../backend/index.js'
 
 const checkProperty = (errors, keyword, property) => {
@@ -87,19 +87,34 @@ test('Should accept timezone formats (strict)', async (t) => {
     AnalysisStartTimeZone: 'Z'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 0)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    0
+  )
 
   valid = validateStrict({
     AnalysisStartTimeZone: '+02:15'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 0)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    0
+  )
 
   valid = validateStrict({
     AnalysisStartTimeZone: '-02:15'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 0)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    0
+  )
 })
 
 test('Should reject timezone formats (strict)', async (t) => {
@@ -107,38 +122,68 @@ test('Should reject timezone formats (strict)', async (t) => {
     AnalysisStartTimeZone: 'z'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    1
+  )
   valid = validateStrict({
     AnalysisStartTimeZone: '9:45'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    1
+  )
   valid = validateStrict({
     AnalysisStartTimeZone: '-00:00:00'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    2
+  )
 
   valid = validateStrict({
     AnalysisStartTimeZone: '-0215'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    1
+  )
 
   valid = validateStrict({
     AnalysisStartTimeZone: '-215'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    1
+  )
 
   valid = validateStrict({
     AnalysisStartTimeZone: '-2:15'
   })
   t.false(valid)
-  t.is(validateStrict.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateStrict.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    1
+  )
 })
 
-test('Should reject timezone formats (loose)', async (t) => {
+test('Should accept timezone formats (loose)', async (t) => {
   let valid = validateBackend({
     AnalysisStartTimeZone: 'Z'
   })
@@ -176,20 +221,35 @@ test('Should reject timezone formats (loose)', async (t) => {
   t.is(validateBackend.errors, null)
 })
 
-test('Should accept timezone formats (loose)', async (t) => {
+test('Should reject timezone formats (loose)', async (t) => {
   let valid = validateBackend({
     AnalysisStartTimeZone: 'z'
   })
   t.false(valid)
-  t.is(validateBackend.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateBackend.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    1
+  )
   valid = validateBackend({
     AnalysisStartTimeZone: '9:45'
   })
   t.false(valid)
-  t.is(validateBackend.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateBackend.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    1
+  )
   valid = validateBackend({
     AnalysisStartTimeZone: '-00:00:00'
   })
   t.false(valid)
-  t.is(validateBackend.errors.filter((i) => i.keyword === 'pattern').length, 1)
+  t.is(
+    validateBackend.errors.filter(
+      (i) => i.instancePath === '/AnalysisStartTimeZone'
+    ).length,
+    2
+  )
 })

@@ -3,11 +3,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$vocabulary": {
     "https://ajv.js.org/packages/ajv-formats.html#date": true,
+    "https://ajv.js.org/options.html#coercetypes": true,
     "https://ajv.js.org/packages/ajv-keywords.html#transform": true,
     "https://ajv.js.org/packages/ajv-errors.html": true
   },
   "title": "DataStream Schema",
-  "description": "Water Quality Data Schema based on WQX. Version: {version}",
+  "description": "Water Quality Data Schema based on WQX",
   "type": "object",
   "allOf": [
     {

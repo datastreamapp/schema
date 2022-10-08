@@ -1,8 +1,8 @@
-import { dirname, join } from "path";
-import { fileURLToPath } from "url";
-import { readFile, writeFile } from "fs/promises";
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { readFile, writeFile } from 'node:fs/promises'
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // Build groups
 let characteristicNameGroups = await readFile(
@@ -12,40 +12,51 @@ let characteristicNameGroupsLocal = await readFile(
   join(__dirname, `../lookup/CharacteristicName-CharacteristicNameGroup.json`)
 ).then((res) => JSON.parse(res))
 
-for(const key in characteristicNameGroupsLocal) {
+for (const key in characteristicNameGroupsLocal) {
   if (characteristicNameGroups[key]) {
-    console.log(`CharacteristicNameGroup "${key}":"${characteristicNameGroups[key]}" replace with "${characteristicNameGroupsLocal[key]}"`)
+    console.log(
+      `CharacteristicNameGroup "${key}":"${characteristicNameGroups[key]}" replace with "${characteristicNameGroupsLocal[key]}"`
+    )
   }
   characteristicNameGroups[key] = characteristicNameGroupsLocal[key]
 }
 
-await writeFile(join(__dirname, `/../lookup/CharacteristicName-CharacteristicNameGroup.json`), JSON.stringify(characteristicNameGroups), {
-  encoding: "utf8",
-});
+await writeFile(
+  join(__dirname, `/../lookup/CharacteristicName-CharacteristicNameGroup.json`),
+  JSON.stringify(characteristicNameGroups),
+  {
+    encoding: 'utf8'
+  }
+)
 
 // Testing
 let characteristicNames = await readFile(
   join(__dirname, `../src/values/CharacteristicName.primary.json`)
 ).then((res) => JSON.parse(res))
-characteristicNames = characteristicNames.enum;
+characteristicNames = characteristicNames.enum
 
 for (const characteristicName of characteristicNames) {
   //console.log(characteristicName, characteristicNameGroups[characteristicName])
   if (
     !characteristicNameGroups[characteristicName] ||
-    characteristicNameGroups[characteristicName] === "Not Assigned"
+    characteristicNameGroups[characteristicName] === 'Not Assigned'
   ) {
-    console.log("CharacteristicNameGroups Not Assigned", characteristicName);
+    console.log('CharacteristicNameGroups Not Assigned', characteristicName)
   }
 }
 
+// Export - Deprecate when using nodejs18
 for (const path of [
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicNameGroup.json`),
   join(__dirname, `/../lookup/CharacteristicName-MeasureUnit.json`),
-  join(__dirname, `/../lookup/CharacteristicNameGroup-MeasureUnit.json`),
+  join(__dirname, `/../lookup/CharacteristicNameGroup-MeasureUnit.json`)
 ]) {
   const json = await readFile(path).then((res) => JSON.parse(res))
-  await writeFile(path+'.js', `export default ${JSON.stringify(json, null, 2)}`, {
-    encoding: "utf8",
-  });
+  await writeFile(
+    path + '.js',
+    `export default ${JSON.stringify(json, null, 2)}`,
+    {
+      encoding: 'utf8'
+    }
+  )
 }
