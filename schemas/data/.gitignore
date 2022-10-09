@@ -10,3 +10,5 @@ quality-control
 !src/quality-control
 lookup
 !src/lookup
+locales
+!src/locales

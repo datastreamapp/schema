@@ -20,6 +20,7 @@
   "then": {
     "properties": {
       "ResultValue": {
+        "type": "number",
         "maximum": 0
       }
     },

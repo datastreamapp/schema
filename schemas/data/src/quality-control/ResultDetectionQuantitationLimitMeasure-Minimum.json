@@ -55,11 +55,15 @@
         ]
       }
     },
-    "required": ["ResultDetectionQuantitationLimitMeasure","ResultDetectionQuantitationLimitUnit"]
+    "required": [
+      "ResultDetectionQuantitationLimitMeasure",
+      "ResultDetectionQuantitationLimitUnit"
+    ]
   },
   "then": {
     "properties": {
       "ResultDetectionQuantitationLimitMeasure": {
+        "type": "number",
         "minimum": 0
       }
     },

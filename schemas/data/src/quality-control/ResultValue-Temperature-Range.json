@@ -29,6 +29,7 @@
   "then": {
     "properties": {
       "ResultValue": {
+        "type": "number",
         "minimum": -100,
         "maximum": 100
       }

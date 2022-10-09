@@ -2,29 +2,30 @@
 
 maxEnumLength=1200
 
-validate () {
-	echo validate
-}
-
 deref () {
 	src=$1
 	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?, '$2')'
 	opts=${*:3}
-	echo $opts
 	
 	cp src/${src}.json ${src}/index.json
 	id=$(jq -r '.["$id"]' ${src}/index.json)
-	echo $id
 	
 	cd src
-	# TODO update to handle passed in refs
-	../../../../../willfarrell/ajv-transpiler/cli.js deref ../${src}/index.json ${opts} -o ../${src}/index.json
+	ajv deref ../${src}/index.json ${opts} -o ../${src}/index.json
 	cd ..
 	
 	jq "${cmd}" ${src}/index.json > ${src}/index.tmp.json
 	mv ${src}/index.tmp.json ${src}/index.json
 	jq --arg id ${id} '{"$id":$id} + .' ${src}/index.json > ${src}/index.tmp.json
 	mv ${src}/index.tmp.json ${src}/index.json
+}
+
+validate () {
+	src=$1
+	opts=${*:2}
+	
+	ajv validate ${src}/index.json --valid ${opts} \
+		-r src/definitions.json
 }
 
 transpile () {
@@ -34,9 +35,19 @@ transpile () {
 	
 	jq "${cmd}" ${src}/index.json > ${src}/index.js
 	# -r node_modules/wqx/json-schema/definitions.json
-	../../../../willfarrell/ajv-transpiler/cli.js transpile ${src}/index.js ${opts} \
+	ajv transpile ${src}/index.js ${opts} \
 		-r src/definitions.json  \
 		-o ${src}/index.js
+}
+
+locale () {
+  LOCALE=${1}
+  LANGUAGE=${LOCALE%-CA}
+  
+  ajv ftl src/locales/${1}.ftl \
+	--locale ${LOCALE} --locale ${LANGUAGE} \
+	-o locales/${LOCALE}.js
+	
 }
 
 # primary - strict
@@ -45,20 +56,29 @@ deref primary '.errorMessage?'
 version=$(jq -r '.version' package.json)
 jq --arg version ${version} '{"$comment":$version} + .' primary/index.json > primary/index.tmp.json
 mv primary/index.tmp.json primary/index.json
+validate primary
 
 # extract - strict, w/ coerce
 deref extract '.title?, .description?'
-transpile extract '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults --all-errors
+validate extract
+transpile extract '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 
 # frontend
 deref frontend '.title?, .description?'
-transpile frontend '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults --all-errors
+validate frontend
+transpile frontend '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 
 # backend
 deref backend '.title?, .description?, .errorMessage?'
-transpile backend ', .errorMessage?' --loop-enum ${maxEnumLength} --coerce-types --use-defaults --all-errors
+validate backend
+transpile backend ', .errorMessage?' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 
 # quality-control
 deref quality-control '.__?'
-transpile quality-control '' --loop-enum ${maxEnumLength} --all-errors
+validate quality-control
+transpile quality-control '' --loop-enum ${maxEnumLength}  --use-defaults empty --all-errors
+
+# locales
+locale en-CA
+locale fr-CA
 

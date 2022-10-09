@@ -55,11 +55,12 @@
         ]
       }
     },
-    "required": ["ResultValue","ResultUnit"]
+    "required": ["ResultValue", "ResultUnit"]
   },
   "then": {
     "properties": {
       "ResultValue": {
+        "type": "number",
         "minimum": 0
       }
     },
