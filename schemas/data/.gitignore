@@ -8,7 +8,8 @@ frontend
 backend
 quality-control
 !src/quality-control
-lookup
+lookup/CharacteristicName-CharacteristicNameGroup.json
+lookup/*.js
 !src/lookup
 locales
 !src/locales
