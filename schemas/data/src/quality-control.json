@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$vocabulary": {
-    "https://ajv.js.org/packages/ajv-errors.html":true
+    "https://ajv.js.org/packages/ajv-errors.html": true
   },
   "title": "DataStream Quality Control",
   "description": "Quality Control Checks for a single observation",
@@ -151,6 +151,9 @@
     },
     {
       "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
+    },
+    {
+      "$ref": "./quality-control/MonitoringLocationCoordinate-BoundingBox.json"
     },
     {
       "$ref": "./quality-control/ResultDetectionQuantitationLimitMeasure-Minimum.json"

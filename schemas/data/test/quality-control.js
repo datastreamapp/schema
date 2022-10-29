@@ -160,10 +160,7 @@ test('Should reject MethodSpeciation when its not expected', async (t) => {
     MethodSpeciation: 'as N'
   })
   t.is(valid, false)
-  t.is(
-    checkProperty(validate.errors, 'false schema', 'MethodSpeciation'),
-    true
-  )
+  t.is(checkProperty(validate.errors, 'false schema', 'MethodSpeciation'), true)
 })
 test('Should accept MethodSpeciation when its expected', async (t) => {
   const valid = validate({
@@ -179,6 +176,39 @@ test('Should accept MethodSpeciation when its not expected', async (t) => {
 })
 
 // MonitoringLocationDepthHeightMeasure - TODO future?
+
+// *** MonitoringLocationCoordinate-BoundingBox *** //
+test('Should accept MonitoringLocationLatitude/Longitude when its within bounds', async (t) => {
+  const valid = validate({
+    MonitoringLocationLatitude: 51,
+    MonitoringLocationLongitude: -114
+  })
+  t.is(valid, true)
+})
+
+test('Should reject MonitoringLocationLatitude when its out of bounds', async (t) => {
+  const valid = validate({
+    MonitoringLocationLatitude: 35,
+    MonitoringLocationLongitude: -114
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(validate.errors, 'minimum', 'MonitoringLocationLatitude'),
+    true
+  )
+})
+
+test('Should reject MonitoringLocationLongitude when its out of bounds', async (t) => {
+  const valid = validate({
+    MonitoringLocationLatitude: 51,
+    MonitoringLocationLongitude: -45
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(validate.errors, 'minimum', 'MonitoringLocationLongitude'),
+    true
+  )
+})
 
 // *** ResultDetectionQuantitationLimitMeasure-Minimum *** //
 test('Should reject ResultDetectionQuantitationLimit when measure is below 0', async (t) => {
@@ -277,7 +307,6 @@ test('Should reject when ResultDetectionQuantitationLimitUnit exists without Res
     true
   )
 })
-
 
 // *** ResultUnit-Elevation *** //
 /*test('Should reject Water level in m', async (t) => {

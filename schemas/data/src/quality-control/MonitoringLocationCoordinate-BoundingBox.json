@@ -1,0 +1,40 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/MonitoringLocationCoordinate-BoundingBox.json",
+  "title": "MonitoringLocationCoordinate-BoundingBox",
+  "description": "",
+  "errorMessage": "Monitoring Location Latitude/Longitude is outside DataStream boundary",
+  "if": {
+    "properties": {
+      "MonitoringLocationLatitude": {
+        "type": "number"
+      },
+      "MonitoringLocationLongitude": {
+        "type": "number"
+      }
+    },
+    "required": ["MonitoringLocationLatitude", "MonitoringLocationLongitude"]
+  },
+  "then": {
+    "properties": {
+      "MonitoringLocationLatitude": {
+        "type": "number",
+        "minimum": 37,
+        "maximum": 85
+      },
+      "MonitoringLocationLongitude": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": -180,
+            "maximum": -47
+          },
+          {
+            "type": "number",
+            "minimum": 165,
+            "maximum": 180
+          }
+        ]
+      }
+    }
+  }
+}
