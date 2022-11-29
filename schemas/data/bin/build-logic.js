@@ -26,6 +26,23 @@ const wqxRequiredIf = async (file) => {
 
   // TODO - remove once included in WQX look up
   if (file === 'CharacteristicName-MethodSpeciation') {
+    // remove MethodSpeciation for CharacteristicName https://github.com/gordonfn/datastream-dms/issues/2381
+    const exclude = [
+      'Radium-226',
+      'Radium-228',
+      'Radon-222',
+      'Uranium-234/Uranium-238 ratio',
+      'Uranium-238'
+    ]
+
+    for (const characteristicName of exclude) {
+      const index =
+        object.if.properties[columnFrom].enum.indexOf(characteristicName)
+      if (index !== -1) {
+        object.if.properties[columnFrom].enum.splice(index, 1)
+      }
+    }
+
     const stableIsotopes = await readFile(
       join(
         __dirname,

@@ -6,9 +6,7 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": [
-          "Salinity"
-        ]
+        "enum": ["Salinity"]
       }
     },
     "required": ["CharacteristicName", "ResultDetectionQuantitationLimitUnit"]
@@ -16,7 +14,7 @@
   "then": {
     "properties": {
       "ResultDetectionQuantitationLimitUnit": {
-        "enum": ["ppth","ppm","PSU"]
+        "enum": ["ppth", "ppm", "PSU", "None"]
       }
     },
     "required": ["ResultDetectionQuantitationLimitUnit"]

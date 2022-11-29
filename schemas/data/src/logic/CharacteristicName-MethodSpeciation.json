@@ -31,9 +31,6 @@
           "Oxygen-18/Oxygen-16 ratio",
           "Phosphorus, hydrolyzable",
           "Radium",
-          "Radium-226",
-          "Radium-228",
-          "Radon-222",
           "Soluble Reactive Phosphorus (SRP)",
           "Strontium-87/Strontium-86, ratio",
           "Sulfur Delta 34",
@@ -41,9 +38,7 @@
           "Sulfur-34/Sulfur-32 ratio",
           "Total Nitrogen, mixed forms",
           "Total Phosphorus, mixed forms",
-          "Tritium",
-          "Uranium-234/Uranium-238 ratio",
-          "Uranium-238"
+          "Tritium"
         ]
       }
     },
