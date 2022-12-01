@@ -28,9 +28,11 @@ const wqxRequiredIf = async (file) => {
   if (file === 'CharacteristicName-MethodSpeciation') {
     // remove MethodSpeciation for CharacteristicName https://github.com/gordonfn/datastream-dms/issues/2381
     const exclude = [
+      'Radium',
       'Radium-226',
       'Radium-228',
       'Radon-222',
+      'Strontium-87/Strontium-86, ratio',
       'Uranium-234/Uranium-238 ratio',
       'Uranium-238'
     ]
