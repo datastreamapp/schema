@@ -20,7 +20,7 @@
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js",
     "build": "./bin/build",
     "test": "npm run build && c8 ava",
-    "prepublish": "npm test"
+    "prepublishOnly": "npm test"
   },
   "author": "willfarrell",
   "license": "MIT",
