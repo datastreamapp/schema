@@ -1,15 +1,15 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/gordonfn/schema/main/docs/images/datastream.svg?sanitize=true" alt="DataStream Logo" width="400">
+  <img src="https://raw.githubusercontent.com/datastreamapp/schema/main/docs/images/datastream.svg?sanitize=true" alt="DataStream Logo" width="400">
   <br/>
   DataStream Open Data Schema for Water Quality Data
   <br/>
   <br/>
 </h1>
 
-<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1OwGkUTyVC3tZ9N_we8uX1kpsPejZnSsgcaTjrlGBxoc" target="_blank">Google SpreadSheet</a>, <a href="https://gordonfoundation.sharepoint.com/:x:/g/EZb37KU78zdNjyVkGoaGJIgBtr8pKrS1S_py6X30A7mgZg" target="_blank">Excel</a> template formats.</p>
+<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1OwGkUTyVC3tZ9N_we8uX1kpsPejZnSsgcaTjrlGBxoc" target="_blank">Google SpreadSheet</a>, <a href="https://datastreamorg.sharepoint.com/:x:/s/Datastream/EaqcNGHom7BFlRi6bRY4VDoBy6ECq6v3bbUyeb0B3S3HGg?e=75aBTl" target="_blank">Excel</a> template formats.</p>
 
 <p align="center">
-  <!--<a href="https://github.com/gordonfn/schema"><img src="https://img.shields.io/github/stars/gordonfn/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
+  <!--<a href="https://github.com/datastreamapp/schema"><img src="https://img.shields.io/github/stars/datastreamapp/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/v/schema.svg" alt="npm version"></a>-->
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/dm/schema.svg" alt="npm downloads"></a>-->
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/l/schema.svg" alt="npm license" /></a>-->
@@ -20,7 +20,7 @@
 DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality and sediment quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. Water monitoring groups across Canada — including communities, researchers, Indigenous nations and governments at all levels — are using DataStream to publish their data.
 
 <!--<div align="center">
-  <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/schema/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
+  <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/datastreamapp/schema/master/docs/images/the-gordon-foundation.svg" alt="The Gordon Foundation Logo" width="200"></a>
 </div>-->
 
 DataStream was developed by [The Gordon Foundation](https://gordonfoundation.ca) and is carried out in collaboration with regional partners and monitoring networks. Data contributors maintain ownership of their data which are published under open data licenses.
@@ -35,10 +35,10 @@ In 2018, The Gordon Foundation led a comprehensive review process to determine h
 DataStream’s open data schema (DS-WQX v1.0) was fully implemented across all regional DataStream platforms in 2019. 
 
 ## Changelog
-The DataStream open data schema will continue to evolve to meet user needs and therefore is subject to various updates over time (e.g. addition of new allowed values). To view the most recent version number and record of changes please see the [DataStream Upload Template](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?usp=sharing).
+The DataStream open data schema will continue to evolve to meet user needs and therefore is subject to various updates over time (e.g. addition of new allowed values). To view the most recent version number and record of changes please see the [DataStream Upload Template](https://datastreamorg.sharepoint.com/:x:/s/Datastream/EaqcNGHom7BFlRi6bRY4VDoBy6ECq6v3bbUyeb0B3S3HGg?e=75aBTl).
 
 ## Dataset Metadata
-In addition to the observation-level information in DS-WQX, DataStream uses dataset level metadata. [DataStream Metadata](https://github.com/gordonfn/schema/tree/main/schemas/meta)
+In addition to the observation-level information in DS-WQX, DataStream uses dataset level metadata. [DataStream Metadata](https://github.com/datastreamapp/schema/tree/main/schemas/meta)
 
 ## Special Case Tests
 In addition to our schema enforcing allowed values the column conditional logic; we have included additional check for common errors to the frontend flavour of our schema.
@@ -64,7 +64,7 @@ $ npm run build
 $ cat primary.json
 
 # Private
-$ npm i @gordonfn/schema
+$ npm i @datastreamapp/schema
 ```
 
 ## Use
@@ -73,7 +73,7 @@ The `csv` template follows `R` import/export best practices.
 
 ### JavaScript
 ```javascript
-import validate from '@gordonfn/schema'
+import validate from '@datastreamapp/schema'
 const data = {}; // Single row of data
 const valid = validate(data);
 if (!valid) console.error(validate.errors)
@@ -98,17 +98,18 @@ npm publish
 
 ### Commenting on the Schema
 
-If you wish to comment on the schema please [open an issue](https://github.com/gordonfn/schema/issues).
+If you wish to comment on the schema please [open an issue](https://github.com/datastreamapp/schema/issues).
 
 * For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
 
-You can also email us at <datastream@gordonfn.org> or visit us at:
+You can also email us at <team@datastream.org> or visit us at:
 
 * [DataStream](https://datastream.org)
-* [Atlantic DataStream](https://atlanticdatastream.ca)
-* [Great Lakes DataStream](https://greatlakesdatastream.ca) (Coming Fall 2021)
-* [Lake Winnipeg DataStream](https://lakewinnipegdatastream.ca)
 * [Mackenzie DataStream](https://mackenziedatastream.ca)
+* [Atlantic DataStream](https://atlanticdatastream.ca)
+* [Lake Winnipeg DataStream](https://lakewinnipegdatastream.ca)
+* [Great Lakes DataStream](https://greatlakesdatastream.ca)
+* [Pacific DataStream](https://pacificdatastream.ca)
 
 ### Development
 ```bash
@@ -126,11 +127,11 @@ npm publish
 ```
 
 ## References
-- [WQX](https://github.com/gordonfn/wqx)
+- [WQX](https://github.com/datastreamapp/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 
 <div align="center">
-  <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/gordonfn/schema/main/docs/images/the-gordon-foundation.svg?sanitize=true" alt="The Gordon Foundation Logo" width="200"></a>
+  <a href="http://gordonfoundation.ca"><img src="https://raw.githubusercontent.com/datastreamapp/schema/main/docs/images/the-gordon-foundation.svg?sanitize=true" alt="The Gordon Foundation Logo" width="200"></a>
 </div>
 
 ## Citation
