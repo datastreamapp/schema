@@ -146,7 +146,7 @@
   "Chlorinated paraffins, long-chain, C18-C20": "µg/L",
   "Chlorinated paraffins, medium-chain, C14-C17": "µg/L",
   "Chlorinated paraffins, short-chain, C10-C13": "µg/L",
-  "Chlorine": "µg/L",
+  "Chlorine": "µg/g",
   "Chlorobenzene": "ng/L",
   "Chlorodibromomethane": "ng/L",
   "Chloroethane": "ng/L",
