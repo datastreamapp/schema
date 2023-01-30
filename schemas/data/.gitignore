@@ -5,6 +5,7 @@ bin/template
 primary
 extract
 frontend
+lookup
 backend
 quality-control
 !src/quality-control

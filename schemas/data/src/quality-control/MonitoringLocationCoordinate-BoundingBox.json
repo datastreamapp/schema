@@ -5,6 +5,10 @@
   "errorMessage": "Monitoring Location Latitude/Longitude is outside DataStream boundary",
   "if": {
     "properties": {
+      "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+        "type": "string",
+        "enum": ["NAD27", "NAD83", "WGS72", "WGS84"]
+      },
       "MonitoringLocationLatitude": {
         "type": "number"
       },

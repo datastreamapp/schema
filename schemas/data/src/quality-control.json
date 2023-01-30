@@ -171,9 +171,6 @@
       "$ref": "./quality-control/ResultUnit-NoValue.json"
     },
     {
-      "$ref": "./quality-control/ResultValue-Depth-Maximum.json"
-    },
-    {
       "$ref": "./quality-control/ResultValue-DOSaturation-Minimum.json"
     },
     {
