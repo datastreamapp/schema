@@ -89,6 +89,7 @@ qc-ResultDetectionQuantitationLimitMinimumMeasure-Minimum = ResultDetectionQuant
 qc-ResultDetectionQuantitationLimitUnit-None = The unit for the CharacteristicName should be None
 qc-ResultDetectionQuantitationLimitUnit-NoValue = ResultDetectionQuantitationLimitUnit is not needed when ResultDetectionQuantitationLimitMeasure is not populated
 qc-ResultUnit-Elevation = The unit for the CharacteristicName should be an elevation. ** TODO: MASL not a unit, needs to be added to QC rule lists
+qc-ResultUnit-Percent = The unit for the CharacteristicName is typically expressed as a %
 qc-ResultUnit-None = The unit for the CharacteristicName should be None
 qc-ResultUnit-NoValue = ResultUnit is not needed when ResultValue is not populated
 qc-ResultValue-Depth-Maximum = Depth is outside an expected range (<0).

@@ -27,6 +27,11 @@ const wqxRequiredIf = async (file) => {
   // TODO - remove once included in WQX look up
   if (file === 'CharacteristicName-MethodSpeciation') {
     // remove MethodSpeciation for CharacteristicName https://github.com/gordonfn/datastream-dms/issues/2381
+    const include = [
+      'Inorganic nitrogen (ammonia, nitrate and nitrite)',
+      'Inorganic nitrogen (nitrate and nitrite)'
+    ]
+
     const exclude = [
       'Radium',
       'Radium-226',
@@ -44,6 +49,9 @@ const wqxRequiredIf = async (file) => {
         object.if.properties[columnFrom].enum.splice(index, 1)
       }
     }
+    object.if.properties[columnFrom].enum = [
+      ...new Set([...object.if.properties[columnFrom].enum, ...include])
+    ]
 
     const stableIsotopes = await readFile(
       join(

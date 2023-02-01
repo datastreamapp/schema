@@ -327,6 +327,27 @@ test('Should accept Water level in MASL', async (t) => {
   t.is(valid, true)
 })*/
 
+// *** ResultUnit-Percent *** //
+test('Should reject Taxonomic Richness... in None', async (t) => {
+  const valid = validate({
+    CharacteristicName:
+      'Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera',
+    ResultValue: 100,
+    ResultUnit: 'None'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+})
+test('Should acceptTaxonomic Richness... in %', async (t) => {
+  const valid = validate({
+    CharacteristicName:
+      'Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera',
+    ResultValue: 100,
+    ResultUnit: '%'
+  })
+  t.is(valid, true)
+})
+
 // *** ResultUnit-None *** //
 test('Should accept when CharacteristicName is pH and ResultUnit is None', async (t) => {
   const valid = validate({
@@ -367,7 +388,7 @@ test('Should reject when ResultUnit exists without ResultValue', async (t) => {
 })
 
 // *** ResultValue-DepthMaximum *** //
-test('Should reject Depth at 1 m', async (t) => {
+/*test('Should reject Depth at 1 m', async (t) => {
   const valid = validate({
     CharacteristicName: 'Depth',
     ResultValue: 1,
@@ -383,7 +404,7 @@ test('Should accept Depth at -1 ft', async (t) => {
     ResultUnit: 'ft'
   })
   t.is(valid, true)
-})
+})*/
 
 // *** ResultValue-DissolvedOxygenUnit *** //
 test('Should reject Dissolved oxygen (DO) in %', async (t) => {

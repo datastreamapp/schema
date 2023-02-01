@@ -1,0 +1,22 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-Percent.json",
+  "title": "ResultUnit-Percent",
+  "description": "Characteristics that require percent as unit.",
+  "errorMessage": "The unit for the CharacteristicName is typically expressed as a %",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": ["Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera"]
+      }
+    },
+    "required": ["CharacteristicName", "ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "ResultUnit": {
+        "enum": ["%"]
+      }
+    },
+    "required": ["ResultUnit"]
+  }
+}

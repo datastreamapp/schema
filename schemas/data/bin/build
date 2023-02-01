@@ -2,29 +2,43 @@
 
 maxEnumLength=1200
 
+pre () {
+	src=$1
+	cp src/${src}.json src/${src}.build.json
+}
+
 deref () {
 	src=$1
-	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?, '$2')'
-	opts=${*:3}
-	
-	cp src/${src}.json ${src}/index.json
-	id=$(jq -r '.["$id"]' ${src}/index.json)
+	opts=${*:2}
 	
 	cd src
-	ajv deref ../${src}/index.json ${opts} -o ../${src}/index.json
+	ajv deref ${src}.build.json ${opts} -o ${src}.build.json
 	cd ..
+}
+
+clean () {
+	src=$1
+	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?, '$2')'
 	
-	jq "${cmd}" ${src}/index.json > ${src}/index.tmp.json
-	mv ${src}/index.tmp.json ${src}/index.json
-	jq --arg id ${id} '{"$id":$id} + .' ${src}/index.json > ${src}/index.tmp.json
-	mv ${src}/index.tmp.json ${src}/index.json
+	id=$(jq -r '.["$id"]' src/${src}.build.json)
+	jq "${cmd}" src/${src}.build.json > src/${src}.build.tmp.json
+	mv src/${src}.build.tmp.json src/${src}.build.json
+	jq --arg id ${id} '{"$id":$id} + .' src/${src}.build.json > src/${src}.build.tmp.json
+	mv src/${src}.build.tmp.json src/${src}.build.json
+}
+
+version () {
+	src=$1
+	version=$(jq -r '.version' package.json)
+	jq --arg version ${version} '{"$comment":$version} + .' src/${src}.build.json > src/${src}.build.tmp.json
+	mv src/${src}.build.tmp.json src/${src}.build.json
 }
 
 validate () {
 	src=$1
 	opts=${*:2}
 	
-	ajv validate ${src}/index.json --valid ${opts} \
+	ajv validate src/${src}.build.json --valid ${opts} \
 		-r src/definitions.json
 }
 
@@ -33,11 +47,16 @@ transpile () {
 	cmd='del(.. | .["$vocabulary"]?, .["$comment"]?, .title?, .description?, .__generated?'$2')'
 	opts=${*:3}
 	
-	jq "${cmd}" ${src}/index.json > ${src}/index.js
-	# -r node_modules/wqx/json-schema/definitions.json
+	jq "${cmd}" src/${src}.build.json > ${src}/index.js
 	ajv transpile ${src}/index.js ${opts} \
+	    -r node_modules/wqx/json-schema/definitions.json \
 		-r src/definitions.json  \
 		-o ${src}/index.js
+}
+
+post () {
+	src=$1
+	mv src/${src}.build.json ${src}/index.json
 }
 
 locale () {
@@ -51,32 +70,44 @@ locale () {
 }
 
 # primary - strict
-deref primary '.errorMessage?'
-## Add version
-version=$(jq -r '.version' package.json)
-jq --arg version ${version} '{"$comment":$version} + .' primary/index.json > primary/index.tmp.json
-mv primary/index.tmp.json primary/index.json
+pre primary
+deref primary
+clean primary '.errorMessage?'
+version primary
 validate primary
+post primary
 
 # extract - strict, w/ coerce
-deref extract '.title?, .description?'
+pre extract
+deref extract
+clean extract '.title?, .description?'
 validate extract
 transpile extract '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
+post extract
 
 # frontend
-deref frontend '.title?, .description?'
+pre frontend
+deref frontend
+clean frontend '.title?, .description?'
 validate frontend
 transpile frontend '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
+post frontend
 
 # backend
-deref backend '.title?, .description?, .errorMessage?'
+pre backend
+deref backend
+clean backend '.title?, .description?, .errorMessage?'
 validate backend
 transpile backend ', .errorMessage?' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
+post backend
 
 # quality-control
-deref quality-control '.__?'
+pre quality-control
+deref quality-control
+clean quality-control '.__?'
 validate quality-control
 transpile quality-control '' --loop-enum ${maxEnumLength}  --use-defaults empty --all-errors
+post quality-control
 
 # locales
 locale en-CA

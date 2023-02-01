@@ -1,6 +1,6 @@
 {
   "name": "@datastreamapp/data-schema",
-  "version": "2.12.0",
+  "version": "2.13.0",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
@@ -14,7 +14,8 @@
     "frontend",
     "backend",
     "quality-control",
-    "lookup"
+    "lookup",
+    "locales"
   ],
   "scripts": {
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js",
