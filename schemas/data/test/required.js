@@ -67,10 +67,7 @@ test('Should require properties', async (t) => {
 
   // #/allOf/0
   t.is(checkProperty(validate.errors, 'required', 'DatasetName'), true)
-  t.is(
-    checkProperty(validate.errors, 'required', 'MonitoringLocationID'),
-    true
-  )
+  t.is(checkProperty(validate.errors, 'required', 'MonitoringLocationID'), true)
   t.is(
     checkProperty(validate.errors, 'required', 'MonitoringLocationName'),
     true
@@ -143,6 +140,7 @@ test('Should reject additional headers', async (t) => {
   const valid = validate({
     MonitoringLocationWaterBody: 'Lake'
   })
+  console.log(validate.errors)
   t.is(valid, false)
   t.is(
     checkProperty(
