@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/ResultValue-Temperature-Range.json",
   "title": "ResultValue-Temperature-Range",
   "description": "Ambient temperatures have an expected range of -100 to 100 deg C.",
-  "errorMessage": "Temperature is outside an expected range (-100 to 100).",
+  "errorMessage": "qc-ResultValue-Temperature-Range",
   "if": {
     "properties": {
       "CharacteristicName": {

@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below.json",
   "title": "ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below",
   "description": "When the ResultDetectionCondition is set to 'Below Detection/Quantification Limit' or 'Above Detection/Quantification Limit' for a data point  'ResultDetectionQuantitationLimitMeasure' and  'ResultDetectionQuantitationLimitUnit' should be populated.",
-  "errorMessage": "ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits",
+  "errorMessage": "error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below",
   "if": {
     "properties": {
       "ResultDetectionCondition": {

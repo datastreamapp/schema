@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/ResultValue-DissolvedOxygen-Unit.json",
   "title": "ResultValue-DissolvedOxygen-Unit",
   "description": "Dissolved oxygen measured as a saturation percentage should be mapped to the characteristic name 'Dissolved oxygen saturation'.",
-  "errorMessage": "The unit for Dissolved oxygen (DO) should not be %",
+  "errorMessage": "qc-ResultValue-DissolvedOxygen-Unit",
   "if": {
     "properties": {
       "CharacteristicName": {

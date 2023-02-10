@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/logic/ActivityType-ResultAnalyticalMethod.json",
   "title": "ActivityType-ResultAnalyticalMethod",
   "description": "If a data point is from a grab sample analyzed in the lab (i.e., ActivityType is 'Sample-Routine') you must provide information on how the sample was analyzed. If you populate the ResultAnalyticalMethodID (e.g. '4500-P'), the ResultAnalyticalMethodContext must also be populated (e.g.  'APHA').  If you do not know the ResultAnalyticalMethodID and ResultAnalyticalMethodContext, you must at least fill in ResultAnalyticalMethodName (e.g. 'Ion Chromatography'). If the analytical methods are unknown, you can also enter 'Undefined' in ResultAnalyticalMethodName. LaboratoryName is also mandatory for all lab-analyzed samples. Once these corrections are made, this error message should be resolved.",
-  "errorMessage": "Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample'",
+  "errorMessage": "error-ActivityType-ResultAnalyticalMethod",
   "if": {
     "properties": {
       "ActivityType": {

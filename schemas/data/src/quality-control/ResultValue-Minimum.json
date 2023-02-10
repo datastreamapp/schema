@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/ResultValue-Minimum.json",
   "title": "ResultValue-Minimum",
   "description": "Some water quality measurements, for example concentrations, should not have a value lower than zero. Please review these data points and correct as necessary.",
-  "errorMessage": "ResultValue should not be below zero for the selected ResultUnit",
+  "errorMessage": "qc-ResultValue-Minimum",
   "if": {
     "properties": {
       "ResultValue": {

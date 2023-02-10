@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/WhiteSpace.json",
   "title": "WhiteSpace",
   "description": "Leading or trailing white space (i.e., spaces inserted before or after your character string) can cause issues with data management.",
-  "errorMessage": "Leading or trailing white space detected in character string",
+  "errorMessage": "qc-WhiteSpace",
   "properties": {
     "DatasetName": {
       "$ref": "../definitions.json#/definitions/trim"

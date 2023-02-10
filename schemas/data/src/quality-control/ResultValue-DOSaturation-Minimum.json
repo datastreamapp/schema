@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/ResultValue-DOSaturation-Minimum.json",
   "title": "ResultValue-DOSaturation-Minimum",
   "description": "For this characteristic, it is expected that the measured value should be greater than or equal to zero.",
-  "errorMessage": "The selected CharacteristicName should not have a measure below zero",
+  "errorMessage": "qc-ResultValue-DOSaturation-Minimum",
   "if": {
     "properties": {
       "CharacteristicName": {

@@ -1,6 +1,0 @@
-{
-  "title": "MonitoringLocationName-Duplicate",
-  "description": "Detects where there are two MonitoringLocationName associated with the same MonitoringLocationID",
-  "errorMessage": "Multiple MonitoringLocationNames are used with the same MonitoringLocationID",
-  "$comment": "See data-quality-control.js for implementation"
-}

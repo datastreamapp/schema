@@ -2,14 +2,11 @@
   "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-Elevation.json",
   "title": "ResultUnit-Elevation",
   "description": "Characteristics that require elevation as unit.",
-  "errorMessage": "The unit for the CharacteristicName should be an elevation. ** TODO: MASL not a unit, needs to be added to QC rule lists",
+  "errorMessage": "qc-ResultUnit-Elevation",
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": [
-          "Water level",
-          "Water level (probe)"
-        ]
+        "enum": ["Water level", "Water level (probe)"]
       }
     },
     "required": ["CharacteristicName", "ResultUnit"]

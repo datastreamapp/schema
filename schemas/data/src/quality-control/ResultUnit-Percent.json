@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-Percent.json",
   "title": "ResultUnit-Percent",
   "description": "Characteristics that require percent as unit.",
-  "errorMessage": "The unit for the CharacteristicName is typically expressed as a %",
+  "errorMessage": "qc-ResultUnit-Percent",
   "if": {
     "properties": {
       "CharacteristicName": {

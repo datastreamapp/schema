@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/MonitoringLocationCoordinate-BoundingBox.json",
   "title": "MonitoringLocationCoordinate-BoundingBox",
   "description": "",
-  "errorMessage": "Monitoring Location Latitude/Longitude is outside DataStream boundary",
+  "errorMessage": "qc-MonitoringLocationCoordinate-BoundingBox, MonitoringLocationHorizontalCoordinateReferenceSystem:${/MonitoringLocationHorizontalCoordinateReferenceSystem}",
   "if": {
     "properties": {
       "MonitoringLocationHorizontalCoordinateReferenceSystem": {

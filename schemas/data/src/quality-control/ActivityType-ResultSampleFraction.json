@@ -2,7 +2,8 @@
   "$id": "https://datastream.org/schema/data/quality-control/ActivityType-ResultSampleFraction.json",
   "title": "ActivityType-ResultSampleFraction",
   "description": "Field measurements and observations are not typically associated with a sample fraction as they are measured in place and don't undergo filtration steps.",
-  "errorMessage": "ResultSampleFraction may not be relevant for selected ActivityType",
+  "$comment": "ResultSampleFraction may not be relevant for selected ActivityType",
+  "errorMessage": "qc-ActivityType-ResultSampleFraction, ActivityType:${/ActivityType}, ResultSampleFraction:${/ResultSampleFraction}",
   "if": {
     "properties": {
       "ActivityType": {
