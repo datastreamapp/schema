@@ -1,0 +1,3 @@
+files:
+  - source: /**/en-CA.ftl
+    translation: '%original_path%/%two_letters_code%-CA.%file_extension%'
