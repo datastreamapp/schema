@@ -140,7 +140,6 @@ test('Should reject additional headers', async (t) => {
   const valid = validate({
     MonitoringLocationWaterBody: 'Lake'
   })
-  console.log(validate.errors)
   t.is(valid, false)
   t.is(
     checkProperty(

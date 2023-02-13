@@ -139,14 +139,14 @@
   "definitions": {
     "date": {
       "errorMessage": {
-        "format": "Must match format YYYY-MM-DD (i.e. 1999-12-31)"
+        "format": "error-date-format"
       },
       "type": "string",
       "format": "date"
     },
     "time-loose": {
       "errorMessage": {
-        "pattern": "Must match format HH:MM:SS (i.e. 23:59:59)"
+        "pattern": "error-time-loose-pattern"
       },
       "type": "string",
       "pattern": "^(2[0-3]|[01]?[0-9]):[0-5]?[0-9](:[0-5]?[0-9](\\.[0-9]{1,3})?)?$",
@@ -154,7 +154,7 @@
     },
     "time-strict": {
       "errorMessage": {
-        "pattern": "Times earlier than 12:00:00 should include a leading zero"
+        "pattern": "error-time-strict-pattern"
       },
       "type": "string",
       "pattern": "^(2[0-3]|[01][0-9]):[0-5][0-9](:[0-5][0-9](\\.[0-9]{1,3})?)?$",
@@ -162,7 +162,7 @@
     },
     "timezone-loose": {
       "errorMessage": {
-        "pattern": "must match format '-06:00'"
+        "pattern": "error-timezone-loose-pattern"
       },
       "type": "string",
       "pattern": "^(Z|[+-]([0-9]|0[0-9]|1[0-9]|2[0-4]):?[0-5][0-9])$",
@@ -170,7 +170,7 @@
     },
     "timezone-strict": {
       "errorMessage": {
-        "pattern": "Must match format -HH:MM (i.e. -06:00)"
+        "pattern": "error-timezone-strict-pattern"
       },
       "type": "string",
       "pattern": "^(Z|[+-](0[0-9]|1[0-9]|2[0-4]):[0-5][0-9])$",
@@ -183,6 +183,11 @@
     "trim": {
       "type": "string",
       "pattern": "(^[^\\s]+|[^\\s]+$)"
+    },
+    "invisible-char": {
+      "description": "Collection of invisible chars that shouldn't be used (exclude space, newline, carrage return). https://invisible-characters.com",
+      "type": "string",
+      "pattern": "[\\u0009\\u00A0\\u00AD\\u034F\\u061C\\u115F\\u160F\\u17B4\\u17B5\\u180E\\u2000-\\u200F\\u2028\\u202F\\u205F-\\u2064\\u206A-\\u206F\\u2800\\u3000\\u3164\\uFEFF\\uFFA0\\u1D159\\u1D173\\u1D17A]"
     }
   }
 }
