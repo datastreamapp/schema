@@ -26,21 +26,25 @@ DataStream ([DataStream.org](https://datastream.org)) is an online open-access p
 DataStream was developed by [The Gordon Foundation](https://gordonfoundation.ca) and is carried out in collaboration with regional partners and monitoring networks. Data contributors maintain ownership of their data which are published under open data licenses.
 
 ## DataStream Open Data Schema (DS-WQX)
-To ensure consistent formatting of water data and to avoid ambiguous or missing information, we developed an observation-level data schema based on the WQX standard for the Exchange of Water Quality Data. 
 
-The WQX schema was developed by the US Environmental Protection Agency (EPA) and the US Geological Society (USGS) and is an implementation of the ESAR (Environmental Sampling, Analysis and Results) data standard. It was designed to enable multiple monitoring entities to share results in a common format. In the US, the WQX schema is used on the US EPA’s Water Quality Portal to share over 340 million water quality data records data from 400 federal, state, tribal and other partners. 
+To ensure consistent formatting of water data and to avoid ambiguous or missing information, we developed an observation-level data schema based on the WQX standard for the Exchange of Water Quality Data.
 
-In 2018, The Gordon Foundation led a comprehensive review process to determine how this model could be adapted to best meet the needs of diverse water monitoring initiatives in Canada. DataStream’s science and technical advisory team, regional partners and collaborators, data contributors, government representatives as well as other members of the water community were engaged in this process. 
+The WQX schema was developed by the US Environmental Protection Agency (EPA) and the US Geological Society (USGS) and is an implementation of the ESAR (Environmental Sampling, Analysis and Results) data standard. It was designed to enable multiple monitoring entities to share results in a common format. In the US, the WQX schema is used on the US EPA’s Water Quality Portal to share over 340 million water quality data records data from 400 federal, state, tribal and other partners.
 
-DataStream’s open data schema (DS-WQX v1.0) was fully implemented across all regional DataStream platforms in 2019. 
+In 2018, The Gordon Foundation led a comprehensive review process to determine how this model could be adapted to best meet the needs of diverse water monitoring initiatives in Canada. DataStream’s science and technical advisory team, regional partners and collaborators, data contributors, government representatives as well as other members of the water community were engaged in this process.
+
+DataStream’s open data schema (DS-WQX v1.0) was fully implemented across all regional DataStream platforms in 2019.
 
 ## Changelog
+
 The DataStream open data schema will continue to evolve to meet user needs and therefore is subject to various updates over time (e.g. addition of new allowed values). To view the most recent version number and record of changes please see the [DataStream Upload Template](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?usp=sharing).
 
 ## Dataset Metadata
+
 In addition to the observation-level information in DS-WQX, DataStream uses dataset level metadata. [DataStream Metadata](https://github.com/gordonfn/metadata)
 
 ## Special Case Tests
+
 In addition to our schema enforcing allowed values the column conditional logic; we have included additional check for common errors to the frontend flavour of our schema.
 
 - `Dissolved oxygen (DO)` should not be in `%`
@@ -50,9 +54,11 @@ In addition to our schema enforcing allowed values the column conditional logic;
 - `Temperature` should be within `-100 degC` and `100 degC`
 
 ## Testing
+
 We aim to have our test be as robust as possible. This is accomplished by having acceptance and rejection tests.
 
 ## Install
+
 You can download the compiled DS-WQX schema from above.
 
 Alternately, you can build it from the source to include in your project.
@@ -68,25 +74,32 @@ $ npm i @gordonfn/schema
 ```
 
 ## Use
+
 ### CSV Template
+
 The `csv` template follows `R` import/export best practices.
 
 ### JavaScript
+
 ```javascript
 import validate from '@gordonfn/schema'
-const data = {}; // Single row of data
-const valid = validate(data);
+const data = {} // Single row of data
+const valid = validate(data)
 if (!valid) console.error(validate.errors)
 ```
 
 ### Schema Flavours
+
 Supports JSON Schema Draft 2019-09 Specification in non-strict mode. Strict mode removes `if`, `then`, `additionalProperties` from the schema.
 
-- `primary`: This includes only JSON schema specification supported parameters
-- `frontend`: Includes value coercion and supplementary conditional checks
-- `backend`: Includes all possible allowed values, value coercion and no conditional logic.
+- `primary`: This includes only JSON schema specification supported parameters with strict allowed values and supplementary conditional checks
+- `frontend`: Includes loose allowed values with coercion and supplementary conditional checks
+- `extract`: Includes strict allowed values and supplementary conditional checks
+- `backend`: Includes all possible allowed values, value coercion and no supplementary conditional checks
+- `quality-control`: Includes additional conditional checks to be flagged as warnings
 
 ## Publish
+
 ```bash
 # change version in package.json
 npm test
@@ -100,17 +113,18 @@ npm publish
 
 If you wish to comment on the schema please [open an issue](https://github.com/gordonfn/schema/issues).
 
-* For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
+- For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
 
 You can also email us at <datastream@gordonfn.org> or visit us at:
 
-* [DataStream](https://datastream.org)
-* [Atlantic DataStream](https://atlanticdatastream.ca)
-* [Great Lakes DataStream](https://greatlakesdatastream.ca) (Coming Fall 2021)
-* [Lake Winnipeg DataStream](https://lakewinnipegdatastream.ca)
-* [Mackenzie DataStream](https://mackenziedatastream.ca)
+- [DataStream](https://datastream.org)
+- [Atlantic DataStream](https://atlanticdatastream.ca)
+- [Great Lakes DataStream](https://greatlakesdatastream.ca) (Coming Fall 2021)
+- [Lake Winnipeg DataStream](https://lakewinnipegdatastream.ca)
+- [Mackenzie DataStream](https://mackenziedatastream.ca)
 
 ### Development
+
 ```bash
 brew install nvm
 nvm get 12
@@ -118,6 +132,7 @@ npm i
 ```
 
 ### Publishing
+
 ```bash
 # update version in `package.json`
 npm run test
@@ -126,6 +141,7 @@ npm publish
 ```
 
 ## References
+
 - [WQX](https://github.com/gordonfn/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 
