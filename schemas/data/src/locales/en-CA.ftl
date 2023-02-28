@@ -113,9 +113,10 @@ qc-ResultValue-Temperature-Range = Temperature is outside an expected range (-10
 qc-WhiteSpace = Leading or trailing white space detected in character string
 
 ## quality-control (code)
-qc-ActivityStartDate-Future = Contains date in the future
-qc-ActivityEndDate-Future = Contains date in the future
-qc-AnalysisStartDate-Future = Contains date in the future
+qc-Date-Future = Contains date in the future
+qc-ActivityStartDate-Future = {qc-Date-Future}
+qc-ActivityEndDate-Future = {qc-Date-Future}
+qc-AnalysisStartDate-Future = {qc-Date-Future}
 qc-MonitoringLocationCoordinate-Duplicate = Multiple MonitoringLocation coordinates (Latitude, Longitude) are used with the same MonitoringLocationID
 qc-MonitoringLocationName-Duplicate = Multiple MonitoringLocationNames are used with the same MonitoringLocationID
 qc-MonitoringLocationType-Duplicate = Multiple MonitoringLocationTypes are used with the same MonitoringLocationID
