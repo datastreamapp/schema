@@ -1,5 +1,5 @@
--default-message = must pass "{ $keyword }" keyword validation
--comparison-limit = must be { $comparison } { $limit }
+-default-message = doit être valide selon le critère "{$keyword}"
+-comparison-limit = doit être {$comparison} {$limit}
 items =
     must not have more than { $limit } { $limit ->
         [one] item
@@ -124,6 +124,7 @@ qc-ResultValue-Minimum = ResultValue should not be below zero for the selected R
 qc-ResultValue-pH-Range = pH ResultValue is outside the accepted allowed range (0 to 14)
 qc-ResultValue-Temperature-Range = Temperature is outside an expected range (-100 to 100).
 qc-WhiteSpace = Leading or trailing white space detected in character string
+ci-test = Test if crowdin resets file
 
 ## quality-control (code)
 
