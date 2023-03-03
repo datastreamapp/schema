@@ -112,6 +112,8 @@ qc-ResultValue-pH-Range = pH ResultValue is outside the accepted allowed range (
 qc-ResultValue-Temperature-Range = Temperature is outside an expected range (-100 to 100).
 qc-WhiteSpace = Leading or trailing white space detected in character string
 
+ci-test = Test if crowdin resets file
+
 ## quality-control (code)
 qc-Date-Future = Contains date in the future
 qc-ActivityStartDate-Future = {qc-Date-Future}
