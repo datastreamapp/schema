@@ -31,16 +31,6 @@
           "Total Phosphorus, mixed forms",
           "Soluble Reactive Phosphorus (SRP)"
         ]
-      },
-      "ActivityType": {
-        "not": {
-          "enum": [
-            "Field Msr/Obs",
-            "Field Msr/Obs-Portable Data Logger",
-            "Quality Control Field Replicate Msr/Obs",
-            "Quality Control Field Replicate Portable Data Logger"
-          ]
-        }
       }
     },
     "required": ["ActivityMediaName", "CharacteristicName", "ActivityType"]

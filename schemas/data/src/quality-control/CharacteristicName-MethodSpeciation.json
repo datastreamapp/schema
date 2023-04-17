@@ -56,7 +56,9 @@
         }
       }
     },
-    "required": ["CharacteristicName"]
+    "required": [
+      "CharacteristicName"
+    ]
   },
   "then": {
     "properties": {
