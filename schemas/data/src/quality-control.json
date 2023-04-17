@@ -150,6 +150,9 @@
       "$ref": "./quality-control/ActivityType-ResultSampleFraction.json"
     },
     {
+      "$ref":"./quality-control/CharacteristicName-ActivityMediaName-AmbientAir.json"
+    },
+    {
       "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
     },
     {
