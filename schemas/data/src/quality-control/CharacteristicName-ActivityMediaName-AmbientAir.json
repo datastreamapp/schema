@@ -4,31 +4,25 @@
   "description": "",
   "errorMessage": "qc-CharacteristicName-ActivityMediaName-AmbientAir",
   "if": {
-	"properties": {
-	  "CharacteristicName": {
-		"enum": [
-		  "Temperature, air",
-		  "Barometric pressure",
-		  "Wind direction (direction from, expressed 0-360 deg)",
-		  "Wind velocity",
-		  "Precipitation",
-		  "Precipitation 24hr prior to monitoring event amount"
-		]
-	  }
-	},
-	"required": [
-	  "CharacteristicName"
-	]
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Temperature, air",
+          "Barometric pressure",
+          "Wind direction (direction from, expressed 0-360 deg)",
+          "Wind velocity"
+        ]
+      }
+    },
+    "required": ["CharacteristicName"]
   },
   "then": {
-	"properties": {
-	  "ActivityMediaName": {
-		  "type":"string",
-		  "enum":["Ambient Air"]
-	  }
-	},
-	"required": [
-	  "ActivityMediaName"
-	]
+    "properties": {
+      "ActivityMediaName": {
+        "type": "string",
+        "enum": ["Ambient Air"]
+      }
+    },
+    "required": ["ActivityMediaName"]
   }
 }
