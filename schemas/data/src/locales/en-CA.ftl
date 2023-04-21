@@ -93,6 +93,7 @@ error-ResultUnit-Salinity = ResultUnit for CharacteristicName Salinity should be
 ## quality-control
 qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant for selected ActivityType
 # qc-CharacteristicName-Deprecated = CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.
+qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 
@@ -111,8 +112,6 @@ qc-ResultValue-Minimum = ResultValue should not be below zero for the selected R
 qc-ResultValue-pH-Range = pH ResultValue is outside the accepted allowed range (0 to 14)
 qc-ResultValue-Temperature-Range = Temperature is outside an expected range (-100 to 100).
 qc-WhiteSpace = Leading or trailing white space detected in character string
-
-ci-test = Test if crowdin resets file
 
 ## quality-control (code)
 qc-Date-Future = Contains date in the future

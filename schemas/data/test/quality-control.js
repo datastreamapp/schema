@@ -146,6 +146,23 @@ test('Should accept empty ResultSampleFraction when ActivityType is set to field
   t.is(valid, true)
 })
 
+// *** CharacteristicName-ActivityMediaName-AmbientAir *** //
+test('Should accept CharacteristicName-ActivityMediaName-AmbientAir', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Temperature, air',
+    ActivityMediaName: 'Ambient Air'
+  })
+  t.is(valid, true)
+})
+test('Should reject CharacteristicName-ActivityMediaName-AmbientAir', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Temperature, air',
+    ActivityMediaName: 'Stormwater'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ActivityMediaName'), true)
+})
+
 // *** CharacteristicName-MethodSpeciation *** //
 test('Should accept CharacteristicName-MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
