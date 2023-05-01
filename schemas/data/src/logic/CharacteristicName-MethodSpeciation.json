@@ -42,12 +42,16 @@
         ]
       }
     },
-    "required": ["CharacteristicName"]
+    "required": [
+      "CharacteristicName"
+    ]
   },
   "then": {
     "properties": {
       "MethodSpeciation": {}
     },
-    "required": ["MethodSpeciation"]
+    "required": [
+      "MethodSpeciation"
+    ]
   }
 }
