@@ -3,8 +3,8 @@
 To ensure a lower barrier to entry, multiple changes were made in the structure:
 - most optional fields were dropped, 
 - CSV flavour of the schema was chosen for ease of export from Microsoft Excel
-- `Projects`, `Monitoring Locations` and `Results` were flatten together to simplify the upload process
-- Headers are in PascalCase to ensure simple transformations by the internal system
+- `Projects`, `Monitoring Locations` and `Results` were flattened together to simplify the upload process
+- Headers are in PascalCase to ensure a simple transformations by the internal system
 - Date, Time and Time Zone were changed to use the ISO 8601 format to allow ease of parsing and universal readability
 
 ## Projects
