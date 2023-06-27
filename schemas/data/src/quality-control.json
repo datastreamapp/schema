@@ -147,16 +147,22 @@
   },
   "allOf": [
     {
+      "$ref": "./quality-control/ActivityMediaName-ActivityDepthHeightMeasure-Maximum.json"
+    },
+    {
       "$ref": "./quality-control/ActivityType-ResultSampleFraction.json"
     },
     {
-      "$ref":"./quality-control/CharacteristicName-ActivityMediaName-AmbientAir.json"
+      "$ref": "./quality-control/CharacteristicName-ActivityMediaName-AmbientAir.json"
     },
     {
       "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
     },
     {
       "$ref": "./quality-control/MonitoringLocationCoordinate-BoundingBox.json"
+    },
+    {
+      "$ref": "./quality-control/ResultAnalyticalMethodContext-YSI-ActivityType.json"
     },
     {
       "$ref": "./quality-control/ResultDetectionQuantitationLimitMeasure-Minimum.json"

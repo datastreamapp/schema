@@ -8,8 +8,8 @@ test('Should transform error message', async (t) => {
     ActivityType: 'Field Msr/Obs',
     ResultSampleFraction: 'Filtered'
   })
-  console.log(validate.errors)
+  //console.log(validate.errors)
   en(validate.errors)
-  console.log(validate.errors)
+  //console.log(validate.errors)
   t.is(valid, false)
 })

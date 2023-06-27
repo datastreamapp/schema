@@ -38,7 +38,7 @@ test('Should transform values (frontend)', async (t) => {
     AnalysisStartTime: '13:15:00',
     AnalysisStartTimeZone: '-06:00'
   })
-  console.log(valid, JSON.stringify(validate.errors, null, 2))
+  //console.log(valid, JSON.stringify(validate.errors, null, 2))
   t.is(valid, true)
 })
 
@@ -77,6 +77,6 @@ test('Should transform values (backend)', async (t) => {
     AnalysisStartTime: '13:15:00',
     AnalysisStartTimeZone: '-06:00'
   })
-  console.log(valid, JSON.stringify(validateBackend.errors, null, 2))
+  //console.log(valid, JSON.stringify(validateBackend.errors, null, 2))
   t.is(valid, true)
 })

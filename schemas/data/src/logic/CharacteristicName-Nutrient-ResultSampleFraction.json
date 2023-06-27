@@ -33,7 +33,7 @@
         ]
       }
     },
-    "required": ["ActivityMediaName", "CharacteristicName", "ActivityType"]
+    "required": ["ActivityMediaName", "CharacteristicName"]
   },
   "then": {
     "properties": {

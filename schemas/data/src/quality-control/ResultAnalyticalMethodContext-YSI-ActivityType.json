@@ -1,0 +1,22 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultAnalyticalMethodContext-YSI-ActivityType.json",
+  "title": "ResultAnalyticalMethodContext-YSI-ActivityType",
+  "description": "",
+  "errorMessage": "qc-ResultAnalyticalMethodContext-YSI-ActivityType",
+  "if": {
+    "properties": {
+      "ResultAnalyticalMethodContext": {
+        "enum": ["YSI"]
+      }
+    },
+    "required": ["ResultAnalyticalMethodContext"]
+  },
+  "then": {
+    "properties": {
+      "ActivityType": {
+        "enum": ["Field Msr/Obs-Portable Data Logger"]
+      }
+    },
+    "required": ["ActivityType"]
+  }
+}

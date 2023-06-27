@@ -1,0 +1,31 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ActivityMediaName-ActivityDepthHeightMeasure-Maximum.json",
+  "title": "ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+  "description": "",
+  "errorMessage": "qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+  "if": {
+    "properties": {
+      "ActivityMediaName": {
+        "enum": [
+          "Ocean Water",
+          "Porewater",
+          "Rainwater",
+          "Stormwater",
+          "Subsurface Soil/Sediment",
+          "Surface Water",
+          "Surface Water Sediment"
+        ]
+      }
+    },
+    "required": ["ActivityMediaName"]
+  },
+  "then": {
+    "properties": {
+      "ActivityDepthHeightMeasure": {
+        "type": "number",
+        "maximum": 0
+      }
+    },
+    "required": ["ActivityDepthHeightMeasure"]
+  }
+}

@@ -126,6 +126,37 @@ test('Should reject improperly formatted time', async (t) => {
   t.is(checkProperty(validate.errors, 'pattern', 'ActivityStartTime'), true)
 })
 
+// *** ActivityMediaName-ActivityDepthHeightMeasure-Maximum *** //
+test('Should reject ActivityDepthHeightMeasure > 0 when ActivityMediaName is set', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightMeasure: 1,
+    ActivityDepthHeightUnit: 'm'
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
+    true
+  )
+})
+test('Should accept ActivityDepthHeightMeasure < 0 when ActivityMediaName is set', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightMeasure: -1,
+    ActivityDepthHeightUnit: 'm'
+  })
+  t.is(valid, true)
+})
+
+test('Should ignore ActivityDepthHeightMeasure > 0 when ActivityMediaName is other value', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Ambient Air',
+    ActivityDepthHeightMeasure: 1,
+    ActivityDepthHeightUnit: 'm'
+  })
+  t.is(valid, true)
+})
+
 // *** ActivityType-ResultSampleFraction *** //
 test('Should reject ResultSampleFraction when ActivityType is set to field', async (t) => {
   const valid = validate({
@@ -225,6 +256,37 @@ test('Should reject MonitoringLocationLongitude when its out of bounds', async (
     checkProperty(validate.errors, 'minimum', 'MonitoringLocationLongitude'),
     true
   )
+})
+
+// *** ResultAnalyticalMethodContext-YSI-ActivityType *** //
+test('Should reject ActivityType when ResultAnalyticalMethodContext is YSI', async (t) => {
+  const valid = validate({
+    ResultAnalyticalMethodContext: 'YSI',
+    ActivityType: 'Field Msr/Obs'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
+})
+test('Should accept ActivityType when ResultAnalyticalMethodContext is YSI', async (t) => {
+  const valid = validate({
+    ResultAnalyticalMethodContext: 'YSI',
+    ActivityType: 'Field Msr/Obs-Portable Data Logger'
+  })
+  t.is(valid, true)
+})
+test('Should ignore ActivityType when ResultAnalyticalMethodContext is not YSI', async (t) => {
+  const valid = validate({
+    ResultAnalyticalMethodContext: 'ANY'
+  })
+  t.is(valid, true)
+  // t.is(
+  //   checkProperty(
+  //     validate.errors,
+  //     'minimum',
+  //     'ResultDetectionQuantitationLimitMeasure'
+  //   ),
+  //   false
+  // )
 })
 
 // *** ResultDetectionQuantitationLimitMeasure-Minimum *** //
