@@ -189,7 +189,7 @@ test('Should reject ResultValue AND ResultUnit', async (t) => {
   t.is(checkProperty(validate.errors, 'dependencies', 'ResultUnit'), false)
 })
 
-test('Should reject ResultDetectionQuantitationLimitMeasure AND NOT ResultDetectionQuantitationLimitUnit', async (t) => {
+test('Should reject ResultDetectionQuantitationLimitMeasure AND NOT ResultDetectionQuantitationLimit{Unit,Type}', async (t) => {
   const valid = validate({
     ResultDetectionQuantitationLimitMeasure: true
   })
@@ -202,11 +202,20 @@ test('Should reject ResultDetectionQuantitationLimitMeasure AND NOT ResultDetect
     ),
     true
   )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitType'
+    ),
+    true
+  )
 })
-test('Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQuantitationLimitUnit', async (t) => {
+test('Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQuantitationLimit{Unit,Type}', async (t) => {
   const valid = validate({
     ResultDetectionQuantitationLimitMeasure: true,
-    ResultDetectionQuantitationLimitUnit: true
+    ResultDetectionQuantitationLimitUnit: true,
+    ResultDetectionQuantitationLimitType: true
   })
   t.is(valid, false)
   t.is(
@@ -214,6 +223,14 @@ test('Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQ
       validate.errors,
       'dependencies',
       'ResultDetectionQuantitationLimitUnit'
+    ),
+    false
+  )
+  t.is(
+    checkProperty(
+      validate.errors,
+      'dependencies',
+      'ResultDetectionQuantitationLimitType'
     ),
     false
   )

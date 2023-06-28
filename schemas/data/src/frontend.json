@@ -175,7 +175,8 @@
         "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
         "ResultValue": ["ResultUnit"],
         "ResultDetectionQuantitationLimitMeasure": [
-          "ResultDetectionQuantitationLimitUnit"
+          "ResultDetectionQuantitationLimitUnit",
+          "ResultDetectionQuantitationLimitType"
         ],
         "AnalysisStartTime": ["AnalysisStartTimeZone"]
       },
