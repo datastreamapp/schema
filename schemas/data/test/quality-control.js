@@ -147,6 +147,20 @@ test('Should accept ActivityDepthHeightMeasure < 0 when ActivityMediaName is set
   })
   t.is(valid, true)
 })
+test('Should accept ActivityDepthHeightMeasure = 0 when ActivityMediaName is set', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightMeasure: 0,
+    ActivityDepthHeightUnit: 'm'
+  })
+  t.is(valid, true)
+})
+test('Should accept when ActivityDepthHeightMeasure is not set and when ActivityMediaName is set', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water'
+  })
+  t.is(valid, true)
+})
 
 test('Should ignore ActivityDepthHeightMeasure > 0 when ActivityMediaName is other value', async (t) => {
   const valid = validate({

@@ -14,7 +14,10 @@
   "then": {
     "properties": {
       "ActivityType": {
-        "enum": ["Field Msr/Obs-Portable Data Logger"]
+        "enum": [
+          "Field Msr/Obs-Portable Data Logger",
+          "Quality Control Field Replicate Portable Data Logger"
+        ]
       }
     },
     "required": ["ActivityType"]

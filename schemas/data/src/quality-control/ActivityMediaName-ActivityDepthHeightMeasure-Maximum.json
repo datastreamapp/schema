@@ -17,7 +17,7 @@
         ]
       }
     },
-    "required": ["ActivityMediaName"]
+    "required": ["ActivityMediaName", "ActivityDepthHeightMeasure"]
   },
   "then": {
     "properties": {
