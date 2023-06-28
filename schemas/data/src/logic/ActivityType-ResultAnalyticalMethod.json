@@ -7,7 +7,7 @@
     "properties": {
       "ActivityType": {
         "type": "string",
-        "pattern": "^Sample.*$"
+        "pattern": "^(Quality Control )?Sample.*$"
       }
     },
     "required": ["ActivityType"]
