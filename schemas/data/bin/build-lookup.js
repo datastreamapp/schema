@@ -12,6 +12,10 @@ let characteristicNameGroupsLocal = await readFile(
   join(__dirname, `../lookup/CharacteristicName-CharacteristicNameGroup.json`)
 ).then((res) => JSON.parse(res))
 
+let characteristicNameGroupMeasureUnitLocal = await readFile(
+  join(__dirname, `../lookup/CharacteristicNameGroup-MeasureUnit.json`)
+).then((res) => JSON.parse(res))
+
 for (const key in characteristicNameGroupsLocal) {
   if (characteristicNameGroups[key]) {
     console.log(
@@ -37,11 +41,20 @@ characteristicNames = characteristicNames.enum
 
 for (const characteristicName of characteristicNames) {
   //console.log(characteristicName, characteristicNameGroups[characteristicName])
+  const group = characteristicNameGroups[characteristicName]
   if (
     !characteristicNameGroups[characteristicName] ||
     characteristicNameGroups[characteristicName] === 'Not Assigned'
   ) {
-    console.log('CharacteristicNameGroups Not Assigned', characteristicName)
+    console.log(
+      `CharacteristicNameGroups "${characteristicNameGroups[characteristicName]}"`,
+      characteristicName
+    )
+  } else if (!characteristicNameGroupMeasureUnitLocal[group]) {
+    console.log(
+      `CharacteristicNameGroups "${group}": Missing normalization mapping`,
+      characteristicName
+    )
   }
 }
 
