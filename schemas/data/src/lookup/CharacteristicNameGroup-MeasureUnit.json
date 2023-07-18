@@ -1,62 +1,37 @@
 {
-  "Inorganics, Major, Metals": [
-    "ug/L",
-    "ug/g",
-    "umol/L",
-    "%"
-  ],
-  "Inorganics, Major, Non-metals": [
-    "ug/L",
-    "ug/g",
-    "umol/L",
-    "%"
-  ],
-  "Inorganics, Minor, Metals": [
-    "ug/L",
-    "ug/g",
-    "umol/L",
-    "%"
-  ],
-  "Inorganics, Minor, Non-metals": [
-    "ug/L",
-    "ug/g",
-    "umol/L",
-    "%"
-  ],
-  "Major ions": [
+  "Inorganics, Major, Metals": ["ug/L", "ug/g", "umol/L", "%"],
+  "Inorganics, Major, Non-metals": ["ug/L", "ug/g", "umol/L", "%"],
+  "Inorganics, Minor, Metals": ["ug/L", "ug/g", "umol/L", "%"],
+  "Inorganics, Minor, Non-metals": ["ug/L", "ug/g", "umol/L", "%"],
+  "Major ions": ["mg/L", "mg/kg", "umol/L", "%"],
+  "Nutrient": ["mg/L", "mg/kg", "umol/L", "%"],
+  "Biological": ["mg/L", "mg/kg", "umol/L", "%"],
+  "Biological, Algae, Cyanobacteria": ["mg/L", "mg/kg", "umol/L", "%"],
+  "Biological, Algae, Cyanobacteria, Photosynthetic,Phycocyanin": [
     "mg/L",
     "mg/kg",
     "umol/L",
     "%"
   ],
-  "Nutrient": [
+  "Biological, Algae, Phytoplankton, Cyanobacteria, Periphyton": [
     "mg/L",
     "mg/kg",
     "umol/L",
     "%"
   ],
-  "Biological": [
+  "Biological, Algae, Phytoplankton, Photosynthetic Pigments": [
     "mg/L",
     "mg/kg",
     "umol/L",
     "%"
   ],
-  "Information": [
-    "m",
-    "m2"
-  ],
-  "Microbiological": [
-    "MPN",
-    "#/100mL",
-    "MPN/100mL",
-    "CFU/100mL"
-  ],
-  "PFAS,Perfluorinated Alkyl Substance": [
-    "ug/L"
-  ],
-  "PFOA, Perfluorooctanoic Acid": [
-    "ug/L"
-  ],
+  "Biological, Photosynthetic Pigments": ["mg/L", "mg/kg", "umol/L", "%"],
+  "Biological, Habitat, Filamentous Algae": ["mg/L", "mg/kg", "umol/L", "%"],
+  "Cyanotoxins, Phytotoxins": ["mg/L", "mg/kg", "umol/L", "%"],
+  "Information": ["m", "m2"],
+  "Microbiological": ["MPN", "#/100mL", "MPN/100mL", "CFU/100mL"],
+  "PFAS,Perfluorinated Alkyl Substance": ["ug/L"],
+  "PFOA, Perfluorooctanoic Acid": ["ug/L"],
   "Physical": [
     "mg/L",
     "mg/kg",
@@ -70,30 +45,12 @@
     "m",
     "m2"
   ],
-  "Organics, Other": [
-    "ng/L",
-    "ng/kg",
-    "umol/L",
-    "%"
-  ],
-  "Organics, Pesticide": [
-    "ng/L",
-    "ng/kg",
-    "umol/L",
-    "%"
-  ],
-  "Organics, PCBs": [
-    "ng/L",
-    "ng/kg",
-    "umol/L",
-    "%"
-  ],
-  "Radiochemical": [
-    "pCi/L",
-    "TU",
-    "permille",
-    "%"
-  ],
+  "Organics, BDEs": ["ng/L", "ng/kg", "umol/L", "%"],
+  "Organics, PCBs": ["ng/L", "ng/kg", "umol/L", "%"],
+  "Organics, Pesticide": ["ng/L", "ng/kg", "umol/L", "%"],
+  "Organics, Other": ["ng/L", "ng/kg", "umol/L", "%"],
+  "Radiochemical": ["pCi/L", "TU", "permille", "%"],
+  "Sediment": ["m"],
   "Stable Isotopes": [
     "mg/L",
     "mg/kg",
@@ -103,10 +60,6 @@
     "permille",
     "%"
   ],
-  "Not Assigned": [
-    "mg/L",
-    "mg/kg",
-    "umol/L",
-    "m3/s"
-  ]
+  "Toxicity": ["TU"],
+  "Not Assigned": ["mg/L", "mg/kg", "umol/L", "m3/s"]
 }
