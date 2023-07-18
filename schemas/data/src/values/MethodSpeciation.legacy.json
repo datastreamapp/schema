@@ -5,6 +5,7 @@
   "type": "string",
   "enum": [
     "as %CaCO3",
+    "as 2,4-D",
     "as Al",
     "as ANC",
     "as As",
@@ -99,6 +100,7 @@
     "as Ti",
     "as Tl",
     "as U",
+    "as U308",
     "as U3O8",
     "as Unspecified",
     "None",
