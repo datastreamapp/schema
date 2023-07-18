@@ -116,6 +116,8 @@ qc-ResultValue-Temperature-Range = Temperature is outside an expected range (-10
 qc-WhiteSpace = Leading or trailing white space detected in character string
 
 ## quality-control (code)
+qc-ColumnCount = Should match column count from the first row
+qc-DatasetName = Does not match expected value.
 qc-Date-Future = Contains date in the future
 qc-ActivityStartDate-Future = {qc-Date-Future}
 qc-ActivityEndDate-Future = {qc-Date-Future}
