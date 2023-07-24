@@ -97,12 +97,15 @@
     "umol/L",
     "deg C",
     "m/s",
+    "m2/s",
+    "m3/s",
     "mL",
     "L/mg-m",
     "units/cm",
     "TCU",
     "m",
-    "m2"
+    "m2",
+    "m3"
   ],
   "Physical, Habitat": ["%"],
   "Phytoplankton, Cyanobacteria, Photosynthetic Pigments": [],
@@ -120,5 +123,5 @@
     "%"
   ],
   "Toxicity": ["TU"],
-  "Not Assigned": ["mg/L", "mg/kg", "umol/L", "m3/s"]
+  "Not Assigned": ["mg/L", "mg/kg", "umol/L", "m/s", "m2/s", "m3/s"]
 }
