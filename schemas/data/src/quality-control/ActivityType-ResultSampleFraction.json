@@ -2,7 +2,7 @@
   "$id": "https://datastream.org/schema/data/quality-control/ActivityType-ResultSampleFraction.json",
   "title": "ActivityType-ResultSampleFraction",
   "description": "Field measurements and observations are not typically associated with a sample fraction as they are measured in place and don't undergo filtration steps.",
-  "$comment": "ResultSampleFraction may not be relevant for selected ActivityType",
+  "$comment": "ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see resources page)",
   "errorMessage": "qc-ActivityType-ResultSampleFraction, ActivityType:${/ActivityType}, ResultSampleFraction:${/ResultSampleFraction}",
   "if": {
     "properties": {

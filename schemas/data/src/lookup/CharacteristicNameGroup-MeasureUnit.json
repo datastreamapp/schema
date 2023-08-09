@@ -76,7 +76,7 @@
   "Biological, Primary Production": ["mg/L", "mg/kg", "umol/L", "%"],
   "Cyanotoxins, Phytotoxins": ["mg/L", "mg/kg", "umol/L", "%"],
   "Habitat": [],
-  "Information": ["m", "m2"],
+  "Information": ["m", "m2", "%"],
   "Inorganics, Major, Metals": ["ug/L", "ug/g", "umol/L", "%"],
   "Inorganics, Major, Non-metals": ["ug/L", "ug/g", "umol/L", "%"],
   "Inorganics, Minor, Metals": ["ug/L", "ug/g", "umol/L", "%"],
@@ -105,7 +105,8 @@
     "TCU",
     "m",
     "m2",
-    "m3"
+    "m3",
+    "%"
   ],
   "Physical, Habitat": ["%"],
   "Phytoplankton, Cyanobacteria, Photosynthetic Pigments": [],
