@@ -5,6 +5,7 @@
   "type": "string",
   "enum": [
     "Field Msr/Obs",
+    "Field Msr/Obs-Continuous Time Series",
     "Field Msr/Obs-Habitat Assessment",
     "Field Msr/Obs-Incidental",
     "Field Msr/Obs-Portable Data Logger",
