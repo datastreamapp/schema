@@ -5,7 +5,6 @@
   "type": "string",
   "enum": [
     "Field Msr/Obs",
-    "Field Msr/Obs-Continuous Time Series",
     "Field Msr/Obs-Portable Data Logger",
     "Quality Control Alternative Measurement Sensitivity",
     "Quality Control Alternative Measurement Sensitivity Plus",
