@@ -130,6 +130,7 @@ qc-WhiteSpace = Leading or trailing white space detected in character string
 
 ## quality-control (code)
 
+qc-RowCount = A dataset requires at least one row.
 qc-ColumnCount = Should match column count from the first row
 qc-DatasetName = Does not match expected value.
 qc-Date-Future = Contains date in the future
