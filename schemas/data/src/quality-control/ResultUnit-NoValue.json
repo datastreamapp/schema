@@ -3,15 +3,14 @@
   "title": "ResultUnit-NoValue",
   "description": "If the ResultValue is blank for a data point (e.g. when the result is above or below a detection limit or otherwise not quantified), the ResultUnit should also be blank for that data point.",
   "errorMessage": "qc-ResultUnit-NoValue",
-  "oneOf": [
-    {
-      "required": ["ResultValue", "ResultUnit"]
-    },
-    {
-      "properties": {
-        "ResultValue": false,
-        "ResultUnit": false
-      }
+  "if": {
+    "properties": {
+      "ResultValue": false
     }
-  ]
+  },
+  "then": {
+    "properties": {
+      "ResultUnit": false
+    }
+  }
 }

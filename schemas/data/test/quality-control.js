@@ -386,14 +386,6 @@ test('Should reject when ResultDetectionQuantitationLimitUnit exists without Res
   t.is(
     checkProperty(
       validate.errors,
-      'required',
-      'ResultDetectionQuantitationLimitMeasure'
-    ),
-    true
-  )
-  t.is(
-    checkProperty(
-      validate.errors,
       'false schema',
       'ResultDetectionQuantitationLimitUnit'
     ),
@@ -470,13 +462,13 @@ test('Should accept when ResultValue & ResultUnit exist', async (t) => {
   })
   t.is(valid, true)
 })
+
 test('Should reject when ResultUnit exists without ResultValue', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
     ResultUnit: 'deg C'
   })
   t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), true)
   t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
 })
 
