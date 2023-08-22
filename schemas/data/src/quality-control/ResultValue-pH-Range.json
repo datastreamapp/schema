@@ -7,6 +7,9 @@
     "properties": {
       "CharacteristicName": {
         "enum": ["pH", "pH, lab", "pH, saturated"]
+      },
+      "ResultValue": {
+        "type": "number"
       }
     },
     "required": ["CharacteristicName", "ResultValue"]

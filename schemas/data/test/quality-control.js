@@ -171,6 +171,30 @@ test('Should ignore ActivityDepthHeightMeasure > 0 when ActivityMediaName is oth
   t.is(valid, true)
 })
 
+test('Should ignore ActivityDepthHeightMeasure > 0 when measure is not defined', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightUnit: 'm'
+  })
+  t.is(valid, true)
+  t.is(
+    checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
+    false
+  )
+})
+test('Should ignore ActivityDepthHeightMeasure > 0 when measure is a string', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightMeasure: 'unknown',
+    ActivityDepthHeightUnit: 'm'
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
+    false
+  )
+})
+
 // *** ActivityType-ResultSampleFraction *** //
 test('Should reject ResultSampleFraction when ActivityType is set to field', async (t) => {
   const valid = validate({
@@ -552,8 +576,16 @@ test('Should ignore Result when measure is not defined', async (t) => {
   t.is(valid, false)
   t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
 })
+test('Should ignore Result when measure is a string', async (t) => {
+  const valid = validate({
+    ResultValue: 'unknown',
+    ResultUnit: '#/100ml'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+})
 
-// *** ResultValue-pHRange *** //
+// *** ResultValue-pH-Range *** //
 test('Should reject pH below range', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
@@ -580,8 +612,28 @@ test('Should accept pH within range', async (t) => {
   })
   t.is(valid, true)
 })
+test('Should ignore pH range check when measure is not defined', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'pH',
+    ResultUnit: 'None'
+  })
+  t.is(valid, false) // due to another QC
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+})
 
-// *** ResultValue-TemperatureRange *** //
+test('Should ignore pH range check when measure is a string', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'pH',
+    ResultValue: 'Unknown',
+    ResultUnit: 'None'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+})
+
+// *** ResultValue-Temperature-Range *** //
 test('Should reject Temperature below range', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
@@ -607,6 +659,25 @@ test('Should accept Temperature within range', async (t) => {
     ResultUnit: 'deg C'
   })
   t.is(valid, true)
+})
+test('Should ignore Temperature range check when measure is not defined', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Temperature, water',
+    ResultUnit: 'deg C'
+  })
+  t.is(valid, false) // due to another QC
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+})
+test('Should ignore Temperature range check when measure is a string', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Temperature, water',
+    ResultValue: 'Unknown',
+    ResultUnit: 'deg C'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
 })
 
 // *** WhiteSpace *** //

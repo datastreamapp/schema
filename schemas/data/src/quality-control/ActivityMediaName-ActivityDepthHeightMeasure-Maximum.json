@@ -15,6 +15,9 @@
           "Surface Water",
           "Surface Water Sediment"
         ]
+      },
+      "ActivityDepthHeightMeasure": {
+        "type": "number"
       }
     },
     "required": ["ActivityMediaName", "ActivityDepthHeightMeasure"]

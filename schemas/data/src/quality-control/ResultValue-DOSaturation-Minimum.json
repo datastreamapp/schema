@@ -7,6 +7,9 @@
     "properties": {
       "CharacteristicName": {
         "enum": ["Dissolved oxygen saturation"]
+      },
+      "ResultValue": {
+        "type": "number"
       }
     },
     "required": ["CharacteristicName", "ResultValue"]
