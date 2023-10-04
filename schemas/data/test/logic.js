@@ -674,3 +674,37 @@ test('Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`
     true
   )
 })
+
+// *** one off *** //
+/*test('one off', async (t) => {
+  const valid = validate({
+    DatasetName:
+      'ACAP Humber Arm Freshwater Quality Monitoring: Newfoundland and Labrador',
+    MonitoringLocationID: 'FWM-049',
+    MonitoringLocationName: 'Seal Brook',
+    MonitoringLocationLatitude: 47.70158,
+    MonitoringLocationLongitude: -57.628167,
+    MonitoringLocationHorizontalCoordinateReferenceSystem: 'WGS84',
+    MonitoringLocationType: 'River/Stream',
+    ActivityType: 'Field Msr/Obs-Portable Data Logger',
+    ActivityMediaName: 'Surface Water',
+    ActivityStartDate: '2021-05-26',
+    ActivityStartTime: '14:01:00',
+    SampleCollectionEquipmentName: 'Probe/Sensor',
+    CharacteristicName: 'Salinity',
+    ResultValue: 0.01,
+    ResultUnit: 'ppt',
+    ResultValueType: 'Actual'
+  })
+  console.log(validate.errors)
+  console.log(validate.errors[0].params)
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+})*/

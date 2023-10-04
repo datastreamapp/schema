@@ -180,7 +180,13 @@
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
     },
     {
-      "$ref": "logic/CSVInjection.json"
+      "$ref": "./logic/ResultUnit-Salinity.json"
+    },
+    {
+      "$ref": "./logic/ResultDetectionQuantitationLimitUnit-Salinity.json"
+    },
+    {
+      "$ref": "./logic/CSVInjection.json"
     }
   ]
 }
