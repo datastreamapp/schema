@@ -9,20 +9,21 @@
         "enum": [
           "Nitrogen-15",
           "Nitrogen-15/Nitrogen-14 ratio",
-          "Nitrogen Delta 15",
           "Oxygen-18",
           "Oxygen-18/Oxygen-16 ratio",
           "Oxygen Delta 18",
+          "delta carbon-13/carbon-12",
+          "Delta nitrogen-15/nitrogen-14",
           "Delta oxygen-17/oxygen-16",
+          "Delta oxygen-18/oxygen-16",
+          "Delta sulfur-34/sulfur-32",
           "Deuterium",
           "Deuterium/Hydrogen ratio",
           "Deuterium, delta",
           "Sulfur-34",
           "Sulfur-34/Sulfur-32 ratio",
-          "Sulfur Delta 34",
           "Carbon-13",
-          "Carbon-13/Carbon-12 ratio",
-          "Carbon Delta 13"
+          "Carbon-13/Carbon-12 ratio"
         ]
       }
     },
