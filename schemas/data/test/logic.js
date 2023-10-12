@@ -115,7 +115,7 @@ test('Should accept CharacteristicName AND ResultSampleFraction', async (t) => {
 // CharacteristicName-StableIsotope-ResultSampleFraction
 test('Should reject StableIsotope CharacteristicName, MethodSpeciation required', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrogen Delta 15'
+    CharacteristicName: 'Nitrogen-15'
   })
   t.false(valid)
   t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
@@ -123,7 +123,7 @@ test('Should reject StableIsotope CharacteristicName, MethodSpeciation required'
 })
 test('Should reject StableIsotope CharacteristicName', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrogen Delta 15',
+    CharacteristicName: 'Nitrogen-15',
     MethodSpeciation: 'as NH4'
   })
   t.false(valid)
@@ -132,7 +132,7 @@ test('Should reject StableIsotope CharacteristicName', async (t) => {
 })
 test('Should accept StableIsotope CharacteristicName', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrogen Delta 15',
+    CharacteristicName: 'Nitrogen-15',
     MethodSpeciation: 'of NH4'
   })
   t.false(valid)
