@@ -112,7 +112,7 @@
   "Phytoplankton, Cyanobacteria, Photosynthetic Pigments": [],
   "Population/Community": [],
   "Productivity": [],
-  "Radiochemical": ["pCi/L", "TU", "permille", "%"],
+  "Radiochemical": ["Bq/L", "TU", "permille", "%"],
   "Sediment": ["m"],
   "Stable Isotopes": [
     "mg/L",
