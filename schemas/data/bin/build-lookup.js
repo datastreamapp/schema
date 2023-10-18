@@ -17,7 +17,9 @@ let characteristicNameGroupMeasureUnitLocal = await readFile(
 ).then((res) => JSON.parse(res))
 
 for (const key in characteristicNameGroupsLocal) {
-  if (characteristicNameGroups[key]) {
+  if (characteristicNameGroups[key] === characteristicNameGroupsLocal[key]) {
+    console.log(`CharacteristicNameGroupRedundant "${key}", safe to delete`)
+  } else if (characteristicNameGroups[key]) {
     console.log(
       `CharacteristicNameGroup "${key}":"${characteristicNameGroups[key]}" replace with "${characteristicNameGroupsLocal[key]}"`
     )
