@@ -195,14 +195,14 @@
       "pattern": "[\\u0009]"
     },
     "space-char": {
-      "description": "space, replace with \\u0020",
+      "description": "no break space, replace with \\u0020",
       "type": "string",
       "pattern": "[\\u00A0]"
     },
     "invisible-char": {
       "description": "Collection of invisible chars that shouldn't be used (exclude space, newline, carrage return). Replace with nothing. https://invisible-characters.com",
       "type": "string",
-      "pattern": "[\\u00AD\\u034F\\u061C\\u115F\\u160F\\u17B4\\u17B5\\u180E\\u2000-\\u200F\\u202F\\u205F-\\u2064\\u206A-\\u206F\\u2800\\u3000\\u3164\\uFEFF\\uFFA0\\u1D159\\u1D173-\\u1D17A]"
+      "pattern": "[\\u00AD\\u034F\\u061C\\u115F\\u160F\\u17B4\\u17B5\\u180E\\u2000-\\u200F\\u202F\\u205F-\\u2064\\u206A-\\u206F\\u2800\\u3000\\u3164\\uFEFF\\uFFA0]"
     }
   }
 }

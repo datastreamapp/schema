@@ -70,6 +70,8 @@ unevaluatedProperties = must not have unevaluated properties
 uniqueItems = must not have duplicate items (items ## {$j} and {$i} are identical)
 
 # errorMessages
+error-additional-columns = Should not have columns outside of schema/template
+
 ## format
 error-date-format = Must match format YYYY-MM-DD (i.e. 1999-12-31)
 error-time-loose-pattern = Must match format HH:MM:SS (i.e. 23:59:59)

@@ -181,7 +181,7 @@
         "AnalysisStartTime": ["AnalysisStartTimeZone"]
       },
       "errorMessage": {
-        "additionalProperties": "Should not have columns outside of schema/template"
+        "additionalProperties": "error-additional-columns"
       }
     },
     {
