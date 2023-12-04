@@ -1,7 +1,7 @@
 {
   "$id": "https://datastream.org/schema/data/logic/CharacteristicName-StableIsotope-MethodSpeciation.json",
   "title": "CharacteristicName-StableIsotope-MethodSpeciation",
-  "description": "As per isotope guideance table 3",
+  "description": "Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see [Best Practices for Reporting Isotope Data] (https://datastream.org/en-ca/documentation/isotope-data-guidance)",
   "errorMessage": "error-CharacteristicName-StableIsotope-MethodSpeciation",
   "if": {
     "properties": {

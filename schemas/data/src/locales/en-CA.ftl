@@ -82,9 +82,9 @@ error-timezone-strict-pattern = { error-timezone-loose-pattern }
 ## errors
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
-error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see resources page or contact us)
+error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
-error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data on the Resources page
+error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see [Best Practices for Reporting Isotope Data] (https://datastream.org/en-ca/documentation/isotope-data-guidance)
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below = ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect = When ResultDetectionCondition is set to 'Not Detected' or 'Detected Not Quantified' the ResultDetectionQuantitationLimit fields should not be populated
@@ -94,7 +94,7 @@ error-ResultUnit-Salinity = ResultUnit for CharacteristicName Salinity should be
 
 ## quality-control
 qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure should be below 0
-qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see resources page)
+qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 # qc-CharacteristicName-Deprecated = CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.
 qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
