@@ -84,7 +84,7 @@ error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAn
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
-error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see [Best Practices for Reporting Isotope Data] (https://datastream.org/en-ca/documentation/isotope-data-guidance)
+error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data (https://datastream.org/en-ca/documentation/isotope-data-guidance)
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below = ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect = When ResultDetectionCondition is set to 'Not Detected' or 'Detected Not Quantified' the ResultDetectionQuantitationLimit fields should not be populated
@@ -97,7 +97,7 @@ qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMea
 qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 # qc-CharacteristicName-Deprecated = CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.
 qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
-qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data
+qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data (https://datastream.org/en-ca/documentation/data-schema)
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 
@@ -106,7 +106,7 @@ qc-ResultDetectionQuantitationLimitMinimumMeasure-Minimum = ResultDetectionQuant
 # qc-MonitoringLocationType-ActivityDepthHeightMeasure-Minimum = Depth should not exceed the maximum depth associated with the selected MonitoringLocationType (i.e. River/stream, Lake/pond)
 qc-ResultDetectionQuantitationLimitUnit-None = The unit for the CharacteristicName should be None
 qc-ResultDetectionQuantitationLimitUnit-NoValue = ResultDetectionQuantitationLimitUnit is not needed when ResultDetectionQuantitationLimitMeasure is not populated
-qc-ResultSampleFraction-ActivityMediaName-Sediment = If a sequential extraction was performed on a water sample, or particulates in a water sample, information regarding the reagents used should be indicated in the ResultComment, not the ResultSampleFraction. For guidance on how to select ResultSampleFraction in this case, please refer to our Best practices for submitting metal-series data to DataStream
+qc-ResultSampleFraction-ActivityMediaName-Sediment = If a sequential extraction was performed on a water sample, or particulates in a water sample, information regarding the reagents used should be indicated in the ResultComment, not the ResultSampleFraction. For guidance on how to select ResultSampleFraction in this case, please refer to our Best practices for submitting metal-series data to DataStream (https://datastream.org/en-ca/documentation/data-schema)
 # qc-ResultUnit-Elevation = The unit for the CharacteristicName should be an elevation. ** TODO: MASL not a unit, needs to be added to QC rule lists
 qc-ResultUnit-None = The unit for the CharacteristicName should be None
 qc-ResultUnit-NoValue = ResultUnit is not needed when ResultValue is not populated
