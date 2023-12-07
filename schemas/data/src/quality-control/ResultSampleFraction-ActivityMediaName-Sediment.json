@@ -1,0 +1,36 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultSampleFraction-ActivityMediaName-Sediment.json",
+  "title": "ResultSampleFraction-ActivityMediaName-Sediment",
+  "description": "ResultSampleFraction should follow guidance in Best Practices Guide for metal-series data",
+  "errorMessage": "qc-ResultSampleFraction-ActivityMediaName-Sediment",
+  "if": {
+    "properties": {
+      "ResultSampleFraction": {
+        "enum": [
+          "Extractable, CaCO3-bound",
+          "Extractable, exchangeable",
+          "Extractable, organic-bnd",
+          "Extractable, other",
+          "Extractable, oxide-bound",
+          "Extractable, residual"
+        ]
+      }
+    },
+    "required": [
+      "ResultSampleFraction"
+    ]
+  },
+  "then": {
+    "properties": {
+      "ActivityMediaName": {
+        "enum": [
+          "Subsurface Soil/Sediment",
+          "Surface Water Sediment"
+        ]
+      }
+    },
+    "required": [
+      "ActivityMediaName"
+    ]
+  }
+}

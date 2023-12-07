@@ -156,6 +156,9 @@
       "$ref": "./quality-control/CharacteristicName-ActivityMediaName-AmbientAir.json"
     },
     {
+      "$ref": "./quality-control/CharacteristicName-Metal-ResultSampleFraction.json"
+    },
+    {
       "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
     },
     {
@@ -172,6 +175,9 @@
     },
     {
       "$ref": "./quality-control/ResultDetectionQuantitationLimitUnit-NoValue.json"
+    },
+    {
+      "$ref": "./quality-control/ResultSampleFraction-ActivityMediaName-Sediment.json"
     },
     {
       "$ref": "./quality-control/ResultUnit-Percent.json"

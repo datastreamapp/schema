@@ -1,0 +1,105 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/CharacteristicName-Metal-ResultSampleFraction.json",
+  "title": "CharacteristicName-Metal-ResultSampleFraction",
+  "description": "ResultSampleFraction should follow guidance in Best Practices Guide for metal-series data",
+  "errorMessage": "qc-CharacteristicName-Metal-ResultSampleFraction",
+  "if": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Aluminum",
+          "Antimony",
+          "Arsenic",
+          "Barium",
+          "Beryllium",
+          "Bismuth",
+          "Boron",
+          "Bromine",
+          "Cadmium",
+          "Calcium",
+          "Cerium",
+          "Cesium",
+          "Chlorine",
+          "Chromium",
+          "Chromium(III)",
+          "Chromium(VI)",
+          "Cobalt",
+          "Copper",
+          "Europium",
+          "Fluorine",
+          "Gadolinium",
+          "Gallium",
+          "Germanium",
+          "Gold",
+          "Hafnium",
+          "Hexavalent chromium compounds",
+          "Holmium",
+          "Indium",
+          "Iridium",
+          "Iron",
+          "Lanthanum",
+          "Lead",
+          "Lithium",
+          "Lutetium",
+          "Magnesium",
+          "Manganese",
+          "Mercury",
+          "Methylmercury(1+)",
+          "Molybdenum",
+          "Neodymium",
+          "Nickel",
+          "Niobium",
+          "Phosphorus, elemental",
+          "Platinum",
+          "Potassium",
+          "Praseodymium",
+          "Radium",
+          "Rhenium",
+          "Rubidium",
+          "Ruthenium",
+          "Samarium",
+          "Scandium",
+          "Selenium",
+          "Silicon",
+          "Silver",
+          "Sodium",
+          "Strontium",
+          "Sulfur",
+          "Sulfur Total",
+          "Tantalum",
+          "Tellurium",
+          "Terbium",
+          "Thallium",
+          "Thorium",
+          "Tin",
+          "Titanium",
+          "Tungsten",
+          "Vanadium",
+          "Ytterbium",
+          "Yttrium",
+          "Zinc",
+          "Zirconium",
+          "Uranium"
+        ]
+      }
+    },
+    "required": [
+      "CharacteristicName"
+    ]
+  },
+  "then": {
+    "properties": {
+      "ResultSampleFraction": {
+        "not": {
+          "enum": [
+            "Acid Soluble",
+            "Total Recoverable"
+          ]
+        }
+      }
+    },
+    "required": [
+      "ResultSampleFraction"
+    ]
+  }
+}

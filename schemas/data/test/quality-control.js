@@ -232,6 +232,24 @@ test('Should reject CharacteristicName-ActivityMediaName-AmbientAir', async (t) 
   t.is(checkProperty(validate.errors, 'enum', 'ActivityMediaName'), true)
 })
 
+// *** CharacteristicName-Metal-ResultSampleFraction *** //
+test('Should accept CharacteristicName-Metal-ResultSampleFraction', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultSampleFraction: 'Total'
+  })
+  t.is(valid, true)
+})
+
+test('Should reject CharacteristicName-Metal-ResultSampleFraction', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultSampleFraction: 'Total Recoverable'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'not', 'ResultSampleFraction'), true)
+})
+
 // *** CharacteristicName-MethodSpeciation *** //
 test('Should accept CharacteristicName-MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
@@ -415,6 +433,24 @@ test('Should reject when ResultDetectionQuantitationLimitUnit exists without Res
     ),
     true
   )
+})
+
+// *** ResultSampleFraction-ActivityMediaName-Sediment *** //
+test('Should accept ResultSampleFraction-ActivityMediaName-Sediment', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Subsurface Soil/Sediment',
+    ResultSampleFraction: 'Extractable, other'
+  })
+  t.is(valid, true)
+})
+
+test('Should reject ResultSampleFraction-ActivityMediaName-Sediment', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Stormwater',
+    ResultSampleFraction: 'Extractable, other'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ActivityMediaName'), true)
 })
 
 // *** ResultUnit-Elevation *** //
