@@ -27,6 +27,7 @@
     "Reported in Raw Data (attached)",
     "Trace",
     "Unable to Measure",
+    "Value affected by contamination",
     "Value Decensored"
   ],
   "maxLength": 36
