@@ -6,7 +6,7 @@
   <br/>
 </h1>
 
-<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href=https://docs.google.com/spreadsheets/d/1OwGkUTyVC3tZ9N_we8uX1kpsPejZnSsgcaTjrlGBxoc" target="_blank">Google Sheets</a>, <a href="https://datastreamorg.sharepoint.com/:x:/s/Datastream/EaqcNGHom7BFlRi6bRY4VDoBy6ECq6v3bbUyeb0B3S3HGg?e=75aBTl" target="_blank">Excel</a> template formats.</p>
+<p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1OwGkUTyVC3tZ9N_we8uX1kpsPejZnSsgcaTjrlGBxoc" target="_blank">Google Sheets</a>, <a href="https://datastreamorg.sharepoint.com/:x:/s/Datastream/EaqcNGHom7BFlRi6bRY4VDoBy6ECq6v3bbUyeb0B3S3HGg?e=75aBTl" target="_blank">Excel</a> template formats.</p>
 
 <p align="center">
   <!--<a href="https://github.com/datastreamapp/schema"><img src="https://img.shields.io/github/stars/datastreamapp/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
