@@ -318,7 +318,7 @@ test('Should reject MonitoringLocationLongitude when its out of bounds', async (
 test('Should reject ActivityType when ResultAnalyticalMethodContext is YSI', async (t) => {
   const valid = validate({
     ResultAnalyticalMethodContext: 'YSI',
-    ActivityType: 'Field Msr/Obs'
+    ActivityType: 'Sample-Routine'
   })
   t.is(valid, false)
   t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
