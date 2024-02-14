@@ -44,6 +44,7 @@
     "as H-3",
     "as H2O",
     "as H2S",
+    "as H2SO4",
     "as HCO3",
     "as Hg",
     "as IWTU",
@@ -124,6 +125,9 @@
     "of S",
     "of SO4",
     "of Unspecified",
+    "purified",
+    "purified untreated",
+    "treated",
     "unknown",
     "Unspecified"
   ],
