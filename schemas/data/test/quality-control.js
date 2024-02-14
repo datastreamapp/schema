@@ -241,6 +241,14 @@ test('Should accept CharacteristicName-Metal-ResultSampleFraction', async (t) =>
   t.is(valid, true)
 })
 
+test('Should accept CharacteristicName-Metal-ResultSampleFraction when undefined', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Europium',
+    ResultSampleFraction: undefined
+  })
+  t.is(valid, true)
+})
+
 test('Should reject CharacteristicName-Metal-ResultSampleFraction', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
