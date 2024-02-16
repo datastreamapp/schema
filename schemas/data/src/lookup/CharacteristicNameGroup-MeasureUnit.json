@@ -123,6 +123,6 @@
     "permille",
     "%"
   ],
-  "Toxicity": ["TU", "None", "mg/L", "mg/kg", "%"],
+  "Toxicity": ["TU", "mg/L", "mg/kg", "%"],
   "Not Assigned": ["mg/L", "mg/kg", "umol/L", "m/s", "m2/s", "m3/s"]
 }
