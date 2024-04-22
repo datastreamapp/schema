@@ -1,5 +1,6 @@
 {
   ".beta.-Heptachlor epoxide": "Organics, Pesticide",
+  ".gamma.-Hexachlorocyclohexane": "Organics, Pesticide",
   "(R)-Dichlorprop": "Organics, Pesticide",
   "1-Methylchrysene": "Organics, Other",
   "1-Propanol": "Organics, Other",
@@ -7,6 +8,7 @@
   "1,2-Dichloropropane": "Organics, Other",
   "1,2,3,4-Tetrahydronaphthalene": "Organics, Other",
   "1,2,6-Trimethylphenanthrene": "Organics, Other",
+  "1,3-Dichlorobenzene": "Organics, Other",
   "1,4,6,7-Tetramethylnaphthalene": "Organics, Other",
   "1,7-Dimethylfluorene": "Organics, Other",
   "1,7-Dimethylphenanthrene": "Organics, Other",
@@ -120,6 +122,7 @@
   "Methamphetamine": "Organics, Other",
   "Methylglyoxal": "Organics, Other",
   "Methylmercury(1+)": "Inorganics, Minor, Metals",
+  "Metobromuron": "Organics, Pesticide",
   "Metolachlor-d6": "Organics, Pesticide",
   "Moisture content": "Physical",
   "Monochlorodehydroabietic acid": "Organics, Other",
