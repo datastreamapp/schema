@@ -72,7 +72,7 @@ export const retire = (column, list) => {
   ].includes(column)) return [[], list]
   const arr = []
   // Remove retired items from list
-  const pattern = /\s*(\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[*]+)$/
+  const pattern = /\s*(\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/
   list = list
     .filter(item => ![
       // retired, but not removed yet
