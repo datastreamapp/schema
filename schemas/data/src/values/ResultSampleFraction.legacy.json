@@ -50,7 +50,8 @@
     "Unspecified",
     "Vapor",
     "Volatile",
-    "Weak Acid Diss"
+    "Weak Acid Diss",
+    "Yield"
   ],
   "maxLength": 25
 }

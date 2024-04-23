@@ -105,13 +105,17 @@
     "Wetland Estuarine-Pool",
     "Wetland Estuarine-Scrub-Shrub",
     "Wetland Estuarine-Tidal Creek",
+    "Wetland Lacustrine-Aquatic Bed",
     "Wetland Lacustrine-Emergent",
+    "Wetland Lacustrine-Unconsolidated Bottom",
     "Wetland Palustrine Pond",
     "Wetland Palustrine-Emergent",
     "Wetland Palustrine-Forested",
     "Wetland Palustrine-Moss-Lichen",
     "Wetland Palustrine-Shrub-Scrub",
+    "Wetland Riverine-Aquatic Bed",
     "Wetland Riverine-Emergent",
+    "Wetland Riverine-Unconsolidated Bottom",
     "Wetland Undifferentiated"
   ],
   "maxLength": 40
