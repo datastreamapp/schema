@@ -5,31 +5,31 @@ import { readFile, writeFile } from 'node:fs/promises'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // Build groups
-let characteristicNameGroups = await readFile(
+let CharacteristicWQXGroups = await readFile(
   join(__dirname, `../node_modules/wqx/groups/CharacteristicName.json`)
 ).then((res) => JSON.parse(res))
-let characteristicNameGroupsLocal = await readFile(
-  join(__dirname, `../lookup/CharacteristicName-CharacteristicNameGroup.json`)
+let CharacteristicWQXGroupsLocal = await readFile(
+  join(__dirname, `../lookup/CharacteristicName-CharacteristicWQXGroup.json`)
 ).then((res) => JSON.parse(res))
 
-let characteristicNameGroupMeasureUnitLocal = await readFile(
-  join(__dirname, `../lookup/CharacteristicNameGroup-MeasureUnit.json`)
+let CharacteristicWQXGroupMeasureUnitLocal = await readFile(
+  join(__dirname, `../lookup/CharacteristicWQXGroup-MeasureUnit.json`)
 ).then((res) => JSON.parse(res))
 
-for (const key in characteristicNameGroupsLocal) {
-  if (characteristicNameGroups[key] === characteristicNameGroupsLocal[key]) {
-    console.log(`CharacteristicNameGroupRedundant "${key}", safe to delete`)
-  } else if (characteristicNameGroups[key]) {
+for (const key in CharacteristicWQXGroupsLocal) {
+  if (CharacteristicWQXGroups[key] === CharacteristicWQXGroupsLocal[key]) {
+    console.log(`CharacteristicWQXGroupRedundant "${key}", safe to delete`)
+  } else if (CharacteristicWQXGroups[key]) {
     console.log(
-      `CharacteristicNameGroup "${key}":"${characteristicNameGroups[key]}" replace with "${characteristicNameGroupsLocal[key]}"`
+      `CharacteristicWQXGroup "${key}":"${CharacteristicWQXGroups[key]}" replace with "${CharacteristicWQXGroupsLocal[key]}"`
     )
   }
-  characteristicNameGroups[key] = characteristicNameGroupsLocal[key]
+  CharacteristicWQXGroups[key] = CharacteristicWQXGroupsLocal[key]
 }
 
 await writeFile(
-  join(__dirname, `/../lookup/CharacteristicName-CharacteristicNameGroup.json`),
-  JSON.stringify(characteristicNameGroups),
+  join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
+  JSON.stringify(CharacteristicWQXGroups),
   {
     encoding: 'utf8'
   }
@@ -42,19 +42,19 @@ let characteristicNames = await readFile(
 characteristicNames = characteristicNames.enum
 
 for (const characteristicName of characteristicNames) {
-  //console.log(characteristicName, characteristicNameGroups[characteristicName])
-  const group = characteristicNameGroups[characteristicName]
+  //console.log(characteristicName, CharacteristicWQXGroups[characteristicName])
+  const group = CharacteristicWQXGroups[characteristicName]
   if (
-    !characteristicNameGroups[characteristicName] ||
-    characteristicNameGroups[characteristicName] === 'Not Assigned'
+    !CharacteristicWQXGroups[characteristicName] ||
+    CharacteristicWQXGroups[characteristicName] === 'Not Assigned'
   ) {
     console.log(
-      `CharacteristicNameGroups "${characteristicNameGroups[characteristicName]}"`,
+      `CharacteristicWQXGroups "${CharacteristicWQXGroups[characteristicName]}"`,
       characteristicName
     )
-  } else if (!characteristicNameGroupMeasureUnitLocal[group]) {
+  } else if (!CharacteristicWQXGroupMeasureUnitLocal[group]) {
     console.log(
-      `CharacteristicNameGroups "${group}": Missing normalization mapping`,
+      `CharacteristicWQXGroups "${group}": Missing normalization mapping`,
       characteristicName
     )
   }
@@ -62,9 +62,9 @@ for (const characteristicName of characteristicNames) {
 
 // Export - Deprecate when using nodejs18
 for (const path of [
-  join(__dirname, `/../lookup/CharacteristicName-CharacteristicNameGroup.json`),
+  join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
   join(__dirname, `/../lookup/CharacteristicName-MeasureUnit.json`),
-  join(__dirname, `/../lookup/CharacteristicNameGroup-MeasureUnit.json`)
+  join(__dirname, `/../lookup/CharacteristicWQXGroup-MeasureUnit.json`)
 ]) {
   const json = await readFile(path).then((res) => JSON.parse(res))
   await writeFile(
