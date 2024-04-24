@@ -58,6 +58,15 @@ export const sort = (list) => {
   })
 }
 
+export const replaceRetired = (value) => {
+  const pattern = /\s*(\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/
+  if (pattern.test(value)) {
+    value = value.replace(pattern, '').trim()
+  }
+
+  return value
+}
+
 export const retire = (column, list) => {
   if (![
     // ***retired***
@@ -91,11 +100,12 @@ export const retire = (column, list) => {
       'Benzenamine, 2,5-dimethyl-4-[(1,1,2,2-tetrafluoroethyl)thio]-'
     ].includes(item))
     .map(item => {
-      if (pattern.test(item)) {
-        item = item.replace(pattern, '').trim()
-        arr.push(item)
+      const newValue = replaceRetired(item)
+      if (item !== newValue) {
+        // console.log(`Replaced retired ${column}: ${item} => ${newValue}`)
+        arr.push(newValue)
       }
-      return item
+      return newValue
     })
 
   //console.log('retire', '#/sec', arr.indexOf('#/sec'), arr)

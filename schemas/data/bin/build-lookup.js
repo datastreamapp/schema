@@ -1,6 +1,7 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { readFile, writeFile } from 'node:fs/promises'
+import { replaceRetired } from "./build-lib.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -16,20 +17,30 @@ let CharacteristicWQXGroupMeasureUnitLocal = await readFile(
   join(__dirname, `../lookup/CharacteristicWQXGroup-MeasureUnit.json`)
 ).then((res) => JSON.parse(res))
 
+// Update retired values
+const CharacteristicNameWQXGroups = {}
+for (const [key, value] of Object.entries(CharacteristicWQXGroups)) {
+  const newKey = replaceRetired(key)
+  CharacteristicNameWQXGroups[newKey] = value
+  if (newKey !== key) {
+    console.log(`Replaced retired CharacteristicName in Group lookup: ${key} => ${newKey}`)
+  }
+}
+
 for (const key in CharacteristicWQXGroupsLocal) {
-  if (CharacteristicWQXGroups[key] === CharacteristicWQXGroupsLocal[key]) {
+  if (CharacteristicNameWQXGroups[key] === CharacteristicWQXGroupsLocal[key]) {
     console.log(`CharacteristicWQXGroupRedundant "${key}", safe to delete`)
-  } else if (CharacteristicWQXGroups[key]) {
+  } else if (CharacteristicNameWQXGroups[key]) {
     console.log(
-      `CharacteristicWQXGroup "${key}":"${CharacteristicWQXGroups[key]}" replace with "${CharacteristicWQXGroupsLocal[key]}"`
+      `CharacteristicWQXGroup "${key}":"${CharacteristicNameWQXGroups[key]}" replace with "${CharacteristicWQXGroupsLocal[key]}"`
     )
   }
-  CharacteristicWQXGroups[key] = CharacteristicWQXGroupsLocal[key]
+  CharacteristicNameWQXGroups[key] = CharacteristicWQXGroupsLocal[key]
 }
 
 await writeFile(
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
-  JSON.stringify(CharacteristicWQXGroups),
+  JSON.stringify(CharacteristicNameWQXGroups),
   {
     encoding: 'utf8'
   }
@@ -43,13 +54,13 @@ characteristicNames = characteristicNames.enum
 
 for (const characteristicName of characteristicNames) {
   //console.log(characteristicName, CharacteristicWQXGroups[characteristicName])
-  const group = CharacteristicWQXGroups[characteristicName]
+  const group = CharacteristicNameWQXGroups[characteristicName]
   if (
-    !CharacteristicWQXGroups[characteristicName] ||
-    CharacteristicWQXGroups[characteristicName] === 'Not Assigned'
+    !CharacteristicNameWQXGroups[characteristicName] ||
+    CharacteristicNameWQXGroups[characteristicName] === 'Not Assigned'
   ) {
     console.log(
-      `CharacteristicWQXGroups "${CharacteristicWQXGroups[characteristicName]}"`,
+      `CharacteristicWQXGroups "${CharacteristicNameWQXGroups[characteristicName]}"`,
       characteristicName
     )
   } else if (!CharacteristicWQXGroupMeasureUnitLocal[group]) {
