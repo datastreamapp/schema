@@ -1,0 +1,34 @@
+{
+  "Ambient Air": {
+    "en": "Ambient Air",
+    "fr": null
+  },
+  "Ocean Water": {
+    "en": "Ocean Water",
+    "fr": null
+  },
+  "Porewater": {
+    "en": "Porewater",
+    "fr": null
+  },
+  "Rainwater": {
+    "en": "Rainwater",
+    "fr": null
+  },
+  "Stormwater": {
+    "en": "Stormwater",
+    "fr": null
+  },
+  "Subsurface Soil/Sediment": {
+    "en": "Subsurface Soil/Sediment",
+    "fr": null
+  },
+  "Surface Water": {
+    "en": "Surface Water",
+    "fr": null
+  },
+  "Surface Water Sediment": {
+    "en": "Surface Water Sediment",
+    "fr": null
+  }
+}

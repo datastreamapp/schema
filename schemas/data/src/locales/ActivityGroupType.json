@@ -1,0 +1,26 @@
+{
+  "Field Set": {
+    "en": "Field Set",
+    "fr": null
+  },
+  "Other": {
+    "en": "Other",
+    "fr": null
+  },
+  "QC Sample": {
+    "en": "QC Sample",
+    "fr": null
+  },
+  "Replicate": {
+    "en": "Replicate",
+    "fr": null
+  },
+  "Subsample": {
+    "en": "Subsample",
+    "fr": null
+  },
+  "Trip": {
+    "en": "Trip",
+    "fr": null
+  }
+}

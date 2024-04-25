@@ -1,0 +1,194 @@
+{
+  "as As": {
+    "en": "as As",
+    "fr": null
+  },
+  "as B": {
+    "en": "as B",
+    "fr": null
+  },
+  "as C3H6O2": {
+    "en": "as C3H6O2",
+    "fr": null
+  },
+  "as Ca": {
+    "en": "as Ca",
+    "fr": null
+  },
+  "as CaCO3": {
+    "en": "as CaCO3",
+    "fr": null
+  },
+  "as Cl": {
+    "en": "as Cl",
+    "fr": null
+  },
+  "as CN": {
+    "en": "as CN",
+    "fr": null
+  },
+  "as CO3": {
+    "en": "as CO3",
+    "fr": null
+  },
+  "as DPA": {
+    "en": "as DPA",
+    "fr": null
+  },
+  "as F": {
+    "en": "as F",
+    "fr": null
+  },
+  "as H": {
+    "en": "as H",
+    "fr": null
+  },
+  "as H2S": {
+    "en": "as H2S",
+    "fr": null
+  },
+  "as HCO3": {
+    "en": "as HCO3",
+    "fr": null
+  },
+  "as LAS": {
+    "en": "as LAS",
+    "fr": null
+  },
+  "as Mg": {
+    "en": "as Mg",
+    "fr": null
+  },
+  "as N": {
+    "en": "as N",
+    "fr": null
+  },
+  "as Na": {
+    "en": "as Na",
+    "fr": null
+  },
+  "as NaCL": {
+    "en": "as NaCL",
+    "fr": null
+  },
+  "as NH3": {
+    "en": "as NH3",
+    "fr": null
+  },
+  "as NH4": {
+    "en": "as NH4",
+    "fr": null
+  },
+  "as NO2": {
+    "en": "as NO2",
+    "fr": null
+  },
+  "as NO3": {
+    "en": "as NO3",
+    "fr": null
+  },
+  "as O2": {
+    "en": "as O2",
+    "fr": null
+  },
+  "as OH": {
+    "en": "as OH",
+    "fr": null
+  },
+  "as P": {
+    "en": "as P",
+    "fr": null
+  },
+  "as PO4": {
+    "en": "as PO4",
+    "fr": null
+  },
+  "as Ra": {
+    "en": "as Ra",
+    "fr": null
+  },
+  "as Ra226": {
+    "en": "as Ra226",
+    "fr": null
+  },
+  "as S": {
+    "en": "as S",
+    "fr": null
+  },
+  "as Se": {
+    "en": "as Se",
+    "fr": null
+  },
+  "as Si": {
+    "en": "as Si",
+    "fr": null
+  },
+  "as SiO2": {
+    "en": "as SiO2",
+    "fr": null
+  },
+  "as SO3": {
+    "en": "as SO3",
+    "fr": null
+  },
+  "as SO4": {
+    "en": "as SO4",
+    "fr": null
+  },
+  "as U3O8": {
+    "en": "as U3O8",
+    "fr": null
+  },
+  "as Unspecified": {
+    "en": "as Unspecified",
+    "fr": null
+  },
+  "of CH4": {
+    "en": "of CH4",
+    "fr": null
+  },
+  "of CO2": {
+    "en": "of CO2",
+    "fr": null
+  },
+  "of H2O": {
+    "en": "of H2O",
+    "fr": null
+  },
+  "of Inorganic C": {
+    "en": "of Inorganic C",
+    "fr": null
+  },
+  "of NH4": {
+    "en": "of NH4",
+    "fr": null
+  },
+  "of NO3": {
+    "en": "of NO3",
+    "fr": null
+  },
+  "of Organic C": {
+    "en": "of Organic C",
+    "fr": null
+  },
+  "of Organic N": {
+    "en": "of Organic N",
+    "fr": null
+  },
+  "of PO4": {
+    "en": "of PO4",
+    "fr": null
+  },
+  "of S": {
+    "en": "of S",
+    "fr": null
+  },
+  "of SO4": {
+    "en": "of SO4",
+    "fr": null
+  },
+  "of Unspecified": {
+    "en": "of Unspecified",
+    "fr": null
+  }
+}

@@ -18,7 +18,7 @@
     "locales"
   ],
   "scripts": {
-    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js",
+    "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js && node ./bin/build-locales.js",
     "build": "./bin/build",
     "test": "npm run build && c8 ava",
     "prepublishOnly": "npm test"
