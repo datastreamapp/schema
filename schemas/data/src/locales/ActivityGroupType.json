@@ -1,23 +1,23 @@
 {
   "Field Set": {
-    "en": "Field Set",
-    "fr": null
+    "en": "Field",
+    "fr": "Terrain"
   },
   "Other": {
     "en": "Other",
     "fr": null
   },
   "QC Sample": {
-    "en": "QC Sample",
-    "fr": null
+    "en": "Quality Control",
+    "fr": "Contrôle qualité"
   },
   "Replicate": {
     "en": "Replicate",
     "fr": null
   },
   "Subsample": {
-    "en": "Subsample",
-    "fr": null
+    "en": "Lab",
+    "fr": "Laboratoire"
   },
   "Trip": {
     "en": "Trip",
