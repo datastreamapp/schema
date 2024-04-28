@@ -1,61 +1,76 @@
 {
   "Atmosphere": {
+    "_": "Atmosphere",
     "en": "Atmosphere",
     "fr": null
   },
   "Canal Drainage": {
+    "_": "Canal Drainage",
     "en": "Canal Drainage",
     "fr": null
   },
   "Canal Irrigation": {
+    "_": "Canal Irrigation",
     "en": "Canal Irrigation",
     "fr": null
   },
   "Canal Transport": {
+    "_": "Canal Transport",
     "en": "Canal Transport",
     "fr": null
   },
   "Estuary": {
+    "_": "Estuary",
     "en": "Estuary",
     "fr": null
   },
   "Great Lake": {
+    "_": "Great Lake",
     "en": "Great Lake",
     "fr": null
   },
   "Lake/Pond": {
+    "_": "Lake/Pond",
     "en": "Lake/Pond",
     "fr": null
   },
   "Ocean": {
+    "_": "Ocean",
     "en": "Ocean",
     "fr": null
   },
   "Pond-Stormwater": {
+    "_": "Pond-Stormwater",
     "en": "Pond-Stormwater",
     "fr": null
   },
   "Reservoir": {
+    "_": "Reservoir",
     "en": "Reservoir",
     "fr": null
   },
   "River/Stream": {
+    "_": "River/Stream",
     "en": "River/Stream",
     "fr": null
   },
   "Spring": {
+    "_": "Spring",
     "en": "Spring",
     "fr": null
   },
   "Storm Sewer": {
+    "_": "Storm Sewer",
     "en": "Storm Sewer",
     "fr": null
   },
   "Unspecified": {
+    "_": "Unspecified",
     "en": "Unspecified",
     "fr": null
   },
   "Wetland": {
+    "_": "Wetland",
     "en": "Wetland",
     "fr": null
   }

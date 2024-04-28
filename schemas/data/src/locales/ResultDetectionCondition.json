@@ -1,0 +1,27 @@
+{
+  "Above Detection/Quantification Limit": {
+    "en": "Above Detection/Quantification Limit",
+    "fr": null,
+    "_": "Above Detection/Quantification Limit"
+  },
+  "Below Detection/Quantification Limit": {
+    "en": "Below Detection/Quantification Limit",
+    "fr": null,
+    "_": "Below Detection/Quantification Limit"
+  },
+  "Detected Not Quantified": {
+    "en": "Detected Not Quantified",
+    "fr": null,
+    "_": "Detected Not Quantified"
+  },
+  "Not Detected": {
+    "en": "Not Detected",
+    "fr": null,
+    "_": "Not Detected"
+  },
+  "Not Reported": {
+    "en": "Not Reported",
+    "fr": null,
+    "_": "Not Reported"
+  }
+}

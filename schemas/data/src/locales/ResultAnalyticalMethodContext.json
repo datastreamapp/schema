@@ -1,0 +1,127 @@
+{
+  "APHA": {
+    "en": "APHA",
+    "fr": null,
+    "_": "APHA"
+  },
+  "APHA_SM20ED": {
+    "en": "APHA_SM20ED",
+    "fr": null,
+    "_": "APHA_SM20ED"
+  },
+  "APHA_SM21ED": {
+    "en": "APHA_SM21ED",
+    "fr": null,
+    "_": "APHA_SM21ED"
+  },
+  "APHA_SM22ED": {
+    "en": "APHA_SM22ED",
+    "fr": null,
+    "_": "APHA_SM22ED"
+  },
+  "APHA_SM23ED": {
+    "en": "APHA_SM23ED",
+    "fr": null,
+    "_": "APHA_SM23ED"
+  },
+  "ASTM": {
+    "en": "ASTM",
+    "fr": null,
+    "_": "ASTM"
+  },
+  "DIN": {
+    "en": "DIN",
+    "fr": null,
+    "_": "DIN"
+  },
+  "DOI": {
+    "en": "DOI",
+    "fr": null,
+    "_": "DOI"
+  },
+  "EN": {
+    "en": "EN",
+    "fr": null,
+    "_": "EN"
+  },
+  "ENV/CANADA": {
+    "en": "ENV/CANADA",
+    "fr": null,
+    "_": "ENV/CANADA"
+  },
+  "ENVIROLOGIX": {
+    "en": "ENVIROLOGIX",
+    "fr": null,
+    "_": "ENVIROLOGIX"
+  },
+  "HACH": {
+    "en": "HACH",
+    "fr": null,
+    "_": "HACH"
+  },
+  "IDEXX": {
+    "en": "IDEXX",
+    "fr": null,
+    "_": "IDEXX"
+  },
+  "ISO": {
+    "en": "ISO",
+    "fr": null,
+    "_": "ISO"
+  },
+  "LACHAT": {
+    "en": "LACHAT",
+    "fr": null,
+    "_": "LACHAT"
+  },
+  "LaMOTTE": {
+    "en": "LaMOTTE",
+    "fr": null,
+    "_": "LaMOTTE"
+  },
+  "MICROLOGY LABS": {
+    "en": "MICROLOGY LABS",
+    "fr": null,
+    "_": "MICROLOGY LABS"
+  },
+  "ON MECP": {
+    "en": "ON MECP",
+    "fr": null,
+    "_": "ON MECP"
+  },
+  "PALINTEST LTD": {
+    "en": "PALINTEST LTD",
+    "fr": null,
+    "_": "PALINTEST LTD"
+  },
+  "PROPRIETARY": {
+    "en": "PROPRIETARY",
+    "fr": null,
+    "_": "PROPRIETARY"
+  },
+  "Seal": {
+    "en": "Seal",
+    "fr": null,
+    "_": "Seal"
+  },
+  "THERMO-SCIENTIFIC": {
+    "en": "THERMO-SCIENTIFIC",
+    "fr": null,
+    "_": "THERMO-SCIENTIFIC"
+  },
+  "USEPA": {
+    "en": "USEPA",
+    "fr": null,
+    "_": "USEPA"
+  },
+  "VMV": {
+    "en": "VMV",
+    "fr": null,
+    "_": "VMV"
+  },
+  "YSI": {
+    "en": "YSI",
+    "fr": null,
+    "_": "YSI"
+  }
+}

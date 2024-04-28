@@ -6,15 +6,21 @@ import { subset, sort } from "./build-lib.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const columns = [
-  // filters
-  "ActivityMediaName",
-  "ActivityGroupType",
-  //'CharacteristicGroup',
-  "CharacteristicName",
-  "MonitoringLocationType",
-  // display
-  "MethodSpeciation",
-  "ResultSampleFraction",
+  "ActivityMediaName", // filter
+  "ActivityGroupType", // filter
+  "ActivityType",
+  "CharacteristicName", // filter
+  //'CharacteristicGroup', // filter
+  "MethodSpeciation", // app display
+  "MonitoringLocationHorizontalCoordinateReferenceSystem",
+  "MonitoringLocationType", // app filter
+  "ResultAnalyticalMethodContext",
+  "ResultDetectionCondition",
+  "ResultDetectionQuantitationLimitType",
+  "ResultSampleFraction", // app display
+  "ResultStatusID",
+  "ResultValueType",
+  "SampleCollectionEquipmentName",
 ];
 
 const setup = async (column) => {
@@ -26,7 +32,11 @@ const setup = async (column) => {
   ).then((res) => JSON.parse(res));
 
   for (const value of allowedValues.enum) {
-    locales[value] ??= { en: value, fr: null };
+    locales[value] ??= {};
+    locales[value]["_"] ||= value;
+    locales[value].en ||= value;
+    locales[value].fr ||= null;
+
     if (!locales[value].en) {
       console.warn(`${column}["${value}"].en missing`);
     }

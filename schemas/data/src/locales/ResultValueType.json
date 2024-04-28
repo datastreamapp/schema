@@ -1,0 +1,27 @@
+{
+  "Actual": {
+    "en": "Actual",
+    "fr": null,
+    "_": "Actual"
+  },
+  "Blank Corrected": {
+    "en": "Blank Corrected",
+    "fr": null,
+    "_": "Blank Corrected"
+  },
+  "Calculated": {
+    "en": "Calculated",
+    "fr": null,
+    "_": "Calculated"
+  },
+  "Control Adjusted": {
+    "en": "Control Adjusted",
+    "fr": null,
+    "_": "Control Adjusted"
+  },
+  "Estimated": {
+    "en": "Estimated",
+    "fr": null,
+    "_": "Estimated"
+  }
+}

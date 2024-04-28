@@ -1,0 +1,192 @@
+{
+  "Bucket": {
+    "en": "Bucket",
+    "fr": null,
+    "_": "Bucket"
+  },
+  "DH-81": {
+    "en": "DH-81",
+    "fr": null,
+    "_": "DH-81"
+  },
+  "DH-95": {
+    "en": "DH-95",
+    "fr": null,
+    "_": "DH-95"
+  },
+  "Diffusion Gradient in Thin Film": {
+    "en": "Diffusion Gradient in Thin Film",
+    "fr": null,
+    "_": "Diffusion Gradient in Thin Film"
+  },
+  "Gravity Corer (Generic)": {
+    "en": "Gravity Corer (Generic)",
+    "fr": null,
+    "_": "Gravity Corer (Generic)"
+  },
+  "Kemmerer Bottle": {
+    "en": "Kemmerer Bottle",
+    "fr": null,
+    "_": "Kemmerer Bottle"
+  },
+  "Nansen Bottle": {
+    "en": "Nansen Bottle",
+    "fr": null,
+    "_": "Nansen Bottle"
+  },
+  "Niskin Bottle": {
+    "en": "Niskin Bottle",
+    "fr": null,
+    "_": "Niskin Bottle"
+  },
+  "Osterberg Piston Sampler": {
+    "en": "Osterberg Piston Sampler",
+    "fr": null,
+    "_": "Osterberg Piston Sampler"
+  },
+  "pH Paper": {
+    "en": "pH Paper",
+    "fr": null,
+    "_": "pH Paper"
+  },
+  "Polar Orga. Chem. Integrative Sampler": {
+    "en": "Polar Orga. Chem. Integrative Sampler",
+    "fr": null,
+    "_": "Polar Orga. Chem. Integrative Sampler"
+  },
+  "Probe/Sensor": {
+    "en": "Probe/Sensor",
+    "fr": null,
+    "_": "Probe/Sensor"
+  },
+  "Pump/Air Lift": {
+    "en": "Pump/Air Lift",
+    "fr": null,
+    "_": "Pump/Air Lift"
+  },
+  "Pump/Bailer": {
+    "en": "Pump/Bailer",
+    "fr": null,
+    "_": "Pump/Bailer"
+  },
+  "Pump/Centrifugal": {
+    "en": "Pump/Centrifugal",
+    "fr": null,
+    "_": "Pump/Centrifugal"
+  },
+  "Pump/Jet": {
+    "en": "Pump/Jet",
+    "fr": null,
+    "_": "Pump/Jet"
+  },
+  "Pump/Non-Submersible": {
+    "en": "Pump/Non-Submersible",
+    "fr": null,
+    "_": "Pump/Non-Submersible"
+  },
+  "Pump/Piston": {
+    "en": "Pump/Piston",
+    "fr": null,
+    "_": "Pump/Piston"
+  },
+  "Pump/Rotary": {
+    "en": "Pump/Rotary",
+    "fr": null,
+    "_": "Pump/Rotary"
+  },
+  "Pump/Submersible": {
+    "en": "Pump/Submersible",
+    "fr": null,
+    "_": "Pump/Submersible"
+  },
+  "Pump/Turbine": {
+    "en": "Pump/Turbine",
+    "fr": null,
+    "_": "Pump/Turbine"
+  },
+  "Secchi Disk": {
+    "en": "Secchi Disk",
+    "fr": null,
+    "_": "Secchi Disk"
+  },
+  "Sediment peeper": {
+    "en": "Sediment peeper",
+    "fr": null,
+    "_": "Sediment peeper"
+  },
+  "Sediment sub-core": {
+    "en": "Sediment sub-core",
+    "fr": null,
+    "_": "Sediment sub-core"
+  },
+  "Sediment Trap": {
+    "en": "Sediment Trap",
+    "fr": null,
+    "_": "Sediment Trap"
+  },
+  "Semipermeable Membrane Device": {
+    "en": "Semipermeable Membrane Device",
+    "fr": null,
+    "_": "Semipermeable Membrane Device"
+  },
+  "Syringe": {
+    "en": "Syringe",
+    "fr": null,
+    "_": "Syringe"
+  },
+  "Test strip": {
+    "en": "Test strip",
+    "fr": null,
+    "_": "Test strip"
+  },
+  "Turbidimeter": {
+    "en": "Turbidimeter",
+    "fr": null,
+    "_": "Turbidimeter"
+  },
+  "Turbidity Tube": {
+    "en": "Turbidity Tube",
+    "fr": null,
+    "_": "Turbidity Tube"
+  },
+  "Van Dorn Bottle": {
+    "en": "Van Dorn Bottle",
+    "fr": null,
+    "_": "Van Dorn Bottle"
+  },
+  "Variable voltage pulsator unit": {
+    "en": "Variable voltage pulsator unit",
+    "fr": null,
+    "_": "Variable voltage pulsator unit"
+  },
+  "Vinyl Tube": {
+    "en": "Vinyl Tube",
+    "fr": null,
+    "_": "Vinyl Tube"
+  },
+  "Water Bottle": {
+    "en": "Water Bottle",
+    "fr": null,
+    "_": "Water Bottle"
+  },
+  "Water Sampler (Other)": {
+    "en": "Water Sampler (Other)",
+    "fr": null,
+    "_": "Water Sampler (Other)"
+  },
+  "WBH-96": {
+    "en": "WBH-96",
+    "fr": null,
+    "_": "WBH-96"
+  },
+  "Whirl-pak bag": {
+    "en": "Whirl-pak bag",
+    "fr": null,
+    "_": "Whirl-pak bag"
+  },
+  "Wide mouth glass jar": {
+    "en": "Wide mouth glass jar",
+    "fr": null,
+    "_": "Wide mouth glass jar"
+  }
+}

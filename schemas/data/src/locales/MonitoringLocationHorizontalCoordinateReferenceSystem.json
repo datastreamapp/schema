@@ -1,0 +1,87 @@
+{
+  "AMSMA": {
+    "en": "AMSMA",
+    "fr": null,
+    "_": "AMSMA"
+  },
+  "ASTRO": {
+    "en": "ASTRO",
+    "fr": null,
+    "_": "ASTRO"
+  },
+  "GUAM": {
+    "en": "GUAM",
+    "fr": null,
+    "_": "GUAM"
+  },
+  "HARN": {
+    "en": "HARN",
+    "fr": null,
+    "_": "HARN"
+  },
+  "JHNSN": {
+    "en": "JHNSN",
+    "fr": null,
+    "_": "JHNSN"
+  },
+  "NAD27": {
+    "en": "NAD27",
+    "fr": null,
+    "_": "NAD27"
+  },
+  "NAD83": {
+    "en": "NAD83",
+    "fr": null,
+    "_": "NAD83"
+  },
+  "OLDHI": {
+    "en": "OLDHI",
+    "fr": null,
+    "_": "OLDHI"
+  },
+  "OTHER": {
+    "en": "OTHER",
+    "fr": null,
+    "_": "OTHER"
+  },
+  "PR": {
+    "en": "PR",
+    "fr": null,
+    "_": "PR"
+  },
+  "SGEOR": {
+    "en": "SGEOR",
+    "fr": null,
+    "_": "SGEOR"
+  },
+  "SLAWR": {
+    "en": "SLAWR",
+    "fr": null,
+    "_": "SLAWR"
+  },
+  "SPAUL": {
+    "en": "SPAUL",
+    "fr": null,
+    "_": "SPAUL"
+  },
+  "UNKWN": {
+    "en": "UNKWN",
+    "fr": null,
+    "_": "UNKWN"
+  },
+  "WAKE": {
+    "en": "WAKE",
+    "fr": null,
+    "_": "WAKE"
+  },
+  "WGS72": {
+    "en": "WGS72",
+    "fr": null,
+    "_": "WGS72"
+  },
+  "WGS84": {
+    "en": "WGS84",
+    "fr": null,
+    "_": "WGS84"
+  }
+}

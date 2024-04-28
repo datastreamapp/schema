@@ -1,5142 +1,6427 @@
 {
   ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid": {
     "en": ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid",
-    "fr": null
+    "fr": null,
+    "_": ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid"
   },
   ".alpha.-Endosulfan": {
     "en": ".alpha.-Endosulfan",
-    "fr": null
+    "fr": null,
+    "_": ".alpha.-Endosulfan"
   },
   ".alpha.-Hexachlorocyclohexane": {
     "en": ".alpha.-Hexachlorocyclohexane",
-    "fr": null
+    "fr": null,
+    "_": ".alpha.-Hexachlorocyclohexane"
   },
   ".alpha.,2,6-Trichlorotoluene": {
     "en": ".alpha.,2,6-Trichlorotoluene",
-    "fr": null
+    "fr": null,
+    "_": ".alpha.,2,6-Trichlorotoluene"
   },
   ".beta.-Endosulfan": {
     "en": ".beta.-Endosulfan",
-    "fr": null
+    "fr": null,
+    "_": ".beta.-Endosulfan"
   },
   ".beta.-Heptachlor epoxide": {
     "en": ".beta.-Heptachlor epoxide",
-    "fr": null
+    "fr": null,
+    "_": ".beta.-Heptachlor epoxide"
   },
   ".beta.-Hexachlorocyclohexane": {
     "en": ".beta.-Hexachlorocyclohexane",
-    "fr": null
+    "fr": null,
+    "_": ".beta.-Hexachlorocyclohexane"
   },
   ".delta.-Hexachlorocyclohexane": {
     "en": ".delta.-Hexachlorocyclohexane",
-    "fr": null
+    "fr": null,
+    "_": ".delta.-Hexachlorocyclohexane"
   },
   ".gamma.-Hexachlorocyclohexane": {
     "en": ".gamma.-Hexachlorocyclohexane",
-    "fr": null
+    "fr": null,
+    "_": ".gamma.-Hexachlorocyclohexane"
   },
   ".lambda.-Cyhalothrin": {
     "en": ".lambda.-Cyhalothrin",
-    "fr": null
+    "fr": null,
+    "_": ".lambda.-Cyhalothrin"
   },
   "(R)-Dichlorprop": {
     "en": "(R)-Dichlorprop",
-    "fr": null
+    "fr": null,
+    "_": "(R)-Dichlorprop"
   },
   "1-(3,4-dichlorophenyl)-3-methyl urea": {
     "en": "1-(3,4-dichlorophenyl)-3-methyl urea",
-    "fr": null
+    "fr": null,
+    "_": "1-(3,4-dichlorophenyl)-3-methyl urea"
   },
   "1-Butanol": {
     "en": "1-Butanol",
-    "fr": null
+    "fr": null,
+    "_": "1-Butanol"
   },
   "1-Heptanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,7-pentadecafluoro-": {
     "en": "1-Heptanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,7-pentadecafluoro-",
-    "fr": null
+    "fr": null,
+    "_": "1-Heptanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,7-pentadecafluoro-"
   },
   "1-Methylchrysene": {
     "en": "1-Methylchrysene",
-    "fr": null
+    "fr": null,
+    "_": "1-Methylchrysene"
   },
   "1-Methylnaphthalene": {
     "en": "1-Methylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "1-Methylnaphthalene"
   },
   "1-Methylphenanthrene": {
     "en": "1-Methylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "1-Methylphenanthrene"
   },
   "1-Naphthol": {
     "en": "1-Naphthol",
-    "fr": null
+    "fr": null,
+    "_": "1-Naphthol"
   },
   "1-Naphthol-d8": {
     "en": "1-Naphthol-d8",
-    "fr": null
+    "fr": null,
+    "_": "1-Naphthol-d8"
   },
   "1-Pentanol": {
     "en": "1-Pentanol",
-    "fr": null
+    "fr": null,
+    "_": "1-Pentanol"
   },
   "1-Phenanthrenecarboxylic acid, 1,2,3,4,4a,4b,5,9,10,10a-decahydro-1,4a-dimethyl-7-(1-methylethyl)-, (1R-(1.alpha.,4a.beta., 4b.alpha.,10a.alpha.))-": {
     "en": "1-Phenanthrenecarboxylic acid, 1,2,3,4,4a,4b,5,9,10,10a-decahydro-1,4a-dimethyl-7-(1-methylethyl)-, (1R-(1.alpha.,4a.beta., 4b.alpha.,10a.alpha.))-",
-    "fr": null
+    "fr": null,
+    "_": "1-Phenanthrenecarboxylic acid, 1,2,3,4,4a,4b,5,9,10,10a-decahydro-1,4a-dimethyl-7-(1-methylethyl)-, (1R-(1.alpha.,4a.beta., 4b.alpha.,10a.alpha.))-"
   },
   "1-Propanol": {
     "en": "1-Propanol",
-    "fr": null
+    "fr": null,
+    "_": "1-Propanol"
   },
   "1,1-Dichloroethane": {
     "en": "1,1-Dichloroethane",
-    "fr": null
+    "fr": null,
+    "_": "1,1-Dichloroethane"
   },
   "1,1-Dichloroethylene": {
     "en": "1,1-Dichloroethylene",
-    "fr": null
+    "fr": null,
+    "_": "1,1-Dichloroethylene"
   },
   "1,1-Dichloropropene": {
     "en": "1,1-Dichloropropene",
-    "fr": null
+    "fr": null,
+    "_": "1,1-Dichloropropene"
   },
   "1,1,1-Trichloroethane": {
     "en": "1,1,1-Trichloroethane",
-    "fr": null
+    "fr": null,
+    "_": "1,1,1-Trichloroethane"
   },
   "1,1,1,2-Tetrachloroethane": {
     "en": "1,1,1,2-Tetrachloroethane",
-    "fr": null
+    "fr": null,
+    "_": "1,1,1,2-Tetrachloroethane"
   },
   "1,1,2-Trichloroethane": {
     "en": "1,1,2-Trichloroethane",
-    "fr": null
+    "fr": null,
+    "_": "1,1,2-Trichloroethane"
   },
   "1,1,2,2-Tetrachloroethane": {
     "en": "1,1,2,2-Tetrachloroethane",
-    "fr": null
+    "fr": null,
+    "_": "1,1,2,2-Tetrachloroethane"
   },
   "1,2-Dibromo-3-chloropropane": {
     "en": "1,2-Dibromo-3-chloropropane",
-    "fr": null
+    "fr": null,
+    "_": "1,2-Dibromo-3-chloropropane"
   },
   "1,2-Dichlorobenzene-d4": {
     "en": "1,2-Dichlorobenzene-d4",
-    "fr": null
+    "fr": null,
+    "_": "1,2-Dichlorobenzene-d4"
   },
   "1,2-Dichloroethane": {
     "en": "1,2-Dichloroethane",
-    "fr": null
+    "fr": null,
+    "_": "1,2-Dichloroethane"
   },
   "1,2-Dichloroethane-d4": {
     "en": "1,2-Dichloroethane-d4",
-    "fr": null
+    "fr": null,
+    "_": "1,2-Dichloroethane-d4"
   },
   "1,2-Dichloropropane": {
     "en": "1,2-Dichloropropane",
-    "fr": null
+    "fr": null,
+    "_": "1,2-Dichloropropane"
   },
   "1,2-Dimethylnaphthalene": {
     "en": "1,2-Dimethylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "1,2-Dimethylnaphthalene"
   },
   "1,2-Diphenylhydrazine": {
     "en": "1,2-Diphenylhydrazine",
-    "fr": null
+    "fr": null,
+    "_": "1,2-Diphenylhydrazine"
   },
   "1,2,3-Trichlorobenzene": {
     "en": "1,2,3-Trichlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,3-Trichlorobenzene"
   },
   "1,2,3-Trichloropropane": {
     "en": "1,2,3-Trichloropropane",
-    "fr": null
+    "fr": null,
+    "_": "1,2,3-Trichloropropane"
   },
   "1,2,3,4-Tetrachloro-5,6-dimethoxybenzene": {
     "en": "1,2,3,4-Tetrachloro-5,6-dimethoxybenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,3,4-Tetrachloro-5,6-dimethoxybenzene"
   },
   "1,2,3,4-Tetrachlorobenzene": {
     "en": "1,2,3,4-Tetrachlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,3,4-Tetrachlorobenzene"
   },
   "1,2,3,4-Tetrahydronaphthalene": {
     "en": "1,2,3,4-Tetrahydronaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,3,4-Tetrahydronaphthalene"
   },
   "1,2,3,5-Tetrachlorobenzene": {
     "en": "1,2,3,5-Tetrachlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,3,5-Tetrachlorobenzene"
   },
   "1,2,4-Trichlorobenzene": {
     "en": "1,2,4-Trichlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,4-Trichlorobenzene"
   },
   "1,2,4-Trimethylbenzene": {
     "en": "1,2,4-Trimethylbenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,4-Trimethylbenzene"
   },
   "1,2,4,5-Tetrachlorobenzene": {
     "en": "1,2,4,5-Tetrachlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,4,5-Tetrachlorobenzene"
   },
   "1,2,6-Trimethylphenanthrene": {
     "en": "1,2,6-Trimethylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "1,2,6-Trimethylphenanthrene"
   },
   "1,3-Dichlorobenzene": {
     "en": "1,3-Dichlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,3-Dichlorobenzene"
   },
   "1,3-Dichloropropane": {
     "en": "1,3-Dichloropropane",
-    "fr": null
+    "fr": null,
+    "_": "1,3-Dichloropropane"
   },
   "1,3-Dichloropropene": {
     "en": "1,3-Dichloropropene",
-    "fr": null
+    "fr": null,
+    "_": "1,3-Dichloropropene"
   },
   "1,3,4,6,7,8-Hexahydro-4,6,6,7,8,8-hexamethylcyclopenta[g]-2-benzopyran": {
     "en": "1,3,4,6,7,8-Hexahydro-4,6,6,7,8,8-hexamethylcyclopenta[g]-2-benzopyran",
-    "fr": null
+    "fr": null,
+    "_": "1,3,4,6,7,8-Hexahydro-4,6,6,7,8,8-hexamethylcyclopenta[g]-2-benzopyran"
   },
   "1,3,5-Trichlorobenzene": {
     "en": "1,3,5-Trichlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,3,5-Trichlorobenzene"
   },
   "1,3,5-Trimethylbenzene": {
     "en": "1,3,5-Trimethylbenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,3,5-Trimethylbenzene"
   },
   "1,4-Dichlorobenzene-d4": {
     "en": "1,4-Dichlorobenzene-d4",
-    "fr": null
+    "fr": null,
+    "_": "1,4-Dichlorobenzene-d4"
   },
   "1,4-Difluorobenzene": {
     "en": "1,4-Difluorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "1,4-Difluorobenzene"
   },
   "1,4,6,7-Tetramethylnaphthalene": {
     "en": "1,4,6,7-Tetramethylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "1,4,6,7-Tetramethylnaphthalene"
   },
   "1,6,7-Trimethylnaphthalene": {
     "en": "1,6,7-Trimethylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "1,6,7-Trimethylnaphthalene"
   },
   "1,7-Dimethylfluorene": {
     "en": "1,7-Dimethylfluorene",
-    "fr": null
+    "fr": null,
+    "_": "1,7-Dimethylfluorene"
   },
   "1,7-Dimethylphenanthrene": {
     "en": "1,7-Dimethylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "1,7-Dimethylphenanthrene"
   },
   "1,8-Dimethylphenanthrene": {
     "en": "1,8-Dimethylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "1,8-Dimethylphenanthrene"
   },
   "12-Chlorodehydroabietic acid": {
     "en": "12-Chlorodehydroabietic acid",
-    "fr": null
+    "fr": null,
+    "_": "12-Chlorodehydroabietic acid"
   },
   "14-Chlorodehydroabietic acid": {
     "en": "14-Chlorodehydroabietic acid",
-    "fr": null
+    "fr": null,
+    "_": "14-Chlorodehydroabietic acid"
   },
   "1rs Cis-Permethrin": {
     "en": "1rs Cis-Permethrin",
-    "fr": null
+    "fr": null,
+    "_": "1rs Cis-Permethrin"
   },
   "2-(Thiocyanomethylthio)Benzothiazole": {
     "en": "2-(Thiocyanomethylthio)Benzothiazole",
-    "fr": null
+    "fr": null,
+    "_": "2-(Thiocyanomethylthio)Benzothiazole"
   },
   "2-Butanol": {
     "en": "2-Butanol",
-    "fr": null
+    "fr": null,
+    "_": "2-Butanol"
   },
   "2-Chloro-4-isopropylamino-6-amino-s-triazine": {
     "en": "2-Chloro-4-isopropylamino-6-amino-s-triazine",
-    "fr": null
+    "fr": null,
+    "_": "2-Chloro-4-isopropylamino-6-amino-s-triazine"
   },
   "2-Chloro-4,6-diamino-s-triazine": {
     "en": "2-Chloro-4,6-diamino-s-triazine",
-    "fr": null
+    "fr": null,
+    "_": "2-Chloro-4,6-diamino-s-triazine"
   },
   "2-Chloroethylvinylether": {
     "en": "2-Chloroethylvinylether",
-    "fr": null
+    "fr": null,
+    "_": "2-Chloroethylvinylether"
   },
   "2-Chloronaphthalene": {
     "en": "2-Chloronaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "2-Chloronaphthalene"
   },
   "2-Chlorophenol-d4": {
     "en": "2-Chlorophenol-d4",
-    "fr": null
+    "fr": null,
+    "_": "2-Chlorophenol-d4"
   },
   "2-Choro-6-ethylamino-4-amino-s-triazine": {
     "en": "2-Choro-6-ethylamino-4-amino-s-triazine",
-    "fr": null
+    "fr": null,
+    "_": "2-Choro-6-ethylamino-4-amino-s-triazine"
   },
   "2-Fluorobiphenyl": {
     "en": "2-Fluorobiphenyl",
-    "fr": null
+    "fr": null,
+    "_": "2-Fluorobiphenyl"
   },
   "2-Hydroxyatrazine": {
     "en": "2-Hydroxyatrazine",
-    "fr": null
+    "fr": null,
+    "_": "2-Hydroxyatrazine"
   },
   "2-Methylanthracene": {
     "en": "2-Methylanthracene",
-    "fr": null
+    "fr": null,
+    "_": "2-Methylanthracene"
   },
   "2-Methyldibenzothiophenes/3-Methyldibenzothiophenes": {
     "en": "2-Methyldibenzothiophenes/3-Methyldibenzothiophenes",
-    "fr": null
+    "fr": null,
+    "_": "2-Methyldibenzothiophenes/3-Methyldibenzothiophenes"
   },
   "2-Methylfluorene": {
     "en": "2-Methylfluorene",
-    "fr": null
+    "fr": null,
+    "_": "2-Methylfluorene"
   },
   "2-Methylnaphthalene": {
     "en": "2-Methylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "2-Methylnaphthalene"
   },
   "2-Methylnaphthalene-D10": {
     "en": "2-Methylnaphthalene-D10",
-    "fr": null
+    "fr": null,
+    "_": "2-Methylnaphthalene-D10"
   },
   "2-Methylphenanthrene": {
     "en": "2-Methylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "2-Methylphenanthrene"
   },
   "2,2-Dichloropropane": {
     "en": "2,2-Dichloropropane",
-    "fr": null
+    "fr": null,
+    "_": "2,2-Dichloropropane"
   },
   "2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene": {
     "en": "2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene",
-    "fr": null
+    "fr": null,
+    "_": "2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene"
   },
   "2,2'-[1,2 ethanediylbis(oxy)]bis-ethanol diacetate": {
     "en": "2,2'-[1,2 ethanediylbis(oxy)]bis-ethanol diacetate",
-    "fr": null
+    "fr": null,
+    "_": "2,2'-[1,2 ethanediylbis(oxy)]bis-ethanol diacetate"
   },
   "2,2',3,3',4-Pentachlorobiphenyl": {
     "en": "2,2',3,3',4-Pentachlorobiphenyl",
-    "fr": null
+    "fr": null,
+    "_": "2,2',3,3',4-Pentachlorobiphenyl"
   },
   "2,2',3,3',4,4'-Hexachlorobiphenyl": {
     "en": "2,2',3,3',4,4'-Hexachlorobiphenyl",
-    "fr": null
+    "fr": null,
+    "_": "2,2',3,3',4,4'-Hexachlorobiphenyl"
   },
   "2,2',3,4,4',5'-Hexabromodiphenyl ether": {
     "en": "2,2',3,4,4',5'-Hexabromodiphenyl ether",
-    "fr": null
+    "fr": null,
+    "_": "2,2',3,4,4',5'-Hexabromodiphenyl ether"
   },
   "2,2',4,4'-Tetrabromodiphenyl ether": {
     "en": "2,2',4,4'-Tetrabromodiphenyl ether",
-    "fr": null
+    "fr": null,
+    "_": "2,2',4,4'-Tetrabromodiphenyl ether"
   },
   "2,2',4,4'-Tetrachlorobiphenyl": {
     "en": "2,2',4,4'-Tetrachlorobiphenyl",
-    "fr": null
+    "fr": null,
+    "_": "2,2',4,4'-Tetrachlorobiphenyl"
   },
   "2,3-Dichlorophenol": {
     "en": "2,3-Dichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3-Dichlorophenol"
   },
   "2,3,3-tris(4-methoxyphenyl)-N,N-dimethylprop-2-en-1-amine": {
     "en": "2,3,3-tris(4-methoxyphenyl)-N,N-dimethylprop-2-en-1-amine",
-    "fr": null
+    "fr": null,
+    "_": "2,3,3-tris(4-methoxyphenyl)-N,N-dimethylprop-2-en-1-amine"
   },
   "2,3,4-Trichlorophenol": {
     "en": "2,3,4-Trichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,4-Trichlorophenol"
   },
   "2,3,4,5- & 2,3,5,6- Tetrachlorophenol": {
     "en": "2,3,4,5- & 2,3,5,6- Tetrachlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,4,5- & 2,3,5,6- Tetrachlorophenol"
   },
   "2,3,4,5-Tetrachlorophenol": {
     "en": "2,3,4,5-Tetrachlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,4,5-Tetrachlorophenol"
   },
   "2,3,4,6-Tetrachlorophenol": {
     "en": "2,3,4,6-Tetrachlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,4,6-Tetrachlorophenol"
   },
   "2,3,4,6-Tetrachlorophenol mixt. with 2,3,5,6-Tetrachlorophenol": {
     "en": "2,3,4,6-Tetrachlorophenol mixt. with 2,3,5,6-Tetrachlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,4,6-Tetrachlorophenol mixt. with 2,3,5,6-Tetrachlorophenol"
   },
   "2,3,5-Trichlorophenol": {
     "en": "2,3,5-Trichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,5-Trichlorophenol"
   },
   "2,3,5,6-Tetrachlorophenol": {
     "en": "2,3,5,6-Tetrachlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,5,6-Tetrachlorophenol"
   },
   "2,3,6-Trichlorophenol": {
     "en": "2,3,6-Trichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,3,6-Trichlorophenol"
   },
   "2,3,6-Trichlorotoluene": {
     "en": "2,3,6-Trichlorotoluene",
-    "fr": null
+    "fr": null,
+    "_": "2,3,6-Trichlorotoluene"
   },
   "2,3,6-Trimethylnaphthalene": {
     "en": "2,3,6-Trimethylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "2,3,6-Trimethylnaphthalene"
   },
   "2,4- & 2,5-Dichlorophenol": {
     "en": "2,4- & 2,5-Dichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4- & 2,5-Dichlorophenol"
   },
   "2,4-D": {
     "en": "2,4-D",
-    "fr": null
+    "fr": null,
+    "_": "2,4-D"
   },
   "2,4-DB": {
     "en": "2,4-DB",
-    "fr": null
+    "fr": null,
+    "_": "2,4-DB"
   },
   "2,4-Dichlorophenol": {
     "en": "2,4-Dichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dichlorophenol"
   },
   "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol": {
     "en": "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol"
   },
   "2,4-Dichlorophenol-d3": {
     "en": "2,4-Dichlorophenol-d3",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dichlorophenol-d3"
   },
   "2,4-Dichlorophenylacetic acid": {
     "en": "2,4-Dichlorophenylacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dichlorophenylacetic acid"
   },
   "2,4-Dimethyldibenzothiophene": {
     "en": "2,4-Dimethyldibenzothiophene",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dimethyldibenzothiophene"
   },
   "2,4-Dimethylphenol": {
     "en": "2,4-Dimethylphenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dimethylphenol"
   },
   "2,4-Dinitrophenol": {
     "en": "2,4-Dinitrophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dinitrophenol"
   },
   "2,4-Dinitrotoluene": {
     "en": "2,4-Dinitrotoluene",
-    "fr": null
+    "fr": null,
+    "_": "2,4-Dinitrotoluene"
   },
   "2,4,4'-Tribromodiphenyl ether": {
     "en": "2,4,4'-Tribromodiphenyl ether",
-    "fr": null
+    "fr": null,
+    "_": "2,4,4'-Tribromodiphenyl ether"
   },
   "2,4,5-T": {
     "en": "2,4,5-T",
-    "fr": null
+    "fr": null,
+    "_": "2,4,5-T"
   },
   "2,4,5-Trichlorophenol": {
     "en": "2,4,5-Trichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4,5-Trichlorophenol"
   },
   "2,4,5-Trichlorotoluene": {
     "en": "2,4,5-Trichlorotoluene",
-    "fr": null
+    "fr": null,
+    "_": "2,4,5-Trichlorotoluene"
   },
   "2,4,6-Tribromophenol": {
     "en": "2,4,6-Tribromophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4,6-Tribromophenol"
   },
   "2,4,6-Trichlorophenol": {
     "en": "2,4,6-Trichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,4,6-Trichlorophenol"
   },
   "2,4,6-Trinitro-5-tert-butyl-m-xylene": {
     "en": "2,4,6-Trinitro-5-tert-butyl-m-xylene",
-    "fr": null
+    "fr": null,
+    "_": "2,4,6-Trinitro-5-tert-butyl-m-xylene"
   },
   "2,5-Dibromobenzoic Acid": {
     "en": "2,5-Dibromobenzoic Acid",
-    "fr": null
+    "fr": null,
+    "_": "2,5-Dibromobenzoic Acid"
   },
   "2,6-Dichlorobenzamide": {
     "en": "2,6-Dichlorobenzamide",
-    "fr": null
+    "fr": null,
+    "_": "2,6-Dichlorobenzamide"
   },
   "2,6-Dichlorophenol": {
     "en": "2,6-Dichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "2,6-Dichlorophenol"
   },
   "2,6-Dimethylnaphthalene": {
     "en": "2,6-Dimethylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "2,6-Dimethylnaphthalene"
   },
   "2,6-Dimethylnaphthalene-D12": {
     "en": "2,6-Dimethylnaphthalene-D12",
-    "fr": null
+    "fr": null,
+    "_": "2,6-Dimethylnaphthalene-D12"
   },
   "2,6-Dimethylphenanthrene": {
     "en": "2,6-Dimethylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "2,6-Dimethylphenanthrene"
   },
   "2,6-Dinitrotoluene": {
     "en": "2,6-Dinitrotoluene",
-    "fr": null
+    "fr": null,
+    "_": "2,6-Dinitrotoluene"
   },
   "3-Hydroxycarbofuran": {
     "en": "3-Hydroxycarbofuran",
-    "fr": null
+    "fr": null,
+    "_": "3-Hydroxycarbofuran"
   },
   "3-Iodo-2-propynyl butyl carbamate": {
     "en": "3-Iodo-2-propynyl butyl carbamate",
-    "fr": null
+    "fr": null,
+    "_": "3-Iodo-2-propynyl butyl carbamate"
   },
   "3-Methylcholanthrene": {
     "en": "3-Methylcholanthrene",
-    "fr": null
+    "fr": null,
+    "_": "3-Methylcholanthrene"
   },
   "3-Methylfluoranthene/Benzo[a]fluorene": {
     "en": "3-Methylfluoranthene/Benzo[a]fluorene",
-    "fr": null
+    "fr": null,
+    "_": "3-Methylfluoranthene/Benzo[a]fluorene"
   },
   "3-Methylphenanthrene": {
     "en": "3-Methylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "3-Methylphenanthrene"
   },
   "3-Pyridinecarboxamide, N-(2,4-difluorophenyl)-2-[3-(trifluoromethyl)phenoxy]-": {
     "en": "3-Pyridinecarboxamide, N-(2,4-difluorophenyl)-2-[3-(trifluoromethyl)phenoxy]-",
-    "fr": null
+    "fr": null,
+    "_": "3-Pyridinecarboxamide, N-(2,4-difluorophenyl)-2-[3-(trifluoromethyl)phenoxy]-"
   },
   "3,3'-Dichlorobenzidine": {
     "en": "3,3'-Dichlorobenzidine",
-    "fr": null
+    "fr": null,
+    "_": "3,3'-Dichlorobenzidine"
   },
   "3,3',5,5'-Tetrachlorobiphenyl": {
     "en": "3,3',5,5'-Tetrachlorobiphenyl",
-    "fr": null
+    "fr": null,
+    "_": "3,3',5,5'-Tetrachlorobiphenyl"
   },
   "3,4-Dichlorophenol": {
     "en": "3,4-Dichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "3,4-Dichlorophenol"
   },
   "3,4,5-Trichlorophenol": {
     "en": "3,4,5-Trichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "3,4,5-Trichlorophenol"
   },
   "3,5-Dichlorobenzoic acid": {
     "en": "3,5-Dichlorobenzoic acid",
-    "fr": null
+    "fr": null,
+    "_": "3,5-Dichlorobenzoic acid"
   },
   "3,5-Dichlorophenol": {
     "en": "3,5-Dichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "3,5-Dichlorophenol"
   },
   "3,6-Dimethylphenanthrene": {
     "en": "3,6-Dimethylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "3,6-Dimethylphenanthrene"
   },
   "4-Chloro-2-methylphenol": {
     "en": "4-Chloro-2-methylphenol",
-    "fr": null
+    "fr": null,
+    "_": "4-Chloro-2-methylphenol"
   },
   "4-Hydroxy-chlorothalonil": {
     "en": "4-Hydroxy-chlorothalonil",
-    "fr": null
+    "fr": null,
+    "_": "4-Hydroxy-chlorothalonil"
   },
   "4-Methyl-2-pentanol": {
     "en": "4-Methyl-2-pentanol",
-    "fr": null
+    "fr": null,
+    "_": "4-Methyl-2-pentanol"
   },
   "4-methyl-6-(2-methyl-5-propan-2-ylphenyl)-2-(5-propan-2-yl-1H-indazol-4-yl)-7,8-dihydro-5H-1,6-naphthyridine": {
     "en": "4-methyl-6-(2-methyl-5-propan-2-ylphenyl)-2-(5-propan-2-yl-1H-indazol-4-yl)-7,8-dihydro-5H-1,6-naphthyridine",
-    "fr": null
+    "fr": null,
+    "_": "4-methyl-6-(2-methyl-5-propan-2-ylphenyl)-2-(5-propan-2-yl-1H-indazol-4-yl)-7,8-dihydro-5H-1,6-naphthyridine"
   },
   "4-Nonylphenol monoethoxylates": {
     "en": "4-Nonylphenol monoethoxylates",
-    "fr": null
+    "fr": null,
+    "_": "4-Nonylphenol monoethoxylates"
   },
   "4-Nonylphenol pentaethoxylates": {
     "en": "4-Nonylphenol pentaethoxylates",
-    "fr": null
+    "fr": null,
+    "_": "4-Nonylphenol pentaethoxylates"
   },
   "4-Nonylphenol tetraethoxylates": {
     "en": "4-Nonylphenol tetraethoxylates",
-    "fr": null
+    "fr": null,
+    "_": "4-Nonylphenol tetraethoxylates"
   },
   "4-Nonylphenol triethoxylate": {
     "en": "4-Nonylphenol triethoxylate",
-    "fr": null
+    "fr": null,
+    "_": "4-Nonylphenol triethoxylate"
   },
   "4,4'-Dibromobiphenyl": {
     "en": "4,4'-Dibromobiphenyl",
-    "fr": null
+    "fr": null,
+    "_": "4,4'-Dibromobiphenyl"
   },
   "4,4'-Isopropylidenediphenol": {
     "en": "4,4'-Isopropylidenediphenol",
-    "fr": null
+    "fr": null,
+    "_": "4,4'-Isopropylidenediphenol"
   },
   "4,6-Dimethyldibenzothiophene": {
     "en": "4,6-Dimethyldibenzothiophene",
-    "fr": null
+    "fr": null,
+    "_": "4,6-Dimethyldibenzothiophene"
   },
   "4,6-Dinitro-o-cresol": {
     "en": "4,6-Dinitro-o-cresol",
-    "fr": null
+    "fr": null,
+    "_": "4,6-Dinitro-o-cresol"
   },
   "5-Methylchrysene/6-Methylchrysene": {
     "en": "5-Methylchrysene/6-Methylchrysene",
-    "fr": null
+    "fr": null,
+    "_": "5-Methylchrysene/6-Methylchrysene"
   },
   "5,9-Dimethylchrysene": {
     "en": "5,9-Dimethylchrysene",
-    "fr": null
+    "fr": null,
+    "_": "5,9-Dimethylchrysene"
   },
   "6-Acetyl-1,1,2,4,4,7-hexamethyltetralin": {
     "en": "6-Acetyl-1,1,2,4,4,7-hexamethyltetralin",
-    "fr": null
+    "fr": null,
+    "_": "6-Acetyl-1,1,2,4,4,7-hexamethyltetralin"
   },
   "7-Methylbenzo[a]pyrene": {
     "en": "7-Methylbenzo[a]pyrene",
-    "fr": null
+    "fr": null,
+    "_": "7-Methylbenzo[a]pyrene"
   },
   "7,12-Dimethylbenz[a]anthracene": {
     "en": "7,12-Dimethylbenz[a]anthracene",
-    "fr": null
+    "fr": null,
+    "_": "7,12-Dimethylbenz[a]anthracene"
   },
   "8(14)-Abietenic acid": {
     "en": "8(14)-Abietenic acid",
-    "fr": null
+    "fr": null,
+    "_": "8(14)-Abietenic acid"
   },
   "9-Methylphenanthrene/4-Methylphenanthrene": {
     "en": "9-Methylphenanthrene/4-Methylphenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "9-Methylphenanthrene/4-Methylphenanthrene"
   },
   "9,10-Dichlorostearic Acid": {
     "en": "9,10-Dichlorostearic Acid",
-    "fr": null
+    "fr": null,
+    "_": "9,10-Dichlorostearic Acid"
   },
   "Abietic acid": {
     "en": "Abietic acid",
-    "fr": null
+    "fr": null,
+    "_": "Abietic acid"
   },
   "Absorbance at 250 nm": {
     "en": "Absorbance at 250 nm",
-    "fr": null
+    "fr": null,
+    "_": "Absorbance at 250 nm"
   },
   "Absorbance at 254 nm": {
     "en": "Absorbance at 254 nm",
-    "fr": null
+    "fr": null,
+    "_": "Absorbance at 254 nm"
   },
   "Absorbance at 280 nm": {
     "en": "Absorbance at 280 nm",
-    "fr": null
+    "fr": null,
+    "_": "Absorbance at 280 nm"
   },
   "Absorbance at 330 nm": {
     "en": "Absorbance at 330 nm",
-    "fr": null
+    "fr": null,
+    "_": "Absorbance at 330 nm"
   },
   "Absorbance at 350 nm": {
     "en": "Absorbance at 350 nm",
-    "fr": null
+    "fr": null,
+    "_": "Absorbance at 350 nm"
   },
   "Absorbance at 365 nm": {
     "en": "Absorbance at 365 nm",
-    "fr": null
+    "fr": null,
+    "_": "Absorbance at 365 nm"
   },
   "Absorbance at 370 nm": {
     "en": "Absorbance at 370 nm",
-    "fr": null
+    "fr": null,
+    "_": "Absorbance at 370 nm"
   },
   "Acebutolol": {
     "en": "Acebutolol",
-    "fr": null
+    "fr": null,
+    "_": "Acebutolol"
   },
   "Acenaphthene": {
     "en": "Acenaphthene",
-    "fr": null
+    "fr": null,
+    "_": "Acenaphthene"
   },
   "Acenaphthene-d10": {
     "en": "Acenaphthene-d10",
-    "fr": null
+    "fr": null,
+    "_": "Acenaphthene-d10"
   },
   "Acenaphthylene": {
     "en": "Acenaphthylene",
-    "fr": null
+    "fr": null,
+    "_": "Acenaphthylene"
   },
   "Acenaphthylene-d8": {
     "en": "Acenaphthylene-d8",
-    "fr": null
+    "fr": null,
+    "_": "Acenaphthylene-d8"
   },
   "Acephate": {
     "en": "Acephate",
-    "fr": null
+    "fr": null,
+    "_": "Acephate"
   },
   "Acesulfame": {
     "en": "Acesulfame",
-    "fr": null
+    "fr": null,
+    "_": "Acesulfame"
   },
   "Acetaldehyde": {
     "en": "Acetaldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Acetaldehyde"
   },
   "Acetaminophen": {
     "en": "Acetaminophen",
-    "fr": null
+    "fr": null,
+    "_": "Acetaminophen"
   },
   "Acetamiprid": {
     "en": "Acetamiprid",
-    "fr": null
+    "fr": null,
+    "_": "Acetamiprid"
   },
   "Acidity": {
     "en": "Acidity",
-    "fr": null
+    "fr": null,
+    "_": "Acidity"
   },
   "Acifluorfen, sodium salt": {
     "en": "Acifluorfen, sodium salt",
-    "fr": null
+    "fr": null,
+    "_": "Acifluorfen, sodium salt"
   },
   "Acridine": {
     "en": "Acridine",
-    "fr": null
+    "fr": null,
+    "_": "Acridine"
   },
   "Acridine-d9": {
     "en": "Acridine-d9",
-    "fr": null
+    "fr": null,
+    "_": "Acridine-d9"
   },
   "Adenosine triphosphate": {
     "en": "Adenosine triphosphate",
-    "fr": null
+    "fr": null,
+    "_": "Adenosine triphosphate"
   },
   "Adsorbable organic halides": {
     "en": "Adsorbable organic halides",
-    "fr": null
+    "fr": null,
+    "_": "Adsorbable organic halides"
   },
   "Alachlor": {
     "en": "Alachlor",
-    "fr": null
+    "fr": null,
+    "_": "Alachlor"
   },
   "Aldicarb": {
     "en": "Aldicarb",
-    "fr": null
+    "fr": null,
+    "_": "Aldicarb"
   },
   "Aldicarb sulfone": {
     "en": "Aldicarb sulfone",
-    "fr": null
+    "fr": null,
+    "_": "Aldicarb sulfone"
   },
   "Aldicarb sulfoxide": {
     "en": "Aldicarb sulfoxide",
-    "fr": null
+    "fr": null,
+    "_": "Aldicarb sulfoxide"
   },
   "Aldrin": {
     "en": "Aldrin",
-    "fr": null
+    "fr": null,
+    "_": "Aldrin"
   },
   "Aldrin + dieldrin mix, unspecified": {
     "en": "Aldrin + dieldrin mix, unspecified",
-    "fr": null
+    "fr": null,
+    "_": "Aldrin + dieldrin mix, unspecified"
   },
   "Alkalinity, bicarbonate": {
     "en": "Alkalinity, bicarbonate",
-    "fr": null
+    "fr": null,
+    "_": "Alkalinity, bicarbonate"
   },
   "Alkalinity, carbonate": {
     "en": "Alkalinity, carbonate",
-    "fr": null
+    "fr": null,
+    "_": "Alkalinity, carbonate"
   },
   "Alkalinity, Hydroxide": {
     "en": "Alkalinity, Hydroxide",
-    "fr": null
+    "fr": null,
+    "_": "Alkalinity, Hydroxide"
   },
   "Alkalinity, Phenolphthalein (total hydroxide+1/2 carbonate)": {
     "en": "Alkalinity, Phenolphthalein (total hydroxide+1/2 carbonate)",
-    "fr": null
+    "fr": null,
+    "_": "Alkalinity, Phenolphthalein (total hydroxide+1/2 carbonate)"
   },
   "Alkalinity, total": {
     "en": "Alkalinity, total",
-    "fr": null
+    "fr": null,
+    "_": "Alkalinity, total"
   },
   "Aluminum": {
     "en": "Aluminum",
-    "fr": null
+    "fr": null,
+    "_": "Aluminum"
   },
   "Aluminum-27": {
     "en": "Aluminum-27",
-    "fr": null
+    "fr": null,
+    "_": "Aluminum-27"
   },
   "Ametryn": {
     "en": "Ametryn",
-    "fr": null
+    "fr": null,
+    "_": "Ametryn"
   },
   "Aminocarb": {
     "en": "Aminocarb",
-    "fr": null
+    "fr": null,
+    "_": "Aminocarb"
   },
   "Aminomethylphosphonic acid": {
     "en": "Aminomethylphosphonic acid",
-    "fr": null
+    "fr": null,
+    "_": "Aminomethylphosphonic acid"
   },
   "Aminopyralid": {
     "en": "Aminopyralid",
-    "fr": null
+    "fr": null,
+    "_": "Aminopyralid"
   },
   "Ammonia": {
     "en": "Ammonia",
-    "fr": null
+    "fr": null,
+    "_": "Ammonia"
   },
   "Ammonia and ammonium": {
     "en": "Ammonia and ammonium",
-    "fr": null
+    "fr": null,
+    "_": "Ammonia and ammonium"
   },
   "Ammonium": {
     "en": "Ammonium",
-    "fr": null
+    "fr": null,
+    "_": "Ammonium"
   },
   "Amoxicillin": {
     "en": "Amoxicillin",
-    "fr": null
+    "fr": null,
+    "_": "Amoxicillin"
   },
   "Anilazine": {
     "en": "Anilazine",
-    "fr": null
+    "fr": null,
+    "_": "Anilazine"
   },
   "Anion/cation ratio": {
     "en": "Anion/cation ratio",
-    "fr": null
+    "fr": null,
+    "_": "Anion/cation ratio"
   },
   "Anthracene": {
     "en": "Anthracene",
-    "fr": null
+    "fr": null,
+    "_": "Anthracene"
   },
   "Antimony": {
     "en": "Antimony",
-    "fr": null
+    "fr": null,
+    "_": "Antimony"
   },
   "Antimony-121": {
     "en": "Antimony-121",
-    "fr": null
+    "fr": null,
+    "_": "Antimony-121"
   },
   "Antimony-125": {
     "en": "Antimony-125",
-    "fr": null
+    "fr": null,
+    "_": "Antimony-125"
   },
   "Apparent color": {
     "en": "Apparent color",
-    "fr": null
+    "fr": null,
+    "_": "Apparent color"
   },
   "Aroclor 1016": {
     "en": "Aroclor 1016",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1016"
   },
   "Aroclor 1221": {
     "en": "Aroclor 1221",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1221"
   },
   "Aroclor 1232": {
     "en": "Aroclor 1232",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1232"
   },
   "Aroclor 1242": {
     "en": "Aroclor 1242",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1242"
   },
   "Aroclor 1248": {
     "en": "Aroclor 1248",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1248"
   },
   "Aroclor 1254": {
     "en": "Aroclor 1254",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1254"
   },
   "Aroclor 1260": {
     "en": "Aroclor 1260",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1260"
   },
   "Aroclor 1262": {
     "en": "Aroclor 1262",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1262"
   },
   "Aroclor 1268": {
     "en": "Aroclor 1268",
-    "fr": null
+    "fr": null,
+    "_": "Aroclor 1268"
   },
   "Arsenate": {
     "en": "Arsenate",
-    "fr": null
+    "fr": null,
+    "_": "Arsenate"
   },
   "Arsenic": {
     "en": "Arsenic",
-    "fr": null
+    "fr": null,
+    "_": "Arsenic"
   },
   "Arsenic-75": {
     "en": "Arsenic-75",
-    "fr": null
+    "fr": null,
+    "_": "Arsenic-75"
   },
   "Arsenite": {
     "en": "Arsenite",
-    "fr": null
+    "fr": null,
+    "_": "Arsenite"
   },
   "Arsonium, (carboxymethyl)trimethyl-, inner salt": {
     "en": "Arsonium, (carboxymethyl)trimethyl-, inner salt",
-    "fr": null
+    "fr": null,
+    "_": "Arsonium, (carboxymethyl)trimethyl-, inner salt"
   },
   "Aspartame": {
     "en": "Aspartame",
-    "fr": null
+    "fr": null,
+    "_": "Aspartame"
   },
   "Aspirin": {
     "en": "Aspirin",
-    "fr": null
+    "fr": null,
+    "_": "Aspirin"
   },
   "Asulam": {
     "en": "Asulam",
-    "fr": null
+    "fr": null,
+    "_": "Asulam"
   },
   "Atrazine": {
     "en": "Atrazine",
-    "fr": null
+    "fr": null,
+    "_": "Atrazine"
   },
   "Atrazine + N-Dealkylated Metabolites": {
     "en": "Atrazine + N-Dealkylated Metabolites",
-    "fr": null
+    "fr": null,
+    "_": "Atrazine + N-Dealkylated Metabolites"
   },
   "Atrazine-d5 (ethyl-d5)": {
     "en": "Atrazine-d5 (ethyl-d5)",
-    "fr": null
+    "fr": null,
+    "_": "Atrazine-d5 (ethyl-d5)"
   },
   "Azinphos-ethyl": {
     "en": "Azinphos-ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Azinphos-ethyl"
   },
   "Azinphos-methyl": {
     "en": "Azinphos-methyl",
-    "fr": null
+    "fr": null,
+    "_": "Azinphos-methyl"
   },
   "Azoxystrobin": {
     "en": "Azoxystrobin",
-    "fr": null
+    "fr": null,
+    "_": "Azoxystrobin"
   },
   "Bankfull Height": {
     "en": "Bankfull Height",
-    "fr": null
+    "fr": null,
+    "_": "Bankfull Height"
   },
   "Bankfull width": {
     "en": "Bankfull width",
-    "fr": null
+    "fr": null,
+    "_": "Bankfull width"
   },
   "Barium": {
     "en": "Barium",
-    "fr": null
+    "fr": null,
+    "_": "Barium"
   },
   "Barium-137": {
     "en": "Barium-137",
-    "fr": null
+    "fr": null,
+    "_": "Barium-137"
   },
   "Barometric pressure": {
     "en": "Barometric pressure",
-    "fr": null
+    "fr": null,
+    "_": "Barometric pressure"
   },
   "BDE 100L": {
     "en": "BDE 100L",
-    "fr": null
+    "fr": null,
+    "_": "BDE 100L"
   },
   "BDE 153L": {
     "en": "BDE 153L",
-    "fr": null
+    "fr": null,
+    "_": "BDE 153L"
   },
   "BDE 183L": {
     "en": "BDE 183L",
-    "fr": null
+    "fr": null,
+    "_": "BDE 183L"
   },
   "BDE 209L": {
     "en": "BDE 209L",
-    "fr": null
+    "fr": null,
+    "_": "BDE 209L"
   },
   "BDE 28L": {
     "en": "BDE 28L",
-    "fr": null
+    "fr": null,
+    "_": "BDE 28L"
   },
   "BDE 47L": {
     "en": "BDE 47L",
-    "fr": null
+    "fr": null,
+    "_": "BDE 47L"
   },
   "BDE-003": {
     "en": "BDE-003",
-    "fr": null
+    "fr": null,
+    "_": "BDE-003"
   },
   "BDE-017": {
     "en": "BDE-017",
-    "fr": null
+    "fr": null,
+    "_": "BDE-017"
   },
   "BDE-049": {
     "en": "BDE-049",
-    "fr": null
+    "fr": null,
+    "_": "BDE-049"
   },
   "BDE-066": {
     "en": "BDE-066",
-    "fr": null
+    "fr": null,
+    "_": "BDE-066"
   },
   "BDE-071": {
     "en": "BDE-071",
-    "fr": null
+    "fr": null,
+    "_": "BDE-071"
   },
   "BDE-077": {
     "en": "BDE-077",
-    "fr": null
+    "fr": null,
+    "_": "BDE-077"
   },
   "BDE-085": {
     "en": "BDE-085",
-    "fr": null
+    "fr": null,
+    "_": "BDE-085"
   },
   "BDE-099": {
     "en": "BDE-099",
-    "fr": null
+    "fr": null,
+    "_": "BDE-099"
   },
   "BDE-100": {
     "en": "BDE-100",
-    "fr": null
+    "fr": null,
+    "_": "BDE-100"
   },
   "BDE-119": {
     "en": "BDE-119",
-    "fr": null
+    "fr": null,
+    "_": "BDE-119"
   },
   "BDE-126": {
     "en": "BDE-126",
-    "fr": null
+    "fr": null,
+    "_": "BDE-126"
   },
   "BDE-153": {
     "en": "BDE-153",
-    "fr": null
+    "fr": null,
+    "_": "BDE-153"
   },
   "BDE-154": {
     "en": "BDE-154",
-    "fr": null
+    "fr": null,
+    "_": "BDE-154"
   },
   "BDE-156": {
     "en": "BDE-156",
-    "fr": null
+    "fr": null,
+    "_": "BDE-156"
   },
   "BDE-183": {
     "en": "BDE-183",
-    "fr": null
+    "fr": null,
+    "_": "BDE-183"
   },
   "BDE-184": {
     "en": "BDE-184",
-    "fr": null
+    "fr": null,
+    "_": "BDE-184"
   },
   "BDE-190": {
     "en": "BDE-190",
-    "fr": null
+    "fr": null,
+    "_": "BDE-190"
   },
   "BDE-194": {
     "en": "BDE-194",
-    "fr": null
+    "fr": null,
+    "_": "BDE-194"
   },
   "BDE-197": {
     "en": "BDE-197",
-    "fr": null
+    "fr": null,
+    "_": "BDE-197"
   },
   "BDE-206": {
     "en": "BDE-206",
-    "fr": null
+    "fr": null,
+    "_": "BDE-206"
   },
   "BDE-207": {
     "en": "BDE-207",
-    "fr": null
+    "fr": null,
+    "_": "BDE-207"
   },
   "Bendiocarb": {
     "en": "Bendiocarb",
-    "fr": null
+    "fr": null,
+    "_": "Bendiocarb"
   },
   "Benfluralin": {
     "en": "Benfluralin",
-    "fr": null
+    "fr": null,
+    "_": "Benfluralin"
   },
   "Benomyl": {
     "en": "Benomyl",
-    "fr": null
+    "fr": null,
+    "_": "Benomyl"
   },
   "Bentazon": {
     "en": "Bentazon",
-    "fr": null
+    "fr": null,
+    "_": "Bentazon"
   },
   "Benz[a]anthracene": {
     "en": "Benz[a]anthracene",
-    "fr": null
+    "fr": null,
+    "_": "Benz[a]anthracene"
   },
   "Benzaldehyde": {
     "en": "Benzaldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Benzaldehyde"
   },
   "Benzene": {
     "en": "Benzene",
-    "fr": null
+    "fr": null,
+    "_": "Benzene"
   },
   "Benzene, 1-bromo-2-(trifluoromethyl)-": {
     "en": "Benzene, 1-bromo-2-(trifluoromethyl)-",
-    "fr": null
+    "fr": null,
+    "_": "Benzene, 1-bromo-2-(trifluoromethyl)-"
   },
   "Benzene, 1,2-dichloro-4-methyl-": {
     "en": "Benzene, 1,2-dichloro-4-methyl-",
-    "fr": null
+    "fr": null,
+    "_": "Benzene, 1,2-dichloro-4-methyl-"
   },
   "Benzeneacetic acid, .alpha.-methyl-4-(2-methylpropyl)-": {
     "en": "Benzeneacetic acid, .alpha.-methyl-4-(2-methylpropyl)-",
-    "fr": null
+    "fr": null,
+    "_": "Benzeneacetic acid, .alpha.-methyl-4-(2-methylpropyl)-"
   },
   "Benzidine": {
     "en": "Benzidine",
-    "fr": null
+    "fr": null,
+    "_": "Benzidine"
   },
   "Benzo(a)anthracene-D12": {
     "en": "Benzo(a)anthracene-D12",
-    "fr": null
+    "fr": null,
+    "_": "Benzo(a)anthracene-D12"
   },
   "Benzo(b)fluoranthene": {
     "en": "Benzo(b)fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo(b)fluoranthene"
   },
   "Benzo(b)fluoranthene-D12": {
     "en": "Benzo(b)fluoranthene-D12",
-    "fr": null
+    "fr": null,
+    "_": "Benzo(b)fluoranthene-D12"
   },
   "Benzo(g,h,i)perylene-D12": {
     "en": "Benzo(g,h,i)perylene-D12",
-    "fr": null
+    "fr": null,
+    "_": "Benzo(g,h,i)perylene-D12"
   },
   "Benzo(j+k)fluoranthene": {
     "en": "Benzo(j+k)fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo(j+k)fluoranthene"
   },
   "Benzo(k)fluoranthene-d12": {
     "en": "Benzo(k)fluoranthene-d12",
-    "fr": null
+    "fr": null,
+    "_": "Benzo(k)fluoranthene-d12"
   },
   "Benzo[a]pyrene": {
     "en": "Benzo[a]pyrene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[a]pyrene"
   },
   "Benzo[a]pyrene Total Potency Equivalents (B[a]P TPE)": {
     "en": "Benzo[a]pyrene Total Potency Equivalents (B[a]P TPE)",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[a]pyrene Total Potency Equivalents (B[a]P TPE)"
   },
   "Benzo[a]pyrene-d12": {
     "en": "Benzo[a]pyrene-d12",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[a]pyrene-d12"
   },
   "Benzo[b,j,k]fluoranthene": {
     "en": "Benzo[b,j,k]fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[b,j,k]fluoranthene"
   },
   "Benzo[b,j]fluoranthene": {
     "en": "Benzo[b,j]fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[b,j]fluoranthene"
   },
   "Benzo[b,k]fluoranthene": {
     "en": "Benzo[b,k]fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[b,k]fluoranthene"
   },
   "Benzo[b]fluoranthene, mixt with benzo[j]fluoranthene and benzo[k]fluoranthene": {
     "en": "Benzo[b]fluoranthene, mixt with benzo[j]fluoranthene and benzo[k]fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[b]fluoranthene, mixt with benzo[j]fluoranthene and benzo[k]fluoranthene"
   },
   "Benzo[c]phenanthrene": {
     "en": "Benzo[c]phenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[c]phenanthrene"
   },
   "Benzo[e]pyrene": {
     "en": "Benzo[e]pyrene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[e]pyrene"
   },
   "Benzo[ghi]perylene": {
     "en": "Benzo[ghi]perylene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[ghi]perylene"
   },
   "Benzo[j]fluoranthene": {
     "en": "Benzo[j]fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[j]fluoranthene"
   },
   "Benzo[k]fluoranthene": {
     "en": "Benzo[k]fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzo[k]fluoranthene"
   },
   "Benzofluoranthene": {
     "en": "Benzofluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Benzofluoranthene"
   },
   "Benzoic acid": {
     "en": "Benzoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Benzoic acid"
   },
   "Benzoylecgonine": {
     "en": "Benzoylecgonine",
-    "fr": null
+    "fr": null,
+    "_": "Benzoylecgonine"
   },
   "Beryllium": {
     "en": "Beryllium",
-    "fr": null
+    "fr": null,
+    "_": "Beryllium"
   },
   "Beryllium-9": {
     "en": "Beryllium-9",
-    "fr": null
+    "fr": null,
+    "_": "Beryllium-9"
   },
   "Beta Cypermethrin": {
     "en": "Beta Cypermethrin",
-    "fr": null
+    "fr": null,
+    "_": "Beta Cypermethrin"
   },
   "Bezafibrate": {
     "en": "Bezafibrate",
-    "fr": null
+    "fr": null,
+    "_": "Bezafibrate"
   },
   "Bicarbonate": {
     "en": "Bicarbonate",
-    "fr": null
+    "fr": null,
+    "_": "Bicarbonate"
   },
   "Bifenazate": {
     "en": "Bifenazate",
-    "fr": null
+    "fr": null,
+    "_": "Bifenazate"
   },
   "Bifenthrin": {
     "en": "Bifenthrin",
-    "fr": null
+    "fr": null,
+    "_": "Bifenthrin"
   },
   "Biochemical oxygen demand, standard conditions": {
     "en": "Biochemical oxygen demand, standard conditions",
-    "fr": null
+    "fr": null,
+    "_": "Biochemical oxygen demand, standard conditions"
   },
   "Biphenyl": {
     "en": "Biphenyl",
-    "fr": null
+    "fr": null,
+    "_": "Biphenyl"
   },
   "Biphenyl-d10": {
     "en": "Biphenyl-d10",
-    "fr": null
+    "fr": null,
+    "_": "Biphenyl-d10"
   },
   "Bis(2-chloroethoxy)methane": {
     "en": "Bis(2-chloroethoxy)methane",
-    "fr": null
+    "fr": null,
+    "_": "Bis(2-chloroethoxy)methane"
   },
   "Bis(2-chloroethyl) ether": {
     "en": "Bis(2-chloroethyl) ether",
-    "fr": null
+    "fr": null,
+    "_": "Bis(2-chloroethyl) ether"
   },
   "Bis(2-chloroisopropyl) ether": {
     "en": "Bis(2-chloroisopropyl) ether",
-    "fr": null
+    "fr": null,
+    "_": "Bis(2-chloroisopropyl) ether"
   },
   "Bis(2-ethoxyethyl) phthalate": {
     "en": "Bis(2-ethoxyethyl) phthalate",
-    "fr": null
+    "fr": null,
+    "_": "Bis(2-ethoxyethyl) phthalate"
   },
   "Bismuth": {
     "en": "Bismuth",
-    "fr": null
+    "fr": null,
+    "_": "Bismuth"
   },
   "Bismuth-209": {
     "en": "Bismuth-209",
-    "fr": null
+    "fr": null,
+    "_": "Bismuth-209"
   },
   "Bisphenol F": {
     "en": "Bisphenol F",
-    "fr": null
+    "fr": null,
+    "_": "Bisphenol F"
   },
   "Bisphenol S": {
     "en": "Bisphenol S",
-    "fr": null
+    "fr": null,
+    "_": "Bisphenol S"
   },
   "Boron": {
     "en": "Boron",
-    "fr": null
+    "fr": null,
+    "_": "Boron"
   },
   "Boron-11": {
     "en": "Boron-11",
-    "fr": null
+    "fr": null,
+    "_": "Boron-11"
   },
   "Boscalid": {
     "en": "Boscalid",
-    "fr": null
+    "fr": null,
+    "_": "Boscalid"
   },
   "Brodifacoum": {
     "en": "Brodifacoum",
-    "fr": null
+    "fr": null,
+    "_": "Brodifacoum"
   },
   "Bromacil": {
     "en": "Bromacil",
-    "fr": null
+    "fr": null,
+    "_": "Bromacil"
   },
   "Bromate": {
     "en": "Bromate",
-    "fr": null
+    "fr": null,
+    "_": "Bromate"
   },
   "Bromide": {
     "en": "Bromide",
-    "fr": null
+    "fr": null,
+    "_": "Bromide"
   },
   "Bromine": {
     "en": "Bromine",
-    "fr": null
+    "fr": null,
+    "_": "Bromine"
   },
   "Bromoacetic acid": {
     "en": "Bromoacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "Bromoacetic acid"
   },
   "Bromobenzene": {
     "en": "Bromobenzene",
-    "fr": null
+    "fr": null,
+    "_": "Bromobenzene"
   },
   "Bromochloroacetic acid": {
     "en": "Bromochloroacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "Bromochloroacetic acid"
   },
   "Bromochloromethane": {
     "en": "Bromochloromethane",
-    "fr": null
+    "fr": null,
+    "_": "Bromochloromethane"
   },
   "Bromophos": {
     "en": "Bromophos",
-    "fr": null
+    "fr": null,
+    "_": "Bromophos"
   },
   "Bromophos-ethyl": {
     "en": "Bromophos-ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Bromophos-ethyl"
   },
   "Bromoxynil": {
     "en": "Bromoxynil",
-    "fr": null
+    "fr": null,
+    "_": "Bromoxynil"
   },
   "BTEX, Total": {
     "en": "BTEX, Total",
-    "fr": null
+    "fr": null,
+    "_": "BTEX, Total"
   },
   "Butachlor": {
     "en": "Butachlor",
-    "fr": null
+    "fr": null,
+    "_": "Butachlor"
   },
   "Butanoic acid, 4-(4-chloro-2-methylphenoxy)-, ethyl ester": {
     "en": "Butanoic acid, 4-(4-chloro-2-methylphenoxy)-, ethyl ester",
-    "fr": null
+    "fr": null,
+    "_": "Butanoic acid, 4-(4-chloro-2-methylphenoxy)-, ethyl ester"
   },
   "Butralin": {
     "en": "Butralin",
-    "fr": null
+    "fr": null,
+    "_": "Butralin"
   },
   "Butyl benzyl phthalate": {
     "en": "Butyl benzyl phthalate",
-    "fr": null
+    "fr": null,
+    "_": "Butyl benzyl phthalate"
   },
   "Butylate": {
     "en": "Butylate",
-    "fr": null
+    "fr": null,
+    "_": "Butylate"
   },
   "Butyltin": {
     "en": "Butyltin",
-    "fr": null
+    "fr": null,
+    "_": "Butyltin"
   },
   "Butyraldehyde": {
     "en": "Butyraldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Butyraldehyde"
   },
   "C1-Acenaphthenes": {
     "en": "C1-Acenaphthenes",
-    "fr": null
+    "fr": null,
+    "_": "C1-Acenaphthenes"
   },
   "C1-Benzo[a]anthracenes/chrysenes": {
     "en": "C1-Benzo[a]anthracenes/chrysenes",
-    "fr": null
+    "fr": null,
+    "_": "C1-Benzo[a]anthracenes/chrysenes"
   },
   "C1-Benzofluoranthenes/benzopyrenes": {
     "en": "C1-Benzofluoranthenes/benzopyrenes",
-    "fr": null
+    "fr": null,
+    "_": "C1-Benzofluoranthenes/benzopyrenes"
   },
   "C1-Biphenyls": {
     "en": "C1-Biphenyls",
-    "fr": null
+    "fr": null,
+    "_": "C1-Biphenyls"
   },
   "C1-Dibenzothiophenes": {
     "en": "C1-Dibenzothiophenes",
-    "fr": null
+    "fr": null,
+    "_": "C1-Dibenzothiophenes"
   },
   "C1-Fluoranthenes/pyrenes": {
     "en": "C1-Fluoranthenes/pyrenes",
-    "fr": null
+    "fr": null,
+    "_": "C1-Fluoranthenes/pyrenes"
   },
   "C1-Phenanthrenes/anthracenes": {
     "en": "C1-Phenanthrenes/anthracenes",
-    "fr": null
+    "fr": null,
+    "_": "C1-Phenanthrenes/anthracenes"
   },
   "C10-C16 Hydrocarbons": {
     "en": "C10-C16 Hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "C10-C16 Hydrocarbons"
   },
   "C16-C34 Hydrocarbons": {
     "en": "C16-C34 Hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "C16-C34 Hydrocarbons"
   },
   "C2-Benzo[a]anthracenes/chrysenes": {
     "en": "C2-Benzo[a]anthracenes/chrysenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Benzo[a]anthracenes/chrysenes"
   },
   "C2-Benzofluoranthenes/benzopyrenes": {
     "en": "C2-Benzofluoranthenes/benzopyrenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Benzofluoranthenes/benzopyrenes"
   },
   "C2-Biphenyls": {
     "en": "C2-Biphenyls",
-    "fr": null
+    "fr": null,
+    "_": "C2-Biphenyls"
   },
   "C2-Chrysenes": {
     "en": "C2-Chrysenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Chrysenes"
   },
   "C2-Dibenzothiophenes": {
     "en": "C2-Dibenzothiophenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Dibenzothiophenes"
   },
   "C2-Fluoranthenes/pyrenes": {
     "en": "C2-Fluoranthenes/pyrenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Fluoranthenes/pyrenes"
   },
   "C2-Fluorenes": {
     "en": "C2-Fluorenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Fluorenes"
   },
   "C2-Naphthalenes": {
     "en": "C2-Naphthalenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Naphthalenes"
   },
   "C2-Phenanthrenes/anthracenes": {
     "en": "C2-Phenanthrenes/anthracenes",
-    "fr": null
+    "fr": null,
+    "_": "C2-Phenanthrenes/anthracenes"
   },
   "C23-C32 Hydrocarbons": {
     "en": "C23-C32 Hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "C23-C32 Hydrocarbons"
   },
   "C3-Benzo[a]anthracenes/chrysenes": {
     "en": "C3-Benzo[a]anthracenes/chrysenes",
-    "fr": null
+    "fr": null,
+    "_": "C3-Benzo[a]anthracenes/chrysenes"
   },
   "C3-Chrysenes": {
     "en": "C3-Chrysenes",
-    "fr": null
+    "fr": null,
+    "_": "C3-Chrysenes"
   },
   "C3-Dibenzothiophenes": {
     "en": "C3-Dibenzothiophenes",
-    "fr": null
+    "fr": null,
+    "_": "C3-Dibenzothiophenes"
   },
   "C3-Fluoranthenes/pyrenes": {
     "en": "C3-Fluoranthenes/pyrenes",
-    "fr": null
+    "fr": null,
+    "_": "C3-Fluoranthenes/pyrenes"
   },
   "C3-Fluorenes": {
     "en": "C3-Fluorenes",
-    "fr": null
+    "fr": null,
+    "_": "C3-Fluorenes"
   },
   "C3-Naphthalenes": {
     "en": "C3-Naphthalenes",
-    "fr": null
+    "fr": null,
+    "_": "C3-Naphthalenes"
   },
   "C3-Phenanthrenes/anthracenes": {
     "en": "C3-Phenanthrenes/anthracenes",
-    "fr": null
+    "fr": null,
+    "_": "C3-Phenanthrenes/anthracenes"
   },
   "C34-C50 Hydrocarbons": {
     "en": "C34-C50 Hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "C34-C50 Hydrocarbons"
   },
   "C4-Benzo[a]anthracenes/chrysenes": {
     "en": "C4-Benzo[a]anthracenes/chrysenes",
-    "fr": null
+    "fr": null,
+    "_": "C4-Benzo[a]anthracenes/chrysenes"
   },
   "C4-Chrysenes": {
     "en": "C4-Chrysenes",
-    "fr": null
+    "fr": null,
+    "_": "C4-Chrysenes"
   },
   "C4-Dibenzothiophenes": {
     "en": "C4-Dibenzothiophenes",
-    "fr": null
+    "fr": null,
+    "_": "C4-Dibenzothiophenes"
   },
   "C4-Fluoranthenes/pyrenes": {
     "en": "C4-Fluoranthenes/pyrenes",
-    "fr": null
+    "fr": null,
+    "_": "C4-Fluoranthenes/pyrenes"
   },
   "C4-Fluorenes": {
     "en": "C4-Fluorenes",
-    "fr": null
+    "fr": null,
+    "_": "C4-Fluorenes"
   },
   "C4-Naphthalenes": {
     "en": "C4-Naphthalenes",
-    "fr": null
+    "fr": null,
+    "_": "C4-Naphthalenes"
   },
   "C4-Phenanthrenes/anthracenes": {
     "en": "C4-Phenanthrenes/anthracenes",
-    "fr": null
+    "fr": null,
+    "_": "C4-Phenanthrenes/anthracenes"
   },
   "Cacodylic acid": {
     "en": "Cacodylic acid",
-    "fr": null
+    "fr": null,
+    "_": "Cacodylic acid"
   },
   "Cadmium": {
     "en": "Cadmium",
-    "fr": null
+    "fr": null,
+    "_": "Cadmium"
   },
   "Cadmium-114": {
     "en": "Cadmium-114",
-    "fr": null
+    "fr": null,
+    "_": "Cadmium-114"
   },
   "Caffeine": {
     "en": "Caffeine",
-    "fr": null
+    "fr": null,
+    "_": "Caffeine"
   },
   "Calcium": {
     "en": "Calcium",
-    "fr": null
+    "fr": null,
+    "_": "Calcium"
   },
   "Calcium carbonate": {
     "en": "Calcium carbonate",
-    "fr": null
+    "fr": null,
+    "_": "Calcium carbonate"
   },
   "Calcium-43": {
     "en": "Calcium-43",
-    "fr": null
+    "fr": null,
+    "_": "Calcium-43"
   },
   "Captafol": {
     "en": "Captafol",
-    "fr": null
+    "fr": null,
+    "_": "Captafol"
   },
   "Captan": {
     "en": "Captan",
-    "fr": null
+    "fr": null,
+    "_": "Captan"
   },
   "Carbamazepine": {
     "en": "Carbamazepine",
-    "fr": null
+    "fr": null,
+    "_": "Carbamazepine"
   },
   "Carbaryl": {
     "en": "Carbaryl",
-    "fr": null
+    "fr": null,
+    "_": "Carbaryl"
   },
   "Carbaryl-d7": {
     "en": "Carbaryl-d7",
-    "fr": null
+    "fr": null,
+    "_": "Carbaryl-d7"
   },
   "Carbofuran": {
     "en": "Carbofuran",
-    "fr": null
+    "fr": null,
+    "_": "Carbofuran"
   },
   "Carbon dioxide": {
     "en": "Carbon dioxide",
-    "fr": null
+    "fr": null,
+    "_": "Carbon dioxide"
   },
   "Carbon Dioxide, free CO2": {
     "en": "Carbon Dioxide, free CO2",
-    "fr": null
+    "fr": null,
+    "_": "Carbon Dioxide, free CO2"
   },
   "Carbon tetrachloride": {
     "en": "Carbon tetrachloride",
-    "fr": null
+    "fr": null,
+    "_": "Carbon tetrachloride"
   },
   "Carbon-13": {
     "en": "Carbon-13",
-    "fr": null
+    "fr": null,
+    "_": "Carbon-13"
   },
   "Carbon-13/Carbon-12 ratio": {
     "en": "Carbon-13/Carbon-12 ratio",
-    "fr": null
+    "fr": null,
+    "_": "Carbon-13/Carbon-12 ratio"
   },
   "Carbonaceous biochemical oxygen demand, non-standard conditions": {
     "en": "Carbonaceous biochemical oxygen demand, non-standard conditions",
-    "fr": null
+    "fr": null,
+    "_": "Carbonaceous biochemical oxygen demand, non-standard conditions"
   },
   "Carbonaceous biochemical oxygen demand, standard conditions": {
     "en": "Carbonaceous biochemical oxygen demand, standard conditions",
-    "fr": null
+    "fr": null,
+    "_": "Carbonaceous biochemical oxygen demand, standard conditions"
   },
   "Carbonate": {
     "en": "Carbonate",
-    "fr": null
+    "fr": null,
+    "_": "Carbonate"
   },
   "Carbonodithioic acid, O-ethyl ester": {
     "en": "Carbonodithioic acid, O-ethyl ester",
-    "fr": null
+    "fr": null,
+    "_": "Carbonodithioic acid, O-ethyl ester"
   },
   "Carbophenothion": {
     "en": "Carbophenothion",
-    "fr": null
+    "fr": null,
+    "_": "Carbophenothion"
   },
   "Carboxin": {
     "en": "Carboxin",
-    "fr": null
+    "fr": null,
+    "_": "Carboxin"
   },
   "Carfentrazone-ethyl": {
     "en": "Carfentrazone-ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Carfentrazone-ethyl"
   },
   "Cashmeran": {
     "en": "Cashmeran",
-    "fr": null
+    "fr": null,
+    "_": "Cashmeran"
   },
   "Catechol": {
     "en": "Catechol",
-    "fr": null
+    "fr": null,
+    "_": "Catechol"
   },
   "Celestolide": {
     "en": "Celestolide",
-    "fr": null
+    "fr": null,
+    "_": "Celestolide"
   },
   "Cerium": {
     "en": "Cerium",
-    "fr": null
+    "fr": null,
+    "_": "Cerium"
   },
   "Cesium": {
     "en": "Cesium",
-    "fr": null
+    "fr": null,
+    "_": "Cesium"
   },
   "Cesium-134": {
     "en": "Cesium-134",
-    "fr": null
+    "fr": null,
+    "_": "Cesium-134"
   },
   "Cesium-137": {
     "en": "Cesium-137",
-    "fr": null
+    "fr": null,
+    "_": "Cesium-137"
   },
   "CFC-11": {
     "en": "CFC-11",
-    "fr": null
+    "fr": null,
+    "_": "CFC-11"
   },
   "CFC-113": {
     "en": "CFC-113",
-    "fr": null
+    "fr": null,
+    "_": "CFC-113"
   },
   "CFC-12": {
     "en": "CFC-12",
-    "fr": null
+    "fr": null,
+    "_": "CFC-12"
   },
   "Chemical oxygen demand": {
     "en": "Chemical oxygen demand",
-    "fr": null
+    "fr": null,
+    "_": "Chemical oxygen demand"
   },
   "Chloramben": {
     "en": "Chloramben",
-    "fr": null
+    "fr": null,
+    "_": "Chloramben"
   },
   "Chloramphenicol": {
     "en": "Chloramphenicol",
-    "fr": null
+    "fr": null,
+    "_": "Chloramphenicol"
   },
   "Chlorantraniliprole": {
     "en": "Chlorantraniliprole",
-    "fr": null
+    "fr": null,
+    "_": "Chlorantraniliprole"
   },
   "Chlorate": {
     "en": "Chlorate",
-    "fr": null
+    "fr": null,
+    "_": "Chlorate"
   },
   "Chlorbenside": {
     "en": "Chlorbenside",
-    "fr": null
+    "fr": null,
+    "_": "Chlorbenside"
   },
   "Chlordane": {
     "en": "Chlordane",
-    "fr": null
+    "fr": null,
+    "_": "Chlordane"
   },
   "Chlorfenson": {
     "en": "Chlorfenson",
-    "fr": null
+    "fr": null,
+    "_": "Chlorfenson"
   },
   "Chlorfenvinphos": {
     "en": "Chlorfenvinphos",
-    "fr": null
+    "fr": null,
+    "_": "Chlorfenvinphos"
   },
   "Chloride": {
     "en": "Chloride",
-    "fr": null
+    "fr": null,
+    "_": "Chloride"
   },
   "Chlorimuron-ethyl": {
     "en": "Chlorimuron-ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Chlorimuron-ethyl"
   },
   "Chlorine": {
     "en": "Chlorine",
-    "fr": null
+    "fr": null,
+    "_": "Chlorine"
   },
   "Chlorine-35": {
     "en": "Chlorine-35",
-    "fr": null
+    "fr": null,
+    "_": "Chlorine-35"
   },
   "Chlorine, Free Residual": {
     "en": "Chlorine, Free Residual",
-    "fr": null
+    "fr": null,
+    "_": "Chlorine, Free Residual"
   },
   "Chlorine, Total Residual": {
     "en": "Chlorine, Total Residual",
-    "fr": null
+    "fr": null,
+    "_": "Chlorine, Total Residual"
   },
   "Chlorite": {
     "en": "Chlorite",
-    "fr": null
+    "fr": null,
+    "_": "Chlorite"
   },
   "Chlormephos": {
     "en": "Chlormephos",
-    "fr": null
+    "fr": null,
+    "_": "Chlormephos"
   },
   "Chloroacetic acid": {
     "en": "Chloroacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "Chloroacetic acid"
   },
   "Chlorobenzene": {
     "en": "Chlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "Chlorobenzene"
   },
   "Chlorodibromomethane": {
     "en": "Chlorodibromomethane",
-    "fr": null
+    "fr": null,
+    "_": "Chlorodibromomethane"
   },
   "Chloroethane": {
     "en": "Chloroethane",
-    "fr": null
+    "fr": null,
+    "_": "Chloroethane"
   },
   "Chloroform": {
     "en": "Chloroform",
-    "fr": null
+    "fr": null,
+    "_": "Chloroform"
   },
   "Chloromethane": {
     "en": "Chloromethane",
-    "fr": null
+    "fr": null,
+    "_": "Chloromethane"
   },
   "Chloronaphthalene": {
     "en": "Chloronaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "Chloronaphthalene"
   },
   "Chloroneb": {
     "en": "Chloroneb",
-    "fr": null
+    "fr": null,
+    "_": "Chloroneb"
   },
   "Chlorophyll a - Periphyton (attached)": {
     "en": "Chlorophyll a - Periphyton (attached)",
-    "fr": null
+    "fr": null,
+    "_": "Chlorophyll a - Periphyton (attached)"
   },
   "Chlorophyll a, corrected for pheophytin": {
     "en": "Chlorophyll a, corrected for pheophytin",
-    "fr": null
+    "fr": null,
+    "_": "Chlorophyll a, corrected for pheophytin"
   },
   "Chlorophyll a, pheophytin correction unspecified": {
     "en": "Chlorophyll a, pheophytin correction unspecified",
-    "fr": null
+    "fr": null,
+    "_": "Chlorophyll a, pheophytin correction unspecified"
   },
   "Chlorophyll a, uncorrected for pheophytin": {
     "en": "Chlorophyll a, uncorrected for pheophytin",
-    "fr": null
+    "fr": null,
+    "_": "Chlorophyll a, uncorrected for pheophytin"
   },
   "Chlorophyll b": {
     "en": "Chlorophyll b",
-    "fr": null
+    "fr": null,
+    "_": "Chlorophyll b"
   },
   "Chlorothalonil": {
     "en": "Chlorothalonil",
-    "fr": null
+    "fr": null,
+    "_": "Chlorothalonil"
   },
   "Chloroxuron": {
     "en": "Chloroxuron",
-    "fr": null
+    "fr": null,
+    "_": "Chloroxuron"
   },
   "Chlorpropham": {
     "en": "Chlorpropham",
-    "fr": null
+    "fr": null,
+    "_": "Chlorpropham"
   },
   "Chlorpyrifos": {
     "en": "Chlorpyrifos",
-    "fr": null
+    "fr": null,
+    "_": "Chlorpyrifos"
   },
   "Chlorpyrifos-methyl": {
     "en": "Chlorpyrifos-methyl",
-    "fr": null
+    "fr": null,
+    "_": "Chlorpyrifos-methyl"
   },
   "Chlorsulfuron": {
     "en": "Chlorsulfuron",
-    "fr": null
+    "fr": null,
+    "_": "Chlorsulfuron"
   },
   "Chlorthal-dimethyl": {
     "en": "Chlorthal-dimethyl",
-    "fr": null
+    "fr": null,
+    "_": "Chlorthal-dimethyl"
   },
   "Chlorthiophos": {
     "en": "Chlorthiophos",
-    "fr": null
+    "fr": null,
+    "_": "Chlorthiophos"
   },
   "Chromium": {
     "en": "Chromium",
-    "fr": null
+    "fr": null,
+    "_": "Chromium"
   },
   "Chromium-52": {
     "en": "Chromium-52",
-    "fr": null
+    "fr": null,
+    "_": "Chromium-52"
   },
   "Chromium-53": {
     "en": "Chromium-53",
-    "fr": null
+    "fr": null,
+    "_": "Chromium-53"
   },
   "Chromium(III)": {
     "en": "Chromium(III)",
-    "fr": null
+    "fr": null,
+    "_": "Chromium(III)"
   },
   "Chromium(VI)": {
     "en": "Chromium(VI)",
-    "fr": null
+    "fr": null,
+    "_": "Chromium(VI)"
   },
   "Chrysene": {
     "en": "Chrysene",
-    "fr": null
+    "fr": null,
+    "_": "Chrysene"
   },
   "Chrysene + Triphenylene": {
     "en": "Chrysene + Triphenylene",
-    "fr": null
+    "fr": null,
+    "_": "Chrysene + Triphenylene"
   },
   "Chrysene-d12": {
     "en": "Chrysene-d12",
-    "fr": null
+    "fr": null,
+    "_": "Chrysene-d12"
   },
   "Ciprofloxacin": {
     "en": "Ciprofloxacin",
-    "fr": null
+    "fr": null,
+    "_": "Ciprofloxacin"
   },
   "cis-1,2-Dichloroethylene": {
     "en": "cis-1,2-Dichloroethylene",
-    "fr": null
+    "fr": null,
+    "_": "cis-1,2-Dichloroethylene"
   },
   "cis-1,3-Dichloropropene": {
     "en": "cis-1,3-Dichloropropene",
-    "fr": null
+    "fr": null,
+    "_": "cis-1,3-Dichloropropene"
   },
   "cis-Chlordane": {
     "en": "cis-Chlordane",
-    "fr": null
+    "fr": null,
+    "_": "cis-Chlordane"
   },
   "cis-Mevinphos": {
     "en": "cis-Mevinphos",
-    "fr": null
+    "fr": null,
+    "_": "cis-Mevinphos"
   },
   "cis-Nonachlor": {
     "en": "cis-Nonachlor",
-    "fr": null
+    "fr": null,
+    "_": "cis-Nonachlor"
   },
   "Clarithromycin": {
     "en": "Clarithromycin",
-    "fr": null
+    "fr": null,
+    "_": "Clarithromycin"
   },
   "Clindamycin": {
     "en": "Clindamycin",
-    "fr": null
+    "fr": null,
+    "_": "Clindamycin"
   },
   "Clodinafop": {
     "en": "Clodinafop",
-    "fr": null
+    "fr": null,
+    "_": "Clodinafop"
   },
   "Clodinafop-propargyl": {
     "en": "Clodinafop-propargyl",
-    "fr": null
+    "fr": null,
+    "_": "Clodinafop-propargyl"
   },
   "Clofibric acid": {
     "en": "Clofibric acid",
-    "fr": null
+    "fr": null,
+    "_": "Clofibric acid"
   },
   "Clomazone": {
     "en": "Clomazone",
-    "fr": null
+    "fr": null,
+    "_": "Clomazone"
   },
   "Clopyralid": {
     "en": "Clopyralid",
-    "fr": null
+    "fr": null,
+    "_": "Clopyralid"
   },
   "Clothianidin": {
     "en": "Clothianidin",
-    "fr": null
+    "fr": null,
+    "_": "Clothianidin"
   },
   "Clothianidin-d3": {
     "en": "Clothianidin-d3",
-    "fr": null
+    "fr": null,
+    "_": "Clothianidin-d3"
   },
   "Cloud cover": {
     "en": "Cloud cover",
-    "fr": null
+    "fr": null,
+    "_": "Cloud cover"
   },
   "Cobalt": {
     "en": "Cobalt",
-    "fr": null
+    "fr": null,
+    "_": "Cobalt"
   },
   "Cobalt-59": {
     "en": "Cobalt-59",
-    "fr": null
+    "fr": null,
+    "_": "Cobalt-59"
   },
   "Cobalt-60": {
     "en": "Cobalt-60",
-    "fr": null
+    "fr": null,
+    "_": "Cobalt-60"
   },
   "Cocaine": {
     "en": "Cocaine",
-    "fr": null
+    "fr": null,
+    "_": "Cocaine"
   },
   "Codeine": {
     "en": "Codeine",
-    "fr": null
+    "fr": null,
+    "_": "Codeine"
   },
   "Coliform/Streptococcus ratio, fecal": {
     "en": "Coliform/Streptococcus ratio, fecal",
-    "fr": null
+    "fr": null,
+    "_": "Coliform/Streptococcus ratio, fecal"
   },
   "Coliphage": {
     "en": "Coliphage",
-    "fr": null
+    "fr": null,
+    "_": "Coliphage"
   },
   "Color": {
     "en": "Color",
-    "fr": null
+    "fr": null,
+    "_": "Color"
   },
   "Conductivity": {
     "en": "Conductivity",
-    "fr": null
+    "fr": null,
+    "_": "Conductivity"
   },
   "Copper": {
     "en": "Copper",
-    "fr": null
+    "fr": null,
+    "_": "Copper"
   },
   "Copper 8-quinolinolate": {
     "en": "Copper 8-quinolinolate",
-    "fr": null
+    "fr": null,
+    "_": "Copper 8-quinolinolate"
   },
   "Copper-63": {
     "en": "Copper-63",
-    "fr": null
+    "fr": null,
+    "_": "Copper-63"
   },
   "Copper-65": {
     "en": "Copper-65",
-    "fr": null
+    "fr": null,
+    "_": "Copper-65"
   },
   "Cotinine": {
     "en": "Cotinine",
-    "fr": null
+    "fr": null,
+    "_": "Cotinine"
   },
   "Crufomate": {
     "en": "Crufomate",
-    "fr": null
+    "fr": null,
+    "_": "Crufomate"
   },
   "Cryptosporidium": {
     "en": "Cryptosporidium",
-    "fr": null
+    "fr": null,
+    "_": "Cryptosporidium"
   },
   "Cumene": {
     "en": "Cumene",
-    "fr": null
+    "fr": null,
+    "_": "Cumene"
   },
   "Cyanate": {
     "en": "Cyanate",
-    "fr": null
+    "fr": null,
+    "_": "Cyanate"
   },
   "Cyanazine": {
     "en": "Cyanazine",
-    "fr": null
+    "fr": null,
+    "_": "Cyanazine"
   },
   "Cyanazine-d5": {
     "en": "Cyanazine-d5",
-    "fr": null
+    "fr": null,
+    "_": "Cyanazine-d5"
   },
   "Cyanide": {
     "en": "Cyanide",
-    "fr": null
+    "fr": null,
+    "_": "Cyanide"
   },
   "Cyanide + Thiocyanate": {
     "en": "Cyanide + Thiocyanate",
-    "fr": null
+    "fr": null,
+    "_": "Cyanide + Thiocyanate"
   },
   "Cyanophos": {
     "en": "Cyanophos",
-    "fr": null
+    "fr": null,
+    "_": "Cyanophos"
   },
   "Cyantraniliprole": {
     "en": "Cyantraniliprole",
-    "fr": null
+    "fr": null,
+    "_": "Cyantraniliprole"
   },
   "Cyclamate": {
     "en": "Cyclamate",
-    "fr": null
+    "fr": null,
+    "_": "Cyclamate"
   },
   "Cycloate": {
     "en": "Cycloate",
-    "fr": null
+    "fr": null,
+    "_": "Cycloate"
   },
   "Cyfluthrin": {
     "en": "Cyfluthrin",
-    "fr": null
+    "fr": null,
+    "_": "Cyfluthrin"
   },
   "Cyhalothrin": {
     "en": "Cyhalothrin",
-    "fr": null
+    "fr": null,
+    "_": "Cyhalothrin"
   },
   "Cyprodinil": {
     "en": "Cyprodinil",
-    "fr": null
+    "fr": null,
+    "_": "Cyprodinil"
   },
   "Day, ice on": {
     "en": "Day, ice on",
-    "fr": null
+    "fr": null,
+    "_": "Day, ice on"
   },
   "DDD, o,o'-, o,p'-, and p,p'- isomers": {
     "en": "DDD, o,o'-, o,p'-, and p,p'- isomers",
-    "fr": null
+    "fr": null,
+    "_": "DDD, o,o'-, o,p'-, and p,p'- isomers"
   },
   "DDE, o,o'-, o,p'-, and p,p'- isomers": {
     "en": "DDE, o,o'-, o,p'-, and p,p'- isomers",
-    "fr": null
+    "fr": null,
+    "_": "DDE, o,o'-, o,p'-, and p,p'- isomers"
   },
   "DDT, o,p'- and p,p'- isomers": {
     "en": "DDT, o,p'- and p,p'- isomers",
-    "fr": null
+    "fr": null,
+    "_": "DDT, o,p'- and p,p'- isomers"
   },
   "DDT/DDD/DDE, sum of p,p' isomers": {
     "en": "DDT/DDD/DDE, sum of p,p' isomers",
-    "fr": null
+    "fr": null,
+    "_": "DDT/DDD/DDE, sum of p,p' isomers"
   },
   "Decabromodiphenyl ether": {
     "en": "Decabromodiphenyl ether",
-    "fr": null
+    "fr": null,
+    "_": "Decabromodiphenyl ether"
   },
   "Decachlorobiphenyl": {
     "en": "Decachlorobiphenyl",
-    "fr": null
+    "fr": null,
+    "_": "Decachlorobiphenyl"
   },
   "Dehydroabietic acid": {
     "en": "Dehydroabietic acid",
-    "fr": null
+    "fr": null,
+    "_": "Dehydroabietic acid"
   },
   "delta carbon-13/carbon-12": {
     "en": "delta carbon-13/carbon-12",
-    "fr": null
+    "fr": null,
+    "_": "delta carbon-13/carbon-12"
   },
   "Delta nitrogen-15/nitrogen-14": {
     "en": "Delta nitrogen-15/nitrogen-14",
-    "fr": null
+    "fr": null,
+    "_": "Delta nitrogen-15/nitrogen-14"
   },
   "Delta oxygen-17/oxygen-16": {
     "en": "Delta oxygen-17/oxygen-16",
-    "fr": null
+    "fr": null,
+    "_": "Delta oxygen-17/oxygen-16"
   },
   "Delta oxygen-18/oxygen-16": {
     "en": "Delta oxygen-18/oxygen-16",
-    "fr": null
+    "fr": null,
+    "_": "Delta oxygen-18/oxygen-16"
   },
   "Delta sulfur-34/sulfur-32": {
     "en": "Delta sulfur-34/sulfur-32",
-    "fr": null
+    "fr": null,
+    "_": "Delta sulfur-34/sulfur-32"
   },
   "Deltamethrin": {
     "en": "Deltamethrin",
-    "fr": null
+    "fr": null,
+    "_": "Deltamethrin"
   },
   "Demeton": {
     "en": "Demeton",
-    "fr": null
+    "fr": null,
+    "_": "Demeton"
   },
   "Demeton-S": {
     "en": "Demeton-S",
-    "fr": null
+    "fr": null,
+    "_": "Demeton-S"
   },
   "Depth of water column": {
     "en": "Depth of water column",
-    "fr": null
+    "fr": null,
+    "_": "Depth of water column"
   },
   "Depth, Secchi disk depth": {
     "en": "Depth, Secchi disk depth",
-    "fr": null
+    "fr": null,
+    "_": "Depth, Secchi disk depth"
   },
   "Depth, snow cover": {
     "en": "Depth, snow cover",
-    "fr": null
+    "fr": null,
+    "_": "Depth, snow cover"
   },
   "Desmethylvenlafaxine": {
     "en": "Desmethylvenlafaxine",
-    "fr": null
+    "fr": null,
+    "_": "Desmethylvenlafaxine"
   },
   "Desmetryn": {
     "en": "Desmetryn",
-    "fr": null
+    "fr": null,
+    "_": "Desmetryn"
   },
   "Desthio-prothioconazole": {
     "en": "Desthio-prothioconazole",
-    "fr": null
+    "fr": null,
+    "_": "Desthio-prothioconazole"
   },
   "Deuterium": {
     "en": "Deuterium",
-    "fr": null
+    "fr": null,
+    "_": "Deuterium"
   },
   "Deuterium, delta": {
     "en": "Deuterium, delta",
-    "fr": null
+    "fr": null,
+    "_": "Deuterium, delta"
   },
   "Deuterium/Hydrogen ratio": {
     "en": "Deuterium/Hydrogen ratio",
-    "fr": null
+    "fr": null,
+    "_": "Deuterium/Hydrogen ratio"
   },
   "Di-n-octyl phthalate": {
     "en": "Di-n-octyl phthalate",
-    "fr": null
+    "fr": null,
+    "_": "Di-n-octyl phthalate"
   },
   "Di(2-ethylhexyl) phthalate": {
     "en": "Di(2-ethylhexyl) phthalate",
-    "fr": null
+    "fr": null,
+    "_": "Di(2-ethylhexyl) phthalate"
   },
   "Diallate": {
     "en": "Diallate",
-    "fr": null
+    "fr": null,
+    "_": "Diallate"
   },
   "Diazinon": {
     "en": "Diazinon",
-    "fr": null
+    "fr": null,
+    "_": "Diazinon"
   },
   "Dibenz[a,h]anthracene": {
     "en": "Dibenz[a,h]anthracene",
-    "fr": null
+    "fr": null,
+    "_": "Dibenz[a,h]anthracene"
   },
   "Dibenzo(a,h)anthracene-D14": {
     "en": "Dibenzo(a,h)anthracene-D14",
-    "fr": null
+    "fr": null,
+    "_": "Dibenzo(a,h)anthracene-D14"
   },
   "Dibenzo[a,h]pyrene": {
     "en": "Dibenzo[a,h]pyrene",
-    "fr": null
+    "fr": null,
+    "_": "Dibenzo[a,h]pyrene"
   },
   "Dibenzo[a,i]pyrene": {
     "en": "Dibenzo[a,i]pyrene",
-    "fr": null
+    "fr": null,
+    "_": "Dibenzo[a,i]pyrene"
   },
   "Dibenzo[a,l]pyrene": {
     "en": "Dibenzo[a,l]pyrene",
-    "fr": null
+    "fr": null,
+    "_": "Dibenzo[a,l]pyrene"
   },
   "Dibenzofuran": {
     "en": "Dibenzofuran",
-    "fr": null
+    "fr": null,
+    "_": "Dibenzofuran"
   },
   "Dibenzothiophene": {
     "en": "Dibenzothiophene",
-    "fr": null
+    "fr": null,
+    "_": "Dibenzothiophene"
   },
   "Dibenzothiophene-D8": {
     "en": "Dibenzothiophene-D8",
-    "fr": null
+    "fr": null,
+    "_": "Dibenzothiophene-D8"
   },
   "Dibromoacetic acid": {
     "en": "Dibromoacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "Dibromoacetic acid"
   },
   "Dibromomethane": {
     "en": "Dibromomethane",
-    "fr": null
+    "fr": null,
+    "_": "Dibromomethane"
   },
   "Dibutyl phthalate": {
     "en": "Dibutyl phthalate",
-    "fr": null
+    "fr": null,
+    "_": "Dibutyl phthalate"
   },
   "Dibutyltin": {
     "en": "Dibutyltin",
-    "fr": null
+    "fr": null,
+    "_": "Dibutyltin"
   },
   "Dicamba": {
     "en": "Dicamba",
-    "fr": null
+    "fr": null,
+    "_": "Dicamba"
   },
   "Dichlobenil": {
     "en": "Dichlobenil",
-    "fr": null
+    "fr": null,
+    "_": "Dichlobenil"
   },
   "Dichlofenthion": {
     "en": "Dichlofenthion",
-    "fr": null
+    "fr": null,
+    "_": "Dichlofenthion"
   },
   "Dichlofluanid": {
     "en": "Dichlofluanid",
-    "fr": null
+    "fr": null,
+    "_": "Dichlofluanid"
   },
   "Dichloran": {
     "en": "Dichloran",
-    "fr": null
+    "fr": null,
+    "_": "Dichloran"
   },
   "Dichloroacetic acid": {
     "en": "Dichloroacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "Dichloroacetic acid"
   },
   "Dichlorobromomethane": {
     "en": "Dichlorobromomethane",
-    "fr": null
+    "fr": null,
+    "_": "Dichlorobromomethane"
   },
   "Dichlorocatechols": {
     "en": "Dichlorocatechols",
-    "fr": null
+    "fr": null,
+    "_": "Dichlorocatechols"
   },
   "Dichlorodehydroabietic acid": {
     "en": "Dichlorodehydroabietic acid",
-    "fr": null
+    "fr": null,
+    "_": "Dichlorodehydroabietic acid"
   },
   "Dichlorophenols": {
     "en": "Dichlorophenols",
-    "fr": null
+    "fr": null,
+    "_": "Dichlorophenols"
   },
   "Dichlorovanillins": {
     "en": "Dichlorovanillins",
-    "fr": null
+    "fr": null,
+    "_": "Dichlorovanillins"
   },
   "Dichloroveretrols": {
     "en": "Dichloroveretrols",
-    "fr": null
+    "fr": null,
+    "_": "Dichloroveretrols"
   },
   "Dichlorprop": {
     "en": "Dichlorprop",
-    "fr": null
+    "fr": null,
+    "_": "Dichlorprop"
   },
   "Dichlorvos": {
     "en": "Dichlorvos",
-    "fr": null
+    "fr": null,
+    "_": "Dichlorvos"
   },
   "Diclofenac": {
     "en": "Diclofenac",
-    "fr": null
+    "fr": null,
+    "_": "Diclofenac"
   },
   "Diclofenac, 4-hydroxy": {
     "en": "Diclofenac, 4-hydroxy",
-    "fr": null
+    "fr": null,
+    "_": "Diclofenac, 4-hydroxy"
   },
   "Diclofop methyl": {
     "en": "Diclofop methyl",
-    "fr": null
+    "fr": null,
+    "_": "Diclofop methyl"
   },
   "Dicofol": {
     "en": "Dicofol",
-    "fr": null
+    "fr": null,
+    "_": "Dicofol"
   },
   "Dicrotophos": {
     "en": "Dicrotophos",
-    "fr": null
+    "fr": null,
+    "_": "Dicrotophos"
   },
   "Didecyl dimethyl ammonium chloride": {
     "en": "Didecyl dimethyl ammonium chloride",
-    "fr": null
+    "fr": null,
+    "_": "Didecyl dimethyl ammonium chloride"
   },
   "Dieldrin": {
     "en": "Dieldrin",
-    "fr": null
+    "fr": null,
+    "_": "Dieldrin"
   },
   "Diethyl phthalate": {
     "en": "Diethyl phthalate",
-    "fr": null
+    "fr": null,
+    "_": "Diethyl phthalate"
   },
   "Diethylene glycol": {
     "en": "Diethylene glycol",
-    "fr": null
+    "fr": null,
+    "_": "Diethylene glycol"
   },
   "Difenoconazole": {
     "en": "Difenoconazole",
-    "fr": null
+    "fr": null,
+    "_": "Difenoconazole"
   },
   "Dihydroisopimaric acid": {
     "en": "Dihydroisopimaric acid",
-    "fr": null
+    "fr": null,
+    "_": "Dihydroisopimaric acid"
   },
   "Diisopropanolamine": {
     "en": "Diisopropanolamine",
-    "fr": null
+    "fr": null,
+    "_": "Diisopropanolamine"
   },
   "Dimethachlor": {
     "en": "Dimethachlor",
-    "fr": null
+    "fr": null,
+    "_": "Dimethachlor"
   },
   "Dimethenamid": {
     "en": "Dimethenamid",
-    "fr": null
+    "fr": null,
+    "_": "Dimethenamid"
   },
   "Dimethoate": {
     "en": "Dimethoate",
-    "fr": null
+    "fr": null,
+    "_": "Dimethoate"
   },
   "Dimethoate-d6": {
     "en": "Dimethoate-d6",
-    "fr": null
+    "fr": null,
+    "_": "Dimethoate-d6"
   },
   "Dimethomorph": {
     "en": "Dimethomorph",
-    "fr": null
+    "fr": null,
+    "_": "Dimethomorph"
   },
   "Dimethyl diselenide": {
     "en": "Dimethyl diselenide",
-    "fr": null
+    "fr": null,
+    "_": "Dimethyl diselenide"
   },
   "Dimethyl phthalate": {
     "en": "Dimethyl phthalate",
-    "fr": null
+    "fr": null,
+    "_": "Dimethyl phthalate"
   },
   "Dimethyl sulfone": {
     "en": "Dimethyl sulfone",
-    "fr": null
+    "fr": null,
+    "_": "Dimethyl sulfone"
   },
   "Dinitramine": {
     "en": "Dinitramine",
-    "fr": null
+    "fr": null,
+    "_": "Dinitramine"
   },
   "Dinoseb": {
     "en": "Dinoseb",
-    "fr": null
+    "fr": null,
+    "_": "Dinoseb"
   },
   "Dinotefuran": {
     "en": "Dinotefuran",
-    "fr": null
+    "fr": null,
+    "_": "Dinotefuran"
   },
   "Dioxathion": {
     "en": "Dioxathion",
-    "fr": null
+    "fr": null,
+    "_": "Dioxathion"
   },
   "Diphenamid": {
     "en": "Diphenamid",
-    "fr": null
+    "fr": null,
+    "_": "Diphenamid"
   },
   "Diphenylamine": {
     "en": "Diphenylamine",
-    "fr": null
+    "fr": null,
+    "_": "Diphenylamine"
   },
   "Diquat": {
     "en": "Diquat",
-    "fr": null
+    "fr": null,
+    "_": "Diquat"
   },
   "Discharge, River/Stream": {
     "en": "Discharge, River/Stream",
-    "fr": null
+    "fr": null,
+    "_": "Discharge, River/Stream"
   },
   "Dissolved oxygen (DO)": {
     "en": "Dissolved oxygen (DO)",
-    "fr": null
+    "fr": null,
+    "_": "Dissolved oxygen (DO)"
   },
   "Dissolved oxygen saturation": {
     "en": "Dissolved oxygen saturation",
-    "fr": null
+    "fr": null,
+    "_": "Dissolved oxygen saturation"
   },
   "Distance From Left Bank": {
     "en": "Distance From Left Bank",
-    "fr": null
+    "fr": null,
+    "_": "Distance From Left Bank"
   },
   "Disulfoton": {
     "en": "Disulfoton",
-    "fr": null
+    "fr": null,
+    "_": "Disulfoton"
   },
   "Diuron": {
     "en": "Diuron",
-    "fr": null
+    "fr": null,
+    "_": "Diuron"
   },
   "Docosanoic acid": {
     "en": "Docosanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Docosanoic acid"
   },
   "Eicosanoic acid": {
     "en": "Eicosanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Eicosanoic acid"
   },
   "Endosulfan": {
     "en": "Endosulfan",
-    "fr": null
+    "fr": null,
+    "_": "Endosulfan"
   },
   "Endosulfan sulfate": {
     "en": "Endosulfan sulfate",
-    "fr": null
+    "fr": null,
+    "_": "Endosulfan sulfate"
   },
   "Endrin": {
     "en": "Endrin",
-    "fr": null
+    "fr": null,
+    "_": "Endrin"
   },
   "Endrin aldehyde": {
     "en": "Endrin aldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Endrin aldehyde"
   },
   "Endrin ketone": {
     "en": "Endrin ketone",
-    "fr": null
+    "fr": null,
+    "_": "Endrin ketone"
   },
   "Enrofloxacin": {
     "en": "Enrofloxacin",
-    "fr": null
+    "fr": null,
+    "_": "Enrofloxacin"
   },
   "Enterococcus": {
     "en": "Enterococcus",
-    "fr": null
+    "fr": null,
+    "_": "Enterococcus"
   },
   "EPTC-d14": {
     "en": "EPTC-d14",
-    "fr": null
+    "fr": null,
+    "_": "EPTC-d14"
   },
   "Erythromycin": {
     "en": "Erythromycin",
-    "fr": null
+    "fr": null,
+    "_": "Erythromycin"
   },
   "Escherichia coli": {
     "en": "Escherichia coli",
-    "fr": null
+    "fr": null,
+    "_": "Escherichia coli"
   },
   "Estradiol": {
     "en": "Estradiol",
-    "fr": null
+    "fr": null,
+    "_": "Estradiol"
   },
   "Estriol": {
     "en": "Estriol",
-    "fr": null
+    "fr": null,
+    "_": "Estriol"
   },
   "Estrone": {
     "en": "Estrone",
-    "fr": null
+    "fr": null,
+    "_": "Estrone"
   },
   "Ethalfluralin": {
     "en": "Ethalfluralin",
-    "fr": null
+    "fr": null,
+    "_": "Ethalfluralin"
   },
   "Ethanol": {
     "en": "Ethanol",
-    "fr": null
+    "fr": null,
+    "_": "Ethanol"
   },
   "Ethinyl estradiol": {
     "en": "Ethinyl estradiol",
-    "fr": null
+    "fr": null,
+    "_": "Ethinyl estradiol"
   },
   "Ethion": {
     "en": "Ethion",
-    "fr": null
+    "fr": null,
+    "_": "Ethion"
   },
   "Ethofumesate": {
     "en": "Ethofumesate",
-    "fr": null
+    "fr": null,
+    "_": "Ethofumesate"
   },
   "Ethoprop": {
     "en": "Ethoprop",
-    "fr": null
+    "fr": null,
+    "_": "Ethoprop"
   },
   "Ethyl acetate": {
     "en": "Ethyl acetate",
-    "fr": null
+    "fr": null,
+    "_": "Ethyl acetate"
   },
   "Ethylbenzene": {
     "en": "Ethylbenzene",
-    "fr": null
+    "fr": null,
+    "_": "Ethylbenzene"
   },
   "Ethylene dibromide": {
     "en": "Ethylene dibromide",
-    "fr": null
+    "fr": null,
+    "_": "Ethylene dibromide"
   },
   "Ethylene glycol": {
     "en": "Ethylene glycol",
-    "fr": null
+    "fr": null,
+    "_": "Ethylene glycol"
   },
   "Etridiazole": {
     "en": "Etridiazole",
-    "fr": null
+    "fr": null,
+    "_": "Etridiazole"
   },
   "Etrimfos": {
     "en": "Etrimfos",
-    "fr": null
+    "fr": null,
+    "_": "Etrimfos"
   },
   "Europium": {
     "en": "Europium",
-    "fr": null
+    "fr": null,
+    "_": "Europium"
   },
   "Extractable hydrocarbons": {
     "en": "Extractable hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "Extractable hydrocarbons"
   },
   "Famoxadone": {
     "en": "Famoxadone",
-    "fr": null
+    "fr": null,
+    "_": "Famoxadone"
   },
   "Fecal Coliform": {
     "en": "Fecal Coliform",
-    "fr": null
+    "fr": null,
+    "_": "Fecal Coliform"
   },
   "Fecal Streptococcus Group Bacteria": {
     "en": "Fecal Streptococcus Group Bacteria",
-    "fr": null
+    "fr": null,
+    "_": "Fecal Streptococcus Group Bacteria"
   },
   "Fenamidone": {
     "en": "Fenamidone",
-    "fr": null
+    "fr": null,
+    "_": "Fenamidone"
   },
   "Fenitrothion": {
     "en": "Fenitrothion",
-    "fr": null
+    "fr": null,
+    "_": "Fenitrothion"
   },
   "Fenitrothion-d6": {
     "en": "Fenitrothion-d6",
-    "fr": null
+    "fr": null,
+    "_": "Fenitrothion-d6"
   },
   "Fenoprofen": {
     "en": "Fenoprofen",
-    "fr": null
+    "fr": null,
+    "_": "Fenoprofen"
   },
   "Fenoxaprop-ethyl": {
     "en": "Fenoxaprop-ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Fenoxaprop-ethyl"
   },
   "Fenoxaprop-P-ethyl": {
     "en": "Fenoxaprop-P-ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Fenoxaprop-P-ethyl"
   },
   "Fensulfothion": {
     "en": "Fensulfothion",
-    "fr": null
+    "fr": null,
+    "_": "Fensulfothion"
   },
   "Fenthion": {
     "en": "Fenthion",
-    "fr": null
+    "fr": null,
+    "_": "Fenthion"
   },
   "Ferric ion": {
     "en": "Ferric ion",
-    "fr": null
+    "fr": null,
+    "_": "Ferric ion"
   },
   "Ferrous ion": {
     "en": "Ferrous ion",
-    "fr": null
+    "fr": null,
+    "_": "Ferrous ion"
   },
   "Filamentous Algae Cover": {
     "en": "Filamentous Algae Cover",
-    "fr": null
+    "fr": null,
+    "_": "Filamentous Algae Cover"
   },
   "Fixed dissolved solids": {
     "en": "Fixed dissolved solids",
-    "fr": null
+    "fr": null,
+    "_": "Fixed dissolved solids"
   },
   "Fixed suspended solids": {
     "en": "Fixed suspended solids",
-    "fr": null
+    "fr": null,
+    "_": "Fixed suspended solids"
   },
   "Flonicamid": {
     "en": "Flonicamid",
-    "fr": null
+    "fr": null,
+    "_": "Flonicamid"
   },
   "Flonicamid-d3": {
     "en": "Flonicamid-d3",
-    "fr": null
+    "fr": null,
+    "_": "Flonicamid-d3"
   },
   "Flow": {
     "en": "Flow",
-    "fr": null
+    "fr": null,
+    "_": "Flow"
   },
   "Fluazifop": {
     "en": "Fluazifop",
-    "fr": null
+    "fr": null,
+    "_": "Fluazifop"
   },
   "Fluazifop-P-butyl": {
     "en": "Fluazifop-P-butyl",
-    "fr": null
+    "fr": null,
+    "_": "Fluazifop-P-butyl"
   },
   "Fluazinam": {
     "en": "Fluazinam",
-    "fr": null
+    "fr": null,
+    "_": "Fluazinam"
   },
   "Fludioxonil": {
     "en": "Fludioxonil",
-    "fr": null
+    "fr": null,
+    "_": "Fludioxonil"
   },
   "Flumetralin": {
     "en": "Flumetralin",
-    "fr": null
+    "fr": null,
+    "_": "Flumetralin"
   },
   "Flumetsulam": {
     "en": "Flumetsulam",
-    "fr": null
+    "fr": null,
+    "_": "Flumetsulam"
   },
   "Flumioxazin": {
     "en": "Flumioxazin",
-    "fr": null
+    "fr": null,
+    "_": "Flumioxazin"
   },
   "Fluopyram": {
     "en": "Fluopyram",
-    "fr": null
+    "fr": null,
+    "_": "Fluopyram"
   },
   "Fluoranthene": {
     "en": "Fluoranthene",
-    "fr": null
+    "fr": null,
+    "_": "Fluoranthene"
   },
   "Fluoranthene-d10": {
     "en": "Fluoranthene-d10",
-    "fr": null
+    "fr": null,
+    "_": "Fluoranthene-d10"
   },
   "Fluorene": {
     "en": "Fluorene",
-    "fr": null
+    "fr": null,
+    "_": "Fluorene"
   },
   "Fluorescence index": {
     "en": "Fluorescence index",
-    "fr": null
+    "fr": null,
+    "_": "Fluorescence index"
   },
   "Fluorescent dissolved organic matter (FDOM)": {
     "en": "Fluorescent dissolved organic matter (FDOM)",
-    "fr": null
+    "fr": null,
+    "_": "Fluorescent dissolved organic matter (FDOM)"
   },
   "Fluoride": {
     "en": "Fluoride",
-    "fr": null
+    "fr": null,
+    "_": "Fluoride"
   },
   "Fluorine": {
     "en": "Fluorine",
-    "fr": null
+    "fr": null,
+    "_": "Fluorine"
   },
   "Fluoxetine": {
     "en": "Fluoxetine",
-    "fr": null
+    "fr": null,
+    "_": "Fluoxetine"
   },
   "Flupyradifurone": {
     "en": "Flupyradifurone",
-    "fr": null
+    "fr": null,
+    "_": "Flupyradifurone"
   },
   "Fluroxypyr": {
     "en": "Fluroxypyr",
-    "fr": null
+    "fr": null,
+    "_": "Fluroxypyr"
   },
   "Folpet": {
     "en": "Folpet",
-    "fr": null
+    "fr": null,
+    "_": "Folpet"
   },
   "Fonofos": {
     "en": "Fonofos",
-    "fr": null
+    "fr": null,
+    "_": "Fonofos"
   },
   "Foramsulfuron": {
     "en": "Foramsulfuron",
-    "fr": null
+    "fr": null,
+    "_": "Foramsulfuron"
   },
   "Formaldehyde": {
     "en": "Formaldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Formaldehyde"
   },
   "FtS 6:2 ion": {
     "en": "FtS 6:2 ion",
-    "fr": null
+    "fr": null,
+    "_": "FtS 6:2 ion"
   },
   "Gadolinium": {
     "en": "Gadolinium",
-    "fr": null
+    "fr": null,
+    "_": "Gadolinium"
   },
   "Gallium": {
     "en": "Gallium",
-    "fr": null
+    "fr": null,
+    "_": "Gallium"
   },
   "Gas Range Organics (C6-C10)": {
     "en": "Gas Range Organics (C6-C10)",
-    "fr": null
+    "fr": null,
+    "_": "Gas Range Organics (C6-C10)"
   },
   "Gemfibrozil": {
     "en": "Gemfibrozil",
-    "fr": null
+    "fr": null,
+    "_": "Gemfibrozil"
   },
   "Germanium": {
     "en": "Germanium",
-    "fr": null
+    "fr": null,
+    "_": "Germanium"
   },
   "Giardia": {
     "en": "Giardia",
-    "fr": null
+    "fr": null,
+    "_": "Giardia"
   },
   "Glufosinate": {
     "en": "Glufosinate",
-    "fr": null
+    "fr": null,
+    "_": "Glufosinate"
   },
   "Glyoxal": {
     "en": "Glyoxal",
-    "fr": null
+    "fr": null,
+    "_": "Glyoxal"
   },
   "Glyphosate": {
     "en": "Glyphosate",
-    "fr": null
+    "fr": null,
+    "_": "Glyphosate"
   },
   "Gold": {
     "en": "Gold",
-    "fr": null
+    "fr": null,
+    "_": "Gold"
   },
   "Grain size, coarse sand (>=630 to 2000 um)": {
     "en": "Grain size, coarse sand (>=630 to 2000 um)",
-    "fr": null
+    "fr": null,
+    "_": "Grain size, coarse sand (>=630 to 2000 um)"
   },
   "Gran acid neutralizing capacity": {
     "en": "Gran acid neutralizing capacity",
-    "fr": null
+    "fr": null,
+    "_": "Gran acid neutralizing capacity"
   },
   "Gross alpha radioactivity, (Americium-241 ref std)": {
     "en": "Gross alpha radioactivity, (Americium-241 ref std)",
-    "fr": null
+    "fr": null,
+    "_": "Gross alpha radioactivity, (Americium-241 ref std)"
   },
   "Gross beta radioactivity, (Cesium-137 ref std)": {
     "en": "Gross beta radioactivity, (Cesium-137 ref std)",
-    "fr": null
+    "fr": null,
+    "_": "Gross beta radioactivity, (Cesium-137 ref std)"
   },
   "Hafnium": {
     "en": "Hafnium",
-    "fr": null
+    "fr": null,
+    "_": "Hafnium"
   },
   "Haloacetic acids": {
     "en": "Haloacetic acids",
-    "fr": null
+    "fr": null,
+    "_": "Haloacetic acids"
   },
   "Hardness, Ca, Mg": {
     "en": "Hardness, Ca, Mg",
-    "fr": null
+    "fr": null,
+    "_": "Hardness, Ca, Mg"
   },
   "Hardness, Calcium": {
     "en": "Hardness, Calcium",
-    "fr": null
+    "fr": null,
+    "_": "Hardness, Calcium"
   },
   "Hardness, carbonate": {
     "en": "Hardness, carbonate",
-    "fr": null
+    "fr": null,
+    "_": "Hardness, carbonate"
   },
   "Hardness, magnesium": {
     "en": "Hardness, magnesium",
-    "fr": null
+    "fr": null,
+    "_": "Hardness, magnesium"
   },
   "Hardness, non-carbonate": {
     "en": "Hardness, non-carbonate",
-    "fr": null
+    "fr": null,
+    "_": "Hardness, non-carbonate"
   },
   "Heptachlor": {
     "en": "Heptachlor",
-    "fr": null
+    "fr": null,
+    "_": "Heptachlor"
   },
   "Heptachlor and Heptachlor epoxide": {
     "en": "Heptachlor and Heptachlor epoxide",
-    "fr": null
+    "fr": null,
+    "_": "Heptachlor and Heptachlor epoxide"
   },
   "Heptachlor epoxide": {
     "en": "Heptachlor epoxide",
-    "fr": null
+    "fr": null,
+    "_": "Heptachlor epoxide"
   },
   "Heptafluorobutyric acid": {
     "en": "Heptafluorobutyric acid",
-    "fr": null
+    "fr": null,
+    "_": "Heptafluorobutyric acid"
   },
   "Heptanal": {
     "en": "Heptanal",
-    "fr": null
+    "fr": null,
+    "_": "Heptanal"
   },
   "Heterotrophic bacteria": {
     "en": "Heterotrophic bacteria",
-    "fr": null
+    "fr": null,
+    "_": "Heterotrophic bacteria"
   },
   "Hexachlorobenzene": {
     "en": "Hexachlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "Hexachlorobenzene"
   },
   "Hexachlorobutadiene": {
     "en": "Hexachlorobutadiene",
-    "fr": null
+    "fr": null,
+    "_": "Hexachlorobutadiene"
   },
   "Hexachlorocyclohexane": {
     "en": "Hexachlorocyclohexane",
-    "fr": null
+    "fr": null,
+    "_": "Hexachlorocyclohexane"
   },
   "Hexachlorocyclopentadiene": {
     "en": "Hexachlorocyclopentadiene",
-    "fr": null
+    "fr": null,
+    "_": "Hexachlorocyclopentadiene"
   },
   "Hexachloroethane": {
     "en": "Hexachloroethane",
-    "fr": null
+    "fr": null,
+    "_": "Hexachloroethane"
   },
   "Hexaconazole": {
     "en": "Hexaconazole",
-    "fr": null
+    "fr": null,
+    "_": "Hexaconazole"
   },
   "Hexafluoropropylene oxide dimer acid ammonium salt": {
     "en": "Hexafluoropropylene oxide dimer acid ammonium salt",
-    "fr": null
+    "fr": null,
+    "_": "Hexafluoropropylene oxide dimer acid ammonium salt"
   },
   "Hexaldehyde": {
     "en": "Hexaldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Hexaldehyde"
   },
   "Hexane Extractable Material (HEM)": {
     "en": "Hexane Extractable Material (HEM)",
-    "fr": null
+    "fr": null,
+    "_": "Hexane Extractable Material (HEM)"
   },
   "Hexavalent chromium compounds": {
     "en": "Hexavalent chromium compounds",
-    "fr": null
+    "fr": null,
+    "_": "Hexavalent chromium compounds"
   },
   "Hexazinone": {
     "en": "Hexazinone",
-    "fr": null
+    "fr": null,
+    "_": "Hexazinone"
   },
   "Hilsenhoff Biotic Index": {
     "en": "Hilsenhoff Biotic Index",
-    "fr": null
+    "fr": null,
+    "_": "Hilsenhoff Biotic Index"
   },
   "Holmium": {
     "en": "Holmium",
-    "fr": null
+    "fr": null,
+    "_": "Holmium"
   },
   "Human Enteric viruses": {
     "en": "Human Enteric viruses",
-    "fr": null
+    "fr": null,
+    "_": "Human Enteric viruses"
   },
   "Hydrocarbons": {
     "en": "Hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "Hydrocarbons"
   },
   "Hydrocarbons, C10-19, Light petroleum": {
     "en": "Hydrocarbons, C10-19, Light petroleum",
-    "fr": null
+    "fr": null,
+    "_": "Hydrocarbons, C10-19, Light petroleum"
   },
   "Hydrocarbons, C19-32, Heavy petroleum": {
     "en": "Hydrocarbons, C19-32, Heavy petroleum",
-    "fr": null
+    "fr": null,
+    "_": "Hydrocarbons, C19-32, Heavy petroleum"
   },
   "Hydrocarbons, petroleum": {
     "en": "Hydrocarbons, petroleum",
-    "fr": null
+    "fr": null,
+    "_": "Hydrocarbons, petroleum"
   },
   "Hydrocarbons, volatile": {
     "en": "Hydrocarbons, volatile",
-    "fr": null
+    "fr": null,
+    "_": "Hydrocarbons, volatile"
   },
   "Hydrogen": {
     "en": "Hydrogen",
-    "fr": null
+    "fr": null,
+    "_": "Hydrogen"
   },
   "Hydrogen peroxide": {
     "en": "Hydrogen peroxide",
-    "fr": null
+    "fr": null,
+    "_": "Hydrogen peroxide"
   },
   "Hydrogen sulfide": {
     "en": "Hydrogen sulfide",
-    "fr": null
+    "fr": null,
+    "_": "Hydrogen sulfide"
   },
   "Hydromorphone": {
     "en": "Hydromorphone",
-    "fr": null
+    "fr": null,
+    "_": "Hydromorphone"
   },
   "Hydroquinone": {
     "en": "Hydroquinone",
-    "fr": null
+    "fr": null,
+    "_": "Hydroquinone"
   },
   "Hydroxide": {
     "en": "Hydroxide",
-    "fr": null
+    "fr": null,
+    "_": "Hydroxide"
   },
   "Hydroxy-ibuprofen, 2-": {
     "en": "Hydroxy-ibuprofen, 2-",
-    "fr": null
+    "fr": null,
+    "_": "Hydroxy-ibuprofen, 2-"
   },
   "Hydroxyphenols": {
     "en": "Hydroxyphenols",
-    "fr": null
+    "fr": null,
+    "_": "Hydroxyphenols"
   },
   "Ice cover, floating or solid, as % area estimate": {
     "en": "Ice cover, floating or solid, as % area estimate",
-    "fr": null
+    "fr": null,
+    "_": "Ice cover, floating or solid, as % area estimate"
   },
   "Ice thickness": {
     "en": "Ice thickness",
-    "fr": null
+    "fr": null,
+    "_": "Ice thickness"
   },
   "Imazamethabenz-methyl": {
     "en": "Imazamethabenz-methyl",
-    "fr": null
+    "fr": null,
+    "_": "Imazamethabenz-methyl"
   },
   "Imazamox": {
     "en": "Imazamox",
-    "fr": null
+    "fr": null,
+    "_": "Imazamox"
   },
   "Imazapyr": {
     "en": "Imazapyr",
-    "fr": null
+    "fr": null,
+    "_": "Imazapyr"
   },
   "Imazethapyr": {
     "en": "Imazethapyr",
-    "fr": null
+    "fr": null,
+    "_": "Imazethapyr"
   },
   "Imidacloprid": {
     "en": "Imidacloprid",
-    "fr": null
+    "fr": null,
+    "_": "Imidacloprid"
   },
   "Indene": {
     "en": "Indene",
-    "fr": null
+    "fr": null,
+    "_": "Indene"
   },
   "Indeno[1,2,3-cd]pyrene": {
     "en": "Indeno[1,2,3-cd]pyrene",
-    "fr": null
+    "fr": null,
+    "_": "Indeno[1,2,3-cd]pyrene"
   },
   "Indeno[1,2,3-cd]pyrene-d12": {
     "en": "Indeno[1,2,3-cd]pyrene-d12",
-    "fr": null
+    "fr": null,
+    "_": "Indeno[1,2,3-cd]pyrene-d12"
   },
   "Index of Additive Cancer Risk (IACR)": {
     "en": "Index of Additive Cancer Risk (IACR)",
-    "fr": null
+    "fr": null,
+    "_": "Index of Additive Cancer Risk (IACR)"
   },
   "Indium": {
     "en": "Indium",
-    "fr": null
+    "fr": null,
+    "_": "Indium"
   },
   "Indomethacin": {
     "en": "Indomethacin",
-    "fr": null
+    "fr": null,
+    "_": "Indomethacin"
   },
   "Inorganic carbon": {
     "en": "Inorganic carbon",
-    "fr": null
+    "fr": null,
+    "_": "Inorganic carbon"
   },
   "Inorganic nitrogen (ammonia, nitrate and nitrite)": {
     "en": "Inorganic nitrogen (ammonia, nitrate and nitrite)",
-    "fr": null
+    "fr": null,
+    "_": "Inorganic nitrogen (ammonia, nitrate and nitrite)"
   },
   "Inorganic nitrogen (nitrate and nitrite)": {
     "en": "Inorganic nitrogen (nitrate and nitrite)",
-    "fr": null
+    "fr": null,
+    "_": "Inorganic nitrogen (nitrate and nitrite)"
   },
   "Iodine-129": {
     "en": "Iodine-129",
-    "fr": null
+    "fr": null,
+    "_": "Iodine-129"
   },
   "Iodine-131": {
     "en": "Iodine-131",
-    "fr": null
+    "fr": null,
+    "_": "Iodine-131"
   },
   "Ion Balance": {
     "en": "Ion Balance",
-    "fr": null
+    "fr": null,
+    "_": "Ion Balance"
   },
   "Ionic strength": {
     "en": "Ionic strength",
-    "fr": null
+    "fr": null,
+    "_": "Ionic strength"
   },
   "Ipconazole": {
     "en": "Ipconazole",
-    "fr": null
+    "fr": null,
+    "_": "Ipconazole"
   },
   "Iprodione": {
     "en": "Iprodione",
-    "fr": null
+    "fr": null,
+    "_": "Iprodione"
   },
   "Iridium": {
     "en": "Iridium",
-    "fr": null
+    "fr": null,
+    "_": "Iridium"
   },
   "Iron": {
     "en": "Iron",
-    "fr": null
+    "fr": null,
+    "_": "Iron"
   },
   "Iron-57": {
     "en": "Iron-57",
-    "fr": null
+    "fr": null,
+    "_": "Iron-57"
   },
   "Isobutanol": {
     "en": "Isobutanol",
-    "fr": null
+    "fr": null,
+    "_": "Isobutanol"
   },
   "Isobutyraldehyde": {
     "en": "Isobutyraldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Isobutyraldehyde"
   },
   "Isofenphos": {
     "en": "Isofenphos",
-    "fr": null
+    "fr": null,
+    "_": "Isofenphos"
   },
   "Isophorone": {
     "en": "Isophorone",
-    "fr": null
+    "fr": null,
+    "_": "Isophorone"
   },
   "Isopimaric acid": {
     "en": "Isopimaric acid",
-    "fr": null
+    "fr": null,
+    "_": "Isopimaric acid"
   },
   "Isopimaric Acid mixt. with Palustric Acids": {
     "en": "Isopimaric Acid mixt. with Palustric Acids",
-    "fr": null
+    "fr": null,
+    "_": "Isopimaric Acid mixt. with Palustric Acids"
   },
   "Isopropanol": {
     "en": "Isopropanol",
-    "fr": null
+    "fr": null,
+    "_": "Isopropanol"
   },
   "Isovaleraldehyde": {
     "en": "Isovaleraldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Isovaleraldehyde"
   },
   "Jodfenphos": {
     "en": "Jodfenphos",
-    "fr": null
+    "fr": null,
+    "_": "Jodfenphos"
   },
   "Ketoprofen": {
     "en": "Ketoprofen",
-    "fr": null
+    "fr": null,
+    "_": "Ketoprofen"
   },
   "Kjeldahl nitrogen": {
     "en": "Kjeldahl nitrogen",
-    "fr": null
+    "fr": null,
+    "_": "Kjeldahl nitrogen"
   },
   "Langelier Saturation Index": {
     "en": "Langelier Saturation Index",
-    "fr": null
+    "fr": null,
+    "_": "Langelier Saturation Index"
   },
   "Lanthanum": {
     "en": "Lanthanum",
-    "fr": null
+    "fr": null,
+    "_": "Lanthanum"
   },
   "Lauric acid": {
     "en": "Lauric acid",
-    "fr": null
+    "fr": null,
+    "_": "Lauric acid"
   },
   "Lead": {
     "en": "Lead",
-    "fr": null
+    "fr": null,
+    "_": "Lead"
   },
   "Lead-210": {
     "en": "Lead-210",
-    "fr": null
+    "fr": null,
+    "_": "Lead-210"
   },
   "Light attenuation, depth at 99%": {
     "en": "Light attenuation, depth at 99%",
-    "fr": null
+    "fr": null,
+    "_": "Light attenuation, depth at 99%"
   },
   "Light, photosynthetic active radiation (PAR)": {
     "en": "Light, photosynthetic active radiation (PAR)",
-    "fr": null
+    "fr": null,
+    "_": "Light, photosynthetic active radiation (PAR)"
   },
   "Light, underwater extinction coefficient (K)": {
     "en": "Light, underwater extinction coefficient (K)",
-    "fr": null
+    "fr": null,
+    "_": "Light, underwater extinction coefficient (K)"
   },
   "Light, underwater incident": {
     "en": "Light, underwater incident",
-    "fr": null
+    "fr": null,
+    "_": "Light, underwater incident"
   },
   "Lignoceric Acid": {
     "en": "Lignoceric Acid",
-    "fr": null
+    "fr": null,
+    "_": "Lignoceric Acid"
   },
   "Lincomycin": {
     "en": "Lincomycin",
-    "fr": null
+    "fr": null,
+    "_": "Lincomycin"
   },
   "Linoleic acid": {
     "en": "Linoleic acid",
-    "fr": null
+    "fr": null,
+    "_": "Linoleic acid"
   },
   "Linuron": {
     "en": "Linuron",
-    "fr": null
+    "fr": null,
+    "_": "Linuron"
   },
   "Linuron-d6": {
     "en": "Linuron-d6",
-    "fr": null
+    "fr": null,
+    "_": "Linuron-d6"
   },
   "Lithium": {
     "en": "Lithium",
-    "fr": null
+    "fr": null,
+    "_": "Lithium"
   },
   "Lithium-7": {
     "en": "Lithium-7",
-    "fr": null
+    "fr": null,
+    "_": "Lithium-7"
   },
   "Lutetium": {
     "en": "Lutetium",
-    "fr": null
+    "fr": null,
+    "_": "Lutetium"
   },
   "m and p-Cresol": {
     "en": "m and p-Cresol",
-    "fr": null
+    "fr": null,
+    "_": "m and p-Cresol"
   },
   "m- & p-Chlorophenol": {
     "en": "m- & p-Chlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "m- & p-Chlorophenol"
   },
   "m-Chlorophenol": {
     "en": "m-Chlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "m-Chlorophenol"
   },
   "m-Cresol": {
     "en": "m-Cresol",
-    "fr": null
+    "fr": null,
+    "_": "m-Cresol"
   },
   "m-Xylene": {
     "en": "m-Xylene",
-    "fr": null
+    "fr": null,
+    "_": "m-Xylene"
   },
   "m,p-Xylene": {
     "en": "m,p-Xylene",
-    "fr": null
+    "fr": null,
+    "_": "m,p-Xylene"
   },
   "Macrophyte cover": {
     "en": "Macrophyte cover",
-    "fr": null
+    "fr": null,
+    "_": "Macrophyte cover"
   },
   "Magnesium": {
     "en": "Magnesium",
-    "fr": null
+    "fr": null,
+    "_": "Magnesium"
   },
   "Magnesium-25": {
     "en": "Magnesium-25",
-    "fr": null
+    "fr": null,
+    "_": "Magnesium-25"
   },
   "Malaoxon": {
     "en": "Malaoxon",
-    "fr": null
+    "fr": null,
+    "_": "Malaoxon"
   },
   "Malathion": {
     "en": "Malathion",
-    "fr": null
+    "fr": null,
+    "_": "Malathion"
   },
   "Malathion-d6": {
     "en": "Malathion-d6",
-    "fr": null
+    "fr": null,
+    "_": "Malathion-d6"
   },
   "Mancozeb": {
     "en": "Mancozeb",
-    "fr": null
+    "fr": null,
+    "_": "Mancozeb"
   },
   "Mandipropamid": {
     "en": "Mandipropamid",
-    "fr": null
+    "fr": null,
+    "_": "Mandipropamid"
   },
   "Manganese": {
     "en": "Manganese",
-    "fr": null
+    "fr": null,
+    "_": "Manganese"
   },
   "Manganese-55": {
     "en": "Manganese-55",
-    "fr": null
+    "fr": null,
+    "_": "Manganese-55"
   },
   "MCPA": {
     "en": "MCPA",
-    "fr": null
+    "fr": null,
+    "_": "MCPA"
   },
   "MCPB": {
     "en": "MCPB",
-    "fr": null
+    "fr": null,
+    "_": "MCPB"
   },
   "Meclofenamic acid": {
     "en": "Meclofenamic acid",
-    "fr": null
+    "fr": null,
+    "_": "Meclofenamic acid"
   },
   "Mecoprop": {
     "en": "Mecoprop",
-    "fr": null
+    "fr": null,
+    "_": "Mecoprop"
   },
   "Mercury": {
     "en": "Mercury",
-    "fr": null
+    "fr": null,
+    "_": "Mercury"
   },
   "Mercury-202": {
     "en": "Mercury-202",
-    "fr": null
+    "fr": null,
+    "_": "Mercury-202"
   },
   "Metalaxyl": {
     "en": "Metalaxyl",
-    "fr": null
+    "fr": null,
+    "_": "Metalaxyl"
   },
   "Metalaxyl-M": {
     "en": "Metalaxyl-M",
-    "fr": null
+    "fr": null,
+    "_": "Metalaxyl-M"
   },
   "Metconazole": {
     "en": "Metconazole",
-    "fr": null
+    "fr": null,
+    "_": "Metconazole"
   },
   "Methamidophos": {
     "en": "Methamidophos",
-    "fr": null
+    "fr": null,
+    "_": "Methamidophos"
   },
   "Methamphetamine": {
     "en": "Methamphetamine",
-    "fr": null
+    "fr": null,
+    "_": "Methamphetamine"
   },
   "Methane": {
     "en": "Methane",
-    "fr": null
+    "fr": null,
+    "_": "Methane"
   },
   "Methanol": {
     "en": "Methanol",
-    "fr": null
+    "fr": null,
+    "_": "Methanol"
   },
   "Methidathion": {
     "en": "Methidathion",
-    "fr": null
+    "fr": null,
+    "_": "Methidathion"
   },
   "Methomyl": {
     "en": "Methomyl",
-    "fr": null
+    "fr": null,
+    "_": "Methomyl"
   },
   "Methoprene": {
     "en": "Methoprene",
-    "fr": null
+    "fr": null,
+    "_": "Methoprene"
   },
   "Methoprene acid": {
     "en": "Methoprene acid",
-    "fr": null
+    "fr": null,
+    "_": "Methoprene acid"
   },
   "Methotrexate": {
     "en": "Methotrexate",
-    "fr": null
+    "fr": null,
+    "_": "Methotrexate"
   },
   "Methoxychlor": {
     "en": "Methoxychlor",
-    "fr": null
+    "fr": null,
+    "_": "Methoxychlor"
   },
   "Methoxycitronellal": {
     "en": "Methoxycitronellal",
-    "fr": null
+    "fr": null,
+    "_": "Methoxycitronellal"
   },
   "Methyl bromide": {
     "en": "Methyl bromide",
-    "fr": null
+    "fr": null,
+    "_": "Methyl bromide"
   },
   "Methyl isobutyl ketone": {
     "en": "Methyl isobutyl ketone",
-    "fr": null
+    "fr": null,
+    "_": "Methyl isobutyl ketone"
   },
   "Methyl parathion": {
     "en": "Methyl parathion",
-    "fr": null
+    "fr": null,
+    "_": "Methyl parathion"
   },
   "Methyl Selenium": {
     "en": "Methyl Selenium",
-    "fr": null
+    "fr": null,
+    "_": "Methyl Selenium"
   },
   "Methyl tert-butyl ether": {
     "en": "Methyl tert-butyl ether",
-    "fr": null
+    "fr": null,
+    "_": "Methyl tert-butyl ether"
   },
   "Methylacenaphthene": {
     "en": "Methylacenaphthene",
-    "fr": null
+    "fr": null,
+    "_": "Methylacenaphthene"
   },
   "Methylarsonic acid": {
     "en": "Methylarsonic acid",
-    "fr": null
+    "fr": null,
+    "_": "Methylarsonic acid"
   },
   "Methylchrysene": {
     "en": "Methylchrysene",
-    "fr": null
+    "fr": null,
+    "_": "Methylchrysene"
   },
   "Methyldibenzothiophene": {
     "en": "Methyldibenzothiophene",
-    "fr": null
+    "fr": null,
+    "_": "Methyldibenzothiophene"
   },
   "Methylene chloride": {
     "en": "Methylene chloride",
-    "fr": null
+    "fr": null,
+    "_": "Methylene chloride"
   },
   "Methylfluorene": {
     "en": "Methylfluorene",
-    "fr": null
+    "fr": null,
+    "_": "Methylfluorene"
   },
   "Methylglyoxal": {
     "en": "Methylglyoxal",
-    "fr": null
+    "fr": null,
+    "_": "Methylglyoxal"
   },
   "Methylmercury(1+)": {
     "en": "Methylmercury(1+)",
-    "fr": null
+    "fr": null,
+    "_": "Methylmercury(1+)"
   },
   "Methylnaphthalene": {
     "en": "Methylnaphthalene",
-    "fr": null
+    "fr": null,
+    "_": "Methylnaphthalene"
   },
   "Methylseleninic Acid": {
     "en": "Methylseleninic Acid",
-    "fr": null
+    "fr": null,
+    "_": "Methylseleninic Acid"
   },
   "Metiram": {
     "en": "Metiram",
-    "fr": null
+    "fr": null,
+    "_": "Metiram"
   },
   "Metobromuron": {
     "en": "Metobromuron",
-    "fr": null
+    "fr": null,
+    "_": "Metobromuron"
   },
   "Metolachlor": {
     "en": "Metolachlor",
-    "fr": null
+    "fr": null,
+    "_": "Metolachlor"
   },
   "Metolachlor-d6": {
     "en": "Metolachlor-d6",
-    "fr": null
+    "fr": null,
+    "_": "Metolachlor-d6"
   },
   "Metribuzin": {
     "en": "Metribuzin",
-    "fr": null
+    "fr": null,
+    "_": "Metribuzin"
   },
   "Metsulfuron-methyl": {
     "en": "Metsulfuron-methyl",
-    "fr": null
+    "fr": null,
+    "_": "Metsulfuron-methyl"
   },
   "Mevinphos": {
     "en": "Mevinphos",
-    "fr": null
+    "fr": null,
+    "_": "Mevinphos"
   },
   "Microcystin": {
     "en": "Microcystin",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin"
   },
   "Microcystin dRR": {
     "en": "Microcystin dRR",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin dRR"
   },
   "Microcystin HilR": {
     "en": "Microcystin HilR",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin HilR"
   },
   "Microcystin HtyR": {
     "en": "Microcystin HtyR",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin HtyR"
   },
   "Microcystin LA": {
     "en": "Microcystin LA",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin LA"
   },
   "Microcystin LF": {
     "en": "Microcystin LF",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin LF"
   },
   "Microcystin LR": {
     "en": "Microcystin LR",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin LR"
   },
   "Microcystin LR, Desmethyl": {
     "en": "Microcystin LR, Desmethyl",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin LR, Desmethyl"
   },
   "Microcystin LW": {
     "en": "Microcystin LW",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin LW"
   },
   "Microcystin LY": {
     "en": "Microcystin LY",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin LY"
   },
   "Microcystin RR": {
     "en": "Microcystin RR",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin RR"
   },
   "Microcystin WR": {
     "en": "Microcystin WR",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin WR"
   },
   "Microcystin YR": {
     "en": "Microcystin YR",
-    "fr": null
+    "fr": null,
+    "_": "Microcystin YR"
   },
   "Mirex": {
     "en": "Mirex",
-    "fr": null
+    "fr": null,
+    "_": "Mirex"
   },
   "Moisture content": {
     "en": "Moisture content",
-    "fr": null
+    "fr": null,
+    "_": "Moisture content"
   },
   "Molybdenum": {
     "en": "Molybdenum",
-    "fr": null
+    "fr": null,
+    "_": "Molybdenum"
   },
   "Molybdenum-98": {
     "en": "Molybdenum-98",
-    "fr": null
+    "fr": null,
+    "_": "Molybdenum-98"
   },
   "Monochlorocatechols": {
     "en": "Monochlorocatechols",
-    "fr": null
+    "fr": null,
+    "_": "Monochlorocatechols"
   },
   "Monochlorodehydroabietic acid": {
     "en": "Monochlorodehydroabietic acid",
-    "fr": null
+    "fr": null,
+    "_": "Monochlorodehydroabietic acid"
   },
   "Monochloroguaicols": {
     "en": "Monochloroguaicols",
-    "fr": null
+    "fr": null,
+    "_": "Monochloroguaicols"
   },
   "Monochlorophenols": {
     "en": "Monochlorophenols",
-    "fr": null
+    "fr": null,
+    "_": "Monochlorophenols"
   },
   "Monochlorovanillins": {
     "en": "Monochlorovanillins",
-    "fr": null
+    "fr": null,
+    "_": "Monochlorovanillins"
   },
   "Monolinuron": {
     "en": "Monolinuron",
-    "fr": null
+    "fr": null,
+    "_": "Monolinuron"
   },
   "Monuron": {
     "en": "Monuron",
-    "fr": null
+    "fr": null,
+    "_": "Monuron"
   },
   "Musk ambrette": {
     "en": "Musk ambrette",
-    "fr": null
+    "fr": null,
+    "_": "Musk ambrette"
   },
   "Musk ketone": {
     "en": "Musk ketone",
-    "fr": null
+    "fr": null,
+    "_": "Musk ketone"
   },
   "Musk moskine": {
     "en": "Musk moskine",
-    "fr": null
+    "fr": null,
+    "_": "Musk moskine"
   },
   "Musk Tibetene": {
     "en": "Musk Tibetene",
-    "fr": null
+    "fr": null,
+    "_": "Musk Tibetene"
   },
   "Myclobutanil": {
     "en": "Myclobutanil",
-    "fr": null
+    "fr": null,
+    "_": "Myclobutanil"
   },
   "Myristic acid": {
     "en": "Myristic acid",
-    "fr": null
+    "fr": null,
+    "_": "Myristic acid"
   },
   "n-Butylbenzene": {
     "en": "n-Butylbenzene",
-    "fr": null
+    "fr": null,
+    "_": "n-Butylbenzene"
   },
   "N-Nitrosodi-n-propylamine": {
     "en": "N-Nitrosodi-n-propylamine",
-    "fr": null
+    "fr": null,
+    "_": "N-Nitrosodi-n-propylamine"
   },
   "N-Nitrosodimethylamine": {
     "en": "N-Nitrosodimethylamine",
-    "fr": null
+    "fr": null,
+    "_": "N-Nitrosodimethylamine"
   },
   "N-Nitrosodiphenylamine": {
     "en": "N-Nitrosodiphenylamine",
-    "fr": null
+    "fr": null,
+    "_": "N-Nitrosodiphenylamine"
   },
   "n-Propylbenzene": {
     "en": "n-Propylbenzene",
-    "fr": null
+    "fr": null,
+    "_": "n-Propylbenzene"
   },
   "N,N-Diethyl-m-toluamide": {
     "en": "N,N-Diethyl-m-toluamide",
-    "fr": null
+    "fr": null,
+    "_": "N,N-Diethyl-m-toluamide"
   },
   "Naled": {
     "en": "Naled",
-    "fr": null
+    "fr": null,
+    "_": "Naled"
   },
   "Naphthalene": {
     "en": "Naphthalene",
-    "fr": null
+    "fr": null,
+    "_": "Naphthalene"
   },
   "Naphthalene-d8": {
     "en": "Naphthalene-d8",
-    "fr": null
+    "fr": null,
+    "_": "Naphthalene-d8"
   },
   "Naphthenic Acids": {
     "en": "Naphthenic Acids",
-    "fr": null
+    "fr": null,
+    "_": "Naphthenic Acids"
   },
   "Napropamide": {
     "en": "Napropamide",
-    "fr": null
+    "fr": null,
+    "_": "Napropamide"
   },
   "Naproxen": {
     "en": "Naproxen",
-    "fr": null
+    "fr": null,
+    "_": "Naproxen"
   },
   "Neoabietic acid": {
     "en": "Neoabietic acid",
-    "fr": null
+    "fr": null,
+    "_": "Neoabietic acid"
   },
   "Neodymium": {
     "en": "Neodymium",
-    "fr": null
+    "fr": null,
+    "_": "Neodymium"
   },
   "Neotame": {
     "en": "Neotame",
-    "fr": null
+    "fr": null,
+    "_": "Neotame"
   },
   "Nicarbazin": {
     "en": "Nicarbazin",
-    "fr": null
+    "fr": null,
+    "_": "Nicarbazin"
   },
   "Nickel": {
     "en": "Nickel",
-    "fr": null
+    "fr": null,
+    "_": "Nickel"
   },
   "Nickel-60": {
     "en": "Nickel-60",
-    "fr": null
+    "fr": null,
+    "_": "Nickel-60"
   },
   "Nicosulfuron": {
     "en": "Nicosulfuron",
-    "fr": null
+    "fr": null,
+    "_": "Nicosulfuron"
   },
   "Niobium": {
     "en": "Niobium",
-    "fr": null
+    "fr": null,
+    "_": "Niobium"
   },
   "Nitenpyram": {
     "en": "Nitenpyram",
-    "fr": null
+    "fr": null,
+    "_": "Nitenpyram"
   },
   "Nitrapyrin": {
     "en": "Nitrapyrin",
-    "fr": null
+    "fr": null,
+    "_": "Nitrapyrin"
   },
   "Nitrate": {
     "en": "Nitrate",
-    "fr": null
+    "fr": null,
+    "_": "Nitrate"
   },
   "Nitrilotriacetic acid": {
     "en": "Nitrilotriacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "Nitrilotriacetic acid"
   },
   "Nitrite": {
     "en": "Nitrite",
-    "fr": null
+    "fr": null,
+    "_": "Nitrite"
   },
   "Nitrobenzene": {
     "en": "Nitrobenzene",
-    "fr": null
+    "fr": null,
+    "_": "Nitrobenzene"
   },
   "Nitrofen": {
     "en": "Nitrofen",
-    "fr": null
+    "fr": null,
+    "_": "Nitrofen"
   },
   "Nitrogen dioxide": {
     "en": "Nitrogen dioxide",
-    "fr": null
+    "fr": null,
+    "_": "Nitrogen dioxide"
   },
   "Nitrogen-15": {
     "en": "Nitrogen-15",
-    "fr": null
+    "fr": null,
+    "_": "Nitrogen-15"
   },
   "Nitrogen-15/Nitrogen-14 ratio": {
     "en": "Nitrogen-15/Nitrogen-14 ratio",
-    "fr": null
+    "fr": null,
+    "_": "Nitrogen-15/Nitrogen-14 ratio"
   },
   "Nitrophenol": {
     "en": "Nitrophenol",
-    "fr": null
+    "fr": null,
+    "_": "Nitrophenol"
   },
   "Nonadecanoic acid": {
     "en": "Nonadecanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Nonadecanoic acid"
   },
   "Nonanal": {
     "en": "Nonanal",
-    "fr": null
+    "fr": null,
+    "_": "Nonanal"
   },
   "Nonylphenol": {
     "en": "Nonylphenol",
-    "fr": null
+    "fr": null,
+    "_": "Nonylphenol"
   },
   "Nonylphenol diethoxylate": {
     "en": "Nonylphenol diethoxylate",
-    "fr": null
+    "fr": null,
+    "_": "Nonylphenol diethoxylate"
   },
   "Norfloxacin": {
     "en": "Norfloxacin",
-    "fr": null
+    "fr": null,
+    "_": "Norfloxacin"
   },
   "Norfluoxetine": {
     "en": "Norfluoxetine",
-    "fr": null
+    "fr": null,
+    "_": "Norfluoxetine"
   },
   "o-Chlorophenol": {
     "en": "o-Chlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "o-Chlorophenol"
   },
   "o-Chlorotoluene": {
     "en": "o-Chlorotoluene",
-    "fr": null
+    "fr": null,
+    "_": "o-Chlorotoluene"
   },
   "o-Cresol": {
     "en": "o-Cresol",
-    "fr": null
+    "fr": null,
+    "_": "o-Cresol"
   },
   "o-Dichlorobenzene": {
     "en": "o-Dichlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "o-Dichlorobenzene"
   },
   "O-Ethyl O-(p-nitrophenyl) phenylphosphonothioate": {
     "en": "O-Ethyl O-(p-nitrophenyl) phenylphosphonothioate",
-    "fr": null
+    "fr": null,
+    "_": "O-Ethyl O-(p-nitrophenyl) phenylphosphonothioate"
   },
   "o-Nitrophenol": {
     "en": "o-Nitrophenol",
-    "fr": null
+    "fr": null,
+    "_": "o-Nitrophenol"
   },
   "o-Xylene": {
     "en": "o-Xylene",
-    "fr": null
+    "fr": null,
+    "_": "o-Xylene"
   },
   "o-Xylene, mixt. with m-xylene and p-xylene": {
     "en": "o-Xylene, mixt. with m-xylene and p-xylene",
-    "fr": null
+    "fr": null,
+    "_": "o-Xylene, mixt. with m-xylene and p-xylene"
   },
   "o,p'-DDD": {
     "en": "o,p'-DDD",
-    "fr": null
+    "fr": null,
+    "_": "o,p'-DDD"
   },
   "o,p'-DDE": {
     "en": "o,p'-DDE",
-    "fr": null
+    "fr": null,
+    "_": "o,p'-DDE"
   },
   "o,p'-DDT": {
     "en": "o,p'-DDT",
-    "fr": null
+    "fr": null,
+    "_": "o,p'-DDT"
   },
   "Octabromodiphenyl ether": {
     "en": "Octabromodiphenyl ether",
-    "fr": null
+    "fr": null,
+    "_": "Octabromodiphenyl ether"
   },
   "Octachlorostyrene": {
     "en": "Octachlorostyrene",
-    "fr": null
+    "fr": null,
+    "_": "Octachlorostyrene"
   },
   "Octanal": {
     "en": "Octanal",
-    "fr": null
+    "fr": null,
+    "_": "Octanal"
   },
   "Odor threshold number": {
     "en": "Odor threshold number",
-    "fr": null
+    "fr": null,
+    "_": "Odor threshold number"
   },
   "Ofloxacin": {
     "en": "Ofloxacin",
-    "fr": null
+    "fr": null,
+    "_": "Ofloxacin"
   },
   "Oil and Grease": {
     "en": "Oil and Grease",
-    "fr": null
+    "fr": null,
+    "_": "Oil and Grease"
   },
   "Oil and Grease, Nonpolar": {
     "en": "Oil and Grease, Nonpolar",
-    "fr": null
+    "fr": null,
+    "_": "Oil and Grease, Nonpolar"
   },
   "Oleic acid": {
     "en": "Oleic acid",
-    "fr": null
+    "fr": null,
+    "_": "Oleic acid"
   },
   "Omethoate": {
     "en": "Omethoate",
-    "fr": null
+    "fr": null,
+    "_": "Omethoate"
   },
   "Organic carbon": {
     "en": "Organic carbon",
-    "fr": null
+    "fr": null,
+    "_": "Organic carbon"
   },
   "Organic matter": {
     "en": "Organic matter",
-    "fr": null
+    "fr": null,
+    "_": "Organic matter"
   },
   "Organic Nitrogen": {
     "en": "Organic Nitrogen",
-    "fr": null
+    "fr": null,
+    "_": "Organic Nitrogen"
   },
   "Organic phosphorus": {
     "en": "Organic phosphorus",
-    "fr": null
+    "fr": null,
+    "_": "Organic phosphorus"
   },
   "Organochlorine pesticides": {
     "en": "Organochlorine pesticides",
-    "fr": null
+    "fr": null,
+    "_": "Organochlorine pesticides"
   },
   "Organophosphorus pesticides": {
     "en": "Organophosphorus pesticides",
-    "fr": null
+    "fr": null,
+    "_": "Organophosphorus pesticides"
   },
   "Orthophosphate": {
     "en": "Orthophosphate",
-    "fr": null
+    "fr": null,
+    "_": "Orthophosphate"
   },
   "Oryzalin": {
     "en": "Oryzalin",
-    "fr": null
+    "fr": null,
+    "_": "Oryzalin"
   },
   "Oxamyl": {
     "en": "Oxamyl",
-    "fr": null
+    "fr": null,
+    "_": "Oxamyl"
   },
   "Oxathiapiprolin": {
     "en": "Oxathiapiprolin",
-    "fr": null
+    "fr": null,
+    "_": "Oxathiapiprolin"
   },
   "Oxidation reduction potential (ORP)": {
     "en": "Oxidation reduction potential (ORP)",
-    "fr": null
+    "fr": null,
+    "_": "Oxidation reduction potential (ORP)"
   },
   "Oxolinic acid": {
     "en": "Oxolinic acid",
-    "fr": null
+    "fr": null,
+    "_": "Oxolinic acid"
   },
   "Oxycarboxin": {
     "en": "Oxycarboxin",
-    "fr": null
+    "fr": null,
+    "_": "Oxycarboxin"
   },
   "Oxychlordane": {
     "en": "Oxychlordane",
-    "fr": null
+    "fr": null,
+    "_": "Oxychlordane"
   },
   "Oxyfluorfen": {
     "en": "Oxyfluorfen",
-    "fr": null
+    "fr": null,
+    "_": "Oxyfluorfen"
   },
   "Oxygen Delta 18": {
     "en": "Oxygen Delta 18",
-    "fr": null
+    "fr": null,
+    "_": "Oxygen Delta 18"
   },
   "Oxygen-18": {
     "en": "Oxygen-18",
-    "fr": null
+    "fr": null,
+    "_": "Oxygen-18"
   },
   "Oxygen-18/Oxygen-16 ratio": {
     "en": "Oxygen-18/Oxygen-16 ratio",
-    "fr": null
+    "fr": null,
+    "_": "Oxygen-18/Oxygen-16 ratio"
   },
   "p-Bromofluorobenzene": {
     "en": "p-Bromofluorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "p-Bromofluorobenzene"
   },
   "p-Chloro-m-cresol": {
     "en": "p-Chloro-m-cresol",
-    "fr": null
+    "fr": null,
+    "_": "p-Chloro-m-cresol"
   },
   "p-Chlorophenol": {
     "en": "p-Chlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "p-Chlorophenol"
   },
   "p-Chlorophenyl phenyl ether": {
     "en": "p-Chlorophenyl phenyl ether",
-    "fr": null
+    "fr": null,
+    "_": "p-Chlorophenyl phenyl ether"
   },
   "p-Chlorotoluene": {
     "en": "p-Chlorotoluene",
-    "fr": null
+    "fr": null,
+    "_": "p-Chlorotoluene"
   },
   "p-Cresol": {
     "en": "p-Cresol",
-    "fr": null
+    "fr": null,
+    "_": "p-Cresol"
   },
   "p-Cymene": {
     "en": "p-Cymene",
-    "fr": null
+    "fr": null,
+    "_": "p-Cymene"
   },
   "p-Dichlorobenzene": {
     "en": "p-Dichlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "p-Dichlorobenzene"
   },
   "p-Nitrophenol": {
     "en": "p-Nitrophenol",
-    "fr": null
+    "fr": null,
+    "_": "p-Nitrophenol"
   },
   "p-Terphenyl-d14": {
     "en": "p-Terphenyl-d14",
-    "fr": null
+    "fr": null,
+    "_": "p-Terphenyl-d14"
   },
   "p-Xylene": {
     "en": "p-Xylene",
-    "fr": null
+    "fr": null,
+    "_": "p-Xylene"
   },
   "p,p'-DDD": {
     "en": "p,p'-DDD",
-    "fr": null
+    "fr": null,
+    "_": "p,p'-DDD"
   },
   "p,p'-DDE": {
     "en": "p,p'-DDE",
-    "fr": null
+    "fr": null,
+    "_": "p,p'-DDE"
   },
   "p,p'-DDT": {
     "en": "p,p'-DDT",
-    "fr": null
+    "fr": null,
+    "_": "p,p'-DDT"
   },
   "p,p'-Methoxychlor": {
     "en": "p,p'-Methoxychlor",
-    "fr": null
+    "fr": null,
+    "_": "p,p'-Methoxychlor"
   },
   "Palmitic acid": {
     "en": "Palmitic acid",
-    "fr": null
+    "fr": null,
+    "_": "Palmitic acid"
   },
   "Palustric acid": {
     "en": "Palustric acid",
-    "fr": null
+    "fr": null,
+    "_": "Palustric acid"
   },
   "Paraoxon": {
     "en": "Paraoxon",
-    "fr": null
+    "fr": null,
+    "_": "Paraoxon"
   },
   "Paraquat": {
     "en": "Paraquat",
-    "fr": null
+    "fr": null,
+    "_": "Paraquat"
   },
   "Parathion": {
     "en": "Parathion",
-    "fr": null
+    "fr": null,
+    "_": "Parathion"
   },
   "Parathion-d10": {
     "en": "Parathion-d10",
-    "fr": null
+    "fr": null,
+    "_": "Parathion-d10"
   },
   "Partial Pressure CO2": {
     "en": "Partial Pressure CO2",
-    "fr": null
+    "fr": null,
+    "_": "Partial Pressure CO2"
   },
   "Particle size": {
     "en": "Particle size",
-    "fr": null
+    "fr": null,
+    "_": "Particle size"
   },
   "Particle size, 30 mesh, (0.59 mm)": {
     "en": "Particle size, 30 mesh, (0.59 mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, 30 mesh, (0.59 mm)"
   },
   "Particle size, 50 mesh, (0.297 mm)": {
     "en": "Particle size, 50 mesh, (0.297 mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, 50 mesh, (0.297 mm)"
   },
   "Particle size, coarse sediment (>75 um)": {
     "en": "Particle size, coarse sediment (>75 um)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, coarse sediment (>75 um)"
   },
   "Particle size, fine sediment (<75 um)": {
     "en": "Particle size, fine sediment (<75 um)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, fine sediment (<75 um)"
   },
   "Particle size, Sieve No. 10, 9 mesh, (2.00mm)": {
     "en": "Particle size, Sieve No. 10, 9 mesh, (2.00mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, Sieve No. 10, 9 mesh, (2.00mm)"
   },
   "Particle size, Sieve No. 100, 100 mesh, (0.150mm)": {
     "en": "Particle size, Sieve No. 100, 100 mesh, (0.150mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, Sieve No. 100, 100 mesh, (0.150mm)"
   },
   "Particle size, Sieve No. 12, 10 mesh, (1.70mm)": {
     "en": "Particle size, Sieve No. 12, 10 mesh, (1.70mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, Sieve No. 12, 10 mesh, (1.70mm)"
   },
   "Particle size, Sieve No. 200, 200 mesh, (0.075mm)": {
     "en": "Particle size, Sieve No. 200, 200 mesh, (0.075mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, Sieve No. 200, 200 mesh, (0.075mm)"
   },
   "Particle size, Sieve No. 270, 270 mesh, (0.053mm)": {
     "en": "Particle size, Sieve No. 270, 270 mesh, (0.053mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, Sieve No. 270, 270 mesh, (0.053mm)"
   },
   "Particle size, Sieve No. 400, 400 mesh, (0.038mm)": {
     "en": "Particle size, Sieve No. 400, 400 mesh, (0.038mm)",
-    "fr": null
+    "fr": null,
+    "_": "Particle size, Sieve No. 400, 400 mesh, (0.038mm)"
   },
   "Pendimethalin": {
     "en": "Pendimethalin",
-    "fr": null
+    "fr": null,
+    "_": "Pendimethalin"
   },
   "Penflufen": {
     "en": "Penflufen",
-    "fr": null
+    "fr": null,
+    "_": "Penflufen"
   },
   "Pentachloroanisole": {
     "en": "Pentachloroanisole",
-    "fr": null
+    "fr": null,
+    "_": "Pentachloroanisole"
   },
   "Pentachlorobenzene": {
     "en": "Pentachlorobenzene",
-    "fr": null
+    "fr": null,
+    "_": "Pentachlorobenzene"
   },
   "Pentachloronitrobenzene": {
     "en": "Pentachloronitrobenzene",
-    "fr": null
+    "fr": null,
+    "_": "Pentachloronitrobenzene"
   },
   "Pentachlorophenol": {
     "en": "Pentachlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "Pentachlorophenol"
   },
   "Pentoxifylline": {
     "en": "Pentoxifylline",
-    "fr": null
+    "fr": null,
+    "_": "Pentoxifylline"
   },
   "Perfluorobutanesulfonic acid": {
     "en": "Perfluorobutanesulfonic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorobutanesulfonic acid"
   },
   "Perfluorodecanoic acid": {
     "en": "Perfluorodecanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorodecanoic acid"
   },
   "Perfluoroheptanoic acid": {
     "en": "Perfluoroheptanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluoroheptanoic acid"
   },
   "Perfluorohexanesulfonic acid": {
     "en": "Perfluorohexanesulfonic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorohexanesulfonic acid"
   },
   "Perfluorohexanoic acid": {
     "en": "Perfluorohexanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorohexanoic acid"
   },
   "Perfluorononanoic acid": {
     "en": "Perfluorononanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorononanoic acid"
   },
   "Perfluorooctane sulfonic acid": {
     "en": "Perfluorooctane sulfonic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorooctane sulfonic acid"
   },
   "Perfluorooctanoic acid": {
     "en": "Perfluorooctanoic acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorooctanoic acid"
   },
   "Perfluorovaleric acid": {
     "en": "Perfluorovaleric acid",
-    "fr": null
+    "fr": null,
+    "_": "Perfluorovaleric acid"
   },
   "Permethrin": {
     "en": "Permethrin",
-    "fr": null
+    "fr": null,
+    "_": "Permethrin"
   },
   "Perthane": {
     "en": "Perthane",
-    "fr": null
+    "fr": null,
+    "_": "Perthane"
   },
   "Perylene": {
     "en": "Perylene",
-    "fr": null
+    "fr": null,
+    "_": "Perylene"
   },
   "Perylene-d12": {
     "en": "Perylene-d12",
-    "fr": null
+    "fr": null,
+    "_": "Perylene-d12"
   },
   "Petroleum hydrocarbons, total volatile": {
     "en": "Petroleum hydrocarbons, total volatile",
-    "fr": null
+    "fr": null,
+    "_": "Petroleum hydrocarbons, total volatile"
   },
   "pH": {
     "en": "pH",
-    "fr": null
+    "fr": null,
+    "_": "pH"
   },
   "pH, lab": {
     "en": "pH, lab",
-    "fr": null
+    "fr": null,
+    "_": "pH, lab"
   },
   "pH, saturated": {
     "en": "pH, saturated",
-    "fr": null
+    "fr": null,
+    "_": "pH, saturated"
   },
   "Phantolide": {
     "en": "Phantolide",
-    "fr": null
+    "fr": null,
+    "_": "Phantolide"
   },
   "Phenanthrene": {
     "en": "Phenanthrene",
-    "fr": null
+    "fr": null,
+    "_": "Phenanthrene"
   },
   "Phenanthrene-d10": {
     "en": "Phenanthrene-d10",
-    "fr": null
+    "fr": null,
+    "_": "Phenanthrene-d10"
   },
   "Phenol": {
     "en": "Phenol",
-    "fr": null
+    "fr": null,
+    "_": "Phenol"
   },
   "Phenol, 2,3-dichloro-6-methoxy-": {
     "en": "Phenol, 2,3-dichloro-6-methoxy-",
-    "fr": null
+    "fr": null,
+    "_": "Phenol, 2,3-dichloro-6-methoxy-"
   },
   "Phenol, dibromo-": {
     "en": "Phenol, dibromo-",
-    "fr": null
+    "fr": null,
+    "_": "Phenol, dibromo-"
   },
   "Phenolics": {
     "en": "Phenolics",
-    "fr": null
+    "fr": null,
+    "_": "Phenolics"
   },
   "Phenols": {
     "en": "Phenols",
-    "fr": null
+    "fr": null,
+    "_": "Phenols"
   },
   "Pheophytin": {
     "en": "Pheophytin",
-    "fr": null
+    "fr": null,
+    "_": "Pheophytin"
   },
   "Pheophytin a": {
     "en": "Pheophytin a",
-    "fr": null
+    "fr": null,
+    "_": "Pheophytin a"
   },
   "Phorate": {
     "en": "Phorate",
-    "fr": null
+    "fr": null,
+    "_": "Phorate"
   },
   "Phorate-d10": {
     "en": "Phorate-d10",
-    "fr": null
+    "fr": null,
+    "_": "Phorate-d10"
   },
   "Phosalone": {
     "en": "Phosalone",
-    "fr": null
+    "fr": null,
+    "_": "Phosalone"
   },
   "Phosmet": {
     "en": "Phosmet",
-    "fr": null
+    "fr": null,
+    "_": "Phosmet"
   },
   "Phosphamidon": {
     "en": "Phosphamidon",
-    "fr": null
+    "fr": null,
+    "_": "Phosphamidon"
   },
   "Phosphorus-31": {
     "en": "Phosphorus-31",
-    "fr": null
+    "fr": null,
+    "_": "Phosphorus-31"
   },
   "Phosphorus, elemental": {
     "en": "Phosphorus, elemental",
-    "fr": null
+    "fr": null,
+    "_": "Phosphorus, elemental"
   },
   "Phosphorus, hydrolyzable": {
     "en": "Phosphorus, hydrolyzable",
-    "fr": null
+    "fr": null,
+    "_": "Phosphorus, hydrolyzable"
   },
   "Phycocyanin": {
     "en": "Phycocyanin",
-    "fr": null
+    "fr": null,
+    "_": "Phycocyanin"
   },
   "Picloram": {
     "en": "Picloram",
-    "fr": null
+    "fr": null,
+    "_": "Picloram"
   },
   "Picoxystrobin": {
     "en": "Picoxystrobin",
-    "fr": null
+    "fr": null,
+    "_": "Picoxystrobin"
   },
   "Pimaric acid": {
     "en": "Pimaric acid",
-    "fr": null
+    "fr": null,
+    "_": "Pimaric acid"
   },
   "Pipemidic acid": {
     "en": "Pipemidic acid",
-    "fr": null
+    "fr": null,
+    "_": "Pipemidic acid"
   },
   "Piperonyl butoxide": {
     "en": "Piperonyl butoxide",
-    "fr": null
+    "fr": null,
+    "_": "Piperonyl butoxide"
   },
   "Pirimicarb": {
     "en": "Pirimicarb",
-    "fr": null
+    "fr": null,
+    "_": "Pirimicarb"
   },
   "Pirimiphos-ethyl": {
     "en": "Pirimiphos-ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Pirimiphos-ethyl"
   },
   "Pirimiphos-methyl": {
     "en": "Pirimiphos-methyl",
-    "fr": null
+    "fr": null,
+    "_": "Pirimiphos-methyl"
   },
   "Platinum": {
     "en": "Platinum",
-    "fr": null
+    "fr": null,
+    "_": "Platinum"
   },
   "Polonium-210": {
     "en": "Polonium-210",
-    "fr": null
+    "fr": null,
+    "_": "Polonium-210"
   },
   "Polybrominated biphenyls": {
     "en": "Polybrominated biphenyls",
-    "fr": null
+    "fr": null,
+    "_": "Polybrominated biphenyls"
   },
   "Polychlorinated biphenyls": {
     "en": "Polychlorinated biphenyls",
-    "fr": null
+    "fr": null,
+    "_": "Polychlorinated biphenyls"
   },
   "Polycyclic aromatic hydrocarbons": {
     "en": "Polycyclic aromatic hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "Polycyclic aromatic hydrocarbons"
   },
   "Potassium": {
     "en": "Potassium",
-    "fr": null
+    "fr": null,
+    "_": "Potassium"
   },
   "Potassium-39": {
     "en": "Potassium-39",
-    "fr": null
+    "fr": null,
+    "_": "Potassium-39"
   },
   "Praseodymium": {
     "en": "Praseodymium",
-    "fr": null
+    "fr": null,
+    "_": "Praseodymium"
   },
   "Precipitation": {
     "en": "Precipitation",
-    "fr": null
+    "fr": null,
+    "_": "Precipitation"
   },
   "Precipitation 24hr prior to monitoring event amount": {
     "en": "Precipitation 24hr prior to monitoring event amount",
-    "fr": null
+    "fr": null,
+    "_": "Precipitation 24hr prior to monitoring event amount"
   },
   "Pressure": {
     "en": "Pressure",
-    "fr": null
+    "fr": null,
+    "_": "Pressure"
   },
   "Procymidone": {
     "en": "Procymidone",
-    "fr": null
+    "fr": null,
+    "_": "Procymidone"
   },
   "Profluralin": {
     "en": "Profluralin",
-    "fr": null
+    "fr": null,
+    "_": "Profluralin"
   },
   "Progesterone": {
     "en": "Progesterone",
-    "fr": null
+    "fr": null,
+    "_": "Progesterone"
   },
   "Prometon": {
     "en": "Prometon",
-    "fr": null
+    "fr": null,
+    "_": "Prometon"
   },
   "Prometryn": {
     "en": "Prometryn",
-    "fr": null
+    "fr": null,
+    "_": "Prometryn"
   },
   "Pronamide": {
     "en": "Pronamide",
-    "fr": null
+    "fr": null,
+    "_": "Pronamide"
   },
   "Propachlor": {
     "en": "Propachlor",
-    "fr": null
+    "fr": null,
+    "_": "Propachlor"
   },
   "Propanil": {
     "en": "Propanil",
-    "fr": null
+    "fr": null,
+    "_": "Propanil"
   },
   "Propazine": {
     "en": "Propazine",
-    "fr": null
+    "fr": null,
+    "_": "Propazine"
   },
   "Propetamphos": {
     "en": "Propetamphos",
-    "fr": null
+    "fr": null,
+    "_": "Propetamphos"
   },
   "Propham": {
     "en": "Propham",
-    "fr": null
+    "fr": null,
+    "_": "Propham"
   },
   "Propiconazole": {
     "en": "Propiconazole",
-    "fr": null
+    "fr": null,
+    "_": "Propiconazole"
   },
   "Propionaldehyde": {
     "en": "Propionaldehyde",
-    "fr": null
+    "fr": null,
+    "_": "Propionaldehyde"
   },
   "Propoxur": {
     "en": "Propoxur",
-    "fr": null
+    "fr": null,
+    "_": "Propoxur"
   },
   "Propylene glycol": {
     "en": "Propylene glycol",
-    "fr": null
+    "fr": null,
+    "_": "Propylene glycol"
   },
   "Prosulfuron": {
     "en": "Prosulfuron",
-    "fr": null
+    "fr": null,
+    "_": "Prosulfuron"
   },
   "Prothioconazole": {
     "en": "Prothioconazole",
-    "fr": null
+    "fr": null,
+    "_": "Prothioconazole"
   },
   "Pseudomonas aeruginosa": {
     "en": "Pseudomonas aeruginosa",
-    "fr": null
+    "fr": null,
+    "_": "Pseudomonas aeruginosa"
   },
   "Purgeable hydrocarbons": {
     "en": "Purgeable hydrocarbons",
-    "fr": null
+    "fr": null,
+    "_": "Purgeable hydrocarbons"
   },
   "Pyraclostrobin": {
     "en": "Pyraclostrobin",
-    "fr": null
+    "fr": null,
+    "_": "Pyraclostrobin"
   },
   "Pyrene": {
     "en": "Pyrene",
-    "fr": null
+    "fr": null,
+    "_": "Pyrene"
   },
   "Pyrethrin I": {
     "en": "Pyrethrin I",
-    "fr": null
+    "fr": null,
+    "_": "Pyrethrin I"
   },
   "Pyrethrin II": {
     "en": "Pyrethrin II",
-    "fr": null
+    "fr": null,
+    "_": "Pyrethrin II"
   },
   "Pyridaben": {
     "en": "Pyridaben",
-    "fr": null
+    "fr": null,
+    "_": "Pyridaben"
   },
   "Pyrimethanil": {
     "en": "Pyrimethanil",
-    "fr": null
+    "fr": null,
+    "_": "Pyrimethanil"
   },
   "Quinalphos": {
     "en": "Quinalphos",
-    "fr": null
+    "fr": null,
+    "_": "Quinalphos"
   },
   "Quinclorac": {
     "en": "Quinclorac",
-    "fr": null
+    "fr": null,
+    "_": "Quinclorac"
   },
   "Quinoline": {
     "en": "Quinoline",
-    "fr": null
+    "fr": null,
+    "_": "Quinoline"
   },
   "Quizalofop": {
     "en": "Quizalofop",
-    "fr": null
+    "fr": null,
+    "_": "Quizalofop"
   },
   "rac-10,11-Dihydro-10,11-dihydroxy carbamazepine": {
     "en": "rac-10,11-Dihydro-10,11-dihydroxy carbamazepine",
-    "fr": null
+    "fr": null,
+    "_": "rac-10,11-Dihydro-10,11-dihydroxy carbamazepine"
   },
   "Radium": {
     "en": "Radium",
-    "fr": null
+    "fr": null,
+    "_": "Radium"
   },
   "Radium-226": {
     "en": "Radium-226",
-    "fr": null
+    "fr": null,
+    "_": "Radium-226"
   },
   "Radium-228": {
     "en": "Radium-228",
-    "fr": null
+    "fr": null,
+    "_": "Radium-228"
   },
   "Radon-222": {
     "en": "Radon-222",
-    "fr": null
+    "fr": null,
+    "_": "Radon-222"
   },
   "Resistivity": {
     "en": "Resistivity",
-    "fr": null
+    "fr": null,
+    "_": "Resistivity"
   },
   "Resorcinol": {
     "en": "Resorcinol",
-    "fr": null
+    "fr": null,
+    "_": "Resorcinol"
   },
   "Retene": {
     "en": "Retene",
-    "fr": null
+    "fr": null,
+    "_": "Retene"
   },
   "Rhenium": {
     "en": "Rhenium",
-    "fr": null
+    "fr": null,
+    "_": "Rhenium"
   },
   "Rimsulfuron": {
     "en": "Rimsulfuron",
-    "fr": null
+    "fr": null,
+    "_": "Rimsulfuron"
   },
   "River/stream channel slope": {
     "en": "River/stream channel slope",
-    "fr": null
+    "fr": null,
+    "_": "River/stream channel slope"
   },
   "Ronnel": {
     "en": "Ronnel",
-    "fr": null
+    "fr": null,
+    "_": "Ronnel"
   },
   "Rubidium": {
     "en": "Rubidium",
-    "fr": null
+    "fr": null,
+    "_": "Rubidium"
   },
   "Ruthenium": {
     "en": "Ruthenium",
-    "fr": null
+    "fr": null,
+    "_": "Ruthenium"
   },
   "S-Ethyl dipropylthiocarbamate": {
     "en": "S-Ethyl dipropylthiocarbamate",
-    "fr": null
+    "fr": null,
+    "_": "S-Ethyl dipropylthiocarbamate"
   },
   "Saccharin": {
     "en": "Saccharin",
-    "fr": null
+    "fr": null,
+    "_": "Saccharin"
   },
   "Salicylic acid": {
     "en": "Salicylic acid",
-    "fr": null
+    "fr": null,
+    "_": "Salicylic acid"
   },
   "Salinity": {
     "en": "Salinity",
-    "fr": null
+    "fr": null,
+    "_": "Salinity"
   },
   "Salmonella": {
     "en": "Salmonella",
-    "fr": null
+    "fr": null,
+    "_": "Salmonella"
   },
   "Samarium": {
     "en": "Samarium",
-    "fr": null
+    "fr": null,
+    "_": "Samarium"
   },
   "Sandaracopimaric acid": {
     "en": "Sandaracopimaric acid",
-    "fr": null
+    "fr": null,
+    "_": "Sandaracopimaric acid"
   },
   "Saturation Index Aragonite": {
     "en": "Saturation Index Aragonite",
-    "fr": null
+    "fr": null,
+    "_": "Saturation Index Aragonite"
   },
   "Scandium": {
     "en": "Scandium",
-    "fr": null
+    "fr": null,
+    "_": "Scandium"
   },
   "sec-Butylbenzene": {
     "en": "sec-Butylbenzene",
-    "fr": null
+    "fr": null,
+    "_": "sec-Butylbenzene"
   },
   "Selenate": {
     "en": "Selenate",
-    "fr": null
+    "fr": null,
+    "_": "Selenate"
   },
   "Selenite": {
     "en": "Selenite",
-    "fr": null
+    "fr": null,
+    "_": "Selenite"
   },
   "Selenium": {
     "en": "Selenium",
-    "fr": null
+    "fr": null,
+    "_": "Selenium"
   },
   "Selenium-77": {
     "en": "Selenium-77",
-    "fr": null
+    "fr": null,
+    "_": "Selenium-77"
   },
   "Selenium-82": {
     "en": "Selenium-82",
-    "fr": null
+    "fr": null,
+    "_": "Selenium-82"
   },
   "Selenocyanate": {
     "en": "Selenocyanate",
-    "fr": null
+    "fr": null,
+    "_": "Selenocyanate"
   },
   "Selenomethionine": {
     "en": "Selenomethionine",
-    "fr": null
+    "fr": null,
+    "_": "Selenomethionine"
   },
   "Selenosulfate": {
     "en": "Selenosulfate",
-    "fr": null
+    "fr": null,
+    "_": "Selenosulfate"
   },
   "Sethoxydim": {
     "en": "Sethoxydim",
-    "fr": null
+    "fr": null,
+    "_": "Sethoxydim"
   },
   "Settleable solids": {
     "en": "Settleable solids",
-    "fr": null
+    "fr": null,
+    "_": "Settleable solids"
   },
   "Silica": {
     "en": "Silica",
-    "fr": null
+    "fr": null,
+    "_": "Silica"
   },
   "Silica gel treated n-hexane extractable material": {
     "en": "Silica gel treated n-hexane extractable material",
-    "fr": null
+    "fr": null,
+    "_": "Silica gel treated n-hexane extractable material"
   },
   "Silica, reactive": {
     "en": "Silica, reactive",
-    "fr": null
+    "fr": null,
+    "_": "Silica, reactive"
   },
   "Silicate": {
     "en": "Silicate",
-    "fr": null
+    "fr": null,
+    "_": "Silicate"
   },
   "Silicon": {
     "en": "Silicon",
-    "fr": null
+    "fr": null,
+    "_": "Silicon"
   },
   "Silicon-29": {
     "en": "Silicon-29",
-    "fr": null
+    "fr": null,
+    "_": "Silicon-29"
   },
   "Silver": {
     "en": "Silver",
-    "fr": null
+    "fr": null,
+    "_": "Silver"
   },
   "Silver-107": {
     "en": "Silver-107",
-    "fr": null
+    "fr": null,
+    "_": "Silver-107"
   },
   "Silvex": {
     "en": "Silvex",
-    "fr": null
+    "fr": null,
+    "_": "Silvex"
   },
   "Simazine": {
     "en": "Simazine",
-    "fr": null
+    "fr": null,
+    "_": "Simazine"
   },
   "Snow cover as % area estimate": {
     "en": "Snow cover as % area estimate",
-    "fr": null
+    "fr": null,
+    "_": "Snow cover as % area estimate"
   },
   "Snow cover on ice as % area estimate": {
     "en": "Snow cover on ice as % area estimate",
-    "fr": null
+    "fr": null,
+    "_": "Snow cover on ice as % area estimate"
   },
   "Sodium": {
     "en": "Sodium",
-    "fr": null
+    "fr": null,
+    "_": "Sodium"
   },
   "Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]": {
     "en": "Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]",
-    "fr": null
+    "fr": null,
+    "_": "Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]"
   },
   "Sodium-23": {
     "en": "Sodium-23",
-    "fr": null
+    "fr": null,
+    "_": "Sodium-23"
   },
   "Sodium, Percent Total Cations": {
     "en": "Sodium, Percent Total Cations",
-    "fr": null
+    "fr": null,
+    "_": "Sodium, Percent Total Cations"
   },
   "Soluble Reactive Phosphorus (SRP)": {
     "en": "Soluble Reactive Phosphorus (SRP)",
-    "fr": null
+    "fr": null,
+    "_": "Soluble Reactive Phosphorus (SRP)"
   },
   "Specific conductance": {
     "en": "Specific conductance",
-    "fr": null
+    "fr": null,
+    "_": "Specific conductance"
   },
   "Specific UV Absorbance at 250 nm": {
     "en": "Specific UV Absorbance at 250 nm",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 250 nm"
   },
   "Specific UV Absorbance at 254 nm": {
     "en": "Specific UV Absorbance at 254 nm",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 254 nm"
   },
   "Specific UV Absorbance at 254 nm, corrected for Fe": {
     "en": "Specific UV Absorbance at 254 nm, corrected for Fe",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 254 nm, corrected for Fe"
   },
   "Specific UV Absorbance at 310 nm": {
     "en": "Specific UV Absorbance at 310 nm",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 310 nm"
   },
   "Specific UV Absorbance at 340 nm": {
     "en": "Specific UV Absorbance at 340 nm",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 340 nm"
   },
   "Specific UV Absorbance at 360 nm": {
     "en": "Specific UV Absorbance at 360 nm",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 360 nm"
   },
   "Specific UV Absorbance at 365 nm": {
     "en": "Specific UV Absorbance at 365 nm",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 365 nm"
   },
   "Specific UV Absorbance at 510 nm": {
     "en": "Specific UV Absorbance at 510 nm",
-    "fr": null
+    "fr": null,
+    "_": "Specific UV Absorbance at 510 nm"
   },
   "Spectral slope ratio": {
     "en": "Spectral slope ratio",
-    "fr": null
+    "fr": null,
+    "_": "Spectral slope ratio"
   },
   "Spirodiclofen": {
     "en": "Spirodiclofen",
-    "fr": null
+    "fr": null,
+    "_": "Spirodiclofen"
   },
   "Spiromesifen": {
     "en": "Spiromesifen",
-    "fr": null
+    "fr": null,
+    "_": "Spiromesifen"
   },
   "Spirotetramat": {
     "en": "Spirotetramat",
-    "fr": null
+    "fr": null,
+    "_": "Spirotetramat"
   },
   "Stearic acid": {
     "en": "Stearic acid",
-    "fr": null
+    "fr": null,
+    "_": "Stearic acid"
   },
   "Stream width measure": {
     "en": "Stream width measure",
-    "fr": null
+    "fr": null,
+    "_": "Stream width measure"
   },
   "Streptococcus": {
     "en": "Streptococcus",
-    "fr": null
+    "fr": null,
+    "_": "Streptococcus"
   },
   "Strontium": {
     "en": "Strontium",
-    "fr": null
+    "fr": null,
+    "_": "Strontium"
   },
   "Strontium-86": {
     "en": "Strontium-86",
-    "fr": null
+    "fr": null,
+    "_": "Strontium-86"
   },
   "Strontium-87/Strontium-86, ratio": {
     "en": "Strontium-87/Strontium-86, ratio",
-    "fr": null
+    "fr": null,
+    "_": "Strontium-87/Strontium-86, ratio"
   },
   "Strontium-88": {
     "en": "Strontium-88",
-    "fr": null
+    "fr": null,
+    "_": "Strontium-88"
   },
   "Strontium-90": {
     "en": "Strontium-90",
-    "fr": null
+    "fr": null,
+    "_": "Strontium-90"
   },
   "Styrene": {
     "en": "Styrene",
-    "fr": null
+    "fr": null,
+    "_": "Styrene"
   },
   "Substrate - clay": {
     "en": "Substrate - clay",
-    "fr": null
+    "fr": null,
+    "_": "Substrate - clay"
   },
   "Substrate - sand": {
     "en": "Substrate - sand",
-    "fr": null
+    "fr": null,
+    "_": "Substrate - sand"
   },
   "Substrate - sediment thickness": {
     "en": "Substrate - sediment thickness",
-    "fr": null
+    "fr": null,
+    "_": "Substrate - sediment thickness"
   },
   "Substrate - silt": {
     "en": "Substrate - silt",
-    "fr": null
+    "fr": null,
+    "_": "Substrate - silt"
   },
   "Sucralose": {
     "en": "Sucralose",
-    "fr": null
+    "fr": null,
+    "_": "Sucralose"
   },
   "Sulfabenzamide": {
     "en": "Sulfabenzamide",
-    "fr": null
+    "fr": null,
+    "_": "Sulfabenzamide"
   },
   "Sulfadimethoxine": {
     "en": "Sulfadimethoxine",
-    "fr": null
+    "fr": null,
+    "_": "Sulfadimethoxine"
   },
   "Sulfadoxine": {
     "en": "Sulfadoxine",
-    "fr": null
+    "fr": null,
+    "_": "Sulfadoxine"
   },
   "Sulfamerazine": {
     "en": "Sulfamerazine",
-    "fr": null
+    "fr": null,
+    "_": "Sulfamerazine"
   },
   "Sulfamethazine": {
     "en": "Sulfamethazine",
-    "fr": null
+    "fr": null,
+    "_": "Sulfamethazine"
   },
   "Sulfamethoxazole": {
     "en": "Sulfamethoxazole",
-    "fr": null
+    "fr": null,
+    "_": "Sulfamethoxazole"
   },
   "Sulfapyridine": {
     "en": "Sulfapyridine",
-    "fr": null
+    "fr": null,
+    "_": "Sulfapyridine"
   },
   "Sulfaquinoxaline": {
     "en": "Sulfaquinoxaline",
-    "fr": null
+    "fr": null,
+    "_": "Sulfaquinoxaline"
   },
   "Sulfate": {
     "en": "Sulfate",
-    "fr": null
+    "fr": null,
+    "_": "Sulfate"
   },
   "Sulfathiazole": {
     "en": "Sulfathiazole",
-    "fr": null
+    "fr": null,
+    "_": "Sulfathiazole"
   },
   "Sulfentrazone": {
     "en": "Sulfentrazone",
-    "fr": null
+    "fr": null,
+    "_": "Sulfentrazone"
   },
   "Sulfide": {
     "en": "Sulfide",
-    "fr": null
+    "fr": null,
+    "_": "Sulfide"
   },
   "Sulfolane": {
     "en": "Sulfolane",
-    "fr": null
+    "fr": null,
+    "_": "Sulfolane"
   },
   "Sulfonates, alkyl-, linear": {
     "en": "Sulfonates, alkyl-, linear",
-    "fr": null
+    "fr": null,
+    "_": "Sulfonates, alkyl-, linear"
   },
   "Sulfotep": {
     "en": "Sulfotep",
-    "fr": null
+    "fr": null,
+    "_": "Sulfotep"
   },
   "Sulfoxaflor": {
     "en": "Sulfoxaflor",
-    "fr": null
+    "fr": null,
+    "_": "Sulfoxaflor"
   },
   "Sulfoxaflor-13C15N2": {
     "en": "Sulfoxaflor-13C15N2",
-    "fr": null
+    "fr": null,
+    "_": "Sulfoxaflor-13C15N2"
   },
   "Sulfur": {
     "en": "Sulfur",
-    "fr": null
+    "fr": null,
+    "_": "Sulfur"
   },
   "Sulfur Total": {
     "en": "Sulfur Total",
-    "fr": null
+    "fr": null,
+    "_": "Sulfur Total"
   },
   "Sulfur-34": {
     "en": "Sulfur-34",
-    "fr": null
+    "fr": null,
+    "_": "Sulfur-34"
   },
   "Sulfur-34/Sulfur-32 ratio": {
     "en": "Sulfur-34/Sulfur-32 ratio",
-    "fr": null
+    "fr": null,
+    "_": "Sulfur-34/Sulfur-32 ratio"
   },
   "Sulprofos": {
     "en": "Sulprofos",
-    "fr": null
+    "fr": null,
+    "_": "Sulprofos"
   },
   "Sum of anions": {
     "en": "Sum of anions",
-    "fr": null
+    "fr": null,
+    "_": "Sum of anions"
   },
   "Sum of cations": {
     "en": "Sum of cations",
-    "fr": null
+    "fr": null,
+    "_": "Sum of cations"
   },
   "Surface area": {
     "en": "Surface area",
-    "fr": null
+    "fr": null,
+    "_": "Surface area"
   },
   "Surfactants": {
     "en": "Surfactants",
-    "fr": null
+    "fr": null,
+    "_": "Surfactants"
   },
   "Suspended Sediment Concentration (SSC)": {
     "en": "Suspended Sediment Concentration (SSC)",
-    "fr": null
+    "fr": null,
+    "_": "Suspended Sediment Concentration (SSC)"
   },
   "Tannin and Lignin": {
     "en": "Tannin and Lignin",
-    "fr": null
+    "fr": null,
+    "_": "Tannin and Lignin"
   },
   "Tantalum": {
     "en": "Tantalum",
-    "fr": null
+    "fr": null,
+    "_": "Tantalum"
   },
   "Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera": {
     "en": "Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera",
-    "fr": null
+    "fr": null,
+    "_": "Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera"
   },
   "Tebuconazole": {
     "en": "Tebuconazole",
-    "fr": null
+    "fr": null,
+    "_": "Tebuconazole"
   },
   "Tebuthiuron": {
     "en": "Tebuthiuron",
-    "fr": null
+    "fr": null,
+    "_": "Tebuthiuron"
   },
   "Tecnazene": {
     "en": "Tecnazene",
-    "fr": null
+    "fr": null,
+    "_": "Tecnazene"
   },
   "Tellurium": {
     "en": "Tellurium",
-    "fr": null
+    "fr": null,
+    "_": "Tellurium"
   },
   "Temephos": {
     "en": "Temephos",
-    "fr": null
+    "fr": null,
+    "_": "Temephos"
   },
   "Temperature, air": {
     "en": "Temperature, air",
-    "fr": null
+    "fr": null,
+    "_": "Temperature, air"
   },
   "Temperature, water": {
     "en": "Temperature, water",
-    "fr": null
+    "fr": null,
+    "_": "Temperature, water"
   },
   "Terbacil": {
     "en": "Terbacil",
-    "fr": null
+    "fr": null,
+    "_": "Terbacil"
   },
   "Terbium": {
     "en": "Terbium",
-    "fr": null
+    "fr": null,
+    "_": "Terbium"
   },
   "Terbufos": {
     "en": "Terbufos",
-    "fr": null
+    "fr": null,
+    "_": "Terbufos"
   },
   "Terbufos-d10": {
     "en": "Terbufos-d10",
-    "fr": null
+    "fr": null,
+    "_": "Terbufos-d10"
   },
   "Terbuthylazine": {
     "en": "Terbuthylazine",
-    "fr": null
+    "fr": null,
+    "_": "Terbuthylazine"
   },
   "Terbutryn": {
     "en": "Terbutryn",
-    "fr": null
+    "fr": null,
+    "_": "Terbutryn"
   },
   "Terphenyl-d14": {
     "en": "Terphenyl-d14",
-    "fr": null
+    "fr": null,
+    "_": "Terphenyl-d14"
   },
   "tert-Butylbenzene": {
     "en": "tert-Butylbenzene",
-    "fr": null
+    "fr": null,
+    "_": "tert-Butylbenzene"
   },
   "Testosterone": {
     "en": "Testosterone",
-    "fr": null
+    "fr": null,
+    "_": "Testosterone"
   },
   "Tetrachloro-m-xylene": {
     "en": "Tetrachloro-m-xylene",
-    "fr": null
+    "fr": null,
+    "_": "Tetrachloro-m-xylene"
   },
   "Tetrachlorocatechol": {
     "en": "Tetrachlorocatechol",
-    "fr": null
+    "fr": null,
+    "_": "Tetrachlorocatechol"
   },
   "Tetrachloroethylene": {
     "en": "Tetrachloroethylene",
-    "fr": null
+    "fr": null,
+    "_": "Tetrachloroethylene"
   },
   "Tetrachloroguaiacol": {
     "en": "Tetrachloroguaiacol",
-    "fr": null
+    "fr": null,
+    "_": "Tetrachloroguaiacol"
   },
   "Tetrachlorophenol": {
     "en": "Tetrachlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "Tetrachlorophenol"
   },
   "Tetrachlorvinphos": {
     "en": "Tetrachlorvinphos",
-    "fr": null
+    "fr": null,
+    "_": "Tetrachlorvinphos"
   },
   "Tetradifon": {
     "en": "Tetradifon",
-    "fr": null
+    "fr": null,
+    "_": "Tetradifon"
   },
   "Tetraethylene glycol": {
     "en": "Tetraethylene glycol",
-    "fr": null
+    "fr": null,
+    "_": "Tetraethylene glycol"
   },
   "Tetrapropyl dithiopyrophosphate": {
     "en": "Tetrapropyl dithiopyrophosphate",
-    "fr": null
+    "fr": null,
+    "_": "Tetrapropyl dithiopyrophosphate"
   },
   "Thallium": {
     "en": "Thallium",
-    "fr": null
+    "fr": null,
+    "_": "Thallium"
   },
   "Thallium-205": {
     "en": "Thallium-205",
-    "fr": null
+    "fr": null,
+    "_": "Thallium-205"
   },
   "Thiabendazole": {
     "en": "Thiabendazole",
-    "fr": null
+    "fr": null,
+    "_": "Thiabendazole"
   },
   "Thiacloprid": {
     "en": "Thiacloprid",
-    "fr": null
+    "fr": null,
+    "_": "Thiacloprid"
   },
   "Thiacloprid-13C6": {
     "en": "Thiacloprid-13C6",
-    "fr": null
+    "fr": null,
+    "_": "Thiacloprid-13C6"
   },
   "Thiamethoxam": {
     "en": "Thiamethoxam",
-    "fr": null
+    "fr": null,
+    "_": "Thiamethoxam"
   },
   "Thifensulfuron": {
     "en": "Thifensulfuron",
-    "fr": null
+    "fr": null,
+    "_": "Thifensulfuron"
   },
   "Thifensulfuron-methyl": {
     "en": "Thifensulfuron-methyl",
-    "fr": null
+    "fr": null,
+    "_": "Thifensulfuron-methyl"
   },
   "Thiocyanate": {
     "en": "Thiocyanate",
-    "fr": null
+    "fr": null,
+    "_": "Thiocyanate"
   },
   "Thiophanate Methyl": {
     "en": "Thiophanate Methyl",
-    "fr": null
+    "fr": null,
+    "_": "Thiophanate Methyl"
   },
   "Thiram": {
     "en": "Thiram",
-    "fr": null
+    "fr": null,
+    "_": "Thiram"
   },
   "Thorium": {
     "en": "Thorium",
-    "fr": null
+    "fr": null,
+    "_": "Thorium"
   },
   "Thorium-232": {
     "en": "Thorium-232",
-    "fr": null
+    "fr": null,
+    "_": "Thorium-232"
   },
   "Tin": {
     "en": "Tin",
-    "fr": null
+    "fr": null,
+    "_": "Tin"
   },
   "Tin-118": {
     "en": "Tin-118",
-    "fr": null
+    "fr": null,
+    "_": "Tin-118"
   },
   "Titanium": {
     "en": "Titanium",
-    "fr": null
+    "fr": null,
+    "_": "Titanium"
   },
   "Titanium-47": {
     "en": "Titanium-47",
-    "fr": null
+    "fr": null,
+    "_": "Titanium-47"
   },
   "Tolfenamic acid": {
     "en": "Tolfenamic acid",
-    "fr": null
+    "fr": null,
+    "_": "Tolfenamic acid"
   },
   "Toluene": {
     "en": "Toluene",
-    "fr": null
+    "fr": null,
+    "_": "Toluene"
   },
   "Toluene-d8": {
     "en": "Toluene-d8",
-    "fr": null
+    "fr": null,
+    "_": "Toluene-d8"
   },
   "Tolylfluanid": {
     "en": "Tolylfluanid",
-    "fr": null
+    "fr": null,
+    "_": "Tolylfluanid"
   },
   "Total carbon": {
     "en": "Total carbon",
-    "fr": null
+    "fr": null,
+    "_": "Total carbon"
   },
   "Total Coliform": {
     "en": "Total Coliform",
-    "fr": null
+    "fr": null,
+    "_": "Total Coliform"
   },
   "Total dissolved solids": {
     "en": "Total dissolved solids",
-    "fr": null
+    "fr": null,
+    "_": "Total dissolved solids"
   },
   "Total fixed solids": {
     "en": "Total fixed solids",
-    "fr": null
+    "fr": null,
+    "_": "Total fixed solids"
   },
   "Total hardness": {
     "en": "Total hardness",
-    "fr": null
+    "fr": null,
+    "_": "Total hardness"
   },
   "Total Nitrogen, mixed forms": {
     "en": "Total Nitrogen, mixed forms",
-    "fr": null
+    "fr": null,
+    "_": "Total Nitrogen, mixed forms"
   },
   "Total PAHs, high wt": {
     "en": "Total PAHs, high wt",
-    "fr": null
+    "fr": null,
+    "_": "Total PAHs, high wt"
   },
   "Total PAHs, low wt": {
     "en": "Total PAHs, low wt",
-    "fr": null
+    "fr": null,
+    "_": "Total PAHs, low wt"
   },
   "Total PCBs": {
     "en": "Total PCBs",
-    "fr": null
+    "fr": null,
+    "_": "Total PCBs"
   },
   "Total Phosphorus, mixed forms": {
     "en": "Total Phosphorus, mixed forms",
-    "fr": null
+    "fr": null,
+    "_": "Total Phosphorus, mixed forms"
   },
   "Total solids": {
     "en": "Total solids",
-    "fr": null
+    "fr": null,
+    "_": "Total solids"
   },
   "Total suspended solids": {
     "en": "Total suspended solids",
-    "fr": null
+    "fr": null,
+    "_": "Total suspended solids"
   },
   "Total volatile solids": {
     "en": "Total volatile solids",
-    "fr": null
+    "fr": null,
+    "_": "Total volatile solids"
   },
   "Total xylenes": {
     "en": "Total xylenes",
-    "fr": null
+    "fr": null,
+    "_": "Total xylenes"
   },
   "Toxaphene": {
     "en": "Toxaphene",
-    "fr": null
+    "fr": null,
+    "_": "Toxaphene"
   },
   "Toxicity acute": {
     "en": "Toxicity acute",
-    "fr": null
+    "fr": null,
+    "_": "Toxicity acute"
   },
   "Toxicity microtox EC50": {
     "en": "Toxicity microtox EC50",
-    "fr": null
+    "fr": null,
+    "_": "Toxicity microtox EC50"
   },
   "Tralkoxydim": {
     "en": "Tralkoxydim",
-    "fr": null
+    "fr": null,
+    "_": "Tralkoxydim"
   },
   "trans-1,2-Dichloroethylene": {
     "en": "trans-1,2-Dichloroethylene",
-    "fr": null
+    "fr": null,
+    "_": "trans-1,2-Dichloroethylene"
   },
   "trans-1,3-Dichloropropene": {
     "en": "trans-1,3-Dichloropropene",
-    "fr": null
+    "fr": null,
+    "_": "trans-1,3-Dichloropropene"
   },
   "trans-Chlordane": {
     "en": "trans-Chlordane",
-    "fr": null
+    "fr": null,
+    "_": "trans-Chlordane"
   },
   "trans-Nonachlor": {
     "en": "trans-Nonachlor",
-    "fr": null
+    "fr": null,
+    "_": "trans-Nonachlor"
   },
   "Transparency, Secchi tube with disk": {
     "en": "Transparency, Secchi tube with disk",
-    "fr": null
+    "fr": null,
+    "_": "Transparency, Secchi tube with disk"
   },
   "Transparency, tube with disk": {
     "en": "Transparency, tube with disk",
-    "fr": null
+    "fr": null,
+    "_": "Transparency, tube with disk"
   },
   "Transpermethrin": {
     "en": "Transpermethrin",
-    "fr": null
+    "fr": null,
+    "_": "Transpermethrin"
   },
   "Traseolide": {
     "en": "Traseolide",
-    "fr": null
+    "fr": null,
+    "_": "Traseolide"
   },
   "Triadimefon": {
     "en": "Triadimefon",
-    "fr": null
+    "fr": null,
+    "_": "Triadimefon"
   },
   "Triallate": {
     "en": "Triallate",
-    "fr": null
+    "fr": null,
+    "_": "Triallate"
   },
   "Tribenuron-methyl": {
     "en": "Tribenuron-methyl",
-    "fr": null
+    "fr": null,
+    "_": "Tribenuron-methyl"
   },
   "Tribromomethane": {
     "en": "Tribromomethane",
-    "fr": null
+    "fr": null,
+    "_": "Tribromomethane"
   },
   "Tribufos": {
     "en": "Tribufos",
-    "fr": null
+    "fr": null,
+    "_": "Tribufos"
   },
   "Tributyltin": {
     "en": "Tributyltin",
-    "fr": null
+    "fr": null,
+    "_": "Tributyltin"
   },
   "Trichloroacetic acid": {
     "en": "Trichloroacetic acid",
-    "fr": null
+    "fr": null,
+    "_": "Trichloroacetic acid"
   },
   "Trichlorocatechols": {
     "en": "Trichlorocatechols",
-    "fr": null
+    "fr": null,
+    "_": "Trichlorocatechols"
   },
   "Trichloroethylene": {
     "en": "Trichloroethylene",
-    "fr": null
+    "fr": null,
+    "_": "Trichloroethylene"
   },
   "Trichloroguaiacols": {
     "en": "Trichloroguaiacols",
-    "fr": null
+    "fr": null,
+    "_": "Trichloroguaiacols"
   },
   "Trichlorophenol": {
     "en": "Trichlorophenol",
-    "fr": null
+    "fr": null,
+    "_": "Trichlorophenol"
   },
   "Trichlorosyringol": {
     "en": "Trichlorosyringol",
-    "fr": null
+    "fr": null,
+    "_": "Trichlorosyringol"
   },
   "Trichloroveretrols": {
     "en": "Trichloroveretrols",
-    "fr": null
+    "fr": null,
+    "_": "Trichloroveretrols"
   },
   "Triclocarban": {
     "en": "Triclocarban",
-    "fr": null
+    "fr": null,
+    "_": "Triclocarban"
   },
   "Triclopyr": {
     "en": "Triclopyr",
-    "fr": null
+    "fr": null,
+    "_": "Triclopyr"
   },
   "Triclosan": {
     "en": "Triclosan",
-    "fr": null
+    "fr": null,
+    "_": "Triclosan"
   },
   "Triclosan methyl ether": {
     "en": "Triclosan methyl ether",
-    "fr": null
+    "fr": null,
+    "_": "Triclosan methyl ether"
   },
   "Trifloxystrobin": {
     "en": "Trifloxystrobin",
-    "fr": null
+    "fr": null,
+    "_": "Trifloxystrobin"
   },
   "Trifluralin": {
     "en": "Trifluralin",
-    "fr": null
+    "fr": null,
+    "_": "Trifluralin"
   },
   "Trihalomethanes": {
     "en": "Trihalomethanes",
-    "fr": null
+    "fr": null,
+    "_": "Trihalomethanes"
   },
   "Trimethoprim": {
     "en": "Trimethoprim",
-    "fr": null
+    "fr": null,
+    "_": "Trimethoprim"
   },
   "Trinexapac-Ethyl": {
     "en": "Trinexapac-Ethyl",
-    "fr": null
+    "fr": null,
+    "_": "Trinexapac-Ethyl"
   },
   "Triphenyl phosphate": {
     "en": "Triphenyl phosphate",
-    "fr": null
+    "fr": null,
+    "_": "Triphenyl phosphate"
   },
   "Triphenyltin": {
     "en": "Triphenyltin",
-    "fr": null
+    "fr": null,
+    "_": "Triphenyltin"
   },
   "Triticonazole": {
     "en": "Triticonazole",
-    "fr": null
+    "fr": null,
+    "_": "Triticonazole"
   },
   "Tritium": {
     "en": "Tritium",
-    "fr": null
+    "fr": null,
+    "_": "Tritium"
   },
   "True color": {
     "en": "True color",
-    "fr": null
+    "fr": null,
+    "_": "True color"
   },
   "Tungsten": {
     "en": "Tungsten",
-    "fr": null
+    "fr": null,
+    "_": "Tungsten"
   },
   "Turbidity": {
     "en": "Turbidity",
-    "fr": null
+    "fr": null,
+    "_": "Turbidity"
   },
   "Uranium": {
     "en": "Uranium",
-    "fr": null
+    "fr": null,
+    "_": "Uranium"
   },
   "Uranium-234/Uranium-238 ratio": {
     "en": "Uranium-234/Uranium-238 ratio",
-    "fr": null
+    "fr": null,
+    "_": "Uranium-234/Uranium-238 ratio"
   },
   "Uranium-238": {
     "en": "Uranium-238",
-    "fr": null
+    "fr": null,
+    "_": "Uranium-238"
   },
   "UV 254": {
     "en": "UV 254",
-    "fr": null
+    "fr": null,
+    "_": "UV 254"
   },
   "Vanadium": {
     "en": "Vanadium",
-    "fr": null
+    "fr": null,
+    "_": "Vanadium"
   },
   "Vanadium-51": {
     "en": "Vanadium-51",
-    "fr": null
+    "fr": null,
+    "_": "Vanadium-51"
   },
   "Velocity - stream": {
     "en": "Velocity - stream",
-    "fr": null
+    "fr": null,
+    "_": "Velocity - stream"
   },
   "Velocity-discharge": {
     "en": "Velocity-discharge",
-    "fr": null
+    "fr": null,
+    "_": "Velocity-discharge"
   },
   "Venlafaxine": {
     "en": "Venlafaxine",
-    "fr": null
+    "fr": null,
+    "_": "Venlafaxine"
   },
   "Vinclozolin": {
     "en": "Vinclozolin",
-    "fr": null
+    "fr": null,
+    "_": "Vinclozolin"
   },
   "Vinyl chloride": {
     "en": "Vinyl chloride",
-    "fr": null
+    "fr": null,
+    "_": "Vinyl chloride"
   },
   "Volatile Dissolved Solids": {
     "en": "Volatile Dissolved Solids",
-    "fr": null
+    "fr": null,
+    "_": "Volatile Dissolved Solids"
   },
   "Volatile suspended solids": {
     "en": "Volatile suspended solids",
-    "fr": null
+    "fr": null,
+    "_": "Volatile suspended solids"
   },
   "Water level": {
     "en": "Water level",
-    "fr": null
+    "fr": null,
+    "_": "Water level"
   },
   "Water level (probe)": {
     "en": "Water level (probe)",
-    "fr": null
+    "fr": null,
+    "_": "Water level (probe)"
   },
   "Weak, dissociable cyanide": {
     "en": "Weak, dissociable cyanide",
-    "fr": null
+    "fr": null,
+    "_": "Weak, dissociable cyanide"
   },
   "Wetted Width": {
     "en": "Wetted Width",
-    "fr": null
+    "fr": null,
+    "_": "Wetted Width"
   },
   "White ice thickness": {
     "en": "White ice thickness",
-    "fr": null
+    "fr": null,
+    "_": "White ice thickness"
   },
   "Wind direction (direction from, expressed 0-360 deg)": {
     "en": "Wind direction (direction from, expressed 0-360 deg)",
-    "fr": null
+    "fr": null,
+    "_": "Wind direction (direction from, expressed 0-360 deg)"
   },
   "Wind velocity": {
     "en": "Wind velocity",
-    "fr": null
+    "fr": null,
+    "_": "Wind velocity"
   },
   "Xylene": {
     "en": "Xylene",
-    "fr": null
+    "fr": null,
+    "_": "Xylene"
   },
   "Ytterbium": {
     "en": "Ytterbium",
-    "fr": null
+    "fr": null,
+    "_": "Ytterbium"
   },
   "Yttrium": {
     "en": "Yttrium",
-    "fr": null
+    "fr": null,
+    "_": "Yttrium"
   },
   "Zinc": {
     "en": "Zinc",
-    "fr": null
+    "fr": null,
+    "_": "Zinc"
   },
   "Zinc-66": {
     "en": "Zinc-66",
-    "fr": null
+    "fr": null,
+    "_": "Zinc-66"
   },
   "Zirconium": {
     "en": "Zirconium",
-    "fr": null
+    "fr": null,
+    "_": "Zirconium"
   },
   "Zoxamide": {
     "en": "Zoxamide",
-    "fr": null
+    "fr": null,
+    "_": "Zoxamide"
   }
 }

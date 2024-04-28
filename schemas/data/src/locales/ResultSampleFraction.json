@@ -1,145 +1,181 @@
 {
   "Acid Soluble": {
+    "_": "Acid Soluble",
     "en": "Acid Soluble",
     "fr": null
   },
   "Bioavailable": {
+    "_": "Bioavailable",
     "en": "Bioavailable",
     "fr": null
   },
   "Comb Available": {
+    "_": "Comb Available",
     "en": "Comb Available",
     "fr": null
   },
   "Dissolved": {
+    "_": "Dissolved",
     "en": "Dissolved",
     "fr": null
   },
   "Extractable": {
+    "_": "Extractable",
     "en": "Extractable",
     "fr": null
   },
   "Extractable, CaCO3-bound": {
+    "_": "Extractable, CaCO3-bound",
     "en": "Extractable, CaCO3-bound",
     "fr": null
   },
   "Extractable, exchangeable": {
+    "_": "Extractable, exchangeable",
     "en": "Extractable, exchangeable",
     "fr": null
   },
   "Extractable, organic-bnd": {
+    "_": "Extractable, organic-bnd",
     "en": "Extractable, organic-bnd",
     "fr": null
   },
   "Extractable, other": {
+    "_": "Extractable, other",
     "en": "Extractable, other",
     "fr": null
   },
   "Extractable, oxide-bound": {
+    "_": "Extractable, oxide-bound",
     "en": "Extractable, oxide-bound",
     "fr": null
   },
   "Extractable, residual": {
+    "_": "Extractable, residual",
     "en": "Extractable, residual",
     "fr": null
   },
   "Filter/sieve residue": {
+    "_": "Filter/sieve residue",
     "en": "Filter/sieve residue",
     "fr": null
   },
   "Filterable": {
+    "_": "Filterable",
     "en": "Filterable",
     "fr": null
   },
   "Filtered": {
+    "_": "Filtered",
     "en": "Filtered",
     "fr": null
   },
   "Filtered, field": {
+    "_": "Filtered, field",
     "en": "Filtered, field",
     "fr": null
   },
   "Filtered, lab": {
+    "_": "Filtered, lab",
     "en": "Filtered, lab",
     "fr": null
   },
   "Fixed": {
+    "_": "Fixed",
     "en": "Fixed",
     "fr": null
   },
   "Free Available": {
+    "_": "Free Available",
     "en": "Free Available",
     "fr": null
   },
   "Inorganic": {
+    "_": "Inorganic",
     "en": "Inorganic",
     "fr": null
   },
   "Non-Filterable (Particle)": {
+    "_": "Non-Filterable (Particle)",
     "en": "Non-Filterable (Particle)",
     "fr": null
   },
   "non-linear function": {
+    "_": "non-linear function",
     "en": "non-linear function",
     "fr": null
   },
   "Non-settleable": {
+    "_": "Non-settleable",
     "en": "Non-settleable",
     "fr": null
   },
   "Non-volatile": {
+    "_": "Non-volatile",
     "en": "Non-volatile",
     "fr": null
   },
   "Organic": {
+    "_": "Organic",
     "en": "Organic",
     "fr": null
   },
   "Pot. Dissolved": {
+    "_": "Pot. Dissolved",
     "en": "Pot. Dissolved",
     "fr": null
   },
   "Settleable": {
+    "_": "Settleable",
     "en": "Settleable",
     "fr": null
   },
   "Sieved": {
+    "_": "Sieved",
     "en": "Sieved",
     "fr": null
   },
   "Supernate": {
+    "_": "Supernate",
     "en": "Supernate",
     "fr": null
   },
   "Suspended": {
+    "_": "Suspended",
     "en": "Suspended",
     "fr": null
   },
   "Total": {
+    "_": "Total",
     "en": "Total",
     "fr": null
   },
   "Total Recoverable": {
+    "_": "Total Recoverable",
     "en": "Total Recoverable",
     "fr": null
   },
   "Total Residual": {
+    "_": "Total Residual",
     "en": "Total Residual",
     "fr": null
   },
   "Unfiltered": {
+    "_": "Unfiltered",
     "en": "Unfiltered",
     "fr": null
   },
   "Unspecified": {
+    "_": "Unspecified",
     "en": "Unspecified",
     "fr": null
   },
   "Vapor": {
+    "_": "Vapor",
     "en": "Vapor",
     "fr": null
   },
   "Volatile": {
+    "_": "Volatile",
     "en": "Volatile",
     "fr": null
   }

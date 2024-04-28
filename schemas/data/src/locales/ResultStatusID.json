@@ -1,0 +1,27 @@
+{
+  "Accepted": {
+    "en": "Accepted",
+    "fr": null,
+    "_": "Accepted"
+  },
+  "Final": {
+    "en": "Final",
+    "fr": null,
+    "_": "Final"
+  },
+  "Preliminary": {
+    "en": "Preliminary",
+    "fr": null,
+    "_": "Preliminary"
+  },
+  "Rejected": {
+    "en": "Rejected",
+    "fr": null,
+    "_": "Rejected"
+  },
+  "Validated": {
+    "en": "Validated",
+    "fr": null,
+    "_": "Validated"
+  }
+}

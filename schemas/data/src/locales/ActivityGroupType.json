@@ -1,26 +1,32 @@
 {
   "Field Set": {
     "en": "Field",
-    "fr": "Terrain"
+    "fr": "Terrain",
+    "_": "Field Set"
   },
   "Other": {
     "en": "Other",
-    "fr": null
+    "fr": null,
+    "_": "Other"
   },
   "QC Sample": {
+    "_": "QC Sample",
     "en": "Quality Control",
     "fr": "Contrôle qualité"
   },
   "Replicate": {
+    "_": "Replicate",
     "en": "Replicate",
     "fr": null
   },
   "Subsample": {
     "en": "Lab",
-    "fr": "Laboratoire"
+    "fr": "Laboratoire",
+    "_": "Subsample"
   },
   "Trip": {
     "en": "Trip",
-    "fr": null
+    "fr": null,
+    "_": "Trip"
   }
 }
