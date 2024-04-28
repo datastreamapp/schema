@@ -21,6 +21,7 @@ const columns = [
   "ResultStatusID",
   "ResultValueType",
   "SampleCollectionEquipmentName",
+  "MeasurementUnit",
 ];
 
 const setup = async (column) => {
@@ -34,7 +35,10 @@ const setup = async (column) => {
   for (const value of allowedValues.enum) {
     locales[value] ??= {};
     locales[value]["_"] ||= value;
-    locales[value].en ||= value;
+    if (column !== "MeasurementUnit") {
+      locales[value].en ||= value;
+    }
+    locales[value].en ||= null;
     locales[value].fr ||= null;
 
     if (!locales[value].en) {

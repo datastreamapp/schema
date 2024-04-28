@@ -1,0 +1,592 @@
+{
+  "#/100L": {
+    "_": "#/100L",
+    "en": null,
+    "fr": null
+  },
+  "#/100mL": {
+    "_": "#/100mL",
+    "en": null,
+    "fr": null
+  },
+  "#/day": {
+    "_": "#/day",
+    "en": null,
+    "fr": null
+  },
+  "#/hr": {
+    "_": "#/hr",
+    "en": null,
+    "fr": null
+  },
+  "#/min": {
+    "_": "#/min",
+    "en": null,
+    "fr": null
+  },
+  "#/mL": {
+    "_": "#/mL",
+    "en": null,
+    "fr": null
+  },
+  "%": {
+    "_": "%",
+    "en": null,
+    "fr": null
+  },
+  "Bq/L": {
+    "_": "Bq/L",
+    "en": null,
+    "fr": null
+  },
+  "CCE/100mL": {
+    "_": "CCE/100mL",
+    "en": null,
+    "fr": null
+  },
+  "CE/100mL": {
+    "_": "CE/100mL",
+    "en": null,
+    "fr": null
+  },
+  "CFU": {
+    "_": "CFU",
+    "en": null,
+    "fr": null
+  },
+  "cfu/100mL": {
+    "_": "cfu/100mL",
+    "en": null,
+    "fr": null
+  },
+  "cfu/mL": {
+    "_": "cfu/mL",
+    "en": null,
+    "fr": null
+  },
+  "cm": {
+    "_": "cm",
+    "en": null,
+    "fr": null
+  },
+  "cm-1": {
+    "_": "cm-1",
+    "en": null,
+    "fr": null
+  },
+  "cm3": {
+    "_": "cm3",
+    "en": null,
+    "fr": null
+  },
+  "count": {
+    "_": "count",
+    "en": null,
+    "fr": null
+  },
+  "CU": {
+    "_": "CU",
+    "en": null,
+    "fr": null
+  },
+  "Deg": {
+    "_": "Deg",
+    "en": null,
+    "fr": null
+  },
+  "deg C": {
+    "_": "deg C",
+    "en": null,
+    "fr": null
+  },
+  "deg F": {
+    "_": "deg F",
+    "en": null,
+    "fr": null
+  },
+  "DOY": {
+    "_": "DOY",
+    "en": null,
+    "fr": null
+  },
+  "eq/L": {
+    "_": "eq/L",
+    "en": null,
+    "fr": null
+  },
+  "FNU": {
+    "_": "FNU",
+    "en": null,
+    "fr": null
+  },
+  "ft": {
+    "_": "ft",
+    "en": null,
+    "fr": null
+  },
+  "FTU": {
+    "_": "FTU",
+    "en": null,
+    "fr": null
+  },
+  "g/L": {
+    "_": "g/L",
+    "en": null,
+    "fr": null
+  },
+  "g/m2": {
+    "_": "g/m2",
+    "en": null,
+    "fr": null
+  },
+  "gal/min": {
+    "_": "gal/min",
+    "en": null,
+    "fr": null
+  },
+  "ha": {
+    "_": "ha",
+    "en": null,
+    "fr": null
+  },
+  "hours": {
+    "_": "hours",
+    "en": null,
+    "fr": null
+  },
+  "HU": {
+    "_": "HU",
+    "en": null,
+    "fr": null
+  },
+  "in": {
+    "_": "in",
+    "en": null,
+    "fr": null
+  },
+  "ipiu/100L": {
+    "_": "ipiu/100L",
+    "en": null,
+    "fr": null
+  },
+  "JTU": {
+    "_": "JTU",
+    "en": null,
+    "fr": null
+  },
+  "kg/t": {
+    "_": "kg/t",
+    "en": null,
+    "fr": null
+  },
+  "km/hr": {
+    "_": "km/hr",
+    "en": null,
+    "fr": null
+  },
+  "km2": {
+    "_": "km2",
+    "en": null,
+    "fr": null
+  },
+  "kPa": {
+    "_": "kPa",
+    "en": null,
+    "fr": null
+  },
+  "L": {
+    "_": "L",
+    "en": null,
+    "fr": null
+  },
+  "L/mg-cm": {
+    "_": "L/mg-cm",
+    "en": null,
+    "fr": null
+  },
+  "L/mg-m": {
+    "_": "L/mg-m",
+    "en": null,
+    "fr": null
+  },
+  "L/min": {
+    "_": "L/min",
+    "en": null,
+    "fr": null
+  },
+  "L/sec": {
+    "_": "L/sec",
+    "en": null,
+    "fr": null
+  },
+  "lm/m2": {
+    "_": "lm/m2",
+    "en": null,
+    "fr": null
+  },
+  "m": {
+    "_": "m",
+    "en": null,
+    "fr": null
+  },
+  "m-1": {
+    "_": "m-1",
+    "en": null,
+    "fr": null
+  },
+  "m/sec": {
+    "_": "m/sec",
+    "en": null,
+    "fr": null
+  },
+  "m3/day": {
+    "_": "m3/day",
+    "en": null,
+    "fr": null
+  },
+  "m3/sec": {
+    "_": "m3/sec",
+    "en": null,
+    "fr": null
+  },
+  "meq/L": {
+    "_": "meq/L",
+    "en": null,
+    "fr": null
+  },
+  "mg": {
+    "_": "mg",
+    "en": null,
+    "fr": null
+  },
+  "mg/dm2/day": {
+    "_": "mg/dm2/day",
+    "en": null,
+    "fr": null
+  },
+  "mg/g": {
+    "_": "mg/g",
+    "en": null,
+    "fr": null
+  },
+  "mg/kg": {
+    "_": "mg/kg",
+    "en": null,
+    "fr": null
+  },
+  "mg/L": {
+    "_": "mg/L",
+    "en": null,
+    "fr": null
+  },
+  "mg/m2": {
+    "_": "mg/m2",
+    "en": null,
+    "fr": null
+  },
+  "mg/m3": {
+    "_": "mg/m3",
+    "en": null,
+    "fr": null
+  },
+  "mg/mL": {
+    "_": "mg/mL",
+    "en": null,
+    "fr": null
+  },
+  "mL": {
+    "_": "mL",
+    "en": null,
+    "fr": null
+  },
+  "mL/L": {
+    "_": "mL/L",
+    "en": null,
+    "fr": null
+  },
+  "mm": {
+    "_": "mm",
+    "en": null,
+    "fr": null
+  },
+  "mmHg": {
+    "_": "mmHg",
+    "en": null,
+    "fr": null
+  },
+  "mmol/L": {
+    "_": "mmol/L",
+    "en": null,
+    "fr": null
+  },
+  "Mole/L": {
+    "_": "Mole/L",
+    "en": null,
+    "fr": null
+  },
+  "MPN": {
+    "_": "MPN",
+    "en": null,
+    "fr": null
+  },
+  "MPN/100mL": {
+    "_": "MPN/100mL",
+    "en": null,
+    "fr": null
+  },
+  "MPN/g": {
+    "_": "MPN/g",
+    "en": null,
+    "fr": null
+  },
+  "mS/cm": {
+    "_": "mS/cm",
+    "en": null,
+    "fr": null
+  },
+  "mV": {
+    "_": "mV",
+    "en": null,
+    "fr": null
+  },
+  "ng": {
+    "_": "ng",
+    "en": null,
+    "fr": null
+  },
+  "ng/g": {
+    "_": "ng/g",
+    "en": null,
+    "fr": null
+  },
+  "ng/L": {
+    "_": "ng/L",
+    "en": null,
+    "fr": null
+  },
+  "ng/mL": {
+    "_": "ng/mL",
+    "en": null,
+    "fr": null
+  },
+  "None": {
+    "_": "None",
+    "en": null,
+    "fr": null
+  },
+  "NTU": {
+    "_": "NTU",
+    "en": null,
+    "fr": null
+  },
+  "ohm-cm": {
+    "_": "ohm-cm",
+    "en": null,
+    "fr": null
+  },
+  "ohm-m": {
+    "_": "ohm-m",
+    "en": null,
+    "fr": null
+  },
+  "pCi/L": {
+    "_": "pCi/L",
+    "en": null,
+    "fr": null
+  },
+  "PCU": {
+    "_": "PCU",
+    "en": null,
+    "fr": null
+  },
+  "per mil": {
+    "_": "per mil",
+    "en": null,
+    "fr": null
+  },
+  "per mil AIR": {
+    "_": "per mil AIR",
+    "en": null,
+    "fr": null
+  },
+  "per mil VCDT": {
+    "_": "per mil VCDT",
+    "en": null,
+    "fr": null
+  },
+  "per mil VPDB": {
+    "_": "per mil VPDB",
+    "en": null,
+    "fr": null
+  },
+  "per mil VSMOW": {
+    "_": "per mil VSMOW",
+    "en": null,
+    "fr": null
+  },
+  "pfu/100L": {
+    "_": "pfu/100L",
+    "en": null,
+    "fr": null
+  },
+  "pfu/100mL": {
+    "_": "pfu/100mL",
+    "en": null,
+    "fr": null
+  },
+  "pg/L": {
+    "_": "pg/L",
+    "en": null,
+    "fr": null
+  },
+  "pg/mL": {
+    "_": "pg/mL",
+    "en": null,
+    "fr": null
+  },
+  "ppb": {
+    "_": "ppb",
+    "en": null,
+    "fr": null
+  },
+  "ppm": {
+    "_": "ppm",
+    "en": null,
+    "fr": null
+  },
+  "ppmv": {
+    "_": "ppmv",
+    "en": null,
+    "fr": null
+  },
+  "ppt": {
+    "_": "ppt",
+    "en": null,
+    "fr": null
+  },
+  "ppth": {
+    "_": "ppth",
+    "en": null,
+    "fr": null
+  },
+  "psi": {
+    "_": "psi",
+    "en": null,
+    "fr": null
+  },
+  "PSU": {
+    "_": "PSU",
+    "en": null,
+    "fr": null
+  },
+  "RFU": {
+    "_": "RFU",
+    "en": null,
+    "fr": null
+  },
+  "S/m": {
+    "_": "S/m",
+    "en": null,
+    "fr": null
+  },
+  "T.O.N.": {
+    "_": "T.O.N.",
+    "en": null,
+    "fr": null
+  },
+  "TCU": {
+    "_": "TCU",
+    "en": null,
+    "fr": null
+  },
+  "tons/day": {
+    "_": "tons/day",
+    "en": null,
+    "fr": null
+  },
+  "TU": {
+    "_": "TU",
+    "en": null,
+    "fr": null
+  },
+  "uATM": {
+    "_": "uATM",
+    "en": null,
+    "fr": null
+  },
+  "uE/m2/sec": {
+    "_": "uE/m2/sec",
+    "en": null,
+    "fr": null
+  },
+  "ueq/L": {
+    "_": "ueq/L",
+    "en": null,
+    "fr": null
+  },
+  "ug": {
+    "_": "ug",
+    "en": null,
+    "fr": null
+  },
+  "ug/cm2": {
+    "_": "ug/cm2",
+    "en": null,
+    "fr": null
+  },
+  "ug/g": {
+    "_": "ug/g",
+    "en": null,
+    "fr": null
+  },
+  "ug/kg": {
+    "_": "ug/kg",
+    "en": null,
+    "fr": null
+  },
+  "ug/L": {
+    "_": "ug/L",
+    "en": null,
+    "fr": null
+  },
+  "ug/m3": {
+    "_": "ug/m3",
+    "en": null,
+    "fr": null
+  },
+  "umol/L": {
+    "_": "umol/L",
+    "en": null,
+    "fr": null
+  },
+  "umol/m2/s": {
+    "_": "umol/m2/s",
+    "en": null,
+    "fr": null
+  },
+  "umol/S/m2": {
+    "_": "umol/S/m2",
+    "en": null,
+    "fr": null
+  },
+  "units/cm": {
+    "_": "units/cm",
+    "en": null,
+    "fr": null
+  },
+  "units/m": {
+    "_": "units/m",
+    "en": null,
+    "fr": null
+  },
+  "uS/cm": {
+    "_": "uS/cm",
+    "en": null,
+    "fr": null
+  },
+  "uS/m": {
+    "_": "uS/m",
+    "en": null,
+    "fr": null
+  }
+}

@@ -9,4 +9,5 @@ mkdir -p backend
 mkdir -p quality-control
 mkdir -p lookup
 mkdir -p locales
+mkdir -p database
 cp src/lookup/* lookup/

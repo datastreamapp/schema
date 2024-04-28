@@ -114,3 +114,6 @@ locale en-CA
 locale fr-CA
 
 cp src/locales/*.json locales/
+
+# values
+find src/values -type f -name "*.legacy.json" | while IFS= read -r f; do cp "${f}" "database/$(basename -- ${f/.legacy/})"; done
