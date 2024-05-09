@@ -37,11 +37,11 @@ DataStream’s open data schema (DS-WQX v1.0) was fully implemented across all r
 
 ## Changelog
 
-The DataStream open data schema will continue to evolve to meet user needs and therefore is subject to various updates over time (e.g. addition of new allowed values). To view the most recent version number and record of changes please see the [DataStream Upload Template](https://docs.google.com/spreadsheets/d/1LPIeMOt9xeDVuoKpkmFJpXNfuzSi2_8y46wZ-YUAdao/edit?usp=sharing).
+The DataStream open data schema will continue to evolve to meet user needs and therefore is subject to various updates over time (e.g. addition of new allowed values). To view the most recent version number and record of changes please see the [DataStream Upload Template](https://datastream.org/en-ca/documentation/data-upload-resources#datastream-upload-template).
 
 ## Dataset Metadata
 
-In addition to the observation-level information in DS-WQX, DataStream uses dataset level metadata. [DataStream Metadata](https://github.com/gordonfn/metadata)
+In addition to the observation-level information in DS-WQX, DataStream uses dataset level metadata. [DataStream Metadata](https://github.com/datastreamapp/schema/tree/main/schemas/meta)
 
 ## Special Case Tests
 
@@ -82,10 +82,10 @@ The `csv` template follows `R` import/export best practices.
 ### JavaScript
 
 ```javascript
-import validate from '@gordonfn/schema'
-const data = {} // Single row of data
-const valid = validate(data)
-if (!valid) console.error(validate.errors)
+import validate from "@gordonfn/schema";
+const data = {}; // Single row of data
+const valid = validate(data);
+if (!valid) console.error(validate.errors);
 ```
 
 ### Schema Flavours
@@ -119,9 +119,10 @@ You can also email us at <datastream@gordonfn.org> or visit us at:
 
 - [DataStream](https://datastream.org)
 - [Atlantic DataStream](https://atlanticdatastream.ca)
-- [Great Lakes DataStream](https://greatlakesdatastream.ca) (Coming Fall 2021)
+- [Great Lakes DataStream](https://greatlakesdatastream.ca)
 - [Lake Winnipeg DataStream](https://lakewinnipegdatastream.ca)
 - [Mackenzie DataStream](https://mackenziedatastream.ca)
+- [Pacific DataStream](https://pacificdatastream.ca)
 
 ### Development
 
