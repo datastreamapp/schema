@@ -115,7 +115,7 @@ If you wish to comment on the schema please [open an issue](https://github.com/g
 
 - For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
 
-You can also email us at <datastream@gordonfn.org> or visit us at:
+You can also email us at <team@datastream.org> or visit us at:
 
 - [DataStream](https://datastream.org)
 - [Atlantic DataStream](https://atlanticdatastream.ca)
