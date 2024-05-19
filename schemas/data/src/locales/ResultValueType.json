@@ -1,27 +1,62 @@
 {
-  "Actual": {
-    "en": "Actual",
-    "fr": null,
-    "_": "Actual"
+  "name": {
+    "en": "ResultValueType",
+    "fr": null
   },
-  "Blank Corrected": {
-    "en": "Blank Corrected",
-    "fr": null,
-    "_": "Blank Corrected"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "Calculated": {
-    "en": "Calculated",
-    "fr": null,
-    "_": "Calculated"
-  },
-  "Control Adjusted": {
-    "en": "Control Adjusted",
-    "fr": null,
-    "_": "Control Adjusted"
-  },
-  "Estimated": {
-    "en": "Estimated",
-    "fr": null,
-    "_": "Estimated"
+  "values": {
+    "Actual": {
+      "name": {
+        "en": "Actual",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Blank Corrected": {
+      "name": {
+        "en": "Blank Corrected",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Calculated": {
+      "name": {
+        "en": "Calculated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Control Adjusted": {
+      "name": {
+        "en": "Control Adjusted",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Estimated": {
+      "name": {
+        "en": "Estimated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

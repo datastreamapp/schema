@@ -1,22 +1,52 @@
 {
-  "Blank-adjusted method detect limit": {
-    "en": "Blank-adjusted method detect limit",
-    "fr": null,
-    "_": "Blank-adjusted method detect limit"
+  "name": {
+    "en": "ResultDetectionQuantitationLimitType",
+    "fr": null
   },
-  "Method Detection Level": {
-    "en": "Method Detection Level",
-    "fr": null,
-    "_": "Method Detection Level"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "Reporting Limit": {
-    "en": "Reporting Limit",
-    "fr": null,
-    "_": "Reporting Limit"
-  },
-  "Sample Detection Limit": {
-    "en": "Sample Detection Limit",
-    "fr": null,
-    "_": "Sample Detection Limit"
+  "values": {
+    "Blank-adjusted method detect limit": {
+      "name": {
+        "en": "Blank-adjusted method detect limit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Method Detection Level": {
+      "name": {
+        "en": "Method Detection Level",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Reporting Limit": {
+      "name": {
+        "en": "Reporting Limit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample Detection Limit": {
+      "name": {
+        "en": "Sample Detection Limit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

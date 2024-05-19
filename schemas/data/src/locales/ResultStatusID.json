@@ -1,27 +1,62 @@
 {
-  "Accepted": {
-    "en": "Accepted",
-    "fr": null,
-    "_": "Accepted"
+  "name": {
+    "en": "ResultStatusID",
+    "fr": null
   },
-  "Final": {
-    "en": "Final",
-    "fr": null,
-    "_": "Final"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "Preliminary": {
-    "en": "Preliminary",
-    "fr": null,
-    "_": "Preliminary"
-  },
-  "Rejected": {
-    "en": "Rejected",
-    "fr": null,
-    "_": "Rejected"
-  },
-  "Validated": {
-    "en": "Validated",
-    "fr": null,
-    "_": "Validated"
+  "values": {
+    "Accepted": {
+      "name": {
+        "en": "Accepted",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Final": {
+      "name": {
+        "en": "Final",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Preliminary": {
+      "name": {
+        "en": "Preliminary",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rejected": {
+      "name": {
+        "en": "Rejected",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Validated": {
+      "name": {
+        "en": "Validated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

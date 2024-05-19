@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "MethodSpeciation",
+    "en": "CharacteristicGroup",
     "fr": null
   },
   "description": {
@@ -8,9 +8,9 @@
     "fr": null
   },
   "values": {
-    "as As": {
+    "Biological": {
       "name": {
-        "en": "as As",
+        "en": "Biological",
         "fr": null
       },
       "description": {
@@ -18,9 +18,9 @@
         "fr": null
       }
     },
-    "as B": {
+    "Biological, Algae": {
       "name": {
-        "en": "as B",
+        "en": "Biological, Algae",
         "fr": null
       },
       "description": {
@@ -28,9 +28,9 @@
         "fr": null
       }
     },
-    "as C3H6O2": {
+    "Biological, Algae, Cyanobacteria": {
       "name": {
-        "en": "as C3H6O2",
+        "en": "Biological, Algae, Cyanobacteria",
         "fr": null
       },
       "description": {
@@ -38,9 +38,9 @@
         "fr": null
       }
     },
-    "as Ca": {
+    "Biological, Algae, Cyanobacteria, Photosynthetic Pigments": {
       "name": {
-        "en": "as Ca",
+        "en": "Biological, Algae, Cyanobacteria, Photosynthetic Pigments",
         "fr": null
       },
       "description": {
@@ -48,9 +48,9 @@
         "fr": null
       }
     },
-    "as CaCO3": {
+    "Biological, Algae, Cyanobacteria, Photosynthetic,Phycocyanin": {
       "name": {
-        "en": "as CaCO3",
+        "en": "Biological, Algae, Cyanobacteria, Photosynthetic,Phycocyanin",
         "fr": null
       },
       "description": {
@@ -58,9 +58,9 @@
         "fr": null
       }
     },
-    "as Cl": {
+    "Biological, Algae, Phytoplankton": {
       "name": {
-        "en": "as Cl",
+        "en": "Biological, Algae, Phytoplankton",
         "fr": null
       },
       "description": {
@@ -68,9 +68,9 @@
         "fr": null
       }
     },
-    "as CN": {
+    "Biological, Algae, Phytoplankton, Aquatic Plants": {
       "name": {
-        "en": "as CN",
+        "en": "Biological, Algae, Phytoplankton, Aquatic Plants",
         "fr": null
       },
       "description": {
@@ -78,9 +78,9 @@
         "fr": null
       }
     },
-    "as CO3": {
+    "Biological, Algae, Phytoplankton, Cyanobacteria": {
       "name": {
-        "en": "as CO3",
+        "en": "Biological, Algae, Phytoplankton, Cyanobacteria",
         "fr": null
       },
       "description": {
@@ -88,9 +88,9 @@
         "fr": null
       }
     },
-    "as DPA": {
+    "Biological, Algae, Phytoplankton, Cyanobacteria, Periphyton": {
       "name": {
-        "en": "as DPA",
+        "en": "Biological, Algae, Phytoplankton, Cyanobacteria, Periphyton",
         "fr": null
       },
       "description": {
@@ -98,9 +98,9 @@
         "fr": null
       }
     },
-    "as F": {
+    "Biological, Algae, Phytoplankton, Photosynthetic Pigments": {
       "name": {
-        "en": "as F",
+        "en": "Biological, Algae, Phytoplankton, Photosynthetic Pigments",
         "fr": null
       },
       "description": {
@@ -108,9 +108,9 @@
         "fr": null
       }
     },
-    "as H": {
+    "Biological, Algae,Cyanobacteria,Photosynthetic,Phycoerythrin": {
       "name": {
-        "en": "as H",
+        "en": "Biological, Algae,Cyanobacteria,Photosynthetic,Phycoerythrin",
         "fr": null
       },
       "description": {
@@ -118,9 +118,9 @@
         "fr": null
       }
     },
-    "as H2S": {
+    "Biological, Algae,Phytoplankton,Cyanobacteria,Photosynthetic": {
       "name": {
-        "en": "as H2S",
+        "en": "Biological, Algae,Phytoplankton,Cyanobacteria,Photosynthetic",
         "fr": null
       },
       "description": {
@@ -128,9 +128,9 @@
         "fr": null
       }
     },
-    "as HCO3": {
+    "Biological, Aquatic Plants": {
       "name": {
-        "en": "as HCO3",
+        "en": "Biological, Aquatic Plants",
         "fr": null
       },
       "description": {
@@ -138,9 +138,9 @@
         "fr": null
       }
     },
-    "as LAS": {
+    "Biological, Carbon Production": {
       "name": {
-        "en": "as LAS",
+        "en": "Biological, Carbon Production",
         "fr": null
       },
       "description": {
@@ -148,9 +148,9 @@
         "fr": null
       }
     },
-    "as Mg": {
+    "Biological, Counts": {
       "name": {
-        "en": "as Mg",
+        "en": "Biological, Counts",
         "fr": null
       },
       "description": {
@@ -158,9 +158,9 @@
         "fr": null
       }
     },
-    "as N": {
+    "Biological, Fish": {
       "name": {
-        "en": "as N",
+        "en": "Biological, Fish",
         "fr": null
       },
       "description": {
@@ -168,9 +168,9 @@
         "fr": null
       }
     },
-    "as Na": {
+    "Biological, Fish Habitat, Filamentous Algae": {
       "name": {
-        "en": "as Na",
+        "en": "Biological, Fish Habitat, Filamentous Algae",
         "fr": null
       },
       "description": {
@@ -178,9 +178,9 @@
         "fr": null
       }
     },
-    "as NaCL": {
+    "Biological, Habitat, Algae, Aquatic Plants": {
       "name": {
-        "en": "as NaCL",
+        "en": "Biological, Habitat, Algae, Aquatic Plants",
         "fr": null
       },
       "description": {
@@ -188,9 +188,9 @@
         "fr": null
       }
     },
-    "as NH3": {
+    "Biological, Habitat, Algae, Phytoplankton": {
       "name": {
-        "en": "as NH3",
+        "en": "Biological, Habitat, Algae, Phytoplankton",
         "fr": null
       },
       "description": {
@@ -198,9 +198,9 @@
         "fr": null
       }
     },
-    "as NH4": {
+    "Biological, Habitat, Aquatic Plants": {
       "name": {
-        "en": "as NH4",
+        "en": "Biological, Habitat, Aquatic Plants",
         "fr": null
       },
       "description": {
@@ -208,9 +208,9 @@
         "fr": null
       }
     },
-    "as NO2": {
+    "Biological, Habitat, Filamentous Algae": {
       "name": {
-        "en": "as NO2",
+        "en": "Biological, Habitat, Filamentous Algae",
         "fr": null
       },
       "description": {
@@ -218,9 +218,9 @@
         "fr": null
       }
     },
-    "as NO3": {
+    "Biological, Habitat, Plants": {
       "name": {
-        "en": "as NO3",
+        "en": "Biological, Habitat, Plants",
         "fr": null
       },
       "description": {
@@ -228,9 +228,9 @@
         "fr": null
       }
     },
-    "as O2": {
+    "Biological, Photosynthetic Pigments": {
       "name": {
-        "en": "as O2",
+        "en": "Biological, Photosynthetic Pigments",
         "fr": null
       },
       "description": {
@@ -238,9 +238,9 @@
         "fr": null
       }
     },
-    "as OH": {
+    "Biological, Plants": {
       "name": {
-        "en": "as OH",
+        "en": "Biological, Plants",
         "fr": null
       },
       "description": {
@@ -248,9 +248,9 @@
         "fr": null
       }
     },
-    "as P": {
+    "Biological, Primary Production": {
       "name": {
-        "en": "as P",
+        "en": "Biological, Primary Production",
         "fr": null
       },
       "description": {
@@ -258,9 +258,9 @@
         "fr": null
       }
     },
-    "as PO4": {
+    "Cyanotoxins, Phytotoxins": {
       "name": {
-        "en": "as PO4",
+        "en": "Cyanotoxins, Phytotoxins",
         "fr": null
       },
       "description": {
@@ -268,9 +268,9 @@
         "fr": null
       }
     },
-    "as Ra": {
+    "Habitat": {
       "name": {
-        "en": "as Ra",
+        "en": "Habitat",
         "fr": null
       },
       "description": {
@@ -278,9 +278,9 @@
         "fr": null
       }
     },
-    "as Ra226": {
+    "Information": {
       "name": {
-        "en": "as Ra226",
+        "en": "Information",
         "fr": null
       },
       "description": {
@@ -288,9 +288,9 @@
         "fr": null
       }
     },
-    "as S": {
+    "Inorganics, Major, Metals": {
       "name": {
-        "en": "as S",
+        "en": "Inorganics, Major, Metals",
         "fr": null
       },
       "description": {
@@ -298,9 +298,9 @@
         "fr": null
       }
     },
-    "as Se": {
+    "Inorganics, Major, Non-metals": {
       "name": {
-        "en": "as Se",
+        "en": "Inorganics, Major, Non-metals",
         "fr": null
       },
       "description": {
@@ -308,9 +308,9 @@
         "fr": null
       }
     },
-    "as Si": {
+    "Inorganics, Minor, Metals": {
       "name": {
-        "en": "as Si",
+        "en": "Inorganics, Minor, Metals",
         "fr": null
       },
       "description": {
@@ -318,9 +318,9 @@
         "fr": null
       }
     },
-    "as SiO2": {
+    "Inorganics, Minor, Non-metals": {
       "name": {
-        "en": "as SiO2",
+        "en": "Inorganics, Minor, Non-metals",
         "fr": null
       },
       "description": {
@@ -328,9 +328,9 @@
         "fr": null
       }
     },
-    "as SO3": {
+    "Microbiological": {
       "name": {
-        "en": "as SO3",
+        "en": "Microbiological",
         "fr": null
       },
       "description": {
@@ -338,9 +338,9 @@
         "fr": null
       }
     },
-    "as SO4": {
+    "Not Assigned": {
       "name": {
-        "en": "as SO4",
+        "en": "Not Assigned",
         "fr": null
       },
       "description": {
@@ -348,9 +348,9 @@
         "fr": null
       }
     },
-    "as U3O8": {
+    "Nutrient": {
       "name": {
-        "en": "as U3O8",
+        "en": "Nutrient",
         "fr": null
       },
       "description": {
@@ -358,9 +358,9 @@
         "fr": null
       }
     },
-    "as Unspecified": {
+    "Organics, BDEs": {
       "name": {
-        "en": "as Unspecified",
+        "en": "Organics, BDEs",
         "fr": null
       },
       "description": {
@@ -368,9 +368,9 @@
         "fr": null
       }
     },
-    "of CH4": {
+    "Organics, Other": {
       "name": {
-        "en": "of CH4",
+        "en": "Organics, Other",
         "fr": null
       },
       "description": {
@@ -378,9 +378,9 @@
         "fr": null
       }
     },
-    "of CO2": {
+    "Organics, PCBs": {
       "name": {
-        "en": "of CO2",
+        "en": "Organics, PCBs",
         "fr": null
       },
       "description": {
@@ -388,9 +388,9 @@
         "fr": null
       }
     },
-    "of H2O": {
+    "Organics, Pesticide": {
       "name": {
-        "en": "of H2O",
+        "en": "Organics, Pesticide",
         "fr": null
       },
       "description": {
@@ -398,9 +398,9 @@
         "fr": null
       }
     },
-    "of Inorganic C": {
+    "Periphyton": {
       "name": {
-        "en": "of Inorganic C",
+        "en": "Periphyton",
         "fr": null
       },
       "description": {
@@ -408,9 +408,9 @@
         "fr": null
       }
     },
-    "of NH4": {
+    "PFAS,Perfluorinated Alkyl Substance": {
       "name": {
-        "en": "of NH4",
+        "en": "PFAS,Perfluorinated Alkyl Substance",
         "fr": null
       },
       "description": {
@@ -418,9 +418,9 @@
         "fr": null
       }
     },
-    "of NO3": {
+    "PFOA, Perfluorooctanoic Acid": {
       "name": {
-        "en": "of NO3",
+        "en": "PFOA, Perfluorooctanoic Acid",
         "fr": null
       },
       "description": {
@@ -428,9 +428,9 @@
         "fr": null
       }
     },
-    "of Organic C": {
+    "PFOS, Perfluorooctane Sulfonate": {
       "name": {
-        "en": "of Organic C",
+        "en": "PFOS, Perfluorooctane Sulfonate",
         "fr": null
       },
       "description": {
@@ -438,9 +438,9 @@
         "fr": null
       }
     },
-    "of Organic N": {
+    "Physical": {
       "name": {
-        "en": "of Organic N",
+        "en": "Physical",
         "fr": null
       },
       "description": {
@@ -448,9 +448,9 @@
         "fr": null
       }
     },
-    "of PO4": {
+    "Physical, Habitat": {
       "name": {
-        "en": "of PO4",
+        "en": "Physical, Habitat",
         "fr": null
       },
       "description": {
@@ -458,9 +458,9 @@
         "fr": null
       }
     },
-    "of S": {
+    "Phytoplankton, Cyanobacteria, Photosynthetic Pigments": {
       "name": {
-        "en": "of S",
+        "en": "Phytoplankton, Cyanobacteria, Photosynthetic Pigments",
         "fr": null
       },
       "description": {
@@ -468,9 +468,9 @@
         "fr": null
       }
     },
-    "of SO4": {
+    "Population/Community": {
       "name": {
-        "en": "of SO4",
+        "en": "Population/Community",
         "fr": null
       },
       "description": {
@@ -478,9 +478,49 @@
         "fr": null
       }
     },
-    "of Unspecified": {
+    "Productivity": {
       "name": {
-        "en": "of Unspecified",
+        "en": "Productivity",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Radiochemical": {
+      "name": {
+        "en": "Radiochemical",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sediment": {
+      "name": {
+        "en": "Sediment",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stable Isotopes": {
+      "name": {
+        "en": "Stable Isotopes",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Toxicity": {
+      "name": {
+        "en": "Toxicity",
         "fr": null
       },
       "description": {

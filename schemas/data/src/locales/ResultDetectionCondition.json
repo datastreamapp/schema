@@ -1,27 +1,62 @@
 {
-  "Above Detection/Quantification Limit": {
-    "en": "Above Detection/Quantification Limit",
-    "fr": null,
-    "_": "Above Detection/Quantification Limit"
+  "name": {
+    "en": "ResultDetectionCondition",
+    "fr": null
   },
-  "Below Detection/Quantification Limit": {
-    "en": "Below Detection/Quantification Limit",
-    "fr": null,
-    "_": "Below Detection/Quantification Limit"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "Detected Not Quantified": {
-    "en": "Detected Not Quantified",
-    "fr": null,
-    "_": "Detected Not Quantified"
-  },
-  "Not Detected": {
-    "en": "Not Detected",
-    "fr": null,
-    "_": "Not Detected"
-  },
-  "Not Reported": {
-    "en": "Not Reported",
-    "fr": null,
-    "_": "Not Reported"
+  "values": {
+    "Above Detection/Quantification Limit": {
+      "name": {
+        "en": "Above Detection/Quantification Limit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Below Detection/Quantification Limit": {
+      "name": {
+        "en": "Below Detection/Quantification Limit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Detected Not Quantified": {
+      "name": {
+        "en": "Detected Not Quantified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Not Detected": {
+      "name": {
+        "en": "Not Detected",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Not Reported": {
+      "name": {
+        "en": "Not Reported",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

@@ -1,87 +1,182 @@
 {
-  "AMSMA": {
-    "en": "AMSMA",
-    "fr": null,
-    "_": "AMSMA"
+  "name": {
+    "en": "MonitoringLocationHorizontalCoordinateReferenceSystem",
+    "fr": null
   },
-  "ASTRO": {
-    "en": "ASTRO",
-    "fr": null,
-    "_": "ASTRO"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "GUAM": {
-    "en": "GUAM",
-    "fr": null,
-    "_": "GUAM"
-  },
-  "HARN": {
-    "en": "HARN",
-    "fr": null,
-    "_": "HARN"
-  },
-  "JHNSN": {
-    "en": "JHNSN",
-    "fr": null,
-    "_": "JHNSN"
-  },
-  "NAD27": {
-    "en": "NAD27",
-    "fr": null,
-    "_": "NAD27"
-  },
-  "NAD83": {
-    "en": "NAD83",
-    "fr": null,
-    "_": "NAD83"
-  },
-  "OLDHI": {
-    "en": "OLDHI",
-    "fr": null,
-    "_": "OLDHI"
-  },
-  "OTHER": {
-    "en": "OTHER",
-    "fr": null,
-    "_": "OTHER"
-  },
-  "PR": {
-    "en": "PR",
-    "fr": null,
-    "_": "PR"
-  },
-  "SGEOR": {
-    "en": "SGEOR",
-    "fr": null,
-    "_": "SGEOR"
-  },
-  "SLAWR": {
-    "en": "SLAWR",
-    "fr": null,
-    "_": "SLAWR"
-  },
-  "SPAUL": {
-    "en": "SPAUL",
-    "fr": null,
-    "_": "SPAUL"
-  },
-  "UNKWN": {
-    "en": "UNKWN",
-    "fr": null,
-    "_": "UNKWN"
-  },
-  "WAKE": {
-    "en": "WAKE",
-    "fr": null,
-    "_": "WAKE"
-  },
-  "WGS72": {
-    "en": "WGS72",
-    "fr": null,
-    "_": "WGS72"
-  },
-  "WGS84": {
-    "en": "WGS84",
-    "fr": null,
-    "_": "WGS84"
+  "values": {
+    "AMSMA": {
+      "name": {
+        "en": "AMSMA",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ASTRO": {
+      "name": {
+        "en": "ASTRO",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "GUAM": {
+      "name": {
+        "en": "GUAM",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "HARN": {
+      "name": {
+        "en": "HARN",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "JHNSN": {
+      "name": {
+        "en": "JHNSN",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NAD27": {
+      "name": {
+        "en": "NAD27",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NAD83": {
+      "name": {
+        "en": "NAD83",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "OLDHI": {
+      "name": {
+        "en": "OLDHI",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "OTHER": {
+      "name": {
+        "en": "OTHER",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "PR": {
+      "name": {
+        "en": "PR",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "SGEOR": {
+      "name": {
+        "en": "SGEOR",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "SLAWR": {
+      "name": {
+        "en": "SLAWR",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "SPAUL": {
+      "name": {
+        "en": "SPAUL",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "UNKWN": {
+      "name": {
+        "en": "UNKWN",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "WAKE": {
+      "name": {
+        "en": "WAKE",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "WGS72": {
+      "name": {
+        "en": "WGS72",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "WGS84": {
+      "name": {
+        "en": "WGS84",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

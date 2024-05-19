@@ -1,258 +1,522 @@
 {
-  "Field Msr/Obs": {
-    "": "",
-    "en": "Field Msr/Obs",
-    "fr": null,
-    "_": "Field Msr/Obs"
+  "name": {
+    "en": "ActivityType",
+    "fr": null
   },
-  "Field Msr/Obs-Portable Data Logger": {
-    "en": "Field Msr/Obs-Portable Data Logger",
-    "fr": null,
-    "_": "Field Msr/Obs-Portable Data Logger"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "Quality Control Alternative Measurement Sensitivity": {
-    "en": "Quality Control Alternative Measurement Sensitivity",
-    "fr": null,
-    "_": "Quality Control Alternative Measurement Sensitivity"
-  },
-  "Quality Control Alternative Measurement Sensitivity Plus": {
-    "en": "Quality Control Alternative Measurement Sensitivity Plus",
-    "fr": null,
-    "_": "Quality Control Alternative Measurement Sensitivity Plus"
-  },
-  "Quality Control Field Msr/Obs Post-Calibration": {
-    "en": "Quality Control Field Msr/Obs Post-Calibration",
-    "fr": null,
-    "_": "Quality Control Field Msr/Obs Post-Calibration"
-  },
-  "Quality Control Field Msr/Obs Pre-Calibration": {
-    "en": "Quality Control Field Msr/Obs Pre-Calibration",
-    "fr": null,
-    "_": "Quality Control Field Msr/Obs Pre-Calibration"
-  },
-  "Quality Control Field Replicate Msr/Obs": {
-    "en": "Quality Control Field Replicate Msr/Obs",
-    "fr": null,
-    "_": "Quality Control Field Replicate Msr/Obs"
-  },
-  "Quality Control Field Replicate Portable Data Logger": {
-    "en": "Quality Control Field Replicate Portable Data Logger",
-    "fr": null,
-    "_": "Quality Control Field Replicate Portable Data Logger"
-  },
-  "Quality Control Field Sample Equipment Rinsate Blank": {
-    "en": "Quality Control Field Sample Equipment Rinsate Blank",
-    "fr": null,
-    "_": "Quality Control Field Sample Equipment Rinsate Blank"
-  },
-  "Quality Control Sample-Blind Duplicate": {
-    "en": "Quality Control Sample-Blind Duplicate",
-    "fr": null,
-    "_": "Quality Control Sample-Blind Duplicate"
-  },
-  "Quality Control Sample-Field Blank": {
-    "en": "Quality Control Sample-Field Blank",
-    "fr": null,
-    "_": "Quality Control Sample-Field Blank"
-  },
-  "Quality Control Sample-Field Replicate": {
-    "en": "Quality Control Sample-Field Replicate",
-    "fr": null,
-    "_": "Quality Control Sample-Field Replicate"
-  },
-  "Quality Control Sample-Field Spike": {
-    "en": "Quality Control Sample-Field Spike",
-    "fr": null,
-    "_": "Quality Control Sample-Field Spike"
-  },
-  "Quality Control Sample-Field Surrogate Spike": {
-    "en": "Quality Control Sample-Field Surrogate Spike",
-    "fr": null,
-    "_": "Quality Control Sample-Field Surrogate Spike"
-  },
-  "Quality Control Sample-Inter-lab Split": {
-    "en": "Quality Control Sample-Inter-lab Split",
-    "fr": null,
-    "_": "Quality Control Sample-Inter-lab Split"
-  },
-  "Quality Control Sample-Lab Blank": {
-    "en": "Quality Control Sample-Lab Blank",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Blank"
-  },
-  "Quality Control Sample-Lab Duplicate": {
-    "en": "Quality Control Sample-Lab Duplicate",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Duplicate"
-  },
-  "Quality Control Sample-Lab Duplicate 2": {
-    "en": "Quality Control Sample-Lab Duplicate 2",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Duplicate 2"
-  },
-  "Quality Control Sample-Lab Matrix Spike": {
-    "en": "Quality Control Sample-Lab Matrix Spike",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Matrix Spike"
-  },
-  "Quality Control Sample-Lab Re-Analysis": {
-    "en": "Quality Control Sample-Lab Re-Analysis",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Re-Analysis"
-  },
-  "Quality Control Sample-Lab Spike": {
-    "en": "Quality Control Sample-Lab Spike",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Spike"
-  },
-  "Quality Control Sample-Lab Spike Target": {
-    "en": "Quality Control Sample-Lab Spike Target",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Spike Target"
-  },
-  "Quality Control Sample-Lab Split": {
-    "en": "Quality Control Sample-Lab Split",
-    "fr": null,
-    "_": "Quality Control Sample-Lab Split"
-  },
-  "Quality Control Sample-Measurement Precision Sample": {
-    "en": "Quality Control Sample-Measurement Precision Sample",
-    "fr": null,
-    "_": "Quality Control Sample-Measurement Precision Sample"
-  },
-  "Quality Control Sample-Other": {
-    "en": "Quality Control Sample-Other",
-    "fr": null,
-    "_": "Quality Control Sample-Other"
-  },
-  "Quality Control Sample-Post-preservative Blank": {
-    "en": "Quality Control Sample-Post-preservative Blank",
-    "fr": null,
-    "_": "Quality Control Sample-Post-preservative Blank"
-  },
-  "Quality Control Sample-Pre-preservative Blank": {
-    "en": "Quality Control Sample-Pre-preservative Blank",
-    "fr": null,
-    "_": "Quality Control Sample-Pre-preservative Blank"
-  },
-  "Quality Control Sample-Reagent Blank": {
-    "en": "Quality Control Sample-Reagent Blank",
-    "fr": null,
-    "_": "Quality Control Sample-Reagent Blank"
-  },
-  "Quality Control Sample-Reference Sample": {
-    "en": "Quality Control Sample-Reference Sample",
-    "fr": null,
-    "_": "Quality Control Sample-Reference Sample"
-  },
-  "Quality Control Sample-Trip Blank": {
-    "en": "Quality Control Sample-Trip Blank",
-    "fr": null,
-    "_": "Quality Control Sample-Trip Blank"
-  },
-  "Quality Control-Calibration Check": {
-    "en": "Quality Control-Calibration Check",
-    "fr": null,
-    "_": "Quality Control-Calibration Check"
-  },
-  "Quality Control-Calibration Check Buffer": {
-    "en": "Quality Control-Calibration Check Buffer",
-    "fr": null,
-    "_": "Quality Control-Calibration Check Buffer"
-  },
-  "Quality Control-Meter Lab Blank": {
-    "en": "Quality Control-Meter Lab Blank",
-    "fr": null,
-    "_": "Quality Control-Meter Lab Blank"
-  },
-  "Quality Control-Meter Lab Duplicate": {
-    "en": "Quality Control-Meter Lab Duplicate",
-    "fr": null,
-    "_": "Quality Control-Meter Lab Duplicate"
-  },
-  "Quality Control-Meter Lab Duplicate 2": {
-    "en": "Quality Control-Meter Lab Duplicate 2",
-    "fr": null,
-    "_": "Quality Control-Meter Lab Duplicate 2"
-  },
-  "Quality Control-Negative Control": {
-    "en": "Quality Control-Negative Control",
-    "fr": null,
-    "_": "Quality Control-Negative Control"
-  },
-  "Sample-Composite With Parents": {
-    "en": "Sample-Composite With Parents",
-    "fr": null,
-    "_": "Sample-Composite With Parents"
-  },
-  "Sample-Composite Without Parents": {
-    "en": "Sample-Composite Without Parents",
-    "fr": null,
-    "_": "Sample-Composite Without Parents"
-  },
-  "Sample-Depletion Replicate": {
-    "en": "Sample-Depletion Replicate",
-    "fr": null,
-    "_": "Sample-Depletion Replicate"
-  },
-  "Sample-Field Split": {
-    "en": "Sample-Field Split",
-    "fr": null,
-    "_": "Sample-Field Split"
-  },
-  "Sample-Field Subsample": {
-    "en": "Sample-Field Subsample",
-    "fr": null,
-    "_": "Sample-Field Subsample"
-  },
-  "Sample-Integrated Cross-Sectional Profile": {
-    "en": "Sample-Integrated Cross-Sectional Profile",
-    "fr": null,
-    "_": "Sample-Integrated Cross-Sectional Profile"
-  },
-  "Sample-Integrated Flow Proportioned": {
-    "en": "Sample-Integrated Flow Proportioned",
-    "fr": null,
-    "_": "Sample-Integrated Flow Proportioned"
-  },
-  "Sample-Integrated Horizontal and Vertical Composite Profile": {
-    "en": "Sample-Integrated Horizontal and Vertical Composite Profile",
-    "fr": null,
-    "_": "Sample-Integrated Horizontal and Vertical Composite Profile"
-  },
-  "Sample-Integrated Horizontal Profile": {
-    "en": "Sample-Integrated Horizontal Profile",
-    "fr": null,
-    "_": "Sample-Integrated Horizontal Profile"
-  },
-  "Sample-Integrated Time Series": {
-    "en": "Sample-Integrated Time Series",
-    "fr": null,
-    "_": "Sample-Integrated Time Series"
-  },
-  "Sample-Integrated Vertical Profile": {
-    "en": "Sample-Integrated Vertical Profile",
-    "fr": null,
-    "_": "Sample-Integrated Vertical Profile"
-  },
-  "Sample-Negative Control": {
-    "en": "Sample-Negative Control",
-    "fr": null,
-    "_": "Sample-Negative Control"
-  },
-  "Sample-Other": {
-    "en": "Sample-Other",
-    "fr": null,
-    "_": "Sample-Other"
-  },
-  "Sample-Positive Control": {
-    "en": "Sample-Positive Control",
-    "fr": null,
-    "_": "Sample-Positive Control"
-  },
-  "Sample-Routine": {
-    "en": "Sample-Routine",
-    "fr": null,
-    "_": "Sample-Routine"
+  "values": {
+    "Field Msr/Obs": {
+      "name": {
+        "en": "Field Msr/Obs",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Field Msr/Obs-Portable Data Logger": {
+      "name": {
+        "en": "Field Msr/Obs-Portable Data Logger",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Alternative Measurement Sensitivity": {
+      "name": {
+        "en": "Quality Control Alternative Measurement Sensitivity",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Alternative Measurement Sensitivity Plus": {
+      "name": {
+        "en": "Quality Control Alternative Measurement Sensitivity Plus",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Field Msr/Obs Post-Calibration": {
+      "name": {
+        "en": "Quality Control Field Msr/Obs Post-Calibration",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Field Msr/Obs Pre-Calibration": {
+      "name": {
+        "en": "Quality Control Field Msr/Obs Pre-Calibration",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Field Replicate Msr/Obs": {
+      "name": {
+        "en": "Quality Control Field Replicate Msr/Obs",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Field Replicate Portable Data Logger": {
+      "name": {
+        "en": "Quality Control Field Replicate Portable Data Logger",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Field Sample Equipment Rinsate Blank": {
+      "name": {
+        "en": "Quality Control Field Sample Equipment Rinsate Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Blind Duplicate": {
+      "name": {
+        "en": "Quality Control Sample-Blind Duplicate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Field Blank": {
+      "name": {
+        "en": "Quality Control Sample-Field Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Field Replicate": {
+      "name": {
+        "en": "Quality Control Sample-Field Replicate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Field Spike": {
+      "name": {
+        "en": "Quality Control Sample-Field Spike",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Field Surrogate Spike": {
+      "name": {
+        "en": "Quality Control Sample-Field Surrogate Spike",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Inter-lab Split": {
+      "name": {
+        "en": "Quality Control Sample-Inter-lab Split",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Blank": {
+      "name": {
+        "en": "Quality Control Sample-Lab Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Duplicate": {
+      "name": {
+        "en": "Quality Control Sample-Lab Duplicate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Duplicate 2": {
+      "name": {
+        "en": "Quality Control Sample-Lab Duplicate 2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Matrix Spike": {
+      "name": {
+        "en": "Quality Control Sample-Lab Matrix Spike",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Re-Analysis": {
+      "name": {
+        "en": "Quality Control Sample-Lab Re-Analysis",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Spike": {
+      "name": {
+        "en": "Quality Control Sample-Lab Spike",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Spike Target": {
+      "name": {
+        "en": "Quality Control Sample-Lab Spike Target",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Split": {
+      "name": {
+        "en": "Quality Control Sample-Lab Split",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Measurement Precision Sample": {
+      "name": {
+        "en": "Quality Control Sample-Measurement Precision Sample",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Other": {
+      "name": {
+        "en": "Quality Control Sample-Other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Post-preservative Blank": {
+      "name": {
+        "en": "Quality Control Sample-Post-preservative Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Pre-preservative Blank": {
+      "name": {
+        "en": "Quality Control Sample-Pre-preservative Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Reagent Blank": {
+      "name": {
+        "en": "Quality Control Sample-Reagent Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Reference Sample": {
+      "name": {
+        "en": "Quality Control Sample-Reference Sample",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Trip Blank": {
+      "name": {
+        "en": "Quality Control Sample-Trip Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control-Calibration Check": {
+      "name": {
+        "en": "Quality Control-Calibration Check",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control-Calibration Check Buffer": {
+      "name": {
+        "en": "Quality Control-Calibration Check Buffer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control-Meter Lab Blank": {
+      "name": {
+        "en": "Quality Control-Meter Lab Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control-Meter Lab Duplicate": {
+      "name": {
+        "en": "Quality Control-Meter Lab Duplicate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control-Meter Lab Duplicate 2": {
+      "name": {
+        "en": "Quality Control-Meter Lab Duplicate 2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control-Negative Control": {
+      "name": {
+        "en": "Quality Control-Negative Control",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Composite With Parents": {
+      "name": {
+        "en": "Sample-Composite With Parents",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Composite Without Parents": {
+      "name": {
+        "en": "Sample-Composite Without Parents",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Depletion Replicate": {
+      "name": {
+        "en": "Sample-Depletion Replicate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Field Split": {
+      "name": {
+        "en": "Sample-Field Split",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Field Subsample": {
+      "name": {
+        "en": "Sample-Field Subsample",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Integrated Cross-Sectional Profile": {
+      "name": {
+        "en": "Sample-Integrated Cross-Sectional Profile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Integrated Flow Proportioned": {
+      "name": {
+        "en": "Sample-Integrated Flow Proportioned",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Integrated Horizontal and Vertical Composite Profile": {
+      "name": {
+        "en": "Sample-Integrated Horizontal and Vertical Composite Profile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Integrated Horizontal Profile": {
+      "name": {
+        "en": "Sample-Integrated Horizontal Profile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Integrated Time Series": {
+      "name": {
+        "en": "Sample-Integrated Time Series",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Integrated Vertical Profile": {
+      "name": {
+        "en": "Sample-Integrated Vertical Profile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Negative Control": {
+      "name": {
+        "en": "Sample-Negative Control",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Other": {
+      "name": {
+        "en": "Sample-Other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Positive Control": {
+      "name": {
+        "en": "Sample-Positive Control",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sample-Routine": {
+      "name": {
+        "en": "Sample-Routine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

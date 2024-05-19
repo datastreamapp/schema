@@ -1,77 +1,162 @@
 {
-  "Atmosphere": {
-    "_": "Atmosphere",
-    "en": "Atmosphere",
+  "name": {
+    "en": "MonitoringLocationType",
     "fr": null
   },
-  "Canal Drainage": {
-    "_": "Canal Drainage",
-    "en": "Canal Drainage",
+  "description": {
+    "en": null,
     "fr": null
   },
-  "Canal Irrigation": {
-    "_": "Canal Irrigation",
-    "en": "Canal Irrigation",
-    "fr": null
-  },
-  "Canal Transport": {
-    "_": "Canal Transport",
-    "en": "Canal Transport",
-    "fr": null
-  },
-  "Estuary": {
-    "_": "Estuary",
-    "en": "Estuary",
-    "fr": null
-  },
-  "Great Lake": {
-    "_": "Great Lake",
-    "en": "Great Lake",
-    "fr": null
-  },
-  "Lake/Pond": {
-    "_": "Lake/Pond",
-    "en": "Lake/Pond",
-    "fr": null
-  },
-  "Ocean": {
-    "_": "Ocean",
-    "en": "Ocean",
-    "fr": null
-  },
-  "Pond-Stormwater": {
-    "_": "Pond-Stormwater",
-    "en": "Pond-Stormwater",
-    "fr": null
-  },
-  "Reservoir": {
-    "_": "Reservoir",
-    "en": "Reservoir",
-    "fr": null
-  },
-  "River/Stream": {
-    "_": "River/Stream",
-    "en": "River/Stream",
-    "fr": null
-  },
-  "Spring": {
-    "_": "Spring",
-    "en": "Spring",
-    "fr": null
-  },
-  "Storm Sewer": {
-    "_": "Storm Sewer",
-    "en": "Storm Sewer",
-    "fr": null
-  },
-  "Unspecified": {
-    "_": "Unspecified",
-    "en": "Unspecified",
-    "fr": null
-  },
-  "Wetland": {
-    "_": "Wetland",
-    "en": "Wetland",
-    "fr": null
+  "values": {
+    "Atmosphere": {
+      "name": {
+        "en": "Atmosphere",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Canal Drainage": {
+      "name": {
+        "en": "Canal Drainage",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Canal Irrigation": {
+      "name": {
+        "en": "Canal Irrigation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Canal Transport": {
+      "name": {
+        "en": "Canal Transport",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Estuary": {
+      "name": {
+        "en": "Estuary",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Great Lake": {
+      "name": {
+        "en": "Great Lake",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lake/Pond": {
+      "name": {
+        "en": "Lake/Pond",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ocean": {
+      "name": {
+        "en": "Ocean",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pond-Stormwater": {
+      "name": {
+        "en": "Pond-Stormwater",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Reservoir": {
+      "name": {
+        "en": "Reservoir",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "River/Stream": {
+      "name": {
+        "en": "River/Stream",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Spring": {
+      "name": {
+        "en": "Spring",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Storm Sewer": {
+      "name": {
+        "en": "Storm Sewer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unspecified": {
+      "name": {
+        "en": "Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wetland": {
+      "name": {
+        "en": "Wetland",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

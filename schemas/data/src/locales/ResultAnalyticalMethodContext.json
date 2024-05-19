@@ -1,127 +1,262 @@
 {
-  "APHA": {
-    "en": "APHA",
-    "fr": null,
-    "_": "APHA"
+  "name": {
+    "en": "ResultAnalyticalMethodContext",
+    "fr": null
   },
-  "APHA_SM20ED": {
-    "en": "APHA_SM20ED",
-    "fr": null,
-    "_": "APHA_SM20ED"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "APHA_SM21ED": {
-    "en": "APHA_SM21ED",
-    "fr": null,
-    "_": "APHA_SM21ED"
-  },
-  "APHA_SM22ED": {
-    "en": "APHA_SM22ED",
-    "fr": null,
-    "_": "APHA_SM22ED"
-  },
-  "APHA_SM23ED": {
-    "en": "APHA_SM23ED",
-    "fr": null,
-    "_": "APHA_SM23ED"
-  },
-  "ASTM": {
-    "en": "ASTM",
-    "fr": null,
-    "_": "ASTM"
-  },
-  "DIN": {
-    "en": "DIN",
-    "fr": null,
-    "_": "DIN"
-  },
-  "DOI": {
-    "en": "DOI",
-    "fr": null,
-    "_": "DOI"
-  },
-  "EN": {
-    "en": "EN",
-    "fr": null,
-    "_": "EN"
-  },
-  "ENV/CANADA": {
-    "en": "ENV/CANADA",
-    "fr": null,
-    "_": "ENV/CANADA"
-  },
-  "ENVIROLOGIX": {
-    "en": "ENVIROLOGIX",
-    "fr": null,
-    "_": "ENVIROLOGIX"
-  },
-  "HACH": {
-    "en": "HACH",
-    "fr": null,
-    "_": "HACH"
-  },
-  "IDEXX": {
-    "en": "IDEXX",
-    "fr": null,
-    "_": "IDEXX"
-  },
-  "ISO": {
-    "en": "ISO",
-    "fr": null,
-    "_": "ISO"
-  },
-  "LACHAT": {
-    "en": "LACHAT",
-    "fr": null,
-    "_": "LACHAT"
-  },
-  "LaMOTTE": {
-    "en": "LaMOTTE",
-    "fr": null,
-    "_": "LaMOTTE"
-  },
-  "MICROLOGY LABS": {
-    "en": "MICROLOGY LABS",
-    "fr": null,
-    "_": "MICROLOGY LABS"
-  },
-  "ON MECP": {
-    "en": "ON MECP",
-    "fr": null,
-    "_": "ON MECP"
-  },
-  "PALINTEST LTD": {
-    "en": "PALINTEST LTD",
-    "fr": null,
-    "_": "PALINTEST LTD"
-  },
-  "PROPRIETARY": {
-    "en": "PROPRIETARY",
-    "fr": null,
-    "_": "PROPRIETARY"
-  },
-  "Seal": {
-    "en": "Seal",
-    "fr": null,
-    "_": "Seal"
-  },
-  "THERMO-SCIENTIFIC": {
-    "en": "THERMO-SCIENTIFIC",
-    "fr": null,
-    "_": "THERMO-SCIENTIFIC"
-  },
-  "USEPA": {
-    "en": "USEPA",
-    "fr": null,
-    "_": "USEPA"
-  },
-  "VMV": {
-    "en": "VMV",
-    "fr": null,
-    "_": "VMV"
-  },
-  "YSI": {
-    "en": "YSI",
-    "fr": null,
-    "_": "YSI"
+  "values": {
+    "APHA": {
+      "name": {
+        "en": "APHA",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "APHA_SM20ED": {
+      "name": {
+        "en": "APHA_SM20ED",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "APHA_SM21ED": {
+      "name": {
+        "en": "APHA_SM21ED",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "APHA_SM22ED": {
+      "name": {
+        "en": "APHA_SM22ED",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "APHA_SM23ED": {
+      "name": {
+        "en": "APHA_SM23ED",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ASTM": {
+      "name": {
+        "en": "ASTM",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "DIN": {
+      "name": {
+        "en": "DIN",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "DOI": {
+      "name": {
+        "en": "DOI",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "EN": {
+      "name": {
+        "en": "EN",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ENV/CANADA": {
+      "name": {
+        "en": "ENV/CANADA",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ENVIROLOGIX": {
+      "name": {
+        "en": "ENVIROLOGIX",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "HACH": {
+      "name": {
+        "en": "HACH",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "IDEXX": {
+      "name": {
+        "en": "IDEXX",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ISO": {
+      "name": {
+        "en": "ISO",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "LACHAT": {
+      "name": {
+        "en": "LACHAT",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "LaMOTTE": {
+      "name": {
+        "en": "LaMOTTE",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "MICROLOGY LABS": {
+      "name": {
+        "en": "MICROLOGY LABS",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ON MECP": {
+      "name": {
+        "en": "ON MECP",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "PALINTEST LTD": {
+      "name": {
+        "en": "PALINTEST LTD",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "PROPRIETARY": {
+      "name": {
+        "en": "PROPRIETARY",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Seal": {
+      "name": {
+        "en": "Seal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "THERMO-SCIENTIFIC": {
+      "name": {
+        "en": "THERMO-SCIENTIFIC",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "USEPA": {
+      "name": {
+        "en": "USEPA",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "VMV": {
+      "name": {
+        "en": "VMV",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "YSI": {
+      "name": {
+        "en": "YSI",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

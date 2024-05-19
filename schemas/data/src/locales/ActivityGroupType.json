@@ -1,32 +1,72 @@
 {
-  "Field Set": {
-    "en": "Field",
-    "fr": "Terrain",
-    "_": "Field Set"
-  },
-  "Other": {
-    "en": "Other",
-    "fr": null,
-    "_": "Other"
-  },
-  "QC Sample": {
-    "_": "QC Sample",
-    "en": "Quality Control",
-    "fr": "Contrôle qualité"
-  },
-  "Replicate": {
-    "_": "Replicate",
-    "en": "Replicate",
+  "name": {
+    "en": "Activity Group Type",
     "fr": null
   },
-  "Subsample": {
-    "en": "Lab",
-    "fr": "Laboratoire",
-    "_": "Subsample"
+  "description": {
+    "en": null,
+    "fr": null
   },
-  "Trip": {
-    "en": "Trip",
-    "fr": null,
-    "_": "Trip"
+  "values": {
+    "Field Set": {
+      "name": {
+        "en": "Field",
+        "fr": "Terrain"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Other": {
+      "name": {
+        "en": "Other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "QC Sample": {
+      "name": {
+        "en": "Quality Control",
+        "fr": "Contrôle qualité"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Replicate": {
+      "name": {
+        "en": "Replicate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Subsample": {
+      "name": {
+        "en": "Lab",
+        "fr": "Laboratoire"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Trip": {
+      "name": {
+        "en": "Trip",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }
