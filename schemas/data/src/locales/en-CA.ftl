@@ -99,6 +99,7 @@ qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant 
 qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
 qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data (https://datastream.org/en-ca/documentation/metal-series-data-guidance)
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
+qc-CharacteristicName-ResultAnalyticalMethodName = ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 
 qc-ResultAnalyticalMethodContext-YSI-ActivityType = The ActivityType may not be appropriate for this ResultAnalyticalMethodContext. When ResultAnalyticalMethodContext is 'YSI', a field measurement is expected (e.g., ActivityType 'Field Msr/Obs-Portable Data Logger')

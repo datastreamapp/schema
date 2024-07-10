@@ -287,6 +287,22 @@ test('Should accept MethodSpeciation when its not expected', async (t) => {
   t.is(valid, true)
 })
 
+test('Should accept CharacteristicName-ResultAnalyticalMethodName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Ammonia',
+    ResultAnalyticalMethodName: 'Test Method Name'
+  })
+  t.is(valid, true)
+})
+test('Should reject CharacteristicName-ResultAnalyticalMethodName when empty', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Day, ice off',
+    ResultAnalyticalMethodName: undefined
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName'), true)
+})
+
 // MonitoringLocationDepthHeightMeasure - TODO future?
 
 // *** MonitoringLocationCoordinate-BoundingBox *** //

@@ -162,6 +162,9 @@
       "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
     },
     {
+      "$ref": "./quality-control/CharacteristicName-ResultAnalyticalMethodName.json"
+    },
+    {
       "$ref": "./quality-control/MonitoringLocationCoordinate-BoundingBox.json"
     },
     {
