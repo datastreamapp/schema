@@ -1,4 +1,5 @@
 [
+  "AOAC",
   "APHA",
   "APHA_SM20ED",
   "APHA_SM21ED",
@@ -11,6 +12,8 @@
   "ENV/CANADA",
   "ENVIROLOGIX",
   "HACH",
+  "HANNA",
+  "HOBO",
   "IDEXX",
   "ISO",
   "LACHAT",
