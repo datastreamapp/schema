@@ -1,0 +1,27 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultValue-DOY-Range.json",
+  "title": "ResultValue-DOY-Range",
+  "description": "The DOY (day of year) cannot be less than 1 or more than 366 (for leap years)",
+  "errorMessage": "qc-ResultValue-DOY-Range",
+  "if": {
+    "properties": {
+      "ResultValue": {
+        "type": "number"
+      },
+      "ResultUnit": {
+        "enum": ["DOY"]
+      }
+    },
+    "required": ["ResultUnit", "ResultValue"]
+  },
+  "then": {
+    "properties": {
+      "ResultValue": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 366
+      }
+    },
+    "required": ["ResultValue"]
+  }
+}

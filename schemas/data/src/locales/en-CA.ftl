@@ -115,6 +115,7 @@ qc-ResultUnit-Percent = The unit for the CharacteristicName is typically express
 # qc-ResultValue-Depth-Maximum = Depth is outside an expected range (<0).
 qc-ResultValue-DissolvedOxygen-Unit = The unit for Dissolved oxygen (DO) should not be %. For DO saturation, use CharacteristicName 'Dissolved oxygen saturation'
 qc-ResultValue-DOSaturation-Minimum = The selected CharacteristicName should not have a measure below zero
+qc-ResultValue-DOY-Range = ResultValue is outside the expected range (1 to 366) for the unit DOY (Day of Year)
 qc-ResultValue-Minimum = ResultValue should not be below zero for the selected ResultUnit
 qc-ResultValue-pH-Range = pH ResultValue is outside the accepted allowed range (0 to 14)
 qc-ResultValue-Temperature-Range = Temperature is outside an expected range (-100 to 100).

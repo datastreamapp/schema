@@ -207,6 +207,9 @@
       "$ref": "./quality-control/ResultValue-Temperature-Range.json"
     },
     {
+      "$ref": "./quality-control/ResultValue-DOY-Range.json"
+    },
+    {
       "$ref": "./quality-control/WhiteSpace.json"
     }
   ]

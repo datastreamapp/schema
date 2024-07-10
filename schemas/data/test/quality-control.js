@@ -287,6 +287,7 @@ test('Should accept MethodSpeciation when its not expected', async (t) => {
   t.is(valid, true)
 })
 
+// *** CharacteristicName-Metal-ResultAnalyticalMethodName *** //
 test('Should accept CharacteristicName-ResultAnalyticalMethodName', async (t) => {
   const valid = validate({
     CharacteristicName: 'Ammonia',
@@ -734,6 +735,48 @@ test('Should ignore Temperature range check when measure is a string', async (t)
     CharacteristicName: 'Temperature, water',
     ResultValue: 'Unknown',
     ResultUnit: 'deg C'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+})
+
+// *** ResultValue-DOY-Range *** //
+test('Should reject DOY below range (1-366)', async (t) => {
+  const valid = validate({
+    ResultUnit: 'DOY',
+    ResultValue: 0
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
+})
+test('Should reject DOY above range (1-366)', async (t) => {
+  const valid = validate({
+    ResultUnit: 'DOY',
+    ResultValue: 367
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
+})
+test('Should accept DOY within range (1-366)', async (t) => {
+  const valid = validate({
+    ResultUnit: 'DOY',
+    ResultValue: 300
+  })
+  t.is(valid, true)
+})
+test('Should ignore DOY range check when measure is not defined', async (t) => {
+  const valid = validate({
+    ResultUnit: 'DOY'
+  })
+  t.is(valid, false) // due to another QC
+  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+})
+test('Should ignore DOY range check when measure is a string', async (t) => {
+  const valid = validate({
+    ResultValue: 'Unknown',
+    ResultUnit: 'DOY'
   })
   t.is(valid, false)
   t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
