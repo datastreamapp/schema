@@ -257,6 +257,36 @@
         "en": null,
         "fr": null
       }
+    },
+    "AOAC": {
+      "name": {
+        "en": "AOAC",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "HANNA": {
+      "name": {
+        "en": "HANNA",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "HOBO": {
+      "name": {
+        "en": "HOBO",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

@@ -12857,6 +12857,26 @@
         "en": null,
         "fr": null
       }
+    },
+    "Day, ice off": {
+      "name": {
+        "en": "Day, ice off",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ice cover duration": {
+      "name": {
+        "en": "Ice cover duration",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

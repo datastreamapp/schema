@@ -517,6 +517,16 @@
         "en": null,
         "fr": null
       }
+    },
+    "Field Msr/Obs-Continuous Time Series": {
+      "name": {
+        "en": "Field Msr/Obs-Continuous Time Series",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

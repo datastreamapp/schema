@@ -57,6 +57,16 @@
         "en": null,
         "fr": null
       }
+    },
+    "Provisional": {
+      "name": {
+        "en": "Provisional",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }
