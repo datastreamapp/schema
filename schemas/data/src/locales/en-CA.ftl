@@ -99,6 +99,7 @@ qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant 
 qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
 qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data (https://datastream.org/en-ca/documentation/metal-series-data-guidance)
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
+qc-CharacteristicName-ResultAnalyticalMethodName = ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 
 qc-ResultAnalyticalMethodContext-YSI-ActivityType = The ActivityType may not be appropriate for this ResultAnalyticalMethodContext. When ResultAnalyticalMethodContext is 'YSI', a field measurement is expected (e.g., ActivityType 'Field Msr/Obs-Portable Data Logger')
@@ -114,6 +115,7 @@ qc-ResultUnit-Percent = The unit for the CharacteristicName is typically express
 # qc-ResultValue-Depth-Maximum = Depth is outside an expected range (<0).
 qc-ResultValue-DissolvedOxygen-Unit = The unit for Dissolved oxygen (DO) should not be %. For DO saturation, use CharacteristicName 'Dissolved oxygen saturation'
 qc-ResultValue-DOSaturation-Minimum = The selected CharacteristicName should not have a measure below zero
+qc-ResultValue-DOY-Range = ResultValue is outside the expected range (1 to 366) for the unit DOY (Day of Year)
 qc-ResultValue-Minimum = ResultValue should not be below zero for the selected ResultUnit
 qc-ResultValue-pH-Range = pH ResultValue is outside the accepted allowed range (0 to 14)
 qc-ResultValue-Temperature-Range = Temperature is outside an expected range (-100 to 100).
