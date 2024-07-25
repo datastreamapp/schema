@@ -51,11 +51,17 @@
     "ActivityStartTime": {
       "$ref": "./definitions.json#/columns/ActivityStartTime"
     },
+    "ActivityStartTimeZone": {
+      "$ref": "./definitions.json#/columns/ActivityStartTimeZone"
+    },
     "ActivityEndDate": {
       "$ref": "./definitions.json#/columns/ActivityEndDate"
     },
     "ActivityEndTime": {
       "$ref": "./definitions.json#/columns/ActivityEndTime"
+    },
+    "ActivityStartTimeZone": {
+      "$ref": "./definitions.json#/columns/AnalysisStartTimeZone"
     },
     "ActivityDepthHeightMeasure": {
       "$ref": "./definitions.json#/columns/ActivityDepthHeightMeasure"

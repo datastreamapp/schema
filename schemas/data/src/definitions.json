@@ -50,11 +50,17 @@
     "ActivityStartTime": {
       "$ref": "#/definitions/time-strict"
     },
+    "ActivityStartTimeZone": {
+      "$ref": "#/definitions/timezone-strict"
+    },
     "ActivityEndDate": {
       "$ref": "#/definitions/date"
     },
     "ActivityEndTime": {
       "$ref": "#/definitions/time-strict"
+    },
+    "ActivityEndTimeZone": {
+      "$ref": "#/definitions/timezone-strict"
     },
     "ActivityDepthHeightMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure"

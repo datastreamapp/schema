@@ -67,11 +67,17 @@
         "ActivityStartTime": {
           "$ref": "./definitions.json#/definitions/time-loose"
         },
+        "ActivityStartTimeZone": {
+          "$ref": "./definitions.json#/definitions/timezone-loose"
+        },
         "ActivityEndDate": {
           "$ref": "./definitions.json#/columns/ActivityEndDate"
         },
         "ActivityEndTime": {
           "$ref": "./definitions.json#/definitions/time-loose"
+        },
+        "ActivityEndTimeZone": {
+          "$ref": "./definitions.json#/definitions/timezone-loose"
         },
         "ActivityDepthHeightMeasure": {
           "$ref": "./definitions.json#/columns/ActivityDepthHeightMeasure"
