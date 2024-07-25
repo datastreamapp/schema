@@ -10,7 +10,7 @@ additionalProperties = must not have additional properties
 anyOf = must match a schema in "anyOf"
 const = must be equal to constant
 contains = must contain a valid item
-dependencies = must have {$depsCount -> 
+dependencies = must have {$depsCount ->
     [one] property
     *[other] properties
   } {$deps} when property {$property} is present
@@ -58,7 +58,7 @@ pattern = must match pattern "{$pattern}"
 patternRequired = must have property matching pattern "{$missingPattern}"
 propertyNames = property name is invalid
 required = must have required property {$missingProperty}
-type = must be {$type}{$nullable -> 
+type = must be {$type}{$nullable ->
   [true] /null
   *[default] {""}
 }
@@ -133,3 +133,4 @@ qc-MonitoringLocationCoordinate-Duplicate = Multiple MonitoringLocation coordina
 qc-MonitoringLocationName-Duplicate = Multiple MonitoringLocationNames are used with the same MonitoringLocationID
 qc-MonitoringLocationType-Duplicate = Multiple MonitoringLocationTypes are used with the same MonitoringLocationID
 qc-MonitoringLocationHorizontalCoordinateReferenceSystem-Duplicate = Multiple MonitoringLocationHorizontalCoordinateReferenceSystems are used with the same MonitoringLocationID
+qc-ActivityTypeContinuous = When there are >= 24 observations of the same type on the same day, ActivityType is expected to equal 'Field Msr/Obs-Continuous Time Series'
