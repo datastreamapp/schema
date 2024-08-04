@@ -184,7 +184,10 @@
           "ResultDetectionQuantitationLimitUnit",
           "ResultDetectionQuantitationLimitType"
         ],
-        "AnalysisStartTime": ["AnalysisStartTimeZone"]
+        "ActivityStartTimeZone": ["ActivityStartTime"],
+        "ActivityEndTimeZone": ["ActivityEndTime"],
+        "AnalysisStartTime": ["AnalysisStartTimeZone"],
+        "AnalysisStartTimeZone": ["AnalysisStartTime"]
       },
       "errorMessage": {
         "additionalProperties": "error-additional-columns"
