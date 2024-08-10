@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "SampleCollectionEquipmentName",
+    "en": "Sample Collection Equipment Name",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Equipment used to collect the sample.",
+    "fr": "L'équipement utilisé pour collecter l'échantillon."
   },
   "values": {
     "Bucket": {

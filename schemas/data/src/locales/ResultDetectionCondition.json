@@ -1,61 +1,61 @@
 {
   "name": {
-    "en": "ResultDetectionCondition",
-    "fr": null
+    "en": "Result Detection Condition",
+    "fr": "Condition de détection du résultat"
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Used to document a result for which there is no specific numeric value (Ex. Below Detection/Quantification Limit).",
+    "fr": "Utilisé pour documenter un résultat pour lequel il n'existe pas de valeur numérique spécifique (p. Ex. \"Below Detection/Quantification Limit\" - inférieur à la limite de détection/quantification)."
   },
   "values": {
     "Above Detection/Quantification Limit": {
       "name": {
         "en": "Above Detection/Quantification Limit",
-        "fr": null
+        "fr": "Supérieur à la limite de détection/quantitative"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "For lab data where results exceed defined laboratory detection/quantification/reporting limits, for example colony count and rare occasions where the result is above highest calibration curve point concentration (type of limit specified under ResultDetectionQuantitationLimitType).",
+        "fr": "Pour les données de laboratoire dont les résultats dépassent les limites de détection/quantification/déclaration définies par le laboratoire, par exemple le nombre de colonies et les rares occasions où le résultat est supérieur à la concentration la plus élevée du point de la courbe d'étalonnage (type de limite spécifié sous ResultDetectionQuantitationLimitType)."
       }
     },
     "Below Detection/Quantification Limit": {
       "name": {
         "en": "Below Detection/Quantification Limit",
-        "fr": null
+        "fr": "Inférieur à la limite de détection/quantitative"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "For lab data where results are less than defined laboratory detection/quantification/reporting limits (type of limit specified under ResultDetectionQuantitationLimitType).",
+        "fr": "Pour les données de laboratoire dont les résultats sont inférieurs aux limites de détection/quantification/déclaration définies pour le laboratoire (type de limite spécifié sous ResultDetectionQuantitationLimitType)."
       }
     },
     "Detected Not Quantified": {
       "name": {
         "en": "Detected Not Quantified",
-        "fr": null
+        "fr": "Détecté, non quantifié"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "For lab or field data where the parameter is detected but cannot be quantified, for example microbiological tests that return a presence/absence result.",
+        "fr": "Pour les données de laboratoire ou de terrain où le paramètre est détecté mais ne peut pas être quantifié, par exemple les tests microbiologiques qui donnent un résultat de présence/absence."
       }
     },
     "Not Detected": {
       "name": {
         "en": "Not Detected",
-        "fr": null
+        "fr": "Non détecté"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "For lab or field data where the parameter is not detected and where detection/quantification/reporting limits are not specified or applicable, for example microbiological tests that return a presence/absence result.",
+        "fr": "Pour les données de laboratoire ou de terrain où le paramètre n'est pas détecté et où les limites de détection/quantification/déclaration ne sont pas spécifiées ou applicables, par exemple les tests microbiologiques qui donnent un résultat de présence/absence."
       }
     },
     "Not Reported": {
       "name": {
         "en": "Not Reported",
-        "fr": null
+        "fr": "Non pris en compte"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "For instances where a lab is not able to report a result of any type (for example, where the sample was lost/destroyed or where quality assurance requirements are not met).",
+        "fr": "Pour les cas où un laboratoire n'est pas en mesure de communiquer un résultat, quel qu'il soit (par exemple, lorsque l'échantillon a été perdu/détruit ou lorsque les exigences en matière d'assurance qualité ne sont pas respectées)."
       }
     }
   }

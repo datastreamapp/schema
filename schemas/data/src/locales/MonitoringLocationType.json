@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "MonitoringLocationType",
+    "en": "Monitoring Location Type",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Type of monitoring location. Must be entered exaclty as specified in Allowed Values. (Ex. River/Stream).",
+    "fr": "Type de lieu de surveillance. Doit être saisi en anglais, exactement comme spécifié dans Valeurs autorisées, dans l'onglet Allowed Values. (p. Ex. River/Stream pour rivière/ruisseau)"
   },
   "values": {
     "Atmosphere": {

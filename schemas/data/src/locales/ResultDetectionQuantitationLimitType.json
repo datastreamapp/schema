@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "ResultDetectionQuantitationLimitType",
+    "en": "Result Detection Quantitation Limit Type",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Text describing the type of detection or quantitation limit used in the analysis of a characteristic. Required if Result Detection Condition is `Above Detection/Quantification Limit` or `Below Detection/Quantification Limit'. Not to be included if the Result Detection Condition is 'Not Detected' or 'Detected Not Quantified'.",
+    "fr": "Description du  type de limite de détection ou de quantification utilisé lors de l'analyse d'une caractéristique. Obligatoire si la condition de détection du résultat est \"Above Detection/Quantification Limit\" (supérieure à la limite de détection/quantification) ou \"Below Detection/Quantification Limit\" (inférieure à la limite de détection/quantification). Ne doit pas être inclus si la condition de détection du résultat est \"Not Detected\" (non détecté) ou \"Detected Not Quantified\" (détecté non quantifié)."
   },
   "values": {
     "Blank-adjusted method detect limit": {
@@ -14,8 +14,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Blank-adjusted method detect limit.",
+        "fr": "Limite de détection de la méthode ajustée selon un échantillon blanc."
       }
     },
     "Method Detection Level": {
@@ -24,18 +24,18 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Synonymous with Method Detection Limit (MDL), is the minimum concentration of a substance that can be measured and reported with a 99% confidence that the analyte concentration is greater than zero.",
+        "fr": "Synonyme de limite de détection de la méthode (LDM), c'est la concentration minimale d'une substance qui peut être mesurée et rapportée avec une confiance de 99 % que la concentration de l'analyte est supérieure à zéro."
       }
     },
     "Reporting Limit": {
       "name": {
         "en": "Reporting Limit",
-        "fr": null
+        "fr": "Limite de déclaration"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Reporting Limit.",
+        "fr": "Limite de déclaration."
       }
     },
     "Sample Detection Limit": {
@@ -44,8 +44,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The MDL adjusted to reflect sample-specific actions such as dilution or use of smaller aliquot sizes, or to report results on a dry-weight basis.",
+        "fr": "La LDM a été ajustée pour refléter les actions spécifiques à l'échantillon telles que la dilution ou l'utilisation de tailles d'aliquotes plus petites, ou pour rapporter les résultats sur une base de poids sec."
       }
     }
   }

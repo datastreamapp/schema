@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "MonitoringLocationHorizontalCoordinateReferenceSystem",
+    "en": "Monitoring Location Horizontal Coordinate Reference System",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "The datum that your latitude and longitude coordinates are based upon. Commonly used datum are NAD83 or NAD27. This is a setting that may be changed on most GPS units. See HorizontalReferenceDatum LOOKUP tab for full names of each.",
+    "fr": "Le système de référence sur lequel vos coordonnées de latitude et de longitude sont basées. Les systèmes de référence les plus couramment utilisés sont le NAD83 ou le NAD27. Il s'agit d'un paramètre qui peut être modifié sur la plupart des appareils GPS. Voir l'onglet HorizontalReferenceDatum LOOKUP pour les noms complets de chacun."
   },
   "values": {
     "AMSMA": {

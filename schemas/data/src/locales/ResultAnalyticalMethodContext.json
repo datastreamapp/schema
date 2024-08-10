@@ -4,8 +4,8 @@
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Source of Analytic Method ID. Required if Analytic Method ID is populated. (Ex. VMV).",
+    "fr": "Source de l'identifiant de la méthode analytique (ResultAnalyticalMethodID). Requis si le numéro de la méthode d'analyse est saisi. (p.ex. VMV)."
   },
   "values": {
     "APHA": {

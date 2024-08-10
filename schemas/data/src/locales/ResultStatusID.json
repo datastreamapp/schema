@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "ResultStatusID",
+    "en": "Result Status Identifier",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Indicates acceptability of result with respect to QA/QC.",
+    "fr": "Indique l'acceptabilité du résultat par rapport à l'AQ/CQ."
   },
   "values": {
     "Accepted": {

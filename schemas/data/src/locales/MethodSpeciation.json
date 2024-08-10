@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "MethodSpeciation",
+    "en": "Method Speciation",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Identifies the chemical speciation, where applicable (Ex. Ammonium may be measured as N or NH4).",
+    "fr": "Identifie la spéciation chimique, le cas échéant (par exemple, l'ammonium peut être mesuré comme N ou NH4)."
   },
   "values": {
     "as As": {

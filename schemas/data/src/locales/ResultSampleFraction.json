@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "ResultSampleFraction",
-    "fr": null
+    "en": "Result Sample Fraction",
+    "fr": "Fraction d’échantillon"
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Describes the portion of the characteristic being analyzed. Required for certain characteristics, see CharacteristicName LOOKUP tab. Sample Fraction will usually be Total or Dissolved.",
+    "fr": "Décrit la partie de la caractéristique qui est analysée. Requis pour certaines caractéristiques, voir l'onglet CharacteristicName LOOKUP. La fraction de l'échantillon sera généralement totale (Total) ou dissoute (Dissolved)."
   },
   "values": {
     "Acid Soluble": {
@@ -14,8 +14,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which becomes dissolved within the sample following treatment with an appropriate acid.",
+        "fr": "La partie de l'analyte qui se dissout après traitement de l'échantillon avec un acide approprié."
       }
     },
     "Bioavailable": {
@@ -24,8 +24,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The extent to which a substance is / becomes available or absorbed by a specific tissue or organ.",
+        "fr": "Indication sur la mesure dans laquelle une substance est / devient disponible ou absorbée par un tissu ou un organe spécifique."
       }
     },
     "Comb Available": {
@@ -34,34 +34,34 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The concentration of an analyte or other analyte derivatives in a water which is combined with other derivatives yet is still available to oxidize organic matter.",
+        "fr": "Concentration d'un analyte ou d'autres dérivés de l'analyte dans l'eau qui est combiné avec d'autres dérivés, mais qui reste disponible pour oxyder la matière organique."
       }
     },
     "Dissolved": {
       "name": {
         "en": "Dissolved",
-        "fr": null
+        "fr": "Dissous"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte found in the liquid medium.  Cannot be removed by filtration.",
+        "fr": "La fraction de l'analyte qui se trouve dans le milieu liquide. Ne peut être éliminée par filtration."
       }
     },
     "Extractable": {
       "name": {
         "en": "Extractable",
-        "fr": null
+        "fr": "Extractible"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "An analyte that can be removed from a mixture using a specific method or technique.",
+        "fr": "Un analyte qui peut être retiré d'un mélange en utilisant une méthode ou une technique spécifique."
       }
     },
     "Extractable, CaCO3-bound": {
       "name": {
         "en": "Extractable, CaCO3-bound",
-        "fr": null
+        "fr": "Extractibles, liée au CaCO3"
       },
       "description": {
         "en": null,
@@ -71,7 +71,7 @@
     "Extractable, exchangeable": {
       "name": {
         "en": "Extractable, exchangeable",
-        "fr": null
+        "fr": "Extractible, échangeable"
       },
       "description": {
         "en": null,
@@ -81,7 +81,7 @@
     "Extractable, organic-bnd": {
       "name": {
         "en": "Extractable, organic-bnd",
-        "fr": null
+        "fr": "Extractibles, lies à l’organique"
       },
       "description": {
         "en": null,
@@ -91,7 +91,7 @@
     "Extractable, other": {
       "name": {
         "en": "Extractable, other",
-        "fr": null
+        "fr": "Extractible, autre"
       },
       "description": {
         "en": null,
@@ -101,7 +101,7 @@
     "Extractable, oxide-bound": {
       "name": {
         "en": "Extractable, oxide-bound",
-        "fr": null
+        "fr": "Extractibles, liée à l’oxyde"
       },
       "description": {
         "en": null,
@@ -111,7 +111,7 @@
     "Extractable, residual": {
       "name": {
         "en": "Extractable, residual",
-        "fr": null
+        "fr": "Extractible, résiduelle"
       },
       "description": {
         "en": null,
@@ -134,38 +134,38 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which is in or absorbed to material which passes through the filter during sample filtration.",
+        "fr": "La partie de l'analyte qui est dans ou absorbée par le matériau qui passe à travers le filtre pendant la filtration de l'échantillon."
       }
     },
     "Filtered": {
       "name": {
         "en": "Filtered",
-        "fr": null
+        "fr": "Filtré"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Location of filtration is unknown.",
+        "fr": "L'emplacement de la filtration est inconnu."
       }
     },
     "Filtered, field": {
       "name": {
         "en": "Filtered, field",
-        "fr": null
+        "fr": "Filtré, terrain"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Aqueous portion of sample, filtered in field.",
+        "fr": "Partie aqueuse de l'échantillon, filtrée sur le terrain."
       }
     },
     "Filtered, lab": {
       "name": {
         "en": "Filtered, lab",
-        "fr": null
+        "fr": "Filtré, lab"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Aqueous portion of sample, filtered in lab.",
+        "fr": "Partie aqueuse de l'échantillon, filtrée au laboratoire."
       }
     },
     "Fixed": {
@@ -184,8 +184,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The concentration of residual substance present as dissolved gas, and not combined with any substance or in other less readily available form.",
+        "fr": "La concentration de la substance résiduelle présente sous forme de gaz dissous, et non combinée à une autre substance ou sous une autre forme moins facilement disponible."
       }
     },
     "Inorganic": {
@@ -194,18 +194,18 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Inorganic content of sample.",
+        "fr": "Teneur en substances inorganiques de l'échantillon."
       }
     },
     "Non-Filterable (Particle)": {
       "name": {
         "en": "Non-Filterable (Particle)",
-        "fr": null
+        "fr": "Non filtrable (Particule)"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Particulate, did not pass through filter.",
+        "fr": "Fraction particulaire n'ayant pas traversé le filtre."
       }
     },
     "non-linear function": {
@@ -224,8 +224,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which is in or absorbed to particles remaining in suspension in the sample container after a settling process.",
+        "fr": "La partie de l'analyte qui est dans ou absorbée par les particules restant en suspension dans le récipient de l'échantillon après un processus de décantation."
       }
     },
     "Non-volatile": {
@@ -234,8 +234,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which is in a liquid or solid state under normal temperature and pressure.",
+        "fr": "La partie de l'analyte qui se trouve à l'état liquide ou solide à température et pression normales."
       }
     },
     "Organic": {
@@ -244,18 +244,18 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Organic content of a sample.",
+        "fr": "Teneur en substances organiques d'un échantillon."
       }
     },
     "Pot. Dissolved": {
       "name": {
         "en": "Pot. Dissolved",
-        "fr": null
+        "fr": "Pot. Dissous"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Potentially Dissolved is the portion of a constituent measured from the filtrate of a water and suspended sediment sample that was treated with nitric acid prior to sample filtration.",
+        "fr": "Indique la portion d'un constituant potentiellement disssous, qui est mesurée à partir du filtrat d'un échantillon d'eau et de sédiments en suspension après traitement à l'acide nitrique, avant la filtration de l'échantillon."
       }
     },
     "Settleable": {
@@ -264,8 +264,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which is found in or absorbed to that part of the sample which has settled (fallen out of suspension) to the bottom of the sample container.",
+        "fr": "La fraction d'un analyte qui se trouve dans ou est absorbée par la partie de l'échantillon qui s'est déposée (est tombée hors suspension) au fond du récipient de l'échantillon."
       }
     },
     "Sieved": {
@@ -284,28 +284,28 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte found in the liquid layer above a precipitate produced from the sample.",
+        "fr": "La partie de l'analyte qui se trouve dans la couche liquide au-dessus d'un précipité produit à partir de l'échantillon."
       }
     },
     "Suspended": {
       "name": {
         "en": "Suspended",
-        "fr": null
+        "fr": "En suspension"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which is suspended in the sampled medium, either as, or adsorbed to, particles which are more or less uniformly dispersed within the medium.",
+        "fr": "La partie de l'analyte qui est en suspension dans le milieu échantillonné, soit sous forme de particules, soit adsorbée à des particules qui sont plus ou moins uniformément dispersées dans le milieu."
       }
     },
     "Total": {
       "name": {
         "en": "Total",
-        "fr": null
+        "fr": "Totale"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The total of all fractions of the analyte.",
+        "fr": "Le total de toutes les fractions de l'analyte."
       }
     },
     "Total Recoverable": {
@@ -314,8 +314,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The analyte concentration available for analysis in an unfiltered sample following solubilization.",
+        "fr": "La concentration de l'analyte disponible pour l'analyse dans un échantillon non filtré après solubilisation."
       }
     },
     "Total Residual": {
@@ -324,18 +324,18 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The amount of available analyte remaining after a given contact time. The sum of the combined available residual analyte and the free available residual analyte.",
+        "fr": "La quantité d'analyte disponible restant après une période de temps de contact donné. La somme de l'analyte résiduel disponible et de l'analyte résiduel libre."
       }
     },
     "Unfiltered": {
       "name": {
         "en": "Unfiltered",
-        "fr": null
+        "fr": "Non filtré"
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Aqueous and particulate fraction.",
+        "fr": "Fraction aqueuse et particulaire."
       }
     },
     "Unspecified": {
@@ -354,8 +354,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which exists in a gaseous state and that under ordinary conditions is liquid or solid.",
+        "fr": "La partie de l'analyte qui existe à l'état gazeux et qui, dans des conditions ordinaires, est liquide ou solide."
       }
     },
     "Volatile": {
@@ -364,8 +364,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "That portion of the analyte which evaporates readily at normal temperature and pressure.",
+        "fr": "La partie de l'analyte qui s'évapore facilement à température et pression normales."
       }
     }
   }

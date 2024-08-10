@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "ActivityMediaName",
+    "en": "Activity Media Name",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Medium in which sample or measurement was taken (ex: Surface Water, Sediment, etc.).",
+    "fr": "Milieu dans lequel l'échantillon ou la mesure a été prise (ex : Surface Water (eau de surface), Sediment (sédiments), etc.)"
   },
   "values": {
     "Ambient Air": {

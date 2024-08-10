@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "ResultValueType",
+    "en": "Result Value Type",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Qualifies process used in the determination of result value (Ex. Actual, Estimated, Calculated).",
+    "fr": "Qualifie le processus utilisé pour déterminer la valeur du résultat (p. Ex. réel (Actual), estimé (Estimated), calculé (Calculated))."
   },
   "values": {
     "Actual": {
@@ -14,8 +14,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "ResultValue obtained through the specified analytical or field method, not modified.",
+        "fr": "La valeur du résultat obtenue par la méthode d'analyse ou de terrain spécifiée, non modifiée."
       }
     },
     "Blank Corrected": {
@@ -24,8 +24,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "ResultValue was blank corrected using the recommended procedure detailed in the analytical method.",
+        "fr": "La valeur du résultat a été corrigée selon l'échantillon blanc en utilisant la procédure recommandée détaillée dans la méthode d'analyse."
       }
     },
     "Calculated": {
@@ -34,8 +34,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "ResultValue was determined by computation or mathematical calculation, evaluating, and reasoning.",
+        "fr": "La valeur du résultat a été déterminée par calcul ou calcul mathématique, évaluation et raisonnement."
       }
     },
     "Control Adjusted": {
@@ -44,8 +44,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "ResultValue has been adjusted according to requirements that are determined from the control test data",
+        "fr": "La valeur du résultat a été ajustée en fonction des exigences déterminées à partir des données du test de contrôle."
       }
     },
     "Estimated": {
@@ -54,8 +54,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Approximation, educated guess, or projection of a ResultValue based on experience and/or information available at the time May include model results, especially where they are relatively less accurate.",
+        "fr": "Approximation, supposition éclairée ou projection d'une valeur de résultat basée sur l'expérience et/ou les informations disponibles. Peut inclure les résultats de modèles, en particulier lorsqu'ils sont relativement moins précis."
       }
     }
   }

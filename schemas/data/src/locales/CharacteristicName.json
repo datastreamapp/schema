@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "CharacteristicName",
+    "en": "Characteristic Name",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Identifies what is being measured (Ex. Temperature, pH) in a field or lab result. The name used must have a match in the Allowed Values list.",
+    "fr": "Identifie ce qui est mesuré (p. Ex. température, pH) sur le terrain ou en laboratoire. Le nom utilisé doit avoir une correspondance dans la liste des valeurs autorisées --  voir onglet \"Allowed Values\"."
   },
   "values": {
     ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid": {
@@ -1921,7 +1921,7 @@
     "Aluminum": {
       "name": {
         "en": "Aluminum",
-        "fr": null
+        "fr": "Aluminium"
       },
       "description": {
         "en": null,
@@ -1981,7 +1981,7 @@
     "Ammonia": {
       "name": {
         "en": "Ammonia",
-        "fr": null
+        "fr": "Ammoniac"
       },
       "description": {
         "en": null,
@@ -1991,7 +1991,7 @@
     "Ammonia and ammonium": {
       "name": {
         "en": "Ammonia and ammonium",
-        "fr": null
+        "fr": "Ammoniac et ammonium"
       },
       "description": {
         "en": null,
@@ -2001,7 +2001,7 @@
     "Ammonium": {
       "name": {
         "en": "Ammonium",
-        "fr": null
+        "fr": "Ammonium"
       },
       "description": {
         "en": null,
@@ -2051,7 +2051,7 @@
     "Antimony": {
       "name": {
         "en": "Antimony",
-        "fr": null
+        "fr": "Antimoine"
       },
       "description": {
         "en": null,
@@ -2191,7 +2191,7 @@
     "Arsenic": {
       "name": {
         "en": "Arsenic",
-        "fr": null
+        "fr": "Arsenic"
       },
       "description": {
         "en": null,
@@ -2341,7 +2341,7 @@
     "Barium": {
       "name": {
         "en": "Barium",
-        "fr": null
+        "fr": "Baryum"
       },
       "description": {
         "en": null,
@@ -2961,7 +2961,7 @@
     "Beryllium": {
       "name": {
         "en": "Beryllium",
-        "fr": null
+        "fr": "Béryllium"
       },
       "description": {
         "en": null,
@@ -3141,7 +3141,7 @@
     "Boron": {
       "name": {
         "en": "Boron",
-        "fr": null
+        "fr": "Bore"
       },
       "description": {
         "en": null,
@@ -3721,7 +3721,7 @@
     "Cadmium": {
       "name": {
         "en": "Cadmium",
-        "fr": null
+        "fr": "Cadmium"
       },
       "description": {
         "en": null,
@@ -3751,7 +3751,7 @@
     "Calcium": {
       "name": {
         "en": "Calcium",
-        "fr": null
+        "fr": "Calcium"
       },
       "description": {
         "en": null,
@@ -3871,7 +3871,7 @@
     "Carbon-13": {
       "name": {
         "en": "Carbon-13",
-        "fr": null
+        "fr": "Carbone-13"
       },
       "description": {
         "en": null,
@@ -3881,7 +3881,7 @@
     "Carbon-13/Carbon-12 ratio": {
       "name": {
         "en": "Carbon-13/Carbon-12 ratio",
-        "fr": null
+        "fr": "Ratio carbone 13/carbone 12"
       },
       "description": {
         "en": null,
@@ -3991,7 +3991,7 @@
     "Cerium": {
       "name": {
         "en": "Cerium",
-        "fr": null
+        "fr": "Cérium"
       },
       "description": {
         "en": null,
@@ -4001,7 +4001,7 @@
     "Cesium": {
       "name": {
         "en": "Cesium",
-        "fr": null
+        "fr": "Césium"
       },
       "description": {
         "en": null,
@@ -4441,7 +4441,7 @@
     "Chromium": {
       "name": {
         "en": "Chromium",
-        "fr": null
+        "fr": "Chrome"
       },
       "description": {
         "en": null,
@@ -4681,7 +4681,7 @@
     "Cobalt": {
       "name": {
         "en": "Cobalt",
-        "fr": null
+        "fr": "Cobalt"
       },
       "description": {
         "en": null,
@@ -4771,7 +4771,7 @@
     "Copper": {
       "name": {
         "en": "Copper",
-        "fr": null
+        "fr": "Cuivre"
       },
       "description": {
         "en": null,
@@ -5051,7 +5051,7 @@
     "delta carbon-13/carbon-12": {
       "name": {
         "en": "delta carbon-13/carbon-12",
-        "fr": null
+        "fr": "delta carbone -13/carbone -12"
       },
       "description": {
         "en": null,
@@ -5061,7 +5061,7 @@
     "Delta nitrogen-15/nitrogen-14": {
       "name": {
         "en": "Delta nitrogen-15/nitrogen-14",
-        "fr": null
+        "fr": "Delta Azote -15/ Azote -14"
       },
       "description": {
         "en": null,
@@ -5071,7 +5071,7 @@
     "Delta oxygen-17/oxygen-16": {
       "name": {
         "en": "Delta oxygen-17/oxygen-16",
-        "fr": null
+        "fr": "Delta oxygène -17/oxygène -16"
       },
       "description": {
         "en": null,
@@ -5081,7 +5081,7 @@
     "Delta oxygen-18/oxygen-16": {
       "name": {
         "en": "Delta oxygen-18/oxygen-16",
-        "fr": null
+        "fr": "Delta oxygène -18/ oxygène -16"
       },
       "description": {
         "en": null,
@@ -5091,7 +5091,7 @@
     "Delta sulfur-34/sulfur-32": {
       "name": {
         "en": "Delta sulfur-34/sulfur-32",
-        "fr": null
+        "fr": "Delta soufre -34/ soufre -32"
       },
       "description": {
         "en": null,
@@ -5191,7 +5191,7 @@
     "Deuterium": {
       "name": {
         "en": "Deuterium",
-        "fr": null
+        "fr": "Deutérium"
       },
       "description": {
         "en": null,
@@ -5201,7 +5201,7 @@
     "Deuterium, delta": {
       "name": {
         "en": "Deuterium, delta",
-        "fr": null
+        "fr": "Deutérium, delta"
       },
       "description": {
         "en": null,
@@ -5211,7 +5211,7 @@
     "Deuterium/Hydrogen ratio": {
       "name": {
         "en": "Deuterium/Hydrogen ratio",
-        "fr": null
+        "fr": "Ratio deutérium/hydrogène"
       },
       "description": {
         "en": null,
@@ -6571,7 +6571,7 @@
     "Gallium": {
       "name": {
         "en": "Gallium",
-        "fr": null
+        "fr": "Gallium"
       },
       "description": {
         "en": null,
@@ -6601,7 +6601,7 @@
     "Germanium": {
       "name": {
         "en": "Germanium",
-        "fr": null
+        "fr": "Germanium"
       },
       "description": {
         "en": null,
@@ -6651,7 +6651,7 @@
     "Gold": {
       "name": {
         "en": "Gold",
-        "fr": null
+        "fr": "Or"
       },
       "description": {
         "en": null,
@@ -7211,7 +7211,7 @@
     "Indium": {
       "name": {
         "en": "Indium",
-        "fr": null
+        "fr": "Indium"
       },
       "description": {
         "en": null,
@@ -7241,7 +7241,7 @@
     "Inorganic nitrogen (ammonia, nitrate and nitrite)": {
       "name": {
         "en": "Inorganic nitrogen (ammonia, nitrate and nitrite)",
-        "fr": null
+        "fr": "Azote inorganique (ammoniac, nitrate et nitrite)"
       },
       "description": {
         "en": null,
@@ -7251,7 +7251,7 @@
     "Inorganic nitrogen (nitrate and nitrite)": {
       "name": {
         "en": "Inorganic nitrogen (nitrate and nitrite)",
-        "fr": null
+        "fr": "Azote inorganique (nitrate et nitrite)"
       },
       "description": {
         "en": null,
@@ -7331,7 +7331,7 @@
     "Iron": {
       "name": {
         "en": "Iron",
-        "fr": null
+        "fr": "Fer"
       },
       "description": {
         "en": null,
@@ -7451,7 +7451,7 @@
     "Kjeldahl nitrogen": {
       "name": {
         "en": "Kjeldahl nitrogen",
-        "fr": null
+        "fr": "Azote Kjeldahl"
       },
       "description": {
         "en": null,
@@ -7471,7 +7471,7 @@
     "Lanthanum": {
       "name": {
         "en": "Lanthanum",
-        "fr": null
+        "fr": "Lanthane"
       },
       "description": {
         "en": null,
@@ -7491,7 +7491,7 @@
     "Lead": {
       "name": {
         "en": "Lead",
-        "fr": null
+        "fr": "Plomb"
       },
       "description": {
         "en": null,
@@ -7601,7 +7601,7 @@
     "Lithium": {
       "name": {
         "en": "Lithium",
-        "fr": null
+        "fr": "Lithium"
       },
       "description": {
         "en": null,
@@ -7611,7 +7611,7 @@
     "Lithium-7": {
       "name": {
         "en": "Lithium-7",
-        "fr": null
+        "fr": "Lithium-7"
       },
       "description": {
         "en": null,
@@ -7701,7 +7701,7 @@
     "Magnesium": {
       "name": {
         "en": "Magnesium",
-        "fr": null
+        "fr": "Magnésium"
       },
       "description": {
         "en": null,
@@ -7771,7 +7771,7 @@
     "Manganese": {
       "name": {
         "en": "Manganese",
-        "fr": null
+        "fr": "Manganèse"
       },
       "description": {
         "en": null,
@@ -7831,7 +7831,7 @@
     "Mercury": {
       "name": {
         "en": "Mercury",
-        "fr": null
+        "fr": "Mercure"
       },
       "description": {
         "en": null,
@@ -8361,7 +8361,7 @@
     "Molybdenum": {
       "name": {
         "en": "Molybdenum",
-        "fr": null
+        "fr": "Molybdène"
       },
       "description": {
         "en": null,
@@ -8701,7 +8701,7 @@
     "Niobium": {
       "name": {
         "en": "Niobium",
-        "fr": null
+        "fr": "Niobium"
       },
       "description": {
         "en": null,
@@ -8731,7 +8731,7 @@
     "Nitrate": {
       "name": {
         "en": "Nitrate",
-        "fr": null
+        "fr": "Nitrate"
       },
       "description": {
         "en": null,
@@ -8751,7 +8751,7 @@
     "Nitrite": {
       "name": {
         "en": "Nitrite",
-        "fr": null
+        "fr": "Nitrite"
       },
       "description": {
         "en": null,
@@ -8791,7 +8791,7 @@
     "Nitrogen-15": {
       "name": {
         "en": "Nitrogen-15",
-        "fr": null
+        "fr": "Azote-15"
       },
       "description": {
         "en": null,
@@ -8801,7 +8801,7 @@
     "Nitrogen-15/Nitrogen-14 ratio": {
       "name": {
         "en": "Nitrogen-15/Nitrogen-14 ratio",
-        "fr": null
+        "fr": "Ratio azote-15/azote-14"
       },
       "description": {
         "en": null,
@@ -9101,7 +9101,7 @@
     "Organic Nitrogen": {
       "name": {
         "en": "Organic Nitrogen",
-        "fr": null
+        "fr": "Azote organique"
       },
       "description": {
         "en": null,
@@ -9111,7 +9111,7 @@
     "Organic phosphorus": {
       "name": {
         "en": "Organic phosphorus",
-        "fr": null
+        "fr": "Phosphore organique"
       },
       "description": {
         "en": null,
@@ -9141,7 +9141,7 @@
     "Orthophosphate": {
       "name": {
         "en": "Orthophosphate",
-        "fr": null
+        "fr": "Orthophosphate"
       },
       "description": {
         "en": null,
@@ -9241,7 +9241,7 @@
     "Oxygen-18": {
       "name": {
         "en": "Oxygen-18",
-        "fr": null
+        "fr": "Oxygène-18"
       },
       "description": {
         "en": null,
@@ -9251,7 +9251,7 @@
     "Oxygen-18/Oxygen-16 ratio": {
       "name": {
         "en": "Oxygen-18/Oxygen-16 ratio",
-        "fr": null
+        "fr": "Ratio oxygène-18/oxygène-16"
       },
       "description": {
         "en": null,
@@ -10101,7 +10101,7 @@
     "Platinum": {
       "name": {
         "en": "Platinum",
-        "fr": null
+        "fr": "Platine"
       },
       "description": {
         "en": null,
@@ -10151,7 +10151,7 @@
     "Potassium": {
       "name": {
         "en": "Potassium",
-        "fr": null
+        "fr": "Potassium"
       },
       "description": {
         "en": null,
@@ -10521,7 +10521,7 @@
     "Radium-226": {
       "name": {
         "en": "Radium-226",
-        "fr": null
+        "fr": "Radium-226"
       },
       "description": {
         "en": null,
@@ -10531,7 +10531,7 @@
     "Radium-228": {
       "name": {
         "en": "Radium-228",
-        "fr": null
+        "fr": "Radium-228"
       },
       "description": {
         "en": null,
@@ -10541,7 +10541,7 @@
     "Radon-222": {
       "name": {
         "en": "Radon-222",
-        "fr": null
+        "fr": "Radon-222"
       },
       "description": {
         "en": null,
@@ -10631,7 +10631,7 @@
     "Ruthenium": {
       "name": {
         "en": "Ruthenium",
-        "fr": null
+        "fr": "Ruthénium"
       },
       "description": {
         "en": null,
@@ -10721,7 +10721,7 @@
     "Scandium": {
       "name": {
         "en": "Scandium",
-        "fr": null
+        "fr": "Scandium"
       },
       "description": {
         "en": null,
@@ -10761,7 +10761,7 @@
     "Selenium": {
       "name": {
         "en": "Selenium",
-        "fr": null
+        "fr": "Sélénium"
       },
       "description": {
         "en": null,
@@ -10881,7 +10881,7 @@
     "Silicon": {
       "name": {
         "en": "Silicon",
-        "fr": null
+        "fr": "Silicium"
       },
       "description": {
         "en": null,
@@ -10901,7 +10901,7 @@
     "Silver": {
       "name": {
         "en": "Silver",
-        "fr": null
+        "fr": "Argent"
       },
       "description": {
         "en": null,
@@ -10961,7 +10961,7 @@
     "Sodium": {
       "name": {
         "en": "Sodium",
-        "fr": null
+        "fr": "Sodium"
       },
       "description": {
         "en": null,
@@ -11001,7 +11001,7 @@
     "Soluble Reactive Phosphorus (SRP)": {
       "name": {
         "en": "Soluble Reactive Phosphorus (SRP)",
-        "fr": null
+        "fr": "Phosphore réactif soluble (SRP)"
       },
       "description": {
         "en": null,
@@ -11171,7 +11171,7 @@
     "Strontium": {
       "name": {
         "en": "Strontium",
-        "fr": null
+        "fr": "Strontium"
       },
       "description": {
         "en": null,
@@ -11191,7 +11191,7 @@
     "Strontium-87/Strontium-86, ratio": {
       "name": {
         "en": "Strontium-87/Strontium-86, ratio",
-        "fr": null
+        "fr": "Ratio strontium-87/strontium-86"
       },
       "description": {
         "en": null,
@@ -11471,7 +11471,7 @@
     "Sulfur-34": {
       "name": {
         "en": "Sulfur-34",
-        "fr": null
+        "fr": "Soufre-34"
       },
       "description": {
         "en": null,
@@ -11481,7 +11481,7 @@
     "Sulfur-34/Sulfur-32 ratio": {
       "name": {
         "en": "Sulfur-34/Sulfur-32 ratio",
-        "fr": null
+        "fr": "Ratio soufre-34/soufre-32"
       },
       "description": {
         "en": null,
@@ -11611,7 +11611,7 @@
     "Tellurium": {
       "name": {
         "en": "Tellurium",
-        "fr": null
+        "fr": "Tellure"
       },
       "description": {
         "en": null,
@@ -11831,7 +11831,7 @@
     "Thallium": {
       "name": {
         "en": "Thallium",
-        "fr": null
+        "fr": "Thallium"
       },
       "description": {
         "en": null,
@@ -11941,7 +11941,7 @@
     "Thorium": {
       "name": {
         "en": "Thorium",
-        "fr": null
+        "fr": "Thorium"
       },
       "description": {
         "en": null,
@@ -11961,7 +11961,7 @@
     "Tin": {
       "name": {
         "en": "Tin",
-        "fr": null
+        "fr": "Étain"
       },
       "description": {
         "en": null,
@@ -11981,7 +11981,7 @@
     "Titanium": {
       "name": {
         "en": "Titanium",
-        "fr": null
+        "fr": "Titane"
       },
       "description": {
         "en": null,
@@ -12091,7 +12091,7 @@
     "Total Nitrogen, mixed forms": {
       "name": {
         "en": "Total Nitrogen, mixed forms",
-        "fr": null
+        "fr": "Azote total, formes mixtes"
       },
       "description": {
         "en": null,
@@ -12131,7 +12131,7 @@
     "Total Phosphorus, mixed forms": {
       "name": {
         "en": "Total Phosphorus, mixed forms",
-        "fr": null
+        "fr": "Phosphore total, formes mixtes"
       },
       "description": {
         "en": null,
@@ -12551,7 +12551,7 @@
     "Tritium": {
       "name": {
         "en": "Tritium",
-        "fr": null
+        "fr": "Tritium"
       },
       "description": {
         "en": null,
@@ -12571,7 +12571,7 @@
     "Tungsten": {
       "name": {
         "en": "Tungsten",
-        "fr": null
+        "fr": "Tungsten"
       },
       "description": {
         "en": null,
@@ -12591,7 +12591,7 @@
     "Uranium": {
       "name": {
         "en": "Uranium",
-        "fr": null
+        "fr": "Uranium"
       },
       "description": {
         "en": null,
@@ -12601,7 +12601,7 @@
     "Uranium-234/Uranium-238 ratio": {
       "name": {
         "en": "Uranium-234/Uranium-238 ratio",
-        "fr": null
+        "fr": "Ratio uranium 234/uranium 238"
       },
       "description": {
         "en": null,
@@ -12611,7 +12611,7 @@
     "Uranium-238": {
       "name": {
         "en": "Uranium-238",
-        "fr": null
+        "fr": "Uranium-238"
       },
       "description": {
         "en": null,
@@ -12631,7 +12631,7 @@
     "Vanadium": {
       "name": {
         "en": "Vanadium",
-        "fr": null
+        "fr": "Vanadium"
       },
       "description": {
         "en": null,
@@ -12811,7 +12811,7 @@
     "Yttrium": {
       "name": {
         "en": "Yttrium",
-        "fr": null
+        "fr": "Yttrium"
       },
       "description": {
         "en": null,
@@ -12821,7 +12821,7 @@
     "Zinc": {
       "name": {
         "en": "Zinc",
-        "fr": null
+        "fr": "Zinc"
       },
       "description": {
         "en": null,
@@ -12841,7 +12841,7 @@
     "Zirconium": {
       "name": {
         "en": "Zirconium",
-        "fr": null
+        "fr": "Zirconium"
       },
       "description": {
         "en": null,
