@@ -61,7 +61,7 @@
       "$ref": "./definitions.json#/columns/ActivityEndTime"
     },
     "ActivityEndTimeZone": {
-      "$ref": "./definitions.json#/columns/AnalysisEndTimeZone"
+      "$ref": "./definitions.json#/columns/ActivityEndTimeZone"
     },
     "ActivityDepthHeightMeasure": {
       "$ref": "./definitions.json#/columns/ActivityDepthHeightMeasure"

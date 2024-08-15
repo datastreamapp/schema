@@ -82,6 +82,7 @@ export const retire = (column, list) => {
       "ActivityDepthHeightUnit",
       "ResultUnit",
       "ResultDetectionQuantitationLimitUnit",
+      "MeasurementUnit"
     ].includes(column)
   )
     return [[], list];

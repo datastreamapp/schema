@@ -14,7 +14,7 @@ let CharacteristicWQXGroupsLocal = await readFile(
 ).then((res) => JSON.parse(res))
 
 let CharacteristicWQXGroupMeasureUnitLocal = await readFile(
-  join(__dirname, `../lookup/CharacteristicWQXGroup-MeasureUnit.json`)
+  join(__dirname, `../lookup/CharacteristicWQXGroup-MeasurementUnit.json`)
 ).then((res) => JSON.parse(res))
 
 // Update retired values
@@ -74,8 +74,8 @@ for (const characteristicName of characteristicNames) {
 // Export - Deprecate when using nodejs18
 for (const path of [
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
-  join(__dirname, `/../lookup/CharacteristicName-MeasureUnit.json`),
-  join(__dirname, `/../lookup/CharacteristicWQXGroup-MeasureUnit.json`)
+  join(__dirname, `/../lookup/CharacteristicName-MeasurementUnit.json`),
+  join(__dirname, `/../lookup/CharacteristicWQXGroup-MeasurementUnit.json`)
 ]) {
   const json = await readFile(path).then((res) => JSON.parse(res))
   await writeFile(
