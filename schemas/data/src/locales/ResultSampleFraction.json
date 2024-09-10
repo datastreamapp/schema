@@ -367,6 +367,16 @@
         "en": "That portion of the analyte which evaporates readily at normal temperature and pressure.",
         "fr": "La partie de l'analyte qui s'évapore facilement à température et pression normales."
       }
+    },
+    "Field": {
+      "name": {
+        "en": "Field",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }
