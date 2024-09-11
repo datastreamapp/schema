@@ -227,6 +227,9 @@
       "$ref": "./quality-control/ResultUnit-NoValue.json"
     },
     {
+      "$ref": "./quality-control/ResultUnit-Turbidity.json"
+    },
+    {
       "$ref": "./quality-control/ResultValue-DOSaturation-Minimum.json"
     },
     {

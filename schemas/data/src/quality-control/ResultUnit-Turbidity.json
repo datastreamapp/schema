@@ -1,0 +1,22 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-Turbidity.json",
+  "title": "ResultUnit-Turbidity",
+  "description": "",
+  "errorMessage": "qc-ResultUnit-Turbidity",
+  "if": {
+    "properties": {
+      "ResultUnit": {
+        "enum": ["FNU", "FTU", "JTU", "NTU"]
+      }
+    },
+    "required": ["ResultUnit"]
+  },
+  "then": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": ["Turbidity"]
+      }
+    },
+    "required": ["CharacteristicName"]
+  }
+}
