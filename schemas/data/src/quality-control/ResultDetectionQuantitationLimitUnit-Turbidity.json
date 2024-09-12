@@ -1,0 +1,22 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultDetectionQuantitationLimitUnit-Turbidity.json",
+  "title": "ResultDetectionQuantitationLimitUnit-Turbidity",
+  "description": "",
+  "errorMessage": "qc-ResultDetectionQuantitationLimitUnit-Turbidity",
+  "if": {
+    "properties": {
+      "ResultDetectionQuantitationLimitUnit": {
+        "enum": ["FNU", "FTU", "JTU", "NTU"]
+      }
+    },
+    "required": ["ResultDetectionQuantitationLimitUnit"]
+  },
+  "then": {
+    "properties": {
+      "CharacteristicName": {
+        "enum": ["Turbidity"]
+      }
+    },
+    "required": ["CharacteristicName"]
+  }
+}
