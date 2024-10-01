@@ -9,7 +9,7 @@
       "additionalProperties": true,
       "properties": {
         "ResultValue": {
-          "$ref": "../definitions.json#/columns/ResultValue"
+          "$ref": "../definitions.json#/primary/ResultValue"
         },
         "ResultDetectionCondition": false
       },
@@ -22,7 +22,7 @@
       "properties": {
         "ResultValue": false,
         "ResultDetectionCondition": {
-          "$ref": "../definitions.json#/columns/ResultDetectionCondition"
+          "$ref": "../definitions.json#/primary/ResultDetectionCondition"
         }
       },
       "maxProperties": 42,
