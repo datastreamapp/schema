@@ -8,9 +8,7 @@
       "type": "object",
       "additionalProperties": true,
       "properties": {
-        "ResultValue": {
-          "$ref": "../definitions.json#/primary/ResultValue"
-        },
+        "ResultValue": true,
         "ResultDetectionCondition": false
       },
       "maxProperties": 42,
@@ -21,9 +19,7 @@
       "additionalProperties": true,
       "properties": {
         "ResultValue": false,
-        "ResultDetectionCondition": {
-          "$ref": "../definitions.json#/primary/ResultDetectionCondition"
-        }
+        "ResultDetectionCondition": true
       },
       "maxProperties": 42,
       "required": ["ResultDetectionCondition"]

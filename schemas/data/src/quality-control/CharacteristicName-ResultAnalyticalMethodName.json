@@ -7,16 +7,15 @@
   "if": {
     "properties": {
       "CharacteristicName": {
-        "enum": [
-          "Day, ice on",
-          "Day, ice off",
-          "Ice cover duration"
-        ]
+        "enum": ["Day, ice on", "Day, ice off", "Ice cover duration"]
       }
     },
     "required": ["CharacteristicName"]
   },
   "then": {
+    "properties": {
+      "ResultAnalyticalMethodName": true
+    },
     "required": ["ResultAnalyticalMethodName"]
   }
 }

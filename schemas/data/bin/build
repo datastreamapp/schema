@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-maxEnumLength=1200
+maxEnumLength=2000
 
 pre () {
 	src=$1
@@ -39,7 +39,7 @@ validate () {
 	src=$1
 	opts=${*:2}
 
-	ajv validate src/${src}.build.json --valid ${opts} \
+	ajv validate src/${src}.build.json --valid --strict true ${opts} \
 	    -r node_modules/wqx/json-schema/definitions.json \
 		-r src/definitions.json
 }

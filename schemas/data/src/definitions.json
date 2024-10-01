@@ -1,286 +1,287 @@
 {
   "$id": "https://datastream.org/schema/data/definitions",
-  "primary": {
-    "DatasetName": {
-      "$ref": "#/columns/DatasetName"
-    },
-    "MonitoringLocationID": {
-      "$ref": "#/columns/MonitoringLocationID"
-    },
-    "MonitoringLocationName": {
-      "$ref": "#/columns/MonitoringLocationName"
-    },
-    "MonitoringLocationLatitude": {
-      "$ref": "#/columns/MonitoringLocationLatitude"
-    },
-    "MonitoringLocationLongitude": {
-      "$ref": "#/columns/MonitoringLocationLongitude"
-    },
-    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json"
-    },
-    "MonitoringLocationHorizontalAccuracyMeasure": {
-      "$ref": "#/columns/MonitoringLocationHorizontalAccuracyMeasure"
-    },
-    "MonitoringLocationHorizontalAccuracyUnit": {
-      "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.primary.json"
-    },
-    "MonitoringLocationVerticalMeasure": {
-      "$ref": "#/columns/MonitoringLocationVerticalMeasure"
-    },
-    "MonitoringLocationVerticalUnit": {
-      "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
-    },
-    "MonitoringLocationType": {
-      "$ref": "./values/MonitoringLocationType.primary.json"
-    },
-    "ActivityType": {
-      "$ref": "./values/ActivityType.primary.json"
-    },
-    "ActivityMediaName": {
-      "$ref": "./values/ActivityMediaName.primary.json"
-    },
-    "ActivityStartDate": {
-      "$ref": "#/columns/ActivityStartDate"
-    },
-    "ActivityStartTime": {
-      "$ref": "#/columns/ActivityStartTime"
-    },
-    "ActivityStartTimeZone": {
-      "$ref": "#/columns/ActivityStartTimeZone"
-    },
-    "ActivityEndDate": {
-      "$ref": "#/columns/ActivityEndDate"
-    },
-    "ActivityEndTime": {
-      "$ref": "#/columns/ActivityEndTime"
-    },
-    "ActivityEndTimeZone": {
-      "$ref": "#/columns/ActivityEndTimeZone"
-    },
-    "ActivityDepthHeightMeasure": {
-      "$ref": "#/columns/ActivityDepthHeightMeasure"
-    },
-    "ActivityDepthHeightUnit": {
-      "$ref": "./values/ActivityDepthHeightUnit.primary.json"
-    },
-    "SampleCollectionEquipmentName": {
-      "$ref": "./values/SampleCollectionEquipmentName.primary.json"
-    },
-    "CharacteristicName": {
-      "$ref": "./values/CharacteristicName.primary.json"
-    },
-    "MethodSpeciation": {
-      "$ref": "./values/MethodSpeciation.primary.json"
-    },
-    "ResultSampleFraction": {
-      "$ref": "./values/ResultSampleFraction.primary.json"
-    },
-    "ResultValue": {
-      "$ref": "#/columns/ResultValue"
-    },
-    "ResultUnit": {
-      "$ref": "./values/ResultUnit.primary.json"
-    },
-    "ResultValueType": {
-      "$ref": "./values/ResultValueType.primary.json"
-    },
-    "ResultDetectionCondition": {
-      "$ref": "./values/ResultDetectionCondition.primary.json"
-    },
-    "ResultDetectionQuantitationLimitMeasure": {
-      "$ref": "#/columns/ResultDetectionQuantitationLimitMeasure"
-    },
-    "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json"
-    },
-    "ResultDetectionQuantitationLimitType": {
-      "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json"
-    },
-    "ResultStatusID": {
-      "$ref": "./values/ResultStatusID.primary.json"
-    },
-    "ResultComment": {
-      "$ref": "#/columns/ResultComment"
-    },
-    "ResultAnalyticalMethodID": {
-      "$ref": "#/columns/ResultAnalyticalMethodID"
-    },
-    "ResultAnalyticalMethodContext": {
-      "$ref": "./values/ResultAnalyticalMethodContext.primary.json"
-    },
-    "ResultAnalyticalMethodName": {
-      "$ref": "#/columns/ResultAnalyticalMethodName"
-    },
-    "AnalysisStartDate": {
-      "$ref": "#/columns/AnalysisStartDate"
-    },
-    "AnalysisStartTime": {
-      "$ref": "#/columns/AnalysisStartTime"
-    },
-    "AnalysisStartTimeZone": {
-      "$ref": "#/columns/AnalysisStartTimeZone"
-    },
-    "LaboratoryName": {
-      "$ref": "#/columns/LaboratoryName"
-    },
-    "LaboratorySampleID": {
-      "$ref": "#/columns/LaboratorySampleID"
-    }
-  },
-  "columns": {
-    "DatasetName": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 512
-    },
-    "MonitoringLocationID": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID",
-      "minLength": 1
-    },
-    "MonitoringLocationName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
-      "minLength": 1
-    },
-    "MonitoringLocationLatitude": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
-    },
-    "MonitoringLocationLongitude": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
-    },
-    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json"
-    },
-    "MonitoringLocationHorizontalAccuracyMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure",
-      "minimum": 0,
-      "maximum": 9007199254740991
-    },
-    "MonitoringLocationHorizontalAccuracyUnit": {
-      "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.legacy.json"
-    },
-    "MonitoringLocationVerticalMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
-    },
-    "MonitoringLocationVerticalUnit": {
-      "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json"
-    },
-    "MonitoringLocationType": {
-      "$ref": "./values/MonitoringLocationType.legacy.json"
-    },
-    "ActivityType": {
-      "$ref": "./values/ActivityType.legacy.json"
-    },
-    "ActivityMediaName": {
-      "$ref": "./values/ActivityMediaName.legacy.json"
-    },
-    "ActivityStartDate": {
-      "$ref": "#/definitions/date"
-    },
-    "ActivityStartTime": {
-      "$ref": "#/definitions/time-strict"
-    },
-    "ActivityStartTimeZone": {
-      "$ref": "#/definitions/timezone-strict"
-    },
-    "ActivityEndDate": {
-      "$ref": "#/definitions/date"
-    },
-    "ActivityEndTime": {
-      "$ref": "#/definitions/time-strict"
-    },
-    "ActivityEndTimeZone": {
-      "$ref": "#/definitions/timezone-strict"
-    },
-    "ActivityDepthHeightMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
-    },
-    "ActivityDepthHeightUnit": {
-      "$ref": "./values/ActivityDepthHeightUnit.legacy.json"
-    },
-    "SampleCollectionEquipmentName": {
-      "$ref": "./values/SampleCollectionEquipmentName.legacy.json"
-    },
-    "CharacteristicName": {
-      "$ref": "./values/CharacteristicName.legacy.json"
-    },
-    "MethodSpeciation": {
-      "$ref": "./values/MethodSpeciation.legacy.json"
-    },
-    "ResultSampleFraction": {
-      "$ref": "./values/ResultSampleFraction.legacy.json"
-    },
-    "ResultValue": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
-    },
-    "ResultUnit": {
-      "$ref": "./values/ResultUnit.legacy.json"
-    },
-    "ResultValueType": {
-      "$ref": "./values/ResultValueType.legacy.json"
-    },
-    "ResultDetectionCondition": {
-      "$ref": "./values/ResultDetectionCondition.legacy.json"
-    },
-    "ResultDetectionQuantitationLimitMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
-    },
-    "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "./values/ResultDetectionQuantitationLimitUnit.legacy.json"
-    },
-    "ResultDetectionQuantitationLimitType": {
-      "$ref": "./values/ResultDetectionQuantitationLimitType.legacy.json"
-    },
-    "ResultStatusID": {
-      "$ref": "./values/ResultStatusID.legacy.json"
-    },
-    "ResultComment": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
-    },
-    "ResultAnalyticalMethodID": {
-      "title": "Result Analytical Method ID",
-      "description": "",
-      "type": "string",
-      "maxLength": 50
-    },
-    "ResultAnalyticalMethodContext": {
-      "$ref": "./values/ResultAnalyticalMethodContext.legacy.json"
-    },
-    "ResultAnalyticalMethodName": {
-      "title": "Result Analytical Method Name",
-      "description": "Name of the analytical method",
-      "type": "string",
-      "maxLength": 300
-    },
-    "AnalysisStartDate": {
-      "$ref": "#/definitions/date"
-    },
-    "AnalysisStartTime": {
-      "$ref": "#/definitions/time-strict"
-    },
-    "AnalysisStartTimeZone": {
-      "$ref": "#/definitions/timezone-strict"
-    },
-    "LaboratoryName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName",
-      "maxLength": 100
-    },
-    "LaboratorySampleID": {
-      "title": "Laboratory Sample ID",
-      "description": "Unique identifier for the lab sample",
-      "type": "string",
-      "maxLength": 60
-    }
-  },
+
   "definitions": {
+    "primaryColumns": {
+      "DatasetName": {
+        "$ref": "#/definitions/defaultColumns/DatasetName"
+      },
+      "MonitoringLocationID": {
+        "$ref": "#/definitions/defaultColumns/MonitoringLocationID"
+      },
+      "MonitoringLocationName": {
+        "$ref": "#/definitions/defaultColumns/MonitoringLocationName"
+      },
+      "MonitoringLocationLatitude": {
+        "$ref": "#/definitions/defaultColumns/MonitoringLocationLatitude"
+      },
+      "MonitoringLocationLongitude": {
+        "$ref": "#/definitions/defaultColumns/MonitoringLocationLongitude"
+      },
+      "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+        "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json"
+      },
+      "MonitoringLocationHorizontalAccuracyMeasure": {
+        "$ref": "#/definitions/defaultColumns/MonitoringLocationHorizontalAccuracyMeasure"
+      },
+      "MonitoringLocationHorizontalAccuracyUnit": {
+        "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.primary.json"
+      },
+      "MonitoringLocationVerticalMeasure": {
+        "$ref": "#/definitions/defaultColumns/MonitoringLocationVerticalMeasure"
+      },
+      "MonitoringLocationVerticalUnit": {
+        "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
+      },
+      "MonitoringLocationType": {
+        "$ref": "./values/MonitoringLocationType.primary.json"
+      },
+      "ActivityType": {
+        "$ref": "./values/ActivityType.primary.json"
+      },
+      "ActivityMediaName": {
+        "$ref": "./values/ActivityMediaName.primary.json"
+      },
+      "ActivityStartDate": {
+        "$ref": "#/definitions/defaultColumns/ActivityStartDate"
+      },
+      "ActivityStartTime": {
+        "$ref": "#/definitions/defaultColumns/ActivityStartTime"
+      },
+      "ActivityStartTimeZone": {
+        "$ref": "#/definitions/defaultColumns/ActivityStartTimeZone"
+      },
+      "ActivityEndDate": {
+        "$ref": "#/definitions/defaultColumns/ActivityEndDate"
+      },
+      "ActivityEndTime": {
+        "$ref": "#/definitions/defaultColumns/ActivityEndTime"
+      },
+      "ActivityEndTimeZone": {
+        "$ref": "#/definitions/defaultColumns/ActivityEndTimeZone"
+      },
+      "ActivityDepthHeightMeasure": {
+        "$ref": "#/definitions/defaultColumns/ActivityDepthHeightMeasure"
+      },
+      "ActivityDepthHeightUnit": {
+        "$ref": "./values/ActivityDepthHeightUnit.primary.json"
+      },
+      "SampleCollectionEquipmentName": {
+        "$ref": "./values/SampleCollectionEquipmentName.primary.json"
+      },
+      "CharacteristicName": {
+        "$ref": "./values/CharacteristicName.primary.json"
+      },
+      "MethodSpeciation": {
+        "$ref": "./values/MethodSpeciation.primary.json"
+      },
+      "ResultSampleFraction": {
+        "$ref": "./values/ResultSampleFraction.primary.json"
+      },
+      "ResultValue": {
+        "$ref": "#/definitions/defaultColumns/ResultValue"
+      },
+      "ResultUnit": {
+        "$ref": "./values/ResultUnit.primary.json"
+      },
+      "ResultValueType": {
+        "$ref": "./values/ResultValueType.primary.json"
+      },
+      "ResultDetectionCondition": {
+        "$ref": "./values/ResultDetectionCondition.primary.json"
+      },
+      "ResultDetectionQuantitationLimitMeasure": {
+        "$ref": "#/definitions/defaultColumns/ResultDetectionQuantitationLimitMeasure"
+      },
+      "ResultDetectionQuantitationLimitUnit": {
+        "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json"
+      },
+      "ResultDetectionQuantitationLimitType": {
+        "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json"
+      },
+      "ResultStatusID": {
+        "$ref": "./values/ResultStatusID.primary.json"
+      },
+      "ResultComment": {
+        "$ref": "#/definitions/defaultColumns/ResultComment"
+      },
+      "ResultAnalyticalMethodID": {
+        "$ref": "#/definitions/defaultColumns/ResultAnalyticalMethodID"
+      },
+      "ResultAnalyticalMethodContext": {
+        "$ref": "./values/ResultAnalyticalMethodContext.primary.json"
+      },
+      "ResultAnalyticalMethodName": {
+        "$ref": "#/definitions/defaultColumns/ResultAnalyticalMethodName"
+      },
+      "AnalysisStartDate": {
+        "$ref": "#/definitions/defaultColumns/AnalysisStartDate"
+      },
+      "AnalysisStartTime": {
+        "$ref": "#/definitions/defaultColumns/AnalysisStartTime"
+      },
+      "AnalysisStartTimeZone": {
+        "$ref": "#/definitions/defaultColumns/AnalysisStartTimeZone"
+      },
+      "LaboratoryName": {
+        "$ref": "#/definitions/defaultColumns/LaboratoryName"
+      },
+      "LaboratorySampleID": {
+        "$ref": "#/definitions/defaultColumns/LaboratorySampleID"
+      }
+    },
+    "defaultColumns": {
+      "DatasetName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 512
+      },
+      "MonitoringLocationID": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationID",
+        "minLength": 1
+      },
+      "MonitoringLocationName": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationName",
+        "minLength": 1
+      },
+      "MonitoringLocationLatitude": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLatitude"
+      },
+      "MonitoringLocationLongitude": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/MonitoringLocationLongitude"
+      },
+      "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+        "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json"
+      },
+      "MonitoringLocationHorizontalAccuracyMeasure": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure",
+        "minimum": 0,
+        "maximum": 9007199254740991
+      },
+      "MonitoringLocationHorizontalAccuracyUnit": {
+        "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.legacy.json"
+      },
+      "MonitoringLocationVerticalMeasure": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure",
+        "minimum": -9007199254740991,
+        "maximum": 9007199254740991
+      },
+      "MonitoringLocationVerticalUnit": {
+        "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json"
+      },
+      "MonitoringLocationType": {
+        "$ref": "./values/MonitoringLocationType.legacy.json"
+      },
+      "ActivityType": {
+        "$ref": "./values/ActivityType.legacy.json"
+      },
+      "ActivityMediaName": {
+        "$ref": "./values/ActivityMediaName.legacy.json"
+      },
+      "ActivityStartDate": {
+        "$ref": "#/definitions/date"
+      },
+      "ActivityStartTime": {
+        "$ref": "#/definitions/time-strict"
+      },
+      "ActivityStartTimeZone": {
+        "$ref": "#/definitions/timezone-strict"
+      },
+      "ActivityEndDate": {
+        "$ref": "#/definitions/date"
+      },
+      "ActivityEndTime": {
+        "$ref": "#/definitions/time-strict"
+      },
+      "ActivityEndTimeZone": {
+        "$ref": "#/definitions/timezone-strict"
+      },
+      "ActivityDepthHeightMeasure": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
+        "minimum": -9007199254740991,
+        "maximum": 9007199254740991
+      },
+      "ActivityDepthHeightUnit": {
+        "$ref": "./values/ActivityDepthHeightUnit.legacy.json"
+      },
+      "SampleCollectionEquipmentName": {
+        "$ref": "./values/SampleCollectionEquipmentName.legacy.json"
+      },
+      "CharacteristicName": {
+        "$ref": "./values/CharacteristicName.legacy.json"
+      },
+      "MethodSpeciation": {
+        "$ref": "./values/MethodSpeciation.legacy.json"
+      },
+      "ResultSampleFraction": {
+        "$ref": "./values/ResultSampleFraction.legacy.json"
+      },
+      "ResultValue": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue",
+        "minimum": -9007199254740991,
+        "maximum": 9007199254740991
+      },
+      "ResultUnit": {
+        "$ref": "./values/ResultUnit.legacy.json"
+      },
+      "ResultValueType": {
+        "$ref": "./values/ResultValueType.legacy.json"
+      },
+      "ResultDetectionCondition": {
+        "$ref": "./values/ResultDetectionCondition.legacy.json"
+      },
+      "ResultDetectionQuantitationLimitMeasure": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure",
+        "minimum": -9007199254740991,
+        "maximum": 9007199254740991
+      },
+      "ResultDetectionQuantitationLimitUnit": {
+        "$ref": "./values/ResultDetectionQuantitationLimitUnit.legacy.json"
+      },
+      "ResultDetectionQuantitationLimitType": {
+        "$ref": "./values/ResultDetectionQuantitationLimitType.legacy.json"
+      },
+      "ResultStatusID": {
+        "$ref": "./values/ResultStatusID.legacy.json"
+      },
+      "ResultComment": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultComment"
+      },
+      "ResultAnalyticalMethodID": {
+        "title": "Result Analytical Method ID",
+        "description": "",
+        "type": "string",
+        "maxLength": 50
+      },
+      "ResultAnalyticalMethodContext": {
+        "$ref": "./values/ResultAnalyticalMethodContext.legacy.json"
+      },
+      "ResultAnalyticalMethodName": {
+        "title": "Result Analytical Method Name",
+        "description": "Name of the analytical method",
+        "type": "string",
+        "maxLength": 300
+      },
+      "AnalysisStartDate": {
+        "$ref": "#/definitions/date"
+      },
+      "AnalysisStartTime": {
+        "$ref": "#/definitions/time-strict"
+      },
+      "AnalysisStartTimeZone": {
+        "$ref": "#/definitions/timezone-strict"
+      },
+      "LaboratoryName": {
+        "$ref": "../node_modules/wqx/json-schema/definitions.json#/LaboratoryName",
+        "maxLength": 100
+      },
+      "LaboratorySampleID": {
+        "title": "Laboratory Sample ID",
+        "description": "Unique identifier for the lab sample",
+        "type": "string",
+        "maxLength": 60
+      }
+    },
     "date": {
       "errorMessage": {
         "format": "error-date-format"

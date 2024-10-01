@@ -53,7 +53,7 @@
     },
     "ActivityStartTime": {
       "type": "string",
-      "$ref": "./definitions.json#/columns/ActivityStartTime"
+      "$ref": "./definitions.json#/definitions/defaultColumns/ActivityStartTime"
     },
     "ActivityStartTimeZone": {
       "errorMessage": {
@@ -77,7 +77,7 @@
     },
     "ActivityEndTime": {
       "type": "string",
-      "$ref": "./definitions.json#/columns/ActivityEndTime"
+      "$ref": "./definitions.json#/definitions/defaultColumns/ActivityEndTime"
     },
     "ActivityEndTimeZone": {
       "errorMessage": {
@@ -155,7 +155,7 @@
     },
     "AnalysisStartTime": {
       "type": "string",
-      "$ref": "./definitions.json#/columns/AnalysisStartTime"
+      "$ref": "./definitions.json#/definitions/defaultColumns/AnalysisStartTime"
     },
     "AnalysisStartTimeZone": {
       "errorMessage": {

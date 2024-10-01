@@ -7,7 +7,8 @@
     "properties": {
       "CharacteristicName": {
         "enum": ["pH", "pH, lab", "pH, saturated", "Langelier Saturation Index"]
-      }
+      },
+      "ResultValue": true
     },
     "required": ["CharacteristicName", "ResultValue"]
   },

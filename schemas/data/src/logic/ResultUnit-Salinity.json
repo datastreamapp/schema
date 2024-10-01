@@ -7,7 +7,8 @@
     "properties": {
       "CharacteristicName": {
         "enum": ["Salinity"]
-      }
+      },
+      "ResultUnit": true
     },
     "required": ["CharacteristicName", "ResultUnit"]
   },
