@@ -9,9 +9,11 @@
   "title": "DataStream Schema",
   "description": "Water Quality Data Schema based on WQX",
   "type": "object",
+  "unevaluatedProperties": false,
   "allOf": [
     {
-      "additionalProperties": true,
+      "type": "object",
+      "additionalProperties": false,
       "properties": {
         "DatasetName": {
           "$ref": "./definitions.json#/columns/DatasetName",
@@ -165,7 +167,8 @@
           "$ref": "./definitions.json#/columns/LaboratorySampleID",
           "transform": ["trim"]
         }
-      }
+      },
+      "required": []
     },
     {
       "$ref": "logic/CSVInjection.json"

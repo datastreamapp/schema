@@ -10,8 +10,10 @@
   "title": "DataStream Schema",
   "description": "Water Quality Data Schema based on WQX",
   "type": "object",
+  "unevaluatedProperties": false,
   "allOf": [
     {
+      "type": "object",
       "additionalProperties": false,
       "properties": {
         "DatasetName": {

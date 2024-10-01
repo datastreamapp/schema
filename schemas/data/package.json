@@ -16,7 +16,8 @@
     "quality-control",
     "lookup",
     "locales",
-    "database"
+    "database",
+    "json-schema"
   ],
   "scripts": {
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js && node ./bin/build-locales.js",
@@ -31,10 +32,10 @@
   },
   "homepage": "https://github.com/datastreamapp/schema#readme",
   "dependencies": {
-    "wqx": "3.0.179"
+    "wqx": "3.0.182"
   },
   "devDependencies": {
-    "change-case": "^4.1.2"
+    "change-case": "^4.0.0"
   },
   "repository": {
     "type": "git",

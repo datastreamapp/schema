@@ -5,17 +5,27 @@
   "errorMessage": "error-ResultDetectionCondition-ResultValue",
   "oneOf": [
     {
+      "type": "object",
+      "additionalProperties": true,
       "properties": {
-        "ResultValue": {},
+        "ResultValue": {
+          "$ref": "../definitions.json#/columns/ResultValue"
+        },
         "ResultDetectionCondition": false
       },
+      "maxProperties": 42,
       "required": ["ResultValue"]
     },
     {
+      "type": "object",
+      "additionalProperties": true,
       "properties": {
         "ResultValue": false,
-        "ResultDetectionCondition": {}
+        "ResultDetectionCondition": {
+          "$ref": "../definitions.json#/columns/ResultDetectionCondition"
+        }
       },
+      "maxProperties": 42,
       "required": ["ResultDetectionCondition"]
     }
   ]

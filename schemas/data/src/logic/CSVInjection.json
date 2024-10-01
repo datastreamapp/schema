@@ -3,6 +3,8 @@
   "title": "CSVInjection",
   "description": "CSV files can trigger injection attacks when opened using spreadsheet software. https://owasp.org/www-community/attacks/CSV_Injection. In ETL, `* ` is prepended when fails.",
   "errorMessage": "error-CSVInjection",
+  "type": "object",
+  "additionalProperties": true,
   "properties": {
     "DatasetName": {
       "$ref": "../definitions.json#/definitions/csv-injection"
@@ -28,5 +30,7 @@
     "LaboratorySampleID": {
       "$ref": "../definitions.json#/definitions/csv-injection"
     }
-  }
+  },
+  "maxProperties": 42,
+  "required": []
 }

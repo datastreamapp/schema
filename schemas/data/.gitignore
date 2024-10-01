@@ -15,3 +15,4 @@ lookup/*.js
 locales
 !src/locales
 database
+json-schema

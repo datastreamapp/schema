@@ -133,6 +133,7 @@
       "$ref": "./definitions.json#/columns/LaboratorySampleID"
     }
   },
+  "maxProperties": 42,
   "required": [
     "DatasetName",
     "MonitoringLocationID",
