@@ -26,15 +26,15 @@
     "MonitoringLocationHorizontalAccuracyMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityHorizontalAccuracyMeasure",
       "minimum": 0,
-      "maximum": 9223372036854776000
+      "maximum": 9007199254740991
     },
     "MonitoringLocationHorizontalAccuracyUnit": {
       "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.primary.json"
     },
     "MonitoringLocationVerticalMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/VerticalMeasure",
-      "minimum": -9223372036854776000,
-      "maximum": 9223372036854776000
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
     },
     "MonitoringLocationVerticalUnit": {
       "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
@@ -68,8 +68,8 @@
     },
     "ActivityDepthHeightMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ActivityDepthHeightMeasure",
-      "minimum": -9223372036854776000,
-      "maximum": 9223372036854776000
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
     },
     "ActivityDepthHeightUnit": {
       "$ref": "./values/ActivityDepthHeightUnit.primary.json"
@@ -88,8 +88,8 @@
     },
     "ResultValue": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultValue",
-      "minimum": -9223372036854776000,
-      "maximum": 9223372036854776000
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
     },
     "ResultUnit": {
       "$ref": "./values/ResultUnit.primary.json"
@@ -102,8 +102,8 @@
     },
     "ResultDetectionQuantitationLimitMeasure": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/ResultDetectionQuantitationLimitMeasure",
-      "minimum": -9223372036854776000,
-      "maximum": 9223372036854776000
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
     },
     "ResultDetectionQuantitationLimitUnit": {
       "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json"
