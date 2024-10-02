@@ -11,7 +11,7 @@
     "Acid Soluble": {
       "name": {
         "en": "Acid Soluble",
-        "fr": null
+        "fr": "Soluble dans l'acide"
       },
       "description": {
         "en": "That portion of the analyte which becomes dissolved within the sample following treatment with an appropriate acid.",
@@ -21,7 +21,7 @@
     "Bioavailable": {
       "name": {
         "en": "Bioavailable",
-        "fr": null
+        "fr": "Biodisponible"
       },
       "description": {
         "en": "The extent to which a substance is / becomes available or absorbed by a specific tissue or organ.",
@@ -31,7 +31,7 @@
     "Comb Available": {
       "name": {
         "en": "Comb Available",
-        "fr": null
+        "fr": "Peigne disponible"
       },
       "description": {
         "en": "The concentration of an analyte or other analyte derivatives in a water which is combined with other derivatives yet is still available to oxidize organic matter.",
@@ -121,7 +121,7 @@
     "Filter/sieve residue": {
       "name": {
         "en": "Filter/sieve residue",
-        "fr": null
+        "fr": "Résidus de filtre/de tamis"
       },
       "description": {
         "en": null,
@@ -131,7 +131,7 @@
     "Filterable": {
       "name": {
         "en": "Filterable",
-        "fr": null
+        "fr": "Filtrable"
       },
       "description": {
         "en": "That portion of the analyte which is in or absorbed to material which passes through the filter during sample filtration.",
@@ -181,7 +181,7 @@
     "Free Available": {
       "name": {
         "en": "Free Available",
-        "fr": null
+        "fr": "Libre disponible"
       },
       "description": {
         "en": "The concentration of residual substance present as dissolved gas, and not combined with any substance or in other less readily available form.",
@@ -191,7 +191,7 @@
     "Inorganic": {
       "name": {
         "en": "Inorganic",
-        "fr": null
+        "fr": "Inorganique"
       },
       "description": {
         "en": "Inorganic content of sample.",
@@ -211,7 +211,7 @@
     "non-linear function": {
       "name": {
         "en": "non-linear function",
-        "fr": null
+        "fr": "fonction non linéaire"
       },
       "description": {
         "en": null,
@@ -221,7 +221,7 @@
     "Non-settleable": {
       "name": {
         "en": "Non-settleable",
-        "fr": null
+        "fr": "Non réglable"
       },
       "description": {
         "en": "That portion of the analyte which is in or absorbed to particles remaining in suspension in the sample container after a settling process.",
@@ -231,7 +231,7 @@
     "Non-volatile": {
       "name": {
         "en": "Non-volatile",
-        "fr": null
+        "fr": "Non volatile"
       },
       "description": {
         "en": "That portion of the analyte which is in a liquid or solid state under normal temperature and pressure.",
@@ -241,7 +241,7 @@
     "Organic": {
       "name": {
         "en": "Organic",
-        "fr": null
+        "fr": "Organique"
       },
       "description": {
         "en": "Organic content of a sample.",
@@ -261,7 +261,7 @@
     "Settleable": {
       "name": {
         "en": "Settleable",
-        "fr": null
+        "fr": "Réglable"
       },
       "description": {
         "en": "That portion of the analyte which is found in or absorbed to that part of the sample which has settled (fallen out of suspension) to the bottom of the sample container.",
@@ -271,7 +271,7 @@
     "Sieved": {
       "name": {
         "en": "Sieved",
-        "fr": null
+        "fr": "Tamisé"
       },
       "description": {
         "en": null,
@@ -281,7 +281,7 @@
     "Supernate": {
       "name": {
         "en": "Supernate",
-        "fr": null
+        "fr": "Surnageant"
       },
       "description": {
         "en": "That portion of the analyte found in the liquid layer above a precipitate produced from the sample.",
@@ -311,7 +311,7 @@
     "Total Recoverable": {
       "name": {
         "en": "Total Recoverable",
-        "fr": null
+        "fr": "Total récupérable"
       },
       "description": {
         "en": "The analyte concentration available for analysis in an unfiltered sample following solubilization.",
@@ -321,7 +321,7 @@
     "Total Residual": {
       "name": {
         "en": "Total Residual",
-        "fr": null
+        "fr": "Total résiduel"
       },
       "description": {
         "en": "The amount of available analyte remaining after a given contact time. The sum of the combined available residual analyte and the free available residual analyte.",
@@ -341,7 +341,7 @@
     "Unspecified": {
       "name": {
         "en": "Unspecified",
-        "fr": null
+        "fr": "Non spécifié"
       },
       "description": {
         "en": null,
@@ -351,7 +351,7 @@
     "Vapor": {
       "name": {
         "en": "Vapor",
-        "fr": null
+        "fr": "Vapeur"
       },
       "description": {
         "en": "That portion of the analyte which exists in a gaseous state and that under ordinary conditions is liquid or solid.",
@@ -361,7 +361,7 @@
     "Volatile": {
       "name": {
         "en": "Volatile",
-        "fr": null
+        "fr": "Volatile"
       },
       "description": {
         "en": "That portion of the analyte which evaporates readily at normal temperature and pressure.",
