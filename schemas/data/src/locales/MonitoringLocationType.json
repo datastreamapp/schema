@@ -11,7 +11,7 @@
     "Atmosphere": {
       "name": {
         "en": "Atmosphere",
-        "fr": null
+        "fr": "Atmosphère"
       },
       "description": {
         "en": null,
@@ -21,7 +21,7 @@
     "Canal Drainage": {
       "name": {
         "en": "Canal Drainage",
-        "fr": null
+        "fr": "Drainage de canal"
       },
       "description": {
         "en": null,
@@ -31,7 +31,7 @@
     "Canal Irrigation": {
       "name": {
         "en": "Canal Irrigation",
-        "fr": null
+        "fr": "Irrigation de canal"
       },
       "description": {
         "en": null,
@@ -41,7 +41,7 @@
     "Canal Transport": {
       "name": {
         "en": "Canal Transport",
-        "fr": null
+        "fr": "Transport par canal"
       },
       "description": {
         "en": null,
@@ -51,7 +51,7 @@
     "Estuary": {
       "name": {
         "en": "Estuary",
-        "fr": null
+        "fr": "Estuaire"
       },
       "description": {
         "en": null,
@@ -61,7 +61,7 @@
     "Great Lake": {
       "name": {
         "en": "Great Lake",
-        "fr": null
+        "fr": "Grand Lac"
       },
       "description": {
         "en": null,
@@ -71,7 +71,7 @@
     "Lake/Pond": {
       "name": {
         "en": "Lake/Pond",
-        "fr": null
+        "fr": "Lac/Étang"
       },
       "description": {
         "en": null,
@@ -81,7 +81,7 @@
     "Ocean": {
       "name": {
         "en": "Ocean",
-        "fr": null
+        "fr": "Océan"
       },
       "description": {
         "en": null,
@@ -91,7 +91,7 @@
     "Pond-Stormwater": {
       "name": {
         "en": "Pond-Stormwater",
-        "fr": null
+        "fr": "Étang - Eaux de ruissellement"
       },
       "description": {
         "en": null,
@@ -101,7 +101,7 @@
     "Reservoir": {
       "name": {
         "en": "Reservoir",
-        "fr": null
+        "fr": "Réservoir"
       },
       "description": {
         "en": null,
@@ -111,7 +111,7 @@
     "River/Stream": {
       "name": {
         "en": "River/Stream",
-        "fr": null
+        "fr": "Rivière/Ruisseau"
       },
       "description": {
         "en": null,
@@ -121,7 +121,7 @@
     "Spring": {
       "name": {
         "en": "Spring",
-        "fr": null
+        "fr": "Source"
       },
       "description": {
         "en": null,
@@ -131,7 +131,7 @@
     "Storm Sewer": {
       "name": {
         "en": "Storm Sewer",
-        "fr": null
+        "fr": "Égout pluvial"
       },
       "description": {
         "en": null,
@@ -141,7 +141,7 @@
     "Unspecified": {
       "name": {
         "en": "Unspecified",
-        "fr": null
+        "fr": "Non spécifié"
       },
       "description": {
         "en": null,
@@ -151,7 +151,7 @@
     "Wetland": {
       "name": {
         "en": "Wetland",
-        "fr": null
+        "fr": "Zone humide"
       },
       "description": {
         "en": null,

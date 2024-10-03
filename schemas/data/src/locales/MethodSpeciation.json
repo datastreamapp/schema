@@ -11,7 +11,7 @@
     "as As": {
       "name": {
         "en": "as As",
-        "fr": null
+        "fr": "comme As"
       },
       "description": {
         "en": null,
@@ -21,7 +21,7 @@
     "as B": {
       "name": {
         "en": "as B",
-        "fr": null
+        "fr": "comme B"
       },
       "description": {
         "en": null,
@@ -31,7 +31,7 @@
     "as C3H6O2": {
       "name": {
         "en": "as C3H6O2",
-        "fr": null
+        "fr": "comme C3H6O2"
       },
       "description": {
         "en": null,
@@ -41,7 +41,7 @@
     "as Ca": {
       "name": {
         "en": "as Ca",
-        "fr": null
+        "fr": "comme Ca"
       },
       "description": {
         "en": null,
@@ -51,7 +51,7 @@
     "as CaCO3": {
       "name": {
         "en": "as CaCO3",
-        "fr": null
+        "fr": "comme CaCO3"
       },
       "description": {
         "en": null,
@@ -61,7 +61,7 @@
     "as Cl": {
       "name": {
         "en": "as Cl",
-        "fr": null
+        "fr": "comme Cl"
       },
       "description": {
         "en": null,
@@ -71,7 +71,7 @@
     "as CN": {
       "name": {
         "en": "as CN",
-        "fr": null
+        "fr": "comme CN"
       },
       "description": {
         "en": null,
@@ -81,7 +81,7 @@
     "as CO3": {
       "name": {
         "en": "as CO3",
-        "fr": null
+        "fr": "comme CO3"
       },
       "description": {
         "en": null,
@@ -91,7 +91,7 @@
     "as DPA": {
       "name": {
         "en": "as DPA",
-        "fr": null
+        "fr": "comme DPA"
       },
       "description": {
         "en": null,
@@ -101,7 +101,7 @@
     "as F": {
       "name": {
         "en": "as F",
-        "fr": null
+        "fr": "comme F"
       },
       "description": {
         "en": null,
@@ -111,7 +111,7 @@
     "as H": {
       "name": {
         "en": "as H",
-        "fr": null
+        "fr": "comme H"
       },
       "description": {
         "en": null,
@@ -121,7 +121,7 @@
     "as H2S": {
       "name": {
         "en": "as H2S",
-        "fr": null
+        "fr": "comme H2S"
       },
       "description": {
         "en": null,
@@ -131,7 +131,7 @@
     "as HCO3": {
       "name": {
         "en": "as HCO3",
-        "fr": null
+        "fr": "comme HCO3"
       },
       "description": {
         "en": null,
@@ -141,7 +141,7 @@
     "as LAS": {
       "name": {
         "en": "as LAS",
-        "fr": null
+        "fr": "comme LAS"
       },
       "description": {
         "en": null,
@@ -151,7 +151,7 @@
     "as Mg": {
       "name": {
         "en": "as Mg",
-        "fr": null
+        "fr": "comme Mg"
       },
       "description": {
         "en": null,
@@ -161,7 +161,7 @@
     "as N": {
       "name": {
         "en": "as N",
-        "fr": null
+        "fr": "comme N"
       },
       "description": {
         "en": null,
@@ -171,7 +171,7 @@
     "as Na": {
       "name": {
         "en": "as Na",
-        "fr": null
+        "fr": "comme Na"
       },
       "description": {
         "en": null,
@@ -181,7 +181,7 @@
     "as NaCL": {
       "name": {
         "en": "as NaCL",
-        "fr": null
+        "fr": "comme NaCL"
       },
       "description": {
         "en": null,
@@ -191,7 +191,7 @@
     "as NH3": {
       "name": {
         "en": "as NH3",
-        "fr": null
+        "fr": "comme NH3"
       },
       "description": {
         "en": null,
@@ -201,7 +201,7 @@
     "as NH4": {
       "name": {
         "en": "as NH4",
-        "fr": null
+        "fr": "comme NH4"
       },
       "description": {
         "en": null,
@@ -211,7 +211,7 @@
     "as NO2": {
       "name": {
         "en": "as NO2",
-        "fr": null
+        "fr": "comme NO2"
       },
       "description": {
         "en": null,
@@ -221,7 +221,7 @@
     "as NO3": {
       "name": {
         "en": "as NO3",
-        "fr": null
+        "fr": "comme NO3"
       },
       "description": {
         "en": null,
@@ -231,7 +231,7 @@
     "as O2": {
       "name": {
         "en": "as O2",
-        "fr": null
+        "fr": "comme O2"
       },
       "description": {
         "en": null,
@@ -241,7 +241,7 @@
     "as OH": {
       "name": {
         "en": "as OH",
-        "fr": null
+        "fr": "comme OH"
       },
       "description": {
         "en": null,
@@ -251,7 +251,7 @@
     "as P": {
       "name": {
         "en": "as P",
-        "fr": null
+        "fr": "comme P"
       },
       "description": {
         "en": null,
@@ -261,7 +261,7 @@
     "as PO4": {
       "name": {
         "en": "as PO4",
-        "fr": null
+        "fr": "comme PO4"
       },
       "description": {
         "en": null,
@@ -271,7 +271,7 @@
     "as Ra": {
       "name": {
         "en": "as Ra",
-        "fr": null
+        "fr": "comme Ra"
       },
       "description": {
         "en": null,
@@ -281,7 +281,7 @@
     "as Ra226": {
       "name": {
         "en": "as Ra226",
-        "fr": null
+        "fr": "comme Ra226"
       },
       "description": {
         "en": null,
@@ -291,7 +291,7 @@
     "as S": {
       "name": {
         "en": "as S",
-        "fr": null
+        "fr": "comme S"
       },
       "description": {
         "en": null,
@@ -301,7 +301,7 @@
     "as Se": {
       "name": {
         "en": "as Se",
-        "fr": null
+        "fr": "comme Se"
       },
       "description": {
         "en": null,
@@ -311,7 +311,7 @@
     "as Si": {
       "name": {
         "en": "as Si",
-        "fr": null
+        "fr": "comme Si"
       },
       "description": {
         "en": null,
@@ -321,7 +321,7 @@
     "as SiO2": {
       "name": {
         "en": "as SiO2",
-        "fr": null
+        "fr": "comme SiO2"
       },
       "description": {
         "en": null,
@@ -331,7 +331,7 @@
     "as SO3": {
       "name": {
         "en": "as SO3",
-        "fr": null
+        "fr": "comme SO3"
       },
       "description": {
         "en": null,
@@ -341,7 +341,7 @@
     "as SO4": {
       "name": {
         "en": "as SO4",
-        "fr": null
+        "fr": "comme SO4"
       },
       "description": {
         "en": null,
@@ -351,7 +351,7 @@
     "as U3O8": {
       "name": {
         "en": "as U3O8",
-        "fr": null
+        "fr": "comme U3O8"
       },
       "description": {
         "en": null,
@@ -361,7 +361,7 @@
     "as Unspecified": {
       "name": {
         "en": "as Unspecified",
-        "fr": null
+        "fr": "comme non spécifié"
       },
       "description": {
         "en": null,
@@ -371,7 +371,7 @@
     "of CH4": {
       "name": {
         "en": "of CH4",
-        "fr": null
+        "fr": "de CH4"
       },
       "description": {
         "en": null,
@@ -381,7 +381,7 @@
     "of CO2": {
       "name": {
         "en": "of CO2",
-        "fr": null
+        "fr": "de CO2"
       },
       "description": {
         "en": null,
@@ -391,7 +391,7 @@
     "of H2O": {
       "name": {
         "en": "of H2O",
-        "fr": null
+        "fr": "de H2O"
       },
       "description": {
         "en": null,
@@ -401,7 +401,7 @@
     "of Inorganic C": {
       "name": {
         "en": "of Inorganic C",
-        "fr": null
+        "fr": "d'Inorganique C"
       },
       "description": {
         "en": null,
@@ -411,7 +411,7 @@
     "of NH4": {
       "name": {
         "en": "of NH4",
-        "fr": null
+        "fr": "de NH4"
       },
       "description": {
         "en": null,
@@ -421,7 +421,7 @@
     "of NO3": {
       "name": {
         "en": "of NO3",
-        "fr": null
+        "fr": "de NO3"
       },
       "description": {
         "en": null,
@@ -431,7 +431,7 @@
     "of Organic C": {
       "name": {
         "en": "of Organic C",
-        "fr": null
+        "fr": "d'Organique C"
       },
       "description": {
         "en": null,
@@ -441,7 +441,7 @@
     "of Organic N": {
       "name": {
         "en": "of Organic N",
-        "fr": null
+        "fr": "d'Organique N"
       },
       "description": {
         "en": null,
@@ -451,7 +451,7 @@
     "of PO4": {
       "name": {
         "en": "of PO4",
-        "fr": null
+        "fr": "de PO4"
       },
       "description": {
         "en": null,
@@ -461,7 +461,7 @@
     "of S": {
       "name": {
         "en": "of S",
-        "fr": null
+        "fr": "de S"
       },
       "description": {
         "en": null,
@@ -471,7 +471,7 @@
     "of SO4": {
       "name": {
         "en": "of SO4",
-        "fr": null
+        "fr": "de SO4"
       },
       "description": {
         "en": null,
@@ -481,7 +481,7 @@
     "of Unspecified": {
       "name": {
         "en": "of Unspecified",
-        "fr": null
+        "fr": "de non spécifié"
       },
       "description": {
         "en": null,

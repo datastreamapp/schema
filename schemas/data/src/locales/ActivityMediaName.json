@@ -11,7 +11,7 @@
     "Ambient Air": {
       "name": {
         "en": "Ambient Air",
-        "fr": null
+        "fr": "Air ambiant"
       },
       "description": {
         "en": null,
@@ -21,7 +21,7 @@
     "Ocean Water": {
       "name": {
         "en": "Ocean Water",
-        "fr": null
+        "fr": "Eau océanique"
       },
       "description": {
         "en": null,
@@ -31,7 +31,7 @@
     "Porewater": {
       "name": {
         "en": "Porewater",
-        "fr": null
+        "fr": "Eau interstitielle"
       },
       "description": {
         "en": null,
@@ -41,7 +41,7 @@
     "Rainwater": {
       "name": {
         "en": "Rainwater",
-        "fr": null
+        "fr": "Eau de pluie"
       },
       "description": {
         "en": null,
@@ -51,7 +51,7 @@
     "Stormwater": {
       "name": {
         "en": "Stormwater",
-        "fr": null
+        "fr": "Eaux de ruissellement"
       },
       "description": {
         "en": null,
@@ -61,7 +61,7 @@
     "Subsurface Soil/Sediment": {
       "name": {
         "en": "Subsurface Soil/Sediment",
-        "fr": null
+        "fr": "Sol/sédiment de subsurface"
       },
       "description": {
         "en": null,
@@ -71,7 +71,7 @@
     "Surface Water": {
       "name": {
         "en": "Surface Water",
-        "fr": null
+        "fr": "Eau de surface"
       },
       "description": {
         "en": null,
@@ -81,7 +81,7 @@
     "Surface Water Sediment": {
       "name": {
         "en": "Surface Water Sediment",
-        "fr": null
+        "fr": "Sédiment d'eau de surface"
       },
       "description": {
         "en": null,
