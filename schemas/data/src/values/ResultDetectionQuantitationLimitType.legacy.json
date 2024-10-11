@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ResultDetectionQuantitationLimitType.json",
+  "$id": "https://datastream.org/schema/data/values/ResultDetectionQuantitationLimitType.loose.json",
   "title": "Detection Quantitation Limit Type",
   "description": "",
   "type": "string",

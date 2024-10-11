@@ -4,6 +4,8 @@
   "description": "",
   "errorMessage": "qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ActivityMediaName": {
         "enum": [
@@ -16,13 +18,13 @@
           "Surface Water Sediment"
         ]
       },
-      "ActivityDepthHeightMeasure": {
-        "type": "number"
-      }
+      "ActivityDepthHeightMeasure": true
     },
     "required": ["ActivityMediaName", "ActivityDepthHeightMeasure"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ActivityDepthHeightMeasure": {
         "type": "number",

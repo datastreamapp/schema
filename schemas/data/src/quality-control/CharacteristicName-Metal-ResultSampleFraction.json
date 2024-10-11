@@ -4,6 +4,8 @@
   "description": "ResultSampleFraction should follow guidance in Best Practices Guide for metal-series data",
   "errorMessage": "qc-CharacteristicName-Metal-ResultSampleFraction",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": [
@@ -83,20 +85,18 @@
         ]
       }
     },
-    "required": [
-      "CharacteristicName"
-    ]
+    "required": ["CharacteristicName"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultSampleFraction": {
         "not": {
-          "enum": [
-            "Acid Soluble",
-            "Total Recoverable"
-          ]
+          "enum": ["Acid Soluble", "Total Recoverable"]
         }
       }
-    }
+    },
+    "required": []
   }
 }

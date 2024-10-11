@@ -5,6 +5,8 @@
   "description": "ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined",
   "errorMessage": "qc-CharacteristicName-ResultAnalyticalMethodName",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Day, ice on", "Day, ice off", "Ice cover duration"]
@@ -13,6 +15,8 @@
     "required": ["CharacteristicName"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultAnalyticalMethodName": true
     },

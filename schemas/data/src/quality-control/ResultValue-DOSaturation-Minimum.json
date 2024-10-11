@@ -4,6 +4,8 @@
   "description": "For this characteristic, it is expected that the measured value should be greater than or equal to zero.",
   "errorMessage": "qc-ResultValue-DOSaturation-Minimum",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Dissolved oxygen saturation"]
@@ -15,6 +17,8 @@
     "required": ["CharacteristicName", "ResultValue"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultValue": {
         "type": "number",

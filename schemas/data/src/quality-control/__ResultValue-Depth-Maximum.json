@@ -4,6 +4,8 @@
   "description": "Depths must be measured relative to the surface",
   "errorMessage": "qc-ResultValue-Depth-Maximum",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": [
@@ -18,6 +20,8 @@
     "required": ["CharacteristicName", "ResultValue"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultValue": {
         "type": "number",

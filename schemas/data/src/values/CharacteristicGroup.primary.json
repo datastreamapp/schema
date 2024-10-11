@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/CharacteristicGroup.json",
+  "$id": "https://datastream.org/schema/data/values/CharacteristicGroup.strict.json",
   "title": "Characteristic Group",
   "description": "",
   "type": "string",

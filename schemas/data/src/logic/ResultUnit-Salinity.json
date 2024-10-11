@@ -4,6 +4,8 @@
   "description": "ResultUnit that require special unit notation.",
   "errorMessage": "error-ResultUnit-Salinity",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Salinity"]
@@ -13,6 +15,8 @@
     "required": ["CharacteristicName", "ResultUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultUnit": {
         "enum": ["ppth", "ppm", "PSU", "None"]

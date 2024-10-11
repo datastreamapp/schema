@@ -5,6 +5,8 @@
   "description": "Certain characteristics, particularly nutrient parameters, require a method speciation (e.g., 'as N', or 'as NO3' for nitrate). This information is related to how the parameter was analyzed. For more guidance regarding how to map nutrient parameters please visit DataStream's [Best Practices Guide for Nutrient Data](https://datastream.org/en-ca/documentation/nutrient-data-guidance).",
   "errorMessage": "error-CharacteristicName-MethodSpeciation",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": false,
     "properties": {
       "CharacteristicName": {
         "enum": [
@@ -49,8 +51,10 @@
     ]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": false,
     "properties": {
-      "MethodSpeciation": {}
+      "MethodSpeciation": true
     },
     "required": [
       "MethodSpeciation"

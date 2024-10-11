@@ -5,6 +5,8 @@
   "description": "Certain characteristics require a sample fraction, for example metals (e.g. 'Dissolved' or 'Total') and nutrient parameters (e.g. 'Filtered' or 'Unfiltered'). This information is related to the level of filtration of the sample prior to analysis. For more guidance regarding how to map nutrient parameters please visit DataStream's [Best Practices Guide for Nutrient Data](https://datastream.org/en-ca/documentation/nutrient-data-guidance).",
   "errorMessage": "error-CharacteristicName-ResultSampleFraction",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": [
@@ -74,9 +76,9 @@
     "required": ["CharacteristicName"]
   },
   "then": {
-    "properties": {
-      "ResultSampleFraction": {}
-    },
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {},
     "required": ["ResultSampleFraction"]
   }
 }

@@ -4,6 +4,8 @@
   "description": "Dissolved oxygen measured as a saturation percentage should be mapped to the characteristic name 'Dissolved oxygen saturation'.",
   "errorMessage": "qc-ResultValue-DissolvedOxygen-Unit",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Dissolved oxygen (DO)"]
@@ -15,6 +17,8 @@
     "required": ["CharacteristicName", "ResultUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultUnit": {
         "enum": ["mg/l", "ppm"]

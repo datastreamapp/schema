@@ -4,6 +4,8 @@
   "description": "Characteristics that require percent as unit.",
   "errorMessage": "qc-ResultUnit-Percent",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera"]
@@ -13,6 +15,8 @@
     "required": ["CharacteristicName", "ResultUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultUnit": {
         "enum": ["%"]

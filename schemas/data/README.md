@@ -9,7 +9,7 @@
 <p align="center">Download the latest version in <a href="http://datastream.org/schema#" target="_blank">JSON Schema</a>, <a href="https://docs.google.com/spreadsheets/d/1OwGkUTyVC3tZ9N_we8uX1kpsPejZnSsgcaTjrlGBxoc" target="_blank">Google Sheets</a>, <a href="https://datastreamorg.sharepoint.com/:x:/s/Datastream/EaqcNGHom7BFlRi6bRY4VDoBy6ECq6v3bbUyeb0B3S3HGg?e=75aBTl" target="_blank">and Excel</a> template formats.</p>
 
 <p align="center">
-  <!--<a href="https://github.com/gordonfn/schema"><img src="https://img.shields.io/github/stars/gordonfn/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
+  <!--<a href="https://github.com/datastreamapp/schema"><img src="https://img.shields.io/github/stars/gordonfn/schema.svg?style=social&label=Stars" alt="Stars" /></a>-->
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/v/schema.svg" alt="npm version"></a>-->
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/dm/schema.svg" alt="npm downloads"></a>-->
   <!--<a href="https://www.npmjs.com/package/schema"><img src="https://img.shields.io/npm/l/schema.svg" alt="npm license" /></a>-->
@@ -111,7 +111,7 @@ npm publish
 
 ### Commenting on the Schema
 
-If you wish to comment on the schema please [open an issue](https://github.com/gordonfn/schema/issues).
+If you wish to comment on the schema please [open an issue](https://github.com/datastreamapp/schema/issues).
 
 - For information on opening an issue review github's [creating an issue](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue) document
 
@@ -143,7 +143,7 @@ npm publish
 
 ## References
 
-- [WQX](https://github.com/gordonfn/wqx)
+- [WQX](https://github.com/datastreamapp/wqx)
 - [R Import/Export](https://cran.r-project.org/doc/manuals/r-release/R-data.html)
 
 <div align="center">

@@ -3,168 +3,170 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "title": "DataStream Data Schema",
   "description": "Water Quality Data Schema based on WQX.",
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "DatasetName": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/DatasetName"
-    },
-    "MonitoringLocationID": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationID"
-    },
-    "MonitoringLocationName": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationName"
-    },
-    "MonitoringLocationLatitude": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationLatitude"
-    },
-    "MonitoringLocationLongitude": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationLongitude"
-    },
-    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationHorizontalCoordinateReferenceSystem"
-    },
-    "MonitoringLocationHorizontalAccuracyMeasure": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationHorizontalAccuracyMeasure"
-    },
-    "MonitoringLocationHorizontalAccuracyUnit": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationHorizontalAccuracyUnit"
-    },
-    "MonitoringLocationVerticalMeasure": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationVerticalMeasure"
-    },
-    "MonitoringLocationVerticalUnit": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationVerticalUnit"
-    },
-    "MonitoringLocationType": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MonitoringLocationType"
-    },
-    "ActivityType": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityType"
-    },
-    "ActivityMediaName": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityMediaName"
-    },
-    "ActivityStartDate": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityStartDate"
-    },
-    "ActivityStartTime": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityStartTime"
-    },
-    "ActivityStartTimeZone": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityStartTimeZone"
-    },
-    "ActivityEndDate": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityEndDate"
-    },
-    "ActivityEndTime": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityEndTime"
-    },
-    "ActivityEndTimeZone": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityEndTimeZone"
-    },
-    "ActivityDepthHeightMeasure": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityDepthHeightMeasure"
-    },
-    "ActivityDepthHeightUnit": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ActivityDepthHeightUnit"
-    },
-    "SampleCollectionEquipmentName": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/SampleCollectionEquipmentName"
-    },
-    "CharacteristicName": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/CharacteristicName"
-    },
-    "MethodSpeciation": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/MethodSpeciation"
-    },
-    "ResultSampleFraction": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultSampleFraction"
-    },
-    "ResultValue": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultValue"
-    },
-    "ResultUnit": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultUnit"
-    },
-    "ResultValueType": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultValueType"
-    },
-    "ResultDetectionCondition": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultDetectionCondition"
-    },
-    "ResultDetectionQuantitationLimitMeasure": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultDetectionQuantitationLimitMeasure"
-    },
-    "ResultDetectionQuantitationLimitUnit": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultDetectionQuantitationLimitUnit"
-    },
-    "ResultDetectionQuantitationLimitType": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultDetectionQuantitationLimitType"
-    },
-    "ResultStatusID": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultStatusID"
-    },
-    "ResultComment": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultComment"
-    },
-    "ResultAnalyticalMethodID": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultAnalyticalMethodID"
-    },
-    "ResultAnalyticalMethodContext": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultAnalyticalMethodContext"
-    },
-    "ResultAnalyticalMethodName": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/ResultAnalyticalMethodName"
-    },
-    "AnalysisStartDate": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/AnalysisStartDate"
-    },
-    "AnalysisStartTime": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/AnalysisStartTime"
-    },
-    "AnalysisStartTimeZone": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/AnalysisStartTimeZone"
-    },
-    "LaboratoryName": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/LaboratoryName"
-    },
-    "LaboratorySampleID": {
-      "$ref": "./definitions.json#/definitions/primaryColumns/LaboratorySampleID"
-    }
-  },
-  "maxProperties": 42,
-  "required": [
-    "DatasetName",
-    "MonitoringLocationID",
-    "MonitoringLocationName",
-    "MonitoringLocationType",
-    "MonitoringLocationLatitude",
-    "MonitoringLocationLongitude",
-    "MonitoringLocationHorizontalCoordinateReferenceSystem",
-    "ActivityType",
-    "ActivityMediaName",
-    "ActivityStartDate",
-    "CharacteristicName",
-    "ResultValueType"
-  ],
-  "dependencies": {
-    "MonitoringLocationHorizontalAccuracyMeasure": [
-      "MonitoringLocationHorizontalAccuracyUnit"
-    ],
-    "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
-    "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
-    "ResultValue": ["ResultUnit"],
-    "ResultDetectionQuantitationLimitMeasure": [
-      "ResultDetectionQuantitationLimitUnit",
-      "ResultDetectionQuantitationLimitType"
-    ],
-    "ActivityStartTimeZone": ["ActivityStartTime"],
-    "ActivityEndTimeZone": ["ActivityEndTime"],
-    "AnalysisStartTime": ["AnalysisStartTimeZone"],
-    "AnalysisStartTimeZone": ["AnalysisStartTime"]
-  },
   "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "unevaluatedProperties": false,
+      "properties": {
+        "DatasetName": {
+          "$ref": "./definitions.json#/definitions/DatasetName"
+        },
+        "MonitoringLocationID": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationID"
+        },
+        "MonitoringLocationName": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationName"
+        },
+        "MonitoringLocationLatitude": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationLatitude"
+        },
+        "MonitoringLocationLongitude": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationLongitude"
+        },
+        "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationHorizontalCoordinateReferenceSystemStrict"
+        },
+        "MonitoringLocationHorizontalAccuracyMeasure": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationHorizontalAccuracyMeasure"
+        },
+        "MonitoringLocationHorizontalAccuracyUnit": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationHorizontalAccuracyUnitStrict"
+        },
+        "MonitoringLocationVerticalMeasure": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalMeasure"
+        },
+        "MonitoringLocationVerticalUnit": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalUnitStrict"
+        },
+        "MonitoringLocationType": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationTypeStrict"
+        },
+        "ActivityType": {
+          "$ref": "./definitions.json#/definitions/ActivityTypeStrict"
+        },
+        "ActivityMediaName": {
+          "$ref": "./definitions.json#/definitions/ActivityMediaNameStrict"
+        },
+        "ActivityStartDate": {
+          "$ref": "./definitions.json#/definitions/ActivityStartDate"
+        },
+        "ActivityStartTime": {
+          "$ref": "./definitions.json#/definitions/ActivityStartTimeStrict"
+        },
+        "ActivityStartTimeZone": {
+          "$ref": "./definitions.json#/definitions/ActivityStartTimeZoneStrict"
+        },
+        "ActivityEndDate": {
+          "$ref": "./definitions.json#/definitions/ActivityEndDate"
+        },
+        "ActivityEndTime": {
+          "$ref": "./definitions.json#/definitions/ActivityEndTimeStrict"
+        },
+        "ActivityEndTimeZone": {
+          "$ref": "./definitions.json#/definitions/ActivityEndTimeZoneStrict"
+        },
+        "ActivityDepthHeightMeasure": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthHeightMeasure"
+        },
+        "ActivityDepthHeightUnit": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthHeightUnitStrict"
+        },
+        "SampleCollectionEquipmentName": {
+          "$ref": "./definitions.json#/definitions/SampleCollectionEquipmentNameStrict"
+        },
+        "CharacteristicName": {
+          "$ref": "./definitions.json#/definitions/CharacteristicNameStrict"
+        },
+        "MethodSpeciation": {
+          "$ref": "./definitions.json#/definitions/MethodSpeciationStrict"
+        },
+        "ResultSampleFraction": {
+          "$ref": "./definitions.json#/definitions/ResultSampleFractionStrict"
+        },
+        "ResultValue": {
+          "$ref": "./definitions.json#/definitions/ResultValue"
+        },
+        "ResultUnit": {
+          "$ref": "./definitions.json#/definitions/ResultUnitStrict"
+        },
+        "ResultValueType": {
+          "$ref": "./definitions.json#/definitions/ResultValueTypeStrict"
+        },
+        "ResultDetectionCondition": {
+          "$ref": "./definitions.json#/definitions/ResultDetectionConditionStrict"
+        },
+        "ResultDetectionQuantitationLimitMeasure": {
+          "$ref": "./definitions.json#/definitions/ResultDetectionQuantitationLimitMeasure"
+        },
+        "ResultDetectionQuantitationLimitUnit": {
+          "$ref": "./definitions.json#/definitions/ResultDetectionQuantitationLimitUnitStrict"
+        },
+        "ResultDetectionQuantitationLimitType": {
+          "$ref": "./definitions.json#/definitions/ResultDetectionQuantitationLimitTypeStrict"
+        },
+        "ResultStatusID": {
+          "$ref": "./definitions.json#/definitions/ResultStatusIDStrict"
+        },
+        "ResultComment": {
+          "$ref": "./definitions.json#/definitions/ResultComment"
+        },
+        "ResultAnalyticalMethodID": {
+          "$ref": "./definitions.json#/definitions/ResultAnalyticalMethodID"
+        },
+        "ResultAnalyticalMethodContext": {
+          "$ref": "./definitions.json#/definitions/ResultAnalyticalMethodContextStrict"
+        },
+        "ResultAnalyticalMethodName": {
+          "$ref": "./definitions.json#/definitions/ResultAnalyticalMethodName"
+        },
+        "AnalysisStartDate": {
+          "$ref": "./definitions.json#/definitions/AnalysisStartDate"
+        },
+        "AnalysisStartTime": {
+          "$ref": "./definitions.json#/definitions/AnalysisStartTimeStrict"
+        },
+        "AnalysisStartTimeZone": {
+          "$ref": "./definitions.json#/definitions/AnalysisStartTimeZoneStrict"
+        },
+        "LaboratoryName": {
+          "$ref": "./definitions.json#/definitions/LaboratoryName"
+        },
+        "LaboratorySampleID": {
+          "$ref": "./definitions.json#/definitions/LaboratorySampleID"
+        }
+      },
+      "required": [
+        "DatasetName",
+        "MonitoringLocationID",
+        "MonitoringLocationName",
+        "MonitoringLocationType",
+        "MonitoringLocationLatitude",
+        "MonitoringLocationLongitude",
+        "MonitoringLocationHorizontalCoordinateReferenceSystem",
+        "ActivityType",
+        "ActivityMediaName",
+        "ActivityStartDate",
+        "CharacteristicName",
+        "ResultValueType"
+      ],
+      "dependencies": {
+        "MonitoringLocationHorizontalAccuracyMeasure": [
+          "MonitoringLocationHorizontalAccuracyUnit"
+        ],
+        "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
+        "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
+        "ResultValue": ["ResultUnit"],
+        "ResultDetectionQuantitationLimitMeasure": [
+          "ResultDetectionQuantitationLimitUnit",
+          "ResultDetectionQuantitationLimitType"
+        ],
+        "ActivityStartTimeZone": ["ActivityStartTime"],
+        "ActivityEndTimeZone": ["ActivityEndTime"],
+        "AnalysisStartTime": ["AnalysisStartTimeZone"],
+        "AnalysisStartTimeZone": ["AnalysisStartTime"]
+      }
+    },
     {
       "$ref": "./logic/CharacteristicName-MethodSpeciation.json"
     },

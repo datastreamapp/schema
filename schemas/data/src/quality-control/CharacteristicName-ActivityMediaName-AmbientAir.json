@@ -4,6 +4,8 @@
   "description": "",
   "errorMessage": "qc-CharacteristicName-ActivityMediaName-AmbientAir",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": [
@@ -17,6 +19,8 @@
     "required": ["CharacteristicName"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ActivityMediaName": {
         "type": "string",

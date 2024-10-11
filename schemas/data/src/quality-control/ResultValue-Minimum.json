@@ -4,6 +4,8 @@
   "description": "Some water quality measurements, for example concentrations, should not have a value lower than zero. Please review these data points and correct as necessary.",
   "errorMessage": "qc-ResultValue-Minimum",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultValue": {
         "type": "number"
@@ -58,6 +60,8 @@
     "required": ["ResultValue", "ResultUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultValue": {
         "type": "number",

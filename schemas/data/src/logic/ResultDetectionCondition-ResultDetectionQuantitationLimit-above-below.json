@@ -4,8 +4,11 @@
   "description": "When the ResultDetectionCondition is set to 'Below Detection/Quantification Limit' or 'Above Detection/Quantification Limit' for a data point  'ResultDetectionQuantitationLimitMeasure' and  'ResultDetectionQuantitationLimitUnit' should be populated.",
   "errorMessage": "error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionCondition": {
+        "type": "string",
         "enum": [
           "Present Above Quantification Limit",
           "Present Below Quantification Limit",
@@ -17,12 +20,15 @@
     "required": ["ResultDetectionCondition"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "dependencies": {
       "ResultDetectionCondition": [
         "ResultDetectionQuantitationLimitType",
         "ResultDetectionQuantitationLimitMeasure",
         "ResultDetectionQuantitationLimitUnit"
       ]
-    }
+    },
+    "required": ["ResultDetectionCondition"]
   }
 }

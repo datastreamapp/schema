@@ -3,6 +3,8 @@
   "title": "WhiteSpace",
   "description": "Leading or trailing white space (i.e., spaces inserted before or after your character string) can cause issues with data management.",
   "errorMessage": "qc-WhiteSpace",
+  "type": "object",
+  "unevaluatedProperties": true,
   "properties": {
     "DatasetName": {
       "$ref": "../definitions.json#/definitions/trim"
@@ -28,5 +30,6 @@
     "LaboratorySampleID": {
       "$ref": "../definitions.json#/definitions/trim"
     }
-  }
+  },
+  "required": []
 }

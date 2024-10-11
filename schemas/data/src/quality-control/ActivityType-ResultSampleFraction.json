@@ -5,6 +5,8 @@
   "$comment": "ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see resources page)",
   "errorMessage": "qc-ActivityType-ResultSampleFraction, ActivityType:${/ActivityType}, ResultSampleFraction:${/ResultSampleFraction}",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ActivityType": {
         "enum": [
@@ -18,8 +20,11 @@
     "required": ["ActivityType"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultSampleFraction": false
-    }
+    },
+    "required": []
   }
 }

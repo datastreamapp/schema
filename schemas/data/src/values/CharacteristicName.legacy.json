@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/CharacteristicName.json",
+  "$id": "https://datastream.org/schema/data/values/CharacteristicName.loose.json",
   "title": "Characteristic",
   "description": "",
   "type": "string",
@@ -12543,6 +12543,7 @@
     "d9-NEt-FOSE",
     "Dacarbazine",
     "Dacthal Acid Metabolites",
+    "Dacthal metabolites (tetrachloroterephthalic acid and monomethyl tetrachloroterephthalic acid)",
     "Daidzein",
     "Dalapon",
     "Daminozide",
@@ -21311,7 +21312,7 @@
     "Sulfathiazole",
     "Sulfation rate",
     "Sulfentrazone",
-    "Sulfentrazone-3-carboxylic acid",
+    "Sulfentrazone 3-carboxylic acid",
     "Sulfide",
     "Sulfite",
     "Sulfluramid",
