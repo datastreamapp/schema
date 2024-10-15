@@ -22,9 +22,7 @@
           "Temperature, wet bulb"
         ]
       },
-      "ResultValue": {
-        "type": "number"
-      },
+      "ResultValue": true,
       "ResultUnit": {
         "enum": ["deg C"]
       }

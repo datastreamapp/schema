@@ -7,9 +7,7 @@
     "type": "object",
     "unevaluatedProperties": true,
     "properties": {
-      "ResultValue": {
-        "type": "number"
-      },
+      "ResultValue": true,
       "ResultUnit": {
         "enum": [
           "#/100ml",
