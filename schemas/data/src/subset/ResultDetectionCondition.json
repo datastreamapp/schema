@@ -3,5 +3,6 @@
   "Above Detection/Quantification Limit",
   "Detected Not Quantified",
   "Not Detected",
-  "Not Reported"
+  "Not Reported", 
+  "Unable to Measure"
 ]
