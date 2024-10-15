@@ -57,6 +57,16 @@
         "en": "For instances where a lab is not able to report a result of any type (for example, where the sample was lost/destroyed or where quality assurance requirements are not met).",
         "fr": "Pour les cas où un laboratoire n'est pas en mesure de communiquer un résultat, quel qu'il soit (par exemple, lorsque l'échantillon a été perdu/détruit ou lorsque les exigences en matière d'assurance qualité ne sont pas respectées)."
       }
+    },
+    "Unable to Measure": {
+      "name": {
+        "en": "Unable to Measure",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

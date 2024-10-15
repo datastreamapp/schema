@@ -47,10 +47,10 @@ validate () {
 sast () {
 	src=$1
 	opts=${*:2}
-
-	ajv sast src/${src}.build.json --fail ${opts} \
-        -r node_modules/wqx/json-schema/definitions.json \
-		-r src/definitions.build.json
+	# Note: Disabled due to suppressed criteria
+	# ajv sast src/${src}.build.json --fail ${opts} \
+ #        -r node_modules/wqx/json-schema/definitions.json \
+	# 	-r src/definitions.build.json
 }
 
 transpile () {
@@ -93,7 +93,7 @@ deref primary
 clean primary '.errorMessage?'
 version primary
 validate primary
-#sast primary
+sast primary
 post primary
 
 # extract - strict, w/ coerce
@@ -101,7 +101,7 @@ pre extract
 deref extract
 clean extract '.title?, .description?'
 validate extract
-#sast extract
+sast extract
 transpile extract '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 post extract
 
@@ -110,7 +110,7 @@ pre frontend
 deref frontend
 clean frontend '.title?, .description?'
 validate frontend
-#sast frontend
+sast frontend
 transpile frontend '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 post frontend
 
@@ -119,7 +119,7 @@ pre backend
 deref backend
 clean backend '.title?, .description?, .errorMessage?'
 validate backend
-#sast backend
+sast backend
 transpile backend ', .errorMessage?' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 post backend
 
@@ -128,7 +128,7 @@ pre quality-control
 deref quality-control
 clean quality-control '.__?'
 validate quality-control
-#sast quality-control
+sast quality-control
 transpile quality-control '' --loop-enum ${maxEnumLength}  --use-defaults empty --all-errors
 post quality-control
 
