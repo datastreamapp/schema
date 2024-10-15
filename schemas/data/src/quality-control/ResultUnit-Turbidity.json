@@ -4,6 +4,8 @@
   "description": "",
   "errorMessage": "qc-ResultUnit-Turbidity",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultUnit": {
         "enum": ["FNU", "FTU", "JTU", "NTU"]
@@ -12,6 +14,8 @@
     "required": ["ResultUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Turbidity"]

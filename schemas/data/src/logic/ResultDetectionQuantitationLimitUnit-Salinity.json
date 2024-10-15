@@ -4,6 +4,8 @@
   "description": "ResultDetectionQuantitationLimitUnit that require special unit notation.",
   "errorMessage": "error-ResultDetectionQuantitationLimitUnit-Salinity",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Salinity"]
@@ -12,6 +14,8 @@
     "required": ["CharacteristicName", "ResultDetectionQuantitationLimitUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitUnit": {
         "enum": ["ppth", "ppm", "PSU", "None"]

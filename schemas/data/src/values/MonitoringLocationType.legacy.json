@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MonitoringLocationType.json",
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationType.loose.json",
   "title": "Monitoring Location Type",
   "description": "",
   "type": "string",

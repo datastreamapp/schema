@@ -4,6 +4,8 @@
   "description": "",
   "errorMessage": "qc-MonitoringLocationCoordinate-BoundingBox, MonitoringLocationHorizontalCoordinateReferenceSystem:${/MonitoringLocationHorizontalCoordinateReferenceSystem}",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "MonitoringLocationHorizontalCoordinateReferenceSystem": {
         "type": "string",
@@ -19,6 +21,8 @@
     "required": ["MonitoringLocationLatitude", "MonitoringLocationLongitude"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "MonitoringLocationLatitude": {
         "type": "number",
@@ -39,6 +43,7 @@
           }
         ]
       }
-    }
+    },
+    "required": []
   }
 }

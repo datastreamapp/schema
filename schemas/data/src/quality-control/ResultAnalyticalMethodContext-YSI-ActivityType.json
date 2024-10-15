@@ -4,6 +4,8 @@
   "description": "",
   "errorMessage": "qc-ResultAnalyticalMethodContext-YSI-ActivityType",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultAnalyticalMethodContext": {
         "enum": ["YSI"]
@@ -12,6 +14,8 @@
     "required": ["ResultAnalyticalMethodContext"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ActivityType": {
         "enum": [

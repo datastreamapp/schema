@@ -1,191 +1,194 @@
-import test from 'ava'
+import test from "ava";
 
-import validate from '../frontend/index.js'
+import validate from "../frontend/index.js";
 
 const checkProperty = (errors, keyword, property) => {
-  if (errors === null) return false
+  if (errors === null) return false;
   for (const error of errors) {
-    if (error.keyword === 'errorMessage') {
-      const nested = checkProperty(error.params.errors, keyword, property)
-      if (nested) return nested
+    if (error.keyword === "errorMessage") {
+      const nested = checkProperty(error.params.errors, keyword, property);
+      if (nested) return nested;
     }
-    if (error.keyword !== keyword) continue
+    if (error.keyword !== keyword) continue;
     if (
-      ['required', 'dependencies'].includes(keyword) &&
+      ["required", "dependencies"].includes(keyword) &&
       error.params.missingProperty === property
     ) {
-      return true
+      return true;
     } else if (
-      keyword === 'additionalProperties' &&
+      keyword === "additionalProperties" &&
       error.params.additionalProperty === property
     ) {
-      return true
+      return true;
     } else if (
-      keyword === 'oneOf' &&
+      keyword === "oneOf" &&
       error.params.passingSchemas.includes(property)
     ) {
-      return true
-    } else if (keyword === 'anyOf') return true
-    else if (keyword === 'not' && error.instancePath.includes(property)) {
-      return true
-    } else if (keyword === 'enum' && error.instancePath.includes(property)) {
-      return true
-    } else if (keyword === 'minimum' && error.instancePath.includes(property)) {
-      return true
+      return true;
+    } else if (keyword === "anyOf") return true;
+    else if (keyword === "not" && error.instancePath.includes(property)) {
+      return true;
+    } else if (keyword === "enum" && error.instancePath.includes(property)) {
+      return true;
+    } else if (keyword === "minimum" && error.instancePath.includes(property)) {
+      return true;
     } else if (
-      keyword === 'exclusiveMinimum' &&
+      keyword === "exclusiveMinimum" &&
       error.instancePath.includes(property)
     ) {
-      return true
-    } else if (keyword === 'maximum' && error.instancePath.includes(property)) {
-      return true
+      return true;
+    } else if (keyword === "maximum" && error.instancePath.includes(property)) {
+      return true;
     } else if (
-      keyword === 'exclusiveMaximum' &&
+      keyword === "exclusiveMaximum" &&
       error.instancePath.includes(property)
     ) {
-      return true
+      return true;
     } else if (
-      keyword === 'false schema' &&
+      keyword === "false schema" &&
       error.instancePath.includes(property)
     ) {
-      return true
-    } else if (keyword === 'pattern') return true
+      return true;
+    } else if (keyword === "pattern") return true;
   }
-  return false
-}
+  return false;
+};
 
 // allOf/1
-test('Should accept CharacteristicName AND NOT MethodSpeciation', async (t) => {
+test("Should accept CharacteristicName AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Calcium'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
-  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), false)
-})
-test('Should reject CharacteristicName AND NOT MethodSpeciation', async (t) => {
+    CharacteristicName: "Calcium",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
+});
+test("Should reject CharacteristicName AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrate'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), true)
-})
-test('Should accept CharacteristicName AND MethodSpeciation', async (t) => {
+    CharacteristicName: "Nitrate",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+});
+test("Should accept CharacteristicName AND MethodSpeciation", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrate',
-    MethodSpeciation: 'as N'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
-  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), false)
-})
+    CharacteristicName: "Nitrate",
+    MethodSpeciation: "as N",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
+});
 
 // CharacteristicName-ResultSampleFraction
-test('Should accept CharacteristicName AND NOT ResultSampleFraction', async (t) => {
+test("Should accept CharacteristicName AND NOT ResultSampleFraction", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Dissolved oxygen (DO)'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+    CharacteristicName: "Dissolved oxygen (DO)",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
-    false
-  )
-})
-test('Should rejects CharacteristicName AND NOT ResultSampleFraction', async (t) => {
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    false,
+  );
+});
+test("Should rejects CharacteristicName AND NOT ResultSampleFraction", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Silver'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'ResultSampleFraction'), true)
-})
-test('Should accept CharacteristicName AND ResultSampleFraction', async (t) => {
-  const valid = validate({
-    CharacteristicName: 'Silver',
-    ResultSampleFraction: 'Dissolved'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+    CharacteristicName: "Silver",
+  });
+  t.false(valid);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
-    false
-  )
-})
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    true,
+  );
+});
+test("Should accept CharacteristicName AND ResultSampleFraction", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Silver",
+    ResultSampleFraction: "Dissolved",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    false,
+  );
+});
 
 // CharacteristicName-StableIsotope-ResultSampleFraction
-test('Should reject StableIsotope CharacteristicName, MethodSpeciation required', async (t) => {
+test("Should reject StableIsotope CharacteristicName, MethodSpeciation required", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrogen-15'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
-  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), true)
-})
-test('Should reject StableIsotope CharacteristicName', async (t) => {
+    CharacteristicName: "Nitrogen-15",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+});
+test("Should reject StableIsotope CharacteristicName", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrogen-15',
-    MethodSpeciation: 'as NH4'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
-  t.is(checkProperty(validate.errors, 'enum', 'MethodSpeciation'), true)
-})
-test('Should accept StableIsotope CharacteristicName', async (t) => {
+    CharacteristicName: "Nitrogen-15",
+    MethodSpeciation: "as NH4",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "enum", "MethodSpeciation"), true);
+});
+test("Should accept StableIsotope CharacteristicName", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Nitrogen-15',
-    MethodSpeciation: 'of NH4'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
-  t.is(checkProperty(validate.errors, 'required', 'MethodSpeciation'), false)
-})
+    CharacteristicName: "Nitrogen-15",
+    MethodSpeciation: "of NH4",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
+});
 
 // CharacteristicName-Nutrient-ResultSampleFraction
-test('Should reject Nutrient CharacteristicName AND ResultSampleFraction', async (t) => {
+test("Should reject Nutrient CharacteristicName AND ResultSampleFraction", async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
-    CharacteristicName: 'Ammonia',
-    ActivityType: '',
-    ResultSampleFraction: 'Total'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Ammonia",
+    ActivityType: "",
+    ResultSampleFraction: "Total",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
-    false
-  )
-  t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), true)
-})
-test('Should accept Nutrient CharacteristicName AND filter ResultSampleFraction', async (t) => {
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    false,
+  );
+  t.is(checkProperty(validate.errors, "enum", "ResultSampleFraction"), true);
+});
+test("Should accept Nutrient CharacteristicName AND filter ResultSampleFraction", async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
-    CharacteristicName: 'Ammonia',
-    ActivityType: '',
-    ResultSampleFraction: 'Filtered'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Ammonia",
+    ActivityType: "",
+    ResultSampleFraction: "Filtered",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
-    false
-  )
-  t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
-})
-test('Should accept Nutrient Sediment', async (t) => {
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    false,
+  );
+  t.is(checkProperty(validate.errors, "enum", "ResultSampleFraction"), false);
+});
+test("Should accept Nutrient Sediment", async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water Sediment',
-    CharacteristicName: 'Ammonia',
-    ActivityType: '',
-    ResultSampleFraction: 'Total'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+    ActivityMediaName: "Surface Water Sediment",
+    CharacteristicName: "Ammonia",
+    ActivityType: "",
+    ResultSampleFraction: "Total",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultSampleFraction'),
-    false
-  )
-  t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
-})
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    false,
+  );
+  t.is(checkProperty(validate.errors, "enum", "ResultSampleFraction"), false);
+});
 // test('Should accept Nutrient Sediment with no sample fraction', async (t) => {
 //   let valid = validate({
 //     'ActivityMediaName':'Surface Water Sediment',
@@ -201,479 +204,482 @@ test('Should accept Nutrient Sediment', async (t) => {
 // })
 
 // allOf/3
-test('Should reject NOT ResultValue AND NOT ResultDetectionCondition', async (t) => {
-  const valid = validate({})
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), true)
+test("Should reject NOT ResultValue AND NOT ResultDetectionCondition", async (t) => {
+  const valid = validate({});
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "ResultValue"), true);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultDetectionCondition'),
-    true
-  )
-})
-test('Should reject ResultValue AND ResultDetectionCondition', async (t) => {
+    checkProperty(validate.errors, "required", "ResultDetectionCondition"),
+    true,
+  );
+});
+test("Should reject ResultValue AND ResultDetectionCondition", async (t) => {
   const valid = validate({
     ResultValue: 1,
-    ResultDetectionCondition: 'Not Reported'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'false schema', 'ResultValue'), true)
+    ResultDetectionCondition: "Not Reported",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "false schema", "ResultValue"), true);
   t.is(
-    checkProperty(validate.errors, 'false schema', 'ResultDetectionCondition'),
-    true
-  )
-})
+    checkProperty(validate.errors, "false schema", "ResultDetectionCondition"),
+    true,
+  );
+});
 
-test('Should accept ResultValue OR ResultDetectionCondition', async (t) => {
+test("Should accept ResultValue OR ResultDetectionCondition", async (t) => {
   let valid = validate({
-    ResultValue: 1
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), false)
+    ResultValue: 1,
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "ResultValue"), false);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultDetectionCondition'),
-    false
-  )
-  t.is(checkProperty(validate.errors, 'enum', 'ResultValue'), false)
+    checkProperty(validate.errors, "required", "ResultDetectionCondition"),
+    false,
+  );
+  t.is(checkProperty(validate.errors, "enum", "ResultValue"), false);
   t.is(
-    checkProperty(validate.errors, 'enum', 'ResultDetectionCondition'),
-    false
-  )
+    checkProperty(validate.errors, "enum", "ResultDetectionCondition"),
+    false,
+  );
 
   valid = validate({
-    ResultDetectionCondition: 'Not Reported'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'required', 'ResultValue'), false)
+    ResultDetectionCondition: "Not Reported",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "ResultValue"), false);
   t.is(
-    checkProperty(validate.errors, 'required', 'ResultDetectionCondition'),
-    false
-  )
-  t.is(checkProperty(validate.errors, 'enum', 'ResultValue'), false)
+    checkProperty(validate.errors, "required", "ResultDetectionCondition"),
+    false,
+  );
+  t.is(checkProperty(validate.errors, "enum", "ResultValue"), false);
   t.is(
-    checkProperty(validate.errors, 'enum', 'ResultDetectionCondition'),
-    false
-  )
-})
+    checkProperty(validate.errors, "enum", "ResultDetectionCondition"),
+    false,
+  );
+});
 
 // allOf/4
 
-test('Should reject ResultDetectionCondition = Present Above Quantification Limit', async (t) => {
+test("Should reject ResultDetectionCondition = Present Above Quantification Limit", async (t) => {
   const valid = validate({
-    ResultDetectionCondition: 'Present Above Quantification Limit'
-  })
-  t.false(valid)
+    ResultDetectionCondition: "Present Above Quantification Limit",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitType'
+      "dependencies",
+      "ResultDetectionQuantitationLimitType",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitMeasure'
+      "dependencies",
+      "ResultDetectionQuantitationLimitMeasure",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitUnit'
+      "dependencies",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    true
-  )
-})
+    true,
+  );
+});
 
-test('Should reject ResultDetectionCondition = Present Below Quantification Limit', async (t) => {
+test("Should reject ResultDetectionCondition = Present Below Quantification Limit", async (t) => {
   const valid = validate({
     ResultValue: 1,
-    ResultDetectionCondition: 'Present Below Quantification Limit'
-  })
-  t.false(valid)
+    ResultDetectionCondition: "Present Below Quantification Limit",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitType'
+      "dependencies",
+      "ResultDetectionQuantitationLimitType",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitMeasure'
+      "dependencies",
+      "ResultDetectionQuantitationLimitMeasure",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitUnit'
+      "dependencies",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    true
-  )
-})
+    true,
+  );
+});
 
-test('Should accept ResultDetectionCondition', async (t) => {
+test("Should accept ResultDetectionCondition", async (t) => {
   const valid = validate({
     ResultValue: 1,
-    ResultDetectionCondition: 'Present Below Quantification Limit',
-    ResultDetectionQuantitationLimitType: 'A',
+    ResultDetectionCondition: "Present Below Quantification Limit",
+    ResultDetectionQuantitationLimitType: "A",
     ResultDetectionQuantitationLimitMeasure: 1,
-    ResultDetectionQuantitationLimitUnit: 'mg/L'
-  })
-  t.false(valid)
+    ResultDetectionQuantitationLimitUnit: "mg/L",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitType'
+      "dependencies",
+      "ResultDetectionQuantitationLimitType",
     ),
-    false
-  )
+    false,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitMeasure'
+      "dependencies",
+      "ResultDetectionQuantitationLimitMeasure",
     ),
-    false
-  )
+    false,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultDetectionQuantitationLimitUnit'
+      "dependencies",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    false
-  )
-})
+    false,
+  );
+});
 
 // allOf/4
-test('Should reject ResultDetectionCondition = Not Detected', async (t) => {
+test("Should reject ResultDetectionCondition = Not Detected", async (t) => {
   const valid = validate({
-    ResultDetectionCondition: 'Not Detected',
-    ResultDetectionQuantitationLimitType: 'Sample Detection Limit',
+    ResultDetectionCondition: "Not Detected",
+    ResultDetectionQuantitationLimitType: "Sample Detection Limit",
     ResultDetectionQuantitationLimitMeasure: 0,
-    ResultDetectionQuantitationLimitUnit: 'None'
-  })
-  t.false(valid)
+    ResultDetectionQuantitationLimitUnit: "None",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'false schema',
-      'ResultDetectionQuantitationLimitType'
+      "false schema",
+      "ResultDetectionQuantitationLimitType",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'false schema',
-      'ResultDetectionQuantitationLimitMeasure'
+      "false schema",
+      "ResultDetectionQuantitationLimitMeasure",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'false schema',
-      'ResultDetectionQuantitationLimitUnit'
+      "false schema",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    true
-  )
-})
+    true,
+  );
+});
 
-test('Should accept ResultDetectionCondition = Not Detected', async (t) => {
+test("Should accept ResultDetectionCondition = Not Detected", async (t) => {
   const valid = validate({
-    ResultDetectionCondition: 'Not Detected'
-  })
-  t.false(valid)
+    ResultDetectionCondition: "Not Detected",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitType'
+      "enum",
+      "ResultDetectionQuantitationLimitType",
     ),
-    false
-  )
+    false,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitMeasure'
+      "enum",
+      "ResultDetectionQuantitationLimitMeasure",
     ),
-    false
-  )
+    false,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitUnit'
+      "enum",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    false
-  )
-})
+    false,
+  );
+});
 
-test('Should reject ResultDetectionCondition = Detected Not Quantified', async (t) => {
+test("Should reject ResultDetectionCondition = Detected Not Quantified", async (t) => {
   const valid = validate({
-    ResultDetectionCondition: 'Detected Not Quantified',
-    ResultDetectionQuantitationLimitType: 'Sample Detection Limit',
+    ResultDetectionCondition: "Detected Not Quantified",
+    ResultDetectionQuantitationLimitType: "Sample Detection Limit",
     ResultDetectionQuantitationLimitMeasure: 0,
-    ResultDetectionQuantitationLimitUnit: 'None'
-  })
-  t.false(valid)
+    ResultDetectionQuantitationLimitUnit: "None",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'false schema',
-      'ResultDetectionQuantitationLimitType'
+      "false schema",
+      "ResultDetectionQuantitationLimitType",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'false schema',
-      'ResultDetectionQuantitationLimitMeasure'
+      "false schema",
+      "ResultDetectionQuantitationLimitMeasure",
     ),
-    true
-  )
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'false schema',
-      'ResultDetectionQuantitationLimitUnit'
+      "false schema",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    true
-  )
-})
+    true,
+  );
+});
 
-test('Should accept ResultDetectionCondition = Detected Not Quantified', async (t) => {
+test("Should accept ResultDetectionCondition = Detected Not Quantified", async (t) => {
   const valid = validate({
-    ResultDetectionCondition: 'Detected Not Quantified'
-  })
-  t.false(valid)
+    ResultDetectionCondition: "Detected Not Quantified",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitType'
+      "enum",
+      "ResultDetectionQuantitationLimitType",
     ),
-    false
-  )
+    false,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitMeasure'
+      "enum",
+      "ResultDetectionQuantitationLimitMeasure",
     ),
-    false
-  )
+    false,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitUnit'
+      "enum",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    false
-  )
-})
+    false,
+  );
+});
 
 // allOf/5
-test('Should reject ActivityType = Sample for ResultAnalyticalMethodID', async (t) => {
+test("Should reject ActivityType = Sample for ResultAnalyticalMethodID", async (t) => {
   const valid = validate({
-    ActivityType: 'Sample-Other'
-  })
-  t.false(valid)
+    ActivityType: "Sample-Other",
+  });
+  t.false(valid);
   t.is(
-    checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID'),
-    true
-  )
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    true,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultAnalyticalMethodContext'
+      "dependencies",
+      "ResultAnalyticalMethodContext",
     ),
-    true
-  )
-})
-test('Should accept ActivityType = Sample for ResultAnalyticalMethodID', async (t) => {
+    true,
+  );
+});
+test("Should accept ActivityType = Sample for ResultAnalyticalMethodID", async (t) => {
   const valid = validate({
-    ActivityType: 'Sample-Other',
-    ResultAnalyticalMethodID: '0',
-    ResultAnalyticalMethodContext: 'ENV'
-  })
-  t.false(valid)
+    ActivityType: "Sample-Other",
+    ResultAnalyticalMethodID: "0",
+    ResultAnalyticalMethodContext: "ENV",
+  });
+  t.false(valid);
   t.is(
-    checkProperty(validate.errors, 'dependencies', 'ResultAnalyticalMethodID'),
-    false
-  )
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    false,
+  );
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultAnalyticalMethodContext'
+      "dependencies",
+      "ResultAnalyticalMethodContext",
     ),
-    false
-  )
-})
+    false,
+  );
+});
 
-test('Should reject ActivityType = Sample for ResultAnalyticalMethodName', async (t) => {
+test("Should reject ActivityType = Sample for ResultAnalyticalMethodName", async (t) => {
   const valid = validate({
-    ActivityType: 'Sample-Other'
-  })
-  t.false(valid)
+    ActivityType: "Sample-Other",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultAnalyticalMethodName'
+      "dependencies",
+      "ResultAnalyticalMethodName",
     ),
-    true
-  )
-})
+    true,
+  );
+});
 
-test('Should accept ActivityType = Sample for ResultAnalyticalMethodName', async (t) => {
+test("Should accept ActivityType = Sample for ResultAnalyticalMethodName", async (t) => {
   const valid = validate({
-    ActivityType: 'Sample-Other',
-    ResultAnalyticalMethodName: 'Unspecified'
-  })
-  t.false(valid)
+    ActivityType: "Sample-Other",
+    ResultAnalyticalMethodName: "Unspecified",
+  });
+  t.false(valid);
   t.is(
     checkProperty(
       validate.errors,
-      'dependencies',
-      'ResultAnalyticalMethodName'
+      "dependencies",
+      "ResultAnalyticalMethodName",
     ),
-    false
-  )
-})
+    false,
+  );
+});
 
 // CSV Injection
-test('Should reject columns with potential csv injection', async (t) => {
+test("Should reject columns with potential csv injection", async (t) => {
   const valid = validate({
-    DatasetName: '=equals',
-    MonitoringLocationID: '+positive',
-    MonitoringLocationName: '-negative',
-    ResultComment: '@at  ',
+    DatasetName: "=equals",
+    MonitoringLocationID: "+positive",
+    MonitoringLocationName: "-negative",
+    ResultComment: "@at  ",
     ResultAnalyticalMethodID: `
 carriage return`,
-    ResultAnalyticalMethodName: '\ncarriage return',
-    LaboratoryName: '\rcarriage return',
-    LaboratorySampleID: '\ttab'
-  })
-  t.false(valid)
-  t.is(checkProperty(validate.errors, 'pattern', 'DatasetName'), true)
-  t.is(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'), true)
+    ResultAnalyticalMethodName: "\ncarriage return",
+    LaboratoryName: "\rcarriage return",
+    LaboratorySampleID: "\ttab",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), true);
+  t.is(checkProperty(validate.errors, "pattern", "MonitoringLocationID"), true);
   t.is(
-    checkProperty(validate.errors, 'pattern', 'MonitoringLocationName'),
-    true
-  )
-  t.is(checkProperty(validate.errors, 'pattern', 'ResultComment'), true)
+    checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
+    true,
+  );
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
   t.is(
-    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID'),
-    true
-  )
+    checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodID"),
+    true,
+  );
   t.is(
-    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName'),
-    true
-  )
-  t.is(checkProperty(validate.errors, 'pattern', 'LaboratoryName'), true)
-  t.is(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'), true)
-})
+    checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodName"),
+    true,
+  );
+  t.is(checkProperty(validate.errors, "pattern", "LaboratoryName"), true);
+  t.is(checkProperty(validate.errors, "pattern", "LaboratorySampleID"), true);
+});
 
-test('Should accept columns without potential csv injection', async (t) => {
+test("Should accept columns without potential csv injection", async (t) => {
   const valid = validate({
-    DatasetName: '~',
-    MonitoringLocationID: '1',
-    MonitoringLocationName: '&',
-    ResultComment: '$',
-    ResultAnalyticalMethodID: '#',
-    ResultAnalyticalMethodName: '|',
-    LaboratoryName: '_',
-    LaboratorySampleID: '*'
-  })
-  t.false(valid)
+    DatasetName: "~",
+    MonitoringLocationID: "1",
+    MonitoringLocationName: "&",
+    ResultComment: "$",
+    ResultAnalyticalMethodID: "#",
+    ResultAnalyticalMethodName: "|",
+    LaboratoryName: "_",
+    LaboratorySampleID: "*",
+  });
+  t.false(valid);
   // console.log(valid, JSON.stringify(validate.errors, null, 2))
-  t.is(checkProperty(validate.errors, 'pattern', 'DatasetName'), false)
-  t.is(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'), false)
+  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), false);
   t.is(
-    checkProperty(validate.errors, 'pattern', 'MonitoringLocationName'),
-    false
-  )
-  t.is(checkProperty(validate.errors, 'pattern', 'ResultComment'), false)
+    checkProperty(validate.errors, "pattern", "MonitoringLocationID"),
+    false,
+  );
   t.is(
-    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID'),
-    false
-  )
+    checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
+    false,
+  );
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), false);
   t.is(
-    checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName'),
-    false
-  )
-  t.is(checkProperty(validate.errors, 'pattern', 'LaboratoryName'), false)
-  t.is(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'), false)
-})
+    checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodID"),
+    false,
+  );
+  t.is(
+    checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodName"),
+    false,
+  );
+  t.is(checkProperty(validate.errors, "pattern", "LaboratoryName"), false);
+  t.is(checkProperty(validate.errors, "pattern", "LaboratorySampleID"), false);
+});
 
 // *** ResultUnit-Salinity *** //
-test('Should accept when Salinity and expected unit', async (t) => {
+test("Should accept when Salinity and expected unit", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Salinity',
+    CharacteristicName: "Salinity",
     ResultValue: 0,
-    ResultUnit: 'PSU'
-  })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), false)
-})
-test('Should reject when Salinity and `ppt`', async (t) => {
+    ResultUnit: "PSU",
+  });
+  t.is(valid, false);
+  t.is(checkProperty(validate.errors, "enum", "ResultUnit"), false);
+});
+test("Should reject when Salinity and `ppt`", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Salinity',
-    ResultUnit: 'ppt'
-  })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
-})
+    CharacteristicName: "Salinity",
+    ResultUnit: "ppt",
+  });
+  t.is(valid, false);
+  t.is(checkProperty(validate.errors, "enum", "ResultUnit"), true);
+});
 
 // *** ResultDetectionQuantitationLimitUnit-Salinity *** //
-test('Should accept when Salinity and expected ResultDetectionQuantitationLimitUnit', async (t) => {
+test("Should accept when Salinity and expected ResultDetectionQuantitationLimitUnit", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Salinity',
+    CharacteristicName: "Salinity",
     ResultDetectionQuantitationLimitMeasure: 0,
-    ResultDetectionQuantitationLimitUnit: 'PSU'
-  })
-  t.is(valid, false)
+    ResultDetectionQuantitationLimitUnit: "PSU",
+  });
+  t.is(valid, false);
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitUnit'
+      "enum",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    false
-  )
-})
-test('Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`', async (t) => {
+    false,
+  );
+});
+test("Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`", async (t) => {
   const valid = validate({
-    CharacteristicName: 'Salinity',
+    CharacteristicName: "Salinity",
     ResultDetectionQuantitationLimitMeasure: 0,
-    ResultDetectionQuantitationLimitUnit: 'ppt'
-  })
-  t.is(valid, false)
+    ResultDetectionQuantitationLimitUnit: "ppt",
+  });
+  t.is(valid, false);
   t.is(
     checkProperty(
       validate.errors,
-      'enum',
-      'ResultDetectionQuantitationLimitUnit'
+      "enum",
+      "ResultDetectionQuantitationLimitUnit",
     ),
-    true
-  )
-})
+    true,
+  );
+});
 
 // *** one off *** //
 /*test('one off', async (t) => {

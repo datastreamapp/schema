@@ -8,163 +8,162 @@
   },
   "title": "DataStream Schema",
   "description": "Water Quality Data Schema based on WQX",
-  "type": "object",
-  "unevaluatedProperties": false,
   "allOf": [
     {
       "type": "object",
       "additionalProperties": false,
+      "unevaluatedProperties": false,
       "properties": {
         "DatasetName": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/DatasetName",
+          "$ref": "./definitions.json#/definitions/DatasetName",
           "transform": ["trim"]
         },
         "MonitoringLocationID": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationID",
+          "$ref": "./definitions.json#/definitions/MonitoringLocationID",
           "transform": ["trim"]
         },
         "MonitoringLocationName": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationName",
+          "$ref": "./definitions.json#/definitions/MonitoringLocationName",
           "transform": ["trim"]
         },
         "MonitoringLocationLatitude": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationLatitude"
+          "$ref": "./definitions.json#/definitions/MonitoringLocationLatitude"
         },
         "MonitoringLocationLongitude": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationLongitude"
+          "$ref": "./definitions.json#/definitions/MonitoringLocationLongitude"
         },
         "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationHorizontalCoordinateReferenceSystem",
+          "$ref": "./definitions.json#/definitions/MonitoringLocationHorizontalCoordinateReferenceSystemLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationHorizontalAccuracyMeasure": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationHorizontalAccuracyMeasure"
+          "$ref": "./definitions.json#/definitions/MonitoringLocationHorizontalAccuracyMeasure"
         },
         "MonitoringLocationHorizontalAccuracyUnit": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationHorizontalAccuracyUnit",
+          "$ref": "./definitions.json#/definitions/MonitoringLocationHorizontalAccuracyUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationVerticalMeasure": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationVerticalMeasure"
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalMeasure"
         },
         "MonitoringLocationVerticalUnit": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationVerticalUnit",
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "MonitoringLocationType": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MonitoringLocationType",
+          "$ref": "./definitions.json#/definitions/MonitoringLocationTypeLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ActivityType": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ActivityType",
+          "$ref": "./definitions.json#/definitions/ActivityTypeLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ActivityMediaName": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ActivityMediaName",
+          "$ref": "./definitions.json#/definitions/ActivityMediaNameLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ActivityStartDate": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ActivityStartDate"
+          "$ref": "./definitions.json#/definitions/ActivityStartDate"
         },
         "ActivityStartTime": {
-          "$ref": "./definitions.json#/definitions/time-loose"
+          "$ref": "./definitions.json#/definitions/ActivityStartTimeLoose"
         },
         "ActivityStartTimeZone": {
-          "$ref": "./definitions.json#/definitions/timezone-loose"
+          "$ref": "./definitions.json#/definitions/ActivityStartTimeZoneLoose"
         },
         "ActivityEndDate": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ActivityEndDate"
+          "$ref": "./definitions.json#/definitions/ActivityEndDate"
         },
         "ActivityEndTime": {
-          "$ref": "./definitions.json#/definitions/time-loose"
+          "$ref": "./definitions.json#/definitions/ActivityEndTimeLoose"
         },
         "ActivityEndTimeZone": {
-          "$ref": "./definitions.json#/definitions/timezone-loose"
+          "$ref": "./definitions.json#/definitions/ActivityEndTimeZoneLoose"
         },
         "ActivityDepthHeightMeasure": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ActivityDepthHeightMeasure"
+          "$ref": "./definitions.json#/definitions/ActivityDepthHeightMeasure"
         },
         "ActivityDepthHeightUnit": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ActivityDepthHeightUnit",
+          "$ref": "./definitions.json#/definitions/ActivityDepthHeightUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "SampleCollectionEquipmentName": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/SampleCollectionEquipmentName",
+          "$ref": "./definitions.json#/definitions/SampleCollectionEquipmentNameLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "CharacteristicName": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/CharacteristicName",
+          "$ref": "./definitions.json#/definitions/CharacteristicNameLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "MethodSpeciation": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/MethodSpeciation",
+          "$ref": "./definitions.json#/definitions/MethodSpeciationLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultSampleFraction": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultSampleFraction",
+          "$ref": "./definitions.json#/definitions/ResultSampleFractionLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultValue": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultValue"
+          "$ref": "./definitions.json#/definitions/ResultValue"
         },
         "ResultUnit": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultUnit",
+          "$ref": "./definitions.json#/definitions/ResultUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultValueType": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultValueType",
+          "$ref": "./definitions.json#/definitions/ResultValueTypeLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionCondition": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultDetectionCondition",
+          "$ref": "./definitions.json#/definitions/ResultDetectionConditionLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionQuantitationLimitMeasure": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultDetectionQuantitationLimitMeasure"
+          "$ref": "./definitions.json#/definitions/ResultDetectionQuantitationLimitMeasure"
         },
         "ResultDetectionQuantitationLimitUnit": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultDetectionQuantitationLimitUnit",
+          "$ref": "./definitions.json#/definitions/ResultDetectionQuantitationLimitUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultDetectionQuantitationLimitType": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultDetectionQuantitationLimitType",
+          "$ref": "./definitions.json#/definitions/ResultDetectionQuantitationLimitTypeLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultStatusID": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultStatusID",
+          "$ref": "./definitions.json#/definitions/ResultStatusIDLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultComment": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultComment",
+          "$ref": "./definitions.json#/definitions/ResultComment",
           "transform": ["trim"]
         },
         "ResultAnalyticalMethodID": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultAnalyticalMethodID",
+          "$ref": "./definitions.json#/definitions/ResultAnalyticalMethodID",
           "transform": ["trim"]
         },
         "ResultAnalyticalMethodContext": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultAnalyticalMethodContext",
+          "$ref": "./definitions.json#/definitions/ResultAnalyticalMethodContextLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ResultAnalyticalMethodName": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/ResultAnalyticalMethodName",
+          "$ref": "./definitions.json#/definitions/ResultAnalyticalMethodName",
           "transform": ["trim"]
         },
         "AnalysisStartDate": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/AnalysisStartDate"
+          "$ref": "./definitions.json#/definitions/AnalysisStartDate"
         },
         "AnalysisStartTime": {
-          "$ref": "./definitions.json#/definitions/time-loose"
+          "$ref": "./definitions.json#/definitions/AnalysisStartTimeLoose"
         },
         "AnalysisStartTimeZone": {
-          "$ref": "./definitions.json#/definitions/timezone-loose"
+          "$ref": "./definitions.json#/definitions/AnalysisStartTimeZoneLoose"
         },
         "LaboratoryName": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/LaboratoryName",
+          "$ref": "./definitions.json#/definitions/LaboratoryName",
           "transform": ["trim"]
         },
         "LaboratorySampleID": {
-          "$ref": "./definitions.json#/definitions/defaultColumns/LaboratorySampleID",
+          "$ref": "./definitions.json#/definitions/LaboratorySampleID",
           "transform": ["trim"]
         }
       },

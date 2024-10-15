@@ -6,7 +6,7 @@
   "oneOf": [
     {
       "type": "object",
-      "additionalProperties": true,
+      "unevaluatedProperties": true,
       "properties": {
         "ResultValue": true,
         "ResultDetectionCondition": false
@@ -16,7 +16,7 @@
     },
     {
       "type": "object",
-      "additionalProperties": true,
+      "unevaluatedProperties": true,
       "properties": {
         "ResultValue": false,
         "ResultDetectionCondition": true

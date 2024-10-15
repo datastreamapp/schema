@@ -4,6 +4,8 @@
   "description": "Some water quality measurements, for example concentrations, should not have a value lower than zero. Please review these data points and correct as necessary.",
   "errorMessage": "qc-ResultDetectionQuantitationLimitMinimumMeasure-Minimum",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitMeasure": {
         "type": "number"
@@ -61,6 +63,8 @@
     ]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitMeasure": {
         "type": "number",
