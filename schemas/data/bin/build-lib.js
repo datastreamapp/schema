@@ -39,7 +39,7 @@ export const wqx = {
 export const getList = async (type, column, list = []) => {
   try {
     const list = await readFile(
-      join(__dirname, `../src/${type}/${column}.json`)
+      join(__dirname, `../src/${type}/${column}.json`),
     )
       .then((res) => JSON.parse(res))
       .catch(() => []);
@@ -84,6 +84,8 @@ export const retire = (column, list) => {
       "ResultUnit",
       "ResultDetectionQuantitationLimitUnit",
       "MeasurementUnit",
+      // *^$
+      "MonitoringLocationHorizontalCoordinateReferenceSystem",
     ].includes(column)
   )
     return [[], list];
@@ -109,7 +111,7 @@ export const retire = (column, list) => {
           // duplicate, but not removed yet
           "Benzenamine, 2,3-dimethyl-4-[(1,1,2,2-tetrafluoroethyl)thio]-",
           "Benzenamine, 2,5-dimethyl-4-[(1,1,2,2-tetrafluoroethyl)thio]-",
-        ].includes(item)
+        ].includes(item),
     )
     .map((item) => {
       const newValue = replaceRetired(item);
@@ -196,7 +198,7 @@ export const additions = async (column, list = []) => {
 
   try {
     const additions = await readFile(
-      join(__dirname, `../src/addition/${column}.json`)
+      join(__dirname, `../src/addition/${column}.json`),
     )
       .then((res) => JSON.parse(res))
       .catch(() => []);
@@ -213,7 +215,7 @@ export const additions = async (column, list = []) => {
   // TODO only have apply to legacy
   try {
     const deprecated = await readFile(
-      join(__dirname, `../src/deprecated/${column}.json`)
+      join(__dirname, `../src/deprecated/${column}.json`),
     )
       .then((res) => JSON.parse(res))
       .catch(() => []);
@@ -238,7 +240,9 @@ export const additions = async (column, list = []) => {
 
   let uniqueEnum = [
     ...new Set(
-      arr.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }))
+      arr.sort((a, b) =>
+        a.localeCompare(b, undefined, { sensitivity: "base" }),
+      ),
     ),
   ];
 
@@ -302,7 +306,7 @@ export const subset = async (column, list = [], log = true) => {
     }
     if (log && subsetList[subsetList.length - 1] !== value) {
       console.log(
-        `|** Subset value missing from allowed values: ${column} "${value}"`
+        `|** Subset value missing from allowed values: ${column} "${value}"`,
       );
     }
   }
@@ -317,7 +321,7 @@ export const subtractions = async (column, list = [], retired = []) => {
     arr = arr.concat(
       await readFile(join(__dirname, `../src/subtraction/${column}.json`))
         .then((res) => JSON.parse(res))
-        .catch(() => [])
+        .catch(() => []),
     );
   } catch (e) {
     if (e.message.includes("Cannot find module")) {
@@ -339,7 +343,7 @@ export const subtractions = async (column, list = [], retired = []) => {
     arr = arr.concat(
       await readFile(join(__dirname, `wqx/deprecated/${column}.json`))
         .then((res) => JSON.parse(res))
-        .catch(() => [])
+        .catch(() => []),
     );
   } catch (e) {
     if (e.message.includes("Cannot find module")) {
