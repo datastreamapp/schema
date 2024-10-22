@@ -1,6 +1,6 @@
 {
   "name": "@datastreamapp/data-schema",
-  "version": "2.23.2",
+  "version": "2.24.2",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
@@ -32,10 +32,10 @@
   },
   "homepage": "https://github.com/datastreamapp/schema#readme",
   "dependencies": {
-    "wqx": "3.0.182"
+    "wqx": "3.0.188"
   },
   "devDependencies": {
-    "change-case": "^4.0.0"
+    "change-case": "^5.0.0"
   },
   "repository": {
     "type": "git",

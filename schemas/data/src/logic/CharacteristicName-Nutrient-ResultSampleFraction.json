@@ -4,6 +4,8 @@
   "description": "ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)",
   "errorMessage": "error-CharacteristicName-Nutrient-ResultSampleFraction",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ActivityMediaName": {
         "enum": [
@@ -36,6 +38,8 @@
     "required": ["ActivityMediaName", "CharacteristicName"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultSampleFraction": {
         "enum": [

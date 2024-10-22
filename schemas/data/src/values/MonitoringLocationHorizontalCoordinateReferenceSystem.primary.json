@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalCoordinateReferenceSystem.json",
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalCoordinateReferenceSystem.strict.json",
   "title": "Horizontal Reference Datum",
   "description": "",
   "type": "string",
@@ -7,7 +7,6 @@
     "AMSMA",
     "ASTRO",
     "GUAM",
-    "HARN",
     "JHNSN",
     "NAD27",
     "NAD83",

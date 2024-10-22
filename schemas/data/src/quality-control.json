@@ -6,183 +6,111 @@
   },
   "title": "DataStream Quality Control",
   "description": "Quality Control Checks for a single observation",
-  "type": "object",
-  "additionalProperties": false,
-  "properties": {
-    "DatasetName": {
-      "type": "string"
-    },
-    "MonitoringLocationID": {
-      "type": "string"
-    },
-    "MonitoringLocationName": {
-      "type": "string"
-    },
-    "MonitoringLocationLatitude": {
-      "type": "number"
-    },
-    "MonitoringLocationLongitude": {
-      "type": "number"
-    },
-    "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-      "type": "string"
-    },
-    "MonitoringLocationHorizontalAccuracyMeasure": {
-      "type": "number"
-    },
-    "MonitoringLocationHorizontalAccuracyUnit": {
-      "type": "string"
-    },
-    "MonitoringLocationVerticalMeasure": {
-      "type": "number"
-    },
-    "MonitoringLocationVerticalUnit": {
-      "type": "string"
-    },
-    "MonitoringLocationType": {
-      "type": "string"
-    },
-    "ActivityType": {
-      "type": "string"
-    },
-    "ActivityMediaName": {
-      "type": "string"
-    },
-    "ActivityStartDate": {
-      "type": "string"
-    },
-    "ActivityStartTime": {
-      "type": "string",
-      "$ref": "./definitions.json#/definitions/defaultColumns/ActivityStartTime"
-    },
-    "ActivityStartTimeZone": {
-      "errorMessage": {
-        "enum": "Does not match UTC or the allowed Canadian time zones (-02:30 to -08:00)"
-      },
-      "type": "string",
-      "enum": [
-        "00:00",
-        "-02:30",
-        "-03:00",
-        "-03:30",
-        "-04:00",
-        "-05:00",
-        "-06:00",
-        "-07:00",
-        "-08:00"
-      ]
-    },
-    "ActivityEndDate": {
-      "type": "string"
-    },
-    "ActivityEndTime": {
-      "type": "string",
-      "$ref": "./definitions.json#/definitions/defaultColumns/ActivityEndTime"
-    },
-    "ActivityEndTimeZone": {
-      "errorMessage": {
-        "enum": "Does not match UTC or the allowed Canadian time zones (-02:30 to -08:00)"
-      },
-      "type": "string",
-      "enum": [
-        "00:00",
-        "-02:30",
-        "-03:00",
-        "-03:30",
-        "-04:00",
-        "-05:00",
-        "-06:00",
-        "-07:00",
-        "-08:00"
-      ]
-    },
-    "ActivityDepthHeightMeasure": {
-      "type": "number"
-    },
-    "ActivityDepthHeightUnit": {
-      "type": "string"
-    },
-    "SampleCollectionEquipmentName": {
-      "type": "string"
-    },
-    "CharacteristicName": {
-      "type": "string"
-    },
-    "MethodSpeciation": {
-      "type": "string"
-    },
-    "ResultSampleFraction": {
-      "type": "string"
-    },
-    "ResultValue": {
-      "type": "number"
-    },
-    "ResultUnit": {
-      "type": "string"
-    },
-    "ResultValueType": {
-      "type": "string"
-    },
-    "ResultDetectionCondition": {
-      "type": "string"
-    },
-    "ResultDetectionQuantitationLimitMeasure": {
-      "type": "number"
-    },
-    "ResultDetectionQuantitationLimitUnit": {
-      "type": "string"
-    },
-    "ResultDetectionQuantitationLimitType": {
-      "type": "string"
-    },
-    "ResultStatusID": {
-      "type": "string"
-    },
-    "ResultComment": {
-      "type": "string"
-    },
-    "ResultAnalyticalMethodID": {
-      "type": "string"
-    },
-    "ResultAnalyticalMethodContext": {
-      "type": "string"
-    },
-    "ResultAnalyticalMethodName": {
-      "type": "string"
-    },
-    "AnalysisStartDate": {
-      "type": "string"
-    },
-    "AnalysisStartTime": {
-      "type": "string",
-      "$ref": "./definitions.json#/definitions/defaultColumns/AnalysisStartTime"
-    },
-    "AnalysisStartTimeZone": {
-      "errorMessage": {
-        "enum": "Does not match UTC or the allowed Canadian time zones (-02:30 to -08:00)"
-      },
-      "type": "string",
-      "enum": [
-        "00:00",
-        "-02:30",
-        "-03:00",
-        "-03:30",
-        "-04:00",
-        "-05:00",
-        "-06:00",
-        "-07:00",
-        "-08:00"
-      ]
-    },
-    "LaboratoryName": {
-      "type": "string"
-    },
-    "LaboratorySampleID": {
-      "type": "string"
-    }
-  },
-  "required": [],
   "allOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "unevaluatedProperties": false,
+      "properties": {
+        "DatasetName": true,
+        "MonitoringLocationID": true,
+        "MonitoringLocationName": true,
+        "MonitoringLocationLatitude": true,
+        "MonitoringLocationLongitude": true,
+        "MonitoringLocationHorizontalCoordinateReferenceSystem": true,
+        "MonitoringLocationHorizontalAccuracyMeasure": true,
+        "MonitoringLocationHorizontalAccuracyUnit": true,
+        "MonitoringLocationVerticalMeasure": true,
+        "MonitoringLocationVerticalUnit": true,
+        "MonitoringLocationType": true,
+        "ActivityType": true,
+        "ActivityMediaName": true,
+        "ActivityStartDate": true,
+        "ActivityStartTime": {
+          "$ref": "./definitions.json#/definitions/ActivityStartTimeStrict"
+        },
+        "ActivityStartTimeZone": {
+          "errorMessage": {
+            "enum": "Does not match UTC or the allowed Canadian time zones (-02:30 to -08:00)"
+          },
+          "type": "string",
+          "enum": [
+            "00:00",
+            "-02:30",
+            "-03:00",
+            "-03:30",
+            "-04:00",
+            "-05:00",
+            "-06:00",
+            "-07:00",
+            "-08:00"
+          ]
+        },
+        "ActivityEndDate": true,
+        "ActivityEndTime": {
+          "$ref": "./definitions.json#/definitions/ActivityEndTimeStrict"
+        },
+        "ActivityEndTimeZone": {
+          "errorMessage": {
+            "enum": "Does not match UTC or the allowed Canadian time zones (-02:30 to -08:00)"
+          },
+          "type": "string",
+          "enum": [
+            "00:00",
+            "-02:30",
+            "-03:00",
+            "-03:30",
+            "-04:00",
+            "-05:00",
+            "-06:00",
+            "-07:00",
+            "-08:00"
+          ]
+        },
+        "ActivityDepthHeightMeasure": true,
+        "ActivityDepthHeightUnit": true,
+        "SampleCollectionEquipmentName": true,
+        "CharacteristicName": true,
+        "MethodSpeciation": true,
+        "ResultSampleFraction": true,
+        "ResultValue": true,
+        "ResultUnit": true,
+        "ResultValueType": true,
+        "ResultDetectionCondition": true,
+        "ResultDetectionQuantitationLimitMeasure": true,
+        "ResultDetectionQuantitationLimitUnit": true,
+        "ResultDetectionQuantitationLimitType": true,
+        "ResultStatusID": true,
+        "ResultComment": true,
+        "ResultAnalyticalMethodID": true,
+        "ResultAnalyticalMethodContext": true,
+        "ResultAnalyticalMethodName": true,
+        "AnalysisStartDate": true,
+        "AnalysisStartTime": {
+          "$ref": "./definitions.json#/definitions/AnalysisStartTimeStrict"
+        },
+        "AnalysisStartTimeZone": {
+          "errorMessage": {
+            "enum": "Does not match UTC or the allowed Canadian time zones (-02:30 to -08:00)"
+          },
+          "type": "string",
+          "enum": [
+            "00:00",
+            "-02:30",
+            "-03:00",
+            "-03:30",
+            "-04:00",
+            "-05:00",
+            "-06:00",
+            "-07:00",
+            "-08:00"
+          ]
+        },
+        "LaboratoryName": true,
+        "LaboratorySampleID": true
+      },
+      "required": []
+    },
     {
       "$ref": "./quality-control/ActivityMediaName-ActivityDepthHeightMeasure-Maximum.json"
     },

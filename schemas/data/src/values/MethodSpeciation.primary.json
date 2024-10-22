@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MethodSpeciation.json",
+  "$id": "https://datastream.org/schema/data/values/MethodSpeciation.strict.json",
   "title": "Method Speciation",
   "description": "",
   "type": "string",

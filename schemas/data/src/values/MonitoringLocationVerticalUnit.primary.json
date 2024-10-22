@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalUnit.json",
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalUnit.strict.json",
   "title": "Measurement Unit",
   "description": "",
   "type": "string",

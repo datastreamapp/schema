@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ResultUnit.json",
+  "$id": "https://datastream.org/schema/data/values/ResultUnit.strict.json",
   "title": "Measurement Unit",
   "description": "",
   "type": "string",

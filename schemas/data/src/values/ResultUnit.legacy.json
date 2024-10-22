@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ResultUnit.json",
+  "$id": "https://datastream.org/schema/data/values/ResultUnit.loose.json",
   "title": "Measurement Unit",
   "description": "",
   "type": "string",
@@ -270,6 +270,7 @@
     "Megam-1",
     "meq",
     "meq/100g",
+    "meq/kg",
     "meq/L",
     "metric ton",
     "MFL",

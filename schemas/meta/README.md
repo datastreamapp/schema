@@ -13,7 +13,7 @@ DataStream ([DataStream.org](https://datastream.org)) is an online open-access p
 
 DataStream was developed by [The Gordon Foundation](https://gordonfoundation.ca) and is carried out in collaboration with regional partners and monitoring networks. Data contributors maintain ownership of their data which are published under open data licences.
 
-## Metadata
+## Metadata (v2)
 In addition to the observation-level information in DS-WQX, DataStream uses the following schema for dataset metadata.
 
 Field                        | Mandatory      | Description
@@ -33,7 +33,7 @@ Licencing & Attribution      | Yes            | Choose from Attribution Licence 
 Data Disclaimer              | No             | Any additional disclaimer text regarding the data that is not covered in data licence
 Data Source URL              | No             | When data is being cross-posted from another Open Data Platform
 Monitoring Active            | Yes            | Indicates if a dataset if being actively monitored and will likely have updates in the future
-Citation                     | No/Auto-generated | How the data should be cited if it is used by others, can be overritten by uploader
+Citation                     | Auto-generated | How the data should be cited if it is used by others, can be overritten by uploader
 Date Published               | Auto-generated | Date the dataset is published on DataStream
 Date Last Updated            | Auto-generated | Date of last update to the dataset on DataStream
 Version Number               | Auto-generated | Version number of the dataset
@@ -42,8 +42,8 @@ Spatial Extent               | Auto-generated | Geographic area covered by datas
 Vertical Extent              | Auto-generated | Height/Depth range of the dataset
 Temporal Extent              | Auto-generated | Timespan of the dataset
 
-### Metadata Standards Mapping
-DataStream v2                 | EPA                        | DataCite                         | W3C DCAT                   | ISO 19115-2
+### Metadata Standards Mapping (v2)
+DataStream                    | EPA                        | DataCite                         | W3C DCAT                   | ISO 19115-2
 ------------------------------|----------------------------|----------------------------------|----------------------------|-------------------------------------------------------------------------------------------------------
 Dataset ID                    | (None)                     | id                               | @id                        | fileIdentifier
 Dataset Name                  | Title                      | titles                           | name                       | identificationInfo.MD_DataIdentification.citation.CI_Citation.title

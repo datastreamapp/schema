@@ -4,6 +4,8 @@
   "description": "When ResultDetectionCondition is set to 'Not Detected' this means data was not detected, and 'Detected Not Quantified' means data was not quantified within the defined laboratory reporting limits or method detection limits. For these cases, ResultDetectionQuantitationLimit fields should be left blank.",
   "errorMessage": "error-ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionCondition": {
         "enum": ["Detected Not Quantified", "Not Detected"]
@@ -12,10 +14,13 @@
     "required": ["ResultDetectionCondition"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitType": false,
       "ResultDetectionQuantitationLimitMeasure": false,
       "ResultDetectionQuantitationLimitUnit": false
-    }
+    },
+    "required": []
   }
 }

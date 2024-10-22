@@ -4,6 +4,8 @@
   "description": "Characteristics that require elevation as unit.",
   "errorMessage": "qc-ResultUnit-Elevation",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Water level", "Water level (probe)"]
@@ -12,6 +14,8 @@
     "required": ["CharacteristicName", "ResultUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultUnit": {
         "enum": ["MASL"]

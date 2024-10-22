@@ -4,6 +4,8 @@
   "description": "",
   "errorMessage": "qc-ResultDetectionQuantitationLimitUnit-Turbidity",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitUnit": {
         "enum": ["FNU", "FTU", "JTU", "NTU"]
@@ -12,6 +14,8 @@
     "required": ["ResultDetectionQuantitationLimitUnit"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["Turbidity"]

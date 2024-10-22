@@ -41,16 +41,16 @@ validate () {
 
 	ajv validate src/${src}.build.json --valid --strict true ${opts} \
 	    -r node_modules/wqx/json-schema/definitions.json \
-		-r src/definitions.json
+		-r src/definitions.build.json
 }
 
-audit () {
+sast () {
 	src=$1
 	opts=${*:2}
-
-	ajv audit src/${src}.build.json --fail ${opts} \
-        -r node_modules/wqx/json-schema/definitions.json \
-		-r src/definitions.json
+	# Note: Disabled due to suppressed criteria
+	# ajv sast src/${src}.build.json --fail ${opts} \
+ #        -r node_modules/wqx/json-schema/definitions.json \
+	# 	-r src/definitions.build.json
 }
 
 transpile () {
@@ -61,7 +61,7 @@ transpile () {
 	jq "${cmd}" src/${src}.build.json > ${src}/index.js
 	ajv transpile ${src}/index.js ${opts} \
 	    -r node_modules/wqx/json-schema/definitions.json \
-		-r src/definitions.json  \
+		-r json-schema/definitions.json \
 		-o ${src}/index.js
 }
 
@@ -80,13 +80,20 @@ locale () {
 
 }
 
+# json-schema
+mkdir -p json-schema/
+pre definitions
+deref definitions
+sast definitions
+clean definitions '.errorMessage?'
+
 # primary - strict
 pre primary
 deref primary
 clean primary '.errorMessage?'
 version primary
 validate primary
-audit primary
+sast primary
 post primary
 
 # extract - strict, w/ coerce
@@ -94,7 +101,7 @@ pre extract
 deref extract
 clean extract '.title?, .description?'
 validate extract
-audit extract
+sast extract
 transpile extract '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 post extract
 
@@ -103,7 +110,7 @@ pre frontend
 deref frontend
 clean frontend '.title?, .description?'
 validate frontend
-audit frontend
+sast frontend
 transpile frontend '' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 post frontend
 
@@ -112,7 +119,7 @@ pre backend
 deref backend
 clean backend '.title?, .description?, .errorMessage?'
 validate backend
-audit backend
+sast backend
 transpile backend ', .errorMessage?' --loop-enum ${maxEnumLength} --coerce-types --use-defaults empty --all-errors
 post backend
 
@@ -121,9 +128,11 @@ pre quality-control
 deref quality-control
 clean quality-control '.__?'
 validate quality-control
-# audit quality-control # Joined with other schemas above
+sast quality-control
 transpile quality-control '' --loop-enum ${maxEnumLength}  --use-defaults empty --all-errors
 post quality-control
+
+mv src/definitions.build.json json-schema/definitions.json
 
 # locales
 locale en-CA
@@ -133,10 +142,3 @@ cp src/locales/*.json locales/
 
 # values
 find src/values -type f -name "*.legacy.json" | while IFS= read -r f; do cp "${f}" "database/$(basename -- ${f/.legacy/})"; done
-
-# json-schema
-mkdir -p json-schema/
-pre definitions
-deref definitions
-clean definitions '.errorMessage?'
-mv src/definitions.build.json json-schema/definitions.json

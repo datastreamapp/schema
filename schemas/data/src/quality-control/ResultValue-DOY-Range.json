@@ -4,10 +4,10 @@
   "description": "The DOY (day of year) cannot be less than 1 or more than 366 (for leap years)",
   "errorMessage": "qc-ResultValue-DOY-Range",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
-      "ResultValue": {
-        "type": "number"
-      },
+      "ResultValue": true,
       "ResultUnit": {
         "enum": ["DOY"]
       }
@@ -15,9 +15,11 @@
     "required": ["ResultUnit", "ResultValue"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultValue": {
-        "type": "number",
+        "type": "integer",
         "minimum": 1,
         "maximum": 366
       }

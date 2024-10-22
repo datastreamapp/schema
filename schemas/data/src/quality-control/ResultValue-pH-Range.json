@@ -4,17 +4,19 @@
   "description": "pH values cannot be less than zero or greater than 14.",
   "errorMessage": "qc-ResultValue-pH-Range",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["pH", "pH, lab", "pH, saturated"]
       },
-      "ResultValue": {
-        "type": "number"
-      }
+      "ResultValue": true
     },
     "required": ["CharacteristicName", "ResultValue"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultValue": {
         "type": "number",

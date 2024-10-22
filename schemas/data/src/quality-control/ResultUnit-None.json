@@ -4,6 +4,8 @@
   "description": "Characteristics that require None as unit.",
   "errorMessage": "qc-ResultUnit-None",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": ["pH", "pH, lab", "pH, saturated", "Langelier Saturation Index"]
@@ -13,6 +15,8 @@
     "required": ["CharacteristicName", "ResultValue"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultUnit": {
         "enum": ["None"]

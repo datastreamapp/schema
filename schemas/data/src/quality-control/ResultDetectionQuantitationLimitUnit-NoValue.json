@@ -4,13 +4,19 @@
   "description": "When the `ResultDetectionQuantitationLimitMeasure` has not been populated, the associated unit should also be blank.",
   "errorMessage": "qc-ResultDetectionQuantitationLimitUnit-NoValue",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitMeasure": false
-    }
+    },
+    "required": []
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitUnit": false
-    }
+    },
+    "required": []
   }
 }

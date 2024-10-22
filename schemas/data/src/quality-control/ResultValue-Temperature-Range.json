@@ -4,6 +4,8 @@
   "description": "Ambient temperatures have an expected range of -100 to 100 deg C.",
   "errorMessage": "qc-ResultValue-Temperature-Range",
   "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": [
@@ -20,9 +22,7 @@
           "Temperature, wet bulb"
         ]
       },
-      "ResultValue": {
-        "type": "number"
-      },
+      "ResultValue": true,
       "ResultUnit": {
         "enum": ["deg C"]
       }
@@ -30,6 +30,8 @@
     "required": ["CharacteristicName", "ResultUnit", "ResultValue"]
   },
   "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
     "properties": {
       "ResultValue": {
         "type": "number",
