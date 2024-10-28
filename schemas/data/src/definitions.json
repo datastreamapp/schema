@@ -270,8 +270,9 @@
       "maxLength": 6
     },
     "csv-injection": {
+      "description": "OWASP ASVS 5.0: 5.3.11 Verify that the application is protected against CSV and Formula Injection. The application should follow the escaping rules defined in RFC4180 2.6 and 2.7 when exporting CSV files. The application should escape special characters including '=', '+', '-', '@' '\t' (tab) and '\\00' (null character) using a single quote, if they are the first character in a field, when exporting CSV files and other spreadsheet formats such as xls, xlsx, odf.",
       "type": "string",
-      "pattern": "^[^ \\x00\\t\\n\\r=+\\-@]{1}.*$",
+      "pattern": "^[^ \\x00\\t\\n\\r=+@\\-]{1}[\\p{L}\\p{N}\\p{P}\\p{M}\\p{S}\\p{Z}\\p{C}]*$",
       "maxLength": 4000
     },
     "trim": {

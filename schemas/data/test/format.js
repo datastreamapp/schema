@@ -50,6 +50,34 @@ const checkProperty = (errors, keyword, property) => {
   return false;
 };
 
+test("Should accept strings", async (t) => {
+  validate({
+    DatasetName: "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"",
+    MonitoringLocationID: "1234567890",
+    MonitoringLocationName: "ÀàäÄÂâÆæÇçÈèÉéÊêËëÎîÏïÔôŒœÙùÛûÜü",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), false);
+  t.is(
+    checkProperty(validate.errors, "pattern", "MonitoringLocationID"),
+    false,
+  );
+  t.is(
+    checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
+    false,
+  );
+});
+
+test("Should accept strings-multiline", async (t) => {
+  validate({
+    ResultComment: `English: qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM
+    French: ÀàäÄÂâÆæÇçÈèÉéÊêËëÎîÏïÔôŒœÙùÛûÜü
+    Numbers: 1234567890
+    Symbols: ~!@#$%^&*()_+-={}|[]\\:";'<>?,./
+    `,
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), false);
+});
+
 // TODO update to included strict and loose time format
 test("Should accept time formats", async (t) => {
   validate({
@@ -91,21 +119,21 @@ test("Should accept timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    0
+    0,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    0
+    0,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    0
+    0,
   );
 
   valid = validateStrict({
@@ -116,21 +144,21 @@ test("Should accept timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    0
+    0,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    0
+    0,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    0
+    0,
   );
 
   valid = validateStrict({
@@ -141,21 +169,21 @@ test("Should accept timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    0
+    0,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    0
+    0,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    0
+    0,
   );
 });
 
@@ -168,21 +196,21 @@ test("Should reject timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    1
+    1,
   );
 
   valid = validateStrict({
@@ -193,21 +221,21 @@ test("Should reject timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    1
+    1,
   );
 
   valid = validateStrict({
@@ -218,21 +246,21 @@ test("Should reject timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    2
+    2,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    2
+    2,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    2
+    2,
   );
 
   valid = validateStrict({
@@ -243,21 +271,21 @@ test("Should reject timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    1
+    1,
   );
 
   valid = validateStrict({
@@ -268,21 +296,21 @@ test("Should reject timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    1
+    1,
   );
 
   valid = validateStrict({
@@ -293,21 +321,21 @@ test("Should reject timezone formats (strict)", async (t) => {
   t.false(valid);
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateStrict.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    1
+    1,
   );
 });
 
@@ -370,21 +398,21 @@ test("Should reject timezone formats (loose)", async (t) => {
   t.false(valid);
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    1
+    1,
   );
 
   valid = validateBackend({
@@ -395,21 +423,21 @@ test("Should reject timezone formats (loose)", async (t) => {
   t.false(valid);
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    1
+    1,
   );
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    1
+    1,
   );
 
   valid = validateBackend({
@@ -420,20 +448,90 @@ test("Should reject timezone formats (loose)", async (t) => {
   t.false(valid);
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/ActivityStartTimeZone"
+      (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
-    2
+    2,
   );
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/ActivityEndTimeZone"
+      (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
-    2
+    2,
   );
   t.is(
     validateBackend.errors.filter(
-      (i) => i.instancePath === "/AnalysisStartTimeZone"
+      (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
-    2
+    2,
   );
+});
+
+test("Should pass CSV Injection check", async (t) => {
+  validate({
+    ResultComment: "Bar River",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), false);
+});
+
+test("Should reject CSV Injection check when leading space", async (t) => {
+  validate({
+    ResultComment: " test",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading caragereturn", async (t) => {
+  validate({
+    ResultComment: "\rtest",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading newline", async (t) => {
+  validate({
+    ResultComment: "\ntest",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading tab", async (t) => {
+  validate({
+    ResultComment: "\ttest",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading =", async (t) => {
+  validate({
+    ResultComment: "=test",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading +", async (t) => {
+  validate({
+    ResultComment: "+test",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading -", async (t) => {
+  validate({
+    ResultComment: "-test",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading @", async (t) => {
+  validate({
+    ResultComment: "@test",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+test("Should reject CSV Injection check when leading null char", async (t) => {
+  validate({
+    ResultComment: "\x00test",
+  });
+  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
