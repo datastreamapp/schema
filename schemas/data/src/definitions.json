@@ -216,12 +216,12 @@
     },
     "string": {
       "type": "string",
-      "pattern": "^[\\p{L}\\p{N}\\p{P}\\p{S} ]+$",
+      "pattern": "^[\\p{L}\\p{N}\\p{P}\\p{M}\\p{S} ]+$",
       "maxLength": 4000
     },
     "string-multiline": {
       "type": "string",
-      "pattern": "^[\\p{L}\\p{N}\\p{P}\\p{S} \\r\\n]+$",
+      "pattern": "^[\\p{L}\\p{N}\\p{P}\\p{M}\\p{S} \\r\\n]+$",
       "maxLength": 4000
     },
     "date": {

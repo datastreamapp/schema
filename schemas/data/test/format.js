@@ -53,7 +53,7 @@ const checkProperty = (errors, keyword, property) => {
 test("Should accept strings", async (t) => {
   validate({
     DatasetName: "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"",
-    MonitoringLocationID: "1234567890",
+    MonitoringLocationID: "1234567890 W̱E¸NÁ¸NEĆ",
     MonitoringLocationName: "ÀàäÄÂâÆæÇçÈèÉéÊêËëÎîÏïÔôŒœÙùÛûÜü",
   });
   t.is(checkProperty(validate.errors, "pattern", "DatasetName"), false);
@@ -73,6 +73,7 @@ test("Should accept strings-multiline", async (t) => {
     French: ÀàäÄÂâÆæÇçÈèÉéÊêËëÎîÏïÔôŒœÙùÛûÜü
     Numbers: 1234567890
     Symbols: ~!@#$%^&*()_+-={}|[]\\:";'<>?,./
+    Other: W̱E¸NÁ¸NEĆ
     `,
   });
   t.is(checkProperty(validate.errors, "pattern", "ResultComment"), false);
