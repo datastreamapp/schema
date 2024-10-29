@@ -54,7 +54,182 @@ const checkProperty = (errors, keyword, property) => {
   return false;
 };
 
-// allOf/1
+// ActivityType-ResultAnalyticalMethod
+test("Should reject ActivityType = Sample-*", async (t) => {
+  const valid = validate({
+    ActivityType: "Sample-Other",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), true);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    true,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodContext",
+    ),
+    true,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodName",
+    ),
+    true,
+  );
+});
+test("Should reject ActivityType = Quality Control Sample-*", async (t) => {
+  const valid = validate({
+    ActivityType: "Quality Control Sample-Other",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), true);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    true,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodContext",
+    ),
+    true,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodName",
+    ),
+    true,
+  );
+});
+test("Should accept ActivityType = Sample-* w/ ResultAnalyticalMethodID & ResultAnalyticalMethodContext", async (t) => {
+  const valid = validate({
+    ActivityType: "Sample-Other",
+    LaboratoryName: "A",
+    ResultAnalyticalMethodID: "0",
+    ResultAnalyticalMethodContext: "ENV",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodContext",
+    ),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodName",
+    ),
+    false,
+  );
+});
+test("Should accept ActivityType = Quality Control Sample-* w/ ResultAnalyticalMethodID & ResultAnalyticalMethodContext", async (t) => {
+  const valid = validate({
+    ActivityType: "Quality Control Sample-Other",
+    LaboratoryName: "A",
+    ResultAnalyticalMethodID: "0",
+    ResultAnalyticalMethodContext: "ENV",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodContext",
+    ),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodName",
+    ),
+    false,
+  );
+});
+
+test("Should accept ActivityType = Sample-* w/ ResultAnalyticalMethodName", async (t) => {
+  const valid = validate({
+    ActivityType: "Sample-Other",
+    LaboratoryName: "A",
+    ResultAnalyticalMethodName: "Unspecified",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodContext",
+    ),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodName",
+    ),
+    false,
+  );
+});
+test("Should accept ActivityType = Quality Control Sample-* w/ ResultAnalyticalMethodName", async (t) => {
+  const valid = validate({
+    ActivityType: "Sample-Other",
+    LaboratoryName: "A",
+    ResultAnalyticalMethodName: "Unspecified",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodContext",
+    ),
+    false,
+  );
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ResultAnalyticalMethodName",
+    ),
+    false,
+  );
+});
+
+// CharacteristicName-MethodSpeciation
 test("Should accept CharacteristicName AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Calcium",
@@ -74,69 +249,6 @@ test("Should accept CharacteristicName AND MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Nitrate",
     MethodSpeciation: "as N",
-  });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
-});
-
-// CharacteristicName-ResultSampleFraction
-test("Should accept CharacteristicName AND NOT ResultSampleFraction", async (t) => {
-  const valid = validate({
-    CharacteristicName: "Dissolved oxygen (DO)",
-  });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(
-    checkProperty(validate.errors, "required", "ResultSampleFraction"),
-    false,
-  );
-});
-test("Should rejects CharacteristicName AND NOT ResultSampleFraction", async (t) => {
-  const valid = validate({
-    CharacteristicName: "Silver",
-  });
-  t.false(valid);
-  t.is(
-    checkProperty(validate.errors, "required", "ResultSampleFraction"),
-    true,
-  );
-});
-test("Should accept CharacteristicName AND ResultSampleFraction", async (t) => {
-  const valid = validate({
-    CharacteristicName: "Silver",
-    ResultSampleFraction: "Dissolved",
-  });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(
-    checkProperty(validate.errors, "required", "ResultSampleFraction"),
-    false,
-  );
-});
-
-// CharacteristicName-StableIsotope-ResultSampleFraction
-test("Should reject StableIsotope CharacteristicName, MethodSpeciation required", async (t) => {
-  const valid = validate({
-    CharacteristicName: "Nitrogen-15",
-  });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
-});
-test("Should reject StableIsotope CharacteristicName", async (t) => {
-  const valid = validate({
-    CharacteristicName: "Nitrogen-15",
-    MethodSpeciation: "as NH4",
-  });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "enum", "MethodSpeciation"), true);
-});
-test("Should accept StableIsotope CharacteristicName", async (t) => {
-  const valid = validate({
-    CharacteristicName: "Nitrogen-15",
-    MethodSpeciation: "of NH4",
   });
   t.false(valid);
   t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
@@ -203,6 +315,69 @@ test("Should accept Nutrient Sediment", async (t) => {
 //
 // })
 
+// CharacteristicName-ResultSampleFraction
+test("Should accept CharacteristicName AND NOT ResultSampleFraction", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Dissolved oxygen (DO)",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    false,
+  );
+});
+test("Should rejects CharacteristicName AND NOT ResultSampleFraction", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Silver",
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    true,
+  );
+});
+test("Should accept CharacteristicName AND ResultSampleFraction", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Silver",
+    ResultSampleFraction: "Dissolved",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(
+    checkProperty(validate.errors, "required", "ResultSampleFraction"),
+    false,
+  );
+});
+
+// CharacteristicName-StableIsotope-ResultSampleFraction
+test("Should reject StableIsotope CharacteristicName, MethodSpeciation required", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Nitrogen-15",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+});
+test("Should reject StableIsotope CharacteristicName", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Nitrogen-15",
+    MethodSpeciation: "as NH4",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "enum", "MethodSpeciation"), true);
+});
+test("Should accept StableIsotope CharacteristicName", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Nitrogen-15",
+    MethodSpeciation: "of NH4",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
+});
+
 // allOf/3
 test("Should reject NOT ResultValue AND NOT ResultDetectionCondition", async (t) => {
   const valid = validate({});
@@ -258,8 +433,7 @@ test("Should accept ResultValue OR ResultDetectionCondition", async (t) => {
   );
 });
 
-// allOf/4
-
+// ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below
 test("Should reject ResultDetectionCondition = Present Above Quantification Limit", async (t) => {
   const valid = validate({
     ResultDetectionCondition: "Present Above Quantification Limit",
@@ -358,7 +532,7 @@ test("Should accept ResultDetectionCondition", async (t) => {
   );
 });
 
-// allOf/4
+// ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect
 test("Should reject ResultDetectionCondition = Not Detected", async (t) => {
   const valid = validate({
     ResultDetectionCondition: "Not Detected",
@@ -484,77 +658,6 @@ test("Should accept ResultDetectionCondition = Detected Not Quantified", async (
       validate.errors,
       "enum",
       "ResultDetectionQuantitationLimitUnit",
-    ),
-    false,
-  );
-});
-
-// allOf/5
-test("Should reject ActivityType = Sample for ResultAnalyticalMethodID", async (t) => {
-  const valid = validate({
-    ActivityType: "Sample-Other",
-  });
-  t.false(valid);
-  t.is(
-    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
-    true,
-  );
-  t.is(
-    checkProperty(
-      validate.errors,
-      "dependencies",
-      "ResultAnalyticalMethodContext",
-    ),
-    true,
-  );
-});
-test("Should accept ActivityType = Sample for ResultAnalyticalMethodID", async (t) => {
-  const valid = validate({
-    ActivityType: "Sample-Other",
-    ResultAnalyticalMethodID: "0",
-    ResultAnalyticalMethodContext: "ENV",
-  });
-  t.false(valid);
-  t.is(
-    checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
-    false,
-  );
-  t.is(
-    checkProperty(
-      validate.errors,
-      "dependencies",
-      "ResultAnalyticalMethodContext",
-    ),
-    false,
-  );
-});
-
-test("Should reject ActivityType = Sample for ResultAnalyticalMethodName", async (t) => {
-  const valid = validate({
-    ActivityType: "Sample-Other",
-  });
-  t.false(valid);
-  t.is(
-    checkProperty(
-      validate.errors,
-      "dependencies",
-      "ResultAnalyticalMethodName",
-    ),
-    true,
-  );
-});
-
-test("Should accept ActivityType = Sample for ResultAnalyticalMethodName", async (t) => {
-  const valid = validate({
-    ActivityType: "Sample-Other",
-    ResultAnalyticalMethodName: "Unspecified",
-  });
-  t.false(valid);
-  t.is(
-    checkProperty(
-      validate.errors,
-      "dependencies",
-      "ResultAnalyticalMethodName",
     ),
     false,
   );
