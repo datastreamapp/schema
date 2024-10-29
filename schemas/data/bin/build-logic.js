@@ -78,7 +78,8 @@ const wqxRequiredIf = async (file) => {
   const list = [...new Set(sort(object.if.properties[columnFrom].enum))];
 
   object.if.properties[columnFrom].enum = await subset(columnFrom, list, false);
-
+  object.if.unevaluatedProperties = false;
+  object.then.unevaluatedProperties = false;
   await writeFile(
     join(__dirname, `/../src/logic/${file}.json`),
     JSON.stringify(object, null, 2),

@@ -21,6 +21,11 @@ const checkProperty = (errors, keyword, property) => {
     ) {
       return true;
     } else if (
+      keyword === "unevaluatedProperties" &&
+      error.params.unevaluatedProperty === property
+    ) {
+      return true;
+    } else if (
       keyword === "oneOf" &&
       error.params.passingSchemas.includes(property)
     ) {
@@ -147,7 +152,7 @@ test("Should reject additional headers", async (t) => {
   t.is(
     checkProperty(
       validate.errors,
-      "additionalProperties",
+      "unevaluatedProperties",
       "MonitoringLocationWaterBody",
     ),
     true,

@@ -6,7 +6,6 @@
   "allOf": [
     {
       "type": "object",
-      "additionalProperties": false,
       "unevaluatedProperties": false,
       "properties": {
         "DatasetName": {
