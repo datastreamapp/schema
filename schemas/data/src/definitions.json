@@ -217,11 +217,17 @@
     "string": {
       "type": "string",
       "pattern": "^[\\p{L}\\p{N}\\p{P}\\p{M}\\p{S} ]+$",
+      "errorMessage": {
+        "pattern": "error-string-pattern"
+      },
       "maxLength": 4000
     },
     "string-multiline": {
       "type": "string",
       "pattern": "^[\\p{L}\\p{N}\\p{P}\\p{M}\\p{S} \\r\\n]+$",
+      "errorMessage": {
+        "pattern": "error-string-multiline-pattern"
+      },
       "maxLength": 4000
     },
     "date": {
