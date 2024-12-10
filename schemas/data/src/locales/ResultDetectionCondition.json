@@ -61,7 +61,7 @@
     "Unable to Measure": {
       "name": {
         "en": "Unable to Measure",
-        "fr": null
+        "fr": "Incapable de mesurer"
       },
       "description": {
         "en": "Measurement or sample collection was attempted but unobtainable due to site conditions, equipment failure, or other circumstances",
