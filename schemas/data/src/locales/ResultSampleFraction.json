@@ -184,8 +184,8 @@
         "fr": "Libre disponible"
       },
       "description": {
-        "en": "The concentration of residual substance present as dissolved gas, and not combined with any substance or in other less readily available form.",
-        "fr": "La concentration de la substance résiduelle présente sous forme de gaz dissous, et non combinée à une autre substance ou sous une autre forme moins facilement disponible."
+        "en": "The concentration of residual substance present and not combined with any substance or in other less readily available form.",
+        "fr": "La concentration de la substance résiduelle présente, et non combinée à une autre substance ou sous une autre forme moins facilement disponible."
       }
     },
     "Inorganic": {

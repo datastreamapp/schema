@@ -34,8 +34,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Raw data that has not undergone any QA/QC review as described in the dataset metadata. Some aspect of the observation may be subject to change.",
+        "fr": "Les données brutes ont subi un examen d'AQ/CQ tel que décrit dans les métadonnées du jeu de données. Certains aspects de l'observation pourraient être modifiés."
       }
     },
     "Rejected": {
@@ -54,8 +54,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Reported result has been validated by the QA/QC protocol described in the dataset metadata.",
+        "fr": "Le résultat rapporté a été validé par le protocole d'AQ/CQ décrit dans les métadonnées du jeu de données."
       }
     },
     "Provisional": {
@@ -64,8 +64,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Reported result has undergone some of the QA/QC protocol described in the dataset metadata. Some aspect of the observation may be subject to change.",
+        "fr": "Le résultat rapporté a subi une partie du protocole d'AQ/CQ décrit dans les métadonnées du jeu de données. Certains aspects de l'observation pourraient être modifiés."
       }
     }
   }
