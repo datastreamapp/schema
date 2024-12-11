@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/datastreamapp/schema#readme",
   "dependencies": {
-    "wqx": "3.0.193"
+    "wqx": "3.0.197"
   },
   "devDependencies": {
     "change-case": "^5.0.0"

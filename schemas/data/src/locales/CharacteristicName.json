@@ -12877,6 +12877,46 @@
         "en": null,
         "fr": null
       }
+    },
+    "Cation/anion ratio": {
+      "name": {
+        "en": "Cation/anion ratio",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lead-208": {
+      "name": {
+        "en": "Lead-208",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Phaeophytin - Periphyton (attached)": {
+      "name": {
+        "en": "Phaeophytin - Periphyton (attached)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Boron-10": {
+      "name": {
+        "en": "Boron-10",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }
