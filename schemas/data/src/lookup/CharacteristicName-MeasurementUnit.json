@@ -342,7 +342,7 @@
   "Resorcinol": ["mg/L"],
   "Rubidium": ["ug/L"],
   "S-Ethyl dipropylthiocarbamate": ["ng/L"],
-  "Salinity": ["ppth"],
+  "Salinity": ["ppth", "g/L"],
   "Selenium": ["ug/L"],
   "Silver": ["ug/L"],
   "Silvex": ["ng/L"],

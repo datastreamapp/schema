@@ -18,7 +18,7 @@
     "unevaluatedProperties": true,
     "properties": {
       "ResultDetectionQuantitationLimitUnit": {
-        "enum": ["ppth", "ppm", "PSU", "None"]
+        "enum": ["ppth", "ppm", "PSU", "g/L"]
       }
     },
     "required": ["ResultDetectionQuantitationLimitUnit"]
