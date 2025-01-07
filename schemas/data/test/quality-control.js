@@ -83,7 +83,7 @@ const checkProperty = (errors, keyword, property) => {
       error.instancePath.includes(property)
     ) {
       return true
-    } else if (keyword === 'pattern') return true
+    } else if (keyword === 'pattern' && error.instancePath.includes(property)) return true
   }
   return false
 }
@@ -823,7 +823,7 @@ test('Should accept columns without extra whitespace', async (t) => {
     ResultAnalyticalMethodID: 'sum',
     ResultAnalyticalMethodName: 'sum',
     LaboratoryName: 'sum',
-    LaboratorySampleID: 'sum'
+    LaboratorySampleID: 'A'
   })
   t.is(valid, true)
 })

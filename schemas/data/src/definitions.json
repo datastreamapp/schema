@@ -283,7 +283,7 @@
     },
     "trim": {
       "type": "string",
-      "pattern": "^([^\\s]+.*|.*[^\\s]+)$",
+      "pattern": "^(?!\\s).+(?<!\\s)$",
       "maxLength": 4000
     },
     "cr-char": {
