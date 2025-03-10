@@ -248,6 +248,27 @@
         "fr": null
       }
     },
+    "Quality Control Sample-Lab Surrogate Control Standard": {
+      "name": {
+        "en": "Quality Control Sample-Lab Surrogate Control Standard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+
+    "Quality Control Sample-Lab Surrogate Control Standard Duplicate": {
+      "name": {
+        "en": "Quality Control Sample-Lab Surrogate Control Standard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Quality Control Sample-Measurement Precision Sample": {
       "name": {
         "en": "Quality Control Sample-Measurement Precision Sample",
