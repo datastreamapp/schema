@@ -10108,16 +10108,6 @@
         "fr": null
       }
     },
-    "Perfluorohexane sulfonamido propyl amine": {
-      "name": {
-        "en": "Perfluorohexane sulfonamido propyl amine",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "Perfluorohexane sulfonamidopropyl ammonium": {
       "name": {
         "en": "Perfluorohexane sulfonamidopropyl ammonium",
@@ -12827,7 +12817,7 @@
         "en": null,
         "fr": null
       }
-    }, 
+    },
     "Total Volatile Hydrocarbons C6-C10 minus BTEX": {
       "name": {
         "en": "Total Volatile Hydrocarbons C6-C10 minus BTEX",
@@ -13601,6 +13591,16 @@
     "Boron-10": {
       "name": {
         "en": "Boron-10",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "perfluorohexane sulfonamido propyl amine": {
+      "name": {
+        "en": "perfluorohexane sulfonamido propyl amine",
         "fr": null
       },
       "description": {
