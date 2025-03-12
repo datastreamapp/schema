@@ -188,6 +188,9 @@
       "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect.json"
     },
     {
+      "$ref": "./logic/ActivityType-CTS-ActivityStartTime.json"
+    },
+    {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"
     },
     {

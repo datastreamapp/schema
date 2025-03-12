@@ -1,0 +1,34 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ActivityType-CTS-ActivityStartTimeZone-UTC.json",
+  "title": "ActivityType-CTS-ActivityStartTimeZone-UTC",
+  "description": "",
+  "errorMessage": "qc-ActivityType-CTS-ActivityStartTimeZone-UTC",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityType": {
+        "enum": [
+          "Field Msr/Obs-Continuous Time Series"
+        ]
+      }
+    },
+    "required": [
+      "ActivityType"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityStartTimeZone": {
+        "not": {
+          "const": "+00:00"
+        }
+      }
+    },
+    "required": [
+      "ActivityStartTimeZone"
+    ]
+  }
+}
