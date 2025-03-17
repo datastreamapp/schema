@@ -39,7 +39,9 @@ const defaultObject = {
 const checkProperty = (errors, keyword, property) => {
   if (errors === null) return false
   for (const error of errors) {
-    if (error.keyword === 'errorMessage') {
+    if (keyword === 'message' && error.message === property) {
+      return true
+    } else if (error.keyword === 'errorMessage') {
       const nested = checkProperty(error.params.errors, keyword, property)
       if (nested) return nested
     }
@@ -219,6 +221,8 @@ test("Should accept ActivityType with ActivityStartTimeZone for non-CTS", async 
 test("Should reject ActivityType without ActivityStartTimeZone for CTS", async (t) => {
   const valid = validate({
     ActivityType: "Field Msr/Obs-Continuous Time Series",
+    ActivityStartDate: '2025-01-01',
+    ActivityStartTime: '13:15:00'
   });
   t.false(valid);
   t.is(checkProperty(validate.errors, "required", "ActivityStartTimeZone"), true);
@@ -245,6 +249,15 @@ test("Should accept ActivityType with UTC ActivityStartTimeZone for non-CTS", as
   t.true(valid);
   t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
   t.is(checkProperty(validate.errors, "required", "ActivityStartTimeZone"), false);
+});
+
+test("Should accept ActivityType-CTS-ActivityStartTimeZone-UTC without ActivityStartTimeZone", async (t) => {
+  const valid = validate({
+    ActivityType: "Field Msr/Obs-Continuous Time Series",
+    ActivityStartDate: '2025-01-01'
+  });
+  t.false(valid)
+  t.is(checkProperty(validate.errors, "message", "qc-ActivityType-CTS-ActivityStartTimeZone-UTC"), false);
 });
 
 test("Should reject ActivityType with UTC ActivityStartTimeZone for CTS", async (t) => {
