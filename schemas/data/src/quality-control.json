@@ -189,7 +189,28 @@
       "$ref": "./quality-control/ResultValue-DOY-Range.json"
     },
     {
-      "$ref": "./quality-control/WhiteSpace.json"
+      "$ref": "quality-control/WhiteSpace-DatasetName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-LaboratoryName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-LaboratorySampleID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-MonitoringLocationID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-MonitoringLocationName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-ResultAnalyticalMethodID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-ResultAnalyticalMethodName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-ResultComment.json"
     }
   ]
 }
