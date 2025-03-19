@@ -67,6 +67,51 @@ test("Should accept strings", async (t) => {
   );
 });
 
+test("Should reject strings with multiline", async (t) => {
+  validate({
+    DatasetName: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
+    1234`,
+    MonitoringLocationID: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
+    1234`,
+    MonitoringLocationName: `French: ÀàäÄÂâÆæÇçÈèÉéÊêËëÎîÏïÔôŒœÙùÛûÜü
+    Numbers: 1234567890`,
+    ResultAnalyticalMethodID: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
+    1234`,
+    ResultAnalyticalMethodName: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
+    1234`,
+    LaboratoryName: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
+    1234`,
+    LaboratorySampleID: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
+    1234`,
+  });
+
+  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), true);
+  t.is(
+    checkProperty(validate.errors, "pattern", "MonitoringLocationID"),
+    true,
+  );
+  t.is(
+    checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
+    true,
+  );
+  t.is(
+    checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodID"),
+    true,
+  );
+  t.is(
+    checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodName"),
+    true,
+  );
+  t.is(
+    checkProperty(validate.errors, "pattern", "LaboratoryName"),
+    true,
+  );
+  t.is(
+    checkProperty(validate.errors, "pattern", "LaboratorySampleID"),
+    true,
+  );
+});
+
 test("Should accept strings-multiline", async (t) => {
   validate({
     ResultComment: `English: qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM
