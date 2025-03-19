@@ -87,8 +87,8 @@ error-time-loose-pattern = Must match format HH:MM:SS (i.e. 23:59:59)
 error-time-strict-pattern = Times earlier than 12:00:00 should include a leading zero (e.g. 05:00:00)
 error-timezone-loose-pattern = Must match format '-06:00'
 error-timezone-strict-pattern = { error-timezone-loose-pattern }
-error-string-pattern = Only letters, numbers, punctuation, symbols, and space are allowed. Line feeds/carrage returns are not allowed.
-error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, spaces, and line feeds/carrage returns are allowed.
+error-string-pattern = Only letters, numbers, punctuation, symbols, and space are allowed. Line feeds/carriage returns are not allowed.
+error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, spaces, and line feeds/carriage returns are allowed.
 
 ## errors
 
