@@ -33,7 +33,7 @@ Licencing & Attribution      | Yes            | Choose from Attribution Licence 
 Data Disclaimer              | No             | Any additional disclaimer text regarding the data that is not covered in data licence
 Data Source URL              | No             | When data is being cross-posted from another Open Data Platform
 Monitoring Active            | Yes            | Indicates if a dataset if being actively monitored and will likely have updates in the future
-Citation                     | Auto-generated | How the data should be cited if it is used by others, can be overritten by uploader
+Citation                     | Auto-generated | How the data should be cited if it is used by others
 Date Published               | Auto-generated | Date the dataset is published on DataStream
 Date Last Updated            | Auto-generated | Date of last update to the dataset on DataStream
 Version Number               | Auto-generated | Version number of the dataset
