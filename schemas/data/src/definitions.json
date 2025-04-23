@@ -2,18 +2,23 @@
   "$id": "https://datastream.org/schema/data/definitions",
   "definitions": {
     "DatasetName": {
-      "type": "string",
-      "pattern": "^[\\p{L}\\p{N}\\p{P}\\p{S} ]+$",
+      "$ref": "#/definitions/string",
       "minLength": 1,
       "maxLength": 512
     },
     "MonitoringLocationID": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/MonitoringLocationID",
-      "minLength": 1
+      "minLength": 1,
+      "errorMessage": {
+        "pattern": "error-string-pattern"
+      }
     },
     "MonitoringLocationName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/MonitoringLocationName",
-      "minLength": 1
+      "minLength": 1,
+      "errorMessage": {
+        "pattern": "error-string-pattern"
+      }
     },
     "MonitoringLocationLatitude": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/MonitoringLocationLatitude"
@@ -169,7 +174,10 @@
       "$ref": "./values/ResultStatusID.legacy.json"
     },
     "ResultComment": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/ResultComment"
+      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/ResultComment",
+      "errorMessage": {
+        "pattern": "error-string-multiline-pattern"
+      }
     },
     "ResultAnalyticalMethodID": {
       "title": "Result Analytical Method ID",
@@ -206,7 +214,10 @@
     },
     "LaboratoryName": {
       "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/LaboratoryName",
-      "maxLength": 100
+      "maxLength": 100,
+      "errorMessage": {
+        "pattern": "error-string-pattern"
+      }
     },
     "LaboratorySampleID": {
       "title": "Laboratory Sample ID",
@@ -283,7 +294,7 @@
     },
     "trim": {
       "type": "string",
-      "pattern": "^([^\\s]+.*|.*[^\\s]+)$",
+      "pattern": "^(?!\\s).+(?<!\\s)$",
       "maxLength": 4000
     },
     "cr-char": {

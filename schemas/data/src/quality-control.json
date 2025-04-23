@@ -34,7 +34,7 @@
           },
           "type": "string",
           "enum": [
-            "00:00",
+            "+00:00",
             "-02:30",
             "-03:00",
             "-03:30",
@@ -55,7 +55,7 @@
           },
           "type": "string",
           "enum": [
-            "00:00",
+            "+00:00",
             "-02:30",
             "-03:00",
             "-03:30",
@@ -94,7 +94,7 @@
           },
           "type": "string",
           "enum": [
-            "00:00",
+            "+00:00",
             "-02:30",
             "-03:00",
             "-03:30",
@@ -114,10 +114,19 @@
       "$ref": "./quality-control/ActivityMediaName-ActivityDepthHeightMeasure-Maximum.json"
     },
     {
+      "$ref": "./quality-control/ActivityType-CTS-ActivityStartTimeZone.json"
+    },
+    {
+      "$ref": "./quality-control/ActivityType-CTS-ActivityStartTimeZone-UTC.json"
+    },
+    {
       "$ref": "./quality-control/ActivityType-ResultSampleFraction.json"
     },
     {
       "$ref": "./quality-control/CharacteristicName-ActivityMediaName-AmbientAir.json"
+    },
+    {
+      "$ref": "./quality-control/CharacteristicName-ActivityType-Surrogate.json"
     },
     {
       "$ref": "./quality-control/CharacteristicName-Metal-ResultSampleFraction.json"
@@ -180,7 +189,28 @@
       "$ref": "./quality-control/ResultValue-DOY-Range.json"
     },
     {
-      "$ref": "./quality-control/WhiteSpace.json"
+      "$ref": "quality-control/WhiteSpace-DatasetName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-LaboratoryName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-LaboratorySampleID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-MonitoringLocationID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-MonitoringLocationName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-ResultAnalyticalMethodID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-ResultAnalyticalMethodName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-ResultComment.json"
     }
   ]
 }

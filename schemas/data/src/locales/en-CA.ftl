@@ -78,10 +78,11 @@ error-time-loose-pattern = Must match format HH:MM:SS (i.e. 23:59:59)
 error-time-strict-pattern = Times earlier than 12:00:00 should include a leading zero (e.g. 05:00:00)
 error-timezone-loose-pattern = Must match format '-06:00'
 error-timezone-strict-pattern = { error-timezone-loose-pattern }
-error-string-pattern = Only letters, numbers, punctuation, symbols, and space are allowed. Line feeds/carrage returns are not allowed.
-error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, spaces, and line feeds/carrage returns are allowed.
+error-string-pattern = Only letters, numbers, punctuation, symbols, and space are allowed. Line feeds/carriage returns are not allowed.
+error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, spaces, and line feeds/carriage returns are allowed.
 
 ## errors
+error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations must include a valid ActivityStartTime
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
@@ -96,9 +97,12 @@ error-ResultUnit-Salinity = ResultUnit for CharacteristicName Salinity should be
 
 ## quality-control
 qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure should be below 0
+qc-ActivityType-CTS-ActivityStartTimeZone = ActivityStartTimeZone should be included when ActivityType is 'Field Msr/Obs-Continuous Time Series'
+qc-ActivityType-CTS-ActivityStartTimeZone-UTC = When ActivityStartTimeZone is '+00:00', consider adding a note in your dataset metadata to let others know your data are reported in UTC/GMT
 qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 # qc-CharacteristicName-Deprecated = CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.
 qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
+qc-CharacteristicName-ActivityType-Surrogate = When reported as a percentage, this characteristic may be a surrogate standard. If this is the case, please use the ActivityType 'Quality Control Sample-Lab Surrogate Control Standard' or 'Quality Control Sample-Lab Surrogate Control Standard Duplicate'
 qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data (https://datastream.org/en-ca/documentation/metal-series-data-guidance)
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
 qc-CharacteristicName-ResultAnalyticalMethodName = ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined

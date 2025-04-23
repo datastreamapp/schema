@@ -66,7 +66,7 @@
           "$ref": "./definitions.json#/definitions/ActivityStartTimeLoose"
         },
         "ActivityStartTimeZone": {
-          "$ref": "./definitions.json#/definitions/ActivityStartTimeZoneLoose"
+          "$ref": "./definitions.json#/definitions/ActivityStartTimeZoneStrict"
         },
         "ActivityEndDate": {
           "$ref": "./definitions.json#/definitions/ActivityEndDate"
@@ -75,7 +75,7 @@
           "$ref": "./definitions.json#/definitions/ActivityEndTimeLoose"
         },
         "ActivityEndTimeZone": {
-          "$ref": "./definitions.json#/definitions/ActivityEndTimeZoneLoose"
+          "$ref": "./definitions.json#/definitions/ActivityEndTimeZoneStrict"
         },
         "ActivityDepthHeightMeasure": {
           "$ref": "./definitions.json#/definitions/ActivityDepthHeightMeasure"
@@ -150,7 +150,7 @@
           "$ref": "./definitions.json#/definitions/AnalysisStartTimeLoose"
         },
         "AnalysisStartTimeZone": {
-          "$ref": "./definitions.json#/definitions/AnalysisStartTimeZoneLoose"
+          "$ref": "./definitions.json#/definitions/AnalysisStartTimeZoneStrict"
         },
         "LaboratoryName": {
           "$ref": "./definitions.json#/definitions/LaboratoryName"
@@ -213,6 +213,9 @@
     },
     {
       "$ref": "./logic/ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect.json"
+    },
+    {
+      "$ref": "./logic/ActivityType-CTS-ActivityStartTime.json"
     },
     {
       "$ref": "./logic/ActivityType-ResultAnalyticalMethod.json"

@@ -54,6 +54,44 @@ const checkProperty = (errors, keyword, property) => {
   return false;
 };
 
+// ActivityType-CTS-ActivityStartTime
+test("Should accept ActivityType without ActivityStartTime for non-CTS", async (t) => {
+  const valid = validate({
+    ActivityType: "Field Msr/Obs",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
+  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
+});
+
+test("Should accept ActivityType with ActivityStartTime for non-CTS", async (t) => {
+  const valid = validate({
+    ActivityType: "Field Msr/Obs",
+    ActivityStartTime: '13:15:00',
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
+  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
+});
+
+test("Should reject ActivityType without ActivityStartTime for CTS", async (t) => {
+  const valid = validate({
+    ActivityType: "Field Msr/Obs-Continuous Time Series",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), true);
+});
+
+test("Should accept ActivityType with ActivityStartTime for CTS", async (t) => {
+  const valid = validate({
+    ActivityType: "Field Msr/Obs-Continuous Time Series",
+    ActivityStartTime: '13:15:00',
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
+  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
+});
+
 // ActivityType-ResultAnalyticalMethod
 test("Should reject ActivityType = Sample-*", async (t) => {
   const valid = validate({

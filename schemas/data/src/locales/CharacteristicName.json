@@ -8,6 +8,16 @@
     "fr": "Identifie ce qui est mesuré (p. Ex. température, pH) sur le terrain ou en laboratoire. Le nom utilisé doit avoir une correspondance dans la liste des valeurs autorisées --  voir onglet \"Allowed Values\"."
   },
   "values": {
+    "(Heptadecafluorooctyl)phosphonic acid": {
+      "name": {
+        "en": "(Heptadecafluorooctyl)phosphonic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid": {
       "name": {
         "en": ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid",
@@ -128,9 +138,29 @@
         "fr": null
       }
     },
+    "1-Butanesulfonamide, 1,1,2,2,3,3,4,4,4-nonafluoro-N-methyl-": {
+      "name": {
+        "en": "1-Butanesulfonamide, 1,1,2,2,3,3,4,4,4-nonafluoro-N-methyl-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "1-Butanol": {
       "name": {
         "en": "1-Butanol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1H,1H, 2H, 2H-Perfluorodecane sulfonic acid": {
+      "name": {
+        "en": "1H,1H, 2H, 2H-Perfluorodecane sulfonic acid",
         "fr": null
       },
       "description": {
@@ -198,6 +228,36 @@
         "fr": null
       }
     },
+    "1-Octanaminium, N-(carboxymethyl)-3,4,4,5,5,6,6,7,7,8,8,8-dodecafluoro-N,N-dimethyl-, inner salt": {
+      "name": {
+        "en": "1-Octanaminium, N-(carboxymethyl)-3,4,4,5,5,6,6,7,7,8,8,8-dodecafluoro-N,N-dimethyl-, inner salt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1-Octanaminium, N-(carboxymethyl)-4,4,5,5,6,6,7,7,8,8,8-undecafluoro-N,N-dimethyl-, inner salt": {
+      "name": {
+        "en": "1-Octanaminium, N-(carboxymethyl)-4,4,5,5,6,6,7,7,8,8,8-undecafluoro-N,N-dimethyl-, inner salt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1-Octanesulfonamide, N-[3-(dimethylamino)propyl]-1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-": {
+      "name": {
+        "en": "1-Octanesulfonamide, N-[3-(dimethylamino)propyl]-1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "1-Pentanol": {
       "name": {
         "en": "1-Pentanol",
@@ -211,6 +271,26 @@
     "1-Phenanthrenecarboxylic acid, 1,2,3,4,4a,4b,5,9,10,10a-decahydro-1,4a-dimethyl-7-(1-methylethyl)-, (1R-(1.alpha.,4a.beta., 4b.alpha.,10a.alpha.))-": {
       "name": {
         "en": "1-Phenanthrenecarboxylic acid, 1,2,3,4,4a,4b,5,9,10,10a-decahydro-1,4a-dimethyl-7-(1-methylethyl)-, (1R-(1.alpha.,4a.beta., 4b.alpha.,10a.alpha.))-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1-Propanaminium, N-(carboxymethyl)-N,N-dimethyl-3-[[(3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluorooctyl)sulfonyl]amino]-, inner salt": {
+      "name": {
+        "en": "1-Propanaminium, N-(carboxymethyl)-N,N-dimethyl-3-[[(3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluorooctyl)sulfonyl]amino]-, inner salt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1-Propanesulfonic acid, 1,1,2,2,3,3,3-heptafluoro-": {
+      "name": {
+        "en": "1-Propanesulfonic acid, 1,1,2,2,3,3,3-heptafluoro-",
         "fr": null
       },
       "description": {
@@ -598,6 +678,16 @@
         "fr": null
       }
     },
+    "10:2 Fluorotelomer sulfonic acid": {
+      "name": {
+        "en": "10:2 Fluorotelomer sulfonic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "12-Chlorodehydroabietic acid": {
       "name": {
         "en": "12-Chlorodehydroabietic acid",
@@ -708,9 +798,29 @@
         "fr": null
       }
     },
+    "2-Decenoic acid, 3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-hexadecafluoro-": {
+      "name": {
+        "en": "2-Decenoic acid, 3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-hexadecafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "2-Fluorobiphenyl": {
       "name": {
         "en": "2-Fluorobiphenyl",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2H-Perfluoro-2-dodecenoic acid": {
+      "name": {
+        "en": "2H-Perfluoro-2-dodecenoic acid",
         "fr": null
       },
       "description": {
@@ -781,6 +891,16 @@
     "2-Methylphenanthrene": {
       "name": {
         "en": "2-Methylphenanthrene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2-Octenoic acid, 3,4,4,5,5,6,6,7,7,8,8,8-dodecafluoro-": {
+      "name": {
+        "en": "2-Octenoic acid, 3,4,4,5,5,6,6,7,7,8,8,8-dodecafluoro-",
         "fr": null
       },
       "description": {
@@ -1238,6 +1358,36 @@
         "fr": null
       }
     },
+    "3-(Perfluorobutyl)propanoic acid": {
+      "name": {
+        "en": "3-(Perfluorobutyl)propanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "3:3 Fluorotelomer carboxylate, ion(1-)": {
+      "name": {
+        "en": "3:3 Fluorotelomer carboxylate, ion(1-)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "3-[[(Heptadecafluorooctyl)sulfonyl]amino]-N,N,N-trimethyl-1-propanaminium iodide": {
+      "name": {
+        "en": "3-[[(Heptadecafluorooctyl)sulfonyl]amino]-N,N,N-trimethyl-1-propanaminium iodide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "3-Hydroxycarbofuran": {
       "name": {
         "en": "3-Hydroxycarbofuran",
@@ -1511,6 +1661,16 @@
     "6-Acetyl-1,1,2,4,4,7-hexamethyltetralin": {
       "name": {
         "en": "6-Acetyl-1,1,2,4,4,7-hexamethyltetralin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "6:2 Fluorotelomer sulfonate acid": {
+      "name": {
+        "en": "6:2 Fluorotelomer sulfonate acid",
         "fr": null
       },
       "description": {
@@ -2002,6 +2162,16 @@
       "name": {
         "en": "Ammonium",
         "fr": "Ammonium"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ammonium 4,8-dioxa-3H-perfluorononanoate": {
+      "name": {
+        "en": "Ammonium 4,8-dioxa-3H-perfluorononanoate",
+        "fr": null
       },
       "description": {
         "en": null,
@@ -4938,6 +5108,16 @@
         "fr": null
       }
     },
+    "Cyclohexanesulfonic acid, 1,2,2,3,3,4,5,5,6,6-decafluoro-4-(1,1,2,2,2-pentafluoroethyl)-, potassium salt (1:1)": {
+      "name": {
+        "en": "Cyclohexanesulfonic acid, 1,2,2,3,3,4,5,5,6,6-decafluoro-4-(1,1,2,2,2-pentafluoroethyl)-, potassium salt (1:1)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Cyfluthrin": {
       "name": {
         "en": "Cyfluthrin",
@@ -5031,6 +5211,26 @@
     "Decachlorobiphenyl": {
       "name": {
         "en": "Decachlorobiphenyl",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Decanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heptadecafluoro-": {
+      "name": {
+        "en": "Decanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heptadecafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Decanoic acid, 4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-pentadecafluoro-": {
+      "name": {
+        "en": "Decanoic acid, 4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-pentadecafluoro-",
         "fr": null
       },
       "description": {
@@ -5858,6 +6058,16 @@
         "fr": null
       }
     },
+    "Dodecanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-heneicosafluoro-": {
+      "name": {
+        "en": "Dodecanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,12-heneicosafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Eicosanoic acid": {
       "name": {
         "en": "Eicosanoic acid",
@@ -6478,6 +6688,16 @@
         "fr": null
       }
     },
+    "Fluorotelomer sulfonate 4:2": {
+      "name": {
+        "en": "Fluorotelomer sulfonate 4:2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Fluoxetine": {
       "name": {
         "en": "Fluoxetine",
@@ -6621,6 +6841,16 @@
     "Glufosinate": {
       "name": {
         "en": "Glufosinate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Glycine, N-[(1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluorooctyl)sulfonyl]-": {
+      "name": {
+        "en": "Glycine, N-[(1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,8-heptadecafluorooctyl)sulfonyl]-",
         "fr": null
       },
       "description": {
@@ -6888,6 +7118,26 @@
         "fr": null
       }
     },
+    "Hexadecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,16-hentriacontafluoro-": {
+      "name": {
+        "en": "Hexadecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,16-hentriacontafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hexafluoropropylene oxide dimer acid": {
+      "name": {
+        "en": "Hexafluoropropylene oxide dimer acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Hexafluoropropylene oxide dimer acid ammonium salt": {
       "name": {
         "en": "Hexafluoropropylene oxide dimer acid ammonium salt",
@@ -6988,9 +7238,29 @@
         "fr": null
       }
     },
+    "Hydrocarbons, C10-19, Light petroleum minus LMW PAH": {
+      "name": {
+        "en": "Hydrocarbons, C10-19, Light petroleum minus LMW PAH",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Hydrocarbons, C19-32, Heavy petroleum": {
       "name": {
         "en": "Hydrocarbons, C19-32, Heavy petroleum",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hydrocarbons, C19-32, Heavy petroleum minus HMW PAH": {
+      "name": {
+        "en": "Hydrocarbons, C19-32, Heavy petroleum minus HMW PAH",
         "fr": null
       },
       "description": {
@@ -8518,6 +8788,46 @@
         "fr": null
       }
     },
+    "N-ethyl perfluorooctanesulfonamidoacetic acid": {
+      "name": {
+        "en": "N-ethyl perfluorooctanesulfonamidoacetic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "N-Ethylperfluorooctanesulfonamide": {
+      "name": {
+        "en": "N-Ethylperfluorooctanesulfonamide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "N-methyl perfluorooctanesulfonamidoacetic acid": {
+      "name": {
+        "en": "N-methyl perfluorooctanesulfonamidoacetic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "N-methylperfluoro-1-octanesulfonamide": {
+      "name": {
+        "en": "N-methylperfluoro-1-octanesulfonamide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "N-Nitrosodi-n-propylamine": {
       "name": {
         "en": "N-Nitrosodi-n-propylamine",
@@ -9001,6 +9311,36 @@
     "Octachlorostyrene": {
       "name": {
         "en": "Octachlorostyrene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Octadecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,18-pentatriacontafluoro-": {
+      "name": {
+        "en": "Octadecanoic acid, 2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,18-pentatriacontafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Octanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluoro-": {
+      "name": {
+        "en": "Octanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Octanoic acid, 4,4,5,5,6,6,7,7,8,8,8-undecafluoro-": {
+      "name": {
+        "en": "Octanoic acid, 4,4,5,5,6,6,7,7,8,8,8-undecafluoro-",
         "fr": null
       },
       "description": {
@@ -9658,9 +9998,69 @@
         "fr": null
       }
     },
+    "Perfluoro(4-methoxybutanoic) acid": {
+      "name": {
+        "en": "Perfluoro(4-methoxybutanoic) acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoro-1-decanesulfonamide": {
+      "name": {
+        "en": "Perfluoro-1-decanesulfonamide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoro-1-dodecanesulfonate": {
+      "name": {
+        "en": "Perfluoro-1-dodecanesulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoro-3,6-dioxaheptanoic acid": {
+      "name": {
+        "en": "Perfluoro-3,6-dioxaheptanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoro-3-methoxypropanoic acid": {
+      "name": {
+        "en": "Perfluoro-3-methoxypropanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluorobutanesulfonic acid": {
       "name": {
         "en": "Perfluorobutanesulfonic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorobutylsulfonamide": {
+      "name": {
+        "en": "Perfluorobutylsulfonamide",
         "fr": null
       },
       "description": {
@@ -9678,9 +10078,49 @@
         "fr": null
       }
     },
+    "Perfluorododecanoic acid": {
+      "name": {
+        "en": "Perfluorododecanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluoroheptanoic acid": {
       "name": {
         "en": "Perfluoroheptanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoroheptane sulfonamide": {
+      "name": {
+        "en": "Perfluoroheptane sulfonamide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorohexane sulfonamidopropyl ammonium": {
+      "name": {
+        "en": "Perfluorohexane sulfonamidopropyl ammonium",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorohexanesulfonamide": {
+      "name": {
+        "en": "Perfluorohexanesulfonamide",
         "fr": null
       },
       "description": {
@@ -9708,6 +10148,16 @@
         "fr": null
       }
     },
+    "Perfluorononanesulfonate": {
+      "name": {
+        "en": "Perfluorononanesulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluorononanoic acid": {
       "name": {
         "en": "Perfluorononanoic acid",
@@ -9728,9 +10178,99 @@
         "fr": null
       }
     },
+    "Perfluorooctaneamide betaine": {
+      "name": {
+        "en": "Perfluorooctaneamide betaine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorooctaneamido amine oxide": {
+      "name": {
+        "en": "Perfluorooctaneamido amine oxide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorooctanesulfonamide": {
+      "name": {
+        "en": "Perfluorooctanesulfonamide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorooctanesulfonamido amine oxide": {
+      "name": {
+        "en": "Perfluorooctanesulfonamido amine oxide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorooctanesulfonamido betaine": {
+      "name": {
+        "en": "Perfluorooctanesulfonamido betaine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluorooctanoic acid": {
       "name": {
         "en": "Perfluorooctanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoropentanesulfonic acid": {
+      "name": {
+        "en": "Perfluoropentanesulfonic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorotetradecanoic acid": {
+      "name": {
+        "en": "Perfluorotetradecanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorotridecanoic acid": {
+      "name": {
+        "en": "Perfluorotridecanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoroundecanoic acid": {
+      "name": {
+        "en": "Perfluoroundecanoic acid",
         "fr": null
       },
       "description": {
@@ -9978,6 +10518,16 @@
         "fr": null
       }
     },
+    "Phosphonic acid, (tridecafluorohexyl)-": {
+      "name": {
+        "en": "Phosphonic acid, (tridecafluorohexyl)-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Phosphorus-31": {
       "name": {
         "en": "Phosphorus-31",
@@ -10168,6 +10718,36 @@
         "fr": null
       }
     },
+    "Potassium 1,1,2,2-tetrafluoro-2-(pentafluoroethoxy)ethane-1-sulfonate": {
+      "name": {
+        "en": "Potassium 1,1,2,2-tetrafluoro-2-(pentafluoroethoxy)ethane-1-sulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Potassium 11-chloroeicosafluoro-3-oxaundecane-1-sulfonate": {
+      "name": {
+        "en": "Potassium 11-chloroeicosafluoro-3-oxaundecane-1-sulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Potassium 9-chlorohexadecafluoro-3-oxanonane-1-sulfonate": {
+      "name": {
+        "en": "Potassium 9-chlorohexadecafluoro-3-oxanonane-1-sulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Praseodymium": {
       "name": {
         "en": "Praseodymium",
@@ -10281,6 +10861,16 @@
     "Propanil": {
       "name": {
         "en": "Propanil",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Propanoic acid, 2,2,3,3,3-pentafluoro-": {
+      "name": {
+        "en": "Propanoic acid, 2,2,3,3,3-pentafluoro-",
         "fr": null
       },
       "description": {
@@ -10968,6 +11558,26 @@
         "fr": null
       }
     },
+    "Sodium-23": {
+      "name": {
+        "en": "Sodium-23",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sodium 8-chloroperfluoro-1-octanesulfonate": {
+      "name": {
+        "en": "Sodium 8-chloroperfluoro-1-octanesulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]": {
       "name": {
         "en": "Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]",
@@ -10978,9 +11588,59 @@
         "fr": null
       }
     },
-    "Sodium-23": {
+    "Sodium bis(heptadecafluorooctyl)phosphinate": {
       "name": {
-        "en": "Sodium-23",
+        "en": "Sodium bis(heptadecafluorooctyl)phosphinate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sodium bis(perfluorohexyl)phosphinate": {
+      "name": {
+        "en": "Sodium bis(perfluorohexyl)phosphinate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sodium perfluorodecanesulfonate": {
+      "name": {
+        "en": "Sodium perfluorodecanesulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sodium perfluoroethanesulfonate": {
+      "name": {
+        "en": "Sodium perfluoroethanesulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sodium perfluorohexylperfluorooctylphosphinate": {
+      "name": {
+        "en": "Sodium perfluorohexylperfluorooctylphosphinate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sodium perfluorotridecanesulfonate": {
+      "name": {
+        "en": "Sodium perfluorotridecanesulfonate",
         "fr": null
       },
       "description": {
@@ -12158,6 +12818,16 @@
         "fr": null
       }
     },
+    "Total Volatile Hydrocarbons C6-C10 minus BTEX": {
+      "name": {
+        "en": "Total Volatile Hydrocarbons C6-C10 minus BTEX",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Total volatile solids": {
       "name": {
         "en": "Total volatile solids",
@@ -12461,6 +13131,16 @@
     "Triclosan methyl ether": {
       "name": {
         "en": "Triclosan methyl ether",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tricosafluoroundecane-1-sulfonic acid sodium salt": {
+      "name": {
+        "en": "Tricosafluoroundecane-1-sulfonic acid sodium salt",
         "fr": null
       },
       "description": {
@@ -12911,6 +13591,16 @@
     "Boron-10": {
       "name": {
         "en": "Boron-10",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "perfluorohexane sulfonamido propyl amine": {
+      "name": {
+        "en": "perfluorohexane sulfonamido propyl amine",
         "fr": null
       },
       "description": {
