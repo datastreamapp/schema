@@ -55,7 +55,7 @@ pattern = doit correspondre au format « {$pattern} »
 patternRequired = la propriété doit correspondre au format « {$missingPattern} »
 propertyNames = le nom de propriété est invalide
 required = requiert la propriété {$missingProperty}
-type = doit être de type {$type}{$nullable -> 
+type = doit être de type {$type}{$nullable ->
   [true] /null
   *[default] {""}
 }
@@ -63,17 +63,17 @@ unevaluatedItems = ne doit pas contenir plus de {$len} {$len ->
   [one] élément
   *[other] éléments
 }
-unevaluatedProperties = ne doit pas avoir de propriétés non évaluées
+unevaluatedProperties = ne doit pas avoir de propriété non évaluée « {$unevaluatedProperty} »
 uniqueItems = ne doit pas contenir de doublons (les éléments ## {$j} et {$i} sont identiques)
 
 # jtd
-discriminator = {$error -> 
+discriminator = {$error ->
     [tag] la balise « {$tag} » doit être une chaîne
     [mapping] la valeur de la balise « {$tag} » doit être dans le mappage
     *[default] {type}
   }
 # enum = {enum}
-properties = {$error -> 
+properties = {$error ->
     [additional] ne doit pas contenir de propriétés additionnelles
     [missing] requiert la propriété {$missingProperty}
     *[default] {type}
@@ -82,4 +82,3 @@ properties = {$error ->
 elements = {type}
 values = {type}
 union = doit correspondre à un schéma de « union »
-
