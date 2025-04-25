@@ -75,7 +75,7 @@ unevaluatedItems =
       [one] élément
       *[other] éléments
     }
-unevaluatedProperties = ne doit pas avoir de propriétés non évaluées
+unevaluatedProperties = must not have unevaluated property "{ $unevaluatedProperty }"
 uniqueItems = ne doit pas contenir de doublons (les éléments ## {$j} et {$i} sont identiques)
 # errorMessages
 error-additional-columns = Should not have columns outside of schema/template
