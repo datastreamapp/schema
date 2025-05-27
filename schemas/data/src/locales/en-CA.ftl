@@ -66,7 +66,7 @@ unevaluatedItems = must not have more than {$len} {$len ->
   [one] item
   *[other] items
 }
-unevaluatedProperties = must not have unevaluated properties
+unevaluatedProperties = must not have unevaluated property "{$unevaluatedProperty}"
 uniqueItems = must not have duplicate items (items ## {$j} and {$i} are identical)
 
 # errorMessages
