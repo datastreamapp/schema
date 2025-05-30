@@ -12,6 +12,7 @@
         "enum": [
           "Aluminum",
           "Ammonia",
+          "Ammonia, un-ionized",
           "Ammonia and ammonium",
           "Ammonium",
           "Antimony",

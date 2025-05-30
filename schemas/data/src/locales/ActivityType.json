@@ -547,6 +547,16 @@
         "en": null,
         "fr": null
       }
+    },
+    "Unspecified": {
+      "name": {
+        "en": "Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }
