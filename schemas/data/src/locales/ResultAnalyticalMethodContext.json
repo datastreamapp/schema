@@ -58,9 +58,29 @@
         "fr": null
       }
     },
+    "APHA_SM24ED": {
+      "name": {
+        "en": "APHA_SM24ED",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "ASTM": {
       "name": {
         "en": "ASTM",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "BC MOE": {
+      "name": {
+        "en": "BC MOE",
         "fr": null
       },
       "description": {
@@ -128,6 +148,16 @@
         "fr": null
       }
     },
+    "Hydrolab": {
+      "name": {
+        "en": "Hydrolab",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "IDEXX": {
       "name": {
         "en": "IDEXX",
@@ -168,9 +198,29 @@
         "fr": null
       }
     },
+    "METER Group": {
+      "name": {
+        "en": "METER Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "MICROLOGY LABS": {
       "name": {
         "en": "MICROLOGY LABS",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oakton": {
+      "name": {
+        "en": "Oakton",
         "fr": null
       },
       "description": {
@@ -208,9 +258,29 @@
         "fr": null
       }
     },
+    "RBR": {
+      "name": {
+        "en": "RBR",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Seal": {
       "name": {
         "en": "Seal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Solinist": {
+      "name": {
+        "en": "Solinist",
         "fr": null
       },
       "description": {
@@ -228,9 +298,29 @@
         "fr": null
       }
     },
+    "Turner Designs": {
+      "name": {
+        "en": "Turner Designs",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "USEPA": {
       "name": {
         "en": "USEPA",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "USGS": {
+      "name": {
+        "en": "USGS",
         "fr": null
       },
       "description": {

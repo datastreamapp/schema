@@ -104,6 +104,7 @@
   "Aluminum": ["ug/L"],
   "Aminoazobenzene": ["ug/L"],
   "Ammonia": ["mg/L"],
+  "Ammonia, un-ionized": ["mg/L"],
   "Ammonia and ammonium": ["mg/L"],
   "Aniline": ["ug/L"],
   "Anthracene": ["ug/L", "ug/kg"],
