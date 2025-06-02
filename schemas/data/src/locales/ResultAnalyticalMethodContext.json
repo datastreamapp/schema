@@ -318,9 +318,9 @@
         "fr": null
       }
     },
-    "USGS": {
+    "USDOI/USGS": {
       "name": {
-        "en": "USGS",
+        "en": "USDOI/USGS",
         "fr": null
       },
       "description": {
