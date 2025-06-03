@@ -158,6 +158,46 @@
         "fr": null
       }
     },
+    "Quality Control Sample-Integrated Time Series-Field Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Field Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Lab Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Lab Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Trip Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Trip Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Unspecified Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Unspecified Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Quality Control Sample-Inter-lab Split": {
       "name": {
         "en": "Quality Control Sample-Inter-lab Split",
