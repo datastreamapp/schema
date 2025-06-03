@@ -28,6 +28,16 @@
         "fr": null
       }
     },
+    "Historical": {
+      "name": {
+        "en": "Historical",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Preliminary": {
       "name": {
         "en": "Preliminary",
