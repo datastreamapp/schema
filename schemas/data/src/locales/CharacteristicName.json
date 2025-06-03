@@ -12838,6 +12838,16 @@
         "fr": null
       }
     },
+    "Total Volatile Hydrocarbons, C6-C10": {
+      "name": {
+        "en": "Total Volatile Hydrocarbons, C6-C10",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Total Volatile Hydrocarbons C6-C10 minus BTEX": {
       "name": {
         "en": "Total Volatile Hydrocarbons C6-C10 minus BTEX",
