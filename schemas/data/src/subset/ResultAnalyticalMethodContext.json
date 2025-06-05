@@ -5,7 +5,9 @@
   "APHA_SM21ED",
   "APHA_SM22ED",
   "APHA_SM23ED",
+  "APHA_SM24ED",
   "ASTM",
+  "BC_MOE",
   "DIN",
   "DOI",
   "EN",
@@ -25,6 +27,7 @@
   "PROPRIETARY",
   "Seal",
   "THERMO-SCIENTIFIC",
+  "USDOI/USGS",
   "USEPA",
   "VMV",
   "YSI"

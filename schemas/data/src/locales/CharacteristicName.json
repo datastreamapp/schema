@@ -1678,6 +1678,16 @@
         "fr": null
       }
     },
+    "6PPD-quinone": {
+      "name": {
+        "en": "6PPD-quinone",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "7-Methylbenzo[a]pyrene": {
       "name": {
         "en": "7-Methylbenzo[a]pyrene",
@@ -2142,6 +2152,16 @@
       "name": {
         "en": "Ammonia",
         "fr": "Ammoniac"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ammonia, un-ionized": {
+      "name": {
+        "en": "Ammonia, un-ionized",
+        "fr": "Ammoniac non ionisé"
       },
       "description": {
         "en": null,
@@ -12818,6 +12838,16 @@
         "fr": null
       }
     },
+    "Total Volatile Hydrocarbons, C6-C10": {
+      "name": {
+        "en": "Total Volatile Hydrocarbons, C6-C10",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Total Volatile Hydrocarbons C6-C10 minus BTEX": {
       "name": {
         "en": "Total Volatile Hydrocarbons C6-C10 minus BTEX",
@@ -12921,6 +12951,16 @@
     "trans-Nonachlor": {
       "name": {
         "en": "trans-Nonachlor",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Transmittance at 254 nm": {
+      "name": {
+        "en": "Transmittance at 254 nm",
         "fr": null
       },
       "description": {

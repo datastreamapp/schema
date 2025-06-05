@@ -19,6 +19,7 @@
       "CharacteristicName": {
         "enum": [
           "Ammonia",
+          "Ammonia, un-ionized",
           "Ammonia and ammonium",
           "Ammonium",
           "Inorganic nitrogen (ammonia, nitrate and nitrite)",
