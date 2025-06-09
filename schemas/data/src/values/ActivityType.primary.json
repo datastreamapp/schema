@@ -19,6 +19,11 @@
     "Quality Control Sample-Field Replicate",
     "Quality Control Sample-Field Spike",
     "Quality Control Sample-Field Surrogate Spike",
+    "Quality Control Sample-Integrated Time Series-Equipment Blank",
+    "Quality Control Sample-Integrated Time Series-Field Blank",
+    "Quality Control Sample-Integrated Time Series-Lab Blank",
+    "Quality Control Sample-Integrated Time Series-Trip Blank",
+    "Quality Control Sample-Integrated Time Series-Unspecified Blank",
     "Quality Control Sample-Inter-lab Split",
     "Quality Control Sample-Lab Blank",
     "Quality Control Sample-Lab Duplicate",
@@ -57,7 +62,8 @@
     "Sample-Negative Control",
     "Sample-Other",
     "Sample-Positive Control",
-    "Sample-Routine"
+    "Sample-Routine",
+    "Unspecified"
   ],
-  "maxLength": 69
+  "maxLength": 70
 }

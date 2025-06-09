@@ -597,6 +597,16 @@
         "en": null,
         "fr": null
       }
+    },
+    "Quality Control Sample-Integrated Time Series-Equipment Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Equipment Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

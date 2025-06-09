@@ -11,8 +11,8 @@
       "CharacteristicName": {
         "enum": [
           "Ammonia",
-          "Ammonia, un-ionized",
           "Ammonia and ammonium",
+          "Ammonia, un-ionized",
           "Ammonium",
           "Carbon-13",
           "Carbon-13/Carbon-12 ratio",

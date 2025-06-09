@@ -26,12 +26,15 @@ const wqxRequiredIf = async (file) => {
 
   // TODO - remove once included in WQX look up
   if (file === "CharacteristicName-MethodSpeciation") {
-    // remove MethodSpeciation for CharacteristicName https://github.com/datastreamapp/datastream-dms/issues/2381
+
+    // Include additional chars if it's not in WQX logic
     const include = [
+      "Ammonia, un-ionized",
       "Inorganic nitrogen (ammonia, nitrate and nitrite)",
       "Inorganic nitrogen (nitrate and nitrite)",
     ];
 
+    // remove MethodSpeciation for CharacteristicName https://github.com/gordonfn/datastream-dms/issues/2381
     const exclude = [
       "Radium",
       "Radium-226",
