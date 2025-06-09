@@ -348,6 +348,23 @@ test('Should reject CharacteristicName-ActivityType-Surrogate & ResultDetectionQ
   t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
 })
 
+// *** CharacteristicName-Ammonia *** //
+test('Should accept CharacteristicName Ammonia, un-ionized', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Ammonia, un-ionized'
+  })
+  t.is(valid, true)
+})
+
+test('Should reject CharacteristicName-Ammonia', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Ammonia'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'not', 'CharacteristicName'), true)
+  t.is(checkProperty(validate.errors, 'message', 'qc-CharacteristicName-Ammonia'), true)
+})
+
 // *** CharacteristicName-Metal-ResultSampleFraction *** //
 test('Should accept CharacteristicName-Metal-ResultSampleFraction', async (t) => {
   const valid = validate({
@@ -377,7 +394,7 @@ test('Should reject CharacteristicName-Metal-ResultSampleFraction', async (t) =>
 // *** CharacteristicName-MethodSpeciation *** //
 test('Should accept CharacteristicName-MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Ammonia',
+    CharacteristicName: 'Ammonia and ammonium',
     MethodSpeciation: 'as N'
   })
   t.is(valid, true)
@@ -398,7 +415,7 @@ test('Should accept MethodSpeciation when its expected', async (t) => {
 })
 test('Should accept MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Ammonia'
+    CharacteristicName: 'Ammonia and ammonium'
   })
   t.is(valid, true)
 })
@@ -406,7 +423,7 @@ test('Should accept MethodSpeciation when its not expected', async (t) => {
 // *** CharacteristicName-Metal-ResultAnalyticalMethodName *** //
 test('Should accept CharacteristicName-ResultAnalyticalMethodName', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Ammonia',
+    CharacteristicName: 'Ammonia and ammonium',
     ResultAnalyticalMethodName: 'Test Method Name'
   })
   t.is(valid, true)

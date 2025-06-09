@@ -129,6 +129,9 @@
       "$ref": "./quality-control/CharacteristicName-ActivityType-Surrogate.json"
     },
     {
+      "$ref": "./quality-control/CharacteristicName-Ammonia.json"
+    },
+    {
       "$ref": "./quality-control/CharacteristicName-Metal-ResultSampleFraction.json"
     },
     {

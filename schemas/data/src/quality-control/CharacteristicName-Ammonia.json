@@ -1,0 +1,15 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/CharacteristicName-Ammonia.json",
+  "title": "CharacteristicName-Ammonia",
+  "description": "Ammonia is ambiguous and planned for deprecation.",
+  "errorMessage": "qc-CharacteristicName-Ammonia",
+  "type": "object",
+  "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "not": {
+          "const": "Ammonia"
+        }
+      }
+    }
+  }
