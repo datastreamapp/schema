@@ -1,0 +1,34 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-pH-ActivityType-Sample.json",
+  "title": "CharacteristicName-pH-ActivityType-Sample",
+  "description": "ResultDetectionQuantitationLimitUnit that require special unit notation.",
+  "errorMessage": "error-CharacteristicName-pH-ActivityType-Sample",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "const": "pH"
+      }
+    },
+    "required": [
+      "CharacteristicName",
+      "ActivityType"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityType": {
+        "not": {
+          "type": "string",
+          "pattern": "^(Quality Control )?Sample-[a-zA-Z -]+$"
+        }
+      }
+    },
+    "required": [
+      "ActivityType"
+    ]
+  }
+}

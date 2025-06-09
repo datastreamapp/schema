@@ -183,6 +183,9 @@
       "$ref": "./logic/CharacteristicName-Nutrient-ResultSampleFraction.json"
     },
     {
+      "$ref": "./logic/CharacteristicName-pH-ActivityType-Sample.json"
+    },
+    {
       "$ref": "./logic/ResultDetectionCondition-ResultValue.json"
     },
     {

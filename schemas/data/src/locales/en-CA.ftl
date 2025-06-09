@@ -86,6 +86,7 @@ error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations m
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
+error-CharacteristicName-pH-ActivityType-Sample = The CharacteristicName "pH" cannot be used with when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs). Use the CharacteristicName "pH, lab"
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
 error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data (https://datastream.org/en-ca/documentation/isotope-data-guidance)
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
