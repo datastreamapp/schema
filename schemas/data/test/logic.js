@@ -354,44 +354,6 @@ test("Should accept Nutrient Sediment", async (t) => {
 //   t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
 //
 // })
-// CharacteristicName-pH-ActivityType-Sample
-test("Should accept CharacteristicName-pH,lab with ActivityType-Sample", async (t) => {
-  const valid = validate({
-    CharacteristicName: "pH, lab",
-    ActivityType: "Sample-Routine",
-    LaboratoryName: "A",
-    ResultAnalyticalMethodName: "Unspecified"
-  })
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "not", "ActivityType"), false);
-});
-
-test("Should reject CharacteristicName-pH with ActivityType-Sample", async (t) => {
-  const valid = validate({
-    CharacteristicName: "pH",
-    ActivityType: "Sample-Routine",
-    LaboratoryName: "A",
-    ResultAnalyticalMethodName: "Unspecified"
-  })
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "not", "ActivityType"), true);
-  t.is(checkProperty(validate.errors, "message", "error-CharacteristicName-pH-ActivityType-Sample"), true);
-});
-
-test("Should reject CharacteristicName-pH with ActivityType-Quality Control Sample", async (t) => {
-  const valid = validate({
-    CharacteristicName: "pH",
-    ActivityType: "Quality Control Sample-Other",
-    LaboratoryName: "A",
-    ResultAnalyticalMethodName: "Unspecified"
-  })
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "not", "ActivityType"), true);
-  t.is(checkProperty(validate.errors, "message", "error-CharacteristicName-pH-ActivityType-Sample"), true);
-});
-
 
 // CharacteristicName-ResultSampleFraction
 test("Should accept CharacteristicName AND NOT ResultSampleFraction", async (t) => {

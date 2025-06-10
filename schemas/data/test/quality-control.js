@@ -420,6 +420,44 @@ test('Should accept MethodSpeciation when its not expected', async (t) => {
   t.is(valid, true)
 })
 
+// *** CharacteristicName-pH-ActivityType-Sample *** //
+test("Should accept CharacteristicName-pH,lab with ActivityType-Sample", async (t) => {
+  const valid = validate({
+    CharacteristicName: "pH, lab",
+    ActivityType: "Sample-Routine",
+    LaboratoryName: "A",
+    ResultAnalyticalMethodName: "Unspecified"
+  })
+  t.true(valid);
+  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
+  t.is(checkProperty(validate.errors, "not", "ActivityType"), false);
+});
+
+test("Should reject CharacteristicName-pH with ActivityType-Sample", async (t) => {
+  const valid = validate({
+    CharacteristicName: "pH",
+    ActivityType: "Sample-Routine",
+    LaboratoryName: "A",
+    ResultAnalyticalMethodName: "Unspecified"
+  })
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "not", "ActivityType"), true);
+  t.is(checkProperty(validate.errors, "message", "qc-CharacteristicName-pH-ActivityType-Sample"), true);
+});
+
+test("Should reject CharacteristicName-pH with ActivityType-Quality Control Sample", async (t) => {
+  const valid = validate({
+    CharacteristicName: "pH",
+    ActivityType: "Quality Control Sample-Other",
+    LaboratoryName: "A",
+    ResultAnalyticalMethodName: "Unspecified"
+  })
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "not", "ActivityType"), true);
+  t.is(checkProperty(validate.errors, "message", "qc-CharacteristicName-pH-ActivityType-Sample"), true);
+});
+
 // *** CharacteristicName-Metal-ResultAnalyticalMethodName *** //
 test('Should accept CharacteristicName-ResultAnalyticalMethodName', async (t) => {
   const valid = validate({

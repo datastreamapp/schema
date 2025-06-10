@@ -86,7 +86,6 @@ error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations m
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
-error-CharacteristicName-pH-ActivityType-Sample = The CharacteristicName "pH" cannot be used with when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs). Use the CharacteristicName "pH, lab"
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
 error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data (https://datastream.org/en-ca/documentation/isotope-data-guidance)
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
@@ -107,6 +106,7 @@ qc-CharacteristicName-ActivityType-Surrogate = When reported as a percentage, th
 qc-CharacteristicName-Ammonia = "Ammonia" is ambiguous and planned for deprecation. If entering Total Ammonia, use "Ammonia and ammonium"; if entering Ammonia-nitrogen or Free-Available Ammonia use "Ammonia, un-ionized". For guidance, please see Best Practices Guide for Nutrient Data (https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data (https://datastream.org/en-ca/documentation/metal-series-data-guidance)
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
+qc-CharacteristicName-pH-ActivityType-Sample = The CharacteristicName "pH" cannot be used with when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs). Use the CharacteristicName "pH, lab"
 qc-CharacteristicName-ResultAnalyticalMethodName = ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 

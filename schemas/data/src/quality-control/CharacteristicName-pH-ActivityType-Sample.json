@@ -1,8 +1,8 @@
 {
-  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-pH-ActivityType-Sample.json",
+  "$id": "https://datastream.org/schema/data/quality-control/CharacteristicName-pH-ActivityType-Sample.json",
   "title": "CharacteristicName-pH-ActivityType-Sample",
-  "description": "ResultDetectionQuantitationLimitUnit that require special unit notation.",
-  "errorMessage": "error-CharacteristicName-pH-ActivityType-Sample",
+  "description": "pH cannot be used with when ActivityType starts with 'Sample'",
+  "errorMessage": "qc-CharacteristicName-pH-ActivityType-Sample",
   "if": {
     "type": "object",
     "unevaluatedProperties": true,

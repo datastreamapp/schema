@@ -138,6 +138,9 @@
       "$ref": "./quality-control/CharacteristicName-MethodSpeciation.json"
     },
     {
+      "$ref": "./quality-control/CharacteristicName-pH-ActivityType-Sample.json"
+    },
+    {
       "$ref": "./quality-control/CharacteristicName-ResultAnalyticalMethodName.json"
     },
     {
