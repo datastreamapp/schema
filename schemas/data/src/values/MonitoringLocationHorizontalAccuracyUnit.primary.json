@@ -4,7 +4,8 @@
   "description": "",
   "type": "string",
   "enum": [
+    "km",
     "m"
   ],
-  "maxLength": 1
+  "maxLength": 2
 }
