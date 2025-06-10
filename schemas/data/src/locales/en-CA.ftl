@@ -134,7 +134,7 @@ qc-WhiteSpace = Leading or trailing white space detected in character string
 ## quality-control (code)
 qc-RowCount = A dataset requires at least one row.
 qc-ColumnCount = Should match column count from the first row
-qc-DatasetName = Does not match expected value.
+qc-DatasetName = The DatasetName in this CSV file does not match the dataset’s metadata. If you proceed, dataset downloads will include the existing dataset name from the metadata. This CSV file containing the mismatched dataset name will still be available via the dataset Changelog. To match your dataset name across all records, update the DatasetName field in the CSV, or update the dataset's metadata.
 qc-Date-Future = Contains date in the future
 qc-ActivityStartDate-Future = {qc-Date-Future}
 qc-ActivityEndDate-Future = {qc-Date-Future}
