@@ -92,8 +92,8 @@ error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, 
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below = ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect = When ResultDetectionCondition is set to 'Not Detected' or 'Detected Not Quantified' the ResultDetectionQuantitationLimit fields should not be populated
 error-ResultDetectionCondition-ResultValue = Only one of ResultValue or ResultDetectionCondition should be populated
-error-ResultDetectionQuantitationLimitUnit-Salinity = ResultDetectionQuantitationLimitUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million) or PSU (practical salinity unit), or g/L (grams per litre)
-error-ResultUnit-Salinity = ResultUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million), PSU (practical salinity unit), or g/L (grams per litre)
+error-ResultDetectionQuantitationLimitUnit-Salinity = ResultDetectionQuantitationLimitUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million), PSU (practical salinity unit), mg/L (milligrams per litre), or g/L (grams per litre)
+error-ResultUnit-Salinity = ResultUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million), PSU (practical salinity unit), mg/L (milligrams per litre), or g/L (grams per litre)
 
 ## quality-control
 qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure should be below 0
@@ -103,8 +103,10 @@ qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant 
 # qc-CharacteristicName-Deprecated = CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.
 qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
 qc-CharacteristicName-ActivityType-Surrogate = When reported as a percentage, this characteristic may be a surrogate standard. If this is the case, please use the ActivityType 'Quality Control Sample-Lab Surrogate Control Standard' or 'Quality Control Sample-Lab Surrogate Control Standard Duplicate'
+qc-CharacteristicName-Ammonia = "Ammonia" is ambiguous and planned for deprecation. If entering Total Ammonia, use "Ammonia and ammonium"; if entering Ammonia-nitrogen or Free-Available Ammonia use "Ammonia, un-ionized". For guidance, please see Best Practices Guide for Nutrient Data (https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data (https://datastream.org/en-ca/documentation/metal-series-data-guidance)
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
+qc-CharacteristicName-pH-ActivityType-Sample = The CharacteristicName "pH" cannot be used with when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs). Use the CharacteristicName "pH, lab"
 qc-CharacteristicName-ResultAnalyticalMethodName = ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 
@@ -132,7 +134,7 @@ qc-WhiteSpace = Leading or trailing white space detected in character string
 ## quality-control (code)
 qc-RowCount = A dataset requires at least one row.
 qc-ColumnCount = Should match column count from the first row
-qc-DatasetName = Does not match expected value.
+qc-DatasetName = The DatasetName in this CSV file does not match the dataset’s metadata. If you proceed, dataset downloads will include the existing dataset name from the metadata. This CSV file containing the mismatched dataset name will still be available via the dataset Changelog. To match your dataset name across all records, update the DatasetName field in the CSV, or update the dataset's metadata.
 qc-Date-Future = Contains date in the future
 qc-ActivityStartDate-Future = {qc-Date-Future}
 qc-ActivityEndDate-Future = {qc-Date-Future}
