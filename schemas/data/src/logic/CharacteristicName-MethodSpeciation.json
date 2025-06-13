@@ -6,7 +6,7 @@
   "errorMessage": "error-CharacteristicName-MethodSpeciation",
   "if": {
     "type": "object",
-    "unevaluatedProperties": false,
+    "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
         "enum": [
@@ -52,7 +52,7 @@
   },
   "then": {
     "type": "object",
-    "unevaluatedProperties": false,
+    "unevaluatedProperties": true,
     "properties": {
       "MethodSpeciation": true
     },

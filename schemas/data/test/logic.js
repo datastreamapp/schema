@@ -278,12 +278,13 @@ test("Should accept CharacteristicName AND NOT MethodSpeciation", async (t) => {
   t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
   t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
 });
-test("Should reject CharacteristicName AND NOT MethodSpeciation", async (t) => {
+test("Should reject CharacteristicName Ammonia, un-ionized AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
-    CharacteristicName: "Nitrate",
+    CharacteristicName: "Ammonia, un-ionized",
   });
   t.false(valid);
   t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+  t.is(checkProperty(validate.errors, "message", "error-CharacteristicName-MethodSpeciation"), true);
 });
 test("Should accept CharacteristicName AND MethodSpeciation", async (t) => {
   const valid = validate({
