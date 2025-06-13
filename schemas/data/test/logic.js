@@ -286,6 +286,15 @@ test("Should reject CharacteristicName Ammonia, un-ionized AND NOT MethodSpeciat
   t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
   t.is(checkProperty(validate.errors, "message", "error-CharacteristicName-MethodSpeciation"), true);
 });
+test("Should reject CharacteristicName Nitrogen-15 AND NOT MethodSpeciation", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Nitrogen-15",
+    LaboratoryName: "A",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+  t.is(checkProperty(validate.errors, "message", "error-CharacteristicName-MethodSpeciation"), true);
+});
 test("Should accept CharacteristicName AND MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Nitrate",
