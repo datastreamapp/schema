@@ -106,7 +106,7 @@ qc-CharacteristicName-ActivityType-Surrogate = When reported as a percentage, th
 qc-CharacteristicName-Ammonia = "Ammonia" is ambiguous and planned for deprecation. If entering Total Ammonia, use "Ammonia and ammonium"; if entering Ammonia-nitrogen or Free-Available Ammonia use "Ammonia, un-ionized". For guidance, please see Best Practices Guide for Nutrient Data (https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 qc-CharacteristicName-Metal-ResultSampleFraction = ResultSampleFraction may not be appropriate for this CharacteristicName. Please consult DataStream's Best Practices for submitting metal-series data (https://datastream.org/en-ca/documentation/metal-series-data-guidance)
 qc-CharacteristicName-MethodSpeciation = MethodSpeciation is not required and may not be relevant for selected CharacteristicName
-qc-CharacteristicName-pH-ActivityType-Sample = The CharacteristicName "pH" cannot be used with when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs). Use the CharacteristicName "pH, lab"
+qc-CharacteristicName-pH-ActivityType-Sample = The CharacteristicName "pH" cannot be used when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs). Use the CharacteristicName "pH, lab"
 qc-CharacteristicName-ResultAnalyticalMethodName = ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 
