@@ -9,38 +9,13 @@
 
 ## DataStream
 
-DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. To date, over 15 million water quality observations have been published across DataStream’s four regional platforms (Mackenzie DataStream,  Lake Winnipeg DataStream, Atlantic DataStream and Great Lakes DataStream) by watershed groups, Indigenous organizations, researchers and governments at all levels.
+DataStream ([DataStream.org](https://datastream.org)) is an online open-access platform for sharing water quality data. Data is uploaded, stored and shared in DataStream’s Open Data Schema -- a model based on the WQX standard for the Exchange of Water Quality Data. DataStream is free to use and allows users to query, visualize, and download data in this standardized format. 
 
 DataStream was developed by [The Gordon Foundation](https://gordonfoundation.ca) and is carried out in collaboration with regional partners and monitoring networks. Data contributors maintain ownership of their data which are published under open data licences.
 
-## Metadata (v2)
-In addition to the observation-level information in DS-WQX, DataStream uses the following schema for dataset metadata.
+## Dataset Metadata (v2)
+In addition to the observation-level information in DS-WQX, Datasets published on DataStream are accompanied by comprehensive metadata (information about the dataset). See DataStream's Learning Centre for a summary of [Metadata fields and their descriptions](https://datastream.org/en-ca/documentation/dataset-metadata) .
 
-Field                        | Mandatory      | Description
------------------------------|----------------|-------------
-Dataset Name                 | Yes            | A short self-explanatory title of the dataset
-Data Steward Email           | Yes            | Email address publically associated with the dataset
-Data Upload Organization     | Yes            | The name of the organization (or researcher) that is uploading the data to DataStream
-Abstract                     | Yes            | A description of the dataset including purpose and nature of monitoring efforts
-Data Collection Organization | Yes            | Name of the organization or other parties responsible for collecting the data
-Data Collection Information  | No             | Information about how the data were collected such as sampling methods, equipment, calibration, QA/QC protocols
-Data Processing              | No             | Description of data cleaning, processing and/or QA/QC that was done to the data
-Funding Sources              | No             | Funders of the monitoring project
-Other Data Sources           | No             | Cite any third party sources of data included in the dataset
-Topic Category               | Yes            | ISO 19115 Topic Category (dropdown list)
-Keywords                     | No             | Keywords related to the dataset
-Licencing & Attribution      | Yes            | Choose from Attribution Licence (ODC-By) or Public-Domain Dedication and Licence (ODC-PDDL) or Open Government licence (OGL)
-Data Disclaimer              | No             | Any additional disclaimer text regarding the data that is not covered in data licence
-Data Source URL              | No             | When data is being cross-posted from another Open Data Platform
-Monitoring Active            | Yes            | Indicates if a dataset if being actively monitored and will likely have updates in the future
-Citation                     | Auto-generated | How the data should be cited if it is used by others
-Date Published               | Auto-generated | Date the dataset is published on DataStream
-Date Last Updated            | Auto-generated | Date of last update to the dataset on DataStream
-Version Number               | Auto-generated | Version number of the dataset
-DOI                          | Auto-generated | Digital Object Identifier (assigned by DataStream unless a pre-existing DOI for data is entered)
-Spatial Extent               | Auto-generated | Geographic area covered by dataset
-Vertical Extent              | Auto-generated | Height/Depth range of the dataset
-Temporal Extent              | Auto-generated | Timespan of the dataset
 
 ### Metadata Standards Mapping (v2)
 DataStream                    | EPA                        | DataCite                         | W3C DCAT                   | ISO 19115-2
