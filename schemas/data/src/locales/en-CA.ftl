@@ -110,7 +110,7 @@ qc-CharacteristicName-pH-ActivityType-Sample = The CharacteristicName "pH" canno
 qc-CharacteristicName-ResultAnalyticalMethodName = ResultAnalyticalMethodName is required for this data type. Please use that field to describe how ice-on and/or ice-off are defined
 qc-MonitoringLocationCoordinate-BoundingBox = Monitoring Location Latitude/Longitude is outside DataStream boundary
 
-qc-ResultAnalyticalMethodContext-YSI-ActivityType = The ActivityType may not be appropriate for this ResultAnalyticalMethodContext. When ResultAnalyticalMethodContext is 'YSI', a field measurement is expected (e.g., ActivityType 'Field Msr/Obs-Portable Data Logger')
+qc-ResultAnalyticalMethodContext-YSI-ActivityType = The ActivityType may not be appropriate for this ResultAnalyticalMethodContext. The selected ResultAnalyticalMethodContext is typically used in the field (e.g., ActivityType 'Field Msr/Obs-Portable Data Logger')
 qc-ResultDetectionQuantitationLimitMinimumMeasure-Minimum = ResultDetectionQuantitationLimitMeasure should not be below zero for the selected ResultDetectionQuantitationLimitUnit
 # qc-MonitoringLocationType-ActivityDepthHeightMeasure-Minimum = Depth should not exceed the maximum depth associated with the selected MonitoringLocationType (i.e. River/stream, Lake/pond)
 qc-ResultDetectionQuantitationLimitUnit-None = The unit for the CharacteristicName should be None
