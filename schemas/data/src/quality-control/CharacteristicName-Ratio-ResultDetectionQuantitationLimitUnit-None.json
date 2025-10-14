@@ -1,0 +1,40 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/CharacteristicName-Ratio-ResultDetectionQuantitationLimitUnit-None.json",
+  "title": "CharacteristicName-Ratio-ResultDetectionQuantitationLimitUnit-None",
+  "description": "Ratio Characteristics that require None as unit.",
+  "errorMessage": "qc-CharacteristicName-Ratio-ResultDetectionQuantitationLimitUnit-None",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Coliform/Streptococcus ratio, fecal",
+          "Anion/cation ratio",
+          "Cation/anion ratio",
+          "Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]",
+          "Spectral slope ratio",
+          "Uranium-234/Uranium-238 ratio",
+          "Carbon-13/Carbon-12 ratio",
+          "Deuterium/Hydrogen ratio",
+          "Nitrogen-15/Nitrogen-14 ratio",
+          "Oxygen-18/Oxygen-16 ratio",
+          "Strontium-87/Strontium-86, ratio",
+          "Sulfur-34/Sulfur-32 ratio"
+        ]
+      },
+      "ResultDetectionQuantitationLimitMeasure": true
+    },
+    "required": ["CharacteristicName", "ResultDetectionQuantitationLimitMeasure"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ResultDetectionQuantitationLimitUnit": {
+        "enum": ["None"]
+      }
+    },
+    "required": ["ResultDetectionQuantitationLimitUnit"]
+  }
+}
