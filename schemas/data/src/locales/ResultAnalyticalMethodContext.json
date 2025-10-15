@@ -377,6 +377,16 @@
         "en": null,
         "fr": null
       }
+    },
+    "REED": {
+      "name": {
+        "en": "REED",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

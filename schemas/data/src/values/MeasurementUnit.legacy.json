@@ -98,6 +98,7 @@
     "code",
     "COHS/1000ft",
     "copies",
+    "copies/100mL",
     "copies/250mL",
     "copies/mL",
     "count",
@@ -411,6 +412,7 @@
     "per m",
     "per mil",
     "per mil AIR",
+    "per mil NIST SRM 951a",
     "per mil VCDT",
     "per mil VPDB",
     "per mil VSMOW",
@@ -539,5 +541,5 @@
     "µg/l",
     "µS/cm"
   ],
-  "maxLength": 13
+  "maxLength": 21
 }

@@ -10,7 +10,7 @@ test('Should transform values (frontend)', async (t) => {
     MonitoringLocationName: 'A1 Test',
     MonitoringLocationLatitude: '51.0486',
     MonitoringLocationLongitude: '-114.0708',
-    MonitoringLocationHorizontalCoordinateReferenceSystem: 'AMSMA',
+    MonitoringLocationHorizontalCoordinateReferenceSystem: 'WGS84',
     MonitoringLocationType: 'ocean',
     ActivityType: 'Field Msr/Obs',
     ActivityMediaName: 'surface Water',

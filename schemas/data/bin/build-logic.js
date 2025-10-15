@@ -95,10 +95,7 @@ const wqxRequiredIf = async (file) => {
   )
     .then((res) => JSON.parse(res))
     .catch(() => ({}));
-  object.if.properties[columnFrom].enum = object.if.properties[
-    columnFrom
-  ].enum.concat(optional.enum);
-
+  object.if.properties[columnFrom].enum = [...new Set(sort(object.if.properties[columnFrom].enum.concat(optional.enum)))];
   const qcJSON = await readFile(
     join(__dirname, `/../src/quality-control/${file}.json`),
   )

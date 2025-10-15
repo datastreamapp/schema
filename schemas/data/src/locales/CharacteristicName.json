@@ -13647,6 +13647,46 @@
         "en": null,
         "fr": null
       }
+    },
+    "Corrosion & scaling control, Ryznar Stability Index": {
+      "name": {
+        "en": "Corrosion & scaling control, Ryznar Stability Index",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Delta boron-11/boron-10": {
+      "name": {
+        "en": "Delta boron-11/boron-10",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable hydrocarbons, C8 and up": {
+      "name": {
+        "en": "Extractable hydrocarbons, C8 and up",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thorium-230": {
+      "name": {
+        "en": "Thorium-230",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

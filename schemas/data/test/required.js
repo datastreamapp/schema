@@ -114,7 +114,7 @@ test("Should not require properties", async (t) => {
     MonitoringLocationName: "A1 Test",
     MonitoringLocationLatitude: "51.0486",
     MonitoringLocationLongitude: "-114.0708",
-    MonitoringLocationHorizontalCoordinateReferenceSystem: "AMSMA",
+    MonitoringLocationHorizontalCoordinateReferenceSystem: "WGS84",
     MonitoringLocationType: "Ocean",
     ActivityType: "Field Msr/Obs",
     ActivityMediaName: "Surface Water",
