@@ -550,7 +550,6 @@ test('Should accept ActivityType when ResultAnalyticalMethodContext is Oakton', 
     ResultAnalyticalMethodContext: 'Oakton',
     ActivityType: 'Field Msr/Obs-Portable Data Logger'
   })
-  console.log(JSON.stringify(validate.errors, null, 2))
   t.is(valid, true)
 })
 test('Should ignore ActivityType when ResultAnalyticalMethodContext is not YSI', async (t) => {
