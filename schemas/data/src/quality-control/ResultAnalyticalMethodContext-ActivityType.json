@@ -1,8 +1,8 @@
 {
-  "$id": "https://datastream.org/schema/data/quality-control/ResultAnalyticalMethodContext-YSI-ActivityType.json",
-  "title": "ResultAnalyticalMethodContext-YSI-ActivityType",
+  "$id": "https://datastream.org/schema/data/quality-control/ResultAnalyticalMethodContext-ActivityType.json",
+  "title": "ResultAnalyticalMethodContext-ActivityType",
   "description": "",
-  "errorMessage": "qc-ResultAnalyticalMethodContext-YSI-ActivityType",
+  "errorMessage": "qc-ResultAnalyticalMethodContext-ActivityType",
   "if": {
     "type": "object",
     "unevaluatedProperties": true,
@@ -34,7 +34,7 @@
         "enum": [
           "Field Msr/Obs",
           "Field Msr/Obs-Portable Data Logger",
-		      "Field Msr/Obs-Continuous Time Series",
+          "Field Msr/Obs-Continuous Time Series",
           "Quality Control Field Msr/Obs Post-Calibration",
           "Quality Control Field Msr/Obs Pre-Calibration",
           "Quality Control Field Replicate Msr/Obs",

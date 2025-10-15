@@ -6,6 +6,7 @@ import validate from '../quality-control/index.js'
 test('Should transform error message', async (t) => {
   const valid = validate({
     ActivityType: 'Field Msr/Obs',
+    CharacteristicName: 'Temperature, water',
     ResultSampleFraction: 'Filtered'
   })
   //console.log(validate.errors)

@@ -274,6 +274,7 @@ test("Should reject ActivityType with UTC ActivityStartTimeZone for CTS", async 
 test('Should reject ResultSampleFraction when ActivityType is set to field', async (t) => {
   const valid = validate({
     ActivityType: 'Field Msr/Obs',
+    CharacteristicName: 'Temperature, water',
     ResultSampleFraction: 'Filtered'
   })
   t.is(valid, false)
@@ -283,9 +284,19 @@ test('Should reject ResultSampleFraction when ActivityType is set to field', asy
   )
 })
 
+test('Should accept ResultSampleFraction when ActivityType is set to field and CharacteristicName is in required list', async (t) => {
+  const valid = validate({
+    ActivityType: 'Field Msr/Obs',
+    CharacteristicName: 'Ammonia, un-ionized',
+    ResultSampleFraction: 'Filtered'
+  })
+  t.is(valid, true)
+})
+
 test('Should accept empty ResultSampleFraction when ActivityType is set to field', async (t) => {
   const valid = validate({
-    ActivityType: 'Field Msr/Obs'
+    ActivityType: 'Field Msr/Obs',
+    CharacteristicName: 'Temperature, water'
   })
   t.is(valid, true)
 })
@@ -510,10 +521,18 @@ test('Should reject MonitoringLocationLongitude when its out of bounds', async (
   )
 })
 
-// *** ResultAnalyticalMethodContext-YSI-ActivityType *** //
+// *** ResultAnalyticalMethodContext-ActivityType *** //
 test('Should reject ActivityType when ResultAnalyticalMethodContext is YSI', async (t) => {
   const valid = validate({
     ResultAnalyticalMethodContext: 'YSI',
+    ActivityType: 'Sample-Routine'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
+})
+test('Should reject ActivityType when ResultAnalyticalMethodContext is Oakton', async (t) => {
+  const valid = validate({
+    ResultAnalyticalMethodContext: 'Oakton',
     ActivityType: 'Sample-Routine'
   })
   t.is(valid, false)
@@ -524,6 +543,14 @@ test('Should accept ActivityType when ResultAnalyticalMethodContext is YSI', asy
     ResultAnalyticalMethodContext: 'YSI',
     ActivityType: 'Field Msr/Obs-Portable Data Logger'
   })
+  t.is(valid, true)
+})
+test('Should accept ActivityType when ResultAnalyticalMethodContext is Oakton', async (t) => {
+  const valid = validate({
+    ResultAnalyticalMethodContext: 'Oakton',
+    ActivityType: 'Field Msr/Obs-Portable Data Logger'
+  })
+  console.log(JSON.stringify(validate.errors, null, 2))
   t.is(valid, true)
 })
 test('Should ignore ActivityType when ResultAnalyticalMethodContext is not YSI', async (t) => {
@@ -579,7 +606,7 @@ test('Should ignore ResultDetectionQuantitationLimit when measure is not defined
   )
 })
 
-// *** ResultDetectionQuantitationLimitUnit-None *** //
+// *** CharacteristicName-pH-ResultDetectionQuantitationLimitUnit-None *** //
 test('Should accept when CharacteristicName is pH and ResultDetectionQuantitationLimitUnit is None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
@@ -591,6 +618,33 @@ test('Should accept when CharacteristicName is pH and ResultDetectionQuantitatio
 test('Should reject when CharacteristicName is pH and ResultDetectionQuantitationLimitUnit is not None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
+    ResultDetectionQuantitationLimitMeasure: 7,
+    ResultDetectionQuantitationLimitUnit: 'mg/L'
+  })
+  t.is(valid, false)
+  t.is(
+    checkProperty(
+      validate.errors,
+      'enum',
+      'ResultDetectionQuantitationLimitUnit'
+    ),
+    true
+  )
+  // t.is(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit'), true)
+})
+
+// *** CharacteristicName-Ratio-ResultDetectionQuantitationLimitUnit-None *** //
+test('Should accept when CharacteristicName is a ratio and ResultDetectionQuantitationLimitUnit is None', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]',
+    ResultDetectionQuantitationLimitMeasure: 7,
+    ResultDetectionQuantitationLimitUnit: 'None'
+  })
+  t.is(valid, true)
+})
+test('Should reject when CharacteristicName is a ratio and ResultDetectionQuantitationLimitUnit is not None', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]',
     ResultDetectionQuantitationLimitMeasure: 7,
     ResultDetectionQuantitationLimitUnit: 'mg/L'
   })
@@ -689,7 +743,7 @@ test('Should acceptTaxonomic Richness... in %', async (t) => {
   t.is(valid, true)
 })
 
-// *** ResultUnit-None *** //
+// *** CharacteristicName-pH-ResultUnit-None *** //
 test('Should accept when CharacteristicName is pH and ResultUnit is None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
@@ -701,6 +755,26 @@ test('Should accept when CharacteristicName is pH and ResultUnit is None', async
 test('Should reject when CharacteristicName is pH and ResultUnit is not None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
+    ResultValue: 7,
+    ResultUnit: 'mg/L'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+  // t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
+})
+
+// *** CharacteristicName-Ratio-ResultUnit-None *** //
+test('Should accept when CharacteristicName is a ratio and ResultUnit is None', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Anion/cation ratio',
+    ResultValue: 7,
+    ResultUnit: 'None'
+  })
+  t.is(valid, true)
+})
+test('Should reject when CharacteristicName is a ratio and ResultUnit is not None', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Anion/cation ratio',
     ResultValue: 7,
     ResultUnit: 'mg/L'
   })
