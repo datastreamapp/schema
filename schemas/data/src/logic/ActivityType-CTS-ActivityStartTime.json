@@ -1,0 +1,30 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/ActivityType-CTS-ActivityStartTime.json",
+  "title": "ActivityType-CTS-ActivityStartTime",
+  "description": "Continuous time-series observations must include a valid ActivityStartTime",
+  "errorMessage": "error-ActivityType-CTS-ActivityStartTime",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityType": {
+        "enum": [
+          "Field Msr/Obs-Continuous Time Series"
+        ]
+      }
+    },
+    "required": [
+      "ActivityType"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityStartTime": true
+    },
+    "required": [
+      "ActivityStartTime"
+    ]
+  }
+}

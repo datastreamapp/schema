@@ -61,10 +61,13 @@ export const sort = (list) => {
 };
 
 export const replaceRetired = (value) => {
-  const pattern =
-    /\s*(\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/;
-  if (pattern.test(value)) {
-    value = value.replace(pattern, "").trim();
+  // replace prefix
+  const startPattern = /^\*{3,10}retired\*{0,3}\s*/i
+  // replace suffix
+  const endPattern =
+    /(?:\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/;
+  if (startPattern.test(value) || endPattern.test(value)) {
+    value = value.replace(startPattern, "").replace(endPattern, "").trim();
   }
 
   return value;
@@ -91,8 +94,8 @@ export const retire = (column, list) => {
     return [[], list];
   const arr = [];
   // Remove retired items from list
-  const pattern =
-    /\s*(\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/;
+  // const pattern =
+  //   /\s*(\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/;
   list = list
     .filter(
       (item) =>

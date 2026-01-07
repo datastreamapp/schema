@@ -158,6 +158,46 @@
         "fr": null
       }
     },
+    "Quality Control Sample-Integrated Time Series-Field Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Field Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Lab Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Lab Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Trip Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Trip Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Unspecified Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Unspecified Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Quality Control Sample-Inter-lab Split": {
       "name": {
         "en": "Quality Control Sample-Inter-lab Split",
@@ -241,6 +281,26 @@
     "Quality Control Sample-Lab Split": {
       "name": {
         "en": "Quality Control Sample-Lab Split",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Surrogate Control Standard": {
+      "name": {
+        "en": "Quality Control Sample-Lab Surrogate Control Standard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Lab Surrogate Control Standard Duplicate": {
+      "name": {
+        "en": "Quality Control Sample-Lab Surrogate Control Standard",
         "fr": null
       },
       "description": {
@@ -521,6 +581,26 @@
     "Sample-Routine": {
       "name": {
         "en": "Sample-Routine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unspecified": {
+      "name": {
+        "en": "Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Equipment Blank": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Equipment Blank",
         "fr": null
       },
       "description": {

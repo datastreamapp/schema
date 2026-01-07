@@ -26,12 +26,15 @@ const wqxRequiredIf = async (file) => {
 
   // TODO - remove once included in WQX look up
   if (file === "CharacteristicName-MethodSpeciation") {
-    // remove MethodSpeciation for CharacteristicName https://github.com/datastreamapp/datastream-dms/issues/2381
+
+    // Include additional chars if it's not in WQX logic
     const include = [
+      "Ammonia, un-ionized",
       "Inorganic nitrogen (ammonia, nitrate and nitrite)",
       "Inorganic nitrogen (nitrate and nitrite)",
     ];
 
+    // remove MethodSpeciation for CharacteristicName https://github.com/gordonfn/datastream-dms/issues/2381
     const exclude = [
       "Radium",
       "Radium-226",
@@ -78,7 +81,8 @@ const wqxRequiredIf = async (file) => {
   const list = [...new Set(sort(object.if.properties[columnFrom].enum))];
 
   object.if.properties[columnFrom].enum = await subset(columnFrom, list, false);
-
+  object.if.unevaluatedProperties = true;
+  object.then.unevaluatedProperties = true;
   await writeFile(
     join(__dirname, `/../src/logic/${file}.json`),
     JSON.stringify(object, null, 2),
@@ -91,10 +95,7 @@ const wqxRequiredIf = async (file) => {
   )
     .then((res) => JSON.parse(res))
     .catch(() => ({}));
-  object.if.properties[columnFrom].enum = object.if.properties[
-    columnFrom
-  ].enum.concat(optional.enum);
-
+  object.if.properties[columnFrom].enum = [...new Set(sort(object.if.properties[columnFrom].enum.concat(optional.enum)))];
   const qcJSON = await readFile(
     join(__dirname, `/../src/quality-control/${file}.json`),
   )

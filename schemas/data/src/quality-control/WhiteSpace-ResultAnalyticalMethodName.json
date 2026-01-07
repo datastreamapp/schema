@@ -1,0 +1,14 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/WhiteSpace-ResultAnalyticalMethodName.json",
+  "title": "WhiteSpace-ResultAnalyticalMethodName",
+  "description": "Leading or trailing white space (i.e., spaces inserted before or after your character string) can cause issues with data management.",
+  "errorMessage": "qc-WhiteSpace",
+  "type": "object",
+  "unevaluatedProperties": true,
+  "properties": {
+    "ResultAnalyticalMethodName": {
+      "$ref": "../definitions.json#/definitions/trim"
+    }
+  },
+  "required": []
+}

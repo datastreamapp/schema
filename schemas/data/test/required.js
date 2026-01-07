@@ -21,6 +21,11 @@ const checkProperty = (errors, keyword, property) => {
     ) {
       return true;
     } else if (
+      keyword === "unevaluatedProperties" &&
+      error.params.unevaluatedProperty === property
+    ) {
+      return true;
+    } else if (
       keyword === "oneOf" &&
       error.params.passingSchemas.includes(property)
     ) {
@@ -109,7 +114,7 @@ test("Should not require properties", async (t) => {
     MonitoringLocationName: "A1 Test",
     MonitoringLocationLatitude: "51.0486",
     MonitoringLocationLongitude: "-114.0708",
-    MonitoringLocationHorizontalCoordinateReferenceSystem: "AMSMA",
+    MonitoringLocationHorizontalCoordinateReferenceSystem: "WGS84",
     MonitoringLocationType: "Ocean",
     ActivityType: "Field Msr/Obs",
     ActivityMediaName: "Surface Water",
@@ -147,7 +152,7 @@ test("Should reject additional headers", async (t) => {
   t.is(
     checkProperty(
       validate.errors,
-      "additionalProperties",
+      "unevaluatedProperties",
       "MonitoringLocationWaterBody",
     ),
     true,

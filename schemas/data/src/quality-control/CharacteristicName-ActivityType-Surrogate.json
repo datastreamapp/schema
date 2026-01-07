@@ -1,0 +1,109 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/CharacteristicName-ActivityType-Surrogate.json",
+  "title": "CharacteristicName-ActivityType-Surrogate",
+  "description": "",
+  "errorMessage": "qc-CharacteristicName-ActivityType-Surrogate",
+  "$defs": {
+    "CharacteristicName": {
+      "enum": [
+        "1,2-Dichlorobenzene-d4",
+        "1,2-Dichloroethane-d4",
+        "1,4-Dichlorobenzene-d4",
+        "1,4-Difluorobenzene",
+        "1-Naphthol-d8",
+        "2,4-Dichlorophenol-d3",
+        "2,6-Dimethylnaphthalene-D12",
+        "2-Chlorophenol-d4",
+        "2-Methylnaphthalene-D10",
+        "Acenaphthene-d10",
+        "Acenaphthylene-d8",
+        "Acridine-d9",
+        "Anilazine",
+        "Atrazine-d5 (ethyl-d5)",
+        "Benzene, 1,2-dichloro-4-methyl-",
+        "Benzene, 1-bromo-2-(trifluoromethyl)-",
+        "Benzo(a)anthracene-D12",
+        "Benzo(b)fluoranthene-D12",
+        "Benzo(g,h,i)perylene-D12",
+        "Benzo(k)fluoranthene-d12",
+        "Benzo[a]pyrene-d12",
+        "Biphenyl-d10",
+        "Carbaryl-d7",
+        "Chrysene-d12",
+        "Clothianidin-d3",
+        "Cyanazine-d5",
+        "Dibenzo(a,h)anthracene-D14",
+        "Dibenzothiophene-D8",
+        "Dimethoate-d6",
+        "EPTC-d14",
+        "Fenitrothion-d6",
+        "Flonicamid-d3",
+        "Fluoranthene-d10",
+        "Indeno[1,2,3-cd]pyrene-d12",
+        "Linuron-d6",
+        "Malathion-d6",
+        "Metolachlor-d6",
+        "Naphthalene-d8",
+        "Parathion-d10",
+        "p-Bromofluorobenzene",
+        "Perylene-d12",
+        "Phenanthrene-d10",
+        "Phorate-d10",
+        "p-Terphenyl-d14",
+        "Terbufos-d10",
+        "Terphenyl-d14",
+        "Toluene-d8"
+      ]
+    }
+  },
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "anyOf": [
+      {
+        "properties": {
+          "CharacteristicName": {
+            "$ref": "#/$defs/CharacteristicName"
+          },
+          "ResultUnit": {
+            "const": "%"
+          }
+        },
+        "required": [
+          "CharacteristicName",
+          "ResultUnit"
+        ]
+      },
+      {
+        "properties": {
+          "CharacteristicName": {
+            "$ref": "#/$defs/CharacteristicName"
+          },
+          "ResultDetectionQuantitationLimitUnit": {
+            "const": "%"
+          }
+        },
+        "required": [
+          "CharacteristicName",
+          "ResultDetectionQuantitationLimitUnit"
+        ]
+      }
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityType": {
+        "type": "string",
+        "enum": [
+          "Quality Control Sample-Lab Surrogate Control Standard",
+          "Quality Control Sample-Lab Surrogate Control Standard Duplicate"
+        ]
+      }
+    },
+    "required": [
+      "ActivityType"
+    ]
+  }
+}

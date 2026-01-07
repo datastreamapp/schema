@@ -106,7 +106,8 @@
     "m",
     "m2",
     "m3",
-    "%"
+    "%",
+    "%/cm"
   ],
   "Physical, Habitat": ["%"],
   "Phytoplankton, Cyanobacteria, Photosynthetic Pigments": [],

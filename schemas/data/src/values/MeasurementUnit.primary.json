@@ -12,6 +12,7 @@
     "#/mL",
     "#/sec",
     "%",
+    "%/cm",
     "Bq/L",
     "CCE/100mL",
     "CE/100mL",
@@ -23,6 +24,7 @@
     "cm3",
     "count",
     "CU",
+    "days",
     "Deg",
     "deg C",
     "deg F",
@@ -87,6 +89,7 @@
     "PCU",
     "per mil",
     "per mil AIR",
+    "per mil NIST SRM 951a",
     "per mil VCDT",
     "per mil VPDB",
     "per mil VSMOW",
@@ -124,5 +127,5 @@
     "uS/cm",
     "uS/m"
   ],
-  "maxLength": 13
+  "maxLength": 21
 }

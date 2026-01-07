@@ -12,6 +12,7 @@
         "enum": [
           "Aluminum",
           "Ammonia",
+          "Ammonia, un-ionized",
           "Ammonia and ammonium",
           "Ammonium",
           "Antimony",
@@ -35,8 +36,9 @@
           "Hafnium",
           "Hydroxide",
           "Iodine-129",
+          "Inorganic arsenic (arsenate and arsenite)",
           "Inorganic carbon",
-          "Inorganic Nitrogen (ammonia, nitrate and nitrite)",
+          "Inorganic nitrogen (ammonia, nitrate and nitrite)",
           "Inorganic nitrogen (nitrate and nitrite)",
           "Iron",
           "Kjeldahl nitrogen",

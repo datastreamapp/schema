@@ -9,7 +9,7 @@
     "properties": {
       "ActivityType": {
         "type": "string",
-        "pattern": "^(Quality Control )?Sample.*$",
+        "pattern": "^(Quality Control )?Sample-[a-zA-Z -]+$",
         "maxLength": 69
       }
     },
@@ -34,7 +34,7 @@
       },
       {
         "type": "object",
-        "unevaluatedProperties": false,
+        "unevaluatedProperties": true,
         "properties": {},
         "dependencies": {
           "ActivityType": ["LaboratoryName", "ResultAnalyticalMethodName"]

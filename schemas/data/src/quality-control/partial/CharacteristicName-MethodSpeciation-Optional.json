@@ -1,17 +1,23 @@
 {
   "$comment": "Used in build-logic.js",
   "enum": [
-    "Hardness",
-    "Hardness, total by calculation",
-    "Total hardness",
-    "Hardness, Ca, Mg",
-    "Hardness, Calcium",
-    "Hardness, carbonate",
-    "Hardness, non-carbonate",
     "Alkalinity, bicarbonate",
     "Alkalinity, carbonate",
     "Alkalinity, Hydroxide",
     "Alkalinity, Phenolphthalein (total hydroxide+1/2 carbonate)",
-    "Alkalinity, total"
+    "Alkalinity, total",
+    "Bicarbonate",
+    "Calcium carbonate",
+    "Carbonate",
+    "Hardness",
+    "Hardness, Ca, Mg",
+    "Hardness, Calcium",
+    "Hardness, carbonate",
+    "Hardness, non-carbonate",
+    "Hardness, total by calculation",
+    "Hydroxide",
+    "Sulfate",
+    "Sulfide",
+    "Total hardness"
   ]
 }

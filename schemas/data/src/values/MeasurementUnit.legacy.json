@@ -45,6 +45,7 @@
     "% saturatn",
     "% sediment",
     "% solids",
+    "%/cm",
     "0/00",
     "1000m3/day",
     "ac",
@@ -97,6 +98,7 @@
     "code",
     "COHS/1000ft",
     "copies",
+    "copies/100mL",
     "copies/250mL",
     "copies/mL",
     "count",
@@ -405,10 +407,12 @@
     "pCi/mL",
     "pct modern",
     "PCU",
+    "per cm",
     "per day",
     "per m",
     "per mil",
     "per mil AIR",
+    "per mil NIST SRM 951a",
     "per mil VCDT",
     "per mil VPDB",
     "per mil VSMOW",
@@ -537,5 +541,5 @@
     "µg/l",
     "µS/cm"
   ],
-  "maxLength": 13
+  "maxLength": 21
 }

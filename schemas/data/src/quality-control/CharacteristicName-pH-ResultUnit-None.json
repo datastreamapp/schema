@@ -1,8 +1,8 @@
 {
-  "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-None.json",
-  "title": "ResultUnit-None",
+  "$id": "https://datastream.org/schema/data/quality-control/CharacteristicName-pH-ResultUnit-None.json",
+  "title": "CharacteristicName-pH-ResultUnit-None",
   "description": "Characteristics that require None as unit.",
-  "errorMessage": "qc-ResultUnit-None",
+  "errorMessage": "qc-CharacteristicName-pH-ResultUnit-None",
   "if": {
     "type": "object",
     "unevaluatedProperties": true,

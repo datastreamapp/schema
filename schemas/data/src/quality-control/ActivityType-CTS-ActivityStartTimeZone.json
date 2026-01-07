@@ -1,0 +1,30 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ActivityType-CTS-ActivityStartTimeZone.json",
+  "title": "ActivityType-CTS-ActivityStartTimeZone",
+  "description": "ActivityStartTimeZone should be included when ActivityType is Field Msr/Obs-Continuous Time Series",
+  "errorMessage": "qc-ActivityType-CTS-ActivityStartTimeZone",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityType": {
+        "enum": [
+          "Field Msr/Obs-Continuous Time Series"
+        ]
+      }
+    },
+    "required": [
+      "ActivityType"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityStartTimeZone": true
+    },
+    "required": [
+      "ActivityStartTimeZone"
+    ]
+  }
+}

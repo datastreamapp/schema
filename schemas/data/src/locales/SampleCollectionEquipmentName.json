@@ -18,6 +18,16 @@
         "fr": null
       }
     },
+    "Beta sampler": {
+      "name": {
+        "en": "Beta sampler",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "DH-81": {
       "name": {
         "en": "DH-81",
