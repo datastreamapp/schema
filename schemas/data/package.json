@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/datastreamapp/schema#readme",
   "dependencies": {
-    "wqx": "3.0.241"
+    "wqx": "3.0.252"
   },
   "devDependencies": {
     "change-case": "^5.0.0"
@@ -41,5 +41,10 @@
     "type": "git",
     "url": "github:datastreamapp/schema",
     "directory": "schemas/data"
+  },
+  "c8": {
+    "exclude": [
+      "locales/**"
+    ]
   }
 }
