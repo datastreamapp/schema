@@ -13,6 +13,7 @@
     "GPS Code (Pseudo Range) Precise Position",
     "GPS Code (Pseudo Range) Standard Position (SA Off)",
     "GPS Code (Pseudo Range) Standard Position (SA On)",
+    "Handheld GPS - Positioning Method Unspecified",
     "Leveling-Non Bench Mark Control Points",
     "Light Detection And Ranging (LiDAR)",
     "Other",

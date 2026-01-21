@@ -5,6 +5,7 @@
   "type": "string",
   "enum": [
     "Ambient Air",
+    "Groundwater",
     "Ocean Water",
     "Porewater",
     "Rainwater",

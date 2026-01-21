@@ -4,12 +4,12 @@
   "description": "",
   "type": "string",
   "enum": [
-    "LTD",
+    "CGVD2013",
+    "CGVD28",
     "NAVD88",
     "NGVD29",
     "OTHER",
-    "SEALV",
     "UNKWN"
   ],
-  "maxLength": 6
+  "maxLength": 8
 }

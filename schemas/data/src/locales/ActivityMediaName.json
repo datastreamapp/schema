@@ -87,6 +87,16 @@
         "en": "Referring to suspended sediment in surface water and the top layer of settled sediment. Often this media is collected using dredges, short cores, sediment traps, and suspended sediment samplers.",
         "fr": "Désigne les sédiments en suspension dans les eaux de surface et la couche supérieure des sédiments déposés. Ce milieu est souvent recueilli à l’aide de dragues, de carottes courtes, de pièges à sédiments et d’échantillonneurs de sédiments en suspension."
       }
+    },
+    "Groundwater": {
+      "name": {
+        "en": "Groundwater",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

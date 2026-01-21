@@ -397,6 +397,76 @@
         "en": null,
         "fr": null
       }
+    },
+    "Air line": {
+      "name": {
+        "en": "Air line",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bailer": {
+      "name": {
+        "en": "Bailer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hydrasleeve": {
+      "name": {
+        "en": "Hydrasleeve",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Snap sampler": {
+      "name": {
+        "en": "Snap sampler",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tubing": {
+      "name": {
+        "en": "Tubing",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Water level meter": {
+      "name": {
+        "en": "Water level meter",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wetted tape": {
+      "name": {
+        "en": "Wetted tape",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

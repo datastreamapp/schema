@@ -105,11 +105,11 @@
     "AquiferCodeLoose": {
       "$ref": "./values/AquiferCode.legacy.json"
     },
-    "AquiferUnitName": {
-      "title": "Aquifer Unit Name",
-      "description": "A name that designates the aquifer or geological unit from which the groundwater sample was collected or the well was screened within.",
-      "$ref": "#/definitions/string",
-      "maxLength": 120
+    "AquiferUnitNameStrict": {
+      "$ref": "./values/AquiferUnitName.primary.json"
+    },
+    "AquiferUnitNameLoose": {
+      "$ref": "./values/AquiferUnitName.legacy.json"
     },
     "AquiferTypeStrict": {
       "$ref": "./values/AquiferType.primary.json"

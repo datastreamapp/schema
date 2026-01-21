@@ -71,7 +71,7 @@
           "$ref": "./definitions.json#/definitions/AquiferCodeStrict"
         },
         "AquiferUnitName": {
-          "$ref": "./definitions.json#/definitions/AquiferUnitName"
+          "$ref": "./definitions.json#/definitions/AquiferUnitNameStrict"
         },
         "AquiferType": {
           "$ref": "./definitions.json#/definitions/AquiferTypeStrict"

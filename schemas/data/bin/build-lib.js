@@ -25,6 +25,7 @@ export const subsetOnly = [
 
 // Custom fields (non-WQX) that need value files generated
 export const custom = [
+  "AquiferUnitName",
   "WellIDContext",
   "AquiferCode",
   "AquiferUnitPorosityType",

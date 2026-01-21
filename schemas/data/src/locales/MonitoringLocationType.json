@@ -157,6 +157,96 @@
         "en": null,
         "fr": null
       }
+    },
+    "Borehole": {
+      "name": {
+        "en": "Borehole",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dug Well": {
+      "name": {
+        "en": "Dug Well",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Multilevel Well": {
+      "name": {
+        "en": "Multilevel Well",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nested Well": {
+      "name": {
+        "en": "Nested Well",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Other-Ground Water": {
+      "name": {
+        "en": "Other-Ground Water",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Piezometer": {
+      "name": {
+        "en": "Piezometer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Seep": {
+      "name": {
+        "en": "Seep",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sump": {
+      "name": {
+        "en": "Sump",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Well": {
+      "name": {
+        "en": "Well",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

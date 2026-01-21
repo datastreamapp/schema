@@ -5,6 +5,8 @@
   "type": "string",
   "enum": [
     "Anode",
+    "Aquaculture",
+    "Bottling",
     "Capture",
     "Commercial",
     "Dewater",
@@ -15,11 +17,16 @@
     "Industrial",
     "Injection",
     "Irrigation",
+    "Livestock",
     "Monitoring",
+    "Monitoring - Ambient",
+    "Monitoring - Other",
     "Observation",
     "Oil/Gas Production",
     "Other",
     "Piezometer",
+    "Public Supply - Municipal",
+    "Public Supply - Other",
     "Recharge",
     "Remediation",
     "Repressurization",
@@ -33,5 +40,5 @@
     "Well-Temporary",
     "Withdrawal of Water"
   ],
-  "maxLength": 24
+  "maxLength": 25
 }
