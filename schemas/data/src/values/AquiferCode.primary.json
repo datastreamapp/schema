@@ -1,0 +1,10 @@
+{
+  "$id": "https://datastream.org/schema/data/values/AquiferCode.strict.json",
+  "title": "Aquifer Code",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "12_NS"
+  ],
+  "maxLength": 5
+}

@@ -49,8 +49,83 @@
           "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
+        "MonitoringLocationVerticalAccuracyMeasure": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalAccuracyMeasure"
+        },
+        "MonitoringLocationVerticalAccuracyUnit": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalAccuracyUnitLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "MonitoringLocationVerticalCollectionMethod": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalCollectionMethodLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "MonitoringLocationVerticalCoordinateReferenceSystem": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalCoordinateReferenceSystemLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
         "MonitoringLocationType": {
           "$ref": "./definitions.json#/definitions/MonitoringLocationTypeLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellID": {
+          "$ref": "./definitions.json#/definitions/WellID",
+          "transform": ["trim"]
+        },
+        "WellIDContext": {
+          "$ref": "./definitions.json#/definitions/WellIDContextLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellUseType": {
+          "$ref": "./definitions.json#/definitions/WellUseTypeLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "AquiferCode": {
+          "$ref": "./definitions.json#/definitions/AquiferCodeLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "AquiferUnitName": {
+          "$ref": "./definitions.json#/definitions/AquiferUnitName",
+          "transform": ["trim"]
+        },
+        "AquiferType": {
+          "$ref": "./definitions.json#/definitions/AquiferTypeLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "AquiferUnitPorosityType": {
+          "$ref": "./definitions.json#/definitions/AquiferUnitPorosityTypeLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "LithologyType": {
+          "$ref": "./definitions.json#/definitions/LithologyTypeLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "BoreholeDepthMeasure": {
+          "$ref": "./definitions.json#/definitions/BoreholeDepthMeasure"
+        },
+        "BoreholeDepthUnit": {
+          "$ref": "./definitions.json#/definitions/BoreholeDepthUnitLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellDepthMeasure": {
+          "$ref": "./definitions.json#/definitions/WellDepthMeasure"
+        },
+        "WellDepthUnit": {
+          "$ref": "./definitions.json#/definitions/WellDepthUnitLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellOpenIntervalTopMeasure": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalTopMeasure"
+        },
+        "WellOpenIntervalTopUnit": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalTopUnitLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellOpenIntervalBottomMeasure": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalBottomMeasure"
+        },
+        "WellOpenIntervalBottomUnit": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalBottomUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "ActivityType": {
@@ -86,8 +161,35 @@
           "$ref": "./definitions.json#/definitions/ActivityDepthHeightUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
+        "ActivityDepthAltitudeReferencePoint": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthAltitudeReferencePointLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "ActivityDepthAltitudeReferencePointMeasure": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthAltitudeReferencePointMeasure"
+        },
+        "ActivityDepthAltitudeReferencePointUnit": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthAltitudeReferencePointUnitLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "SampleCondition": {
+          "$ref": "./definitions.json#/definitions/SampleConditionLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
         "SampleCollectionEquipmentName": {
           "$ref": "./definitions.json#/definitions/SampleCollectionEquipmentNameLoose",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "SampleCollectionMethodName": {
+          "$ref": "./definitions.json#/definitions/SampleCollectionMethodName",
+          "transform": ["trim"]
+        },
+        "SampleCollectionMethodID": {
+          "$ref": "./definitions.json#/definitions/SampleCollectionMethodID",
+          "transform": ["trim"]
+        },
+        "SampleCollectionMethodContext": {
+          "$ref": "./definitions.json#/definitions/SampleCollectionMethodContextLoose",
           "transform": ["trim", "toEnumCase"]
         },
         "CharacteristicName": {

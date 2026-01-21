@@ -1,0 +1,11 @@
+{
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalAccuracyUnit.strict.json",
+  "title": "Measurement Unit",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "ft",
+    "m"
+  ],
+  "maxLength": 2
+}

@@ -1,0 +1,14 @@
+{
+  "$id": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePoint.strict.json",
+  "title": "Activity Depth Altitude Reference Point",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Ground surface",
+    "Top of instrument shelf",
+    "Top of outer casing",
+    "Top of well casing",
+    "Unspecified"
+  ],
+  "maxLength": 23
+}

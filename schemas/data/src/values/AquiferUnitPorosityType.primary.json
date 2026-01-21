@@ -1,0 +1,13 @@
+{
+  "$id": "https://datastream.org/schema/data/values/AquiferUnitPorosityType.strict.json",
+  "title": "Aquifer Unit Porosity Type",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Fractured",
+    "Granular",
+    "Karstic",
+    "Mixed"
+  ],
+  "maxLength": 9
+}

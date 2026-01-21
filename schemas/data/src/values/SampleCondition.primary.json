@@ -1,0 +1,15 @@
+{
+  "$id": "https://datastream.org/schema/data/values/SampleCondition.strict.json",
+  "title": "Sample Condition",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Flowing",
+    "Nearby site is being pumped or pumped recently",
+    "Static",
+    "The site has been pumped recently",
+    "The site is being pumped",
+    "Unspecified"
+  ],
+  "maxLength": 46
+}

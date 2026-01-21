@@ -4,10 +4,32 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// Convert PascalCase field names to human-friendly titles
+// e.g., "WellIDContext" → "Well ID Context"
+export const toFriendlyName = (fieldName) =>
+  fieldName
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+    .replace(/([a-z])([A-Z])/g, "$1 $2");
+
 export const subsetOnly = [
   "MonitoringLocationHorizontalAccuracyUnit",
   "MonitoringLocationVerticalUnit",
+  "MonitoringLocationVerticalAccuracyUnit",
   "ActivityDepthHeightUnit",
+  "BoreholeDepthUnit",
+  "WellDepthUnit",
+  "WellOpenIntervalTopUnit",
+  "WellOpenIntervalBottomUnit",
+  "ActivityDepthAltitudeReferencePointUnit",
+];
+
+// Custom fields (non-WQX) that need value files generated
+export const custom = [
+  "WellIDContext",
+  "AquiferCode",
+  "AquiferUnitPorosityType",
+  "ActivityDepthAltitudeReferencePoint",
+  "SampleCondition",
 ];
 
 // DS to WQX values name mapping
@@ -16,12 +38,24 @@ export const wqx = {
     "HorizontalReferenceDatum",
   MonitoringLocationHorizontalAccuracyUnit: "MeasurementUnit",
   MonitoringLocationVerticalUnit: "MeasurementUnit",
+  MonitoringLocationVerticalAccuracyUnit: "MeasurementUnit",
+  MonitoringLocationVerticalCollectionMethod: "VerticalCollectionMethod",
+  MonitoringLocationVerticalCoordinateReferenceSystem: "VerticalReferenceDatum",
   MonitoringLocationType: "MonitoringLocationType",
+  WellUseType: "WellType",
+  AquiferType: "AquiferType",
+  LithologyType: "WellFormationType",
+  BoreholeDepthUnit: "MeasurementUnit",
+  WellDepthUnit: "MeasurementUnit",
+  WellOpenIntervalTopUnit: "MeasurementUnit",
+  WellOpenIntervalBottomUnit: "MeasurementUnit",
   ActivityType: "ActivityType",
   ActivityGroupType: "ActivityGroupType",
   ActivityMediaName: "ActivityMediaSubdivision",
   ActivityDepthHeightUnit: "MeasurementUnit",
+  ActivityDepthAltitudeReferencePointUnit: "MeasurementUnit",
   SampleCollectionEquipmentName: "SampleCollectionEquipment",
+  SampleCollectionMethodContext: "SampleCollectionMethodContext",
   CharacteristicName: "Characteristic",
   MethodSpeciation: "MethodSpeciation",
   ResultSampleFraction: "SampleFraction",
@@ -82,7 +116,13 @@ export const retire = (column, list) => {
       // **$
       "MonitoringLocationHorizontalAccuracyUnit",
       "MonitoringLocationVerticalUnit",
+      "MonitoringLocationVerticalAccuracyUnit",
       "ActivityDepthHeightUnit",
+      "BoreholeDepthUnit",
+      "WellDepthUnit",
+      "WellOpenIntervalTopUnit",
+      "WellOpenIntervalBottomUnit",
+      "ActivityDepthAltitudeReferencePointUnit",
       "ResultSampleFraction",
       "ResultUnit",
       "ResultDetectionQuantitationLimitUnit",

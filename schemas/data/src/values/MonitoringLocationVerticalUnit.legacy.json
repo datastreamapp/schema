@@ -4,6 +4,8 @@
   "description": "",
   "type": "string",
   "enum": [
+    "ft",
+    "m",
     "MASL"
   ],
   "maxLength": 4

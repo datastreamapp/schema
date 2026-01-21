@@ -47,8 +47,81 @@
           "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalUnitStrict",
           "transform": ["trim", "toEnumCase"]
         },
+        "MonitoringLocationVerticalAccuracyMeasure": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalAccuracyMeasure"
+        },
+        "MonitoringLocationVerticalAccuracyUnit": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalAccuracyUnitStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "MonitoringLocationVerticalCollectionMethod": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalCollectionMethodStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "MonitoringLocationVerticalCoordinateReferenceSystem": {
+          "$ref": "./definitions.json#/definitions/MonitoringLocationVerticalCoordinateReferenceSystemStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
         "MonitoringLocationType": {
           "$ref": "./definitions.json#/definitions/MonitoringLocationTypeStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellID": {
+          "$ref": "./definitions.json#/definitions/WellID"
+        },
+        "WellIDContext": {
+          "$ref": "./definitions.json#/definitions/WellIDContextStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellUseType": {
+          "$ref": "./definitions.json#/definitions/WellUseTypeStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "AquiferCode": {
+          "$ref": "./definitions.json#/definitions/AquiferCodeStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "AquiferUnitName": {
+          "$ref": "./definitions.json#/definitions/AquiferUnitName"
+        },
+        "AquiferType": {
+          "$ref": "./definitions.json#/definitions/AquiferTypeStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "AquiferUnitPorosityType": {
+          "$ref": "./definitions.json#/definitions/AquiferUnitPorosityTypeStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "LithologyType": {
+          "$ref": "./definitions.json#/definitions/LithologyTypeStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "BoreholeDepthMeasure": {
+          "$ref": "./definitions.json#/definitions/BoreholeDepthMeasure"
+        },
+        "BoreholeDepthUnit": {
+          "$ref": "./definitions.json#/definitions/BoreholeDepthUnitStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellDepthMeasure": {
+          "$ref": "./definitions.json#/definitions/WellDepthMeasure"
+        },
+        "WellDepthUnit": {
+          "$ref": "./definitions.json#/definitions/WellDepthUnitStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellOpenIntervalTopMeasure": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalTopMeasure"
+        },
+        "WellOpenIntervalTopUnit": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalTopUnitStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "WellOpenIntervalBottomMeasure": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalBottomMeasure"
+        },
+        "WellOpenIntervalBottomUnit": {
+          "$ref": "./definitions.json#/definitions/WellOpenIntervalBottomUnitStrict",
           "transform": ["trim", "toEnumCase"]
         },
         "ActivityType": {
@@ -84,8 +157,33 @@
           "$ref": "./definitions.json#/definitions/ActivityDepthHeightUnitStrict",
           "transform": ["trim", "toEnumCase"]
         },
+        "ActivityDepthAltitudeReferencePoint": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthAltitudeReferencePointStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "ActivityDepthAltitudeReferencePointMeasure": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthAltitudeReferencePointMeasure"
+        },
+        "ActivityDepthAltitudeReferencePointUnit": {
+          "$ref": "./definitions.json#/definitions/ActivityDepthAltitudeReferencePointUnitStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "SampleCondition": {
+          "$ref": "./definitions.json#/definitions/SampleConditionStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
         "SampleCollectionEquipmentName": {
           "$ref": "./definitions.json#/definitions/SampleCollectionEquipmentNameStrict",
+          "transform": ["trim", "toEnumCase"]
+        },
+        "SampleCollectionMethodName": {
+          "$ref": "./definitions.json#/definitions/SampleCollectionMethodName"
+        },
+        "SampleCollectionMethodID": {
+          "$ref": "./definitions.json#/definitions/SampleCollectionMethodID"
+        },
+        "SampleCollectionMethodContext": {
+          "$ref": "./definitions.json#/definitions/SampleCollectionMethodContextStrict",
           "transform": ["trim", "toEnumCase"]
         },
         "CharacteristicName": {
@@ -177,8 +275,24 @@
         "MonitoringLocationHorizontalAccuracyMeasure": [
           "MonitoringLocationHorizontalAccuracyUnit"
         ],
-        "MonitoringLocationVerticalMeasure": ["MonitoringLocationVerticalUnit"],
+        "MonitoringLocationVerticalMeasure": [
+          "MonitoringLocationVerticalUnit",
+          "MonitoringLocationVerticalCollectionMethod",
+          "MonitoringLocationVerticalCoordinateReferenceSystem"
+        ],
+        "MonitoringLocationVerticalAccuracyMeasure": [
+          "MonitoringLocationVerticalAccuracyUnit"
+        ],
+        "WellID": ["WellIDContext"],
+        "BoreholeDepthMeasure": ["BoreholeDepthUnit"],
+        "WellDepthMeasure": ["WellDepthUnit"],
+        "WellOpenIntervalTopMeasure": ["WellOpenIntervalTopUnit"],
+        "WellOpenIntervalBottomMeasure": ["WellOpenIntervalBottomUnit"],
         "ActivityDepthHeightMeasure": ["ActivityDepthHeightUnit"],
+        "ActivityDepthAltitudeReferencePointMeasure": [
+          "ActivityDepthAltitudeReferencePointUnit"
+        ],
+        "SampleCollectionMethodID": ["SampleCollectionMethodContext"],
         "ResultValue": ["ResultUnit"],
         "ResultDetectionQuantitationLimitMeasure": [
           "ResultDetectionQuantitationLimitUnit",

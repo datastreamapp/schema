@@ -1,0 +1,12 @@
+{
+  "$id": "https://datastream.org/schema/data/values/AquiferType.strict.json",
+  "title": "Aquifer Type",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "CONFINED",
+    "SEMI-CONFINED",
+    "UNCONFINED"
+  ],
+  "maxLength": 13
+}

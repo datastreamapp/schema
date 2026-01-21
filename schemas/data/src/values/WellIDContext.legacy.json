@@ -1,0 +1,22 @@
+{
+  "$id": "https://datastream.org/schema/data/values/WellIDContext.loose.json",
+  "title": "Well ID Context",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "AB",
+    "BC",
+    "MB",
+    "NB",
+    "NL",
+    "NS",
+    "NT",
+    "ON",
+    "OTHER",
+    "PE",
+    "QC",
+    "SK",
+    "YK"
+  ],
+  "maxLength": 5
+}

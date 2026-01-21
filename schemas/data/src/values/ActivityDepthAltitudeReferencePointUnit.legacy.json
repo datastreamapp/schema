@@ -1,0 +1,13 @@
+{
+  "$id": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePointUnit.loose.json",
+  "title": "Measurement Unit",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "cm",
+    "ft",
+    "in",
+    "m"
+  ],
+  "maxLength": 2
+}

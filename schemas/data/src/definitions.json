@@ -50,11 +50,136 @@
     "MonitoringLocationVerticalUnitLoose": {
       "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json"
     },
+    "MonitoringLocationVerticalAccuracyMeasure": {
+      "title": "Monitoring Location Vertical Accuracy Measure",
+      "description": "The relative accuracy of the vertical measure of elevation of ground surface.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "MonitoringLocationVerticalAccuracyUnitStrict": {
+      "$ref": "./values/MonitoringLocationVerticalAccuracyUnit.primary.json"
+    },
+    "MonitoringLocationVerticalAccuracyUnitLoose": {
+      "$ref": "./values/MonitoringLocationVerticalAccuracyUnit.legacy.json"
+    },
+    "MonitoringLocationVerticalCollectionMethodStrict": {
+      "$ref": "./values/MonitoringLocationVerticalCollectionMethod.primary.json"
+    },
+    "MonitoringLocationVerticalCollectionMethodLoose": {
+      "$ref": "./values/MonitoringLocationVerticalCollectionMethod.legacy.json"
+    },
+    "MonitoringLocationVerticalCoordinateReferenceSystemStrict": {
+      "$ref": "./values/MonitoringLocationVerticalCoordinateReferenceSystem.primary.json"
+    },
+    "MonitoringLocationVerticalCoordinateReferenceSystemLoose": {
+      "$ref": "./values/MonitoringLocationVerticalCoordinateReferenceSystem.legacy.json"
+    },
     "MonitoringLocationTypeStrict": {
       "$ref": "./values/MonitoringLocationType.primary.json"
     },
     "MonitoringLocationTypeLoose": {
       "$ref": "./values/MonitoringLocationType.legacy.json"
+    },
+    "WellID": {
+      "title": "Well ID",
+      "description": "The well identifier assigned by the provincial/territorial well database and/or used in the federal Groundwater Information Network (GIN) database.",
+      "$ref": "#/definitions/string",
+      "maxLength": 55
+    },
+    "WellIDContextStrict": {
+      "$ref": "./values/WellIDContext.primary.json"
+    },
+    "WellIDContextLoose": {
+      "$ref": "./values/WellIDContext.legacy.json"
+    },
+    "WellUseTypeStrict": {
+      "$ref": "./values/WellUseType.primary.json"
+    },
+    "WellUseTypeLoose": {
+      "$ref": "./values/WellUseType.legacy.json"
+    },
+    "AquiferCodeStrict": {
+      "$ref": "./values/AquiferCode.primary.json"
+    },
+    "AquiferCodeLoose": {
+      "$ref": "./values/AquiferCode.legacy.json"
+    },
+    "AquiferUnitName": {
+      "title": "Aquifer Unit Name",
+      "description": "A name that designates the aquifer or geological unit from which the groundwater sample was collected or the well was screened within.",
+      "$ref": "#/definitions/string",
+      "maxLength": 120
+    },
+    "AquiferTypeStrict": {
+      "$ref": "./values/AquiferType.primary.json"
+    },
+    "AquiferTypeLoose": {
+      "$ref": "./values/AquiferType.legacy.json"
+    },
+    "AquiferUnitPorosityTypeStrict": {
+      "$ref": "./values/AquiferUnitPorosityType.primary.json"
+    },
+    "AquiferUnitPorosityTypeLoose": {
+      "$ref": "./values/AquiferUnitPorosityType.legacy.json"
+    },
+    "LithologyTypeStrict": {
+      "$ref": "./values/LithologyType.primary.json"
+    },
+    "LithologyTypeLoose": {
+      "$ref": "./values/LithologyType.legacy.json"
+    },
+    "BoreholeDepthMeasure": {
+      "title": "Borehole Depth Measure",
+      "description": "Depth below ground surface to the bottom of the hole on completion of drilling.",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 0
+    },
+    "BoreholeDepthUnitStrict": {
+      "$ref": "./values/BoreholeDepthUnit.primary.json"
+    },
+    "BoreholeDepthUnitLoose": {
+      "$ref": "./values/BoreholeDepthUnit.legacy.json"
+    },
+    "WellDepthMeasure": {
+      "title": "Well Depth Measure",
+      "description": "Depth below ground surface to the bottom of the cased well.",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 0
+    },
+    "WellDepthUnitStrict": {
+      "$ref": "./values/WellDepthUnit.primary.json"
+    },
+    "WellDepthUnitLoose": {
+      "$ref": "./values/WellDepthUnit.legacy.json"
+    },
+    "WellOpenIntervalTopMeasure": {
+      "title": "Well Open Interval Top Measure",
+      "description": "The upper vertical extent of the open or screened interval in a well measured as a depth from ground surface.",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 0
+    },
+    "WellOpenIntervalTopUnitStrict": {
+      "$ref": "./values/WellOpenIntervalTopUnit.primary.json"
+    },
+    "WellOpenIntervalTopUnitLoose": {
+      "$ref": "./values/WellOpenIntervalTopUnit.legacy.json"
+    },
+    "WellOpenIntervalBottomMeasure": {
+      "title": "Well Open Interval Bottom Measure",
+      "description": "The lower vertical extent of the open or screened interval in a well measured as a depth from ground surface.",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 0
+    },
+    "WellOpenIntervalBottomUnitStrict": {
+      "$ref": "./values/WellOpenIntervalBottomUnit.primary.json"
+    },
+    "WellOpenIntervalBottomUnitLoose": {
+      "$ref": "./values/WellOpenIntervalBottomUnit.legacy.json"
     },
     "ActivityTypeStrict": {
       "$ref": "./values/ActivityType.primary.json"
@@ -107,11 +232,54 @@
     "ActivityDepthHeightUnitLoose": {
       "$ref": "./values/ActivityDepthHeightUnit.legacy.json"
     },
+    "ActivityDepthAltitudeReferencePointStrict": {
+      "$ref": "./values/ActivityDepthAltitudeReferencePoint.primary.json"
+    },
+    "ActivityDepthAltitudeReferencePointLoose": {
+      "$ref": "./values/ActivityDepthAltitudeReferencePoint.legacy.json"
+    },
+    "ActivityDepthAltitudeReferencePointMeasure": {
+      "title": "Activity Depth Altitude Reference Point Measure",
+      "description": "The height from ground surface to the measurement point.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "ActivityDepthAltitudeReferencePointUnitStrict": {
+      "$ref": "./values/ActivityDepthAltitudeReferencePointUnit.primary.json"
+    },
+    "ActivityDepthAltitudeReferencePointUnitLoose": {
+      "$ref": "./values/ActivityDepthAltitudeReferencePointUnit.legacy.json"
+    },
+    "SampleConditionStrict": {
+      "$ref": "./values/SampleCondition.primary.json"
+    },
+    "SampleConditionLoose": {
+      "$ref": "./values/SampleCondition.legacy.json"
+    },
     "SampleCollectionEquipmentNameStrict": {
       "$ref": "./values/SampleCollectionEquipmentName.primary.json"
     },
     "SampleCollectionEquipmentNameLoose": {
       "$ref": "./values/SampleCollectionEquipmentName.legacy.json"
+    },
+    "SampleCollectionMethodName": {
+      "title": "Sample Collection Method Name",
+      "description": "The title of the method from the method publisher.",
+      "$ref": "#/definitions/string",
+      "maxLength": 300
+    },
+    "SampleCollectionMethodID": {
+      "title": "Sample Collection Method ID",
+      "description": "The ID number or code assigned by the method publisher.",
+      "$ref": "#/definitions/string",
+      "maxLength": 50
+    },
+    "SampleCollectionMethodContextStrict": {
+      "$ref": "./values/SampleCollectionMethodContext.primary.json"
+    },
+    "SampleCollectionMethodContextLoose": {
+      "$ref": "./values/SampleCollectionMethodContext.legacy.json"
     },
     "CharacteristicNameStrict": {
       "$ref": "./values/CharacteristicName.primary.json"
