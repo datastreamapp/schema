@@ -16,6 +16,7 @@ test('Should transform values (frontend)', async (t) => {
     ActivityMediaName: 'surface Water',
     ActivityDepthHeightMeasure: '-34',
     ActivityDepthHeightUnit: 'm',
+    ActivityDepthAltitudeReferencePoint: 'Ground surface',
     SampleCollectionEquipmentName: 'bucket',
     CharacteristicName: 'aluminum',
     MethodSpeciation: 'as B',

@@ -298,6 +298,18 @@
     },
     {
       "$ref": "./logic/CSVInjection.json"
+    },
+    {
+      "$ref": "./logic/MonitoringLocationType-Well-WellUseType.json"
+    },
+    {
+      "$ref": "./logic/MonitoringLocationType-Well-SampleCondition.json"
+    },
+    {
+      "$ref": "./logic/ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint.json"
+    },
+    {
+      "$ref": "./logic/CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint.json"
     }
   ]
 }

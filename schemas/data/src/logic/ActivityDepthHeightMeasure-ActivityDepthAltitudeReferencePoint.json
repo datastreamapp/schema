@@ -1,0 +1,22 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint.json",
+  "title": "ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint",
+  "description": "ActivityDepthAltitudeReferencePoint is required when ActivityDepthHeightMeasure is reported",
+  "errorMessage": "error-ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthHeightMeasure": true
+    },
+    "required": ["ActivityDepthHeightMeasure"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthAltitudeReferencePoint": true
+    },
+    "required": ["ActivityDepthAltitudeReferencePoint"]
+  }
+}

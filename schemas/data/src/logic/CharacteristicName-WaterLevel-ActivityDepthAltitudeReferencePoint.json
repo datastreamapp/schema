@@ -1,0 +1,24 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint.json",
+  "title": "CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint",
+  "description": "ActivityDepthAltitudeReferencePoint is required when CharacteristicName is 'Water level in well, depth from a reference point'",
+  "errorMessage": "error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "enum": ["Water level in well, depth from a reference point"]
+      }
+    },
+    "required": ["CharacteristicName"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthAltitudeReferencePoint": true
+    },
+    "required": ["ActivityDepthAltitudeReferencePoint"]
+  }
+}

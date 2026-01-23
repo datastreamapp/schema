@@ -834,6 +834,132 @@ test("Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`
   );
 });
 
+// *** MonitoringLocationType-Well-WellUseType *** //
+test("Should reject Well MonitoringLocationType without WellUseType", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Well",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "WellUseType"), true);
+});
+
+test("Should reject Piezometer MonitoringLocationType without WellUseType", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Piezometer",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "WellUseType"), true);
+});
+
+test("Should reject Dug Well MonitoringLocationType without WellUseType", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Dug Well",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "WellUseType"), true);
+});
+
+test("Should accept Well MonitoringLocationType with WellUseType", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Well",
+    WellUseType: "Monitoring - Ambient",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "WellUseType"), false);
+});
+
+test("Should accept non-well MonitoringLocationType without WellUseType", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "River/Stream",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "WellUseType"), false);
+});
+
+// *** MonitoringLocationType-Well-SampleCondition *** //
+test("Should reject Well without SampleCondition for non-CTS", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Well",
+    ActivityType: "Field Msr/Obs",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "SampleCondition"), true);
+});
+
+test("Should accept Well without SampleCondition for CTS", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Well",
+    ActivityType: "Field Msr/Obs-Continuous Time Series",
+    ActivityStartTime: "13:15:00",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "SampleCondition"), false);
+});
+
+test("Should accept Well with SampleCondition for non-CTS", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Well",
+    ActivityType: "Field Msr/Obs",
+    SampleCondition: "Static",
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "required", "SampleCondition"), false);
+});
+
+// *** ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint *** //
+test("Should reject ActivityDepthHeightMeasure without ActivityDepthAltitudeReferencePoint", async (t) => {
+  const valid = validate({
+    ActivityDepthHeightMeasure: -5,
+    ActivityDepthHeightUnit: "m",
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
+    true,
+  );
+});
+
+test("Should accept ActivityDepthHeightMeasure with ActivityDepthAltitudeReferencePoint", async (t) => {
+  const valid = validate({
+    ActivityDepthHeightMeasure: -5,
+    ActivityDepthHeightUnit: "m",
+    ActivityDepthAltitudeReferencePoint: "Ground surface",
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
+    false,
+  );
+});
+
+// *** CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint *** //
+test("Should reject Water level CharacteristicName without ActivityDepthAltitudeReferencePoint", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Water level in well, depth from a reference point",
+    ResultValue: -10,
+    ResultUnit: "m",
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
+    true,
+  );
+});
+
+test("Should accept Water level CharacteristicName with ActivityDepthAltitudeReferencePoint", async (t) => {
+  const valid = validate({
+    CharacteristicName: "Water level in well, depth from a reference point",
+    ResultValue: -10,
+    ResultUnit: "m",
+    ActivityDepthAltitudeReferencePoint: "Top of well casing",
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
+    false,
+  );
+});
+
 // *** one off *** //
 /*test('one off', async (t) => {
   const valid = validate({

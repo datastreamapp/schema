@@ -84,11 +84,15 @@ error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, sp
 ## errors
 error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations must include a valid ActivityStartTime
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
+error-ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required when ActivityDepthHeightMeasure is reported
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
 error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data (https://datastream.org/en-ca/documentation/isotope-data-guidance)
+error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required for CharacteristicName 'Water level in well, depth from a reference point'
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
+error-MonitoringLocationType-Well-WellUseType = WellUseType is required when MonitoringLocationType is a well or piezometer
+error-MonitoringLocationType-Well-SampleCondition = SampleCondition is required when MonitoringLocationType is a well or piezometer (except for Continuous Time Series activities)
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below = ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect = When ResultDetectionCondition is set to 'Not Detected' or 'Detected Not Quantified' the ResultDetectionQuantitationLimit fields should not be populated
 error-ResultDetectionCondition-ResultValue = Only one of ResultValue or ResultDetectionCondition should be populated

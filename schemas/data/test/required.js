@@ -120,6 +120,7 @@ test("Should not require properties", async (t) => {
     ActivityMediaName: "Surface Water",
     ActivityDepthHeightMeasure: "-34",
     ActivityDepthHeightUnit: "m",
+    ActivityDepthAltitudeReferencePoint: "Ground surface",
     SampleCollectionEquipmentName: "Bucket",
     CharacteristicName: "Sulfur",
     MethodSpeciation: "as B",
@@ -263,6 +264,294 @@ test("Should accept AnalysisStartTime AND AnalysisStartTimeZone", async (t) => {
   t.false(valid);
   t.is(
     checkProperty(validate.errors, "dependencies", "AnalysisStartTimeZone"),
+    false,
+  );
+});
+
+// Groundwater-related dependency tests
+
+test("Should reject MonitoringLocationVerticalMeasure AND NOT MonitoringLocationVerticalUnit", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalUnit",
+    ),
+    true,
+  );
+});
+test("Should accept MonitoringLocationVerticalMeasure AND MonitoringLocationVerticalUnit", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalMeasure: true,
+    MonitoringLocationVerticalUnit: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalUnit",
+    ),
+    false,
+  );
+});
+
+test("Should reject MonitoringLocationVerticalMeasure AND NOT MonitoringLocationVerticalCollectionMethod", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalCollectionMethod",
+    ),
+    true,
+  );
+});
+test("Should accept MonitoringLocationVerticalMeasure AND MonitoringLocationVerticalCollectionMethod", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalMeasure: true,
+    MonitoringLocationVerticalCollectionMethod: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalCollectionMethod",
+    ),
+    false,
+  );
+});
+
+test("Should reject MonitoringLocationVerticalMeasure AND NOT MonitoringLocationVerticalCoordinateReferenceSystem", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalCoordinateReferenceSystem",
+    ),
+    true,
+  );
+});
+test("Should accept MonitoringLocationVerticalMeasure AND MonitoringLocationVerticalCoordinateReferenceSystem", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalMeasure: true,
+    MonitoringLocationVerticalCoordinateReferenceSystem: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalCoordinateReferenceSystem",
+    ),
+    false,
+  );
+});
+
+test("Should reject MonitoringLocationVerticalAccuracyMeasure AND NOT MonitoringLocationVerticalAccuracyUnit", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalAccuracyMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalAccuracyUnit",
+    ),
+    true,
+  );
+});
+test("Should accept MonitoringLocationVerticalAccuracyMeasure AND MonitoringLocationVerticalAccuracyUnit", async (t) => {
+  const valid = validate({
+    MonitoringLocationVerticalAccuracyMeasure: true,
+    MonitoringLocationVerticalAccuracyUnit: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "MonitoringLocationVerticalAccuracyUnit",
+    ),
+    false,
+  );
+});
+
+test("Should reject WellID AND NOT WellIDContext", async (t) => {
+  const valid = validate({
+    WellID: true,
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "WellIDContext"), true);
+});
+test("Should accept WellID AND WellIDContext", async (t) => {
+  const valid = validate({
+    WellID: true,
+    WellIDContext: true,
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "WellIDContext"), false);
+});
+
+test("Should reject BoreholeDepthMeasure AND NOT BoreholeDepthUnit", async (t) => {
+  const valid = validate({
+    BoreholeDepthMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "BoreholeDepthUnit"),
+    true,
+  );
+});
+test("Should accept BoreholeDepthMeasure AND BoreholeDepthUnit", async (t) => {
+  const valid = validate({
+    BoreholeDepthMeasure: true,
+    BoreholeDepthUnit: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "BoreholeDepthUnit"),
+    false,
+  );
+});
+
+test("Should reject WellDepthMeasure AND NOT WellDepthUnit", async (t) => {
+  const valid = validate({
+    WellDepthMeasure: true,
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "WellDepthUnit"), true);
+});
+test("Should accept WellDepthMeasure AND WellDepthUnit", async (t) => {
+  const valid = validate({
+    WellDepthMeasure: true,
+    WellDepthUnit: true,
+  });
+  t.false(valid);
+  t.is(checkProperty(validate.errors, "dependencies", "WellDepthUnit"), false);
+});
+
+test("Should reject WellOpenIntervalTopMeasure AND NOT WellOpenIntervalTopUnit", async (t) => {
+  const valid = validate({
+    WellOpenIntervalTopMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "WellOpenIntervalTopUnit"),
+    true,
+  );
+});
+test("Should accept WellOpenIntervalTopMeasure AND WellOpenIntervalTopUnit", async (t) => {
+  const valid = validate({
+    WellOpenIntervalTopMeasure: true,
+    WellOpenIntervalTopUnit: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(validate.errors, "dependencies", "WellOpenIntervalTopUnit"),
+    false,
+  );
+});
+
+test("Should reject WellOpenIntervalBottomMeasure AND NOT WellOpenIntervalBottomUnit", async (t) => {
+  const valid = validate({
+    WellOpenIntervalBottomMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "WellOpenIntervalBottomUnit",
+    ),
+    true,
+  );
+});
+test("Should accept WellOpenIntervalBottomMeasure AND WellOpenIntervalBottomUnit", async (t) => {
+  const valid = validate({
+    WellOpenIntervalBottomMeasure: true,
+    WellOpenIntervalBottomUnit: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "WellOpenIntervalBottomUnit",
+    ),
+    false,
+  );
+});
+
+test("Should reject ActivityDepthAltitudeReferencePointMeasure AND NOT ActivityDepthAltitudeReferencePointUnit", async (t) => {
+  const valid = validate({
+    ActivityDepthAltitudeReferencePointMeasure: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ActivityDepthAltitudeReferencePointUnit",
+    ),
+    true,
+  );
+});
+test("Should accept ActivityDepthAltitudeReferencePointMeasure AND ActivityDepthAltitudeReferencePointUnit", async (t) => {
+  const valid = validate({
+    ActivityDepthAltitudeReferencePointMeasure: true,
+    ActivityDepthAltitudeReferencePointUnit: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "ActivityDepthAltitudeReferencePointUnit",
+    ),
+    false,
+  );
+});
+
+test("Should reject SampleCollectionMethodID AND NOT SampleCollectionMethodContext", async (t) => {
+  const valid = validate({
+    SampleCollectionMethodID: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "SampleCollectionMethodContext",
+    ),
+    true,
+  );
+});
+test("Should accept SampleCollectionMethodID AND SampleCollectionMethodContext", async (t) => {
+  const valid = validate({
+    SampleCollectionMethodID: true,
+    SampleCollectionMethodContext: true,
+  });
+  t.false(valid);
+  t.is(
+    checkProperty(
+      validate.errors,
+      "dependencies",
+      "SampleCollectionMethodContext",
+    ),
     false,
   );
 });

@@ -1,0 +1,29 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/MonitoringLocationType-Well-SampleCondition.json",
+  "title": "MonitoringLocationType-Well-SampleCondition",
+  "description": "SampleCondition is required when MonitoringLocationType contains 'Well' or 'Piezometer' and ActivityType is NOT 'Field Msr/Obs-Continuous Time Series'",
+  "errorMessage": "error-MonitoringLocationType-Well-SampleCondition",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "MonitoringLocationType": {
+        "enum": ["Dug Well", "Multilevel Well", "Nested Well", "Piezometer", "Well"]
+      },
+      "ActivityType": {
+        "not": {
+          "enum": ["Field Msr/Obs-Continuous Time Series"]
+        }
+      }
+    },
+    "required": ["MonitoringLocationType", "ActivityType"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "SampleCondition": true
+    },
+    "required": ["SampleCondition"]
+  }
+}
