@@ -4,8 +4,8 @@
     "fr": null
   },
   "description": {
-    "en": "Medium in which sample or measurement was taken (ex: Surface Water, Sediment, etc.).",
-    "fr": "Milieu dans lequel l'échantillon ou la mesure a été prise (ex : Surface Water (eau de surface), Sediment (sédiments), etc.)"
+    "en": "Medium in which sample or measurement was taken (e.g. surface water, sediment, air).",
+    "fr": "Milieu dans lequel l'échantillon ou la mesure a été prise (p. ex : « surface water » (eau de surface), « sediment » (sédiments), air)."
   },
   "values": {
     "Ambient Air": {
@@ -14,8 +14,8 @@
         "fr": "Air ambiant"
       },
       "description": {
-        "en": "Refers to any unconfined portion of the atmosphere or outdoor air",
-        "fr": "Désigne toute partie non confinée de l'atmosphère ou de l'air extérieur"
+        "en": "Any unconfined portion of the atmosphere or outdoor air.",
+        "fr": "Toute partie non confinée de l’atmosphère ou de l’air extérieur."
       }
     },
     "Ocean Water": {
@@ -24,8 +24,8 @@
         "fr": "Eau océanique"
       },
       "description": {
-        "en": "Seawater, or salt water, is water from a sea or ocean. On average, seawater in the world's oceans has a salinity of about 3.5% (35 g/L, 599 mM)",
-        "fr": "L'eau de mer, ou eau salée, est l'eau d'une mer ou d'un océan. En moyenne, l'eau de mer des océans du monde a une salinité d'environ 3,5 % (35 g/L, 599 mM)"
+        "en": "Water from a sea or ocean, including seawater, or saltwater. On average, seawater in the world's oceans has a salinity of about 3.5% (35 g/L, 599 mM).",
+        "fr": "L’eau d’une mer ou d’un océan, y compris l’eau de mer ou l'eau salée. En moyenne, l'eau de mer des océans du monde a une salinité d'environ 3,5 % (35 g/L, 599 mM)."
       }
     },
     "Porewater": {
@@ -34,8 +34,8 @@
         "fr": "Eau interstitielle"
       },
       "description": {
-        "en": "Water contained in pores in soil or rock. Water beneath the earth's surface, often between saturated soil and rock, that supplies wells and springs",
-        "fr": "Eau interstitielle contenue dans les pores du sol ou de la roche. Eau située sous la surface de la terre, souvent entre le sol saturé et la roche, qui alimente les puits et les sources"
+        "en": "Water contained in pores in soil or rock. Water beneath the earth's surface, often between saturated soil and rock, that supplies wells and springs.",
+        "fr": "Eau interstitielle contenue dans les pores du sol ou de la roche. Eau située sous la surface de la terre, souvent entre le sol saturé et la roche, qui alimente les puits et les sources."
       }
     },
     "Rainwater": {
@@ -64,8 +64,8 @@
         "fr": "Sol/sédiment de subsurface"
       },
       "description": {
-        "en": "Relating to or situated in an area beneath the surface of soil or sediment. Typically refers to sectioned sediment cores relevant to paleolimnological/ sediment core studies. Core section depth should be specified in the ActivityDepthHeightMeasure field",
-        "fr": "Relatif à une zone située sous la surface du sol ou des sédiments, ou dans cette zone. Désigne généralement des carottes de sédiments sectionnées pertinentes pour les études paléolimnologiques et les études de carottes de sédiments. La profondeur de la section de carotte doit être spécifiée dans le champ ActivityDepthHeightMeasure"
+        "en": "An area beneath the surface of soil or sediment. Typically refers to sectioned sediment cores relevant to paleolimnological/ sediment core studies. Core section depth should be specified in the ActivityDepthHeightMeasure field.",
+        "fr": "Zone située sous la surface du sol ou des sédiments. Désigne généralement des carottes de sédiments sectionnées pertinentes pour les études paléolimnologiques et les études de carottes de sédiments. La profondeur de la section de carotte doit être spécifiée dans le champ ActivityDepthHeightMeasure."
       }
     },
     "Surface Water": {
@@ -84,8 +84,8 @@
         "fr": "Sédiment d'eau de surface"
       },
       "description": {
-        "en": "Referring to suspended sediment in surface water and the top layer of settled sediment. Often this media is collected using dredges, short cores, sediment traps, and suspended sediment samplers.",
-        "fr": "Désigne les sédiments en suspension dans les eaux de surface et la couche supérieure des sédiments déposés. Ce milieu est souvent recueilli à l’aide de dragues, de carottes courtes, de pièges à sédiments et d’échantillonneurs de sédiments en suspension."
+        "en": "Suspended sediment in surface water and the top layer of settled sediment. Often this media is collected using dredges, short cores, sediment traps, and suspended sediment samplers. ",
+        "fr": "Les sédiments en suspension dans les eaux de surface et la couche supérieure des sédiments décantés. Ce milieu est souvent recueilli à l’aide de dragues, de carottes courtes, de pièges à sédiments et d’échantillonneurs de sédiments en suspension."
       }
     }
   }

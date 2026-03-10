@@ -1,161 +1,163 @@
 {
-  "name": {
-    "en": "Monitoring Location Type",
-    "fr": null
-  },
-  "description": {
-    "en": "Type of monitoring location. Must be entered exaclty as specified in Allowed Values. (Ex. River/Stream).",
-    "fr": "Type de lieu de surveillance. Doit être saisi en anglais, exactement comme spécifié dans Valeurs autorisées, dans l'onglet Allowed Values. (p. Ex. River/Stream pour rivière/ruisseau)"
-  },
-  "values": {
-    "Atmosphere": {
-      "name": {
-        "en": "Atmosphere",
-        "fr": "Atmosphère"
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
+  "MonitoringLocationType": {
+    "name": {
+      "en": "Monitoring Location Type",
+      "fr": null
     },
-    "Canal Drainage": {
-      "name": {
-        "en": "Canal Drainage",
-        "fr": "Drainage de canal"
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
+    "description": {
+      "en": "Type of monitoring location. Must be entered exactly as specified in Allowed Values. (e.g. \"River/Stream\").",
+      "fr": "Type de lieu de surveillance. Doit être saisi en anglais, exactement comme spécifié dans Valeurs autorisées, dans l'onglet Allowed Values. (par exemple « River/Stream » pour rivière/ruisseau)."
     },
-    "Canal Irrigation": {
-      "name": {
-        "en": "Canal Irrigation",
-        "fr": "Irrigation de canal"
+    "values": {
+      "Atmosphere": {
+        "name": {
+          "en": "Atmosphere",
+          "fr": "Atmosphère"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Canal Transport": {
-      "name": {
-        "en": "Canal Transport",
-        "fr": "Transport par canal"
+      "Canal Drainage": {
+        "name": {
+          "en": "Canal Drainage",
+          "fr": "Drainage de canal"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Estuary": {
-      "name": {
-        "en": "Estuary",
-        "fr": "Estuaire"
+      "Canal Irrigation": {
+        "name": {
+          "en": "Canal Irrigation",
+          "fr": "Irrigation de canal"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Great Lake": {
-      "name": {
-        "en": "Great Lake",
-        "fr": "Grand Lac"
+      "Canal Transport": {
+        "name": {
+          "en": "Canal Transport",
+          "fr": "Transport par canal"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Lake/Pond": {
-      "name": {
-        "en": "Lake/Pond",
-        "fr": "Lac/Étang"
+      "Estuary": {
+        "name": {
+          "en": "Estuary",
+          "fr": "Estuaire"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Ocean": {
-      "name": {
-        "en": "Ocean",
-        "fr": "Océan"
+      "Great Lake": {
+        "name": {
+          "en": "Great Lake",
+          "fr": "Grand Lac"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Pond-Stormwater": {
-      "name": {
-        "en": "Pond-Stormwater",
-        "fr": "Étang - Eaux de ruissellement"
+      "Lake/Pond": {
+        "name": {
+          "en": "Lake/Pond",
+          "fr": "Lac/Étang"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Reservoir": {
-      "name": {
-        "en": "Reservoir",
-        "fr": "Réservoir"
+      "Ocean": {
+        "name": {
+          "en": "Ocean",
+          "fr": "Océan"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "River/Stream": {
-      "name": {
-        "en": "River/Stream",
-        "fr": "Rivière/Ruisseau"
+      "Pond-Stormwater": {
+        "name": {
+          "en": "Pond-Stormwater",
+          "fr": "Étang - Eaux de ruissellement"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Spring": {
-      "name": {
-        "en": "Spring",
-        "fr": "Source"
+      "Reservoir": {
+        "name": {
+          "en": "Reservoir",
+          "fr": "Réservoir"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Storm Sewer": {
-      "name": {
-        "en": "Storm Sewer",
-        "fr": "Égout pluvial"
+      "River/Stream": {
+        "name": {
+          "en": "River/Stream",
+          "fr": "Rivière/Ruisseau"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Unspecified": {
-      "name": {
-        "en": "Unspecified",
-        "fr": "Non spécifié"
+      "Spring": {
+        "name": {
+          "en": "Spring",
+          "fr": "Source"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Wetland": {
-      "name": {
-        "en": "Wetland",
-        "fr": "Zone humide"
+      "Storm Sewer": {
+        "name": {
+          "en": "Storm Sewer",
+          "fr": "Égout pluvial"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
+      "Unspecified": {
+        "name": {
+          "en": "Unspecified",
+          "fr": "Non spécifié"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
+      },
+      "Wetland": {
+        "name": {
+          "en": "Wetland",
+          "fr": "Zone humide"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       }
     }
   }

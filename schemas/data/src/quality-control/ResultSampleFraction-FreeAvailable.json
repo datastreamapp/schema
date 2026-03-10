@@ -1,0 +1,26 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultSampleFraction-FreeAvailable.json",
+  "title": "ResultSampleFraction-FreeAvailable",
+  "description": "The ResultSampleFraction 'Free Available' may not be relevant for the selected CharacteristicName",
+  "errorMessage": "qc-ResultSampleFraction-FreeAvailable",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ResultSampleFraction": {
+        "enum": ["Free Available"]
+      }
+    },
+    "required": ["ResultSampleFraction"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+            "enum": ["Chlorine","Cyanide"]
+      }
+    },
+    "required": ["CharacteristicName"]
+  }
+}
