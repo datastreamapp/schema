@@ -1,181 +1,183 @@
 {
-  "name": {
-    "en": "Monitoring Location Horizontal Coordinate Reference System",
-    "fr": null
-  },
-  "description": {
-    "en": "The datum that your latitude and longitude coordinates are based upon. Commonly used datum are NAD83 or NAD27. This is a setting that may be changed on most GPS units. See HorizontalReferenceDatum LOOKUP tab for full names of each.",
-    "fr": "Le système de référence sur lequel vos coordonnées de latitude et de longitude sont basées. Les systèmes de référence les plus couramment utilisés sont le NAD83 ou le NAD27. Il s'agit d'un paramètre qui peut être modifié sur la plupart des appareils GPS. Voir l'onglet HorizontalReferenceDatum LOOKUP pour les noms complets de chacun."
-  },
-  "values": {
-    "AMSMA": {
-      "name": {
-        "en": "AMSMA",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
+  "MonitoringLocationHorizontalCoordinateReferenceSystem": {
+    "name": {
+      "en": "Monitoring Location Horizontal Coordinate Reference System",
+      "fr": null
     },
-    "ASTRO": {
-      "name": {
-        "en": "ASTRO",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
+    "description": {
+      "en": "The horizontal datum of the MonitoringLocationLatitude and MonitoringLocationLongitude coordinates (e.g. NAD83, WGS84).",
+      "fr": "Le système de référence horizontale des coordonnées MonitoringLocationLatitude et MonitoringLocationLongitude (par exemple NAD83, WGS84)."
     },
-    "GUAM": {
-      "name": {
-        "en": "GUAM",
-        "fr": null
+    "values": {
+      "AMSMA": {
+        "name": {
+          "en": "AMSMA",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "HARN": {
-      "name": {
-        "en": "HARN",
-        "fr": null
+      "ASTRO": {
+        "name": {
+          "en": "ASTRO",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "JHNSN": {
-      "name": {
-        "en": "JHNSN",
-        "fr": null
+      "GUAM": {
+        "name": {
+          "en": "GUAM",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "NAD27": {
-      "name": {
-        "en": "NAD27",
-        "fr": null
+      "HARN": {
+        "name": {
+          "en": "HARN",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "NAD83": {
-      "name": {
-        "en": "NAD83",
-        "fr": null
+      "JHNSN": {
+        "name": {
+          "en": "JHNSN",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "OLDHI": {
-      "name": {
-        "en": "OLDHI",
-        "fr": null
+      "NAD27": {
+        "name": {
+          "en": "NAD27",
+          "fr": null
+        },
+        "description": {
+          "en": "North American Datum 1927",
+          "fr": "Système de référence nord-américain de 1927"
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "OTHER": {
-      "name": {
-        "en": "OTHER",
-        "fr": null
+      "NAD83": {
+        "name": {
+          "en": "NAD83",
+          "fr": null
+        },
+        "description": {
+          "en": "North American Datum 1983",
+          "fr": "Système de référence nord-américain de 1983"
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "PR": {
-      "name": {
-        "en": "PR",
-        "fr": null
+      "OLDHI": {
+        "name": {
+          "en": "OLDHI",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "SGEOR": {
-      "name": {
-        "en": "SGEOR",
-        "fr": null
+      "OTHER": {
+        "name": {
+          "en": "OTHER",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "SLAWR": {
-      "name": {
-        "en": "SLAWR",
-        "fr": null
+      "PR": {
+        "name": {
+          "en": "PR",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "SPAUL": {
-      "name": {
-        "en": "SPAUL",
-        "fr": null
+      "SGEOR": {
+        "name": {
+          "en": "SGEOR",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "UNKWN": {
-      "name": {
-        "en": "UNKWN",
-        "fr": null
+      "SLAWR": {
+        "name": {
+          "en": "SLAWR",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "WAKE": {
-      "name": {
-        "en": "WAKE",
-        "fr": null
+      "SPAUL": {
+        "name": {
+          "en": "SPAUL",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "WGS72": {
-      "name": {
-        "en": "WGS72",
-        "fr": null
+      "UNKWN": {
+        "name": {
+          "en": "UNKWN",
+          "fr": null
+        },
+        "description": {
+          "en": "Unknown",
+          "fr": "Incertain"
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "WGS84": {
-      "name": {
-        "en": "WGS84",
-        "fr": null
+      "WAKE": {
+        "name": {
+          "en": "WAKE",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
+      "WGS72": {
+        "name": {
+          "en": "WGS72",
+          "fr": null
+        },
+        "description": {
+          "en": "World Geodetic System 1972",
+          "fr": "Système géodésique mondial de 1972"
+        }
+      },
+      "WGS84": {
+        "name": {
+          "en": "WGS84",
+          "fr": null
+        },
+        "description": {
+          "en": "World Geodetic System 1984",
+          "fr": "Système géodésique mondial de 1984"
+        }
       }
     }
   }

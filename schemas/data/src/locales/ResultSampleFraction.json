@@ -1,381 +1,383 @@
 {
-  "name": {
-    "en": "Result Sample Fraction",
-    "fr": "Fraction d’échantillon"
-  },
-  "description": {
-    "en": "Describes the portion of the characteristic being analyzed. Required for certain characteristics, see CharacteristicName LOOKUP tab. Sample Fraction will usually be Total or Dissolved.",
-    "fr": "Décrit la partie de la caractéristique qui est analysée. Requis pour certaines caractéristiques, voir l'onglet CharacteristicName LOOKUP. La fraction de l'échantillon sera généralement totale (Total) ou dissoute (Dissolved)."
-  },
-  "values": {
-    "Acid Soluble": {
-      "name": {
-        "en": "Acid Soluble",
-        "fr": "Soluble dans l'acide"
-      },
-      "description": {
-        "en": "That portion of the analyte which becomes dissolved within the sample following treatment with an appropriate acid.",
-        "fr": "La partie de l'analyte qui se dissout après traitement de l'échantillon avec un acide approprié."
-      }
+  "ResultSampleFraction": {
+    "name": {
+      "en": "Result Sample Fraction",
+      "fr": "Fraction d’échantillon"
     },
-    "Bioavailable": {
-      "name": {
-        "en": "Bioavailable",
-        "fr": "Biodisponible"
-      },
-      "description": {
-        "en": "The extent to which a substance is / becomes available or absorbed by a specific tissue or organ.",
-        "fr": "Indication sur la mesure dans laquelle une substance est / devient disponible ou absorbée par un tissu ou un organe spécifique."
-      }
+    "description": {
+      "en": "The portion of the characteristic being analyzed. Metals are typically reported as \"Total\" or \"Dissolved\", while nutrients are typically reported as \"Filtered\" or \"Unfiltered\". Required for certain characteristics (see CharacteristicName LOOKUP tab). \r\n\r\nFor details on reporting sample fractions for metals and nutrients, see our guidance documents in the Learning Centre.",
+      "fr": "La partie de la caractéristique qui est analysée. Les métaux sont généralement signalés comme « Total » (totaux) ou « Dissolved » (dissous), tandis que les nutriments sont généralement signalés comme « Filtered » (filtrés) ou « Unfiltered » (non filtrés). Obligatoire pour certaines caractéristiques (voir l'onglet CharacteristicName LOOKUP). \r\n\r\nPour plus de détails sur la manière de signaler les fractions d’échantillon relatives aux métaux et aux nutriments, voir nos documents-guides dans le Centre d’apprentissage."
     },
-    "Comb Available": {
-      "name": {
-        "en": "Comb Available",
-        "fr": "Peigne disponible"
+    "values": {
+      "Acid Soluble": {
+        "name": {
+          "en": "Acid Soluble",
+          "fr": "Soluble dans l'acide"
+        },
+        "description": {
+          "en": "Portion of the analyte that becomes dissolved within the sample following treatment with an appropriate acid.",
+          "fr": "Partie de l’analyte qui se dissout dans l’échantillon après traitement au moyen d’un acide approprié."
+        }
       },
-      "description": {
-        "en": "The concentration of an analyte or other analyte derivatives in a water which is combined with other derivatives yet is still available to oxidize organic matter.",
-        "fr": "Concentration d'un analyte ou d'autres dérivés de l'analyte dans l'eau qui est combiné avec d'autres dérivés, mais qui reste disponible pour oxyder la matière organique."
-      }
-    },
-    "Dissolved": {
-      "name": {
-        "en": "Dissolved",
-        "fr": "Dissous"
+      "Bioavailable": {
+        "name": {
+          "en": "Bioavailable",
+          "fr": "Biodisponible"
+        },
+        "description": {
+          "en": "Portion of the analyte that can be absorbed by a specific tissue or organ.",
+          "fr": "Partie de l’analyte qui peut être absorbée par un tissu ou un organe spécifique."
+        }
       },
-      "description": {
-        "en": "That portion of the analyte found in the liquid medium.  Cannot be removed by filtration.",
-        "fr": "La fraction de l'analyte qui se trouve dans le milieu liquide. Ne peut être éliminée par filtration."
-      }
-    },
-    "Extractable": {
-      "name": {
-        "en": "Extractable",
-        "fr": "Extractible"
+      "Comb Available": {
+        "name": {
+          "en": "Comb Available",
+          "fr": "Peigne disponible"
+        },
+        "description": {
+          "en": "Portion of the analyte or other analyte derivatives which is combined with other derivatives yet is still available to oxidize organic matter.",
+          "fr": "Partie de l’analyte ou d’autres dérivés de l’analyte qui est combinée à d’autres dérivés mais qui reste disponible pour oxyder la matière organique."
+        }
       },
-      "description": {
-        "en": "An analyte that can be removed from a mixture using a specific method or technique.",
-        "fr": "Un analyte qui peut être retiré d'un mélange en utilisant une méthode ou une technique spécifique."
-      }
-    },
-    "Extractable, CaCO3-bound": {
-      "name": {
-        "en": "Extractable, CaCO3-bound",
-        "fr": "Extractibles, liée au CaCO3"
+      "Dissolved": {
+        "name": {
+          "en": "Dissolved",
+          "fr": "Dissous"
+        },
+        "description": {
+          "en": "Portion of the analyte found in the liquid medium, which cannot be removed by filtration. Filter pore size should be indicated in the ResultComment field if it is different than 0.45 µm. DataStream uses this term for metal-series analytes and other non-nutrients to indicate that the water sample was filtered. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte qui se trouve dans le milieu liquide et qui ne peut pas être éliminée par filtration. La taille des pores du filtre doit être indiquée dans le champ ResultComment si elle est différente de 0,45 µm. DataStream utilise ce terme pour les analytes de la série des métaux et d’autres éléments non nutritifs pour indiquer que l’échantillon d’eau a été filtré. Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Extractable, exchangeable": {
-      "name": {
-        "en": "Extractable, exchangeable",
-        "fr": "Extractible, échangeable"
+      "Extractable": {
+        "name": {
+          "en": "Extractable",
+          "fr": "Extractible"
+        },
+        "description": {
+          "en": "Portion of an analyte that is solubilized from unfiltered water samples or solid samples (e.g., sediment), using a weaker or partial digestion. Applies to unfiltered samples reported by the laboratory as “Acid soluble”.  DataStream uses this term for water sample metal-series analytes and other non-nutrients to indicate that it was not filtered and subject to weak or partial digestion. See relevant guidance on datastream.org.",
+          "fr": "Partie d’un analyte qui est solubilisé à partir d’échantillons d’eau non filtrée ou d’échantillons solides (p.ex. sédiment), à l’aide d’une digestion plus faible ou partielle. S’applique aux échantillons non filtrés signalés par le laboratoire comme étant « solubles dans l’acide ».  DataStream utilise ce terme pour les échantillons d’eau contenant des analytes de la série des métaux et d’autres éléments non nutritifs pour indiquer qu’ils n’ont pas été filtrés et qu’ils ont fait l’objet d’une digestion faible ou partielle. Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Extractable, organic-bnd": {
-      "name": {
-        "en": "Extractable, organic-bnd",
-        "fr": "Extractibles, lies à l’organique"
+      "Extractable, CaCO3-bound": {
+        "name": {
+          "en": "Extractable, CaCO3-bound",
+          "fr": "Extractibles, liée au CaCO3"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Extractable, other": {
-      "name": {
-        "en": "Extractable, other",
-        "fr": "Extractible, autre"
+      "Extractable, exchangeable": {
+        "name": {
+          "en": "Extractable, exchangeable",
+          "fr": "Extractible, échangeable"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Extractable, oxide-bound": {
-      "name": {
-        "en": "Extractable, oxide-bound",
-        "fr": "Extractibles, liée à l’oxyde"
+      "Extractable, organic-bnd": {
+        "name": {
+          "en": "Extractable, organic-bnd",
+          "fr": "Extractibles, lies à l’organique"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Extractable, residual": {
-      "name": {
-        "en": "Extractable, residual",
-        "fr": "Extractible, résiduelle"
+      "Extractable, other": {
+        "name": {
+          "en": "Extractable, other",
+          "fr": "Extractible, autre"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Filter/sieve residue": {
-      "name": {
-        "en": "Filter/sieve residue",
-        "fr": "Résidus de filtre/de tamis"
+      "Extractable, oxide-bound": {
+        "name": {
+          "en": "Extractable, oxide-bound",
+          "fr": "Extractibles, liée à l’oxyde"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Filterable": {
-      "name": {
-        "en": "Filterable",
-        "fr": "Filtrable"
+      "Extractable, residual": {
+        "name": {
+          "en": "Extractable, residual",
+          "fr": "Extractible, résiduelle"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "That portion of the analyte which is in or absorbed to material which passes through the filter during sample filtration.",
-        "fr": "La partie de l'analyte qui est dans ou absorbée par le matériau qui passe à travers le filtre pendant la filtration de l'échantillon."
-      }
-    },
-    "Filtered": {
-      "name": {
-        "en": "Filtered",
-        "fr": "Filtré"
+      "Filter/sieve residue": {
+        "name": {
+          "en": "Filter/sieve residue",
+          "fr": "Résidus de filtre/de tamis"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "Location of filtration is unknown.",
-        "fr": "L'emplacement de la filtration est inconnu."
-      }
-    },
-    "Filtered, field": {
-      "name": {
-        "en": "Filtered, field",
-        "fr": "Filtré, terrain"
+      "Filterable": {
+        "name": {
+          "en": "Filterable",
+          "fr": "Filtrable"
+        },
+        "description": {
+          "en": "Portion of the analyte that is in or absorbed to material which passes through the filter during sample filtration.",
+          "fr": "Partie de l’analyte qui est dans le matériau ou absorbée par le matériau qui passe à travers le filtre lors de la filtration de l’échantillon."
+        }
       },
-      "description": {
-        "en": "Aqueous portion of sample, filtered in field.",
-        "fr": "Partie aqueuse de l'échantillon, filtrée sur le terrain."
-      }
-    },
-    "Filtered, lab": {
-      "name": {
-        "en": "Filtered, lab",
-        "fr": "Filtré, lab"
+      "Filtered": {
+        "name": {
+          "en": "Filtered",
+          "fr": "Filtré"
+        },
+        "description": {
+          "en": "Portion of the analyte measured as the aqueous form through filtration (filtering location unknown). Used with nutrient data in DataStream when reported as \"Dissolved\" fraction. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte mesurée sous forme aqueuse par filtration (lieu de filtration inconnu). Utilisé avec les données sur les nutriments dans DataStream lorsqu’elles sont signalées comme fraction « Dissolved » (dissoute). Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": "Aqueous portion of sample, filtered in lab.",
-        "fr": "Partie aqueuse de l'échantillon, filtrée au laboratoire."
-      }
-    },
-    "Fixed": {
-      "name": {
-        "en": "Fixed",
-        "fr": null
+      "Filtered, field": {
+        "name": {
+          "en": "Filtered, field",
+          "fr": "Filtré, terrain"
+        },
+        "description": {
+          "en": "Portion of the analyte measured as the aqueous form through field filtration. Used with nutrient data in DataStream when reported as \"Dissolved\" fraction. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte mesurée sous forme aqueuse par filtration sur le terrain. Utilisé avec les données sur les nutriments dans DataStream lorsqu’elles sont signalées comme fraction « Dissolved » (dissoute). Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Free Available": {
-      "name": {
-        "en": "Free Available",
-        "fr": "Libre disponible"
+      "Filtered, lab": {
+        "name": {
+          "en": "Filtered, lab",
+          "fr": "Filtré, lab"
+        },
+        "description": {
+          "en": "Portion of the analyte measured as the aqueous form through lab filtration. Used with nutrient data in DataStream when reported as \"Dissolved\" fraction. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte mesurée sous forme aqueuse par filtration en laboratoire. Utilisé avec les données sur les nutriments dans DataStream lorsqu’elles sont signalées comme fraction « Dissolved » (dissoute)."
+        }
       },
-      "description": {
-        "en": "The concentration of residual substance present and not combined with any substance or in other less readily available form.",
-        "fr": "La concentration de la substance résiduelle présente, et non combinée à une autre substance ou sous une autre forme moins facilement disponible."
-      }
-    },
-    "Inorganic": {
-      "name": {
-        "en": "Inorganic",
-        "fr": "Inorganique"
+      "Fixed": {
+        "name": {
+          "en": "Fixed",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "Inorganic content of sample.",
-        "fr": "Teneur en substances inorganiques de l'échantillon."
-      }
-    },
-    "Non-Filterable (Particle)": {
-      "name": {
-        "en": "Non-Filterable (Particle)",
-        "fr": "Non filtrable (Particule)"
+      "Free Available": {
+        "name": {
+          "en": "Free Available",
+          "fr": "Libre disponible"
+        },
+        "description": {
+          "en": "Portion of the residual analyte present and not combined with any substance or in other less readily available form.",
+          "fr": "Partie de l’analyte résiduel présente et non combinée à une substance ou sous une autre forme moins aisément disponible."
+        }
       },
-      "description": {
-        "en": "Particulate, did not pass through filter.",
-        "fr": "Fraction particulaire n'ayant pas traversé le filtre."
-      }
-    },
-    "non-linear function": {
-      "name": {
-        "en": "non-linear function",
-        "fr": "fonction non linéaire"
+      "Inorganic": {
+        "name": {
+          "en": "Inorganic",
+          "fr": "Inorganique"
+        },
+        "description": {
+          "en": "Portion of the analyte containing inorganic content.",
+          "fr": "Partie de la substance à analyser contenant des éléments inorganiques."
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Non-settleable": {
-      "name": {
-        "en": "Non-settleable",
-        "fr": "Non réglable"
+      "Non-Filterable (Particle)": {
+        "name": {
+          "en": "Non-Filterable (Particle)",
+          "fr": "Non filtrable (Particule)"
+        },
+        "description": {
+          "en": "Portion of the analyte that is particulate and does not pass through filter. Used with nutrient data in DataStream when reported as \"Particulate\" fraction. See relevant guidance on datastream.org.",
+          "fr": "Partie de la substance à analyser qui est particulaire et ne passe pas à travers le filtre. Utilisé avec les données sur les nutriments dans DataStream lorsqu’elles sont signalées comme fraction « Particulate » (particulaire). Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": "That portion of the analyte which is in or absorbed to particles remaining in suspension in the sample container after a settling process.",
-        "fr": "La partie de l'analyte qui est dans ou absorbée par les particules restant en suspension dans le récipient de l'échantillon après un processus de décantation."
-      }
-    },
-    "Non-volatile": {
-      "name": {
-        "en": "Non-volatile",
-        "fr": "Non volatile"
+      "non-linear function": {
+        "name": {
+          "en": "non-linear function",
+          "fr": "fonction non linéaire"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "That portion of the analyte which is in a liquid or solid state under normal temperature and pressure.",
-        "fr": "La partie de l'analyte qui se trouve à l'état liquide ou solide à température et pression normales."
-      }
-    },
-    "Organic": {
-      "name": {
-        "en": "Organic",
-        "fr": "Organique"
+      "Non-settleable": {
+        "name": {
+          "en": "Non-settleable",
+          "fr": "Non réglable"
+        },
+        "description": {
+          "en": "Portion of the analyte that is in/absorbed to particles remaining in suspension after a settling process.",
+          "fr": "Portion de l'analyte qui est dans/absorbée par les particules restant en suspension après un processus de décantation."
+        }
       },
-      "description": {
-        "en": "Organic content of a sample.",
-        "fr": "Teneur en substances organiques d'un échantillon."
-      }
-    },
-    "Pot. Dissolved": {
-      "name": {
-        "en": "Pot. Dissolved",
-        "fr": "Pot. Dissous"
+      "Non-volatile": {
+        "name": {
+          "en": "Non-volatile",
+          "fr": "Non volatile"
+        },
+        "description": {
+          "en": "Portion of the analyte that is in a liquid or solid state under normal temperature and pressure.",
+          "fr": "Partie de la substance à analyser qui se trouve à l’état liquide ou solide à une température et une pression normales."
+        }
       },
-      "description": {
-        "en": "Potentially Dissolved is the portion of a constituent measured from the filtrate of a water and suspended sediment sample that was treated with nitric acid prior to sample filtration.",
-        "fr": "Indique la portion d'un constituant potentiellement disssous, qui est mesurée à partir du filtrat d'un échantillon d'eau et de sédiments en suspension après traitement à l'acide nitrique, avant la filtration de l'échantillon."
-      }
-    },
-    "Settleable": {
-      "name": {
-        "en": "Settleable",
-        "fr": "Réglable"
+      "Organic": {
+        "name": {
+          "en": "Organic",
+          "fr": "Organique"
+        },
+        "description": {
+          "en": "Portion of the analyte in organic forms.",
+          "fr": "Partie de la substance à analyser sous forme organique."
+        }
       },
-      "description": {
-        "en": "That portion of the analyte which is found in or absorbed to that part of the sample which has settled (fallen out of suspension) to the bottom of the sample container.",
-        "fr": "La fraction d'un analyte qui se trouve dans ou est absorbée par la partie de l'échantillon qui s'est déposée (est tombée hors suspension) au fond du récipient de l'échantillon."
-      }
-    },
-    "Sieved": {
-      "name": {
-        "en": "Sieved",
-        "fr": "Tamisé"
+      "Pot. Dissolved": {
+        "name": {
+          "en": "Pot. Dissolved",
+          "fr": "Pot. Dissous"
+        },
+        "description": {
+          "en": "Portion of the analyte measured from the filtrate of a water sample that was treated with nitric acid prior to filtration. Samples solubilized with nitric acid reported as “Acid soluble” can be assigned the fraction “Pot. Dissolved”. Filter pore size should be indicated in the ResultComment if it is different than 0.45 µm. DataStream uses this term for metal-series analytes and other non-nutrients to indicate that the water sample was filtered. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte mesurée à partir du filtrat d’un échantillon d’eau qui a été traité avec de l’acide nitrique avant d’être filtré. Les échantillons solubilisés avec de l’acide nitrique et signalés comme « Acid soluble » (solubles dans l’acide) peuvent se voir attribuer la fraction « Pot. Dissolved » (Pot. dissous). La taille des pores du filtre doit être indiquée dans ResultComment si elle est différente de 0,45 µm. DataStream utilise ce terme pour les analytes de la série des métaux et d’autres éléments non nutritifs pour indiquer que l’échantillon d’eau a été filtré. Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Supernate": {
-      "name": {
-        "en": "Supernate",
-        "fr": "Surnageant"
+      "Settleable": {
+        "name": {
+          "en": "Settleable",
+          "fr": "Réglable"
+        },
+        "description": {
+          "en": "Portion of the analyte found in/absorbed to the part of the sample which has settled (fallen out of suspension) to the bottom of the sample container.",
+          "fr": "Portion de l'analyte trouvée dans/absorbée par la partie de l'échantillon qui s'est déposée (tombée en suspension) au fond du récipient d'échantillon."
+        }
       },
-      "description": {
-        "en": "That portion of the analyte found in the liquid layer above a precipitate produced from the sample.",
-        "fr": "La partie de l'analyte qui se trouve dans la couche liquide au-dessus d'un précipité produit à partir de l'échantillon."
-      }
-    },
-    "Suspended": {
-      "name": {
-        "en": "Suspended",
-        "fr": "En suspension"
+      "Sieved": {
+        "name": {
+          "en": "Sieved",
+          "fr": "Tamisé"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "That portion of the analyte which is suspended in the sampled medium, either as, or adsorbed to, particles which are more or less uniformly dispersed within the medium.",
-        "fr": "La partie de l'analyte qui est en suspension dans le milieu échantillonné, soit sous forme de particules, soit adsorbée à des particules qui sont plus ou moins uniformément dispersées dans le milieu."
-      }
-    },
-    "Total": {
-      "name": {
-        "en": "Total",
-        "fr": "Totale"
+      "Supernate": {
+        "name": {
+          "en": "Supernate",
+          "fr": "Surnageant"
+        },
+        "description": {
+          "en": "Portion of the analyte found in the liquid layer above a precipitate produced from the sample.",
+          "fr": "Partie de l’analyte trouvée dans la couche liquide au-dessus d’un précipité produit à partir de l’échantillon."
+        }
       },
-      "description": {
-        "en": "The total of all fractions of the analyte.",
-        "fr": "Le total de toutes les fractions de l'analyte."
-      }
-    },
-    "Total Recoverable": {
-      "name": {
-        "en": "Total Recoverable",
-        "fr": "Total récupérable"
+      "Suspended": {
+        "name": {
+          "en": "Suspended",
+          "fr": "En suspension"
+        },
+        "description": {
+          "en": "Portion of the analyte suspended in the sampled medium, either as- or adsorbed to- particles that has been physically separated before analysis. DataStream uses this term for water sample metal-series analytes and other non-nutrients to indicate that it was not filtered and subject to weak or partial digestion. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte en suspension dans le milieu échantillonné, sous forme de particules- ou absorbée sur celles-ci-, qui a été physiquement séparée avant l’analyse. DataStream utilise ce terme pour les échantillons d’eau contenant des analytes de la série des métaux et d’autres éléments non nutritifs pour indiquer qu’ils n’ont pas été filtrés et qu’ils ont fait l’objet d’une digestion faible ou partielle. Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": "The analyte concentration available for analysis in an unfiltered sample following solubilization.",
-        "fr": "La concentration de l'analyte disponible pour l'analyse dans un échantillon non filtré après solubilisation."
-      }
-    },
-    "Total Residual": {
-      "name": {
-        "en": "Total Residual",
-        "fr": "Total résiduel"
+      "Total": {
+        "name": {
+          "en": "Total",
+          "fr": "Totale"
+        },
+        "description": {
+          "en": "Portion of the analyte representing the total of all fractions in an unfiltered water sample, or a sediment sample, obtained by a strong digestion that produces a concentration value that can be assumed to be representative of the entirety of the analyte in the sample. Applies to unfiltered samples reported by the laboratory as \"Total\" or “Total recoverable”. DataStream uses this term for water sample metal-series analytes and other non-nutrients to indicate that it was not filtered and subject to strong digestion. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte représentant le total de toutes les fractions dans un échantillon d’eau non filtré ou un échantillon de sédiments, obtenu par une forte digestion qui produit une valeur de concentration que l’on peut supposer représentative de la totalité de l’analyte dans l’échantillon. S’applique aux échantillons non filtrés signalés par le laboratoire comme étant « Total » ou « Total recoverable » (Total récupérables). DataStream utilise ce terme pour les échantillons d’eau contenant des analytes de la série des métaux et d’autres éléments non nutritifs pour indiquer qu’ils n’ont pas été filtrés et qu’ils ont fait l’objet d’une digestion forte. Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": "The amount of available analyte remaining after a given contact time. The sum of the combined available residual analyte and the free available residual analyte.",
-        "fr": "La quantité d'analyte disponible restant après une période de temps de contact donné. La somme de l'analyte résiduel disponible et de l'analyte résiduel libre."
-      }
-    },
-    "Unfiltered": {
-      "name": {
-        "en": "Unfiltered",
-        "fr": "Non filtré"
+      "Total Recoverable": {
+        "name": {
+          "en": "Total Recoverable",
+          "fr": "Total récupérable"
+        },
+        "description": {
+          "en": "Portion of the analyte available in an unfiltered sample following solubilization.",
+          "fr": "Partie de l’analyte disponible dans un échantillon non filtré après solubilisation."
+        }
       },
-      "description": {
-        "en": "Aqueous and particulate fraction.",
-        "fr": "Fraction aqueuse et particulaire."
-      }
-    },
-    "Unspecified": {
-      "name": {
-        "en": "Unspecified",
-        "fr": "Non spécifié"
+      "Total Residual": {
+        "name": {
+          "en": "Total Residual",
+          "fr": "Total résiduel"
+        },
+        "description": {
+          "en": "Portion of the analyte remaining after a given contact time. The sum of the combined available residual analyte and the free available residual analyte.",
+          "fr": "Partie de l’analyte restant après un temps de contact donné. La somme de l'analyte résiduel disponible et de l'analyte résiduel libre."
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Vapor": {
-      "name": {
-        "en": "Vapor",
-        "fr": "Vapeur"
+      "Unfiltered": {
+        "name": {
+          "en": "Unfiltered",
+          "fr": "Non filtré"
+        },
+        "description": {
+          "en": "Portion of the analyte containing aqueous and particulate fractions. Used with nutrient data in DataStream when reported as \"Total\" fraction. See relevant guidance on datastream.org.",
+          "fr": "Partie de l’analyte contenant des fractions aqueuses et particulaires. Utilisé avec les données sur les nutriments dans DataStream lorsqu’elles sont signalées comme fraction « Total » (totale). Voir le guide approprié sur datastream.org."
+        }
       },
-      "description": {
-        "en": "That portion of the analyte which exists in a gaseous state and that under ordinary conditions is liquid or solid.",
-        "fr": "La partie de l'analyte qui existe à l'état gazeux et qui, dans des conditions ordinaires, est liquide ou solide."
-      }
-    },
-    "Volatile": {
-      "name": {
-        "en": "Volatile",
-        "fr": "Volatile"
+      "Unspecified": {
+        "name": {
+          "en": "Unspecified",
+          "fr": "Non spécifié"
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "That portion of the analyte which evaporates readily at normal temperature and pressure.",
-        "fr": "La partie de l'analyte qui s'évapore facilement à température et pression normales."
-      }
-    },
-    "Field": {
-      "name": {
-        "en": "Field",
-        "fr": null
+      "Vapor": {
+        "name": {
+          "en": "Vapor",
+          "fr": "Vapeur"
+        },
+        "description": {
+          "en": "Portion of the analyte that exists in a gaseous state and that under ordinary conditions is liquid or solid.",
+          "fr": "Partie de l’analyte qui existe à l’état gazeux et qui, dans des conditions normales, est liquide ou solide."
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
+      "Volatile": {
+        "name": {
+          "en": "Volatile",
+          "fr": "Volatile"
+        },
+        "description": {
+          "en": "Portion of the analyte that evaporates readily at normal temperature and pressure.",
+          "fr": "Partie de l’analyte qui s’évapore facilement à une température et une pression normales."
+        }
+      },
+      "Field": {
+        "name": {
+          "en": "Field",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       }
     }
   }

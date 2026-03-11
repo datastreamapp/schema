@@ -1,81 +1,83 @@
 {
-  "name": {
-    "en": "Result Status Identifier",
-    "fr": null
-  },
-  "description": {
-    "en": "Indicates acceptability of result with respect to QA/QC.",
-    "fr": "Indique l'acceptabilité du résultat par rapport à l'AQ/CQ."
-  },
-  "values": {
-    "Accepted": {
-      "name": {
-        "en": "Accepted",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
+  "ResultStatusID": {
+    "name": {
+      "en": "Result Status Identifier",
+      "fr": null
     },
-    "Final": {
-      "name": {
-        "en": "Final",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
+    "description": {
+      "en": "Stage of QA/QC protocol (as described in the dataset’s metadata) applied to the result (e.g. \"Validated\")",
+      "fr": "Étape du protocole d’AQ/CQ (tel que décrit dans les métadonnées du jeu de données) appliqué au résultat (par exemple, « Validated » (Validé))"
     },
-    "Historical": {
-      "name": {
-        "en": "Historical",
-        "fr": null
+    "values": {
+      "Accepted": {
+        "name": {
+          "en": "Accepted",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Preliminary": {
-      "name": {
-        "en": "Preliminary",
-        "fr": null
+      "Final": {
+        "name": {
+          "en": "Final",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "Raw data that has not undergone any QA/QC review as described in the dataset metadata. Some aspect of the observation may be subject to change.",
-        "fr": "Les données brutes ont subi un examen d'AQ/CQ tel que décrit dans les métadonnées du jeu de données. Certains aspects de l'observation pourraient être modifiés."
-      }
-    },
-    "Rejected": {
-      "name": {
-        "en": "Rejected",
-        "fr": null
+      "Historical": {
+        "name": {
+          "en": "Historical",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Validated": {
-      "name": {
-        "en": "Validated",
-        "fr": null
+      "Preliminary": {
+        "name": {
+          "en": "Preliminary",
+          "fr": null
+        },
+        "description": {
+          "en": "ResultValue not undergone any QA/QC review as described in the dataset metadata. Some aspect of the observation may be subject to change. ",
+          "fr": "ResultValue qui n’a pas fait l’objet d’un processus d’AQ/CQ tel que décrit dans les métadonnées du jeu de données. Certains aspects de l'observation pourraient être modifiés."
+        }
       },
-      "description": {
-        "en": "Reported result has been validated by the QA/QC protocol described in the dataset metadata.",
-        "fr": "Le résultat rapporté a été validé par le protocole d'AQ/CQ décrit dans les métadonnées du jeu de données."
-      }
-    },
-    "Provisional": {
-      "name": {
-        "en": "Provisional",
-        "fr": null
+      "Rejected": {
+        "name": {
+          "en": "Rejected",
+          "fr": null
+        },
+        "description": {
+          "en": null,
+          "fr": null
+        }
       },
-      "description": {
-        "en": "Reported result has undergone some of the QA/QC protocol described in the dataset metadata. Some aspect of the observation may be subject to change.",
-        "fr": "Le résultat rapporté a subi une partie du protocole d'AQ/CQ décrit dans les métadonnées du jeu de données. Certains aspects de l'observation pourraient être modifiés."
+      "Validated": {
+        "name": {
+          "en": "Validated",
+          "fr": null
+        },
+        "description": {
+          "en": "ResultValue validated by the QA/QC protocol described in the dataset metadata.  ",
+          "fr": "Result/Value validé par le protocole AQ/CQ décrit dans les métadonnées du jeu de données."
+        }
+      },
+      "Provisional": {
+        "name": {
+          "en": "Provisional",
+          "fr": null
+        },
+        "description": {
+          "en": "ResultValue undergone some but not all QA/QC protocols described in the dataset metadata. Some aspect of the observation may be subject to change. ",
+          "fr": "Result/Value qui a fait l’objet de certains protocoles d’AQ/CQ décrit dans les métadonnées du jeu de données. Certains aspects de l'observation pourraient être modifiés."
+        }
       }
     }
   }

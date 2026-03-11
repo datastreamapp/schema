@@ -4,8 +4,8 @@
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Type of sampling activity. Distinguishes between measurements recorded at the sampling site (i.e. in-situ field measurements; start with \"Field Msr/Obs\"), samples sent for laboratory analysis (start with \"Sample\"),  and samples that are part of QA/QC protocols (e.g. duplicates, blanks; start with \"Quality Control\")",
+    "fr": "Type d’activité d’échantillonnage. Fait une distinction entre les mesures enregistrées au site d’échantillonnage ( c’est-à-dire les mesures in situ sur le terrain ; commence par « Field Msr/Obs »), les échantillons envoyés au laboratoire pour analyse (commence par « Échantillon »), et les échantillons qui font partie des protocoles d’AQ/CQ (par exemple les doubles ou les blancs;  commence par « Contrôle de la qualité »)"
   },
   "values": {
     "Field Msr/Obs": {
@@ -14,8 +14,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Discrete measurements collected by observations or using equipment other than portable loggers (e.g. YSI) in the field. \r\n\r\nFor discrete measurements taken with a portable logger, use \"Field Msr/Obs-Portable Data Logger\", and for high-frequency continuous time-series data, see Continuous time-series data guidance on DataStream's Learning Centre",
+        "fr": "Mesures discrètes prélevées par des observations ou à l’aide d’équipements autres que des enregistreurs portables (par exemple, YSI) sur le terrain. \r\n\r\nPour des mesures discrètes prélevées à l’aide d’un enregistreur portable, utiliser « Field Msr/Obs-Portable Data Logger », et pour les données de séries temporelles continues à haute fréquence, voir Guide sur les données de séries temporelles continues dans le Centre d'apprentissage de DataStream."
       }
     },
     "Field Msr/Obs-Continuous Time Series": {
@@ -24,8 +24,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Continuous data collected in the field using an automated data logging device that continuously records a sequence of data values at repeating intervals.",
+        "fr": "Données continues collectées sur le terrain à l’aide d’un dispositif d’enregistrement de données automatisé qui enregistre en continu une séquence de valeurs de données à des intervalles répétitifs."
       }
     },
     "Field Msr/Obs-Portable Data Logger": {
@@ -34,8 +34,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Discrete measurements collected by portable loggers (e.g. YSI) in the field. \r\n\r\nNot for use with high-frequency continuous time-series data. For more information, see Continuous time-series data guidance on DataStream's Learning Centre",
+        "fr": "Mesures discrètes prélevées par des enregistreurs portables (par exemple, YSI) sur le terrain. \r\n\r\nNe pas utiliser avec des données de séries temporelles continues à haute fréquence. Pour plus d’information, voir Guide sur les données de séries temporelles continues dans le Centre d'apprentissage de DataStream"
       }
     },
     "Quality Control Alternative Measurement Sensitivity": {
@@ -44,8 +44,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A repeated measurement of the same field (also a lab where detection limits do not apply) sample collected to control sensitivity typically for a specific instrument in order calculate the alternative measurement sensitivity (AMS). AMS is the standard deviation of 7 measurements of a sample (with a signal in the quantitative range) times the two-sided critical t-value for 99% confidence (3.708)",
+        "fr": "Une mesure répétée du même échantillon de terrain (ou dans un laboratoire où les limites de détection ne s'appliquent pas) collectée pour contrôler la sensibilité, généralement pour un instrument spécifique, afin de calculer la sensibilité alternative de mesure (AMS). L'AMS est l'écart type de 7 mesures d'un échantillon (avec un signal dans la gamme quantitative) multiplié par la valeur t critique bilatérale pour une confiance de 99 % (3,708)."
       }
     },
     "Quality Control Alternative Measurement Sensitivity Plus": {
@@ -54,8 +54,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A repeated measurement of different field samples collected to control sensitivity typically for a specific instrument/sensor in order calculate the alternative measurement sensitivity (AMS+).  AMS+ is defined as the standard deviation of 7 measurements of samples collected very closely in time and space times the two-sided critical t-value for 99% confidence.",
+        "fr": "Une mesure répétée de différents échantillons de terrain collectés pour contrôler la sensibilité, généralement pour un instrument/capteur spécifique, afin de calculer la sensibilité alternative de mesure  (AMS+).  L'AMS+ est définie comme l'écart type de 7 mesures d'échantillons collectés très près dans le temps et l'espace, multiplié par la valeur t critique bilatérale pour une confiance de 99 %."
       }
     },
     "Quality Control Field Msr/Obs Post-Calibration": {
@@ -84,8 +84,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A field measurement or observation taken to assess the reproducity of the sampling technique or analytical method.",
+        "fr": "Une mesure ou une observation sur le terrain effectuée pour évaluer la reproductibilité de la technique d'échantillonnage ou de la méthode d'analyse."
       }
     },
     "Quality Control Field Replicate Portable Data Logger": {
@@ -94,8 +94,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A measurement taken to verify the quality of data taken by a data logger. For discrete measurements collected by portable loggers (e.g. YSI) in the field. \r\n\r\nNot for use with high-frequency continuous time-series data. For more information, see Continuous data on DataStream on DataStream's Learning Centre",
+        "fr": "Une mesure prise pour vérifier la qualité des données prélevées à l’aide d’un enregistreur de données. Pour des mesures discrètes prélevées par des enregistreurs portables (par exemple, YSI) sur le terrain. \r\n\r\nNe pas utiliser avec des données de séries temporelles continues à haute fréquence. Pour plus d’information, voir Guide sur les données de séries temporelles continues dans le Centre d'apprentissage de DataStream."
       }
     },
     "Quality Control Field Sample Equipment Rinsate Blank": {
@@ -104,8 +104,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample of analyte-free media that has been used to rinse the sampling equipment. It is collected after completion of decontamination and prior to sampling. This blank is useful in documenting adequate decontamination of sampling equipment.",
+        "fr": "Un échantillon sans analyte qui a été utilisé pour rincer l'équipement d'échantillonnage. Il est prélevé après la fin de la décontamination et avant l'échantillonnage. Ce blanc est utile pour documenter la décontamination adéquate de l'équipement d'échantillonnage."
       }
     },
     "Quality Control Sample-Blind Duplicate": {
@@ -114,8 +114,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A duplicate sample, or identical samples (collected from same source and same time, and any other controlled variables) submitted to the laboratory by an identification scheme so that the laboratory does not know the samples are identical. The purpose of blind duplicates is to test for laboratory bias.",
+        "fr": "Un double de l’échantillon ou des échantillons identiques (prélevés à partir de la même source et au même moment, et toute autre variable contrôlée) soumis au laboratoire selon un schéma d’identification de sorte que le laboratoire ne sache pas qu’il s’agit d’échantillons identiques. L'objectif des doubles anonymes est de tester le biais du laboratoire."
       }
     },
     "Quality Control Sample-Field Blank": {
@@ -124,8 +124,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample of analyte free water poured into a sample container in the field, preserved and shipped to the laboratory with field samples. The purpose of a field blank is to assess contamination from field conditions during sampling.",
+        "fr": "Un échantillon d'eau sans analyte versé dans un récipient d'échantillonnage sur le terrain, conservé et expédié au laboratoire avec les échantillons de terrain. Le but d'un blanc de terrain est d'évaluer la contamination due aux conditions de terrain pendant l'échantillonnage."
       }
     },
     "Quality Control Sample-Field Replicate": {
@@ -134,8 +134,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A duplicate or identical sample (collected from same source and same time, and any other controlled variables) taken to  obtain precision, and assess the reproducity of the sampling technique or analytical method.",
+        "fr": "Un double de l’échantillon ou un échantillon identique (prélevés à partir de la même source et au même moment, et toute autre variable contrôlée) prélevés pour obtenir la précision et évaluer la reproductibilité de la technique d'échantillonnage ou de la méthode d'analyse."
       }
     },
     "Quality Control Sample-Field Spike": {
@@ -144,8 +144,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A known mass of target analyte added to a blank sample or subsample in the field. The pupose of a field spike is to show that sample preperation procedures do not contribute to loss of analytes.",
+        "fr": "Une quantité connue d'analyte cible ajoutée à un échantillon ou sous-échantillon blanc sur le terrain. Le but d'un ajout dosé sur le terrain est de montrer que les procédures de préparation des échantillons ne contribuent pas à la perte d'analytes."
       }
     },
     "Quality Control Sample-Field Surrogate Spike": {
@@ -154,8 +154,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A pure substance with properties that mimic the analyte of interest is called surrogate. Target Surrogate is added in sample to determine the recovery efficiency for quality control purposes.",
+        "fr": "Une substance pure dont les propriétés imitent l'analyte d'intérêt est appelée analogue ou étalon interne. L'analogue cible est ajouté à l'échantillon pour déterminer l'efficacité de la récupération à des fins de contrôle de la qualité."
       }
     },
     "Quality Control Sample-Integrated Time Series-Field Blank": {
@@ -204,8 +204,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Split samples are obtained by dividing one sample into two or more identical sub-samples, and analyzed at different laboratories.  Interlaboraory splits are used to compare the accuracy and precision of the laboratories doing the analyses.",
+        "fr": "Les échantillons fractionnés sont obtenus en divisant un échantillon en deux ou plusieurs sous-échantillons identiques, et analysés dans différents laboratoires.  Les fractionnements interlaboratoires sont utilisés pour comparer l'exactitude et la précision des laboratoires qui effectuent les analyses."
       }
     },
     "Quality Control Sample-Lab Blank": {
@@ -214,8 +214,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Lab Blanks are  analyte-free matrices prepared in the lab and analyzed with samples to identify potential lab sources of contamination.",
+        "fr": "Les blancs de laboratoire sont des matrices exemptes d'analyte préparées en laboratoire et analysées avec des échantillons pour identifier les sources potentielles de contamination du laboratoire."
       }
     },
     "Quality Control Sample-Lab Duplicate": {
@@ -224,8 +224,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "One of two samples taken from the same population and carried through all steps of the sampling and analytical procedures in an identical manner. Duplicate samples are used to assess variance of the total method including sampling and analysis.",
+        "fr": "L'un des deux échantillons prélevés dans la même population et soumis à toutes les étapes des procédures d'échantillonnage et d'analyse de manière identique. Les échantillons doubles sont utilisés pour évaluer la variance de la méthode totale, y compris l'échantillonnage et l'analyse."
       }
     },
     "Quality Control Sample-Lab Duplicate 2": {
@@ -244,8 +244,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "An aliquot of an environmental sample to which known quantities of analytes are added in the laboratory. The matrix spike is analyzed in an identical manner as the sample.",
+        "fr": "Une partie aliquote d'un échantillon environnemental à laquelle des quantités connues d'analytes sont ajoutées en laboratoire. La matrice dosée est analysée de manière identique à l'échantillon."
       }
     },
     "Quality Control Sample-Lab Re-Analysis": {
@@ -254,8 +254,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample that is analyzed more than once.",
+        "fr": "Un échantillon qui est analysé plus d'une fois."
       }
     },
     "Quality Control Sample-Lab Spike": {
@@ -264,8 +264,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A known mass of target analyte added to a blank sample or subsample in the laboratory. The purpose of a laboratory spike is to show that sample preparation procedures do not contribute to loss of analytes.",
+        "fr": "Une quantité connue d'analyte cible ajoutée à un échantillon ou un sous-échantillon blanc en laboratoire. Le but d'un ajout dosé en laboratoire est de montrer que les procédures de préparation des échantillons ne contribuent pas à la perte d'analytes."
       }
     },
     "Quality Control Sample-Lab Spike Target": {
@@ -284,8 +284,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample split in the laboratory from half of a mother or parent sample.",
+        "fr": "Un échantillon divisé en laboratoire à partir de la moitié d'un échantillon principal."
       }
     },
     "Quality Control Sample-Lab Surrogate Control Standard": {
@@ -294,8 +294,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A surrogate standard, where a pure compound is added to a sample in the lab before processing so that the efficiency of the method can be determined.",
+        "fr": "Une norme de substitution, où un composé pur est ajouté à un échantillon dans le laboratoire avant le traitement afin de pouvoir déterminer l’efficacité de la méthode."
       }
     },
     "Quality Control Sample-Lab Surrogate Control Standard Duplicate": {
@@ -304,8 +304,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A duplicate of a surrogate standard, where a pure compound is added to a sample in the lab before processing so that the efficiency of the method can be determined. The purpose of duplicates is to test for laboratory bias and are used to assess variance of the total method including sampling and analysis.",
+        "fr": "Un double d’une norme de substitution, où un composé pur est ajouté à un échantillon dans le laboratoire avant le traitement afin de pouvoir déterminer l’efficacité de la méthode. Les doubles ont pour but de tester la partialité du laboratoire et sont utilisés pour évaluer la variance de la méthode globale, y compris l’échantillonnage et l’analyse."
       }
     },
     "Quality Control Sample-Measurement Precision Sample": {
@@ -314,8 +314,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample (i.e., test sample or control sample/standard) used either singly or in replicate, as appropriate, to monitor the precision of method.",
+        "fr": "Un échantillon (c.-à-d. échantillon d'essai ou échantillon de contrôle/standard) utilisé seul ou en réplique, selon le cas, pour contrôler la précision de la méthode."
       }
     },
     "Quality Control Sample-Other": {
@@ -324,8 +324,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample having undergone quality control measures of any other process not included in the ActivityType list. Details should be specified in dataset metadata.",
+        "fr": "Échantillon ayant fait l’objet de mesures de contrôle de la qualité pour tout autre processus ne figurant pas dans la liste des types d’activité. Les détails doivent être précisés dans les métadonnées du jeu de données."
       }
     },
     "Quality Control Sample-Post-preservative Blank": {
@@ -334,8 +334,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The analyte-free media which has undergone the same preserving process as the samples. This Blank is tested to check the quality of the preservation process.",
+        "fr": "Échantillon blanc sans analyte qui a subi le même processus de conservation que les échantillons. Ce blanc est testé pour vérifier la qualité du processus de conservation."
       }
     },
     "Quality Control Sample-Pre-preservative Blank": {
@@ -344,8 +344,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The analyte-free media tested before undergoing the same preserving process as the samples. This Blank is tested to check the quality of preservation process.",
+        "fr": "L'échantillon sans analyte testé avant de subir le même processus de conservation que les échantillons. Ce blanc est testé pour vérifier la qualité du processus de conservation."
       }
     },
     "Quality Control Sample-Reagent Blank": {
@@ -354,8 +354,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Reagent Blank is analyte free water analyzed with samples, one per sample test. The reagent blank is analyzed to control the quality.",
+        "fr": "Le blanc de réactif est un échantillon d'eau sans analyte qui est analysé avec les échantillons, un par test. Le blanc de réactif est analysé pour contrôler la qualité."
       }
     },
     "Quality Control Sample-Reference Sample": {
@@ -364,8 +364,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample (i.e., test sample or control sample/standard) with known analyte concentration used either singly or in replicate, as appropriate, to monitor method performance characteristics.",
+        "fr": "Un échantillon (c.-à-d. un échantillon d'essai ou un échantillon de contrôle/standard) avec une concentration connue de l'analyte, utilisé soit individuellement soit en réplique, selon le cas, pour contrôler les caractéristiques de performance de la méthode."
       }
     },
     "Quality Control Sample-Trip Blank": {
@@ -374,8 +374,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Trip blanks are test samples of analyte-free media taken from the laboratory to the sampling site and returned to the laboratory unopened. They are used to measure cross-contamination from the container and preservative during transport, field handling, and storage. Usually, at least one trip blank should be prepared for each sample type per trip.",
+        "fr": "Les blancs de voyage sont des échantillons d'essai exempts d'analytes, qui sont transportés du laboratoire au site d'échantillonnage et retournés au laboratoire sans être ouverts. Ils sont utilisés pour mesurer la contamination croisée provenant du contenant et du conservateur pendant le transport, la manipulation sur le terrain et le stockage. En général, au moins un blanc de voyage doit être préparé pour chaque type d'échantillon par voyage."
       }
     },
     "Quality Control-Calibration Check": {
@@ -434,8 +434,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "The process to control the quality of measurement with absence of analyte or habitat is negative control.",
+        "fr": "Le processus permettant de contrôler la qualité de la mesure en l'absence d'analyte."
       }
     },
     "Sample-Composite With Parents": {
@@ -444,8 +444,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample split in the laboratory from half of a mother or parent sample.",
+        "fr": "Un échantillon divisé en laboratoire à partir de la moitié d'un échantillon principal."
       }
     },
     "Sample-Composite Without Parents": {
@@ -454,8 +454,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Describes a sample which is a composite of either several discrete sampling events not described elsewhere, or is a sample collected by a continuous process over some time period. No database record exists as its parent.",
+        "fr": "Décrit un échantillon qui est un composite de plusieurs événements d'échantillonnage discrets non décrits ailleurs, ou un échantillon collecté par un processus continu sur une certaine période de temps. Aucun enregistrement n'existe comme échantillon principal dans la base de données."
       }
     },
     "Sample-Depletion Replicate": {
@@ -464,8 +464,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Lab Blanks are  analyte-free matrices prepared in the lab and analyzed with samples to identify potential lab sources of contamination.",
+        "fr": "Les blancs de laboratoire sont des matrices exemptes d'analyte préparées en laboratoire et analysées avec des échantillons pour identifier les sources potentielles de contamination du laboratoire."
       }
     },
     "Sample-Field Split": {
@@ -474,8 +474,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample created in the field from half of a mother or parent sample.",
+        "fr": "Un échantillon créé sur le terrain à partir de la moitié d'un échantillon principal."
       }
     },
     "Sample-Field Subsample": {
@@ -484,8 +484,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample created in the field from a portion of a mother or parent sample.",
+        "fr": "Echantillon créé sur le terrain à partir d'une partie de l'échantillon principal."
       }
     },
     "Sample-Integrated Cross-Sectional Profile": {
@@ -494,8 +494,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A discrete/integrated sample, usually derived from a continuous record, representing cross-section of the stream.",
+        "fr": "Un échantillon discret/intégré, généralement dérivé d'un enregistrement continu, représentant une section transversale du cours d'eau."
       }
     },
     "Sample-Integrated Flow Proportioned": {
@@ -504,8 +504,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A sample integrated over an interval or space within which changes in flow are used to alter the proportion of the sampled medium contributing to the integrated sample.",
+        "fr": "Un échantillon intégré sur un intervalle ou un espace dans lequel des changements de débit sont utilisés pour modifier la proportion du milieu échantillonné contribuant à l'échantillon intégré."
       }
     },
     "Sample-Integrated Horizontal and Vertical Composite Profile": {
@@ -514,8 +514,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A discrete/integrated sample, usually derived from a continuous record, representing some portion or segment of a horizontal and vertical track within the study area.",
+        "fr": "Un échantillon discret/intégré, généralement dérivé d'un enregistrement continu, représentant une partie ou un segment d'une trajectoire horizontale et verticale dans la zone d'étude."
       }
     },
     "Sample-Integrated Horizontal Profile": {
@@ -524,8 +524,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A discrete/integrated sample, usually derived from a continuous record, representing some portion or segment of a horizontal track within the study area.",
+        "fr": "Un échantillon discret/intégré, généralement dérivé d'un enregistrement continu, représentant une partie ou un segment d'une trajectoire horizontale dans la zone d'étude."
       }
     },
     "Sample-Integrated Time Series": {
@@ -534,8 +534,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A discrete/integrated sample, representing some portion or segment of elapsed time within the overall activity duration or sample period.",
+        "fr": "Un échantillon discret/intégré, représentant une partie ou un segment du temps écoulé pendant la durée globale de l'activité ou la période d'échantillonnage."
       }
     },
     "Sample-Integrated Vertical Profile": {
@@ -544,8 +544,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A discrete/integrated sample, usually derived from a continuous record, representing some portion or segment of a vertical track within the study area.",
+        "fr": "Un échantillon discret/intégré, généralement dérivé d'un enregistrement continu, représentant une partie ou un segment d'un profil vertical dans la zone d'étude."
       }
     },
     "Sample-Negative Control": {
@@ -554,8 +554,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A controlled sample with absence of analyte.",
+        "fr": "Un échantillon témoin avec absence d'analyte."
       }
     },
     "Sample-Other": {
@@ -564,8 +564,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "This category contains a sample collected following a process which is not included in this list.",
+        "fr": "Cette catégorie contient un échantillon collecté à la suite d'un processus qui n'est pas inclus dans cette liste."
       }
     },
     "Sample-Positive Control": {
@@ -574,8 +574,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "A controlled sample with presence of analyte.",
+        "fr": "Un échantillon témoin avec présence d'analyte."
       }
     },
     "Sample-Routine": {
@@ -584,8 +584,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Use for lab analyzed data. A sample gathered using straightforward grab procedures for purposes of a general evaluation of the environment at the site.",
+        "fr": "Utiliser pour les données analysées en laboratoire. Échantillon recueilli à l'aide de procédures simples de prélèvement dans le but d'une évaluation générale de l'environnement du site."
       }
     },
     "Unspecified": {

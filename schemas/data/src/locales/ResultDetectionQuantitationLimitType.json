@@ -4,7 +4,7 @@
     "fr": null
   },
   "description": {
-    "en": "Text describing the type of detection or quantitation limit used in the analysis of a characteristic. Required if Result Detection Condition is `Above Detection/Quantification Limit` or `Below Detection/Quantification Limit'. Not to be included if the Result Detection Condition is 'Not Detected' or 'Detected Not Quantified'.",
+    "en": "",
     "fr": "Description du  type de limite de détection ou de quantification utilisé lors de l'analyse d'une caractéristique. Obligatoire si la condition de détection du résultat est \"Above Detection/Quantification Limit\" (supérieure à la limite de détection/quantification) ou \"Below Detection/Quantification Limit\" (inférieure à la limite de détection/quantification). Ne doit pas être inclus si la condition de détection du résultat est \"Not Detected\" (non détecté) ou \"Detected Not Quantified\" (détecté non quantifié)."
   },
   "values": {
@@ -14,8 +14,8 @@
         "fr": null
       },
       "description": {
-        "en": "Blank-adjusted method detect limit.",
-        "fr": "Limite de détection de la méthode ajustée selon un échantillon blanc."
+        "en": "The MDL adjusted to reflect the 99% confidence that the analyte concentration is greater than contamination/noise.",
+        "fr": "La MDL est rajustée pour tenir compte de la certitude à 99 % que la concentration de l’analyte est supérieure à la contamination/au bruit."
       }
     },
     "Method Detection Level": {
@@ -24,8 +24,8 @@
         "fr": null
       },
       "description": {
-        "en": "Synonymous with Method Detection Limit (MDL), is the minimum concentration of a substance that can be measured and reported with a 99% confidence that the analyte concentration is greater than zero.",
-        "fr": "Synonyme de limite de détection de la méthode (LDM), c'est la concentration minimale d'une substance qui peut être mesurée et rapportée avec une confiance de 99 % que la concentration de l'analyte est supérieure à zéro."
+        "en": "Synonymous with Method Detection Limit (MDL). The minimum concentration of a substance that can be measured and reported with a 99% confidence that the analyte concentration is greater than zero.",
+        "fr": "Synonyme de Method Detection Limit (MDL). Concentration minimale d’une substance qui peut être mesurée et signalée avec certitude à 99 % que la concentration de l’analyte est supérieure à zéro."
       }
     },
     "Reporting Limit": {
@@ -34,8 +34,8 @@
         "fr": "Limite de déclaration"
       },
       "description": {
-        "en": "Reporting Limit.",
-        "fr": "Limite de déclaration."
+        "en": "Limit set by commercial analytical laboratories at concentrations above MDL. Reporting limits may or may not be based on statistically determined detection limits or limits of quantitation, but allow laboratories to handle variability associated with analyzing samples from a wide variety of sources. ",
+        "fr": "Limite fixée par les laboratoires d'analyse commerciaux pour les concentrations supérieures à la MDL. Les limites de signalement peuvent ou non être basées sur des limites de détection ou des limites de quantification statistiquement déterminées, mais elles permettent aux laboratoires de gérer la variabilité associée à l’analyse d’échantillons provenant d’une grande variété de sources. "
       }
     },
     "Sample Detection Limit": {

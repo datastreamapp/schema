@@ -18,6 +18,16 @@
         "fr": null
       }
     },
+    "(R)-Dichlorprop": {
+      "name": {
+        "en": "(R)-Dichlorprop",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid": {
       "name": {
         "en": ".alpha.-Amino-2,3-dihydro-5-methyl-3-oxo-4-isoxazolepropanoic acid",
@@ -118,16 +128,6 @@
         "fr": null
       }
     },
-    "(R)-Dichlorprop": {
-      "name": {
-        "en": "(R)-Dichlorprop",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "1-(3,4-dichlorophenyl)-3-methyl urea": {
       "name": {
         "en": "1-(3,4-dichlorophenyl)-3-methyl urea",
@@ -151,16 +151,6 @@
     "1-Butanol": {
       "name": {
         "en": "1-Butanol",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "1H,1H, 2H, 2H-Perfluorodecane sulfonic acid": {
-      "name": {
-        "en": "1H,1H, 2H, 2H-Perfluorodecane sulfonic acid",
         "fr": null
       },
       "description": {
@@ -498,9 +488,239 @@
         "fr": null
       }
     },
+    "1,2,3,4,6,7,8-Heptachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "1,2,3,4,6,7,8-Heptachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,6,7,8-Heptachlorodibenzo-p-dioxin-C13": {
+      "name": {
+        "en": "1,2,3,4,6,7,8-Heptachlorodibenzo-p-dioxin-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,6,7,8-Heptachlorodibenzofuran": {
+      "name": {
+        "en": "1,2,3,4,6,7,8-Heptachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,6,7,8-Heptachlorodibenzofuran-C13": {
+      "name": {
+        "en": "1,2,3,4,6,7,8-Heptachlorodibenzofuran-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,6,7,8,9-Octachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "1,2,3,4,6,7,8,9-Octachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,6,7,8,9-Octachlorodibenzofuran": {
+      "name": {
+        "en": "1,2,3,4,6,7,8,9-Octachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin-C13": {
+      "name": {
+        "en": "1,2,3,4,7,8-Hexachlorodibenzo-p-dioxin-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,7,8-Hexachlorodibenzofuran": {
+      "name": {
+        "en": "1,2,3,4,7,8-Hexachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,7,8-Hexachlorodibenzofuran-C13": {
+      "name": {
+        "en": "1,2,3,4,7,8-Hexachlorodibenzofuran-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,7,8,9-Heptachlorodibenzofuran": {
+      "name": {
+        "en": "1,2,3,4,7,8,9-Heptachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,4,7,8,9-Heptachlorodibenzofuran-13C12": {
+      "name": {
+        "en": "1,2,3,4,7,8,9-Heptachlorodibenzofuran-13C12",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "1,2,3,5-Tetrachlorobenzene": {
       "name": {
         "en": "1,2,3,5-Tetrachlorobenzene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin-C13": {
+      "name": {
+        "en": "1,2,3,6,7,8-Hexachlorodibenzo-p-dioxin-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,6,7,8-Hexachlorodibenzofuran": {
+      "name": {
+        "en": "1,2,3,6,7,8-Hexachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,6,7,8-Hexachlorodibenzofuran-C13": {
+      "name": {
+        "en": "1,2,3,6,7,8-Hexachlorodibenzofuran-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,7,8-Pentachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "1,2,3,7,8-Pentachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,7,8-Pentachlorodibenzo-p-dioxin-C13": {
+      "name": {
+        "en": "1,2,3,7,8-Pentachlorodibenzo-p-dioxin-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,7,8-Pentachlorodibenzofuran": {
+      "name": {
+        "en": "1,2,3,7,8-Pentachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,7,8-Pentachlorodibenzofuran-C13": {
+      "name": {
+        "en": "1,2,3,7,8-Pentachlorodibenzofuran-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,7,8,9-Hexachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "1,2,3,7,8,9-Hexachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,7,8,9-Hexachlorodibenzofuran": {
+      "name": {
+        "en": "1,2,3,7,8,9-Hexachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,2,3,7,8,9-Hexachlorodibenzofuran-C13": {
+      "name": {
+        "en": "1,2,3,7,8,9-Hexachlorodibenzofuran-C13",
         "fr": null
       },
       "description": {
@@ -541,6 +761,16 @@
     "1,2,6-Trimethylphenanthrene": {
       "name": {
         "en": "1,2,6-Trimethylphenanthrene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,3-Butadiene": {
+      "name": {
+        "en": "1,3-Butadiene",
         "fr": null
       },
       "description": {
@@ -708,6 +938,26 @@
         "fr": null
       }
     },
+    "17.alpha.-Estradiol": {
+      "name": {
+        "en": "17.alpha.-Estradiol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1H,1H, 2H, 2H-Perfluorodecane sulfonic acid": {
+      "name": {
+        "en": "1H,1H, 2H, 2H-Perfluorodecane sulfonic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "1rs Cis-Permethrin": {
       "name": {
         "en": "1rs Cis-Permethrin",
@@ -818,9 +1068,9 @@
         "fr": null
       }
     },
-    "2H-Perfluoro-2-dodecenoic acid": {
+    "2-Hexanone": {
       "name": {
-        "en": "2H-Perfluoro-2-dodecenoic acid",
+        "en": "2-Hexanone",
         "fr": null
       },
       "description": {
@@ -908,19 +1158,9 @@
         "fr": null
       }
     },
-    "2,2-Dichloropropane": {
+    "2-Pentanol": {
       "name": {
-        "en": "2,2-Dichloropropane",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene": {
-      "name": {
-        "en": "2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene",
+        "en": "2-Pentanol",
         "fr": null
       },
       "description": {
@@ -981,6 +1221,26 @@
     "2,2',4,4'-Tetrachlorobiphenyl": {
       "name": {
         "en": "2,2',4,4'-Tetrachlorobiphenyl",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,2-Dichloropropane": {
+      "name": {
+        "en": "2,2-Dichloropropane",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene": {
+      "name": {
+        "en": "2,2,4,5,6,7,8,8-Octachloro-2,3,3a,4,7,7a-hexahydro-4,7-methano-1H-indene",
         "fr": null
       },
       "description": {
@@ -1058,6 +1318,46 @@
         "fr": null
       }
     },
+    "2,3,4,6,7,8-Hexachlorodibenzofuran": {
+      "name": {
+        "en": "2,3,4,6,7,8-Hexachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,3,4,6,7,8-Hexachlorodibenzofuran-C13": {
+      "name": {
+        "en": "2,3,4,6,7,8-Hexachlorodibenzofuran-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,3,4,7,8-Pentachlorodibenzofuran": {
+      "name": {
+        "en": "2,3,4,7,8-Pentachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,3,4,7,8-Pentachlorodibenzofuran-C13": {
+      "name": {
+        "en": "2,3,4,7,8-Pentachlorodibenzofuran-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "2,3,5-Trichlorophenol": {
       "name": {
         "en": "2,3,5-Trichlorophenol",
@@ -1108,6 +1408,46 @@
         "fr": null
       }
     },
+    "2,3,7,8-Tetrachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "2,3,7,8-Tetrachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,3,7,8-Tetrachlorodibenzo-p-dioxin-C13": {
+      "name": {
+        "en": "2,3,7,8-Tetrachlorodibenzo-p-dioxin-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,3,7,8-Tetrachlorodibenzofuran": {
+      "name": {
+        "en": "2,3,7,8-Tetrachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2,3,7,8-Tetrachlorodibenzofuran-C13": {
+      "name": {
+        "en": "2,3,7,8-Tetrachlorodibenzofuran-C13",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "2,4- & 2,5-Dichlorophenol": {
       "name": {
         "en": "2,4- & 2,5-Dichlorophenol",
@@ -1148,9 +1488,9 @@
         "fr": null
       }
     },
-    "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol": {
+    "2,4-Dichlorophenol-d3": {
       "name": {
-        "en": "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol",
+        "en": "2,4-Dichlorophenol-d3",
         "fr": null
       },
       "description": {
@@ -1158,9 +1498,9 @@
         "fr": null
       }
     },
-    "2,4-Dichlorophenol-d3": {
+    "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol": {
       "name": {
-        "en": "2,4-Dichlorophenol-d3",
+        "en": "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol",
         "fr": null
       },
       "description": {
@@ -1358,9 +1698,9 @@
         "fr": null
       }
     },
-    "3-(Perfluorobutyl)propanoic acid": {
+    "2H-Perfluoro-2-dodecenoic acid": {
       "name": {
-        "en": "3-(Perfluorobutyl)propanoic acid",
+        "en": "2H-Perfluoro-2-dodecenoic acid",
         "fr": null
       },
       "description": {
@@ -1368,9 +1708,9 @@
         "fr": null
       }
     },
-    "3:3 Fluorotelomer carboxylate, ion(1-)": {
+    "3-(Perfluorobutyl)propanoic acid": {
       "name": {
-        "en": "3:3 Fluorotelomer carboxylate, ion(1-)",
+        "en": "3-(Perfluorobutyl)propanoic acid",
         "fr": null
       },
       "description": {
@@ -1511,6 +1851,16 @@
     "3,6-Dimethylphenanthrene": {
       "name": {
         "en": "3,6-Dimethylphenanthrene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "3:3 Fluorotelomer carboxylate, ion(1-)": {
+      "name": {
+        "en": "3:3 Fluorotelomer carboxylate, ion(1-)",
         "fr": null
       },
       "description": {
@@ -1918,6 +2268,36 @@
         "fr": null
       }
     },
+    "Acetic acid": {
+      "name": {
+        "en": "Acetic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Acetone": {
+      "name": {
+        "en": "Acetone",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Acetonitrile": {
+      "name": {
+        "en": "Acetonitrile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Acidity": {
       "name": {
         "en": "Acidity",
@@ -2088,6 +2468,16 @@
         "fr": null
       }
     },
+    "Allyl chloride": {
+      "name": {
+        "en": "Allyl chloride",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Aluminum": {
       "name": {
         "en": "Aluminum",
@@ -2158,20 +2548,20 @@
         "fr": null
       }
     },
-    "Ammonia, un-ionized": {
+    "Ammonia and ammonium": {
       "name": {
-        "en": "Ammonia, un-ionized",
-        "fr": "Ammoniac non ionisé"
+        "en": "Ammonia and ammonium",
+        "fr": "Ammoniac et ammonium"
       },
       "description": {
         "en": null,
         "fr": null
       }
     },
-    "Ammonia and ammonium": {
+    "Ammonia, un-ionized": {
       "name": {
-        "en": "Ammonia and ammonium",
-        "fr": "Ammoniac et ammonium"
+        "en": "Ammonia, un-ionized",
+        "fr": "Ammoniac non ionisé"
       },
       "description": {
         "en": null,
@@ -2418,6 +2808,16 @@
         "fr": null
       }
     },
+    "Asbestos": {
+      "name": {
+        "en": "Asbestos",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Aspartame": {
       "name": {
         "en": "Aspartame",
@@ -2458,9 +2858,9 @@
         "fr": null
       }
     },
-    "Atrazine + N-Dealkylated Metabolites": {
+    "Atrazine-d5 (ethyl-d5)": {
       "name": {
-        "en": "Atrazine + N-Dealkylated Metabolites",
+        "en": "Atrazine-d5 (ethyl-d5)",
         "fr": null
       },
       "description": {
@@ -2468,9 +2868,9 @@
         "fr": null
       }
     },
-    "Atrazine-d5 (ethyl-d5)": {
+    "Atrazine + N-Dealkylated Metabolites": {
       "name": {
-        "en": "Atrazine-d5 (ethyl-d5)",
+        "en": "Atrazine + N-Dealkylated Metabolites",
         "fr": null
       },
       "description": {
@@ -2551,66 +2951,6 @@
     "Barometric pressure": {
       "name": {
         "en": "Barometric pressure",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "BDE 100L": {
-      "name": {
-        "en": "BDE 100L",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "BDE 153L": {
-      "name": {
-        "en": "BDE 153L",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "BDE 183L": {
-      "name": {
-        "en": "BDE 183L",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "BDE 209L": {
-      "name": {
-        "en": "BDE 209L",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "BDE 28L": {
-      "name": {
-        "en": "BDE 28L",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "BDE 47L": {
-      "name": {
-        "en": "BDE 47L",
         "fr": null
       },
       "description": {
@@ -2828,6 +3168,66 @@
         "fr": null
       }
     },
+    "BDE 100L": {
+      "name": {
+        "en": "BDE 100L",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "BDE 153L": {
+      "name": {
+        "en": "BDE 153L",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "BDE 183L": {
+      "name": {
+        "en": "BDE 183L",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "BDE 209L": {
+      "name": {
+        "en": "BDE 209L",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "BDE 28L": {
+      "name": {
+        "en": "BDE 28L",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "BDE 47L": {
+      "name": {
+        "en": "BDE 47L",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Bendiocarb": {
       "name": {
         "en": "Bendiocarb",
@@ -3008,9 +3408,9 @@
         "fr": null
       }
     },
-    "Benzo[a]pyrene Total Potency Equivalents (B[a]P TPE)": {
+    "Benzo[a]pyrene-d12": {
       "name": {
-        "en": "Benzo[a]pyrene Total Potency Equivalents (B[a]P TPE)",
+        "en": "Benzo[a]pyrene-d12",
         "fr": null
       },
       "description": {
@@ -3018,9 +3418,9 @@
         "fr": null
       }
     },
-    "Benzo[a]pyrene-d12": {
+    "Benzo[a]pyrene Total Potency Equivalents (B[a]P TPE)": {
       "name": {
-        "en": "Benzo[a]pyrene-d12",
+        "en": "Benzo[a]pyrene Total Potency Equivalents (B[a]P TPE)",
         "fr": null
       },
       "description": {
@@ -3338,6 +3738,16 @@
         "fr": null
       }
     },
+    "Boron-10": {
+      "name": {
+        "en": "Boron-10",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Boron-11": {
       "name": {
         "en": "Boron-11",
@@ -3468,6 +3878,16 @@
         "fr": null
       }
     },
+    "Bromopropylate": {
+      "name": {
+        "en": "Bromopropylate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Bromoxynil": {
       "name": {
         "en": "Bromoxynil",
@@ -3558,6 +3978,16 @@
         "fr": null
       }
     },
+    "Butyric acid": {
+      "name": {
+        "en": "Butyric acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "C1-Acenaphthenes": {
       "name": {
         "en": "C1-Acenaphthenes",
@@ -3631,6 +4061,16 @@
     "C10-C16 Hydrocarbons": {
       "name": {
         "en": "C10-C16 Hydrocarbons",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "C16-C21 Hydrocarbons": {
+      "name": {
+        "en": "C16-C21 Hydrocarbons",
         "fr": null
       },
       "description": {
@@ -3731,6 +4171,16 @@
     "C2-Phenanthrenes/anthracenes": {
       "name": {
         "en": "C2-Phenanthrenes/anthracenes",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "C21-C32 Hydrocarbons": {
+      "name": {
+        "en": "C21-C32 Hydrocarbons",
         "fr": null
       },
       "description": {
@@ -3948,9 +4398,9 @@
         "fr": null
       }
     },
-    "Calcium carbonate": {
+    "Calcium-43": {
       "name": {
-        "en": "Calcium carbonate",
+        "en": "Calcium-43",
         "fr": null
       },
       "description": {
@@ -3958,9 +4408,9 @@
         "fr": null
       }
     },
-    "Calcium-43": {
+    "Calcium carbonate": {
       "name": {
-        "en": "Calcium-43",
+        "en": "Calcium carbonate",
         "fr": null
       },
       "description": {
@@ -4028,6 +4478,26 @@
         "fr": null
       }
     },
+    "Carbon-13": {
+      "name": {
+        "en": "Carbon-13",
+        "fr": "Carbone-13"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Carbon-13/Carbon-12 ratio": {
+      "name": {
+        "en": "Carbon-13/Carbon-12 ratio",
+        "fr": "Ratio carbone 13/carbone 12"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Carbon dioxide": {
       "name": {
         "en": "Carbon dioxide",
@@ -4048,30 +4518,20 @@
         "fr": null
       }
     },
+    "Carbon monoxide": {
+      "name": {
+        "en": "Carbon monoxide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Carbon tetrachloride": {
       "name": {
         "en": "Carbon tetrachloride",
         "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Carbon-13": {
-      "name": {
-        "en": "Carbon-13",
-        "fr": "Carbone-13"
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Carbon-13/Carbon-12 ratio": {
-      "name": {
-        "en": "Carbon-13/Carbon-12 ratio",
-        "fr": "Ratio carbone 13/carbone 12"
       },
       "description": {
         "en": null,
@@ -4161,6 +4621,16 @@
     "Catechol": {
       "name": {
         "en": "Catechol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cation/anion ratio": {
+      "name": {
+        "en": "Cation/anion ratio",
         "fr": null
       },
       "description": {
@@ -4371,6 +4841,16 @@
     "Chlorine-35": {
       "name": {
         "en": "Chlorine-35",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Chlorine dioxide": {
+      "name": {
+        "en": "Chlorine dioxide",
         "fr": null
       },
       "description": {
@@ -4628,6 +5108,16 @@
         "fr": null
       }
     },
+    "Cholesterol": {
+      "name": {
+        "en": "Cholesterol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Chromium": {
       "name": {
         "en": "Chromium",
@@ -4688,9 +5178,9 @@
         "fr": null
       }
     },
-    "Chrysene + Triphenylene": {
+    "Chrysene-d12": {
       "name": {
-        "en": "Chrysene + Triphenylene",
+        "en": "Chrysene-d12",
         "fr": null
       },
       "description": {
@@ -4698,9 +5188,9 @@
         "fr": null
       }
     },
-    "Chrysene-d12": {
+    "Chrysene + Triphenylene": {
       "name": {
-        "en": "Chrysene-d12",
+        "en": "Chrysene + Triphenylene",
         "fr": null
       },
       "description": {
@@ -4741,6 +5231,16 @@
     "cis-Chlordane": {
       "name": {
         "en": "cis-Chlordane",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "cis-Cypermethrin": {
+      "name": {
+        "en": "cis-Cypermethrin",
         "fr": null
       },
       "description": {
@@ -4968,16 +5468,6 @@
         "fr": null
       }
     },
-    "Copper 8-quinolinolate": {
-      "name": {
-        "en": "Copper 8-quinolinolate",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "Copper-63": {
       "name": {
         "en": "Copper-63",
@@ -4991,6 +5481,26 @@
     "Copper-65": {
       "name": {
         "en": "Copper-65",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Copper 8-quinolinolate": {
+      "name": {
+        "en": "Copper 8-quinolinolate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Corrosion & scaling control, Ryznar Stability Index": {
+      "name": {
+        "en": "Corrosion & scaling control, Ryznar Stability Index",
         "fr": null
       },
       "description": {
@@ -5168,6 +5678,16 @@
         "fr": null
       }
     },
+    "Day, ice off": {
+      "name": {
+        "en": "Day, ice off",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Day, ice on": {
       "name": {
         "en": "Day, ice on",
@@ -5261,6 +5781,16 @@
     "Dehydroabietic acid": {
       "name": {
         "en": "Dehydroabietic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Delta boron-11/boron-10": {
+      "name": {
+        "en": "Delta boron-11/boron-10",
         "fr": null
       },
       "description": {
@@ -5391,6 +5921,16 @@
     "Desmetryn": {
       "name": {
         "en": "Desmetryn",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Desmosterol": {
+      "name": {
+        "en": "Desmosterol",
         "fr": null
       },
       "description": {
@@ -5838,6 +6378,16 @@
         "fr": null
       }
     },
+    "Dihydrocholesterol": {
+      "name": {
+        "en": "Dihydrocholesterol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Dihydroisopimaric acid": {
       "name": {
         "en": "Dihydroisopimaric acid",
@@ -5921,6 +6471,16 @@
     "Dimethyl phthalate": {
       "name": {
         "en": "Dimethyl phthalate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dimethyl selenoxide": {
+      "name": {
+        "en": "Dimethyl selenoxide",
         "fr": null
       },
       "description": {
@@ -6168,6 +6728,16 @@
         "fr": null
       }
     },
+    "epi-Coprostanol": {
+      "name": {
+        "en": "epi-Coprostanol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "EPTC-d14": {
       "name": {
         "en": "EPTC-d14",
@@ -6368,6 +6938,16 @@
         "fr": null
       }
     },
+    "Extractable hydrocarbons, C8 and up": {
+      "name": {
+        "en": "Extractable hydrocarbons, C8 and up",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Famoxadone": {
       "name": {
         "en": "Famoxadone",
@@ -6408,6 +6988,16 @@
         "fr": null
       }
     },
+    "Fenamiphos": {
+      "name": {
+        "en": "Fenamiphos",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Fenitrothion": {
       "name": {
         "en": "Fenitrothion",
@@ -6421,6 +7011,16 @@
     "Fenitrothion-d6": {
       "name": {
         "en": "Fenitrothion-d6",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fenobucarb": {
+      "name": {
+        "en": "Fenobucarb",
         "fr": null
       },
       "description": {
@@ -6471,6 +7071,16 @@
     "Fenthion": {
       "name": {
         "en": "Fenthion",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fenvalerate": {
+      "name": {
+        "en": "Fenvalerate",
         "fr": null
       },
       "description": {
@@ -7048,6 +7658,26 @@
         "fr": null
       }
     },
+    "Heptachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "Heptachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Heptachlorodibenzofuran": {
+      "name": {
+        "en": "Heptachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Heptafluorobutyric acid": {
       "name": {
         "en": "Heptafluorobutyric acid",
@@ -7111,6 +7741,26 @@
     "Hexachlorocyclopentadiene": {
       "name": {
         "en": "Hexachlorocyclopentadiene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hexachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "Hexachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hexachlorodibenzofuran": {
+      "name": {
+        "en": "Hexachlorodibenzofuran",
         "fr": null
       },
       "description": {
@@ -7388,6 +8038,16 @@
         "fr": null
       }
     },
+    "Ice cover duration": {
+      "name": {
+        "en": "Ice cover duration",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Ice cover, floating or solid, as % area estimate": {
       "name": {
         "en": "Ice cover, floating or solid, as % area estimate",
@@ -7511,6 +8171,16 @@
     "Indomethacin": {
       "name": {
         "en": "Indomethacin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Inorganic arsenic (arsenate and arsenite)": {
+      "name": {
+        "en": "Inorganic arsenic (arsenate and arsenite)",
         "fr": null
       },
       "description": {
@@ -7788,6 +8458,16 @@
         "fr": null
       }
     },
+    "Lead-208": {
+      "name": {
+        "en": "Lead-208",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Lead-210": {
       "name": {
         "en": "Lead-210",
@@ -7918,16 +8598,6 @@
         "fr": null
       }
     },
-    "m and p-Cresol": {
-      "name": {
-        "en": "m and p-Cresol",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "m- & p-Chlorophenol": {
       "name": {
         "en": "m- & p-Chlorophenol",
@@ -7961,6 +8631,16 @@
     "m-Xylene": {
       "name": {
         "en": "m-Xylene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "m and p-Cresol": {
+      "name": {
+        "en": "m and p-Cresol",
         "fr": null
       },
       "description": {
@@ -8138,6 +8818,16 @@
         "fr": null
       }
     },
+    "Mestranol": {
+      "name": {
+        "en": "Mestranol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Metalaxyl": {
       "name": {
         "en": "Metalaxyl",
@@ -8198,6 +8888,16 @@
         "fr": null
       }
     },
+    "Methaneselenonic acid": {
+      "name": {
+        "en": "Methaneselenonic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Methanol": {
       "name": {
         "en": "Methanol",
@@ -8211,6 +8911,16 @@
     "Methidathion": {
       "name": {
         "en": "Methidathion",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Methiocarb": {
+      "name": {
+        "en": "Methiocarb",
         "fr": null
       },
       "description": {
@@ -8291,6 +9001,16 @@
     "Methyl isobutyl ketone": {
       "name": {
         "en": "Methyl isobutyl ketone",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Methyl mercaptan": {
+      "name": {
+        "en": "Methyl mercaptan",
         "fr": null
       },
       "description": {
@@ -8928,6 +9648,1316 @@
         "fr": null
       }
     },
+    "Naphthenic Acid, C10H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C10H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C10H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C10H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C10H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C10H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C11H14O2": {
+      "name": {
+        "en": "Naphthenic Acid, C11H14O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C11H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C11H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C11H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C11H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C11H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C11H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C11H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C11H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C12H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C12H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C12H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C12H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C12H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C12H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C12H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C12H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C12H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C12H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C13H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C13H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C13H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C13H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C13H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C13H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C13H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C13H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C13H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C13H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C13H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C13H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C14H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C14H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C14H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C14H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C14H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C14H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C14H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C14H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C14H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C14H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C14H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C14H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C14H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C14H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H14O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H14O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C15H30O2": {
+      "name": {
+        "en": "Naphthenic Acid, C15H30O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H14O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H14O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H30O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H30O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C16H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C16H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H30O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H30O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C17H34O2": {
+      "name": {
+        "en": "Naphthenic Acid, C17H34O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H30O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H30O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H34O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H34O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C18H36O2": {
+      "name": {
+        "en": "Naphthenic Acid, C18H36O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H20O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H20O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H30O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H30O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H34O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H34O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H36O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H36O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C19H38O2": {
+      "name": {
+        "en": "Naphthenic Acid, C19H38O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H22O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H22O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H30O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H30O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H34O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H34O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H36O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H36O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H38O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H38O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C20H40O2": {
+      "name": {
+        "en": "Naphthenic Acid, C20H40O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H24O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H24O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H26O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H26O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H28O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H28O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H30O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H30O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H34O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H34O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H36O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H36O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H38O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H38O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H40O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H40O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C21H42O2": {
+      "name": {
+        "en": "Naphthenic Acid, C21H42O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C22H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C22H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C22H34O2": {
+      "name": {
+        "en": "Naphthenic Acid, C22H34O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C22H36O2": {
+      "name": {
+        "en": "Naphthenic Acid, C22H36O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C22H38O2": {
+      "name": {
+        "en": "Naphthenic Acid, C22H38O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C22H40O2": {
+      "name": {
+        "en": "Naphthenic Acid, C22H40O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C22H42O2": {
+      "name": {
+        "en": "Naphthenic Acid, C22H42O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C22H44O2": {
+      "name": {
+        "en": "Naphthenic Acid, C22H44O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H32O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H32O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H34O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H34O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H36O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H36O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H38O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H38O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H40O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H40O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H42O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H42O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H44O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H44O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C23H46O2": {
+      "name": {
+        "en": "Naphthenic Acid, C23H46O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C24H36O2": {
+      "name": {
+        "en": "Naphthenic Acid, C24H36O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C24H38O2": {
+      "name": {
+        "en": "Naphthenic Acid, C24H38O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C24H40O2": {
+      "name": {
+        "en": "Naphthenic Acid, C24H40O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C24H42O2": {
+      "name": {
+        "en": "Naphthenic Acid, C24H42O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C24H44O2": {
+      "name": {
+        "en": "Naphthenic Acid, C24H44O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C24H46O2": {
+      "name": {
+        "en": "Naphthenic Acid, C24H46O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C24H48O2": {
+      "name": {
+        "en": "Naphthenic Acid, C24H48O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C25H38O2": {
+      "name": {
+        "en": "Naphthenic Acid, C25H38O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C25H40O2": {
+      "name": {
+        "en": "Naphthenic Acid, C25H40O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C25H42O2": {
+      "name": {
+        "en": "Naphthenic Acid, C25H42O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C25H44O2": {
+      "name": {
+        "en": "Naphthenic Acid, C25H44O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C25H46O2": {
+      "name": {
+        "en": "Naphthenic Acid, C25H46O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C25H48O2": {
+      "name": {
+        "en": "Naphthenic Acid, C25H48O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C25H50O2": {
+      "name": {
+        "en": "Naphthenic Acid, C25H50O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C5H10O2": {
+      "name": {
+        "en": "Naphthenic Acid, C5H10O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C6H12O2": {
+      "name": {
+        "en": "Naphthenic Acid, C6H12O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C7H12O2": {
+      "name": {
+        "en": "Naphthenic Acid, C7H12O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C7H14O2": {
+      "name": {
+        "en": "Naphthenic Acid, C7H14O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C8H14O2": {
+      "name": {
+        "en": "Naphthenic Acid, C8H14O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C8H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C8H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C9H14O2": {
+      "name": {
+        "en": "Naphthenic Acid, C9H14O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C9H16O2": {
+      "name": {
+        "en": "Naphthenic Acid, C9H16O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Naphthenic Acid, C9H18O2": {
+      "name": {
+        "en": "Naphthenic Acid, C9H18O2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Naphthenic Acids": {
       "name": {
         "en": "Naphthenic Acids",
@@ -9108,16 +11138,6 @@
         "fr": null
       }
     },
-    "Nitrogen dioxide": {
-      "name": {
-        "en": "Nitrogen dioxide",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "Nitrogen-15": {
       "name": {
         "en": "Nitrogen-15",
@@ -9132,6 +11152,16 @@
       "name": {
         "en": "Nitrogen-15/Nitrogen-14 ratio",
         "fr": "Ratio azote-15/azote-14"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nitrogen dioxide": {
+      "name": {
+        "en": "Nitrogen dioxide",
+        "fr": null
       },
       "description": {
         "en": null,
@@ -9201,6 +11231,16 @@
     "Norfluoxetine": {
       "name": {
         "en": "Norfluoxetine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Norflurazon": {
+      "name": {
+        "en": "Norflurazon",
         "fr": null
       },
       "description": {
@@ -9348,6 +11388,16 @@
         "fr": null
       }
     },
+    "Octanal": {
+      "name": {
+        "en": "Octanal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Octanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluoro-": {
       "name": {
         "en": "Octanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluoro-",
@@ -9361,16 +11411,6 @@
     "Octanoic acid, 4,4,5,5,6,6,7,7,8,8,8-undecafluoro-": {
       "name": {
         "en": "Octanoic acid, 4,4,5,5,6,6,7,7,8,8,8-undecafluoro-",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Octanal": {
-      "name": {
-        "en": "Octanal",
         "fr": null
       },
       "description": {
@@ -9588,16 +11628,6 @@
         "fr": null
       }
     },
-    "Oxygen Delta 18": {
-      "name": {
-        "en": "Oxygen Delta 18",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "Oxygen-18": {
       "name": {
         "en": "Oxygen-18",
@@ -9612,6 +11642,16 @@
       "name": {
         "en": "Oxygen-18/Oxygen-16 ratio",
         "fr": "Ratio oxygène-18/oxygène-16"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oxygen Delta 18": {
+      "name": {
+        "en": "Oxygen Delta 18",
+        "fr": null
       },
       "description": {
         "en": null,
@@ -9761,6 +11801,16 @@
     "p,p'-Methoxychlor": {
       "name": {
         "en": "p,p'-Methoxychlor",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Palladium": {
+      "name": {
+        "en": "Palladium",
         "fr": null
       },
       "description": {
@@ -9948,6 +11998,16 @@
         "fr": null
       }
     },
+    "Pebulate": {
+      "name": {
+        "en": "Pebulate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Pendimethalin": {
       "name": {
         "en": "Pendimethalin",
@@ -9988,6 +12048,26 @@
         "fr": null
       }
     },
+    "Pentachlorodibenzo-p-dioxin": {
+      "name": {
+        "en": "Pentachlorodibenzo-p-dioxin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pentachlorodibenzofuran": {
+      "name": {
+        "en": "Pentachlorodibenzofuran",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Pentachloronitrobenzene": {
       "name": {
         "en": "Pentachloronitrobenzene",
@@ -10018,16 +12098,6 @@
         "fr": null
       }
     },
-    "Perfluoro(4-methoxybutanoic) acid": {
-      "name": {
-        "en": "Perfluoro(4-methoxybutanoic) acid",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "Perfluoro-1-decanesulfonamide": {
       "name": {
         "en": "Perfluoro-1-decanesulfonamide",
@@ -10048,6 +12118,16 @@
         "fr": null
       }
     },
+    "Perfluoro-3-methoxypropanoic acid": {
+      "name": {
+        "en": "Perfluoro-3-methoxypropanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluoro-3,6-dioxaheptanoic acid": {
       "name": {
         "en": "Perfluoro-3,6-dioxaheptanoic acid",
@@ -10058,9 +12138,9 @@
         "fr": null
       }
     },
-    "Perfluoro-3-methoxypropanoic acid": {
+    "Perfluoro(4-methoxybutanoic) acid": {
       "name": {
-        "en": "Perfluoro-3-methoxypropanoic acid",
+        "en": "Perfluoro(4-methoxybutanoic) acid",
         "fr": null
       },
       "description": {
@@ -10108,6 +12188,16 @@
         "fr": null
       }
     },
+    "Perfluoroheptane sulfonamide": {
+      "name": {
+        "en": "Perfluoroheptane sulfonamide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluoroheptanoic acid": {
       "name": {
         "en": "Perfluoroheptanoic acid",
@@ -10118,9 +12208,9 @@
         "fr": null
       }
     },
-    "Perfluoroheptane sulfonamide": {
+    "perfluorohexane sulfonamido propyl amine": {
       "name": {
-        "en": "Perfluoroheptane sulfonamide",
+        "en": "perfluorohexane sulfonamido propyl amine",
         "fr": null
       },
       "description": {
@@ -10381,6 +12471,16 @@
     "pH, saturated": {
       "name": {
         "en": "pH, saturated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Phaeophytin - Periphyton (attached)": {
+      "name": {
+        "en": "Phaeophytin - Periphyton (attached)",
         "fr": null
       },
       "description": {
@@ -10878,6 +12978,16 @@
         "fr": null
       }
     },
+    "Propanenitrile": {
+      "name": {
+        "en": "Propanenitrile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Propanil": {
       "name": {
         "en": "Propanil",
@@ -10891,6 +13001,16 @@
     "Propanoic acid, 2,2,3,3,3-pentafluoro-": {
       "name": {
         "en": "Propanoic acid, 2,2,3,3,3-pentafluoro-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Propargite": {
+      "name": {
+        "en": "Propargite",
         "fr": null
       },
       "description": {
@@ -10991,6 +13111,16 @@
     "Pseudomonas aeruginosa": {
       "name": {
         "en": "Pseudomonas aeruginosa",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pseudomonas fluorescens": {
+      "name": {
+        "en": "Pseudomonas fluorescens",
         "fr": null
       },
       "description": {
@@ -12138,16 +14268,6 @@
         "fr": null
       }
     },
-    "Sulfur Total": {
-      "name": {
-        "en": "Sulfur Total",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
     "Sulfur-34": {
       "name": {
         "en": "Sulfur-34",
@@ -12162,6 +14282,26 @@
       "name": {
         "en": "Sulfur-34/Sulfur-32 ratio",
         "fr": "Ratio soufre-34/soufre-32"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sulfur dioxide": {
+      "name": {
+        "en": "Sulfur dioxide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sulfur Total": {
+      "name": {
+        "en": "Sulfur Total",
+        "fr": null
       },
       "description": {
         "en": null,
@@ -12428,6 +14568,16 @@
         "fr": null
       }
     },
+    "Tetrachloroanisole": {
+      "name": {
+        "en": "Tetrachloroanisole",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Tetrachlorocatechol": {
       "name": {
         "en": "Tetrachlorocatechol",
@@ -12491,6 +14641,16 @@
     "Tetraethylene glycol": {
       "name": {
         "en": "Tetraethylene glycol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tetramethrin": {
+      "name": {
+        "en": "Tetramethrin",
         "fr": null
       },
       "description": {
@@ -12622,6 +14782,16 @@
       "name": {
         "en": "Thorium",
         "fr": "Thorium"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thorium-230": {
+      "name": {
+        "en": "Thorium-230",
+        "fr": null
       },
       "description": {
         "en": null,
@@ -12838,9 +15008,9 @@
         "fr": null
       }
     },
-    "Total Volatile Hydrocarbons, C6-C10": {
+    "Total Volatile Hydrocarbons C6-C10 minus BTEX": {
       "name": {
-        "en": "Total Volatile Hydrocarbons, C6-C10",
+        "en": "Total Volatile Hydrocarbons C6-C10 minus BTEX",
         "fr": null
       },
       "description": {
@@ -12848,9 +15018,9 @@
         "fr": null
       }
     },
-    "Total Volatile Hydrocarbons C6-C10 minus BTEX": {
+    "Total Volatile Hydrocarbons, C6-C10": {
       "name": {
-        "en": "Total Volatile Hydrocarbons C6-C10 minus BTEX",
+        "en": "Total Volatile Hydrocarbons, C6-C10",
         "fr": null
       },
       "description": {
@@ -13018,9 +15188,29 @@
         "fr": null
       }
     },
+    "Triadimenol": {
+      "name": {
+        "en": "Triadimenol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Triallate": {
       "name": {
         "en": "Triallate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Triazophos": {
+      "name": {
+        "en": "Triazophos",
         "fr": null
       },
       "description": {
@@ -13348,6 +15538,16 @@
         "fr": null
       }
     },
+    "Valeric acid": {
+      "name": {
+        "en": "Valeric acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Vanadium": {
       "name": {
         "en": "Vanadium",
@@ -13368,9 +15568,9 @@
         "fr": null
       }
     },
-    "Velocity - stream": {
+    "Velocity-discharge": {
       "name": {
-        "en": "Velocity - stream",
+        "en": "Velocity-discharge",
         "fr": null
       },
       "description": {
@@ -13378,9 +15578,9 @@
         "fr": null
       }
     },
-    "Velocity-discharge": {
+    "Velocity - stream": {
       "name": {
-        "en": "Velocity-discharge",
+        "en": "Velocity - stream",
         "fr": null
       },
       "description": {
@@ -13571,126 +15771,6 @@
     "Zoxamide": {
       "name": {
         "en": "Zoxamide",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Day, ice off": {
-      "name": {
-        "en": "Day, ice off",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Ice cover duration": {
-      "name": {
-        "en": "Ice cover duration",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Cation/anion ratio": {
-      "name": {
-        "en": "Cation/anion ratio",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Lead-208": {
-      "name": {
-        "en": "Lead-208",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Phaeophytin - Periphyton (attached)": {
-      "name": {
-        "en": "Phaeophytin - Periphyton (attached)",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Boron-10": {
-      "name": {
-        "en": "Boron-10",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "perfluorohexane sulfonamido propyl amine": {
-      "name": {
-        "en": "perfluorohexane sulfonamido propyl amine",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Corrosion & scaling control, Ryznar Stability Index": {
-      "name": {
-        "en": "Corrosion & scaling control, Ryznar Stability Index",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Delta boron-11/boron-10": {
-      "name": {
-        "en": "Delta boron-11/boron-10",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Extractable hydrocarbons, C8 and up": {
-      "name": {
-        "en": "Extractable hydrocarbons, C8 and up",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Thorium-230": {
-      "name": {
-        "en": "Thorium-230",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Inorganic arsenic (arsenate and arsenite)": {
-      "name": {
-        "en": "Inorganic arsenic (arsenate and arsenite)",
         "fr": null
       },
       "description": {
