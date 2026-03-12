@@ -80,5 +80,85 @@
         }
       }
     }
+  },
+  "name": {
+    "en": "ResultStatusID",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Accepted": {
+      "name": {
+        "en": "Accepted",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Final": {
+      "name": {
+        "en": "Final",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Historical": {
+      "name": {
+        "en": "Historical",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Preliminary": {
+      "name": {
+        "en": "Preliminary",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Provisional": {
+      "name": {
+        "en": "Provisional",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rejected": {
+      "name": {
+        "en": "Rejected",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Validated": {
+      "name": {
+        "en": "Validated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

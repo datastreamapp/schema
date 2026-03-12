@@ -607,6 +607,56 @@
         "en": null,
         "fr": null
       }
+    },
+    "Quality Control Sample-Blind": {
+      "name": {
+        "en": "Quality Control Sample-Blind",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Integrated Time Series-Unspecified": {
+      "name": {
+        "en": "Quality Control Sample-Integrated Time Series-Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Spike Solution": {
+      "name": {
+        "en": "Quality Control Sample-Spike Solution",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Topical Blank": {
+      "name": {
+        "en": "Quality Control Sample-Topical Blank",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control Sample-Unspecified": {
+      "name": {
+        "en": "Quality Control Sample-Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

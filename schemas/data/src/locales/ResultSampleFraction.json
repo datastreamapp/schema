@@ -380,5 +380,335 @@
         }
       }
     }
+  },
+  "name": {
+    "en": "ResultSampleFraction",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Acid Soluble": {
+      "name": {
+        "en": "Acid Soluble",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bioavailable": {
+      "name": {
+        "en": "Bioavailable",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Comb Available": {
+      "name": {
+        "en": "Comb Available",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dissolved": {
+      "name": {
+        "en": "Dissolved",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable": {
+      "name": {
+        "en": "Extractable",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable, CaCO3-bound": {
+      "name": {
+        "en": "Extractable, CaCO3-bound",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable, exchangeable": {
+      "name": {
+        "en": "Extractable, exchangeable",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable, organic-bnd": {
+      "name": {
+        "en": "Extractable, organic-bnd",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable, other": {
+      "name": {
+        "en": "Extractable, other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable, oxide-bound": {
+      "name": {
+        "en": "Extractable, oxide-bound",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Extractable, residual": {
+      "name": {
+        "en": "Extractable, residual",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Filterable": {
+      "name": {
+        "en": "Filterable",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Filtered": {
+      "name": {
+        "en": "Filtered",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Filtered, field": {
+      "name": {
+        "en": "Filtered, field",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Filtered, lab": {
+      "name": {
+        "en": "Filtered, lab",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Free Available": {
+      "name": {
+        "en": "Free Available",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Inorganic": {
+      "name": {
+        "en": "Inorganic",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Non-Filterable (Particle)": {
+      "name": {
+        "en": "Non-Filterable (Particle)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Non-settleable": {
+      "name": {
+        "en": "Non-settleable",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Non-volatile": {
+      "name": {
+        "en": "Non-volatile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Organic": {
+      "name": {
+        "en": "Organic",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pot. Dissolved": {
+      "name": {
+        "en": "Pot. Dissolved",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Settleable": {
+      "name": {
+        "en": "Settleable",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Supernate": {
+      "name": {
+        "en": "Supernate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Suspended": {
+      "name": {
+        "en": "Suspended",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Total": {
+      "name": {
+        "en": "Total",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Total Recoverable": {
+      "name": {
+        "en": "Total Recoverable",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Total Residual": {
+      "name": {
+        "en": "Total Residual",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unfiltered": {
+      "name": {
+        "en": "Unfiltered",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unspecified": {
+      "name": {
+        "en": "Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vapor": {
+      "name": {
+        "en": "Vapor",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Volatile": {
+      "name": {
+        "en": "Volatile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

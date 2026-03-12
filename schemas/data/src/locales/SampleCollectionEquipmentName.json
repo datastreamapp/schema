@@ -397,6 +397,26 @@
         "en": null,
         "fr": null
       }
+    },
+    "Portable sediment centrifuge": {
+      "name": {
+        "en": "Portable sediment centrifuge",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pump/Peristaltic": {
+      "name": {
+        "en": "Pump/Peristaltic",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

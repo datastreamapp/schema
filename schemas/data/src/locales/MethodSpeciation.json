@@ -368,10 +368,10 @@
         "fr": null
       }
     },
-     "of B": {
+    "of B": {
       "name": {
         "en": "of B",
-        "fr": "de B"
+        "fr": null
       },
       "description": {
         "en": null,
@@ -492,16 +492,6 @@
       "name": {
         "en": "of Unspecified",
         "fr": "de non spécifié"
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "of B": {
-      "name": {
-        "en": "of B",
-        "fr": null
       },
       "description": {
         "en": null,

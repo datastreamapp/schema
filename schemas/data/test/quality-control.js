@@ -702,6 +702,37 @@ test('Should reject ResultSampleFraction-ActivityMediaName-Sediment', async (t) 
   t.is(checkProperty(validate.errors, 'enum', 'ActivityMediaName'), true)
 })
 
+// *** ResultSampleFraction-FreeAvailable *** //
+test('Should accept ResultSampleFraction Free Available with Chlorine', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Chlorine',
+    ResultSampleFraction: 'Free Available'
+  })
+  t.is(valid, true)
+})
+test('Should accept ResultSampleFraction Free Available with Cyanide', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Cyanide',
+    ResultSampleFraction: 'Free Available'
+  })
+  t.is(valid, true)
+})
+test('Should reject ResultSampleFraction Free Available with unrelated CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultSampleFraction: 'Free Available'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'CharacteristicName'), true)
+})
+test('Should accept when ResultSampleFraction is not Free Available', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultSampleFraction: 'Total'
+  })
+  t.is(valid, true)
+})
+
 // *** ResultUnit-Elevation *** //
 /*test('Should reject Water level in m', async (t) => {
   const valid = validate({
@@ -819,6 +850,60 @@ test('Should accept Depth at -1 ft', async (t) => {
   })
   t.is(valid, true)
 })*/
+
+// *** ResultUnit-Turbidity *** //
+test('Should accept Turbidity ResultUnit with Turbidity CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Turbidity',
+    ResultValue: 10,
+    ResultUnit: 'NTU'
+  })
+  t.is(valid, true)
+})
+test('Should reject Turbidity ResultUnit with non-Turbidity CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultValue: 10,
+    ResultUnit: 'NTU'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'CharacteristicName'), true)
+})
+test('Should accept non-Turbidity ResultUnit with non-Turbidity CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultValue: 10,
+    ResultUnit: 'mg/L'
+  })
+  t.is(valid, true)
+})
+
+// *** ResultDetectionQuantitationLimitUnit-Turbidity *** //
+test('Should accept Turbidity ResultDetectionQuantitationLimitUnit with Turbidity CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Turbidity',
+    ResultDetectionQuantitationLimitMeasure: 10,
+    ResultDetectionQuantitationLimitUnit: 'NTU'
+  })
+  t.is(valid, true)
+})
+test('Should reject Turbidity ResultDetectionQuantitationLimitUnit with non-Turbidity CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultDetectionQuantitationLimitMeasure: 10,
+    ResultDetectionQuantitationLimitUnit: 'NTU'
+  })
+  t.is(valid, false)
+  t.is(checkProperty(validate.errors, 'enum', 'CharacteristicName'), true)
+})
+test('Should accept non-Turbidity ResultDetectionQuantitationLimitUnit with non-Turbidity CharacteristicName', async (t) => {
+  const valid = validate({
+    CharacteristicName: 'Iron',
+    ResultDetectionQuantitationLimitMeasure: 10,
+    ResultDetectionQuantitationLimitUnit: 'mg/L'
+  })
+  t.is(valid, true)
+})
 
 // *** ResultValue-DissolvedOxygenUnit *** //
 test('Should reject Dissolved oxygen (DO) in %', async (t) => {

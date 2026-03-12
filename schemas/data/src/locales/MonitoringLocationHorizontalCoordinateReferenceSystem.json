@@ -180,5 +180,65 @@
         }
       }
     }
+  },
+  "name": {
+    "en": "MonitoringLocationHorizontalCoordinateReferenceSystem",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "NAD27": {
+      "name": {
+        "en": "NAD27",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NAD83": {
+      "name": {
+        "en": "NAD83",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "UNKWN": {
+      "name": {
+        "en": "UNKWN",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "WGS72": {
+      "name": {
+        "en": "WGS72",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "WGS84": {
+      "name": {
+        "en": "WGS84",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
   }
 }

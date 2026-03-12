@@ -56,7 +56,7 @@ const checkProperty = (errors, keyword, property) => {
   return false;
 };
 
-// ActivityType-CTS-ActivityStartTime
+// *** ActivityType-CTS-ActivityStartTime *** //
 test("Should accept ActivityType without ActivityStartTime for non-CTS", async (t) => {
   const valid = validate({
     ActivityType: "Field Msr/Obs",
@@ -76,7 +76,7 @@ test("Should accept ActivityType with ActivityStartTime for non-CTS", async (t) 
   t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
 });
 
-test("Should reject ActivityType without ActivityStartTime for CTS", async (t) => {
+test("Should reject ActivityType Field Msr/Obs-Continuous Time Series without ActivityStartTime for CTS", async (t) => {
   const valid = validate({
     ActivityType: "Field Msr/Obs-Continuous Time Series",
   });
@@ -84,7 +84,7 @@ test("Should reject ActivityType without ActivityStartTime for CTS", async (t) =
   t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), true);
 });
 
-test("Should accept ActivityType with ActivityStartTime for CTS", async (t) => {
+test("Should accept ActivityType Field Msr/Obs-Continuous Time Series with ActivityStartTime for CTS", async (t) => {
   const valid = validate({
     ActivityType: "Field Msr/Obs-Continuous Time Series",
     ActivityStartTime: '13:15:00',
@@ -94,7 +94,7 @@ test("Should accept ActivityType with ActivityStartTime for CTS", async (t) => {
   t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
 });
 
-// ActivityType-ResultAnalyticalMethod
+// *** ActivityType-ResultAnalyticalMethod *** //
 test("Should reject ActivityType = Sample-*", async (t) => {
   const valid = validate({
     ActivityType: "Sample-Other",
@@ -269,7 +269,7 @@ test("Should accept ActivityType = Quality Control Sample-* w/ ResultAnalyticalM
   );
 });
 
-// CharacteristicName-MethodSpeciation
+// *** CharacteristicName-MethodSpeciation *** //
 test("Should accept CharacteristicName AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Calcium",
@@ -305,7 +305,7 @@ test("Should accept CharacteristicName AND MethodSpeciation", async (t) => {
   t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
 });
 
-// CharacteristicName-Nutrient-ResultSampleFraction
+// *** CharacteristicName-Nutrient-ResultSampleFraction *** //
 test("Should reject Nutrient CharacteristicName AND ResultSampleFraction", async (t) => {
   const valid = validate({
     ActivityMediaName: "Surface Water",
@@ -365,7 +365,7 @@ test("Should accept Nutrient Sediment", async (t) => {
 //
 // })
 
-// CharacteristicName-ResultSampleFraction
+// *** CharacteristicName-ResultSampleFraction *** //
 test("Should accept CharacteristicName AND NOT ResultSampleFraction", async (t) => {
   const valid = validate({
     CharacteristicName: "Dissolved oxygen (DO)",
@@ -400,7 +400,7 @@ test("Should accept CharacteristicName AND ResultSampleFraction", async (t) => {
   );
 });
 
-// CharacteristicName-StableIsotope-ResultSampleFraction
+// *** CharacteristicName-StableIsotope-MethodSpeciation *** //
 test("Should reject StableIsotope CharacteristicName, MethodSpeciation required", async (t) => {
   const valid = validate({
     CharacteristicName: "Nitrogen-15",
@@ -428,7 +428,7 @@ test("Should accept StableIsotope CharacteristicName", async (t) => {
   t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
 });
 
-// allOf/3
+// *** ResultDetectionCondition-ResultValue *** //
 test("Should reject NOT ResultValue AND NOT ResultDetectionCondition", async (t) => {
   const valid = validate({});
   t.false(valid);
@@ -483,7 +483,7 @@ test("Should accept ResultValue OR ResultDetectionCondition", async (t) => {
   );
 });
 
-// ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below
+// *** ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below *** //
 test("Should reject ResultDetectionCondition = Present Above Quantification Limit", async (t) => {
   const valid = validate({
     ResultDetectionCondition: "Present Above Quantification Limit",
@@ -582,7 +582,7 @@ test("Should accept ResultDetectionCondition", async (t) => {
   );
 });
 
-// ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect
+// *** ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect *** //
 test("Should reject ResultDetectionCondition = Not Detected", async (t) => {
   const valid = validate({
     ResultDetectionCondition: "Not Detected",
@@ -713,7 +713,7 @@ test("Should accept ResultDetectionCondition = Detected Not Quantified", async (
   );
 });
 
-// CSV Injection
+// *** CSVInjection *** //
 test("Should reject columns with potential csv injection", async (t) => {
   const valid = validate({
     DatasetName: "=equals",
