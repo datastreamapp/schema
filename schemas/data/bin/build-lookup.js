@@ -32,7 +32,7 @@ for (const key in CharacteristicWQXGroupsLocal) {
     console.log(`CharacteristicWQXGroupRedundant "${key}", safe to delete`)
   } else if (CharacteristicNameWQXGroups[key]) {
     console.log(
-      `CharacteristicWQXGroup "${key}":"${CharacteristicNameWQXGroups[key]}" replace with "${CharacteristicWQXGroupsLocal[key]}"`
+      `CharacteristicWQXGroup "${key}":"${CharacteristicNameWQXGroups[key]}" replaced with "${CharacteristicWQXGroupsLocal[key]}"`
     )
   }
   CharacteristicNameWQXGroups[key] = CharacteristicWQXGroupsLocal[key]

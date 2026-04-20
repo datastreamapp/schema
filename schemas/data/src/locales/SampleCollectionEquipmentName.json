@@ -398,9 +398,9 @@
         "fr": null
       }
     },
-    "Air line": {
+    "Portable sediment centrifuge": {
       "name": {
-        "en": "Air line",
+        "en": "Portable sediment centrifuge",
         "fr": null
       },
       "description": {
@@ -408,59 +408,9 @@
         "fr": null
       }
     },
-    "Bailer": {
+    "Pump/Peristaltic": {
       "name": {
-        "en": "Bailer",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Hydrasleeve": {
-      "name": {
-        "en": "Hydrasleeve",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Snap sampler": {
-      "name": {
-        "en": "Snap sampler",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Tubing": {
-      "name": {
-        "en": "Tubing",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Water level meter": {
-      "name": {
-        "en": "Water level meter",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Wetted tape": {
-      "name": {
-        "en": "Wetted tape",
+        "en": "Pump/Peristaltic",
         "fr": null
       },
       "description": {
