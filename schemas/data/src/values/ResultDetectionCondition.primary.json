@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ResultDetectionCondition.strict.json",
+  "$id": "https://datastream.org/schema/data/values/ResultDetectionCondition.primary.json",
   "title": "Result Detection Condition",
   "description": "",
   "type": "string",

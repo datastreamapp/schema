@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/AquiferCode.loose.json",
+  "$id": "https://datastream.org/schema/data/values/AquiferCode.legacy.json",
   "title": "Aquifer Code",
   "description": "",
   "type": "string",

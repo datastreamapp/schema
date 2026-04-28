@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/definitions",
+  "$id": "https://datastream.org/schema/data/definitions.json",
   "definitions": {
     "DatasetName": {
       "$ref": "#/definitions/string",
@@ -7,48 +7,48 @@
       "maxLength": 512
     },
     "MonitoringLocationID": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/MonitoringLocationID",
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/MonitoringLocationID",
       "minLength": 1,
       "errorMessage": {
         "pattern": "error-string-pattern"
       }
     },
     "MonitoringLocationName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/MonitoringLocationName",
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/MonitoringLocationName",
       "minLength": 1,
       "errorMessage": {
         "pattern": "error-string-pattern"
       }
     },
     "MonitoringLocationLatitude": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/MonitoringLocationLatitude"
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/MonitoringLocationLatitude"
     },
     "MonitoringLocationLongitude": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/MonitoringLocationLongitude"
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/MonitoringLocationLongitude"
     },
     "MonitoringLocationHorizontalCoordinateReferenceSystemStrict": {
-      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json"
     },
     "MonitoringLocationHorizontalCoordinateReferenceSystemLoose": {
-      "$ref": "./values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalCoordinateReferenceSystem.legacy.json"
     },
     "MonitoringLocationHorizontalAccuracyMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/ActivityHorizontalAccuracyMeasure"
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/ActivityHorizontalAccuracyMeasure"
     },
     "MonitoringLocationHorizontalAccuracyUnitStrict": {
-      "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalAccuracyUnit.primary.json"
     },
     "MonitoringLocationHorizontalAccuracyUnitLoose": {
-      "$ref": "./values/MonitoringLocationHorizontalAccuracyUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalAccuracyUnit.legacy.json"
     },
     "MonitoringLocationVerticalMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/VerticalMeasure"
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/VerticalMeasure"
     },
     "MonitoringLocationVerticalUnitStrict": {
-      "$ref": "./values/MonitoringLocationVerticalUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalUnit.primary.json"
     },
     "MonitoringLocationVerticalUnitLoose": {
-      "$ref": "./values/MonitoringLocationVerticalUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalUnit.legacy.json"
     },
     "MonitoringLocationVerticalAccuracyMeasure": {
       "title": "Monitoring Location Vertical Accuracy Measure",
@@ -58,28 +58,28 @@
       "maximum": 9007199254740991
     },
     "MonitoringLocationVerticalAccuracyUnitStrict": {
-      "$ref": "./values/MonitoringLocationVerticalAccuracyUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalAccuracyUnit.primary.json"
     },
     "MonitoringLocationVerticalAccuracyUnitLoose": {
-      "$ref": "./values/MonitoringLocationVerticalAccuracyUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalAccuracyUnit.legacy.json"
     },
     "MonitoringLocationVerticalCollectionMethodStrict": {
-      "$ref": "./values/MonitoringLocationVerticalCollectionMethod.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCollectionMethod.primary.json"
     },
     "MonitoringLocationVerticalCollectionMethodLoose": {
-      "$ref": "./values/MonitoringLocationVerticalCollectionMethod.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCollectionMethod.legacy.json"
     },
     "MonitoringLocationVerticalCoordinateReferenceSystemStrict": {
-      "$ref": "./values/MonitoringLocationVerticalCoordinateReferenceSystem.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCoordinateReferenceSystem.primary.json"
     },
     "MonitoringLocationVerticalCoordinateReferenceSystemLoose": {
-      "$ref": "./values/MonitoringLocationVerticalCoordinateReferenceSystem.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCoordinateReferenceSystem.legacy.json"
     },
     "MonitoringLocationTypeStrict": {
-      "$ref": "./values/MonitoringLocationType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationType.primary.json"
     },
     "MonitoringLocationTypeLoose": {
-      "$ref": "./values/MonitoringLocationType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MonitoringLocationType.legacy.json"
     },
     "WellID": {
       "title": "Well ID",
@@ -88,46 +88,46 @@
       "maxLength": 55
     },
     "WellIDContextStrict": {
-      "$ref": "./values/WellIDContext.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/WellIDContext.primary.json"
     },
     "WellIDContextLoose": {
-      "$ref": "./values/WellIDContext.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/WellIDContext.legacy.json"
     },
     "WellUseTypeStrict": {
-      "$ref": "./values/WellUseType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/WellUseType.primary.json"
     },
     "WellUseTypeLoose": {
-      "$ref": "./values/WellUseType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/WellUseType.legacy.json"
     },
     "AquiferCodeStrict": {
-      "$ref": "./values/AquiferCode.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferCode.primary.json"
     },
     "AquiferCodeLoose": {
-      "$ref": "./values/AquiferCode.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferCode.legacy.json"
     },
     "AquiferUnitNameStrict": {
-      "$ref": "./values/AquiferUnitName.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferUnitName.primary.json"
     },
     "AquiferUnitNameLoose": {
-      "$ref": "./values/AquiferUnitName.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferUnitName.legacy.json"
     },
     "AquiferTypeStrict": {
-      "$ref": "./values/AquiferType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferType.primary.json"
     },
     "AquiferTypeLoose": {
-      "$ref": "./values/AquiferType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferType.legacy.json"
     },
     "AquiferUnitPorosityTypeStrict": {
-      "$ref": "./values/AquiferUnitPorosityType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferUnitPorosityType.primary.json"
     },
     "AquiferUnitPorosityTypeLoose": {
-      "$ref": "./values/AquiferUnitPorosityType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/AquiferUnitPorosityType.legacy.json"
     },
     "LithologyTypeStrict": {
-      "$ref": "./values/LithologyType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/LithologyType.primary.json"
     },
     "LithologyTypeLoose": {
-      "$ref": "./values/LithologyType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/LithologyType.legacy.json"
     },
     "BoreholeDepthMeasure": {
       "title": "Borehole Depth Measure",
@@ -137,10 +137,10 @@
       "maximum": 0
     },
     "BoreholeDepthUnitStrict": {
-      "$ref": "./values/BoreholeDepthUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/BoreholeDepthUnit.primary.json"
     },
     "BoreholeDepthUnitLoose": {
-      "$ref": "./values/BoreholeDepthUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/BoreholeDepthUnit.legacy.json"
     },
     "WellDepthMeasure": {
       "title": "Well Depth Measure",
@@ -150,10 +150,10 @@
       "maximum": 0
     },
     "WellDepthUnitStrict": {
-      "$ref": "./values/WellDepthUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/WellDepthUnit.primary.json"
     },
     "WellDepthUnitLoose": {
-      "$ref": "./values/WellDepthUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/WellDepthUnit.legacy.json"
     },
     "WellOpenIntervalTopMeasure": {
       "title": "Well Open Interval Top Measure",
@@ -163,10 +163,10 @@
       "maximum": 0
     },
     "WellOpenIntervalTopUnitStrict": {
-      "$ref": "./values/WellOpenIntervalTopUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/WellOpenIntervalTopUnit.primary.json"
     },
     "WellOpenIntervalTopUnitLoose": {
-      "$ref": "./values/WellOpenIntervalTopUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/WellOpenIntervalTopUnit.legacy.json"
     },
     "WellOpenIntervalBottomMeasure": {
       "title": "Well Open Interval Bottom Measure",
@@ -176,22 +176,22 @@
       "maximum": 0
     },
     "WellOpenIntervalBottomUnitStrict": {
-      "$ref": "./values/WellOpenIntervalBottomUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/WellOpenIntervalBottomUnit.primary.json"
     },
     "WellOpenIntervalBottomUnitLoose": {
-      "$ref": "./values/WellOpenIntervalBottomUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/WellOpenIntervalBottomUnit.legacy.json"
     },
     "ActivityTypeStrict": {
-      "$ref": "./values/ActivityType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityType.primary.json"
     },
     "ActivityTypeLoose": {
-      "$ref": "./values/ActivityType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityType.legacy.json"
     },
     "ActivityMediaNameStrict": {
-      "$ref": "./values/ActivityMediaName.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityMediaName.primary.json"
     },
     "ActivityMediaNameLoose": {
-      "$ref": "./values/ActivityMediaName.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityMediaName.legacy.json"
     },
     "ActivityStartDate": {
       "$ref": "#/definitions/date"
@@ -224,19 +224,19 @@
       "$ref": "#/definitions/timezone-loose"
     },
     "ActivityDepthHeightMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/ActivityDepthHeightMeasure"
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/ActivityDepthHeightMeasure"
     },
     "ActivityDepthHeightUnitStrict": {
-      "$ref": "./values/ActivityDepthHeightUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityDepthHeightUnit.primary.json"
     },
     "ActivityDepthHeightUnitLoose": {
-      "$ref": "./values/ActivityDepthHeightUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityDepthHeightUnit.legacy.json"
     },
     "ActivityDepthAltitudeReferencePointStrict": {
-      "$ref": "./values/ActivityDepthAltitudeReferencePoint.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePoint.primary.json"
     },
     "ActivityDepthAltitudeReferencePointLoose": {
-      "$ref": "./values/ActivityDepthAltitudeReferencePoint.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePoint.legacy.json"
     },
     "ActivityDepthAltitudeReferencePointMeasure": {
       "title": "Activity Depth Altitude Reference Point Measure",
@@ -246,22 +246,22 @@
       "maximum": 9007199254740991
     },
     "ActivityDepthAltitudeReferencePointUnitStrict": {
-      "$ref": "./values/ActivityDepthAltitudeReferencePointUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePointUnit.primary.json"
     },
     "ActivityDepthAltitudeReferencePointUnitLoose": {
-      "$ref": "./values/ActivityDepthAltitudeReferencePointUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePointUnit.legacy.json"
     },
     "SampleConditionStrict": {
-      "$ref": "./values/SampleCondition.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/SampleCondition.primary.json"
     },
     "SampleConditionLoose": {
-      "$ref": "./values/SampleCondition.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/SampleCondition.legacy.json"
     },
     "SampleCollectionEquipmentNameStrict": {
-      "$ref": "./values/SampleCollectionEquipmentName.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/SampleCollectionEquipmentName.primary.json"
     },
     "SampleCollectionEquipmentNameLoose": {
-      "$ref": "./values/SampleCollectionEquipmentName.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/SampleCollectionEquipmentName.legacy.json"
     },
     "SampleCollectionMethodName": {
       "title": "Sample Collection Method Name",
@@ -276,73 +276,73 @@
       "maxLength": 50
     },
     "SampleCollectionMethodContextStrict": {
-      "$ref": "./values/SampleCollectionMethodContext.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/SampleCollectionMethodContext.primary.json"
     },
     "SampleCollectionMethodContextLoose": {
-      "$ref": "./values/SampleCollectionMethodContext.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/SampleCollectionMethodContext.legacy.json"
     },
     "CharacteristicNameStrict": {
-      "$ref": "./values/CharacteristicName.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/CharacteristicName.primary.json"
     },
     "CharacteristicNameLoose": {
-      "$ref": "./values/CharacteristicName.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/CharacteristicName.legacy.json"
     },
     "MethodSpeciationStrict": {
-      "$ref": "./values/MethodSpeciation.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/MethodSpeciation.primary.json"
     },
     "MethodSpeciationLoose": {
-      "$ref": "./values/MethodSpeciation.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/MethodSpeciation.legacy.json"
     },
     "ResultSampleFractionStrict": {
-      "$ref": "./values/ResultSampleFraction.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultSampleFraction.primary.json"
     },
     "ResultSampleFractionLoose": {
-      "$ref": "./values/ResultSampleFraction.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultSampleFraction.legacy.json"
     },
     "ResultValue": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/ResultValue"
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/ResultValue"
     },
     "ResultUnitStrict": {
-      "$ref": "./values/ResultUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultUnit.primary.json"
     },
     "ResultUnitLoose": {
-      "$ref": "./values/ResultUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultUnit.legacy.json"
     },
     "ResultValueTypeStrict": {
-      "$ref": "./values/ResultValueType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultValueType.primary.json"
     },
     "ResultValueTypeLoose": {
-      "$ref": "./values/ResultValueType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultValueType.legacy.json"
     },
     "ResultDetectionConditionStrict": {
-      "$ref": "./values/ResultDetectionCondition.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultDetectionCondition.primary.json"
     },
     "ResultDetectionConditionLoose": {
-      "$ref": "./values/ResultDetectionCondition.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultDetectionCondition.legacy.json"
     },
     "ResultDetectionQuantitationLimitMeasure": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/ResultDetectionQuantitationLimitMeasure"
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/ResultDetectionQuantitationLimitMeasure"
     },
     "ResultDetectionQuantitationLimitUnitStrict": {
-      "$ref": "./values/ResultDetectionQuantitationLimitUnit.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultDetectionQuantitationLimitUnit.primary.json"
     },
     "ResultDetectionQuantitationLimitUnitLoose": {
-      "$ref": "./values/ResultDetectionQuantitationLimitUnit.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultDetectionQuantitationLimitUnit.legacy.json"
     },
     "ResultDetectionQuantitationLimitTypeStrict": {
-      "$ref": "./values/ResultDetectionQuantitationLimitType.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultDetectionQuantitationLimitType.primary.json"
     },
     "ResultDetectionQuantitationLimitTypeLoose": {
-      "$ref": "./values/ResultDetectionQuantitationLimitType.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultDetectionQuantitationLimitType.legacy.json"
     },
     "ResultStatusIDStrict": {
-      "$ref": "./values/ResultStatusID.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultStatusID.primary.json"
     },
     "ResultStatusIDLoose": {
-      "$ref": "./values/ResultStatusID.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultStatusID.legacy.json"
     },
     "ResultComment": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/ResultComment",
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/ResultComment",
       "errorMessage": {
         "pattern": "error-string-multiline-pattern"
       }
@@ -354,10 +354,10 @@
       "maxLength": 50
     },
     "ResultAnalyticalMethodContextStrict": {
-      "$ref": "./values/ResultAnalyticalMethodContext.primary.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultAnalyticalMethodContext.primary.json"
     },
     "ResultAnalyticalMethodContextLoose": {
-      "$ref": "./values/ResultAnalyticalMethodContext.legacy.json"
+      "$ref": "https://datastream.org/schema/data/values/ResultAnalyticalMethodContext.legacy.json"
     },
     "ResultAnalyticalMethodName": {
       "title": "Result Analytical Method Name",
@@ -381,7 +381,7 @@
       "$ref": "#/definitions/timezone-loose"
     },
     "LaboratoryName": {
-      "$ref": "../node_modules/wqx/json-schema/definitions.json#/definitions/LaboratoryName",
+      "$ref": "https://epa.gov/wqx/definitions.json#/definitions/LaboratoryName",
       "maxLength": 100,
       "errorMessage": {
         "pattern": "error-string-pattern"

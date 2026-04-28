@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/CharacteristicName.strict.json",
+  "$id": "https://datastream.org/schema/data/values/CharacteristicName.primary.json",
   "title": "Characteristic",
   "description": "",
   "type": "string",

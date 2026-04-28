@@ -32,7 +32,7 @@ async function processValues(col, object) {
   // catch any additions that may be longer
   object.maxLength = Math.max(...object.enum.map((el) => el.length), 0);
 
-  object.$id = `https://datastream.org/schema/data/values/${col}.loose.json`;
+  object.$id = `https://datastream.org/schema/data/values/${col}.legacy.json`;
   await writeFile(
     join(__dirname, `/../src/values/${col}.legacy.json`),
     JSON.stringify(object, null, 2),
@@ -48,7 +48,7 @@ async function processValues(col, object) {
   object.enum = await subtractions(col, object.enum, retired);
   //object.enum = await override(col, object.enum);
 
-  object.$id = `https://datastream.org/schema/data/values/${col}.strict.json`;
+  object.$id = `https://datastream.org/schema/data/values/${col}.primary.json`;
   await writeFile(
     join(__dirname, `/../src/values/${col}.primary.json`),
     JSON.stringify(object, null, 2),

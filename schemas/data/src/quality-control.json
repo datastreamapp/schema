@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/quality-control",
+  "$id": "https://datastream.org/schema/data/quality-control.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$vocabulary": {
     "https://ajv.js.org/packages/ajv-errors.html": true

@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCollectionMethod.loose.json",
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCollectionMethod.legacy.json",
   "title": "Vertical Collection Method",
   "description": "",
   "type": "string",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ResultStatusID.strict.json",
+  "$id": "https://datastream.org/schema/data/values/ResultStatusID.primary.json",
   "title": "Result Status",
   "description": "",
   "type": "string",

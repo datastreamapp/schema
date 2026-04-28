@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ResultAnalyticalMethodContext.loose.json",
+  "$id": "https://datastream.org/schema/data/values/ResultAnalyticalMethodContext.legacy.json",
   "title": "Analytical Method Context",
   "description": "",
   "type": "string",

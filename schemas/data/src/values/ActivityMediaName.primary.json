@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ActivityMediaName.strict.json",
+  "$id": "https://datastream.org/schema/data/values/ActivityMediaName.primary.json",
   "title": "Activity Media Subdivision",
   "description": "",
   "type": "string",

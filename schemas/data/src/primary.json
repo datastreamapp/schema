@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data",
+  "$id": "https://datastream.org/schema/data/primary.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "title": "DataStream Data Schema",
   "description": "Water Quality Data Schema based on WQX.",

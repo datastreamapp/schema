@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePoint.strict.json",
+  "$id": "https://datastream.org/schema/data/values/ActivityDepthAltitudeReferencePoint.primary.json",
   "title": "Activity Depth Altitude Reference Point",
   "description": "",
   "type": "string",

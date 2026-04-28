@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCoordinateReferenceSystem.loose.json",
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCoordinateReferenceSystem.legacy.json",
   "title": "Vertical Reference Datum",
   "description": "",
   "type": "string",

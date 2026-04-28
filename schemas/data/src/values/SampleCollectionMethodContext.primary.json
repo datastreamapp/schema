@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/SampleCollectionMethodContext.strict.json",
+  "$id": "https://datastream.org/schema/data/values/SampleCollectionMethodContext.primary.json",
   "title": "Sample Collection Method Context",
   "description": "",
   "type": "string",

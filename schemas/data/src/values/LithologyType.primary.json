@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/LithologyType.strict.json",
+  "$id": "https://datastream.org/schema/data/values/LithologyType.primary.json",
   "title": "Well Formation Type",
   "description": "",
   "type": "string",

@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/WellUseType.loose.json",
+  "$id": "https://datastream.org/schema/data/values/WellUseType.legacy.json",
   "title": "Well Type",
   "description": "",
   "type": "string",

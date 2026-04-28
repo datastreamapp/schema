@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/BoreholeDepthUnit.loose.json",
+  "$id": "https://datastream.org/schema/data/values/BoreholeDepthUnit.legacy.json",
   "title": "Measurement Unit",
   "description": "",
   "type": "string",

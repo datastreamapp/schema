@@ -11,10 +11,13 @@ deref () {
 	src=$1
 	opts=${*:2}
 
-	cd src
-	ajv deref ${src}.build.json ${opts} \
-	    -o ${src}.build.json
-	cd ..
+	ajv deref src/${src}.build.json ${opts} \
+	    -r node_modules/wqx/json-schema/definitions.json \
+	    -r src/definitions.build.json \
+	    -r src/logic/*.json \
+	    -r src/quality-control/*.json \
+	    -r src/values/*.json \
+	    -o src/${src}.build.json
 }
 
 clean () {

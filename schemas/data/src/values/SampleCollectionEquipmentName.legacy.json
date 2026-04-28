@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/values/SampleCollectionEquipmentName.loose.json",
+  "$id": "https://datastream.org/schema/data/values/SampleCollectionEquipmentName.legacy.json",
   "title": "Sample Collection Equipment",
   "description": "",
   "type": "string",
