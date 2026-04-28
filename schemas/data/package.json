@@ -22,7 +22,7 @@
   "scripts": {
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js && node ./bin/build-locales.js",
     "build": "./bin/build",
-    "test": "npm run build && c8 ava",
+    "test": "npm run build && node --test --experimental-test-coverage --test-coverage-exclude='locales/**' --test-coverage-exclude='test/**' test/*.js",
     "prepublishOnly": "npm test"
   },
   "author": "willfarrell",
@@ -41,10 +41,5 @@
     "type": "git",
     "url": "github:datastreamapp/schema",
     "directory": "schemas/data"
-  },
-  "c8": {
-    "exclude": [
-      "locales/**"
-    ]
   }
 }

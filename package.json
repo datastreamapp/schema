@@ -13,7 +13,7 @@
     "lint:js": "prettier --write **/*.{js,json} && standard --fix **/*.js",
     "lint:tf": "terraform fmt -recursive -write",
     "install": "lerna bootstrap",
-    "test": "lerna exec --bail --concurrency 5 c8 npm run test",
+    "test": "lerna exec --bail --concurrency 5 npm run test",
     "lerna:rm": "npm run lerna:rm:node_modules && npm run lerna:rm:lock",
     "lerna:rm:lock": "lerna exec -- rm -rf package-lock.json",
     "lerna:rm:node_modules": "lerna exec -- rm -rf node_modules",
@@ -45,13 +45,10 @@
     "@commitlint/cli": "^20.0.0",
     "@commitlint/config-conventional": "^20.0.0",
     "ajv-cmd": "^0.13.0",
-    "ava": "^5.0.0",
-    "c8": "^11.0.0",
     "lerna": "^6.0.0",
     "husky": "^9.0.0",
     "lint-staged": "^16.0.0",
     "prettier": "^3.0.0",
-    "sinon": "^15.0.0",
     "standard": "^17.0.0"
   }
 }

@@ -1,5 +1,5 @@
-import test from 'ava'
-
+import { test } from "node:test";
+import assert from "node:assert/strict";
 import en from '../locales/en-CA.js'
 import validate from '../quality-control/index.js'
 
@@ -10,7 +10,7 @@ test('Should transform error message', async (t) => {
     ResultSampleFraction: 'Filtered'
   })
   en(validate.errors)
-  t.is(valid, false)
+  assert.equal(valid, false)
 })
 
 test('Should transform enum error message', async (t) => {
@@ -19,9 +19,9 @@ test('Should transform enum error message', async (t) => {
     ResultValue: 7,
     ResultUnit: 'mg/L'
   })
-  t.is(valid, false)
+  assert.equal(valid, false)
   en(validate.errors)
-  t.true(validate.errors.every(e => typeof e.message === 'string' && e.message.length > 0))
+  assert.equal(validate.errors.every(e => typeof e.message === 'string' && e.message.length > 0), true)
 })
 
 test('Should transform minimum error message', async (t) => {
@@ -29,9 +29,9 @@ test('Should transform minimum error message', async (t) => {
     ResultValue: -1,
     ResultUnit: 'mg/l'
   })
-  t.is(valid, false)
+  assert.equal(valid, false)
   en(validate.errors)
-  t.true(validate.errors.every(e => typeof e.message === 'string' && e.message.length > 0))
+  assert.equal(validate.errors.every(e => typeof e.message === 'string' && e.message.length > 0), true)
 })
 
 test('Should transform pattern error message', async (t) => {
@@ -39,14 +39,13 @@ test('Should transform pattern error message', async (t) => {
     ActivityStartDate: '2020-01-01',
     ActivityStartTime: '9:30:00'
   })
-  t.is(valid, false)
+  assert.equal(valid, false)
   en(validate.errors)
-  t.true(validate.errors.every(e => typeof e.message === 'string' && e.message.length > 0))
+  assert.equal(validate.errors.every(e => typeof e.message === 'string' && e.message.length > 0), true)
 })
 
 test('Should handle null errors gracefully', async (t) => {
   const valid = validate({})
-  t.is(valid, true)
+  assert.equal(valid, true)
   en(validate.errors)
-  t.pass()
 })

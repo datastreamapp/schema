@@ -1,5 +1,5 @@
-import test from "ava";
-
+import { test } from "node:test";
+import assert from "node:assert/strict";
 import validate from "../frontend/index.js";
 import validateStrict from "../extract/index.js";
 import validateBackend from "../backend/index.js";
@@ -56,12 +56,12 @@ test("Should accept strings", async (t) => {
     MonitoringLocationID: "1234567890 W̱E¸NÁ¸NEĆ",
     MonitoringLocationName: "ÀàäÄÂâÆæÇçÈèÉéÊêËëÎîÏïÔôŒœÙùÛûÜü",
   });
-  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), false);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "pattern", "DatasetName"), false);
+  assert.equal(
     checkProperty(validate.errors, "pattern", "MonitoringLocationID"),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
     false,
   );
@@ -85,28 +85,28 @@ test("Should reject strings with multiline", async (t) => {
     1234`,
   });
 
-  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), true);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "pattern", "DatasetName"), true);
+  assert.equal(
     checkProperty(validate.errors, "pattern", "MonitoringLocationID"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodID"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodName"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "LaboratoryName"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "LaboratorySampleID"),
     true,
   );
@@ -121,7 +121,7 @@ test("Should accept strings-multiline", async (t) => {
     Other: W̱E¸NÁ¸NEĆ
     `,
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), false);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), false);
 });
 
 // TODO update to included strict and loose time format
@@ -131,9 +131,9 @@ test("Should accept time formats", async (t) => {
     ActivityEndTime: "13:15:00.000",
     AnalysisStartTime: "0:15",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ActivityStartTime"), false);
-  t.is(checkProperty(validate.errors, "pattern", "ActivityEndTime"), false);
-  t.is(checkProperty(validate.errors, "pattern", "AnalysisStartTime"), false);
+  assert.equal(checkProperty(validate.errors, "pattern", "ActivityStartTime"), false);
+  assert.equal(checkProperty(validate.errors, "pattern", "ActivityEndTime"), false);
+  assert.equal(checkProperty(validate.errors, "pattern", "AnalysisStartTime"), false);
 });
 
 test("Should reject time formats", async (t) => {
@@ -142,18 +142,18 @@ test("Should reject time formats", async (t) => {
     ActivityEndTime: "13:15.00.000",
     AnalysisStartTime: "2.15",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ActivityStartTime"), true);
-  t.is(checkProperty(validate.errors, "pattern", "ActivityEndTime"), true);
-  t.is(checkProperty(validate.errors, "pattern", "AnalysisStartTime"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ActivityStartTime"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ActivityEndTime"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "AnalysisStartTime"), true);
 
   validate({
     ActivityStartTime: "0:15",
     ActivityEndTime: "!0:15",
     // 'AnalysisStartTime': '2.15'
   });
-  t.is(checkProperty(validate.errors, "pattern", "ActivityStartTime"), true);
-  t.is(checkProperty(validate.errors, "pattern", "ActivityEndTime"), true);
-  // t.is(checkProperty(validate.errors, 'pattern', 'AnalysisStartTime'), true)
+  assert.equal(checkProperty(validate.errors, "pattern", "ActivityStartTime"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ActivityEndTime"), true);
+  // assert.equal(checkProperty(validate.errors, 'pattern', 'AnalysisStartTime'), true)
 });
 
 test("Should accept timezone formats (strict)", async (t) => {
@@ -162,20 +162,20 @@ test("Should accept timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "Z",
     AnalysisStartTimeZone: "Z",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     0,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     0,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -187,20 +187,20 @@ test("Should accept timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "+02:15",
     AnalysisStartTimeZone: "+02:15",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     0,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     0,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -212,20 +212,20 @@ test("Should accept timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "-02:15",
     AnalysisStartTimeZone: "-02:15",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     0,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     0,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -239,20 +239,20 @@ test("Should reject timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "z",
     AnalysisStartTimeZone: "z",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -264,20 +264,20 @@ test("Should reject timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "9:45",
     AnalysisStartTimeZone: "9:45",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -289,20 +289,20 @@ test("Should reject timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "-00:00:00",
     AnalysisStartTimeZone: "-00:00:00",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     2,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     2,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -314,20 +314,20 @@ test("Should reject timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "-0215",
     AnalysisStartTimeZone: "-0215",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -339,20 +339,20 @@ test("Should reject timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "-215",
     AnalysisStartTimeZone: "-215",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -364,20 +364,20 @@ test("Should reject timezone formats (strict)", async (t) => {
     ActivityEndTimeZone: "-2:15",
     AnalysisStartTimeZone: "-2:15",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateStrict.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -391,48 +391,48 @@ test("Should accept timezone formats (loose)", async (t) => {
     ActivityEndTimeZone: "Z",
     AnalysisStartTimeZone: "Z",
   });
-  t.true(valid);
-  t.is(validateBackend.errors, null);
+  assert.equal(valid, true);
+  assert.equal(validateBackend.errors, null);
 
   valid = validateBackend({
     ActivityStartTimeZone: "+02:15",
     ActivityEndTimeZone: "+02:15",
     AnalysisStartTimeZone: "+02:15",
   });
-  t.true(valid);
-  t.is(validateBackend.errors, null);
+  assert.equal(valid, true);
+  assert.equal(validateBackend.errors, null);
 
   valid = validateBackend({
     ActivityStartTimeZone: "-02:15",
     ActivityEndTimeZone: "-02:15",
     AnalysisStartTimeZone: "-02:15",
   });
-  t.true(valid);
-  t.is(validateBackend.errors, null);
+  assert.equal(valid, true);
+  assert.equal(validateBackend.errors, null);
 
   valid = validateBackend({
     ActivityStartTimeZone: "-0215",
     ActivityEndTimeZone: "-0215",
     AnalysisStartTimeZone: "-0215",
   });
-  t.true(valid);
-  t.is(validateBackend.errors, null);
+  assert.equal(valid, true);
+  assert.equal(validateBackend.errors, null);
 
   valid = validateBackend({
     ActivityStartTimeZone: "-215",
     ActivityEndTimeZone: "-215",
     AnalysisStartTimeZone: "-215",
   });
-  t.true(valid);
-  t.is(validateBackend.errors, null);
+  assert.equal(valid, true);
+  assert.equal(validateBackend.errors, null);
 
   valid = validateBackend({
     ActivityStartTimeZone: "-2:15",
     ActivityEndTimeZone: "-2:15",
     AnalysisStartTimeZone: "-2:15",
   });
-  t.true(valid);
-  t.is(validateBackend.errors, null);
+  assert.equal(valid, true);
+  assert.equal(validateBackend.errors, null);
 });
 
 test("Should reject timezone formats (loose)", async (t) => {
@@ -441,20 +441,20 @@ test("Should reject timezone formats (loose)", async (t) => {
     ActivityEndTimeZone: "z",
     AnalysisStartTimeZone: "z",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -466,20 +466,20 @@ test("Should reject timezone formats (loose)", async (t) => {
     ActivityEndTimeZone: "9:45",
     AnalysisStartTimeZone: "9:45",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     1,
   );
-  t.is(
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -491,20 +491,20 @@ test("Should reject timezone formats (loose)", async (t) => {
     ActivityEndTimeZone: "-00:00:00",
     AnalysisStartTimeZone: "-00:00:00",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/ActivityStartTimeZone",
     ).length,
     2,
   );
-  t.is(
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/ActivityEndTimeZone",
     ).length,
     2,
   );
-  t.is(
+  assert.equal(
     validateBackend.errors.filter(
       (i) => i.instancePath === "/AnalysisStartTimeZone",
     ).length,
@@ -516,68 +516,68 @@ test("Should pass CSV Injection check", async (t) => {
   validate({
     ResultComment: "Bar River",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), false);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), false);
 });
 
 test("Should reject CSV Injection check when leading space", async (t) => {
   validate({
     ResultComment: " test",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading caragereturn", async (t) => {
   validate({
     ResultComment: "\rtest",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading newline", async (t) => {
   validate({
     ResultComment: "\ntest",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading tab", async (t) => {
   validate({
     ResultComment: "\ttest",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading =", async (t) => {
   validate({
     ResultComment: "=test",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading +", async (t) => {
   validate({
     ResultComment: "+test",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading -", async (t) => {
   validate({
     ResultComment: "-test",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading @", async (t) => {
   validate({
     ResultComment: "@test",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });
 
 test("Should reject CSV Injection check when leading null char", async (t) => {
   validate({
     ResultComment: "\x00test",
   });
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
 });

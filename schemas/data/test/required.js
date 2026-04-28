@@ -1,5 +1,5 @@
-import test from "ava";
-
+import { test } from "node:test";
+import assert from "node:assert/strict";
 import validate from "../frontend/index.js";
 
 const checkProperty = (errors, keyword, property) => {
@@ -62,37 +62,37 @@ const checkProperty = (errors, keyword, property) => {
 test("Should not set any defaults", async (t) => {
   const data = {};
   const valid = validate(data);
-  t.false(valid);
-  t.deepEqual(data, {});
+  assert.equal(valid, false);
+  assert.deepEqual(data, {});
 });
 
 test("Should require properties", async (t) => {
   const valid = validate({});
-  t.is(valid, false);
+  assert.equal(valid, false);
 
   // #/allOf/0
-  t.is(checkProperty(validate.errors, "required", "DatasetName"), true);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "required", "DatasetName"), true);
+  assert.equal(
     checkProperty(validate.errors, "required", "MonitoringLocationID"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "required", "MonitoringLocationName"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "required", "MonitoringLocationType"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "required", "MonitoringLocationLatitude"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "required", "MonitoringLocationLongitude"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "required",
@@ -100,11 +100,11 @@ test("Should require properties", async (t) => {
     ),
     true,
   );
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), true);
-  t.is(checkProperty(validate.errors, "required", "ActivityMediaName"), true);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartDate"), true);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), true);
-  t.is(checkProperty(validate.errors, "required", "ResultValueType"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityType"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityStartDate"), true);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ResultValueType"), true);
 });
 
 test("Should not require properties", async (t) => {
@@ -142,15 +142,15 @@ test("Should not require properties", async (t) => {
     AnalysisStartTime: "13:15:00",
     AnalysisStartTimeZone: "-06:00",
   });
-  t.is(valid, true);
+  assert.equal(valid, true);
 });
 
 test("Should reject additional headers", async (t) => {
   const valid = validate({
     MonitoringLocationWaterBody: "Lake",
   });
-  t.is(valid, false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "unevaluatedProperties",
@@ -164,8 +164,8 @@ test("Should reject ActivityDepthHeightMeasure AND NOT ActivityDepthHeightUnit",
   const valid = validate({
     ActivityDepthHeightMeasure: true,
   });
-  t.is(valid, false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ActivityDepthHeightUnit"),
     true,
   );
@@ -175,8 +175,8 @@ test("Should accept ActivityDepthHeightMeasure AND ActivityDepthHeightUnit", asy
     ActivityDepthHeightMeasure: true,
     ActivityDepthHeightUnit: true,
   });
-  t.is(valid, false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ActivityDepthHeightUnit"),
     false,
   );
@@ -186,24 +186,24 @@ test("Should reject ResultValue AND NOT ResultUnit", async (t) => {
   const valid = validate({
     ResultValue: true,
   });
-  t.is(valid, false);
-  t.is(checkProperty(validate.errors, "dependencies", "ResultUnit"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "ResultUnit"), true);
 });
 test("Should reject ResultValue AND ResultUnit", async (t) => {
   const valid = validate({
     ResultValue: true,
     ResultUnit: true,
   });
-  t.is(valid, false);
-  t.is(checkProperty(validate.errors, "dependencies", "ResultUnit"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "ResultUnit"), false);
 });
 
 test("Should reject ResultDetectionQuantitationLimitMeasure AND NOT ResultDetectionQuantitationLimit{Unit,Type}", async (t) => {
   const valid = validate({
     ResultDetectionQuantitationLimitMeasure: true,
   });
-  t.is(valid, false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -211,7 +211,7 @@ test("Should reject ResultDetectionQuantitationLimitMeasure AND NOT ResultDetect
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -226,8 +226,8 @@ test("Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQ
     ResultDetectionQuantitationLimitUnit: true,
     ResultDetectionQuantitationLimitType: true,
   });
-  t.is(valid, false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -235,7 +235,7 @@ test("Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQ
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -249,8 +249,8 @@ test("Should reject AnalysisStartTime AND NOT AnalysisStartTimeZone", async (t) 
   const valid = validate({
     AnalysisStartTime: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "AnalysisStartTimeZone"),
     true,
   );
@@ -261,8 +261,8 @@ test("Should accept AnalysisStartTime AND AnalysisStartTimeZone", async (t) => {
     AnalysisStartTime: true,
     AnalysisStartTimeZone: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "AnalysisStartTimeZone"),
     false,
   );
@@ -274,8 +274,8 @@ test("Should reject MonitoringLocationVerticalMeasure AND NOT MonitoringLocation
   const valid = validate({
     MonitoringLocationVerticalMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -289,8 +289,8 @@ test("Should accept MonitoringLocationVerticalMeasure AND MonitoringLocationVert
     MonitoringLocationVerticalMeasure: true,
     MonitoringLocationVerticalUnit: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -304,8 +304,8 @@ test("Should reject MonitoringLocationVerticalMeasure AND NOT MonitoringLocation
   const valid = validate({
     MonitoringLocationVerticalMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -319,8 +319,8 @@ test("Should accept MonitoringLocationVerticalMeasure AND MonitoringLocationVert
     MonitoringLocationVerticalMeasure: true,
     MonitoringLocationVerticalCollectionMethod: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -334,8 +334,8 @@ test("Should reject MonitoringLocationVerticalMeasure AND NOT MonitoringLocation
   const valid = validate({
     MonitoringLocationVerticalMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -349,8 +349,8 @@ test("Should accept MonitoringLocationVerticalMeasure AND MonitoringLocationVert
     MonitoringLocationVerticalMeasure: true,
     MonitoringLocationVerticalCoordinateReferenceSystem: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -364,8 +364,8 @@ test("Should reject MonitoringLocationVerticalAccuracyMeasure AND NOT Monitoring
   const valid = validate({
     MonitoringLocationVerticalAccuracyMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -379,8 +379,8 @@ test("Should accept MonitoringLocationVerticalAccuracyMeasure AND MonitoringLoca
     MonitoringLocationVerticalAccuracyMeasure: true,
     MonitoringLocationVerticalAccuracyUnit: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -394,24 +394,24 @@ test("Should reject WellID AND NOT WellIDContext", async (t) => {
   const valid = validate({
     WellID: true,
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "WellIDContext"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "WellIDContext"), true);
 });
 test("Should accept WellID AND WellIDContext", async (t) => {
   const valid = validate({
     WellID: true,
     WellIDContext: true,
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "WellIDContext"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "WellIDContext"), false);
 });
 
 test("Should reject BoreholeDepthMeasure AND NOT BoreholeDepthUnit", async (t) => {
   const valid = validate({
     BoreholeDepthMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "BoreholeDepthUnit"),
     true,
   );
@@ -421,8 +421,8 @@ test("Should accept BoreholeDepthMeasure AND BoreholeDepthUnit", async (t) => {
     BoreholeDepthMeasure: true,
     BoreholeDepthUnit: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "BoreholeDepthUnit"),
     false,
   );
@@ -432,24 +432,24 @@ test("Should reject WellDepthMeasure AND NOT WellDepthUnit", async (t) => {
   const valid = validate({
     WellDepthMeasure: true,
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "WellDepthUnit"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "WellDepthUnit"), true);
 });
 test("Should accept WellDepthMeasure AND WellDepthUnit", async (t) => {
   const valid = validate({
     WellDepthMeasure: true,
     WellDepthUnit: true,
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "WellDepthUnit"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "WellDepthUnit"), false);
 });
 
 test("Should reject WellOpenIntervalTopMeasure AND NOT WellOpenIntervalTopUnit", async (t) => {
   const valid = validate({
     WellOpenIntervalTopMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "WellOpenIntervalTopUnit"),
     true,
   );
@@ -459,8 +459,8 @@ test("Should accept WellOpenIntervalTopMeasure AND WellOpenIntervalTopUnit", asy
     WellOpenIntervalTopMeasure: true,
     WellOpenIntervalTopUnit: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "WellOpenIntervalTopUnit"),
     false,
   );
@@ -470,8 +470,8 @@ test("Should reject WellOpenIntervalBottomMeasure AND NOT WellOpenIntervalBottom
   const valid = validate({
     WellOpenIntervalBottomMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -485,8 +485,8 @@ test("Should accept WellOpenIntervalBottomMeasure AND WellOpenIntervalBottomUnit
     WellOpenIntervalBottomMeasure: true,
     WellOpenIntervalBottomUnit: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -500,8 +500,8 @@ test("Should reject ActivityDepthAltitudeReferencePointMeasure AND NOT ActivityD
   const valid = validate({
     ActivityDepthAltitudeReferencePointMeasure: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -515,8 +515,8 @@ test("Should accept ActivityDepthAltitudeReferencePointMeasure AND ActivityDepth
     ActivityDepthAltitudeReferencePointMeasure: true,
     ActivityDepthAltitudeReferencePointUnit: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -530,8 +530,8 @@ test("Should reject SampleCollectionMethodID AND NOT SampleCollectionMethodConte
   const valid = validate({
     SampleCollectionMethodID: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -545,8 +545,8 @@ test("Should accept SampleCollectionMethodID AND SampleCollectionMethodContext",
     SampleCollectionMethodID: true,
     SampleCollectionMethodContext: true,
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",

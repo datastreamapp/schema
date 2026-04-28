@@ -1,5 +1,5 @@
-import test from "ava";
-
+import { test } from "node:test";
+import assert from "node:assert/strict";
 import validate from "../frontend/index.js";
 
 const checkProperty = (errors, keyword, property) => {
@@ -61,9 +61,9 @@ test("Should accept ActivityType without ActivityStartTime for non-CTS", async (
   const valid = validate({
     ActivityType: "Field Msr/Obs",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityType"), false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
 });
 
 test("Should accept ActivityType with ActivityStartTime for non-CTS", async (t) => {
@@ -71,17 +71,17 @@ test("Should accept ActivityType with ActivityStartTime for non-CTS", async (t) 
     ActivityType: "Field Msr/Obs",
     ActivityStartTime: '13:15:00',
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityType"), false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
 });
 
 test("Should reject ActivityType Field Msr/Obs-Continuous Time Series without ActivityStartTime for CTS", async (t) => {
   const valid = validate({
     ActivityType: "Field Msr/Obs-Continuous Time Series",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityStartTime"), true);
 });
 
 test("Should accept ActivityType Field Msr/Obs-Continuous Time Series with ActivityStartTime for CTS", async (t) => {
@@ -89,9 +89,9 @@ test("Should accept ActivityType Field Msr/Obs-Continuous Time Series with Activ
     ActivityType: "Field Msr/Obs-Continuous Time Series",
     ActivityStartTime: '13:15:00',
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityType"), false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityStartTime"), false);
 });
 
 // *** ActivityType-ResultAnalyticalMethod *** //
@@ -99,13 +99,13 @@ test("Should reject ActivityType = Sample-*", async (t) => {
   const valid = validate({
     ActivityType: "Sample-Other",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), true);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "LaboratoryName"), true);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -113,7 +113,7 @@ test("Should reject ActivityType = Sample-*", async (t) => {
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -126,13 +126,13 @@ test("Should reject ActivityType = Quality Control Sample-*", async (t) => {
   const valid = validate({
     ActivityType: "Quality Control Sample-Other",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), true);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "LaboratoryName"), true);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -140,7 +140,7 @@ test("Should reject ActivityType = Quality Control Sample-*", async (t) => {
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -156,13 +156,13 @@ test("Should accept ActivityType = Sample-* w/ ResultAnalyticalMethodID & Result
     ResultAnalyticalMethodID: "0",
     ResultAnalyticalMethodContext: "ENV",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -170,7 +170,7 @@ test("Should accept ActivityType = Sample-* w/ ResultAnalyticalMethodID & Result
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -186,13 +186,13 @@ test("Should accept ActivityType = Quality Control Sample-* w/ ResultAnalyticalM
     ResultAnalyticalMethodID: "0",
     ResultAnalyticalMethodContext: "ENV",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -200,7 +200,7 @@ test("Should accept ActivityType = Quality Control Sample-* w/ ResultAnalyticalM
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -216,13 +216,13 @@ test("Should accept ActivityType = Sample-* w/ ResultAnalyticalMethodName", asyn
     LaboratoryName: "A",
     ResultAnalyticalMethodName: "Unspecified",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -230,7 +230,7 @@ test("Should accept ActivityType = Sample-* w/ ResultAnalyticalMethodName", asyn
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -245,13 +245,13 @@ test("Should accept ActivityType = Quality Control Sample-* w/ ResultAnalyticalM
     LaboratoryName: "A",
     ResultAnalyticalMethodName: "Unspecified",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "LaboratoryName"), false);
+  assert.equal(
     checkProperty(validate.errors, "dependencies", "ResultAnalyticalMethodID"),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -259,7 +259,7 @@ test("Should accept ActivityType = Quality Control Sample-* w/ ResultAnalyticalM
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -274,35 +274,35 @@ test("Should accept CharacteristicName AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Calcium",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
 });
 test("Should reject CharacteristicName Ammonia, un-ionized AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Ammonia, un-ionized",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
-  t.is(checkProperty(validate.errors, "message", "error-CharacteristicName-MethodSpeciation"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+  assert.equal(checkProperty(validate.errors, "message", "error-CharacteristicName-MethodSpeciation"), true);
 });
 test("Should reject CharacteristicName Nitrogen-15 AND NOT MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Nitrogen-15",
     LaboratoryName: "A",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
-  t.is(checkProperty(validate.errors, "message", "error-CharacteristicName-MethodSpeciation"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+  assert.equal(checkProperty(validate.errors, "message", "error-CharacteristicName-MethodSpeciation"), true);
 });
 test("Should accept CharacteristicName AND MethodSpeciation", async (t) => {
   const valid = validate({
     CharacteristicName: "Nitrate",
     MethodSpeciation: "as N",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
 });
 
 // *** CharacteristicName-Nutrient-ResultSampleFraction *** //
@@ -313,13 +313,13 @@ test("Should reject Nutrient CharacteristicName AND ResultSampleFraction", async
     ActivityType: "",
     ResultSampleFraction: "Total",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultSampleFraction"),
     false,
   );
-  t.is(checkProperty(validate.errors, "enum", "ResultSampleFraction"), true);
+  assert.equal(checkProperty(validate.errors, "enum", "ResultSampleFraction"), true);
 });
 test("Should accept Nutrient CharacteristicName AND filter ResultSampleFraction", async (t) => {
   const valid = validate({
@@ -328,13 +328,13 @@ test("Should accept Nutrient CharacteristicName AND filter ResultSampleFraction"
     ActivityType: "",
     ResultSampleFraction: "Filtered",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultSampleFraction"),
     false,
   );
-  t.is(checkProperty(validate.errors, "enum", "ResultSampleFraction"), false);
+  assert.equal(checkProperty(validate.errors, "enum", "ResultSampleFraction"), false);
 });
 test("Should accept Nutrient Sediment", async (t) => {
   const valid = validate({
@@ -343,13 +343,13 @@ test("Should accept Nutrient Sediment", async (t) => {
     ActivityType: "",
     ResultSampleFraction: "Total",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultSampleFraction"),
     false,
   );
-  t.is(checkProperty(validate.errors, "enum", "ResultSampleFraction"), false);
+  assert.equal(checkProperty(validate.errors, "enum", "ResultSampleFraction"), false);
 });
 // test('Should accept Nutrient Sediment with no sample fraction', async (t) => {
 //   let valid = validate({
@@ -359,9 +359,9 @@ test("Should accept Nutrient Sediment", async (t) => {
 //     'ResultSampleFraction': ''
 //   })
 //   console.log(validate.errors)
-//   t.is(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
-//   t.is(checkProperty(validate.errors, 'required', 'ResultSampleFraction'), false)
-//   t.is(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
+//   assert.equal(checkProperty(validate.errors, 'required', 'CharacteristicName'), false)
+//   assert.equal(checkProperty(validate.errors, 'required', 'ResultSampleFraction'), false)
+//   assert.equal(checkProperty(validate.errors, 'enum', 'ResultSampleFraction'), false)
 //
 // })
 
@@ -370,9 +370,9 @@ test("Should accept CharacteristicName AND NOT ResultSampleFraction", async (t) 
   const valid = validate({
     CharacteristicName: "Dissolved oxygen (DO)",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultSampleFraction"),
     false,
   );
@@ -381,8 +381,8 @@ test("Should rejects CharacteristicName AND NOT ResultSampleFraction", async (t)
   const valid = validate({
     CharacteristicName: "Silver",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultSampleFraction"),
     true,
   );
@@ -392,9 +392,9 @@ test("Should accept CharacteristicName AND ResultSampleFraction", async (t) => {
     CharacteristicName: "Silver",
     ResultSampleFraction: "Dissolved",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultSampleFraction"),
     false,
   );
@@ -405,35 +405,35 @@ test("Should reject StableIsotope CharacteristicName, MethodSpeciation required"
   const valid = validate({
     CharacteristicName: "Nitrogen-15",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(checkProperty(validate.errors, "required", "MethodSpeciation"), true);
 });
 test("Should reject StableIsotope CharacteristicName", async (t) => {
   const valid = validate({
     CharacteristicName: "Nitrogen-15",
     MethodSpeciation: "as NH4",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "enum", "MethodSpeciation"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(checkProperty(validate.errors, "enum", "MethodSpeciation"), true);
 });
 test("Should accept StableIsotope CharacteristicName", async (t) => {
   const valid = validate({
     CharacteristicName: "Nitrogen-15",
     MethodSpeciation: "of NH4",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "CharacteristicName"), false);
+  assert.equal(checkProperty(validate.errors, "required", "MethodSpeciation"), false);
 });
 
 // *** ResultDetectionCondition-ResultValue *** //
 test("Should reject NOT ResultValue AND NOT ResultDetectionCondition", async (t) => {
   const valid = validate({});
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ResultValue"), true);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ResultValue"), true);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultDetectionCondition"),
     true,
   );
@@ -443,9 +443,9 @@ test("Should reject ResultValue AND ResultDetectionCondition", async (t) => {
     ResultValue: 1,
     ResultDetectionCondition: "Not Reported",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "false schema", "ResultValue"), true);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "false schema", "ResultValue"), true);
+  assert.equal(
     checkProperty(validate.errors, "false schema", "ResultDetectionCondition"),
     true,
   );
@@ -455,14 +455,14 @@ test("Should accept ResultValue OR ResultDetectionCondition", async (t) => {
   let valid = validate({
     ResultValue: 1,
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ResultValue"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ResultValue"), false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultDetectionCondition"),
     false,
   );
-  t.is(checkProperty(validate.errors, "enum", "ResultValue"), false);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "enum", "ResultValue"), false);
+  assert.equal(
     checkProperty(validate.errors, "enum", "ResultDetectionCondition"),
     false,
   );
@@ -470,14 +470,14 @@ test("Should accept ResultValue OR ResultDetectionCondition", async (t) => {
   valid = validate({
     ResultDetectionCondition: "Not Reported",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ResultValue"), false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ResultValue"), false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ResultDetectionCondition"),
     false,
   );
-  t.is(checkProperty(validate.errors, "enum", "ResultValue"), false);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "enum", "ResultValue"), false);
+  assert.equal(
     checkProperty(validate.errors, "enum", "ResultDetectionCondition"),
     false,
   );
@@ -488,8 +488,8 @@ test("Should reject ResultDetectionCondition = Present Above Quantification Limi
   const valid = validate({
     ResultDetectionCondition: "Present Above Quantification Limit",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -497,7 +497,7 @@ test("Should reject ResultDetectionCondition = Present Above Quantification Limi
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -505,7 +505,7 @@ test("Should reject ResultDetectionCondition = Present Above Quantification Limi
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -520,8 +520,8 @@ test("Should reject ResultDetectionCondition = Present Below Quantification Limi
     ResultValue: 1,
     ResultDetectionCondition: "Present Below Quantification Limit",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -529,7 +529,7 @@ test("Should reject ResultDetectionCondition = Present Below Quantification Limi
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -537,7 +537,7 @@ test("Should reject ResultDetectionCondition = Present Below Quantification Limi
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -555,8 +555,8 @@ test("Should accept ResultDetectionCondition", async (t) => {
     ResultDetectionQuantitationLimitMeasure: 1,
     ResultDetectionQuantitationLimitUnit: "mg/L",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -564,7 +564,7 @@ test("Should accept ResultDetectionCondition", async (t) => {
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -572,7 +572,7 @@ test("Should accept ResultDetectionCondition", async (t) => {
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "dependencies",
@@ -590,8 +590,8 @@ test("Should reject ResultDetectionCondition = Not Detected", async (t) => {
     ResultDetectionQuantitationLimitMeasure: 0,
     ResultDetectionQuantitationLimitUnit: "None",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "false schema",
@@ -599,7 +599,7 @@ test("Should reject ResultDetectionCondition = Not Detected", async (t) => {
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "false schema",
@@ -607,7 +607,7 @@ test("Should reject ResultDetectionCondition = Not Detected", async (t) => {
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "false schema",
@@ -621,8 +621,8 @@ test("Should accept ResultDetectionCondition = Not Detected", async (t) => {
   const valid = validate({
     ResultDetectionCondition: "Not Detected",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -630,7 +630,7 @@ test("Should accept ResultDetectionCondition = Not Detected", async (t) => {
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -638,7 +638,7 @@ test("Should accept ResultDetectionCondition = Not Detected", async (t) => {
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -655,8 +655,8 @@ test("Should reject ResultDetectionCondition = Detected Not Quantified", async (
     ResultDetectionQuantitationLimitMeasure: 0,
     ResultDetectionQuantitationLimitUnit: "None",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "false schema",
@@ -664,7 +664,7 @@ test("Should reject ResultDetectionCondition = Detected Not Quantified", async (
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "false schema",
@@ -672,7 +672,7 @@ test("Should reject ResultDetectionCondition = Detected Not Quantified", async (
     ),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "false schema",
@@ -686,8 +686,8 @@ test("Should accept ResultDetectionCondition = Detected Not Quantified", async (
   const valid = validate({
     ResultDetectionCondition: "Detected Not Quantified",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -695,7 +695,7 @@ test("Should accept ResultDetectionCondition = Detected Not Quantified", async (
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -703,7 +703,7 @@ test("Should accept ResultDetectionCondition = Detected Not Quantified", async (
     ),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -726,24 +726,24 @@ carriage return`,
     LaboratoryName: "\rcarriage return",
     LaboratorySampleID: "\ttab",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), true);
-  t.is(checkProperty(validate.errors, "pattern", "MonitoringLocationID"), true);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "pattern", "DatasetName"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "MonitoringLocationID"), true);
+  assert.equal(
     checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
     true,
   );
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), true);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+  assert.equal(
     checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodID"),
     true,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodName"),
     true,
   );
-  t.is(checkProperty(validate.errors, "pattern", "LaboratoryName"), true);
-  t.is(checkProperty(validate.errors, "pattern", "LaboratorySampleID"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "LaboratoryName"), true);
+  assert.equal(checkProperty(validate.errors, "pattern", "LaboratorySampleID"), true);
 });
 
 test("Should accept columns without potential csv injection", async (t) => {
@@ -757,28 +757,28 @@ test("Should accept columns without potential csv injection", async (t) => {
     LaboratoryName: "_",
     LaboratorySampleID: "*",
   });
-  t.false(valid);
+  assert.equal(valid, false);
   // console.log(valid, JSON.stringify(validate.errors, null, 2))
-  t.is(checkProperty(validate.errors, "pattern", "DatasetName"), false);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "pattern", "DatasetName"), false);
+  assert.equal(
     checkProperty(validate.errors, "pattern", "MonitoringLocationID"),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "MonitoringLocationName"),
     false,
   );
-  t.is(checkProperty(validate.errors, "pattern", "ResultComment"), false);
-  t.is(
+  assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), false);
+  assert.equal(
     checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodID"),
     false,
   );
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, "pattern", "ResultAnalyticalMethodName"),
     false,
   );
-  t.is(checkProperty(validate.errors, "pattern", "LaboratoryName"), false);
-  t.is(checkProperty(validate.errors, "pattern", "LaboratorySampleID"), false);
+  assert.equal(checkProperty(validate.errors, "pattern", "LaboratoryName"), false);
+  assert.equal(checkProperty(validate.errors, "pattern", "LaboratorySampleID"), false);
 });
 
 // *** ResultUnit-Salinity *** //
@@ -788,16 +788,16 @@ test("Should accept when Salinity and expected unit", async (t) => {
     ResultValue: 0,
     ResultUnit: "PSU",
   });
-  t.is(valid, false);
-  t.is(checkProperty(validate.errors, "enum", "ResultUnit"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "enum", "ResultUnit"), false);
 });
 test("Should reject when Salinity and `ppt`", async (t) => {
   const valid = validate({
     CharacteristicName: "Salinity",
     ResultUnit: "ppt",
   });
-  t.is(valid, false);
-  t.is(checkProperty(validate.errors, "enum", "ResultUnit"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "enum", "ResultUnit"), true);
 });
 
 // *** ResultDetectionQuantitationLimitUnit-Salinity *** //
@@ -807,8 +807,8 @@ test("Should accept when Salinity and expected ResultDetectionQuantitationLimitU
     ResultDetectionQuantitationLimitMeasure: 0,
     ResultDetectionQuantitationLimitUnit: "PSU",
   });
-  t.is(valid, false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -823,8 +823,8 @@ test("Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`
     ResultDetectionQuantitationLimitMeasure: 0,
     ResultDetectionQuantitationLimitUnit: "ppt",
   });
-  t.is(valid, false);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(
       validate.errors,
       "enum",
@@ -839,24 +839,24 @@ test("Should reject Well MonitoringLocationType without WellUseType", async (t) 
   const valid = validate({
     MonitoringLocationType: "Well",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "WellUseType"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "WellUseType"), true);
 });
 
 test("Should reject Piezometer MonitoringLocationType without WellUseType", async (t) => {
   const valid = validate({
     MonitoringLocationType: "Piezometer",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "WellUseType"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "WellUseType"), true);
 });
 
 test("Should reject Dug Well MonitoringLocationType without WellUseType", async (t) => {
   const valid = validate({
     MonitoringLocationType: "Dug Well",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "WellUseType"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "WellUseType"), true);
 });
 
 test("Should accept Well MonitoringLocationType with WellUseType", async (t) => {
@@ -864,16 +864,16 @@ test("Should accept Well MonitoringLocationType with WellUseType", async (t) => 
     MonitoringLocationType: "Well",
     WellUseType: "Monitoring - Ambient",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "WellUseType"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "WellUseType"), false);
 });
 
 test("Should accept non-well MonitoringLocationType without WellUseType", async (t) => {
   const valid = validate({
     MonitoringLocationType: "River/Stream",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "WellUseType"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "WellUseType"), false);
 });
 
 // *** MonitoringLocationType-Well-SampleCondition *** //
@@ -882,8 +882,8 @@ test("Should reject Well without SampleCondition for non-CTS", async (t) => {
     MonitoringLocationType: "Well",
     ActivityType: "Field Msr/Obs",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "SampleCondition"), true);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "SampleCondition"), true);
 });
 
 test("Should accept Well without SampleCondition for CTS", async (t) => {
@@ -892,8 +892,8 @@ test("Should accept Well without SampleCondition for CTS", async (t) => {
     ActivityType: "Field Msr/Obs-Continuous Time Series",
     ActivityStartTime: "13:15:00",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "SampleCondition"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "SampleCondition"), false);
 });
 
 test("Should accept Well with SampleCondition for non-CTS", async (t) => {
@@ -902,8 +902,8 @@ test("Should accept Well with SampleCondition for non-CTS", async (t) => {
     ActivityType: "Field Msr/Obs",
     SampleCondition: "Static",
   });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "SampleCondition"), false);
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "SampleCondition"), false);
 });
 
 // *** ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint *** //
@@ -912,8 +912,8 @@ test("Should reject ActivityDepthHeightMeasure without ActivityDepthAltitudeRefe
     ActivityDepthHeightMeasure: -5,
     ActivityDepthHeightUnit: "m",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
     true,
   );
@@ -925,8 +925,8 @@ test("Should accept ActivityDepthHeightMeasure with ActivityDepthAltitudeReferen
     ActivityDepthHeightUnit: "m",
     ActivityDepthAltitudeReferencePoint: "Ground surface",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
     false,
   );
@@ -939,8 +939,8 @@ test("Should reject Water level CharacteristicName without ActivityDepthAltitude
     ResultValue: -10,
     ResultUnit: "m",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
     true,
   );
@@ -953,8 +953,8 @@ test("Should accept Water level CharacteristicName with ActivityDepthAltitudeRef
     ResultUnit: "m",
     ActivityDepthAltitudeReferencePoint: "Top of well casing",
   });
-  t.false(valid);
-  t.is(
+  assert.equal(valid, false);
+  assert.equal(
     checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
     false,
   );
@@ -983,8 +983,8 @@ test("Should accept Water level CharacteristicName with ActivityDepthAltitudeRef
   })
   console.log(validate.errors)
   console.log(validate.errors[0].params)
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(
       validate.errors,
       'enum',

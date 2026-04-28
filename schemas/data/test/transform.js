@@ -1,5 +1,5 @@
-import test from 'ava'
-
+import { test } from "node:test";
+import assert from "node:assert/strict";
 import validate from '../frontend/index.js'
 import validateBackend from '../backend/index.js'
 
@@ -40,7 +40,7 @@ test('Should transform values (frontend)', async (t) => {
     AnalysisStartTimeZone: '-06:00'
   })
   //console.log(valid, JSON.stringify(validate.errors, null, 2))
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should transform values (backend)', async (t) => {
@@ -79,5 +79,5 @@ test('Should transform values (backend)', async (t) => {
     AnalysisStartTimeZone: '-06:00'
   })
   //console.log(valid, JSON.stringify(validateBackend.errors, null, 2))
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
