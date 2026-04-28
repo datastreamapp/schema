@@ -89,6 +89,7 @@ pre definitions
 deref definitions
 sast definitions
 clean definitions '.errorMessage?'
+cp src/definitions.build.json json-schema/definitions.json
 
 # primary - strict
 pre primary
@@ -135,7 +136,7 @@ sast quality-control
 transpile quality-control '' --loop-enum ${maxEnumLength}  --use-defaults empty --all-errors
 post quality-control
 
-mv src/definitions.build.json json-schema/definitions.json
+rm src/definitions.build.json
 
 # locales
 locale en-CA
