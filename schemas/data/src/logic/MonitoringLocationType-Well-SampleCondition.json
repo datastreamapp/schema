@@ -7,6 +7,9 @@
     "type": "object",
     "unevaluatedProperties": true,
     "properties": {
+      "ActivityMediaName": {
+        "enum": ["Groundwater", "Porewater"]
+      },
       "MonitoringLocationType": {
         "enum": ["Dug Well", "Multilevel Well", "Nested Well", "Piezometer", "Well"]
       },
@@ -16,7 +19,7 @@
         }
       }
     },
-    "required": ["MonitoringLocationType", "ActivityType"]
+    "required": ["ActivityMediaName", "MonitoringLocationType", "ActivityType"]
   },
   "then": {
     "type": "object",

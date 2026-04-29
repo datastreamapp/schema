@@ -7,9 +7,12 @@
     "type": "object",
     "unevaluatedProperties": true,
     "properties": {
+      "ActivityMediaName": {
+        "enum": ["Groundwater", "Porewater"]
+      },
       "ActivityDepthHeightMeasure": true
     },
-    "required": ["ActivityDepthHeightMeasure"]
+    "required": ["ActivityMediaName", "ActivityDepthHeightMeasure"]
   },
   "then": {
     "type": "object",

@@ -7,11 +7,14 @@
     "type": "object",
     "unevaluatedProperties": true,
     "properties": {
+      "ActivityMediaName": {
+        "enum": ["Groundwater", "Porewater"]
+      },
       "CharacteristicName": {
         "enum": ["Water level in well, depth from a reference point"]
       }
     },
-    "required": ["CharacteristicName"]
+    "required": ["ActivityMediaName", "CharacteristicName"]
   },
   "then": {
     "type": "object",

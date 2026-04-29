@@ -837,6 +837,7 @@ test("Should reject when Salinity and ResultDetectionQuantitationLimitUnit=`ppt`
 // *** MonitoringLocationType-Well-WellUseType *** //
 test("Should reject Well MonitoringLocationType without WellUseType", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     MonitoringLocationType: "Well",
   });
   assert.equal(valid, false);
@@ -845,6 +846,7 @@ test("Should reject Well MonitoringLocationType without WellUseType", async (t) 
 
 test("Should reject Piezometer MonitoringLocationType without WellUseType", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     MonitoringLocationType: "Piezometer",
   });
   assert.equal(valid, false);
@@ -853,6 +855,7 @@ test("Should reject Piezometer MonitoringLocationType without WellUseType", asyn
 
 test("Should reject Dug Well MonitoringLocationType without WellUseType", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     MonitoringLocationType: "Dug Well",
   });
   assert.equal(valid, false);
@@ -861,6 +864,7 @@ test("Should reject Dug Well MonitoringLocationType without WellUseType", async 
 
 test("Should accept Well MonitoringLocationType with WellUseType", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     MonitoringLocationType: "Well",
     WellUseType: "Monitoring - Ambient",
   });
@@ -870,6 +874,7 @@ test("Should accept Well MonitoringLocationType with WellUseType", async (t) => 
 
 test("Should accept non-well MonitoringLocationType without WellUseType", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Surface Water",
     MonitoringLocationType: "River/Stream",
   });
   assert.equal(valid, false);
@@ -879,6 +884,7 @@ test("Should accept non-well MonitoringLocationType without WellUseType", async 
 // *** MonitoringLocationType-Well-SampleCondition *** //
 test("Should reject Well without SampleCondition for non-CTS", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     MonitoringLocationType: "Well",
     ActivityType: "Field Msr/Obs",
   });
@@ -888,6 +894,7 @@ test("Should reject Well without SampleCondition for non-CTS", async (t) => {
 
 test("Should accept Well without SampleCondition for CTS", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     MonitoringLocationType: "Well",
     ActivityType: "Field Msr/Obs-Continuous Time Series",
     ActivityStartTime: "13:15:00",
@@ -898,6 +905,7 @@ test("Should accept Well without SampleCondition for CTS", async (t) => {
 
 test("Should accept Well with SampleCondition for non-CTS", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     MonitoringLocationType: "Well",
     ActivityType: "Field Msr/Obs",
     SampleCondition: "Static",
@@ -909,6 +917,7 @@ test("Should accept Well with SampleCondition for non-CTS", async (t) => {
 // *** ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint *** //
 test("Should reject ActivityDepthHeightMeasure without ActivityDepthAltitudeReferencePoint", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     ActivityDepthHeightMeasure: -5,
     ActivityDepthHeightUnit: "m",
   });
@@ -921,6 +930,7 @@ test("Should reject ActivityDepthHeightMeasure without ActivityDepthAltitudeRefe
 
 test("Should accept ActivityDepthHeightMeasure with ActivityDepthAltitudeReferencePoint", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     ActivityDepthHeightMeasure: -5,
     ActivityDepthHeightUnit: "m",
     ActivityDepthAltitudeReferencePoint: "Ground surface",
@@ -932,9 +942,23 @@ test("Should accept ActivityDepthHeightMeasure with ActivityDepthAltitudeReferen
   );
 });
 
+test("Should accept ActivityDepthHeightMeasure without ActivityDepthAltitudeReferencePoint for non-GW media", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    ActivityDepthHeightMeasure: -5,
+    ActivityDepthHeightUnit: "m",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
+    false,
+  );
+});
+
 // *** CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint *** //
 test("Should reject Water level CharacteristicName without ActivityDepthAltitudeReferencePoint", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     CharacteristicName: "Water level in well, depth from a reference point",
     ResultValue: -10,
     ResultUnit: "m",
@@ -948,6 +972,7 @@ test("Should reject Water level CharacteristicName without ActivityDepthAltitude
 
 test("Should accept Water level CharacteristicName with ActivityDepthAltitudeReferencePoint", async (t) => {
   const valid = validate({
+    ActivityMediaName: "Groundwater",
     CharacteristicName: "Water level in well, depth from a reference point",
     ResultValue: -10,
     ResultUnit: "m",

@@ -120,7 +120,6 @@ test("Should not require properties", async (t) => {
     ActivityMediaName: "Surface Water",
     ActivityDepthHeightMeasure: "-34",
     ActivityDepthHeightUnit: "m",
-    ActivityDepthAltitudeReferencePoint: "Ground surface",
     SampleCollectionEquipmentName: "Bucket",
     CharacteristicName: "Sulfur",
     MethodSpeciation: "as B",
