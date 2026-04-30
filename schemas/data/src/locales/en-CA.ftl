@@ -92,6 +92,7 @@ error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required fo
 error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data (https://datastream.org/en-ca/documentation/isotope-data-guidance)
 error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required for CharacteristicName 'Water level in well, depth from a reference point'
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
+error-GroundwaterFields-ActivityMediaName-Groundwater = ActivityMediaName must be Groundwater or Porewater when a Groundwater-specific field is reported
 error-MonitoringLocationType-Well-WellUseType = WellUseType is required when MonitoringLocationType is a well or piezometer
 error-MonitoringLocationType-Well-SampleCondition = SampleCondition is required when MonitoringLocationType is a well or piezometer (except for Continuous Time Series activities)
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below = ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits

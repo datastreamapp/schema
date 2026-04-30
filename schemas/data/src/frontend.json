@@ -357,6 +357,9 @@
     },
     {
       "$ref": "./logic/ActivityMediaName-Groundwater-DepthMeasure.json"
+    },
+    {
+      "$ref": "./logic/GroundwaterFields-ActivityMediaName-Groundwater.json"
     }
   ]
 }

@@ -1038,6 +1038,112 @@ test("Should accept non-GW ActivityMediaName without any depth measure", async (
   assert.equal(checkProperty(validate.errors, "required", "ActivityDepthHeightMeasure"), false);
 });
 
+// *** GroundwaterFields-ActivityMediaName-Groundwater *** //
+test("Should reject Surface Water with WellID (GW-only field)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    MonitoringLocationType: "River/Stream",
+    WellID: "well-123",
+    WellIDContext: "AB",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    true,
+  );
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+});
+
+test("Should reject Surface Water with AquiferCode (GW-only field)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    MonitoringLocationType: "River/Stream",
+    AquiferCode: "AQ-01",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    true,
+  );
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+});
+
+test("Should reject Surface Water with WellDepthMeasure (GW-only field)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    MonitoringLocationType: "River/Stream",
+    WellDepthMeasure: -10,
+    WellDepthUnit: "m",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    true,
+  );
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+});
+
+test("Should reject GW field without ActivityMediaName at all", async (t) => {
+  const valid = validate({
+    MonitoringLocationType: "Well",
+    WellID: "well-123",
+    WellIDContext: "AB",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    true,
+  );
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), true);
+});
+
+test("Should accept Groundwater with WellID and WellUseType (GW fields allowed)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Groundwater",
+    MonitoringLocationType: "Well",
+    WellID: "well-123",
+    WellIDContext: "AB",
+    WellUseType: "Domestic",
+    WellDepthMeasure: -10,
+    WellDepthUnit: "m",
+    SampleCondition: "Static, before pumping or purging",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    false,
+  );
+});
+
+test("Should accept Surface Water with vertical accuracy fields (not GW-restricted)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    MonitoringLocationType: "River/Stream",
+    MonitoringLocationVerticalAccuracyMeasure: 0.5,
+    MonitoringLocationVerticalAccuracyUnit: "m",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    false,
+  );
+});
+
+test("Should accept Surface Water with SampleCollectionMethod fields (not GW-restricted)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    MonitoringLocationType: "River/Stream",
+    SampleCollectionMethodID: "method-1",
+    SampleCollectionMethodContext: "USEPA",
+    SampleCollectionMethodName: "Test method",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    false,
+  );
+});
+
 // *** one off *** //
 /*test('one off', async (t) => {
   const valid = validate({
