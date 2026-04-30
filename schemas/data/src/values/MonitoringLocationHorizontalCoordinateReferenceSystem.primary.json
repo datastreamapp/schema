@@ -6,6 +6,7 @@
   "enum": [
     "NAD27",
     "NAD83",
+    "OTHER",
     "UNKWN",
     "WGS72",
     "WGS84"

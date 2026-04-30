@@ -68,7 +68,7 @@
           "$ref": "./definitions.json#/definitions/WellUseTypeStrict"
         },
         "AquiferCode": {
-          "$ref": "./definitions.json#/definitions/AquiferCodeStrict"
+          "$ref": "./definitions.json#/definitions/AquiferCode"
         },
         "AquiferUnitName": {
           "$ref": "./definitions.json#/definitions/AquiferUnitNameStrict"
@@ -314,6 +314,9 @@
     },
     {
       "$ref": "./logic/CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint.json"
+    },
+    {
+      "$ref": "./logic/ActivityMediaName-Groundwater-DepthMeasure.json"
     }
   ]
 }

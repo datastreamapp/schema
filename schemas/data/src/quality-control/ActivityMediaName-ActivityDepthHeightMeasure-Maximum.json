@@ -9,6 +9,7 @@
     "properties": {
       "ActivityMediaName": {
         "enum": [
+          "Groundwater",
           "Ocean Water",
           "Porewater",
           "Rainwater",

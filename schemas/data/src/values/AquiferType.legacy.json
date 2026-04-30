@@ -4,6 +4,7 @@
   "description": "",
   "type": "string",
   "enum": [
+    "ARTESIAN",
     "CONFINED",
     "SEMI-CONFINED",
     "UNCONFINED"

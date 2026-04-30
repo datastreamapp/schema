@@ -27,7 +27,6 @@ export const subsetOnly = [
 export const custom = [
   "AquiferUnitName",
   "WellIDContext",
-  "AquiferCode",
   "AquiferUnitPorosityType",
   "ActivityDepthAltitudeReferencePoint",
   "SampleCondition",

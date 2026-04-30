@@ -81,8 +81,8 @@
           "transform": ["trim", "toEnumCase"]
         },
         "AquiferCode": {
-          "$ref": "./definitions.json#/definitions/AquiferCodeLoose",
-          "transform": ["trim", "toEnumCase"]
+          "$ref": "./definitions.json#/definitions/AquiferCode",
+          "transform": ["trim"]
         },
         "AquiferUnitName": {
           "$ref": "./definitions.json#/definitions/AquiferUnitNameLoose",

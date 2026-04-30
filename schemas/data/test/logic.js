@@ -27,7 +27,7 @@ const checkProperty = (errors, keyword, property) => {
       error.params.passingSchemas.includes(property)
     ) {
       return true;
-    } else if (keyword === "anyOf") return true;
+    } else if (keyword === "anyOf") return true; // anyOf branches surface as nested `required` errors inside errorMessage; query those directly via keyword="required" for property-specific assertions.
     else if (keyword === "not" && error.instancePath.includes(property)) {
       return true;
     } else if (keyword === "enum" && error.instancePath.includes(property)) {
@@ -983,6 +983,59 @@ test("Should accept Water level CharacteristicName with ActivityDepthAltitudeRef
     checkProperty(validate.errors, "required", "ActivityDepthAltitudeReferencePoint"),
     false,
   );
+});
+
+// *** ActivityMediaName-Groundwater-DepthMeasure *** //
+test("Should reject Groundwater ActivityMediaName without any depth measure", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Groundwater",
+    MonitoringLocationType: "Well",
+    WellUseType: "Domestic",
+  });
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "BoreholeDepthMeasure"), true);
+  assert.equal(checkProperty(validate.errors, "required", "WellDepthMeasure"), true);
+  assert.equal(checkProperty(validate.errors, "required", "WellOpenIntervalTopMeasure"), true);
+  assert.equal(checkProperty(validate.errors, "required", "WellOpenIntervalBottomMeasure"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityDepthHeightMeasure"), true);
+});
+
+test("Should accept Groundwater ActivityMediaName with WellDepthMeasure", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Groundwater",
+    MonitoringLocationType: "Well",
+    WellUseType: "Domestic",
+    WellDepthMeasure: -10,
+    WellDepthUnit: "m",
+  });
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "WellDepthMeasure"), false);
+  assert.equal(checkProperty(validate.errors, "required", "BoreholeDepthMeasure"), false);
+});
+
+test("Should accept Groundwater ActivityMediaName with ActivityDepthHeightMeasure", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Groundwater",
+    MonitoringLocationType: "Well",
+    WellUseType: "Domestic",
+    ActivityDepthHeightMeasure: -5,
+    ActivityDepthHeightUnit: "m",
+    ActivityDepthAltitudeReferencePoint: "Ground surface",
+  });
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityDepthHeightMeasure"), false);
+  assert.equal(checkProperty(validate.errors, "required", "BoreholeDepthMeasure"), false);
+});
+
+test("Should accept non-GW ActivityMediaName without any depth measure", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    MonitoringLocationType: "River/Stream",
+  });
+  assert.equal(valid, false);
+  assert.equal(checkProperty(validate.errors, "required", "BoreholeDepthMeasure"), false);
+  assert.equal(checkProperty(validate.errors, "required", "WellDepthMeasure"), false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityDepthHeightMeasure"), false);
 });
 
 // *** one off *** //

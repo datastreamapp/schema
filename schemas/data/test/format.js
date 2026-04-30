@@ -45,6 +45,8 @@ const checkProperty = (errors, keyword, property) => {
       error.instancePath.includes(property)
     ) {
       return true;
+    } else if (keyword === "maxLength" && error.instancePath.includes(property)) {
+      return true;
     } else if (keyword === "pattern") return true;
   }
   return false;
@@ -580,4 +582,96 @@ test("Should reject CSV Injection check when leading null char", async (t) => {
     ResultComment: "\x00test",
   });
   assert.equal(checkProperty(validate.errors, "pattern", "ResultComment"), true);
+});
+
+// *** Range constraints — GW measure fields *** //
+test("Should reject BoreholeDepthMeasure > 0", async (t) => {
+  validate({ BoreholeDepthMeasure: 1, BoreholeDepthUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "BoreholeDepthMeasure"), true);
+});
+test("Should accept BoreholeDepthMeasure <= 0", async (t) => {
+  validate({ BoreholeDepthMeasure: -10, BoreholeDepthUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "BoreholeDepthMeasure"), false);
+});
+
+test("Should reject WellDepthMeasure > 0", async (t) => {
+  validate({ WellDepthMeasure: 1, WellDepthUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "WellDepthMeasure"), true);
+});
+test("Should accept WellDepthMeasure <= 0", async (t) => {
+  validate({ WellDepthMeasure: -10, WellDepthUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "WellDepthMeasure"), false);
+});
+
+test("Should reject WellOpenIntervalTopMeasure > 0", async (t) => {
+  validate({ WellOpenIntervalTopMeasure: 1, WellOpenIntervalTopUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "WellOpenIntervalTopMeasure"), true);
+});
+test("Should accept WellOpenIntervalTopMeasure <= 0", async (t) => {
+  validate({ WellOpenIntervalTopMeasure: -5, WellOpenIntervalTopUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "WellOpenIntervalTopMeasure"), false);
+});
+
+test("Should reject WellOpenIntervalBottomMeasure > 0", async (t) => {
+  validate({ WellOpenIntervalBottomMeasure: 1, WellOpenIntervalBottomUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "WellOpenIntervalBottomMeasure"), true);
+});
+test("Should accept WellOpenIntervalBottomMeasure <= 0", async (t) => {
+  validate({ WellOpenIntervalBottomMeasure: -10, WellOpenIntervalBottomUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "maximum", "WellOpenIntervalBottomMeasure"), false);
+});
+
+test("Should reject MonitoringLocationVerticalAccuracyMeasure < 0", async (t) => {
+  validate({ MonitoringLocationVerticalAccuracyMeasure: -1, MonitoringLocationVerticalAccuracyUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "minimum", "MonitoringLocationVerticalAccuracyMeasure"), true);
+});
+test("Should accept MonitoringLocationVerticalAccuracyMeasure >= 0", async (t) => {
+  validate({ MonitoringLocationVerticalAccuracyMeasure: 5, MonitoringLocationVerticalAccuracyUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "minimum", "MonitoringLocationVerticalAccuracyMeasure"), false);
+});
+
+test("Should reject ActivityDepthAltitudeReferencePointMeasure < 0", async (t) => {
+  validate({ ActivityDepthAltitudeReferencePointMeasure: -1, ActivityDepthAltitudeReferencePointUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "minimum", "ActivityDepthAltitudeReferencePointMeasure"), true);
+});
+test("Should accept ActivityDepthAltitudeReferencePointMeasure >= 0", async (t) => {
+  validate({ ActivityDepthAltitudeReferencePointMeasure: 5, ActivityDepthAltitudeReferencePointUnit: "m" });
+  assert.equal(checkProperty(validate.errors, "minimum", "ActivityDepthAltitudeReferencePointMeasure"), false);
+});
+
+// *** Length constraints — GW text fields *** //
+test("Should reject AquiferCode > 10 chars", async (t) => {
+  validate({ AquiferCode: "12345678901" });
+  assert.equal(checkProperty(validate.errors, "maxLength", "AquiferCode"), true);
+});
+test("Should accept AquiferCode <= 10 chars", async (t) => {
+  validate({ AquiferCode: "1234567890" });
+  assert.equal(checkProperty(validate.errors, "maxLength", "AquiferCode"), false);
+});
+
+test("Should reject WellID > 55 chars", async (t) => {
+  validate({ WellID: "x".repeat(56) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "WellID"), true);
+});
+test("Should accept WellID <= 55 chars", async (t) => {
+  validate({ WellID: "x".repeat(55) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "WellID"), false);
+});
+
+test("Should reject SampleCollectionMethodName > 300 chars", async (t) => {
+  validate({ SampleCollectionMethodName: "x".repeat(301) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "SampleCollectionMethodName"), true);
+});
+test("Should accept SampleCollectionMethodName <= 300 chars", async (t) => {
+  validate({ SampleCollectionMethodName: "x".repeat(300) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "SampleCollectionMethodName"), false);
+});
+
+test("Should reject SampleCollectionMethodID > 50 chars", async (t) => {
+  validate({ SampleCollectionMethodID: "x".repeat(51) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "SampleCollectionMethodID"), true);
+});
+test("Should accept SampleCollectionMethodID <= 50 chars", async (t) => {
+  validate({ SampleCollectionMethodID: "x".repeat(50) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "SampleCollectionMethodID"), false);
 });

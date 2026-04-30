@@ -99,11 +99,11 @@
     "WellUseTypeLoose": {
       "$ref": "https://datastream.org/schema/data/values/WellUseType.legacy.json"
     },
-    "AquiferCodeStrict": {
-      "$ref": "https://datastream.org/schema/data/values/AquiferCode.primary.json"
-    },
-    "AquiferCodeLoose": {
-      "$ref": "https://datastream.org/schema/data/values/AquiferCode.legacy.json"
+    "AquiferCode": {
+      "title": "Aquifer Code",
+      "description": "A code that designates the aquifer or geologic formation from which the groundwater sample was collected. In the absence of mapped/named aquifers, geologic formation names are included.",
+      "$ref": "#/definitions/string",
+      "maxLength": 10
     },
     "AquiferUnitNameStrict": {
       "$ref": "https://datastream.org/schema/data/values/AquiferUnitName.primary.json"

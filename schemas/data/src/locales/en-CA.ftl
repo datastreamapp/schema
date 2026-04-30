@@ -85,6 +85,7 @@ error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, sp
 error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations must include a valid ActivityStartTime
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
 error-ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required when ActivityDepthHeightMeasure is reported
+error-ActivityMediaName-Groundwater-DepthMeasure = At least one of ActivityDepthHeightMeasure, BoreholeDepthMeasure, WellDepthMeasure, WellOpenIntervalTopMeasure, or WellOpenIntervalBottomMeasure must be reported when ActivityMediaName is Groundwater or Porewater
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
