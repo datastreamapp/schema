@@ -1052,6 +1052,7 @@ test("Should reject Surface Water with WellID (GW-only field)", async (t) => {
     true,
   );
   assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), false);
 });
 
 test("Should reject Surface Water with AquiferCode (GW-only field)", async (t) => {
@@ -1066,6 +1067,7 @@ test("Should reject Surface Water with AquiferCode (GW-only field)", async (t) =
     true,
   );
   assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), false);
 });
 
 test("Should reject Surface Water with WellDepthMeasure (GW-only field)", async (t) => {
@@ -1081,6 +1083,7 @@ test("Should reject Surface Water with WellDepthMeasure (GW-only field)", async 
     true,
   );
   assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), false);
 });
 
 test("Should reject GW field without ActivityMediaName at all", async (t) => {
@@ -1095,6 +1098,7 @@ test("Should reject GW field without ActivityMediaName at all", async (t) => {
     true,
   );
   assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), true);
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), false);
 });
 
 test("Should accept Groundwater with WellID and WellUseType (GW fields allowed)", async (t) => {
@@ -1113,9 +1117,31 @@ test("Should accept Groundwater with WellID and WellUseType (GW fields allowed)"
     checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
     false,
   );
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), false);
 });
 
-test("Should accept Surface Water with vertical accuracy fields (not GW-restricted)", async (t) => {
+test("Should accept Porewater with WellID and WellUseType (GW fields allowed)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Porewater",
+    MonitoringLocationType: "Well",
+    WellID: "well-123",
+    WellIDContext: "AB",
+    WellUseType: "Domestic",
+    WellDepthMeasure: -10,
+    WellDepthUnit: "m",
+    SampleCondition: "Static, before pumping or purging",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
+    false,
+  );
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), false);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), false);
+});
+
+test("Should reject Surface Water with MonitoringLocationVerticalAccuracyMeasure (GW-only field)", async (t) => {
   const valid = validate({
     ActivityMediaName: "Surface Water",
     MonitoringLocationType: "River/Stream",
@@ -1125,11 +1151,13 @@ test("Should accept Surface Water with vertical accuracy fields (not GW-restrict
   assert.equal(valid, false);
   assert.equal(
     checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
-    false,
+    true,
   );
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), false);
 });
 
-test("Should accept Surface Water with SampleCollectionMethod fields (not GW-restricted)", async (t) => {
+test("Should reject Surface Water with SampleCollectionMethodID (GW-only field)", async (t) => {
   const valid = validate({
     ActivityMediaName: "Surface Water",
     MonitoringLocationType: "River/Stream",
@@ -1140,8 +1168,10 @@ test("Should accept Surface Water with SampleCollectionMethod fields (not GW-res
   assert.equal(valid, false);
   assert.equal(
     checkProperty(validate.errors, "message", "error-GroundwaterFields-ActivityMediaName-Groundwater"),
-    false,
+    true,
   );
+  assert.equal(checkProperty(validate.errors, "enum", "ActivityMediaName"), true);
+  assert.equal(checkProperty(validate.errors, "required", "ActivityMediaName"), false);
 });
 
 // *** one off *** //
