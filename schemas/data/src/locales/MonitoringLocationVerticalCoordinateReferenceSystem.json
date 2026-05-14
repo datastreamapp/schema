@@ -1,0 +1,72 @@
+{
+  "name": {
+    "en": "MonitoringLocationVerticalCoordinateReferenceSystem",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "CGVD2013": {
+      "name": {
+        "en": "CGVD2013",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "CGVD28": {
+      "name": {
+        "en": "CGVD28",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NAVD88": {
+      "name": {
+        "en": "NAVD88",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NGVD29": {
+      "name": {
+        "en": "NGVD29",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "OTHER": {
+      "name": {
+        "en": "OTHER",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "UNKWN": {
+      "name": {
+        "en": "UNKWN",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

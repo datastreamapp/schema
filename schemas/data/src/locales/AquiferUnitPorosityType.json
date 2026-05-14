@@ -1,0 +1,52 @@
+{
+  "name": {
+    "en": "AquiferUnitPorosityType",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Fractured": {
+      "name": {
+        "en": "Fractured",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Granular": {
+      "name": {
+        "en": "Granular",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Karstic": {
+      "name": {
+        "en": "Karstic",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mixed": {
+      "name": {
+        "en": "Mixed",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

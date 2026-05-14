@@ -1,0 +1,722 @@
+{
+  "name": {
+    "en": "LithologyType",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Andesite": {
+      "name": {
+        "en": "Andesite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Anthropogenic material": {
+      "name": {
+        "en": "Anthropogenic material",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Basalt": {
+      "name": {
+        "en": "Basalt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock": {
+      "name": {
+        "en": "Bedrock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Fractured": {
+      "name": {
+        "en": "Bedrock, Fractured",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Interbedded sandstone/carbonate": {
+      "name": {
+        "en": "Bedrock, Interbedded sandstone/carbonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Interbedded sandstone/shale": {
+      "name": {
+        "en": "Bedrock, Interbedded sandstone/shale",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Interbedded sandstone/shale/carbonate": {
+      "name": {
+        "en": "Bedrock, Interbedded sandstone/shale/carbonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Interbedded sediments": {
+      "name": {
+        "en": "Bedrock, Interbedded sediments",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Interbedded siltstone/carbonate/gypsum": {
+      "name": {
+        "en": "Bedrock, Interbedded siltstone/carbonate/gypsum",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Soluble Carbonate - Karst": {
+      "name": {
+        "en": "Bedrock, Soluble Carbonate - Karst",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bedrock, Soluble gypsum/dolomite with shale interb": {
+      "name": {
+        "en": "Bedrock, Soluble gypsum/dolomite with shale interb",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Carbonate sedimentary rock": {
+      "name": {
+        "en": "Carbonate sedimentary rock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clay": {
+      "name": {
+        "en": "Clay",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clayey Sand": {
+      "name": {
+        "en": "Clayey Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clayey Silt": {
+      "name": {
+        "en": "Clayey Silt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Coal": {
+      "name": {
+        "en": "Coal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Conglomerate": {
+      "name": {
+        "en": "Conglomerate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Diamicton": {
+      "name": {
+        "en": "Diamicton",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Diorite": {
+      "name": {
+        "en": "Diorite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dolomite": {
+      "name": {
+        "en": "Dolomite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Evaporite": {
+      "name": {
+        "en": "Evaporite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gabbro": {
+      "name": {
+        "en": "Gabbro",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gneiss": {
+      "name": {
+        "en": "Gneiss",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Granite": {
+      "name": {
+        "en": "Granite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gravel": {
+      "name": {
+        "en": "Gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gravelly Mud": {
+      "name": {
+        "en": "Gravelly Mud",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gravelly Muddy Sand": {
+      "name": {
+        "en": "Gravelly Muddy Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gravelly Sand": {
+      "name": {
+        "en": "Gravelly Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gravely Sediment": {
+      "name": {
+        "en": "Gravely Sediment",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Humus": {
+      "name": {
+        "en": "Humus",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Igneous rock": {
+      "name": {
+        "en": "Igneous rock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Interbedded gravel and clay": {
+      "name": {
+        "en": "Interbedded gravel and clay",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Interbedded gravel and sand": {
+      "name": {
+        "en": "Interbedded gravel and sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Interbedded gravel and silt": {
+      "name": {
+        "en": "Interbedded gravel and silt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Interbedded sand and clay": {
+      "name": {
+        "en": "Interbedded sand and clay",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Interbedded sand and silt": {
+      "name": {
+        "en": "Interbedded sand and silt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Interbedded silt and clay": {
+      "name": {
+        "en": "Interbedded silt and clay",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Limestone": {
+      "name": {
+        "en": "Limestone",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Marble": {
+      "name": {
+        "en": "Marble",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Metamorphic rock": {
+      "name": {
+        "en": "Metamorphic rock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mud": {
+      "name": {
+        "en": "Mud",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muddy Gravel": {
+      "name": {
+        "en": "Muddy Gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muddy Sand": {
+      "name": {
+        "en": "Muddy Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muddy Sandy Gravel": {
+      "name": {
+        "en": "Muddy Sandy Gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Organic material": {
+      "name": {
+        "en": "Organic material",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Peat": {
+      "name": {
+        "en": "Peat",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Plutonic rock": {
+      "name": {
+        "en": "Plutonic rock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quartzite": {
+      "name": {
+        "en": "Quartzite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rhyolite": {
+      "name": {
+        "en": "Rhyolite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sand": {
+      "name": {
+        "en": "Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sand, Silt, Clay": {
+      "name": {
+        "en": "Sand, Silt, Clay",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sandstone": {
+      "name": {
+        "en": "Sandstone",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sandy Clay": {
+      "name": {
+        "en": "Sandy Clay",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sandy Gravel": {
+      "name": {
+        "en": "Sandy Gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sandy Mud": {
+      "name": {
+        "en": "Sandy Mud",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sandy Silt": {
+      "name": {
+        "en": "Sandy Silt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Schist": {
+      "name": {
+        "en": "Schist",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sedimentary rock": {
+      "name": {
+        "en": "Sedimentary rock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Shale": {
+      "name": {
+        "en": "Shale",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Silt": {
+      "name": {
+        "en": "Silt",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Siltite": {
+      "name": {
+        "en": "Siltite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Silty Clay": {
+      "name": {
+        "en": "Silty Clay",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Silty Sand": {
+      "name": {
+        "en": "Silty Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Slate": {
+      "name": {
+        "en": "Slate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Soil": {
+      "name": {
+        "en": "Soil",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Till": {
+      "name": {
+        "en": "Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unconsolidated material": {
+      "name": {
+        "en": "Unconsolidated material",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Undifferentiated sediment": {
+      "name": {
+        "en": "Undifferentiated sediment",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unknown material": {
+      "name": {
+        "en": "Unknown material",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Volcanic rock": {
+      "name": {
+        "en": "Volcanic rock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

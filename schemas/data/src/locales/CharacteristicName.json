@@ -15777,6 +15777,26 @@
         "en": null,
         "fr": null
       }
+    },
+    "Water level elevation": {
+      "name": {
+        "en": "Water level elevation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Water level in well, depth from a reference point": {
+      "name": {
+        "en": "Water level in well, depth from a reference point",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

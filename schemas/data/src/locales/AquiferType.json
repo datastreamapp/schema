@@ -1,0 +1,52 @@
+{
+  "name": {
+    "en": "AquiferType",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Artesian": {
+      "name": {
+        "en": "Artesian",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Confined": {
+      "name": {
+        "en": "Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Semi-Confined": {
+      "name": {
+        "en": "Semi-Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unconfined": {
+      "name": {
+        "en": "Unconfined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

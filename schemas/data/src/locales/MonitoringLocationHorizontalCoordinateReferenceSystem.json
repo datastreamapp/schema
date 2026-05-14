@@ -239,6 +239,16 @@
         "en": null,
         "fr": null
       }
+    },
+    "OTHER": {
+      "name": {
+        "en": "OTHER",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
     }
   }
 }

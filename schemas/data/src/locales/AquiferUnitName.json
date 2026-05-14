@@ -1,0 +1,7712 @@
+{
+  "name": {
+    "en": "AquiferUnitName",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "111 Mile Creek Valley Aquifer System": {
+      "name": {
+        "en": "111 Mile Creek Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1WS Member": {
+      "name": {
+        "en": "1WS Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "2WS Member": {
+      "name": {
+        "en": "2WS Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Abbotsford Shallow Aquifer": {
+      "name": {
+        "en": "Abbotsford Shallow Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Abbotsford Shallow West Aquifer": {
+      "name": {
+        "en": "Abbotsford Shallow West Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Alberta Group": {
+      "name": {
+        "en": "Alberta Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Aldergrove Shallow Aquifer": {
+      "name": {
+        "en": "Aldergrove Shallow Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Algonquin Aquifer Complex": {
+      "name": {
+        "en": "Algonquin Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Algonquin Basin": {
+      "name": {
+        "en": "Algonquin Basin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Algonquin Shoreline": {
+      "name": {
+        "en": "Algonquin Shoreline",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Alice Siding Aquifer": {
+      "name": {
+        "en": "Alice Siding Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Alliston Aquifer Complex": {
+      "name": {
+        "en": "Alliston Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Alluvial and glaciofluvial sand and gravel": {
+      "name": {
+        "en": "Alluvial and glaciofluvial sand and gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Alviston-Rutherford Aquifer": {
+      "name": {
+        "en": "Alviston-Rutherford Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Amabel-Lockport-Guelph Hydrogeologic Unit": {
+      "name": {
+        "en": "Amabel-Lockport-Guelph Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Amherstburge Aquifer": {
+      "name": {
+        "en": "Amherstburge Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ancaster-West Flamborough Aquifer": {
+      "name": {
+        "en": "Ancaster-West Flamborough Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Annapolis-Cornwallis valleys Aquifer": {
+      "name": {
+        "en": "Annapolis-Cornwallis valleys Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Anten Coquina Member": {
+      "name": {
+        "en": "Anten Coquina Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Arras-Fellers Heights Bedrock Aquifer": {
+      "name": {
+        "en": "Arras-Fellers Heights Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Arrowwood Formation": {
+      "name": {
+        "en": "Arrowwood Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Arthur-Mount Forest Aquifer": {
+      "name": {
+        "en": "Arthur-Mount Forest Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Assiniboine delta Aquifer": {
+      "name": {
+        "en": "Assiniboine delta Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Atha Aquifer": {
+      "name": {
+        "en": "Atha Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ausable Aquifer": {
+      "name": {
+        "en": "Ausable Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bad Heart Formation": {
+      "name": {
+        "en": "Bad Heart Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Balfron Formation": {
+      "name": {
+        "en": "Balfron Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Banff Formation": {
+      "name": {
+        "en": "Banff Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Barons Sand Formation": {
+      "name": {
+        "en": "Barons Sand Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Basal Aquifer": {
+      "name": {
+        "en": "Basal Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Basal clastic unit (Winnipeg) Aquifer": {
+      "name": {
+        "en": "Basal clastic unit (Winnipeg) Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Basal Cretaceous Sandstone": {
+      "name": {
+        "en": "Basal Cretaceous Sandstone",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bass Island Hydrogeologic Unit": {
+      "name": {
+        "en": "Bass Island Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Battle Formation": {
+      "name": {
+        "en": "Battle Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Battleford Formation": {
+      "name": {
+        "en": "Battleford Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Beach Ridge sand and gravel": {
+      "name": {
+        "en": "Beach Ridge sand and gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bearpaw Formation": {
+      "name": {
+        "en": "Bearpaw Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Beaver Creek Overburden Aquifer": {
+      "name": {
+        "en": "Beaver Creek Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Belle Fourche Formation": {
+      "name": {
+        "en": "Belle Fourche Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Belly River Formation": {
+      "name": {
+        "en": "Belly River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Belly River Group": {
+      "name": {
+        "en": "Belly River Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Beverly-Onoway channel Complex": {
+      "name": {
+        "en": "Beverly-Onoway channel Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Billings-Carlsbad-Queenston Hydrogeologic Unit": {
+      "name": {
+        "en": "Billings-Carlsbad-Queenston Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Blackstone Formation": {
+      "name": {
+        "en": "Blackstone Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Blewett Bedrock Aquifer": {
+      "name": {
+        "en": "Blewett Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Blood Reserve Formation": {
+      "name": {
+        "en": "Blood Reserve Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Blue Mountain-Georgian Bay Hydrogeologic Unit": {
+      "name": {
+        "en": "Blue Mountain-Georgian Bay Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Blueberry Valley Aquifer System": {
+      "name": {
+        "en": "Blueberry Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Blueberry-Aitken Bedrock Aquifer": {
+      "name": {
+        "en": "Blueberry-Aitken Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bluesky Formation": {
+      "name": {
+        "en": "Bluesky Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bois Blanc Hydrogeologic Unit": {
+      "name": {
+        "en": "Bois Blanc Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Boissevain Formation": {
+      "name": {
+        "en": "Boissevain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bonnyville U1 Sand": {
+      "name": {
+        "en": "Bonnyville U1 Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bonnyville U1 Till": {
+      "name": {
+        "en": "Bonnyville U1 Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bonnyville U2 Till": {
+      "name": {
+        "en": "Bonnyville U2 Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Boss Point Formation": {
+      "name": {
+        "en": "Boss Point Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bothwell Aquifer": {
+      "name": {
+        "en": "Bothwell Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bounded Channel Aquifers": {
+      "name": {
+        "en": "Bounded Channel Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bourget Aquifer": {
+      "name": {
+        "en": "Bourget Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bow Island Formation": {
+      "name": {
+        "en": "Bow Island Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bradley Creek Valley Aquifer System": {
+      "name": {
+        "en": "Bradley Creek Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Brazeau Formation": {
+      "name": {
+        "en": "Brazeau Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bredenbury & Wynyard Formations": {
+      "name": {
+        "en": "Bredenbury & Wynyard Formations",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bridge Lake Aquifer System": {
+      "name": {
+        "en": "Bridge Lake Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Brilliant Bedrock Aquifer": {
+      "name": {
+        "en": "Brilliant Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bronson Lake": {
+      "name": {
+        "en": "Bronson Lake",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Brownsville Local Aquifer": {
+      "name": {
+        "en": "Brownsville Local Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Buried valley containing sand and gravel": {
+      "name": {
+        "en": "Buried valley containing sand and gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Buried valley/blanket Aquifers": {
+      "name": {
+        "en": "Buried valley/blanket Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cadomin Formation": {
+      "name": {
+        "en": "Cadomin Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cadotte Formation": {
+      "name": {
+        "en": "Cadotte Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Caledon-Grand River Outwash Aquifer": {
+      "name": {
+        "en": "Caledon-Grand River Outwash Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Calgary Lethbridge Corridor HSU C Aquitard": {
+      "name": {
+        "en": "Calgary Lethbridge Corridor HSU C Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Calgary Lethbridge Corridor HSU S1 Aquifer": {
+      "name": {
+        "en": "Calgary Lethbridge Corridor HSU S1 Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Calgary Lethbridge Corridor HSU S2 Aquifer": {
+      "name": {
+        "en": "Calgary Lethbridge Corridor HSU S2 Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Canadian Shield": {
+      "name": {
+        "en": "Canadian Shield",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Canning Aquitard": {
+      "name": {
+        "en": "Canning Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Canning Till Aquitard": {
+      "name": {
+        "en": "Canning Till Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cantuar Formation": {
+      "name": {
+        "en": "Cantuar Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Canyon Overburden Aquifer": {
+      "name": {
+        "en": "Canyon Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Carbon Member": {
+      "name": {
+        "en": "Carbon Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Carbonate rock Aquifer": {
+      "name": {
+        "en": "Carbonate rock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Carboniferous basin Aquifer": {
+      "name": {
+        "en": "Carboniferous basin Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cardium Formation": {
+      "name": {
+        "en": "Cardium Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Carlile Formation": {
+      "name": {
+        "en": "Carlile Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Casino Overburden Aquifer": {
+      "name": {
+        "en": "Casino Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Castlegar Overburden Aquifer": {
+      "name": {
+        "en": "Castlegar Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cataract Group Hydrogeologic Unit": {
+      "name": {
+        "en": "Cataract Group Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Catfish Creek Aquifer": {
+      "name": {
+        "en": "Catfish Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cedar Grove Aquifer": {
+      "name": {
+        "en": "Cedar Grove Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Central Catfish Creek Aquifer": {
+      "name": {
+        "en": "Central Catfish Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Central Halfway-Beatton Bedrock Aquifer": {
+      "name": {
+        "en": "Central Halfway-Beatton Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Central South Nation Aquifer Complex": {
+      "name": {
+        "en": "Central South Nation Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Champlain Aquifer": {
+      "name": {
+        "en": "Champlain Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Channel Aquifer 1": {
+      "name": {
+        "en": "Channel Aquifer 1",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Channel Aquifer 2": {
+      "name": {
+        "en": "Channel Aquifer 2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Channel Aquifer 3": {
+      "name": {
+        "en": "Channel Aquifer 3",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Channel Aquitard 1": {
+      "name": {
+        "en": "Channel Aquitard 1",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Channel Aquitard 2": {
+      "name": {
+        "en": "Channel Aquitard 2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Charlie Halfway Beatton Bedrock Aquifer": {
+      "name": {
+        "en": "Charlie Halfway Beatton Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Chateauguay Aquifer": {
+      "name": {
+        "en": "Chateauguay Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Chauidiere Aquifer": {
+      "name": {
+        "en": "Chauidiere Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Chesley Aquifer": {
+      "name": {
+        "en": "Chesley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Chinchaga Formation": {
+      "name": {
+        "en": "Chinchaga Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Chu Íntthi Aquifer": {
+      "name": {
+        "en": "Chu Íntthi Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Chungo Member": {
+      "name": {
+        "en": "Chungo Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clarence Creek Aquifer": {
+      "name": {
+        "en": "Clarence Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clayton Heights Aquifer": {
+      "name": {
+        "en": "Clayton Heights Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clayton Uplands Aquifer": {
+      "name": {
+        "en": "Clayton Uplands Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clinton Creek Bedrock Aquifer": {
+      "name": {
+        "en": "Clinton Creek Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clinton Creek Lower Unconsolidated Aquifer": {
+      "name": {
+        "en": "Clinton Creek Lower Unconsolidated Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clinton Creek Upper Sand and Gravel Aquifer": {
+      "name": {
+        "en": "Clinton Creek Upper Sand and Gravel Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Clinton Group Hydrogeologic Unit": {
+      "name": {
+        "en": "Clinton Group Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Coalspur Formation": {
+      "name": {
+        "en": "Coalspur Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cold Lake Formation": {
+      "name": {
+        "en": "Cold Lake Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Coldstream Aquifer": {
+      "name": {
+        "en": "Coldstream Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Colorado Group": {
+      "name": {
+        "en": "Colorado Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Connelly Creek Formation": {
+      "name": {
+        "en": "Connelly Creek Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Contact Aquifer": {
+      "name": {
+        "en": "Contact Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Contact Rapids Formation": {
+      "name": {
+        "en": "Contact Rapids Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cooking Lake area sediments": {
+      "name": {
+        "en": "Cooking Lake area sediments",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cooking Lake Formation": {
+      "name": {
+        "en": "Cooking Lake Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Credit River Aquifer": {
+      "name": {
+        "en": "Credit River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Creston-Kootenay River Overburden Aquifer": {
+      "name": {
+        "en": "Creston-Kootenay River Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cridland Creek Bedrock Aquifer": {
+      "name": {
+        "en": "Cridland Creek Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Crowsnest River Alluvial Aquifer": {
+      "name": {
+        "en": "Crowsnest River Alluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cumberland Group": {
+      "name": {
+        "en": "Cumberland Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cypress Hills Formation": {
+      "name": {
+        "en": "Cypress Hills Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dalehurst Member": {
+      "name": {
+        "en": "Dalehurst Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dawson Creek Overburden Aquifer": {
+      "name": {
+        "en": "Dawson Creek Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Del Bonita Formation": {
+      "name": {
+        "en": "Del Bonita Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Detroit River Group Hydrogeologic Unit": {
+      "name": {
+        "en": "Detroit River Group Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Devonian Strata": {
+      "name": {
+        "en": "Devonian Strata",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dinosaur Park Formation": {
+      "name": {
+        "en": "Dinosaur Park Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Doe Creek Member": {
+      "name": {
+        "en": "Doe Creek Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Doig Formation": {
+      "name": {
+        "en": "Doig Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Don Formation": {
+      "name": {
+        "en": "Don Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dowling Member": {
+      "name": {
+        "en": "Dowling Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Drumheller Channel Complex": {
+      "name": {
+        "en": "Drumheller Channel Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Drumheller Member": {
+      "name": {
+        "en": "Drumheller Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Drywood Creek Formation": {
+      "name": {
+        "en": "Drywood Creek Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dundalk Aquifer": {
+      "name": {
+        "en": "Dundalk Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dundee Hydrogeologic Unit": {
+      "name": {
+        "en": "Dundee Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dundurn Formation": {
+      "name": {
+        "en": "Dundurn Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dunvegan Formation": {
+      "name": {
+        "en": "Dunvegan Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Durham Aquifer": {
+      "name": {
+        "en": "Durham Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Duvernay Formation": {
+      "name": {
+        "en": "Duvernay Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dyer-Wingfield-St. Edmund Hydrogeologic Unit": {
+      "name": {
+        "en": "Dyer-Wingfield-St. Edmund Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "East and Middle Sixteen Mile Aquifer": {
+      "name": {
+        "en": "East and Middle Sixteen Mile Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "East Creston Bedrock Aquifer": {
+      "name": {
+        "en": "East Creston Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "East Pine Bedrock Aquifer": {
+      "name": {
+        "en": "East Pine Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "East Pine-Groundbirch Bedrock Aquifer": {
+      "name": {
+        "en": "East Pine-Groundbirch Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Eastend Formation": {
+      "name": {
+        "en": "Eastend Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Eastend-Ravenscrag Aquifer": {
+      "name": {
+        "en": "Eastend-Ravenscrag Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Edson burried-valley Aquifer": {
+      "name": {
+        "en": "Edson burried-valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Egmond Bay Formation": {
+      "name": {
+        "en": "Egmond Bay Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Elgin-Southampton Aquifer": {
+      "name": {
+        "en": "Elgin-Southampton Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ellerslie Member": {
+      "name": {
+        "en": "Ellerslie Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ellis Group": {
+      "name": {
+        "en": "Ellis Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Empress Formation": {
+      "name": {
+        "en": "Empress Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Empress Formation-Uplands glacial": {
+      "name": {
+        "en": "Empress Formation-Uplands glacial",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Empress Formation-Valley fill glacial": {
+      "name": {
+        "en": "Empress Formation-Valley fill glacial",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Empress Formation-Valley fill glacial Tertiary Undifferentiated": {
+      "name": {
+        "en": "Empress Formation-Valley fill glacial Tertiary Undifferentiated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Empress Formation-Valley fill Tertiary": {
+      "name": {
+        "en": "Empress Formation-Valley fill Tertiary",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Erie Interstadial Deposits": {
+      "name": {
+        "en": "Erie Interstadial Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ernestina Lake Formation": {
+      "name": {
+        "en": "Ernestina Lake Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Esker and gravel": {
+      "name": {
+        "en": "Esker and gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Estend Formation": {
+      "name": {
+        "en": "Estend Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ethel Lake Formation": {
+      "name": {
+        "en": "Ethel Lake Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Etobicoke Aquifer": {
+      "name": {
+        "en": "Etobicoke Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Exshaw Formation": {
+      "name": {
+        "en": "Exshaw Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Eyot Formation": {
+      "name": {
+        "en": "Eyot Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Farrel Creek Bedrock Aquifer": {
+      "name": {
+        "en": "Farrel Creek Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fernie Formation": {
+      "name": {
+        "en": "Fernie Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "First White Specks Formation": {
+      "name": {
+        "en": "First White Specks Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fish Scales Formation": {
+      "name": {
+        "en": "Fish Scales Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fish Scales Member": {
+      "name": {
+        "en": "Fish Scales Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Flesherton Aquifer": {
+      "name": {
+        "en": "Flesherton Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Floral Formation": {
+      "name": {
+        "en": "Floral Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fontfill Aquifer Complex": {
+      "name": {
+        "en": "Fontfill Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Foremost Formation": {
+      "name": {
+        "en": "Foremost Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fort Nelson-River Alluvial Aquifer": {
+      "name": {
+        "en": "Fort Nelson-River Alluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fort Simpson Formation": {
+      "name": {
+        "en": "Fort Simpson Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fort St. John Overburden Aquifer System": {
+      "name": {
+        "en": "Fort St. John Overburden Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fort Vermilion Formation": {
+      "name": {
+        "en": "Fort Vermilion Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fourchu Group": {
+      "name": {
+        "en": "Fourchu Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fractured Aquifers-Gulf Islands": {
+      "name": {
+        "en": "Fractured Aquifers-Gulf Islands",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fraser Canyon Aquifer, Choate to Yale": {
+      "name": {
+        "en": "Fraser Canyon Aquifer, Choate to Yale",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fraser Canyon Aquifer, from Yale to Haig": {
+      "name": {
+        "en": "Fraser Canyon Aquifer, from Yale to Haig",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fraser Lowlands Aquifer": {
+      "name": {
+        "en": "Fraser Lowlands Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fraser Plateau Lava Aquifer": {
+      "name": {
+        "en": "Fraser Plateau Lava Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Frenchman Formation": {
+      "name": {
+        "en": "Frenchman Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Frenchman to Eastend Undifferentiated": {
+      "name": {
+        "en": "Frenchman to Eastend Undifferentiated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fulford Aquifer": {
+      "name": {
+        "en": "Fulford Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Fundy Group": {
+      "name": {
+        "en": "Fundy Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ganges Harbour Aquifer": {
+      "name": {
+        "en": "Ganges Harbour Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Georgeville Group": {
+      "name": {
+        "en": "Georgeville Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gething Formation": {
+      "name": {
+        "en": "Gething Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gibsons/SCRD Granthams Landing/Elphinstone Aquifer": {
+      "name": {
+        "en": "Gibsons/SCRD Granthams Landing/Elphinstone Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Glaciolacustrine Aquifer Complex": {
+      "name": {
+        "en": "Glaciolacustrine Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Glade Overburden Aquifer": {
+      "name": {
+        "en": "Glade Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Glauconitic Sandstone Formation": {
+      "name": {
+        "en": "Glauconitic Sandstone Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Glemmore Basal Aquifer": {
+      "name": {
+        "en": "Glemmore Basal Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Gleneden Aquifer": {
+      "name": {
+        "en": "Gleneden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grand Centre Formation": {
+      "name": {
+        "en": "Grand Centre Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grand Forks Aquifer": {
+      "name": {
+        "en": "Grand Forks Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grand Rapids Formation": {
+      "name": {
+        "en": "Grand Rapids Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grand River Aquifer": {
+      "name": {
+        "en": "Grand River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grand River Basin Aquifer": {
+      "name": {
+        "en": "Grand River Basin Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grand River Outwash Deposits": {
+      "name": {
+        "en": "Grand River Outwash Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grand River Valley Basinal Deposits": {
+      "name": {
+        "en": "Grand River Valley Basinal Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grandview Aquifer": {
+      "name": {
+        "en": "Grandview Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grant Hill Aquifer": {
+      "name": {
+        "en": "Grant Hill Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Greater Kelowna Aquifer": {
+      "name": {
+        "en": "Greater Kelowna Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Greatlakean Stade Deposits": {
+      "name": {
+        "en": "Greatlakean Stade Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Green River Aquifer": {
+      "name": {
+        "en": "Green River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Greendale Deep Aquifer": {
+      "name": {
+        "en": "Greendale Deep Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Greenwood": {
+      "name": {
+        "en": "Greenwood",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Greenwood Aquifer": {
+      "name": {
+        "en": "Greenwood Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grimshaw Gravels Aquifer": {
+      "name": {
+        "en": "Grimshaw Gravels Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grosmont Formation": {
+      "name": {
+        "en": "Grosmont Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Groundbirch Buried Valley Aquifer": {
+      "name": {
+        "en": "Groundbirch Buried Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Grumbler Group": {
+      "name": {
+        "en": "Grumbler Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Guichon Creek Aquifer": {
+      "name": {
+        "en": "Guichon Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Haans Creek to Blain Creek-Haida Gwaii Aquifer": {
+      "name": {
+        "en": "Haans Creek to Blain Creek-Haida Gwaii Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hagan Aquifer": {
+      "name": {
+        "en": "Hagan Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Haida/Lawnhill Aquifer": {
+      "name": {
+        "en": "Haida/Lawnhill Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Haig Aquifer": {
+      "name": {
+        "en": "Haig Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Halfway Valley Aquifer System": {
+      "name": {
+        "en": "Halfway Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Halton Till": {
+      "name": {
+        "en": "Halton Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Halverson Ridge Formation": {
+      "name": {
+        "en": "Halverson Ridge Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hamilton Group Hydrogeologic Unit": {
+      "name": {
+        "en": "Hamilton Group Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hand Hills Formation": {
+      "name": {
+        "en": "Hand Hills Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hanover Aquifer": {
+      "name": {
+        "en": "Hanover Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hanson Member": {
+      "name": {
+        "en": "Hanson Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Harrow Aquifer": {
+      "name": {
+        "en": "Harrow Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hatzic Prairie Aquifer": {
+      "name": {
+        "en": "Hatzic Prairie Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Haultain Formation": {
+      "name": {
+        "en": "Haultain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Haven Member": {
+      "name": {
+        "en": "Haven Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Haynes Aquifer": {
+      "name": {
+        "en": "Haynes Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Haynes Member": {
+      "name": {
+        "en": "Haynes Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hazelmere Aquifer": {
+      "name": {
+        "en": "Hazelmere Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hazelmere Valley Aquifer": {
+      "name": {
+        "en": "Hazelmere Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Heather Bank Aquifer": {
+      "name": {
+        "en": "Heather Bank Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hillsborough Formation": {
+      "name": {
+        "en": "Hillsborough Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hillsborough River Formation": {
+      "name": {
+        "en": "Hillsborough River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hockley Valley Aquifer": {
+      "name": {
+        "en": "Hockley Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Holstein Aquifer": {
+      "name": {
+        "en": "Holstein Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Holt Aquifer Complex": {
+      "name": {
+        "en": "Holt Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hopington AB Aquifer": {
+      "name": {
+        "en": "Hopington AB Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hopington C Aquifer": {
+      "name": {
+        "en": "Hopington C Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Horseshoe Canyon Formation": {
+      "name": {
+        "en": "Horseshoe Canyon Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Horsethief Member": {
+      "name": {
+        "en": "Horsethief Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Horton Group": {
+      "name": {
+        "en": "Horton Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Houston Bedrock Aquifer": {
+      "name": {
+        "en": "Houston Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hullcar Confined Aquifer": {
+      "name": {
+        "en": "Hullcar Confined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hullcar Perched": {
+      "name": {
+        "en": "Hullcar Perched",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hullcar Unconfined Aquifer": {
+      "name": {
+        "en": "Hullcar Unconfined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ireton Formation": {
+      "name": {
+        "en": "Ireton Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ishbel Group": {
+      "name": {
+        "en": "Ishbel Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Joeyaska Deep Aquifer": {
+      "name": {
+        "en": "Joeyaska Deep Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Joeyaska Shallow Aquifer": {
+      "name": {
+        "en": "Joeyaska Shallow Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Joli Fou Formation": {
+      "name": {
+        "en": "Joli Fou Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Judith River Aquifer": {
+      "name": {
+        "en": "Judith River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Judith River/Belly River Formation": {
+      "name": {
+        "en": "Judith River/Belly River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Jumping Pound SST Member": {
+      "name": {
+        "en": "Jumping Pound SST Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Jurassic Formations": {
+      "name": {
+        "en": "Jurassic Formations",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kame Outwash Aquifer Complex": {
+      "name": {
+        "en": "Kame Outwash Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Karmutsen Aquifer": {
+      "name": {
+        "en": "Karmutsen Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kaskapau Formation": {
+      "name": {
+        "en": "Kaskapau Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kawkawa Lake Aquifer": {
+      "name": {
+        "en": "Kawkawa Lake Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Keating Aquifer": {
+      "name": {
+        "en": "Keating Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Keg River Formation": {
+      "name": {
+        "en": "Keg River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kettle Point Hydrogeologic Unit": {
+      "name": {
+        "en": "Kettle Point Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kildare Formation": {
+      "name": {
+        "en": "Kildare Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kingsvale Aquifer": {
+      "name": {
+        "en": "Kingsvale Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kiskatinaw Buried Channel Aquifer": {
+      "name": {
+        "en": "Kiskatinaw Buried Channel Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kiskatinaw Glaciodeltaic Overburden Aquifer": {
+      "name": {
+        "en": "Kiskatinaw Glaciodeltaic Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kitchener Creek Overburden Aquifer": {
+      "name": {
+        "en": "Kitchener Creek Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kleinburg Aquifer": {
+      "name": {
+        "en": "Kleinburg Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Koksilah River Valley Aquifer": {
+      "name": {
+        "en": "Koksilah River Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Kwinshatin Intertill Aquifer": {
+      "name": {
+        "en": "Kwinshatin Intertill Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "La Glace Sandstone Member": {
+      "name": {
+        "en": "La Glace Sandstone Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "La Loche Formation AND Basal Red Beds Unit": {
+      "name": {
+        "en": "La Loche Formation AND Basal Red Beds Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lacombe Aquitard": {
+      "name": {
+        "en": "Lacombe Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lacombe Member": {
+      "name": {
+        "en": "Lacombe Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lake Algonquin Sand Aquifer": {
+      "name": {
+        "en": "Lake Algonquin Sand Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lake Peel Deltaic Aquifer": {
+      "name": {
+        "en": "Lake Peel Deltaic Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lake Schomberg and Algonquin Aquifer": {
+      "name": {
+        "en": "Lake Schomberg and Algonquin Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lake Schomberg and Algonquin Aquitard": {
+      "name": {
+        "en": "Lake Schomberg and Algonquin Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lancaster-Cornwall Aquifer": {
+      "name": {
+        "en": "Lancaster-Cornwall Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Langdale/Hopkins Aquifer": {
+      "name": {
+        "en": "Langdale/Hopkins Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Langdale/Hopkins Landing Aquifer": {
+      "name": {
+        "en": "Langdale/Hopkins Landing Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Langley Upland Aquifer": {
+      "name": {
+        "en": "Langley Upland Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Langley Upland Intertill Aquifer": {
+      "name": {
+        "en": "Langley Upland Intertill Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "LD Basal Till": {
+      "name": {
+        "en": "LD Basal Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "LD Local Aquifers": {
+      "name": {
+        "en": "LD Local Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "LD Lower Aquifer": {
+      "name": {
+        "en": "LD Lower Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "LD Middle Till": {
+      "name": {
+        "en": "LD Middle Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "LD Upper Till": {
+      "name": {
+        "en": "LD Upper Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lea Park Formation": {
+      "name": {
+        "en": "Lea Park Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Leamington Aquifer": {
+      "name": {
+        "en": "Leamington Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Leduc Formation": {
+      "name": {
+        "en": "Leduc Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lenses of sand and gravel": {
+      "name": {
+        "en": "Lenses of sand and gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lincoln Aquifer": {
+      "name": {
+        "en": "Lincoln Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Little Qualicum River Aquifer": {
+      "name": {
+        "en": "Little Qualicum River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Local Aquifer 2": {
+      "name": {
+        "en": "Local Aquifer 2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Local Aquitard 1": {
+      "name": {
+        "en": "Local Aquitard 1",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lookout Ridge Aquifer": {
+      "name": {
+        "en": "Lookout Ridge Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Łots'an Aquifer": {
+      "name": {
+        "en": "Łots'an Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Bearpaw Formation": {
+      "name": {
+        "en": "Lower Bearpaw Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Belly River Formation": {
+      "name": {
+        "en": "Lower Belly River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Brazeau Member": {
+      "name": {
+        "en": "Lower Brazeau Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Bridge Creek Valley Aquifer System": {
+      "name": {
+        "en": "Lower Bridge Creek Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Bridge Creek Valley Bedrock Aquifer": {
+      "name": {
+        "en": "Lower Bridge Creek Valley Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Brougham Aquifer": {
+      "name": {
+        "en": "Lower Brougham Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Cassidy Aquifer": {
+      "name": {
+        "en": "Lower Cassidy Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Catfish Creek Till Aquitard": {
+      "name": {
+        "en": "Lower Catfish Creek Till Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Cherryville Aquifer": {
+      "name": {
+        "en": "Lower Cherryville Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Chinguacousy Aquifer": {
+      "name": {
+        "en": "Lower Chinguacousy Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Coalspur Member": {
+      "name": {
+        "en": "Lower Coalspur Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Coquihalla Canyon Aquifer": {
+      "name": {
+        "en": "Lower Coquihalla Canyon Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Cowichan River A Aquifer": {
+      "name": {
+        "en": "Lower Cowichan River A Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Cowichan River C Aquifer": {
+      "name": {
+        "en": "Lower Cowichan River C Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Erie Phase Aquifer": {
+      "name": {
+        "en": "Lower Erie Phase Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Erie Phase Aquitard": {
+      "name": {
+        "en": "Lower Erie Phase Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Gates River Aquifer": {
+      "name": {
+        "en": "Lower Gates River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Lac la Hache Valley Bedrock Aquifer": {
+      "name": {
+        "en": "Lower Lac la Hache Valley Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Lea Park Formation": {
+      "name": {
+        "en": "Lower Lea Park Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Loon River Formation": {
+      "name": {
+        "en": "Lower Loon River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Lotsberg Formation": {
+      "name": {
+        "en": "Lower Lotsberg Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Markham Aquifer": {
+      "name": {
+        "en": "Lower Markham Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Maryhill Till": {
+      "name": {
+        "en": "Lower Maryhill Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Merritt Aquifer": {
+      "name": {
+        "en": "Lower Merritt Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Montney Formation": {
+      "name": {
+        "en": "Lower Montney Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Nechako River Aquifer": {
+      "name": {
+        "en": "Lower Nechako River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Nicola Aquifer": {
+      "name": {
+        "en": "Lower Nicola Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Nicola Outwash Aquifer": {
+      "name": {
+        "en": "Lower Nicola Outwash Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Ordovician OR Cambrian Strata": {
+      "name": {
+        "en": "Lower Ordovician OR Cambrian Strata",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Scollard Member": {
+      "name": {
+        "en": "Lower Scollard Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Shaftesbury Formation": {
+      "name": {
+        "en": "Lower Shaftesbury Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Shuswap Deep Confined": {
+      "name": {
+        "en": "Lower Shuswap Deep Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Shuswap River Confined": {
+      "name": {
+        "en": "Lower Shuswap River Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Thorncliffe Aquifer": {
+      "name": {
+        "en": "Lower Thorncliffe Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Thorncliffe Aquitard": {
+      "name": {
+        "en": "Lower Thorncliffe Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Unionville Aquifer": {
+      "name": {
+        "en": "Lower Unionville Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Victoria Aquifer": {
+      "name": {
+        "en": "Lower Victoria Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Wapiti Member": {
+      "name": {
+        "en": "Lower Wapiti Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lower Willow Creek Member": {
+      "name": {
+        "en": "Lower Willow Creek Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lowland Aquifer Complex": {
+      "name": {
+        "en": "Lowland Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lumby-Lower Aquifer": {
+      "name": {
+        "en": "Lumby-Lower Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lumby-Upper Aquifer": {
+      "name": {
+        "en": "Lumby-Upper Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lundbreck Formation": {
+      "name": {
+        "en": "Lundbreck Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mabou Group": {
+      "name": {
+        "en": "Mabou Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mackinaw Interstadial Deposits": {
+      "name": {
+        "en": "Mackinaw Interstadial Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Majeau Lake Formation": {
+      "name": {
+        "en": "Majeau Lake Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Major buried sand and gravel": {
+      "name": {
+        "en": "Major buried sand and gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Malahat Ridge Aquifer": {
+      "name": {
+        "en": "Malahat Ridge Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Malcolm Island Aquifer": {
+      "name": {
+        "en": "Malcolm Island Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mannville Group": {
+      "name": {
+        "en": "Mannville Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Maple Aquifer": {
+      "name": {
+        "en": "Maple Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mara Aquifer Aquifer": {
+      "name": {
+        "en": "Mara Aquifer Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Marble Hill Unconsolidated Aquifer": {
+      "name": {
+        "en": "Marble Hill Unconsolidated Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Marie Creek Formation": {
+      "name": {
+        "en": "Marie Creek Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Markdale Aquifer": {
+      "name": {
+        "en": "Markdale Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Marshybank Formation": {
+      "name": {
+        "en": "Marshybank Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Marshybank Member": {
+      "name": {
+        "en": "Marshybank Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Masset Aquifer": {
+      "name": {
+        "en": "Masset Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "McDougall Creek Deltaic Aquifer": {
+      "name": {
+        "en": "McDougall Creek Deltaic Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "McMillan Island Aquifer": {
+      "name": {
+        "en": "McMillan Island Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "McMurray Formation": {
+      "name": {
+        "en": "McMurray Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Meaford Aquifer": {
+      "name": {
+        "en": "Meaford Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Medicine Hat Formation": {
+      "name": {
+        "en": "Medicine Hat Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Medicine Hat Member": {
+      "name": {
+        "en": "Medicine Hat Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Meguma SuperGroup": {
+      "name": {
+        "en": "Meguma SuperGroup",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Meltwater Channel Hydrogeologic Unit": {
+      "name": {
+        "en": "Meltwater Channel Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mennon Formation": {
+      "name": {
+        "en": "Mennon Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Erie Phase Aquifer": {
+      "name": {
+        "en": "Middle Erie Phase Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Maryhill Till": {
+      "name": {
+        "en": "Middle Maryhill Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Merritt Aquifer": {
+      "name": {
+        "en": "Middle Merritt Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Montney Formation": {
+      "name": {
+        "en": "Middle Montney Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Red Beds Formation": {
+      "name": {
+        "en": "Middle Red Beds Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Thorncliffe Aquifer": {
+      "name": {
+        "en": "Middle Thorncliffe Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Thorncliffe Aquitard": {
+      "name": {
+        "en": "Middle Thorncliffe Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Middle Waterloo Moraine Aquifer & Equivalents": {
+      "name": {
+        "en": "Middle Waterloo Moraine Aquifer & Equivalents",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Milk River Aquifer": {
+      "name": {
+        "en": "Milk River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Milk River Formation": {
+      "name": {
+        "en": "Milk River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mill Bay Aquifer": {
+      "name": {
+        "en": "Mill Bay Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Minesing Basin Transgressive Deposits": {
+      "name": {
+        "en": "Minesing Basin Transgressive Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mirabel Aquifer": {
+      "name": {
+        "en": "Mirabel Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mission Creek Aquifer": {
+      "name": {
+        "en": "Mission Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Monteith Formation": {
+      "name": {
+        "en": "Monteith Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Montney Halfway Beatton Bedrock Aquifer": {
+      "name": {
+        "en": "Montney Halfway Beatton Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Montney Turbidite": {
+      "name": {
+        "en": "Montney Turbidite",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Montrose Bedrock Aquifer": {
+      "name": {
+        "en": "Montrose Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Morien Group": {
+      "name": {
+        "en": "Morien Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Morrin Member": {
+      "name": {
+        "en": "Morrin Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mount Albert Aquifer Complex": {
+      "name": {
+        "en": "Mount Albert Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mount Ozzard Bedrock West Aquifer": {
+      "name": {
+        "en": "Mount Ozzard Bedrock West Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mount Ozzard, Bedrock Southeast": {
+      "name": {
+        "en": "Mount Ozzard, Bedrock Southeast",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mount Ozzard, Unconsolidated": {
+      "name": {
+        "en": "Mount Ozzard, Unconsolidated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mount Tom Bedrock": {
+      "name": {
+        "en": "Mount Tom Bedrock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mount Tom Bedrock Aquifer": {
+      "name": {
+        "en": "Mount Tom Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Mount Tom Unconsolidated": {
+      "name": {
+        "en": "Mount Tom Unconsolidated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muriel Lake": {
+      "name": {
+        "en": "Muriel Lake",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Murrayville AC Aquifer": {
+      "name": {
+        "en": "Murrayville AC Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Murrayville B Aquifer": {
+      "name": {
+        "en": "Murrayville B Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskeg Formation": {
+      "name": {
+        "en": "Muskeg Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskeg Lower Anhydrite Member": {
+      "name": {
+        "en": "Muskeg Lower Anhydrite Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskiki Formation": {
+      "name": {
+        "en": "Muskiki Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskiki Formation OR Kaskapau Formation": {
+      "name": {
+        "en": "Muskiki Formation OR Kaskapau Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskiki Member": {
+      "name": {
+        "en": "Muskiki Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskwa Formation": {
+      "name": {
+        "en": "Muskwa Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskwa River Alluvial Aquifer": {
+      "name": {
+        "en": "Muskwa River Alluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskwa-Fort Nelson Buried Valley Aquifer": {
+      "name": {
+        "en": "Muskwa-Fort Nelson Buried Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Muskwa-Fort Nelson Glaciofluvial Aquifer": {
+      "name": {
+        "en": "Muskwa-Fort Nelson Glaciofluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nanaimo Group Aquifer, Campbell River to Courtney": {
+      "name": {
+        "en": "Nanaimo Group Aquifer, Campbell River to Courtney",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nanaimo Lowlands Aquifer": {
+      "name": {
+        "en": "Nanaimo Lowlands Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NE of White Rock A Aquifer": {
+      "name": {
+        "en": "NE of White Rock A Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NE of White Rock B Aquifer": {
+      "name": {
+        "en": "NE of White Rock B Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nechako Buried Valley Aquifer": {
+      "name": {
+        "en": "Nechako Buried Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nelson Overburden Aquifer": {
+      "name": {
+        "en": "Nelson Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Newmarket Till": {
+      "name": {
+        "en": "Newmarket Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Newton Upland Aquifer": {
+      "name": {
+        "en": "Newton Upland Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Niagra-on-the-Lake Aquifer": {
+      "name": {
+        "en": "Niagra-on-the-Lake Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nicomekl-Serpentine Aquifer": {
+      "name": {
+        "en": "Nicomekl-Serpentine Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nicomen Slough Aquifer": {
+      "name": {
+        "en": "Nicomen Slough Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nikanassin Formation": {
+      "name": {
+        "en": "Nikanassin Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Niobrara Formation": {
+      "name": {
+        "en": "Niobrara Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nissouri Stadial Deposits": {
+      "name": {
+        "en": "Nissouri Stadial Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nivek Aquifer": {
+      "name": {
+        "en": "Nivek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nomad Member": {
+      "name": {
+        "en": "Nomad Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Norfolk Sand Plain Aquifer": {
+      "name": {
+        "en": "Norfolk Sand Plain Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Norns Creek Overburden Aquifer": {
+      "name": {
+        "en": "Norns Creek Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Campbell River Bedrock": {
+      "name": {
+        "en": "North Campbell River Bedrock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Campbell River Unconsolidated": {
+      "name": {
+        "en": "North Campbell River Unconsolidated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Castlegar Bedrock Aquifer": {
+      "name": {
+        "en": "North Castlegar Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Central Saanich Aquifer": {
+      "name": {
+        "en": "North Central Saanich Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Hope Aquifer": {
+      "name": {
+        "en": "North Hope Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Houston Bedrock": {
+      "name": {
+        "en": "North Houston Bedrock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Mountain Formation": {
+      "name": {
+        "en": "North Mountain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Nechako Terrace Bedrock Aquifer": {
+      "name": {
+        "en": "North Nechako Terrace Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North Salt Spring Island Aquifer": {
+      "name": {
+        "en": "North Salt Spring Island Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "North-Central Salt Spring Island Aquifer": {
+      "name": {
+        "en": "North-Central Salt Spring Island Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Northern Halfway Beatton Bedrock Aquifer": {
+      "name": {
+        "en": "Northern Halfway Beatton Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Northern Lac la Hache Aquifer System": {
+      "name": {
+        "en": "Northern Lac la Hache Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Northwest Halfway-Beatton Bedrock Aquifer": {
+      "name": {
+        "en": "Northwest Halfway-Beatton Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Northwest of Clearbrook Aquifer": {
+      "name": {
+        "en": "Northwest of Clearbrook Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Notre Dame Aquifer": {
+      "name": {
+        "en": "Notre Dame Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "O Avenue Aquifer": {
+      "name": {
+        "en": "O Avenue Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "O'Keefe Basal": {
+      "name": {
+        "en": "O'Keefe Basal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "O'Keefe Unconfined Aquifer": {
+      "name": {
+        "en": "O'Keefe Unconfined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oak Ridges Moraine Aquifer": {
+      "name": {
+        "en": "Oak Ridges Moraine Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Obed Mountain Formation": {
+      "name": {
+        "en": "Obed Mountain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Odanah Member": {
+      "name": {
+        "en": "Odanah Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Odanah Shale Aquifer": {
+      "name": {
+        "en": "Odanah Shale Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Okanagan Landing Deep Confined": {
+      "name": {
+        "en": "Okanagan Landing Deep Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Okanagan Valley Aquifer": {
+      "name": {
+        "en": "Okanagan Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oldcastle Aquifer": {
+      "name": {
+        "en": "Oldcastle Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oldman Formation": {
+      "name": {
+        "en": "Oldman Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Opabin Member": {
+      "name": {
+        "en": "Opabin Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Orangeville Aquifer Complex": {
+      "name": {
+        "en": "Orangeville Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Orby Head Formation": {
+      "name": {
+        "en": "Orby Head Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oro Moraine Aquifer Complex": {
+      "name": {
+        "en": "Oro Moraine Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oro-Medonte Aquifer": {
+      "name": {
+        "en": "Oro-Medonte Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Osoyoos West Aquifer": {
+      "name": {
+        "en": "Osoyoos West Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ostracod Beds Member": {
+      "name": {
+        "en": "Ostracod Beds Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ottawa Group Hydrogeologic Unit": {
+      "name": {
+        "en": "Ottawa Group Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Owl Creek Aquifer": {
+      "name": {
+        "en": "Owl Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Owl Ridge Aquifer": {
+      "name": {
+        "en": "Owl Ridge Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oyster River Aquifer": {
+      "name": {
+        "en": "Oyster River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pacheedaht Aquifer": {
+      "name": {
+        "en": "Pacheedaht Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paddy Formation": {
+      "name": {
+        "en": "Paddy Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pakowki Formation": {
+      "name": {
+        "en": "Pakowki Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paldi-Deep Aquifer": {
+      "name": {
+        "en": "Paldi-Deep Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paleozoic Carbonate rock formations, Ordovician to Devonian": {
+      "name": {
+        "en": "Paleozoic Carbonate rock formations, Ordovician to Devonian",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paris Aquifer": {
+      "name": {
+        "en": "Paris Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paris moraine Aquitard": {
+      "name": {
+        "en": "Paris moraine Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paskapoo Formation": {
+      "name": {
+        "en": "Paskapoo Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paskapoo Formation Aquifer": {
+      "name": {
+        "en": "Paskapoo Formation Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paterson Overburden Aquifer": {
+      "name": {
+        "en": "Paterson Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Paul's Basin Aquifer": {
+      "name": {
+        "en": "Paul's Basin Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Peace River Formation": {
+      "name": {
+        "en": "Peace River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Peace-Valley Aquifer System": {
+      "name": {
+        "en": "Peace-Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pelican Formation": {
+      "name": {
+        "en": "Pelican Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pelican Mountain Formation": {
+      "name": {
+        "en": "Pelican Mountain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pense Formation": {
+      "name": {
+        "en": "Pense Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pickering Aquifer": {
+      "name": {
+        "en": "Pickering Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pictou Group": {
+      "name": {
+        "en": "Pictou Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pike Lake Formation": {
+      "name": {
+        "en": "Pike Lake Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pineview Aquifer": {
+      "name": {
+        "en": "Pineview Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Plantagenet Aquifer": {
+      "name": {
+        "en": "Plantagenet Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Porcupine Hills Formation": {
+      "name": {
+        "en": "Porcupine Hills Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Porcupine Hills Formation Aquifers": {
+      "name": {
+        "en": "Porcupine Hills Formation Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port Bruce Phase Aquitard": {
+      "name": {
+        "en": "Port Bruce Phase Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port Bruce Stadial Deposits": {
+      "name": {
+        "en": "Port Bruce Stadial Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port Clements Aquifer": {
+      "name": {
+        "en": "Port Clements Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port Colborne Aquifer": {
+      "name": {
+        "en": "Port Colborne Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port Huron Stadial Deposits": {
+      "name": {
+        "en": "Port Huron Stadial Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port McNeill East Bedrock Aquifer": {
+      "name": {
+        "en": "Port McNeill East Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port McNeill East Unconsolidated": {
+      "name": {
+        "en": "Port McNeill East Unconsolidated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port McNeill West Bedrock": {
+      "name": {
+        "en": "Port McNeill West Bedrock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Port McNeill West Unconsolidated": {
+      "name": {
+        "en": "Port McNeill West Unconsolidated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Portneuf Aquifer": {
+      "name": {
+        "en": "Portneuf Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pottery Road Formation": {
+      "name": {
+        "en": "Pottery Road Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pouce Coupe Member": {
+      "name": {
+        "en": "Pouce Coupe Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pouce Coupe Overburden Aquifer": {
+      "name": {
+        "en": "Pouce Coupe Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pouce Creek Bedrock Aquifer": {
+      "name": {
+        "en": "Pouce Creek Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Powers Ck Deltaic Aquifer": {
+      "name": {
+        "en": "Powers Ck Deltaic Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Prairie Evaporite Formation": {
+      "name": {
+        "en": "Prairie Evaporite Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pre-Canning Aquifers": {
+      "name": {
+        "en": "Pre-Canning Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pre-Canning Aquitard": {
+      "name": {
+        "en": "Pre-Canning Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pre-Catfish Aquifers": {
+      "name": {
+        "en": "Pre-Catfish Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Precambrian Hydrogeologic Unit": {
+      "name": {
+        "en": "Precambrian Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Precambrian rocks": {
+      "name": {
+        "en": "Precambrian rocks",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Precambrian to Model Base": {
+      "name": {
+        "en": "Precambrian to Model Base",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Priceville Aquifer": {
+      "name": {
+        "en": "Priceville Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Prophet River Alluvial Aquifer": {
+      "name": {
+        "en": "Prophet River Alluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Puntledge/ Cumberland Aquifer": {
+      "name": {
+        "en": "Puntledge/ Cumberland Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Puskwaskau Formation": {
+      "name": {
+        "en": "Puskwaskau Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Puslinch Aquifer": {
+      "name": {
+        "en": "Puslinch Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quadra Central Bedrock Aquifer": {
+      "name": {
+        "en": "Quadra Central Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quadra South Bedrock Aquifer": {
+      "name": {
+        "en": "Quadra South Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Queenston Hydrogeologic Unit": {
+      "name": {
+        "en": "Queenston Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quinsam to Stories Beach Aquifer": {
+      "name": {
+        "en": "Quinsam to Stories Beach Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ravenscrag Formation": {
+      "name": {
+        "en": "Ravenscrag Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ravenscrag to Eastend Undifferentiated": {
+      "name": {
+        "en": "Ravenscrag to Eastend Undifferentiated",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rawlings Lake Aquifer": {
+      "name": {
+        "en": "Rawlings Lake Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Red Deer River channel complex": {
+      "name": {
+        "en": "Red Deer River channel complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Regional Aquifer 3": {
+      "name": {
+        "en": "Regional Aquifer 3",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Regional Aquitard 3": {
+      "name": {
+        "en": "Regional Aquitard 3",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Richelieu-Yamaska Aquifer": {
+      "name": {
+        "en": "Richelieu-Yamaska Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Richibucto Formation": {
+      "name": {
+        "en": "Richibucto Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rideau Front Aquifer": {
+      "name": {
+        "en": "Rideau Front Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Riding Mountain/Pierre Shale Formation": {
+      "name": {
+        "en": "Riding Mountain/Pierre Shale Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Roberts Creek Aquifer": {
+      "name": {
+        "en": "Roberts Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rockcliffe Hydrogeologic Unit": {
+      "name": {
+        "en": "Rockcliffe Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rockland Aquifer": {
+      "name": {
+        "en": "Rockland Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rosebery Aquifer": {
+      "name": {
+        "en": "Rosebery Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Rundle Group": {
+      "name": {
+        "en": "Rundle Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ryder Upland A Aquifer": {
+      "name": {
+        "en": "Ryder Upland A Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ryder Upland B Aquifer": {
+      "name": {
+        "en": "Ryder Upland B Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ryder Upland C Aquifer": {
+      "name": {
+        "en": "Ryder Upland C Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Saint-Maurice Aquifer": {
+      "name": {
+        "en": "Saint-Maurice Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Salina Hydrogeologic Unit": {
+      "name": {
+        "en": "Salina Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Salmo River Bedrock Aquifer": {
+      "name": {
+        "en": "Salmo River Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Salmo River Overburden Aquifer": {
+      "name": {
+        "en": "Salmo River Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Salmon River Aquifer": {
+      "name": {
+        "en": "Salmon River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Salmon River-Lower Aquifer": {
+      "name": {
+        "en": "Salmon River-Lower Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Salmon River-Upper Aquifer": {
+      "name": {
+        "en": "Salmon River-Upper Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sand Dunes Aquifer": {
+      "name": {
+        "en": "Sand Dunes Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sandilands Aquifer": {
+      "name": {
+        "en": "Sandilands Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sandspit-Haida Gwaii Aquifer": {
+      "name": {
+        "en": "Sandspit-Haida Gwaii Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sardis-Vedder Aquifer": {
+      "name": {
+        "en": "Sardis-Vedder Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sarsfield Aquifer": {
+      "name": {
+        "en": "Sarsfield Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sayward-Salmon River Aquifer": {
+      "name": {
+        "en": "Sayward-Salmon River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Scarborough Formation": {
+      "name": {
+        "en": "Scarborough Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Schomberg Aquifer Complex": {
+      "name": {
+        "en": "Schomberg Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Schooler Creek Group": {
+      "name": {
+        "en": "Schooler Creek Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Scollard Formation": {
+      "name": {
+        "en": "Scollard Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sechelt/Wakefield Creek Aquifer": {
+      "name": {
+        "en": "Sechelt/Wakefield Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Second White Specks Formation": {
+      "name": {
+        "en": "Second White Specks Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Second White Specks/Favel Formation": {
+      "name": {
+        "en": "Second White Specks/Favel Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sediment Above Bedrock": {
+      "name": {
+        "en": "Sediment Above Bedrock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Seton Portage Aquifer": {
+      "name": {
+        "en": "Seton Portage Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Shaftesbury Formation": {
+      "name": {
+        "en": "Shaftesbury Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Shannon Lake Aquifer": {
+      "name": {
+        "en": "Shannon Lake Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Shawnigan Lake Aquifer": {
+      "name": {
+        "en": "Shawnigan Lake Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Shawnigan Lake/Cobble Hill/Mill Bay Aquifer": {
+      "name": {
+        "en": "Shawnigan Lake/Cobble Hill/Mill Bay Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sheridan Lake Aquifer": {
+      "name": {
+        "en": "Sheridan Lake Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Shuswap Highlands Aquifer": {
+      "name": {
+        "en": "Shuswap Highlands Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Silurian": {
+      "name": {
+        "en": "Silurian",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Simcoe Group Hydrogeologic Unit": {
+      "name": {
+        "en": "Simcoe Group Hydrogeologic Unit",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Similkameen River Aquifer": {
+      "name": {
+        "en": "Similkameen River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sinkut Mountain North Surficial Aquifer": {
+      "name": {
+        "en": "Sinkut Mountain North Surficial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Skidgate/Queen Charlotte Aquifer": {
+      "name": {
+        "en": "Skidgate/Queen Charlotte Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Slave Point Formation": {
+      "name": {
+        "en": "Slave Point Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Smoky Group": {
+      "name": {
+        "en": "Smoky Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sooke-Metchosin Aquifer": {
+      "name": {
+        "en": "Sooke-Metchosin Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Castlegar Bedrock Aquifer": {
+      "name": {
+        "en": "South Castlegar Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Central Elgin Aquifer": {
+      "name": {
+        "en": "South Central Elgin Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Fraser Lake Bedrock Aquifer": {
+      "name": {
+        "en": "South Fraser Lake Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Fraser River Delta Aquifer": {
+      "name": {
+        "en": "South Fraser River Delta Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South London Aquifer": {
+      "name": {
+        "en": "South London Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Nation Aquifer": {
+      "name": {
+        "en": "South Nation Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Nechako Terrace Bedrock Aquifer": {
+      "name": {
+        "en": "South Nechako Terrace Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South of Aldergrove Aquifer": {
+      "name": {
+        "en": "South of Aldergrove Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South of Hopington Aquifer": {
+      "name": {
+        "en": "South of Hopington Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South of Murrayville AC Aquifer": {
+      "name": {
+        "en": "South of Murrayville AC Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South of Murrayville B Aquifer": {
+      "name": {
+        "en": "South of Murrayville B Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Quadra Unconsolidated Aquifer": {
+      "name": {
+        "en": "South Quadra Unconsolidated Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Salt Spring Island Aquifer": {
+      "name": {
+        "en": "South Salt Spring Island Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Valemont Aquifer": {
+      "name": {
+        "en": "South Valemont Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Vanderhoof Unconsolidated Aquifer": {
+      "name": {
+        "en": "South Vanderhoof Unconsolidated Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Vernon Confined Aquifer": {
+      "name": {
+        "en": "South Vernon Confined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South Vernon Unconfined Aquifer": {
+      "name": {
+        "en": "South Vernon Unconfined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "South-Central Salt Spring Island Aquifer": {
+      "name": {
+        "en": "South-Central Salt Spring Island Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Southern Horse Lake Aquifer System Aquifer": {
+      "name": {
+        "en": "Southern Horse Lake Aquifer System Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Spallumcheen Basal Confined Aquifer": {
+      "name": {
+        "en": "Spallumcheen Basal Confined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Spallumcheen Confined": {
+      "name": {
+        "en": "Spallumcheen Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Spallumcheen Unconfined Aquifer": {
+      "name": {
+        "en": "Spallumcheen Unconfined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Spences Bridge Aquifer": {
+      "name": {
+        "en": "Spences Bridge Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sperling Aquifer": {
+      "name": {
+        "en": "Sperling Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Spirit River Formation": {
+      "name": {
+        "en": "Spirit River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Spius Creek West of Canford Aquifer": {
+      "name": {
+        "en": "Spius Creek West of Canford Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "St. Catharines Aquifer": {
+      "name": {
+        "en": "St. Catharines Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "St. George Aquifers": {
+      "name": {
+        "en": "St. George Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "St. Martin Aquifer": {
+      "name": {
+        "en": "St. Martin Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "St. Mary River Formation": {
+      "name": {
+        "en": "St. Mary River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "St. Mathieu Aquifer": {
+      "name": {
+        "en": "St. Mathieu Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "St. Thomas Moraine Local Aquifers": {
+      "name": {
+        "en": "St. Thomas Moraine Local Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stavely Aquifer": {
+      "name": {
+        "en": "Stavely Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stellako Unconsolidated Aquifer": {
+      "name": {
+        "en": "Stellako Unconsolidated Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stirling Group": {
+      "name": {
+        "en": "Stirling Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stoddart Group": {
+      "name": {
+        "en": "Stoddart Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Strathmore Member": {
+      "name": {
+        "en": "Strathmore Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stumbles Creek Aquifer": {
+      "name": {
+        "en": "Stumbles Creek Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stumbles Creek Confined": {
+      "name": {
+        "en": "Stumbles Creek Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stump Lake": {
+      "name": {
+        "en": "Stump Lake",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Stump Lake Bedrock": {
+      "name": {
+        "en": "Stump Lake Bedrock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sugar Lake Aquifer": {
+      "name": {
+        "en": "Sugar Lake Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sulphur Point Formation": {
+      "name": {
+        "en": "Sulphur Point Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sumas Prairie Aquifer": {
+      "name": {
+        "en": "Sumas Prairie Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sumas Prairie North Aquifer": {
+      "name": {
+        "en": "Sumas Prairie North Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sunchild Aquifer": {
+      "name": {
+        "en": "Sunchild Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sunkay Formation": {
+      "name": {
+        "en": "Sunkay Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sunningdale/Glenmerry Bedrock Aquifer": {
+      "name": {
+        "en": "Sunningdale/Glenmerry Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sunnybrae Aquifer": {
+      "name": {
+        "en": "Sunnybrae Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sunnybrook Drift": {
+      "name": {
+        "en": "Sunnybrook Drift",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sunset Creek Overburden Aquifer": {
+      "name": {
+        "en": "Sunset Creek Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sunset Prairie Bedrock Aquifer": {
+      "name": {
+        "en": "Sunset Prairie Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Swan Hills Formation": {
+      "name": {
+        "en": "Swan Hills Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Swan Lake Confined Aquifer": {
+      "name": {
+        "en": "Swan Lake Confined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Swan Lake Unconfined": {
+      "name": {
+        "en": "Swan Lake Unconfined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Swan River Formation": {
+      "name": {
+        "en": "Swan River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sweetwater Bedrock Aquifer": {
+      "name": {
+        "en": "Sweetwater Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tachick Lake Unconsolidated Aquifer": {
+      "name": {
+        "en": "Tachick Lake Unconsolidated Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Talik regions": {
+      "name": {
+        "en": "Talik regions",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tappen Aquifer": {
+      "name": {
+        "en": "Tappen Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thick and extensive unconfined sand and gravel": {
+      "name": {
+        "en": "Thick and extensive unconfined sand and gravel",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thin unconfined sand": {
+      "name": {
+        "en": "Thin unconfined sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thistle Member": {
+      "name": {
+        "en": "Thistle Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thornbury Aquifer": {
+      "name": {
+        "en": "Thornbury Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thorncliffe Formation": {
+      "name": {
+        "en": "Thorncliffe Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thornill Aquifer": {
+      "name": {
+        "en": "Thornill Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Thornton Sand Aquifer": {
+      "name": {
+        "en": "Thornton Sand Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tillsonburg Aquifer": {
+      "name": {
+        "en": "Tillsonburg Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tlell Aquifer": {
+      "name": {
+        "en": "Tlell Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tolman Member": {
+      "name": {
+        "en": "Tolman Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Topley Bedrock Aquifer": {
+      "name": {
+        "en": "Topley Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Trail Townsite Overburden Aquifer": {
+      "name": {
+        "en": "Trail Townsite Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Trail/Warfield Bedrock Aquifer": {
+      "name": {
+        "en": "Trail/Warfield Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Trinity Valley Aquifer": {
+      "name": {
+        "en": "Trinity Valley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tsawwassen Aquifer": {
+      "name": {
+        "en": "Tsawwassen Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tsolum River, North of Courtney Aquifer": {
+      "name": {
+        "en": "Tsolum River, North of Courtney Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tuhok Confined Aquifer": {
+      "name": {
+        "en": "Tuhok Confined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tuhok Unconfined Aquifer": {
+      "name": {
+        "en": "Tuhok Unconfined Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Turtle Mountain Formation": {
+      "name": {
+        "en": "Turtle Mountain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Two Creeks Interstadial Deposits": {
+      "name": {
+        "en": "Two Creeks Interstadial Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Tyconnell Formation": {
+      "name": {
+        "en": "Tyconnell Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ucluelet Peninsula Aquifer": {
+      "name": {
+        "en": "Ucluelet Peninsula Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ucluelet, Lost Shoe Aquifer": {
+      "name": {
+        "en": "Ucluelet, Lost Shoe Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ucluelet, Lost Show Aquifer": {
+      "name": {
+        "en": "Ucluelet, Lost Show Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unicola Aquifer": {
+      "name": {
+        "en": "Unicola Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unit A Exposed Bedrock and Drift-Poor Areas": {
+      "name": {
+        "en": "Unit A Exposed Bedrock and Drift-Poor Areas",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unit B Till and Ribbed Moraine Deposits": {
+      "name": {
+        "en": "Unit B Till and Ribbed Moraine Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unit C Ablation Drift Deposits": {
+      "name": {
+        "en": "Unit C Ablation Drift Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unit D Glaciomarine and Marine Deposits and Glaciolacustrine Deposits": {
+      "name": {
+        "en": "Unit D Glaciomarine and Marine Deposits and Glaciolacustrine Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unit E Glaciofluvial Deposits": {
+      "name": {
+        "en": "Unit E Glaciofluvial Deposits",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upland Aquifer Complex": {
+      "name": {
+        "en": "Upland Aquifer Complex",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper and Lower Gloucester Aquifers": {
+      "name": {
+        "en": "Upper and Lower Gloucester Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper and Lower Nepean-Kemptville Aquifers": {
+      "name": {
+        "en": "Upper and Lower Nepean-Kemptville Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper and Lower West Nepean Aquifers": {
+      "name": {
+        "en": "Upper and Lower West Nepean Aquifers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Aquifer 1": {
+      "name": {
+        "en": "Upper Aquifer 1",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Bearpaw Formation": {
+      "name": {
+        "en": "Upper Bearpaw Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Brazeau Member": {
+      "name": {
+        "en": "Upper Brazeau Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Bridge Creek Bedrock Aquifer": {
+      "name": {
+        "en": "Upper Bridge Creek Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Bridge Creek Valley Aquifer System": {
+      "name": {
+        "en": "Upper Bridge Creek Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Brougham Aquifer": {
+      "name": {
+        "en": "Upper Brougham Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Bulkley Alluvial Aquifer": {
+      "name": {
+        "en": "Upper Bulkley Alluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Catfish Creek Till Aquitard": {
+      "name": {
+        "en": "Upper Catfish Creek Till Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Cherryville Aquifer": {
+      "name": {
+        "en": "Upper Cherryville Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Chinguacousy Aquifer": {
+      "name": {
+        "en": "Upper Chinguacousy Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Coalspur Member": {
+      "name": {
+        "en": "Upper Coalspur Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Cretaceous sands Aquifer": {
+      "name": {
+        "en": "Upper Cretaceous sands Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Erie Phase Aquifer": {
+      "name": {
+        "en": "Upper Erie Phase Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Erie Phase Aquitard": {
+      "name": {
+        "en": "Upper Erie Phase Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Gates River Aquifer": {
+      "name": {
+        "en": "Upper Gates River Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Halfway Bedrock Aquifer": {
+      "name": {
+        "en": "Upper Halfway Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Lac la Hache Valley Bedrock Aquifer": {
+      "name": {
+        "en": "Upper Lac la Hache Valley Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Lea Park Formation": {
+      "name": {
+        "en": "Upper Lea Park Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Loon Formation": {
+      "name": {
+        "en": "Upper Loon Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Lotsberg Formation": {
+      "name": {
+        "en": "Upper Lotsberg Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Markham Aquifer": {
+      "name": {
+        "en": "Upper Markham Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Maryhill Till": {
+      "name": {
+        "en": "Upper Maryhill Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Merritt Aquifer": {
+      "name": {
+        "en": "Upper Merritt Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Montney Formation": {
+      "name": {
+        "en": "Upper Montney Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Ordovician strata": {
+      "name": {
+        "en": "Upper Ordovician strata",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Scollard Member": {
+      "name": {
+        "en": "Upper Scollard Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Shaftesbury Formation": {
+      "name": {
+        "en": "Upper Shaftesbury Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Thames Aquifer": {
+      "name": {
+        "en": "Upper Thames Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Thorncliffe Aquifer": {
+      "name": {
+        "en": "Upper Thorncliffe Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Thorncliffe Aquitard": {
+      "name": {
+        "en": "Upper Thorncliffe Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Unionville Aquifer": {
+      "name": {
+        "en": "Upper Unionville Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Victoria Aquifer": {
+      "name": {
+        "en": "Upper Victoria Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Wapiti Member": {
+      "name": {
+        "en": "Upper Wapiti Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Waterloo Moraine Aquifer": {
+      "name": {
+        "en": "Upper Waterloo Moraine Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Upper Willow Creek Member": {
+      "name": {
+        "en": "Upper Willow Creek Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Valens Outwash Aquifer": {
+      "name": {
+        "en": "Valens Outwash Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Valley View-Dawson Creek Bedrock Aquifer": {
+      "name": {
+        "en": "Valley View-Dawson Creek Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vanderhoof Alluvial Aquifer": {
+      "name": {
+        "en": "Vanderhoof Alluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vedder Crossing Aquifer": {
+      "name": {
+        "en": "Vedder Crossing Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vedder Mountain NW Bedrock Aquifer": {
+      "name": {
+        "en": "Vedder Mountain NW Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vedder Mountain SE Bedrock Aquifer": {
+      "name": {
+        "en": "Vedder Mountain SE Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vellore Aquifer": {
+      "name": {
+        "en": "Vellore Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Verger Member": {
+      "name": {
+        "en": "Verger Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vermillion River Formation": {
+      "name": {
+        "en": "Vermillion River Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vernon Confined": {
+      "name": {
+        "en": "Vernon Confined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vernon Unconfined": {
+      "name": {
+        "en": "Vernon Unconfined",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Viking Formation": {
+      "name": {
+        "en": "Viking Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Viking/Newcastle Formation": {
+      "name": {
+        "en": "Viking/Newcastle Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Vimy Member": {
+      "name": {
+        "en": "Vimy Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wabamun Group": {
+      "name": {
+        "en": "Wabamun Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wabiskaw Member": {
+      "name": {
+        "en": "Wabiskaw Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wainfleet Aquifer": {
+      "name": {
+        "en": "Wainfleet Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Walker Hook Aquifer": {
+      "name": {
+        "en": "Walker Hook Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Walkerton Aquifer": {
+      "name": {
+        "en": "Walkerton Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wallaceburg Aquifer": {
+      "name": {
+        "en": "Wallaceburg Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wallacetown Formation": {
+      "name": {
+        "en": "Wallacetown Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wapiabi Formation": {
+      "name": {
+        "en": "Wapiabi Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wapiti Formation": {
+      "name": {
+        "en": "Wapiti Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wark-Colquitz Aquifer": {
+      "name": {
+        "en": "Wark-Colquitz Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Warman Formation": {
+      "name": {
+        "en": "Warman Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Waterloo Moraine Aquifer": {
+      "name": {
+        "en": "Waterloo Moraine Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Waterways Formation": {
+      "name": {
+        "en": "Waterways Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Watson Creek Valley Aquifer System": {
+      "name": {
+        "en": "Watson Creek Valley Aquifer System",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Watt Mountain Formation": {
+      "name": {
+        "en": "Watt Mountain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wentworth Aquifer": {
+      "name": {
+        "en": "Wentworth Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wentworth Till/Aquitard": {
+      "name": {
+        "en": "Wentworth Till/Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West Arrow Creek Overburden Aquifer": {
+      "name": {
+        "en": "West Arrow Creek Overburden Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West Carlton Aquifer": {
+      "name": {
+        "en": "West Carlton Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West Cluculz Lake Bedrock Aquifer": {
+      "name": {
+        "en": "West Cluculz Lake Bedrock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West Creston Aquifer": {
+      "name": {
+        "en": "West Creston Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West Langley Aquifer": {
+      "name": {
+        "en": "West Langley Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West of Aldergrove Aquifer": {
+      "name": {
+        "en": "West of Aldergrove Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West of Merritt Aquifer": {
+      "name": {
+        "en": "West of Merritt Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West Saanich Road Aquifer": {
+      "name": {
+        "en": "West Saanich Road Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "West Sechelt Aquifer": {
+      "name": {
+        "en": "West Sechelt Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Westgate Formation": {
+      "name": {
+        "en": "Westgate Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Westwold Aquifer": {
+      "name": {
+        "en": "Westwold Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "White Rock Aquifer": {
+      "name": {
+        "en": "White Rock Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Whitecourt Mountain Formation": {
+      "name": {
+        "en": "Whitecourt Mountain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Whitemud Formation": {
+      "name": {
+        "en": "Whitemud Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Whitemud Member": {
+      "name": {
+        "en": "Whitemud Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Whittlesey Aquifer": {
+      "name": {
+        "en": "Whittlesey Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Whittlesey Clay/Aquitard": {
+      "name": {
+        "en": "Whittlesey Clay/Aquitard",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Whittlesey Sand": {
+      "name": {
+        "en": "Whittlesey Sand",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Willow Creek Alluvial Aquifer": {
+      "name": {
+        "en": "Willow Creek Alluvial Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Willow Creek Formation": {
+      "name": {
+        "en": "Willow Creek Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Willow Creek Formation Aquifer": {
+      "name": {
+        "en": "Willow Creek Formation Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Windsor Group": {
+      "name": {
+        "en": "Windsor Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Winnipeg Formation": {
+      "name": {
+        "en": "Winnipeg Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Winnipegosis Formation": {
+      "name": {
+        "en": "Winnipegosis Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Winterburn Group": {
+      "name": {
+        "en": "Winterburn Group",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wood Mountain and Mount Washington Aquifer": {
+      "name": {
+        "en": "Wood Mountain and Mount Washington Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Wood Mountain Formation": {
+      "name": {
+        "en": "Wood Mountain Formation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Woodbridge Aquifer": {
+      "name": {
+        "en": "Woodbridge Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Yonge Street Aquifer": {
+      "name": {
+        "en": "Yonge Street Aquifer",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "York Till": {
+      "name": {
+        "en": "York Till",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Zama Member": {
+      "name": {
+        "en": "Zama Member",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

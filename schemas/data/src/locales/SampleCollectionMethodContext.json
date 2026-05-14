@@ -1,0 +1,132 @@
+{
+  "name": {
+    "en": "SampleCollectionMethodContext",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "AB_AEP": {
+      "name": {
+        "en": "AB_AEP",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "AB_AGS": {
+      "name": {
+        "en": "AB_AGS",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ASTM": {
+      "name": {
+        "en": "ASTM",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "BC_MOE": {
+      "name": {
+        "en": "BC_MOE",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ISO": {
+      "name": {
+        "en": "ISO",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NL_ECCC": {
+      "name": {
+        "en": "NL_ECCC",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NS_DNR": {
+      "name": {
+        "en": "NS_DNR",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "NS_ECC": {
+      "name": {
+        "en": "NS_ECC",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "PROPRIETARY": {
+      "name": {
+        "en": "PROPRIETARY",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "QC_MOE": {
+      "name": {
+        "en": "QC_MOE",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "USDOI/USGS": {
+      "name": {
+        "en": "USDOI/USGS",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "USEPA": {
+      "name": {
+        "en": "USEPA",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

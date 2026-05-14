@@ -1,0 +1,72 @@
+{
+  "name": {
+    "en": "SampleCondition",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Flowing": {
+      "name": {
+        "en": "Flowing",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nearby site is being pumped or pumped recently": {
+      "name": {
+        "en": "Nearby site is being pumped or pumped recently",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Static, before pumping or purging": {
+      "name": {
+        "en": "Static, before pumping or purging",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "The site has been recently pumped or purged": {
+      "name": {
+        "en": "The site has been recently pumped or purged",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "The site is being pumped for water use": {
+      "name": {
+        "en": "The site is being pumped for water use",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unspecified": {
+      "name": {
+        "en": "Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

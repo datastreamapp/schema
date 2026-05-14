@@ -6,14 +6,21 @@ import { subset, sort } from "./build-lib.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const columns = [
+  "ActivityDepthAltitudeReferencePoint",
   "ActivityMediaName", // filter
   "ActivityType",
   "ActivityGroupType", // filter
+  "AquiferType",
+  "AquiferUnitName",
+  "AquiferUnitPorosityType",
   "CharacteristicName", // filter
   "CharacteristicGroup", // filter
+  "LithologyType",
   "MethodSpeciation", // app display
   "MonitoringLocationHorizontalCoordinateReferenceSystem",
   "MonitoringLocationType", // app filter
+  "MonitoringLocationVerticalCollectionMethod",
+  "MonitoringLocationVerticalCoordinateReferenceSystem",
   "ResultAnalyticalMethodContext",
   "ResultDetectionCondition",
   "ResultDetectionQuantitationLimitType",
@@ -21,6 +28,10 @@ const columns = [
   "ResultStatusID",
   "ResultValueType",
   "SampleCollectionEquipmentName",
+  "SampleCollectionMethodContext",
+  "SampleCondition",
+  "WellIDContext",
+  "WellUseType",
   //"MeasurementUnit",
 ];
 
