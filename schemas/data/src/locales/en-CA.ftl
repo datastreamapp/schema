@@ -85,14 +85,14 @@ error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, sp
 error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations must include a valid ActivityStartTime
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
 error-ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required when ActivityDepthHeightMeasure is reported
-error-ActivityMediaName-Groundwater-DepthMeasure = At least one of ActivityDepthHeightMeasure, BoreholeDepthMeasure, WellDepthMeasure, WellOpenIntervalTopMeasure, or WellOpenIntervalBottomMeasure must be reported when ActivityMediaName is Groundwater or Porewater
+error-ActivityMediaName-Groundwater-DepthMeasure = At least one of ActivityDepthHeightMeasure, BoreholeDepthMeasure, WellDepthMeasure, WellOpenIntervalTopMeasure, or WellOpenIntervalBottomMeasure must be reported when ActivityMediaName is 'Groundwater' or 'Porewater'
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
 error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data (https://datastream.org/en-ca/documentation/isotope-data-guidance)
 error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required for CharacteristicName 'Water level in well, depth from a reference point'
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
-error-GroundwaterFields-ActivityMediaName-Groundwater = ActivityMediaName must be Groundwater or Porewater when a Groundwater-specific field is reported
+error-GroundwaterFields-ActivityMediaName-Groundwater = ActivityMediaName must be 'Groundwater' or 'Porewater' when any groundwater- or porewater-specific field is reported
 error-MonitoringLocationType-Well-WellUseType = WellUseType is required when MonitoringLocationType is a well or piezometer
 error-MonitoringLocationType-Well-SampleCondition = SampleCondition is required when MonitoringLocationType is a well or piezometer (except for Continuous Time Series activities)
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below = ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits
@@ -153,3 +153,4 @@ qc-MonitoringLocationName-Duplicate = Multiple MonitoringLocationNames are used 
 qc-MonitoringLocationType-Duplicate = Multiple MonitoringLocationTypes are used with the same MonitoringLocationID
 qc-MonitoringLocationHorizontalCoordinateReferenceSystem-Duplicate = Multiple MonitoringLocationHorizontalCoordinateReferenceSystems are used with the same MonitoringLocationID
 qc-ActivityTypeContinuous = When there are >= 24 observations of the same type on the same day, ActivityType is expected to equal 'Field Msr/Obs-Continuous Time Series'
+error-ActivityMediaName-Groundwater-Mixed = ActivityMediaName must be 'Groundwater' or 'Porewater' on every row when either is reported. Submit other media as a separate dataset.

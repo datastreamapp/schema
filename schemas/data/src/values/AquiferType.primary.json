@@ -4,10 +4,10 @@
   "description": "",
   "type": "string",
   "enum": [
-    "ARTESIAN",
-    "CONFINED",
-    "SEMI-CONFINED",
-    "UNCONFINED"
+    "Artesian",
+    "Confined",
+    "Semi-Confined",
+    "Unconfined"
   ],
   "maxLength": 13
 }

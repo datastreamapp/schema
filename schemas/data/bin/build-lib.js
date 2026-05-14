@@ -25,6 +25,7 @@ export const subsetOnly = [
 
 // Custom fields (non-WQX) that need value files generated
 export const custom = [
+  "AquiferType",
   "AquiferUnitName",
   "WellIDContext",
   "AquiferUnitPorosityType",
@@ -43,7 +44,6 @@ export const wqx = {
   MonitoringLocationVerticalCoordinateReferenceSystem: "VerticalReferenceDatum",
   MonitoringLocationType: "MonitoringLocationType",
   WellUseType: "WellType",
-  AquiferType: "AquiferType",
   LithologyType: "WellFormationType",
   BoreholeDepthUnit: "MeasurementUnit",
   WellDepthUnit: "MeasurementUnit",
