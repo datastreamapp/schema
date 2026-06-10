@@ -154,3 +154,4 @@ qc-MonitoringLocationType-Duplicate = Multiple MonitoringLocationTypes are used 
 qc-MonitoringLocationHorizontalCoordinateReferenceSystem-Duplicate = Multiple MonitoringLocationHorizontalCoordinateReferenceSystems are used with the same MonitoringLocationID
 qc-ActivityTypeContinuous = When there are >= 24 observations of the same type on the same day, ActivityType is expected to equal 'Field Msr/Obs-Continuous Time Series'
 error-ActivityMediaName-Groundwater-Mixed = ActivityMediaName must be 'Groundwater' or 'Porewater' on every row when either is reported. Submit other media as a separate dataset.
+error-ActivityType-Continuous-Mixed = Continuous time-series data should be uploaded in a separate dataset from discrete (single point-in-time) data
