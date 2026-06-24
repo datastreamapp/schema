@@ -101,6 +101,9 @@
         "WellOpenIntervalBottomUnit": {
           "$ref": "./definitions.json#/definitions/WellOpenIntervalBottomUnitStrict"
         },
+        "EventID": {
+          "$ref": "./definitions.json#/definitions/EventID"
+        },
         "ActivityType": {
           "$ref": "./definitions.json#/definitions/ActivityTypeStrict"
         },

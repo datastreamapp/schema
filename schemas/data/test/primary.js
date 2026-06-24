@@ -139,6 +139,12 @@ test("LaboratorySampleID has maxLength 60", () => {
   assert.equal(main.properties.LaboratorySampleID.maxLength, 60);
 });
 
+test("EventID is text with maxLength 255", () => {
+  const f = main.properties.EventID;
+  assert.equal(f.type, "string");
+  assert.equal(f.maxLength, 255);
+});
+
 test("ResultComment has maxLength 4000", () => {
   assert.equal(main.properties.ResultComment.maxLength, 4000);
 });

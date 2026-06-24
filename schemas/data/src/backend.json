@@ -128,6 +128,10 @@
           "$ref": "./definitions.json#/definitions/WellOpenIntervalBottomUnitLoose",
           "transform": ["trim", "toEnumCase"]
         },
+        "EventID": {
+          "$ref": "./definitions.json#/definitions/EventID",
+          "transform": ["trim"]
+        },
         "ActivityType": {
           "$ref": "./definitions.json#/definitions/ActivityTypeLoose",
           "transform": ["trim", "toEnumCase"]

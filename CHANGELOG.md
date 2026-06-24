@@ -31,6 +31,7 @@ Targets `3.0.0`. Introduces **Groundwater support** to the DataStream schema.
   - `MonitoringLocationVerticalUnit`: `ft`, `m`
   - `SampleCollectionEquipmentName`: `Air line`, `Bailer`, `Hydrasleeve`, `Snap sampler`, `Tubing`, `Water level meter`, `Wetted tape`
   - `CharacteristicName`: `Water level elevation`, `Water level in well, depth from a reference point`
+- **`EventID` field** — optional free-text identifier (max 255 characters) for grouping observations by field sampling event; available for all data types. No conditional logic or validation checks beyond the standard single-line string pattern.
 
 ### Breaking
 

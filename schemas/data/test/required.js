@@ -159,6 +159,18 @@ test("Should reject additional headers", async (t) => {
   );
 });
 
+test("Should treat EventID as an optional, unconditional field", async (t) => {
+  validate({ EventID: "Spring 2018 survey" });
+  // Recognized column — not rejected as an unknown/additional header.
+  assert.equal(
+    checkProperty(validate.errors, "unevaluatedProperties", "EventID"),
+    false,
+  );
+  // Imposes no requirement of its own — never reported as required or as a dependency.
+  assert.equal(checkProperty(validate.errors, "required", "EventID"), false);
+  assert.equal(checkProperty(validate.errors, "dependencies", "EventID"), false);
+});
+
 test("Should reject ActivityDepthHeightMeasure AND NOT ActivityDepthHeightUnit", async (t) => {
   const valid = validate({
     ActivityDepthHeightMeasure: true,

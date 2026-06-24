@@ -85,6 +85,8 @@ test("Should reject strings with multiline", async (t) => {
     1234`,
     LaboratorySampleID: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
     1234`,
+    EventID: `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM:/.,-'\"
+    1234`,
   });
 
   assert.equal(checkProperty(validate.errors, "pattern", "DatasetName"), true);
@@ -112,6 +114,7 @@ test("Should reject strings with multiline", async (t) => {
     checkProperty(validate.errors, "pattern", "LaboratorySampleID"),
     true,
   );
+  assert.equal(checkProperty(validate.errors, "pattern", "EventID"), true);
 });
 
 test("Should accept strings-multiline", async (t) => {
@@ -674,4 +677,13 @@ test("Should reject SampleCollectionMethodID > 50 chars", async (t) => {
 test("Should accept SampleCollectionMethodID <= 50 chars", async (t) => {
   validate({ SampleCollectionMethodID: "x".repeat(50) });
   assert.equal(checkProperty(validate.errors, "maxLength", "SampleCollectionMethodID"), false);
+});
+
+test("Should reject EventID > 255 chars", async (t) => {
+  validate({ EventID: "x".repeat(256) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "EventID"), true);
+});
+test("Should accept EventID <= 255 chars", async (t) => {
+  validate({ EventID: "x".repeat(255) });
+  assert.equal(checkProperty(validate.errors, "maxLength", "EventID"), false);
 });

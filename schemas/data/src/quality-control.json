@@ -42,6 +42,7 @@
         "WellOpenIntervalTopUnit": true,
         "WellOpenIntervalBottomMeasure": true,
         "WellOpenIntervalBottomUnit": true,
+        "EventID": true,
         "ActivityType": true,
         "ActivityMediaName": true,
         "ActivityStartDate": true,

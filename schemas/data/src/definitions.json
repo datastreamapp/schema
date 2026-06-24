@@ -181,6 +181,12 @@
     "WellOpenIntervalBottomUnitLoose": {
       "$ref": "https://datastream.org/schema/data/values/WellOpenIntervalBottomUnit.legacy.json"
     },
+    "EventID": {
+      "title": "Event ID",
+      "description": "A unique identifier supplied by the data contributor, usually corresponding to field sampling events",
+      "$ref": "#/definitions/string",
+      "maxLength": 255
+    },
     "ActivityTypeStrict": {
       "$ref": "https://datastream.org/schema/data/values/ActivityType.primary.json"
     },
