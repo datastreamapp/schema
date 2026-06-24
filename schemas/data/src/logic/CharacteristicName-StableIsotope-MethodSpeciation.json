@@ -11,6 +11,7 @@
         "enum": [
           "Nitrogen-15",
           "Nitrogen-15/Nitrogen-14 ratio",
+          "Oxygen-17",
           "Oxygen-18",
           "Oxygen-18/Oxygen-16 ratio",
           "delta carbon-13/carbon-12",
