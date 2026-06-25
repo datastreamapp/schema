@@ -4,8 +4,8 @@
     "fr": null
   },
   "description": {
-    "en": "Identifies what is being measured (Ex. Temperature, pH) in a field or lab result. The name used must have a match in the Allowed Values list.",
-    "fr": "Identifie ce qui est mesuré (p. Ex. température, pH) sur le terrain ou en laboratoire. Le nom utilisé doit avoir une correspondance dans la liste des valeurs autorisées --  voir onglet \"Allowed Values\"."
+    "en": "Identifies what is being measured (e.g. temperature, pH). The name used must have an exact match in the Allowed Values list.",
+    "fr": "Identifie ce qui est mesuré (par exemple température, pH). Le nom utilisé doit correspondre exactement à un nom dans la liste des Valeurs autorisées."
   },
   "values": {
     "(Heptadecafluorooctyl)phosphonic acid": {
@@ -98,6 +98,16 @@
         "fr": null
       }
     },
+    ".beta.-Sitosterol": {
+      "name": {
+        "en": ".beta.-Sitosterol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     ".delta.-Hexachlorocyclohexane": {
       "name": {
         "en": ".delta.-Hexachlorocyclohexane",
@@ -151,6 +161,16 @@
     "1-Butanol": {
       "name": {
         "en": "1-Butanol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1-Decanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heneicosafluoro-": {
+      "name": {
+        "en": "1-Decanesulfonic acid, 1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heneicosafluoro-",
         "fr": null
       },
       "description": {
@@ -838,6 +858,16 @@
         "fr": null
       }
     },
+    "1,4-Dichloro-cis-2-butene": {
+      "name": {
+        "en": "1,4-Dichloro-cis-2-butene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "1,4-Dichlorobenzene-d4": {
       "name": {
         "en": "1,4-Dichlorobenzene-d4",
@@ -851,6 +881,16 @@
     "1,4-Difluorobenzene": {
       "name": {
         "en": "1,4-Difluorobenzene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "1,4-Dioxane": {
+      "name": {
+        "en": "1,4-Dioxane",
         "fr": null
       },
       "description": {
@@ -918,9 +958,29 @@
         "fr": null
       }
     },
+    "11-chloroeicosafluoro-3-oxaundecane-1-sulfonic acid": {
+      "name": {
+        "en": "11-chloroeicosafluoro-3-oxaundecane-1-sulfonic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "12-Chlorodehydroabietic acid": {
       "name": {
         "en": "12-Chlorodehydroabietic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "12,14-Dichlorodehydroabietic acid": {
+      "name": {
+        "en": "12,14-Dichlorodehydroabietic acid",
         "fr": null
       },
       "description": {
@@ -1608,6 +1668,16 @@
         "fr": null
       }
     },
+    "2,4,6-Trichloroanisole": {
+      "name": {
+        "en": "2,4,6-Trichloroanisole",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "2,4,6-Trichlorophenol": {
       "name": {
         "en": "2,4,6-Trichlorophenol",
@@ -1788,6 +1858,16 @@
         "fr": null
       }
     },
+    "3-Pyridinecarboxamide, N-(2+A2:A19,4-difluorophenyl)-2-[3-(trifluoromethyl)phenoxy]-": {
+      "name": {
+        "en": "3-Pyridinecarboxamide, N-(2+A2:A19,4-difluorophenyl)-2-[3-(trifluoromethyl)phenoxy]-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "3,3'-Dichlorobenzidine": {
       "name": {
         "en": "3,3'-Dichlorobenzidine",
@@ -1808,9 +1888,39 @@
         "fr": null
       }
     },
+    "3,4-Dichlorocatechol": {
+      "name": {
+        "en": "3,4-Dichlorocatechol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "3,4-Dichlorophenol": {
       "name": {
         "en": "3,4-Dichlorophenol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "3,4,5-Trichlorocatechol": {
+      "name": {
+        "en": "3,4,5-Trichlorocatechol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "3,4,5-Trichloroguaiacol": {
+      "name": {
+        "en": "3,4,5-Trichloroguaiacol",
         "fr": null
       },
       "description": {
@@ -1828,9 +1938,39 @@
         "fr": null
       }
     },
+    "3,4,6-Trichlorocatechol": {
+      "name": {
+        "en": "3,4,6-Trichlorocatechol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "3,4,6-Trichloroguaiacol": {
+      "name": {
+        "en": "3,4,6-Trichloroguaiacol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "3,5-Dichlorobenzoic acid": {
       "name": {
         "en": "3,5-Dichlorobenzoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "3,5-Dichlorocatechol": {
+      "name": {
+        "en": "3,5-Dichlorocatechol",
         "fr": null
       },
       "description": {
@@ -1871,6 +2011,26 @@
     "4-Chloro-2-methylphenol": {
       "name": {
         "en": "4-Chloro-2-methylphenol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "4-Chloro-3-nitrobenzotrifluoride": {
+      "name": {
+        "en": "4-Chloro-3-nitrobenzotrifluoride",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "4-Chlorocatechol": {
+      "name": {
+        "en": "4-Chlorocatechol",
         "fr": null
       },
       "description": {
@@ -1961,6 +2121,46 @@
     "4,4'-Isopropylidenediphenol": {
       "name": {
         "en": "4,4'-Isopropylidenediphenol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "4,5-Dichlorocatechol": {
+      "name": {
+        "en": "4,5-Dichlorocatechol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "4,5-Dichloroveratrole": {
+      "name": {
+        "en": "4,5-Dichloroveratrole",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "4,5,6-Trichloroguaiacol": {
+      "name": {
+        "en": "4,5,6-Trichloroguaiacol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "4,6-Dichloroguaiacol": {
+      "name": {
+        "en": "4,6-Dichloroguaiacol",
         "fr": null
       },
       "description": {
@@ -2061,6 +2261,16 @@
     "8(14)-Abietenic acid": {
       "name": {
         "en": "8(14)-Abietenic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "9-Chlorohexadecafluoro-3-oxanonane-1-sulfonate": {
+      "name": {
+        "en": "9-Chlorohexadecafluoro-3-oxanonane-1-sulfonate",
         "fr": null
       },
       "description": {
@@ -2248,6 +2458,16 @@
         "fr": null
       }
     },
+    "Acetamide, 2-(diethylamino)-N-(2,6-dimethylphenyl)-": {
+      "name": {
+        "en": "Acetamide, 2-(diethylamino)-N-(2,6-dimethylphenyl)-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Acetaminophen": {
       "name": {
         "en": "Acetaminophen",
@@ -2331,6 +2551,36 @@
     "Acridine-d9": {
       "name": {
         "en": "Acridine-d9",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Acrolein": {
+      "name": {
+        "en": "Acrolein",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Acrylonitrile": {
+      "name": {
+        "en": "Acrylonitrile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Adamantane Carboxylic Acid-D15": {
+      "name": {
+        "en": "Adamantane Carboxylic Acid-D15",
         "fr": null
       },
       "description": {
@@ -2468,6 +2718,16 @@
         "fr": null
       }
     },
+    "Allidochlor": {
+      "name": {
+        "en": "Allidochlor",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Allyl chloride": {
       "name": {
         "en": "Allyl chloride",
@@ -2598,6 +2858,16 @@
         "fr": null
       }
     },
+    "Anatoxin-A": {
+      "name": {
+        "en": "Anatoxin-A",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Anilazine": {
       "name": {
         "en": "Anilazine",
@@ -2661,6 +2931,16 @@
     "Apparent color": {
       "name": {
         "en": "Apparent color",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "ar,ar'-Dimethylbiphenyl": {
+      "name": {
+        "en": "ar,ar'-Dimethylbiphenyl",
         "fr": null
       },
       "description": {
@@ -2868,6 +3148,16 @@
         "fr": null
       }
     },
+    "Atrazine + all metabolites": {
+      "name": {
+        "en": "Atrazine + all metabolites",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Atrazine + N-Dealkylated Metabolites": {
       "name": {
         "en": "Atrazine + N-Dealkylated Metabolites",
@@ -2901,6 +3191,16 @@
     "Azoxystrobin": {
       "name": {
         "en": "Azoxystrobin",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bacteria, Sulfate reducing": {
+      "name": {
+        "en": "Bacteria, Sulfate reducing",
         "fr": null
       },
       "description": {
@@ -3228,6 +3528,16 @@
         "fr": null
       }
     },
+    "Benalaxyl": {
+      "name": {
+        "en": "Benalaxyl",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Bendiocarb": {
       "name": {
         "en": "Bendiocarb",
@@ -3311,6 +3621,16 @@
     "Benzene, 1,2-dichloro-4-methyl-": {
       "name": {
         "en": "Benzene, 1,2-dichloro-4-methyl-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Benzene, 1,2,3-trichloro-4,5-dimethoxy-": {
+      "name": {
+        "en": "Benzene, 1,2,3-trichloro-4,5-dimethoxy-",
         "fr": null
       },
       "description": {
@@ -3541,6 +3861,16 @@
     "Benzoylecgonine": {
       "name": {
         "en": "Benzoylecgonine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Benzoylprop-ethyl": {
+      "name": {
+        "en": "Benzoylprop-ethyl",
         "fr": null
       },
       "description": {
@@ -3898,9 +4228,29 @@
         "fr": null
       }
     },
+    "BTEX plus styrene, Total": {
+      "name": {
+        "en": "BTEX plus styrene, Total",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "BTEX, Total": {
       "name": {
         "en": "BTEX, Total",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bupirimate": {
+      "name": {
+        "en": "Bupirimate",
         "fr": null
       },
       "description": {
@@ -4068,6 +4418,16 @@
         "fr": null
       }
     },
+    "C10-C50 Hydrocarbons": {
+      "name": {
+        "en": "C10-C50 Hydrocarbons",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "C16-C21 Hydrocarbons": {
       "name": {
         "en": "C16-C21 Hydrocarbons",
@@ -4081,6 +4441,16 @@
     "C16-C34 Hydrocarbons": {
       "name": {
         "en": "C16-C34 Hydrocarbons",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "C16-C50 Hydrocarbons": {
+      "name": {
+        "en": "C16-C50 Hydrocarbons",
         "fr": null
       },
       "description": {
@@ -4468,6 +4838,16 @@
         "fr": null
       }
     },
+    "Carbazole": {
+      "name": {
+        "en": "Carbazole",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Carbofuran": {
       "name": {
         "en": "Carbofuran",
@@ -4511,6 +4891,16 @@
     "Carbon Dioxide, free CO2": {
       "name": {
         "en": "Carbon Dioxide, free CO2",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Carbon disulfide": {
+      "name": {
+        "en": "Carbon disulfide",
         "fr": null
       },
       "description": {
@@ -5098,6 +5488,16 @@
         "fr": null
       }
     },
+    "Chlorthiamid": {
+      "name": {
+        "en": "Chlorthiamid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Chlorthiophos": {
       "name": {
         "en": "Chlorthiophos",
@@ -5498,6 +5898,16 @@
         "fr": null
       }
     },
+    "Coprostanol": {
+      "name": {
+        "en": "Coprostanol",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Corrosion & scaling control, Ryznar Stability Index": {
       "name": {
         "en": "Corrosion & scaling control, Ryznar Stability Index",
@@ -5511,6 +5921,16 @@
     "Cotinine": {
       "name": {
         "en": "Cotinine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Cresol": {
+      "name": {
+        "en": "Cresol",
         "fr": null
       },
       "description": {
@@ -5668,6 +6088,16 @@
         "fr": null
       }
     },
+    "Cyprazine": {
+      "name": {
+        "en": "Cyprazine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Cyprodinil": {
       "name": {
         "en": "Cyprodinil",
@@ -5758,6 +6188,26 @@
         "fr": null
       }
     },
+    "Decanoic acid": {
+      "name": {
+        "en": "Decanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Decanoic Acid-D19": {
+      "name": {
+        "en": "Decanoic Acid-D19",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Decanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heptadecafluoro-": {
       "name": {
         "en": "Decanoic acid, 3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heptadecafluoro-",
@@ -5781,6 +6231,16 @@
     "Dehydroabietic acid": {
       "name": {
         "en": "Dehydroabietic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dehydronifedipine": {
+      "name": {
+        "en": "Dehydronifedipine",
         "fr": null
       },
       "description": {
@@ -6298,6 +6758,16 @@
         "fr": null
       }
     },
+    "Diclofop": {
+      "name": {
+        "en": "Diclofop",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Diclofop methyl": {
       "name": {
         "en": "Diclofop methyl",
@@ -6498,6 +6968,16 @@
         "fr": null
       }
     },
+    "Dimethylnaphthalene": {
+      "name": {
+        "en": "Dimethylnaphthalene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Dinitramine": {
       "name": {
         "en": "Dinitramine",
@@ -6648,6 +7128,16 @@
         "fr": null
       }
     },
+    "Dysprosium": {
+      "name": {
+        "en": "Dysprosium",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Eicosanoic acid": {
       "name": {
         "en": "Eicosanoic acid",
@@ -6748,6 +7238,16 @@
         "fr": null
       }
     },
+    "Erbium": {
+      "name": {
+        "en": "Erbium",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Erythromycin": {
       "name": {
         "en": "Erythromycin",
@@ -6808,6 +7308,16 @@
         "fr": null
       }
     },
+    "Ethanamine, 2-(diphenylmethoxy)-N,N-dimethyl-": {
+      "name": {
+        "en": "Ethanamine, 2-(diphenylmethoxy)-N,N-dimethyl-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Ethanol": {
       "name": {
         "en": "Ethanol",
@@ -6861,6 +7371,16 @@
     "Ethyl acetate": {
       "name": {
         "en": "Ethyl acetate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Ethyl methacrylate": {
+      "name": {
+        "en": "Ethyl methacrylate",
         "fr": null
       },
       "description": {
@@ -7038,6 +7558,16 @@
         "fr": null
       }
     },
+    "Fenoxaprop": {
+      "name": {
+        "en": "Fenoxaprop",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Fenoxaprop-ethyl": {
       "name": {
         "en": "Fenoxaprop-ethyl",
@@ -7131,6 +7661,26 @@
     "Fixed suspended solids": {
       "name": {
         "en": "Fixed suspended solids",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Flamprop-isopropyl": {
+      "name": {
+        "en": "Flamprop-isopropyl",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Flamprop-methyl": {
+      "name": {
+        "en": "Flamprop-methyl",
         "fr": null
       },
       "description": {
@@ -7538,6 +8088,16 @@
         "fr": null
       }
     },
+    "Gross alpha radioactivity (ref std unspecified)": {
+      "name": {
+        "en": "Gross alpha radioactivity (ref std unspecified)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Gross alpha radioactivity, (Americium-241 ref std)": {
       "name": {
         "en": "Gross alpha radioactivity, (Americium-241 ref std)",
@@ -7678,6 +8238,16 @@
         "fr": null
       }
     },
+    "Heptadecanoic acid": {
+      "name": {
+        "en": "Heptadecanoic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Heptafluorobutyric acid": {
       "name": {
         "en": "Heptafluorobutyric acid",
@@ -7691,6 +8261,16 @@
     "Heptanal": {
       "name": {
         "en": "Heptanal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Heptenophos": {
+      "name": {
+        "en": "Heptenophos",
         "fr": null
       },
       "description": {
@@ -7781,6 +8361,16 @@
     "Hexaconazole": {
       "name": {
         "en": "Hexaconazole",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Hexadecanoic Acid-D31": {
+      "name": {
+        "en": "Hexadecanoic Acid-D31",
         "fr": null
       },
       "description": {
@@ -8308,6 +8898,16 @@
         "fr": null
       }
     },
+    "Iron-related bacteria": {
+      "name": {
+        "en": "Iron-related bacteria",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Isobutanol": {
       "name": {
         "en": "Isobutanol",
@@ -8498,6 +9098,16 @@
         "fr": null
       }
     },
+    "Light, Photosynthetic Photon Flux Density (PPFD)": {
+      "name": {
+        "en": "Light, Photosynthetic Photon Flux Density (PPFD)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Light, underwater extinction coefficient (K)": {
       "name": {
         "en": "Light, underwater extinction coefficient (K)",
@@ -8548,6 +9158,16 @@
         "fr": null
       }
     },
+    "Linolenic acid": {
+      "name": {
+        "en": "Linolenic acid",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Linuron": {
       "name": {
         "en": "Linuron",
@@ -8582,6 +9202,16 @@
       "name": {
         "en": "Lithium-7",
         "fr": "Lithium-7"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Lithocholic Acid-D4": {
+      "name": {
+        "en": "Lithocholic Acid-D4",
+        "fr": null
       },
       "description": {
         "en": null,
@@ -8858,6 +9488,16 @@
         "fr": null
       }
     },
+    "Methacrylonitrile": {
+      "name": {
+        "en": "Methacrylonitrile",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Methamidophos": {
       "name": {
         "en": "Methamidophos",
@@ -8998,6 +9638,26 @@
         "fr": null
       }
     },
+    "Methyl ethyl ketone": {
+      "name": {
+        "en": "Methyl ethyl ketone",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Methyl iodide": {
+      "name": {
+        "en": "Methyl iodide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Methyl isobutyl ketone": {
       "name": {
         "en": "Methyl isobutyl ketone",
@@ -9011,6 +9671,16 @@
     "Methyl mercaptan": {
       "name": {
         "en": "Methyl mercaptan",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Methyl methacrylate": {
+      "name": {
+        "en": "Methyl methacrylate",
         "fr": null
       },
       "description": {
@@ -9058,6 +9728,16 @@
         "fr": null
       }
     },
+    "Methylanthracene": {
+      "name": {
+        "en": "Methylanthracene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Methylarsonic acid": {
       "name": {
         "en": "Methylarsonic acid",
@@ -9068,9 +9748,29 @@
         "fr": null
       }
     },
+    "Methylbiphenyl": {
+      "name": {
+        "en": "Methylbiphenyl",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Methylchrysene": {
       "name": {
         "en": "Methylchrysene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Methylcyclohexane": {
+      "name": {
+        "en": "Methylcyclohexane",
         "fr": null
       },
       "description": {
@@ -11128,6 +11828,16 @@
         "fr": null
       }
     },
+    "Nitrobenzene-D5": {
+      "name": {
+        "en": "Nitrobenzene-D5",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Nitrofen": {
       "name": {
         "en": "Nitrofen",
@@ -11291,6 +12001,16 @@
     "O-Ethyl O-(p-nitrophenyl) phenylphosphonothioate": {
       "name": {
         "en": "O-Ethyl O-(p-nitrophenyl) phenylphosphonothioate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "O-Methylpodocarpic Acid": {
+      "name": {
+        "en": "O-Methylpodocarpic Acid",
         "fr": null
       },
       "description": {
@@ -11621,6 +12341,16 @@
     "Oxyfluorfen": {
       "name": {
         "en": "Oxyfluorfen",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oxygen-17": {
+      "name": {
+        "en": "Oxygen-17",
         "fr": null
       },
       "description": {
@@ -12118,6 +12848,16 @@
         "fr": null
       }
     },
+    "Perfluoro-2-propoxypropanoate": {
+      "name": {
+        "en": "Perfluoro-2-propoxypropanoate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluoro-3-methoxypropanoic acid": {
       "name": {
         "en": "Perfluoro-3-methoxypropanoic acid",
@@ -12168,6 +12908,16 @@
         "fr": null
       }
     },
+    "Perfluorodecanesulfonate": {
+      "name": {
+        "en": "Perfluorodecanesulfonate",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Perfluorodecanoic acid": {
       "name": {
         "en": "Perfluorodecanoic acid",
@@ -12191,6 +12941,16 @@
     "Perfluoroheptane sulfonamide": {
       "name": {
         "en": "Perfluoroheptane sulfonamide",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluoroheptanesulfonate": {
+      "name": {
+        "en": "Perfluoroheptanesulfonate",
         "fr": null
       },
       "description": {
@@ -12331,6 +13091,16 @@
     "Perfluorooctanesulfonamido betaine": {
       "name": {
         "en": "Perfluorooctanesulfonamido betaine",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Perfluorooctanesulfonate": {
+      "name": {
+        "en": "Perfluorooctanesulfonate",
         "fr": null
       },
       "description": {
@@ -12531,6 +13301,26 @@
     "Phenol, 2,3-dichloro-6-methoxy-": {
       "name": {
         "en": "Phenol, 2,3-dichloro-6-methoxy-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Phenol, 4-chloro-2-methoxy-": {
+      "name": {
+        "en": "Phenol, 4-chloro-2-methoxy-",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Phenol, 4,5-dichloro-2-methoxy-": {
+      "name": {
+        "en": "Phenol, 4,5-dichloro-2-methoxy-",
         "fr": null
       },
       "description": {
@@ -13151,6 +13941,16 @@
     "Pyrene": {
       "name": {
         "en": "Pyrene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Pyrene-d10 ": {
+      "name": {
+        "en": "Pyrene-d10 ",
         "fr": null
       },
       "description": {
@@ -14668,6 +15468,16 @@
         "fr": null
       }
     },
+    "Tetrasul": {
+      "name": {
+        "en": "Tetrasul",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Thallium": {
       "name": {
         "en": "Thallium",
@@ -14938,6 +15748,16 @@
         "fr": null
       }
     },
+    "Total Hexachlorocyclohexane, sum of isomers": {
+      "name": {
+        "en": "Total Hexachlorocyclohexane, sum of isomers",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Total Nitrogen, mixed forms": {
       "name": {
         "en": "Total Nitrogen, mixed forms",
@@ -15101,6 +15921,16 @@
     "trans-1,3-Dichloropropene": {
       "name": {
         "en": "trans-1,3-Dichloropropene",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "trans-1,4-Dichloro-2-butene": {
+      "name": {
+        "en": "trans-1,4-Dichloro-2-butene",
         "fr": null
       },
       "description": {
@@ -15658,6 +16488,26 @@
         "fr": null
       }
     },
+    "Water level elevation": {
+      "name": {
+        "en": "Water level elevation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Water level in well, depth from a reference point": {
+      "name": {
+        "en": "Water level in well, depth from a reference point",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
     "Weak, dissociable cyanide": {
       "name": {
         "en": "Weak, dissociable cyanide",
@@ -15771,26 +16621,6 @@
     "Zoxamide": {
       "name": {
         "en": "Zoxamide",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Water level elevation": {
-      "name": {
-        "en": "Water level elevation",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Water level in well, depth from a reference point": {
-      "name": {
-        "en": "Water level in well, depth from a reference point",
         "fr": null
       },
       "description": {

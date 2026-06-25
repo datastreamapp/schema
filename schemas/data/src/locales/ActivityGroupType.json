@@ -8,19 +8,9 @@
     "fr": null
   },
   "values": {
-    "Field Set": {
+    "Continuous Data": {
       "name": {
-        "en": "Field",
-        "fr": "Terrain"
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Other": {
-      "name": {
-        "en": "Other",
+        "en": "Continuous Data",
         "fr": null
       },
       "description": {
@@ -28,19 +18,9 @@
         "fr": null
       }
     },
-    "QC Sample": {
+    "Field Measure": {
       "name": {
-        "en": "Quality Control",
-        "fr": "Contrôle qualité"
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Replicate": {
-      "name": {
-        "en": "Replicate",
+        "en": "Field Measure",
         "fr": null
       },
       "description": {
@@ -48,19 +28,29 @@
         "fr": null
       }
     },
-    "Subsample": {
+    "Lab Sample": {
       "name": {
-        "en": "Lab",
-        "fr": "Laboratoire"
+        "en": "Lab Sample",
+        "fr": null
       },
       "description": {
         "en": null,
         "fr": null
       }
     },
-    "Trip": {
+    "Quality Control - Field Measure": {
       "name": {
-        "en": "Trip",
+        "en": "Quality Control - Field Measure",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Quality Control - Lab Sample": {
+      "name": {
+        "en": "Quality Control - Lab Sample",
         "fr": null
       },
       "description": {
@@ -75,6 +65,66 @@
       },
       "description": {
         "en": null,
+        "fr": null
+      }
+    },
+    "Field Set": {
+      "name": {
+        "en": "Field",
+        "fr": "Terrain"
+      },
+      "description": {
+        "en": "DEPRECATED",
+        "fr": null
+      }
+    },
+    "Other": {
+      "name": {
+        "en": "Other",
+        "fr": null
+      },
+      "description": {
+        "en": "DEPRECATED",
+        "fr": null
+      }
+    },
+    "QC Sample": {
+      "name": {
+        "en": "Quality Control",
+        "fr": "Contrôle qualité"
+      },
+      "description": {
+        "en": "DEPRECATED",
+        "fr": null
+      }
+    },
+    "Replicate": {
+      "name": {
+        "en": "Replicate",
+        "fr": null
+      },
+      "description": {
+        "en": "DEPRECATED",
+        "fr": null
+      }
+    },
+    "Subsample": {
+      "name": {
+        "en": "Lab",
+        "fr": "Laboratoire"
+      },
+      "description": {
+        "en": "DEPRECATED",
+        "fr": null
+      }
+    },
+    "Trip": {
+      "name": {
+        "en": "Trip",
+        "fr": null
+      },
+      "description": {
+        "en": "DEPRECATED",
         "fr": null
       }
     }
