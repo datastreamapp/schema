@@ -253,6 +253,8 @@
   "Isophorone": ["ng/L"],
   "Isopropanol": ["mg/L"],
   "Lead": ["ug/L"],
+  "Light, photosynthetic active radiation (PAR)": ["umol/m2/s"],
+  "Light, Photosynthetic Photon Flux Density (PPFD)": ["umol/m2/s"],
   "Limonene": ["mg/L"],
   "Linuron": ["ug/L"],
   "Lithium": ["ug/L"],
