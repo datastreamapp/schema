@@ -1,0 +1,13 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ResultStatusID-Deprecated.json",
+  "title": "ResultStatusID-Deprecated",
+  "description": "ResultStatusID 'Final' and 'Accepted' are no longer allowed; use Preliminary, Provisional, or Validated.",
+  "errorMessage": "qc-ResultStatusID-Deprecated",
+  "type": "object",
+  "unevaluatedProperties": true,
+  "properties": {
+    "ResultStatusID": {
+      "not": { "enum": ["Accepted", "Final"] }
+    }
+  }
+}

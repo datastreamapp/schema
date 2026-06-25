@@ -985,6 +985,82 @@ test("Should accept Water level CharacteristicName with ActivityDepthAltitudeRef
   );
 });
 
+// *** CharacteristicName-Depth-ActivityDepthHeightMeasure *** //
+test("Should reject ActivityDepthHeightMeasure when CharacteristicName measures depth", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Depth of water column",
+    ActivityDepthHeightMeasure: 5,
+    ActivityDepthHeightUnit: "m",
+    ResultValue: 5,
+    ResultUnit: "m",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-CharacteristicName-Depth-ActivityDepthHeightMeasure",
+    ),
+    true,
+  );
+});
+
+test("Should reject ActivityDepthHeightUnit when CharacteristicName measures depth", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Water level",
+    ActivityDepthHeightUnit: "m",
+    ResultValue: 1.2,
+    ResultUnit: "m",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-CharacteristicName-Depth-ActivityDepthHeightMeasure",
+    ),
+    true,
+  );
+});
+
+test("Should accept depth CharacteristicName without ActivityDepthHeight fields", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Depth of water column",
+    ResultValue: 5,
+    ResultUnit: "m",
+  });
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-CharacteristicName-Depth-ActivityDepthHeightMeasure",
+    ),
+    false,
+  );
+});
+
+test("Should accept ActivityDepthHeightMeasure for a non-depth CharacteristicName", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Temperature, water",
+    ActivityDepthHeightMeasure: 5,
+    ActivityDepthHeightUnit: "m",
+    ResultValue: 12.3,
+    ResultUnit: "deg C",
+  });
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-CharacteristicName-Depth-ActivityDepthHeightMeasure",
+    ),
+    false,
+  );
+});
+
 // *** ActivityMediaName-Groundwater-DepthMeasure *** //
 test("Should reject Groundwater ActivityMediaName without any depth measure", async (t) => {
   const valid = validate({

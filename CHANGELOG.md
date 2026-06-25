@@ -32,9 +32,15 @@ Targets `3.0.0`. Introduces **Groundwater support** to the DataStream schema.
   - `SampleCollectionEquipmentName`: `Air line`, `Bailer`, `Hydrasleeve`, `Snap sampler`, `Tubing`, `Water level meter`, `Wetted tape`
   - `CharacteristicName`: `Water level elevation`, `Water level in well, depth from a reference point`
 - **`EventID` field** — optional free-text identifier (max 255 characters) for grouping observations by field sampling event; available for all data types. No conditional logic or validation checks beyond the standard single-line string pattern.
+- **`ResultStatusID` deprecation warning** — new quality-control warning `ResultStatusID-Deprecated`: `Final` and `Accepted` are flagged as no longer recommended (use `Preliminary`, `Provisional`, or `Validated`). The values remain valid in the enum; the warning does not block submission.
+
+### Changed
+
+- **`AnalysisStartTime` / `AnalysisStartTimeZone` co-dependency relaxed** — `AnalysisStartTime` without `AnalysisStartTimeZone` is no longer an error; it is now a quality-control warning (`AnalysisStartTime-AnalysisStartTimeZone`). The reverse — `AnalysisStartTimeZone` without `AnalysisStartTime` — remains an error.
 
 ### Breaking
 
+- **New error — `ActivityDepthHeightMeasure` not allowed for depth characteristics** — new conditional logic rule `CharacteristicName-Depth-ActivityDepthHeightMeasure` (blocks submission): when `CharacteristicName` measures depth/height (e.g. `Depth of water column`, `Water level`, `Depth, Secchi disk depth`), `ActivityDepthHeightMeasure` and `ActivityDepthHeightUnit` must not be populated. Records that previously validated with a depth characteristic paired with an activity depth/height will now be rejected.
 - **Top-level `$id`s now end in `.json`**, mirroring filesystem paths so JSON Schema URL resolution works without filesystem fallbacks. Consumers must update `$ref`s when upgrading:
   - `https://datastream.org/schema/data/backend` → `…/backend.json`
   - `…/frontend` → `…/frontend.json`

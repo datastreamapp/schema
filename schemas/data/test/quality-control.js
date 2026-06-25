@@ -21,7 +21,7 @@ const defaultObject = {
   ResultValue: 99.99,
   ResultUnit: '#/100ml',
   ResultValueType: 'Actual',
-  ResultStatusID: 'Accepted',
+  ResultStatusID: 'Validated',
   ResultComment: 'None at this time',
   ResultAnalyticalMethodID: '1',
   ResultAnalyticalMethodContext: 'APHA',
@@ -1173,6 +1173,47 @@ test('Should accept columns without extra whitespace', async (t) => {
     ResultAnalyticalMethodName: 'sum',
     LaboratoryName: 'sum',
     LaboratorySampleID: 'A'
+  })
+  assert.equal(valid, true)
+})
+
+// *** ResultStatusID-Deprecated *** //
+test('Should reject deprecated ResultStatusID Final', async (t) => {
+  const valid = validate({
+    ResultStatusID: 'Final'
+  })
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'message', 'qc-ResultStatusID-Deprecated'), true)
+})
+
+test('Should reject deprecated ResultStatusID Accepted', async (t) => {
+  const valid = validate({
+    ResultStatusID: 'Accepted'
+  })
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'message', 'qc-ResultStatusID-Deprecated'), true)
+})
+
+test('Should accept ResultStatusID Validated', async (t) => {
+  const valid = validate({
+    ResultStatusID: 'Validated'
+  })
+  assert.equal(valid, true)
+})
+
+// *** AnalysisStartTime-AnalysisStartTimeZone *** //
+test('Should warn when AnalysisStartTime is present without AnalysisStartTimeZone', async (t) => {
+  const valid = validate({
+    AnalysisStartTime: '13:15:00'
+  })
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'message', 'qc-AnalysisStartTime-AnalysisStartTimeZone'), true)
+})
+
+test('Should accept AnalysisStartTime with AnalysisStartTimeZone', async (t) => {
+  const valid = validate({
+    AnalysisStartTime: '13:15:00',
+    AnalysisStartTimeZone: '-06:00'
   })
   assert.equal(valid, true)
 })

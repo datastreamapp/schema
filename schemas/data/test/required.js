@@ -256,13 +256,23 @@ test("Should accept ResultDetectionQuantitationLimitMeasure AND ResultDetectionQ
   );
 });
 
-test("Should reject AnalysisStartTime AND NOT AnalysisStartTimeZone", async (t) => {
+test("Should accept AnalysisStartTime AND NOT AnalysisStartTimeZone (no longer an error; warning only)", async (t) => {
   const valid = validate({
     AnalysisStartTime: true,
   });
-  assert.equal(valid, false);
   assert.equal(
     checkProperty(validate.errors, "dependencies", "AnalysisStartTimeZone"),
+    false,
+  );
+});
+
+test("Should reject AnalysisStartTimeZone AND NOT AnalysisStartTime", async (t) => {
+  const valid = validate({
+    AnalysisStartTimeZone: true,
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(validate.errors, "dependencies", "AnalysisStartTime"),
     true,
   );
 });

@@ -266,7 +266,6 @@
         ],
         "ActivityStartTimeZone": ["ActivityStartTime"],
         "ActivityEndTimeZone": ["ActivityEndTime"],
-        "AnalysisStartTime": ["AnalysisStartTimeZone"],
         "AnalysisStartTimeZone": ["AnalysisStartTime"]
       }
     },
@@ -317,6 +316,9 @@
     },
     {
       "$ref": "./logic/CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint.json"
+    },
+    {
+      "$ref": "./logic/CharacteristicName-Depth-ActivityDepthHeightMeasure.json"
     },
     {
       "$ref": "./logic/ActivityMediaName-Groundwater-DepthMeasure.json"

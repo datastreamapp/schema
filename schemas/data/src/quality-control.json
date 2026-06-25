@@ -151,6 +151,9 @@
       "$ref": "./quality-control/ActivityType-ResultSampleFraction.json"
     },
     {
+      "$ref": "./quality-control/AnalysisStartTime-AnalysisStartTimeZone.json"
+    },
+    {
       "$ref": "./quality-control/CharacteristicName-ActivityMediaName-AmbientAir.json"
     },
     {
@@ -203,6 +206,9 @@
     },
     {
       "$ref": "./quality-control/ResultSampleFraction-FreeAvailable.json"
+    },
+    {
+      "$ref": "./quality-control/ResultStatusID-Deprecated.json"
     },
     {
       "$ref": "./quality-control/ResultUnit-Percent.json"
