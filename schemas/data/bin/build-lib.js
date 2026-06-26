@@ -25,6 +25,7 @@ export const subsetOnly = [
 
 // Custom fields (non-WQX) that need value files generated
 export const custom = [
+  "ActivityGroupType",
   "AquiferType",
   "AquiferUnitName",
   "WellIDContext",
@@ -50,7 +51,6 @@ export const wqx = {
   WellOpenIntervalTopUnit: "MeasurementUnit",
   WellOpenIntervalBottomUnit: "MeasurementUnit",
   ActivityType: "ActivityType",
-  ActivityGroupType: "ActivityGroupType",
   ActivityMediaName: "ActivityMediaSubdivision",
   ActivityDepthHeightUnit: "MeasurementUnit",
   ActivityDepthAltitudeReferencePointUnit: "MeasurementUnit",

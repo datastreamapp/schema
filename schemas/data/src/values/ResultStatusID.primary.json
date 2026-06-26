@@ -9,7 +9,6 @@
     "Historical",
     "Preliminary",
     "Provisional",
-    "Rejected",
     "Validated"
   ],
   "maxLength": 11

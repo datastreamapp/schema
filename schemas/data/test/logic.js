@@ -1061,6 +1061,82 @@ test("Should accept ActivityDepthHeightMeasure for a non-depth CharacteristicNam
   );
 });
 
+// *** ActivityMediaName-ActivityDepthHeightMeasure-Maximum *** //
+test("Should reject ActivityDepthHeightMeasure > 0 for ActivityMediaName 'Surface Water'", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Temperature, water",
+    ActivityDepthHeightMeasure: 5,
+    ActivityDepthHeightUnit: "m",
+    ResultValue: 12.3,
+    ResultUnit: "deg C",
+  });
+  assert.equal(valid, false);
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+    ),
+    true,
+  );
+});
+
+test("Should accept ActivityDepthHeightMeasure <= 0 for ActivityMediaName 'Surface Water'", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Temperature, water",
+    ActivityDepthHeightMeasure: -5,
+    ActivityDepthHeightUnit: "m",
+    ResultValue: 12.3,
+    ResultUnit: "deg C",
+  });
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+    ),
+    false,
+  );
+});
+
+test("Should accept ActivityMediaName 'Surface Water' without ActivityDepthHeightMeasure", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Surface Water",
+    CharacteristicName: "Temperature, water",
+    ResultValue: 12.3,
+    ResultUnit: "deg C",
+  });
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+    ),
+    false,
+  );
+});
+
+test("Should not apply the ActivityDepthHeightMeasure maximum to Groundwater (covered by QC warning)", async (t) => {
+  const valid = validate({
+    ActivityMediaName: "Groundwater",
+    CharacteristicName: "Temperature, water",
+    ActivityDepthHeightMeasure: 5,
+    ActivityDepthHeightUnit: "m",
+    ResultValue: 12.3,
+    ResultUnit: "deg C",
+  });
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      "message",
+      "error-ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+    ),
+    false,
+  );
+});
+
 // *** ActivityMediaName-Groundwater-DepthMeasure *** //
 test("Should reject Groundwater ActivityMediaName without any depth measure", async (t) => {
   const valid = validate({

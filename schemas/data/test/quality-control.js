@@ -129,9 +129,11 @@ test('Should reject improperly formatted time', async (t) => {
 })
 
 // *** ActivityMediaName-ActivityDepthHeightMeasure-Maximum *** //
-test('Should reject ActivityDepthHeightMeasure > 0 when ActivityMediaName is set', async (t) => {
+// The depth-maximum hard error (see test/logic.js) now covers the other media;
+// the QC warning covers Groundwater/Porewater only.
+test('Should warn ActivityDepthHeightMeasure > 0 when ActivityMediaName is Porewater', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
+    ActivityMediaName: 'Porewater',
     ActivityDepthHeightMeasure: 1,
     ActivityDepthHeightUnit: 'm'
   })
@@ -141,27 +143,31 @@ test('Should reject ActivityDepthHeightMeasure > 0 when ActivityMediaName is set
     true
   )
 })
-test('Should accept ActivityDepthHeightMeasure < 0 when ActivityMediaName is set', async (t) => {
+test('Should accept ActivityDepthHeightMeasure = 0 when ActivityMediaName is Groundwater', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
-    ActivityDepthHeightMeasure: -1,
-    ActivityDepthHeightUnit: 'm'
-  })
-  assert.equal(valid, true)
-})
-test('Should accept ActivityDepthHeightMeasure = 0 when ActivityMediaName is set', async (t) => {
-  const valid = validate({
-    ActivityMediaName: 'Surface Water',
+    ActivityMediaName: 'Groundwater',
     ActivityDepthHeightMeasure: 0,
     ActivityDepthHeightUnit: 'm'
   })
   assert.equal(valid, true)
 })
-test('Should accept when ActivityDepthHeightMeasure is not set and when ActivityMediaName is set', async (t) => {
+test('Should accept when ActivityDepthHeightMeasure is not set and when ActivityMediaName is Groundwater', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water'
+    ActivityMediaName: 'Groundwater'
   })
   assert.equal(valid, true)
+})
+test('Should NOT raise a QC warning for the Surface Water medium (enforced as a hard error instead)', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightMeasure: 1,
+    ActivityDepthHeightUnit: 'm'
+  })
+  assert.equal(valid, true)
+  assert.equal(
+    checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
+    false
+  )
 })
 test('Should reject ActivityDepthHeightMeasure > 0 when ActivityMediaName is Groundwater', async (t) => {
   const valid = validate({
@@ -195,7 +201,7 @@ test('Should ignore ActivityDepthHeightMeasure > 0 when ActivityMediaName is oth
 
 test('Should ignore ActivityDepthHeightMeasure > 0 when measure is not defined', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
+    ActivityMediaName: 'Groundwater',
     ActivityDepthHeightUnit: 'm'
   })
   assert.equal(valid, true)
@@ -206,7 +212,7 @@ test('Should ignore ActivityDepthHeightMeasure > 0 when measure is not defined',
 })
 test('Should ignore ActivityDepthHeightMeasure > 0 when measure is a string', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
+    ActivityMediaName: 'Groundwater',
     ActivityDepthHeightMeasure: 'unknown',
     ActivityDepthHeightUnit: 'm'
   })

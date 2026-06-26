@@ -361,6 +361,9 @@
       "$ref": "./logic/CharacteristicName-Depth-ActivityDepthHeightMeasure.json"
     },
     {
+      "$ref": "./logic/ActivityMediaName-ActivityDepthHeightMeasure-Maximum.json"
+    },
+    {
       "$ref": "./logic/ActivityMediaName-Groundwater-DepthMeasure.json"
     },
     {

@@ -188,6 +188,7 @@
   "Nickel-60": "Stable Isotopes",
   "Nitenpyram": "Organics, Pesticide",
   "Nitrapyrin": "Organics, Pesticide",
+  "Nitrobenzene-D5": "Organics, Other",
   "Nitrogen-15/Nitrogen-14 ratio": "Stable Isotopes",
   "Nitrophenol": "Organics, Other",
   "Nonanal": "Organics, Other",
@@ -267,6 +268,7 @@
   "Uranium-234/Uranium-238 ratio": "Radiochemical",
   "Valeric acid":"Organics, Other",
   "Venlafaxine": "Organics, Other",
+  "Water level elevation": "Physical",
   "Weak, dissociable cyanide": "Inorganics, Minor, Non-metals",
   "Zinc-66": "Stable Isotopes",
   "Zoxamide": "Organics, Pesticide"

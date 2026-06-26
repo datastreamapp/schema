@@ -85,6 +85,7 @@ error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, sp
 error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations must include a valid ActivityStartTime
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
 error-ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required when ActivityDepthHeightMeasure is reported
+error-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure must be reported as a negative value.
 error-ActivityMediaName-Groundwater-DepthMeasure = At least one of ActivityDepthHeightMeasure, BoreholeDepthMeasure, WellDepthMeasure, WellOpenIntervalTopMeasure, or WellOpenIntervalBottomMeasure must be reported when ActivityMediaName is 'Groundwater' or 'Porewater'
 error-CharacteristicName-Depth-ActivityDepthHeightMeasure = ActivityDepthHeightMeasure should not be populated when the CharacteristicName measures depth (e.g. "Depth of water column").
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName

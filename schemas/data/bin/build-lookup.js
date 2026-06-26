@@ -71,6 +71,25 @@ for (const characteristicName of characteristicNames) {
   }
 }
 
+// Testing - flag approved (strict/subset) ActivityType values with no
+// ActivityGroupType mapping; these silently default to "Other" in the seeder
+let activityTypeActivityGroupType = await readFile(
+  join(__dirname, `../lookup/ActivityType-ActivityGroupType.json`)
+).then((res) => JSON.parse(res))
+let activityTypes = await readFile(
+  join(__dirname, `../src/values/ActivityType.primary.json`)
+).then((res) => JSON.parse(res))
+activityTypes = activityTypes.enum
+
+for (const activityType of activityTypes) {
+  if (!activityTypeActivityGroupType[activityType]) {
+    console.log(
+      `ActivityType-ActivityGroupType: Missing group mapping (defaults to "Other")`,
+      activityType
+    )
+  }
+}
+
 // Export - Deprecate when using nodejs18
 for (const path of [
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),

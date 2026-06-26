@@ -4,13 +4,13 @@
   "description": "",
   "type": "string",
   "enum": [
-    "Field Set",
+    "Continuous Data",
+    "Field Measure",
+    "Lab Sample",
     "Other",
-    "QC Sample",
-    "Replicate",
-    "Subsample",
-    "Trip",
+    "Quality Control - Field Measure",
+    "Quality Control - Lab Sample",
     "Unspecified"
   ],
-  "maxLength": 11
+  "maxLength": 31
 }
