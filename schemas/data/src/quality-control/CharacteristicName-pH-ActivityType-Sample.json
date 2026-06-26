@@ -11,10 +11,7 @@
         "const": "pH"
       }
     },
-    "required": [
-      "CharacteristicName",
-      "ActivityType"
-    ]
+    "required": ["CharacteristicName", "ActivityType"]
   },
   "then": {
     "type": "object",
@@ -27,8 +24,6 @@
         }
       }
     },
-    "required": [
-      "ActivityType"
-    ]
+    "required": ["ActivityType"]
   }
 }

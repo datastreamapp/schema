@@ -1,5 +1,5 @@
-import { test } from "node:test";
-import assert from "node:assert/strict";
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
 import validate from '../frontend/index.js'
 import validateBackend from '../backend/index.js'
 import validateExtract from '../extract/index.js'
@@ -37,7 +37,7 @@ test('Should transform values (frontend)', async (t) => {
     LaboratorySampleID: '101010011110 ',
     AnalysisStartDate: '2018-02-23',
     AnalysisStartTime: '13:15:00',
-    AnalysisStartTimeZone: '-06:00'
+    AnalysisStartTimeZone: '-06:00',
   })
   //console.log(valid, JSON.stringify(validate.errors, null, 2))
   assert.equal(valid, true)
@@ -77,7 +77,7 @@ test('Should transform values (backend)', async (t) => {
     LaboratorySampleID: '101010011110 ',
     AnalysisStartDate: '2018-02-23',
     AnalysisStartTime: '13:15:00',
-    AnalysisStartTimeZone: '-06:00'
+    AnalysisStartTimeZone: '-06:00',
   })
   //console.log(valid, JSON.stringify(validateBackend.errors, null, 2))
   assert.equal(valid, true)
@@ -100,7 +100,8 @@ const crossFlavourFixtures = [
       MonitoringLocationVerticalMeasure: 1050,
       MonitoringLocationVerticalUnit: 'm',
       MonitoringLocationVerticalCoordinateReferenceSystem: 'CGVD2013',
-      MonitoringLocationVerticalCollectionMethod: 'GPS Carrier Phase Static Relative Position',
+      MonitoringLocationVerticalCollectionMethod:
+        'GPS Carrier Phase Static Relative Position',
       MonitoringLocationVerticalAccuracyMeasure: 0.1,
       MonitoringLocationVerticalAccuracyUnit: 'm',
       MonitoringLocationType: 'Well',
@@ -148,7 +149,8 @@ const crossFlavourFixtures = [
       MonitoringLocationVerticalMeasure: 1050,
       MonitoringLocationVerticalUnit: 'm',
       MonitoringLocationVerticalCoordinateReferenceSystem: 'CGVD2013',
-      MonitoringLocationVerticalCollectionMethod: 'GPS Carrier Phase Static Relative Position',
+      MonitoringLocationVerticalCollectionMethod:
+        'GPS Carrier Phase Static Relative Position',
       MonitoringLocationVerticalAccuracyMeasure: 0.1,
       MonitoringLocationVerticalAccuracyUnit: 'm',
       MonitoringLocationType: 'Well',
@@ -178,7 +180,8 @@ const crossFlavourFixtures = [
       ActivityDepthAltitudeReferencePointUnit: 'm',
       SampleCollectionMethodID: 'D4448-01',
       SampleCollectionMethodContext: 'ASTM',
-      SampleCollectionMethodName: 'Standard guide for sampling ground-water monitoring wells',
+      SampleCollectionMethodName:
+        'Standard guide for sampling ground-water monitoring wells',
       SampleCondition: 'Static, before pumping or purging',
       CharacteristicName: 'Chloride',
       ResultSampleFraction: 'Dissolved',
@@ -229,7 +232,8 @@ const crossFlavourFixtures = [
       WellDepthUnit: 'm',
       SampleCollectionMethodID: 'D4448-01',
       SampleCollectionMethodContext: 'ASTM',
-      SampleCollectionMethodName: 'Standard guide for sampling ground-water monitoring wells',
+      SampleCollectionMethodName:
+        'Standard guide for sampling ground-water monitoring wells',
       ActivityType: 'Field Msr/Obs',
       ActivityMediaName: 'Groundwater',
       ActivityStartDate: '2026-01-15',
@@ -254,7 +258,8 @@ const crossFlavourFixtures = [
       MonitoringLocationHorizontalCoordinateReferenceSystem: 'WGS84',
       MonitoringLocationVerticalMeasure: 1500,
       MonitoringLocationVerticalUnit: 'm',
-      MonitoringLocationVerticalCollectionMethod: 'GPS Carrier Phase Static Relative Position',
+      MonitoringLocationVerticalCollectionMethod:
+        'GPS Carrier Phase Static Relative Position',
       MonitoringLocationVerticalCoordinateReferenceSystem: 'CGVD2013',
       MonitoringLocationType: 'Well',
       WellUseType: 'Domestic',
@@ -308,7 +313,7 @@ const negativeFixtures = [
   {
     name: 'WellID exceeding maxLength',
     mutate: (d) => {
-      d.WellID = 'x'.repeat(56);
+      d.WellID = 'x'.repeat(56)
       d.WellIDContext = 'AB'
     },
   },
@@ -322,8 +327,8 @@ const negativeFixtures = [
 
 for (const { name, mutate } of negativeFixtures) {
   const build = () => {
-    const d = structuredClone(baseline);
-    mutate(d);
+    const d = structuredClone(baseline)
+    mutate(d)
     return d
   }
   test(`frontend rejects ${name}`, async () => {

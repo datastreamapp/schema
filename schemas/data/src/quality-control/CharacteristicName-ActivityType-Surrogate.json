@@ -220,10 +220,7 @@
             "const": "%"
           }
         },
-        "required": [
-          "CharacteristicName",
-          "ResultUnit"
-        ]
+        "required": ["CharacteristicName", "ResultUnit"]
       },
       {
         "properties": {
@@ -253,8 +250,6 @@
         ]
       }
     },
-    "required": [
-      "ActivityType"
-    ]
+    "required": ["ActivityType"]
   }
 }

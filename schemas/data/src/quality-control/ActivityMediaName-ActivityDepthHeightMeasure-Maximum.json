@@ -8,10 +8,7 @@
     "unevaluatedProperties": true,
     "properties": {
       "ActivityMediaName": {
-        "enum": [
-          "Groundwater",
-          "Porewater"
-        ]
+        "enum": ["Groundwater", "Porewater"]
       },
       "ActivityDepthHeightMeasure": true
     },

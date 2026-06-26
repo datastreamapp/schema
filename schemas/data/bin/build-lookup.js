@@ -1,7 +1,7 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { readFile, writeFile } from 'node:fs/promises'
-import { replaceRetired } from "./build-lib.js";
+import { replaceRetired } from './build-lib.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -23,7 +23,9 @@ for (const [key, value] of Object.entries(CharacteristicWQXGroups)) {
   const newKey = replaceRetired(key)
   CharacteristicNameWQXGroups[newKey] = value
   if (newKey !== key) {
-    console.log(`Replaced retired CharacteristicName in Group lookup: ${key} => ${newKey}`)
+    console.log(
+      `Replaced retired CharacteristicName in Group lookup: ${key} => ${newKey}`
+    )
   }
 }
 
@@ -42,7 +44,7 @@ await writeFile(
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
   JSON.stringify(CharacteristicNameWQXGroups),
   {
-    encoding: 'utf8'
+    encoding: 'utf8',
   }
 )
 
@@ -94,14 +96,14 @@ for (const activityType of activityTypes) {
 for (const path of [
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
   join(__dirname, `/../lookup/CharacteristicName-MeasurementUnit.json`),
-  join(__dirname, `/../lookup/CharacteristicWQXGroup-MeasurementUnit.json`)
+  join(__dirname, `/../lookup/CharacteristicWQXGroup-MeasurementUnit.json`),
 ]) {
   const json = await readFile(path).then((res) => JSON.parse(res))
   await writeFile(
     path + '.js',
     `export default ${JSON.stringify(json, null, 2)}`,
     {
-      encoding: 'utf8'
+      encoding: 'utf8',
     }
   )
 }

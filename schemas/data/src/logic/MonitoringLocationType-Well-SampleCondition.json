@@ -11,7 +11,13 @@
         "enum": ["Groundwater", "Porewater"]
       },
       "MonitoringLocationType": {
-        "enum": ["Dug Well", "Multilevel Well", "Nested Well", "Piezometer", "Well"]
+        "enum": [
+          "Dug Well",
+          "Multilevel Well",
+          "Nested Well",
+          "Piezometer",
+          "Well"
+        ]
       },
       "ActivityType": {
         "not": {

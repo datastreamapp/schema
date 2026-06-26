@@ -1,5 +1,5 @@
-import { test } from "node:test";
-import assert from "node:assert/strict";
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
 import { toFriendlyName } from '../bin/build-lib.js'
 
 test('toFriendlyName › Should convert PascalCase to friendly name', (t) => {
@@ -15,11 +15,17 @@ test('toFriendlyName › Should handle acronyms followed by words', (t) => {
 })
 
 test('toFriendlyName › Should handle multiple word boundaries', (t) => {
-  assert.equal(toFriendlyName('AquiferUnitPorosityType'), 'Aquifer Unit Porosity Type')
+  assert.equal(
+    toFriendlyName('AquiferUnitPorosityType'),
+    'Aquifer Unit Porosity Type'
+  )
 })
 
 test('toFriendlyName › Should handle long field names', (t) => {
-  assert.equal(toFriendlyName('ActivityDepthAltitudeReferencePoint'), 'Activity Depth Altitude Reference Point')
+  assert.equal(
+    toFriendlyName('ActivityDepthAltitudeReferencePoint'),
+    'Activity Depth Altitude Reference Point'
+  )
 })
 
 test('toFriendlyName › Should handle single word', (t) => {
