@@ -28,6 +28,36 @@
         "fr": "Données continues collectées sur le terrain à l’aide d’un dispositif d’enregistrement de données automatisé qui enregistre en continu une séquence de valeurs de données à des intervalles répétitifs."
       }
     },
+    "Field Msr/Obs-Integrated Flow Proportioned": {
+      "name": {
+        "en": "Field Msr/Obs-Integrated Flow Proportioned",
+        "fr": null
+      },
+      "description": {
+        "en": "A discrete measurement collected in the field integrated over an interval or space within which changes in flow are used to alter the proportion of the sampled medium contributing to the integrated sample.",
+        "fr": null
+      }
+    },
+    "Field Msr/Obs-Integrated Time Series": {
+      "name": {
+        "en": "Field Msr/Obs-Integrated Time Series",
+        "fr": null
+      },
+      "description": {
+        "en": "A discrete measurement collected in the field that represents an integrated portion or segment of elapsed time.",
+        "fr": null
+      }
+    },
+    "Field Msr/Obs-Integrated Vertical Profile": {
+      "name": {
+        "en": "Field Msr/Obs-Integrated Vertical Profile",
+        "fr": null
+      },
+      "description": {
+        "en": "A discrete measurement collected in the field that represents an integrated portion or segment of a vertical track within the study area.",
+        "fr": null
+      }
+    },
     "Field Msr/Obs-Portable Data Logger": {
       "name": {
         "en": "Field Msr/Obs-Portable Data Logger",
@@ -84,7 +114,7 @@
         "fr": null
       },
       "description": {
-        "en": "A field measurement or observation taken to assess the reproducity of the sampling technique or analytical method.",
+        "en": "A field measurement or observation taken to assess the reproducibility of the sampling technique or analytical method.",
         "fr": "Une mesure ou une observation sur le terrain effectuée pour évaluer la reproductibilité de la technique d'échantillonnage ou de la méthode d'analyse."
       }
     },
@@ -94,8 +124,8 @@
         "fr": null
       },
       "description": {
-        "en": "A measurement taken to verify the quality of data taken by a data logger. For discrete measurements collected by portable loggers (e.g. YSI) in the field. \r\n\r\nNot for use with high-frequency continuous time-series data. For more information, see Continuous data on DataStream on DataStream's Learning Centre",
-        "fr": "Une mesure prise pour vérifier la qualité des données prélevées à l’aide d’un enregistreur de données. Pour des mesures discrètes prélevées par des enregistreurs portables (par exemple, YSI) sur le terrain. \r\n\r\nNe pas utiliser avec des données de séries temporelles continues à haute fréquence. Pour plus d’information, voir Guide sur les données de séries temporelles continues dans le Centre d'apprentissage de DataStream."
+        "en": "A measurement taken to verify the quality of data taken by a data logger. For discrete measurements collected by portable loggers (e.g. YSI) in the field.",
+        "fr": "Une mesure prise pour vérifier la qualité des données prélevées à l’aide d’un enregistreur de données. Pour des mesures discrètes prélevées par des enregistreurs portables (par exemple, YSI) sur le terrain."
       }
     },
     "Quality Control Field Sample Equipment Rinsate Blank": {
@@ -384,7 +414,7 @@
         "fr": null
       },
       "description": {
-        "en": null,
+        "en": "The measured value of a calibration standard taken during or after field work to verify that an instrument has maintained its calibration. The expected calibration standard value should be included in the ResultComment.",
         "fr": null
       }
     },
@@ -514,8 +544,8 @@
         "fr": null
       },
       "description": {
-        "en": "A discrete/integrated sample, usually derived from a continuous record, representing some portion or segment of a horizontal and vertical track within the study area.",
-        "fr": "Un échantillon discret/intégré, généralement dérivé d'un enregistrement continu, représentant une partie ou un segment d'une trajectoire horizontale et verticale dans la zone d'étude."
+        "en": "A discrete sample that represents an integrated portion or segment of a horizontal and vertical track within the study area.",
+        "fr": null
       }
     },
     "Sample-Integrated Horizontal Profile": {
@@ -524,8 +554,8 @@
         "fr": null
       },
       "description": {
-        "en": "A discrete/integrated sample, usually derived from a continuous record, representing some portion or segment of a horizontal track within the study area.",
-        "fr": "Un échantillon discret/intégré, généralement dérivé d'un enregistrement continu, représentant une partie ou un segment d'une trajectoire horizontale dans la zone d'étude."
+        "en": "A discrete sample that represents an integrated portion or segment of a horizontal track within the study area.",
+        "fr": null
       }
     },
     "Sample-Integrated Time Series": {
@@ -534,8 +564,8 @@
         "fr": null
       },
       "description": {
-        "en": "A discrete/integrated sample, representing some portion or segment of elapsed time within the overall activity duration or sample period.",
-        "fr": "Un échantillon discret/intégré, représentant une partie ou un segment du temps écoulé pendant la durée globale de l'activité ou la période d'échantillonnage."
+        "en": "A discrete sample that represents an integrated portion or segment of elapsed time.",
+        "fr": null
       }
     },
     "Sample-Integrated Vertical Profile": {
@@ -544,8 +574,8 @@
         "fr": null
       },
       "description": {
-        "en": "A discrete/integrated sample, usually derived from a continuous record, representing some portion or segment of a vertical track within the study area.",
-        "fr": "Un échantillon discret/intégré, généralement dérivé d'un enregistrement continu, représentant une partie ou un segment d'un profil vertical dans la zone d'étude."
+        "en": "A discrete sample that represents an integrated portion or segment of a vertical track within the study area.",
+        "fr": null
       }
     },
     "Sample-Negative Control": {

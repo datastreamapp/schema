@@ -33,13 +33,14 @@
       "ActivityType": {
         "enum": [
           "Field Msr/Obs",
-          "Field Msr/Obs-Portable Data Logger",
           "Field Msr/Obs-Continuous Time Series",
-          "Quality Control Field Msr/Obs Post-Calibration",
-          "Quality Control Field Msr/Obs Pre-Calibration",
+          "Field Msr/Obs-Integrated Flow Proportioned",
+          "Field Msr/Obs-Integrated Time Series",
+          "Field Msr/Obs-Integrated Vertical Profile",
+          "Field Msr/Obs-Portable Data Logger",
+          "Quality Control-Calibration Check",
           "Quality Control Field Replicate Msr/Obs",
-          "Quality Control Field Replicate Portable Data Logger",
-          "Quality Control Field Sample Equipment Rinsate Blank"
+          "Quality Control Field Replicate Portable Data Logger"
         ]
       }
     },
