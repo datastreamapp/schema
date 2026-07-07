@@ -1,193 +1,11 @@
 {
-  "MonitoringLocationHorizontalCoordinateReferenceSystem": {
-    "name": {
-      "en": "Monitoring Location Horizontal Coordinate Reference System",
-      "fr": null
-    },
-    "description": {
-      "en": "The horizontal datum of the MonitoringLocationLatitude and MonitoringLocationLongitude coordinates (e.g. NAD83, WGS84).",
-      "fr": "Le système de référence horizontale des coordonnées MonitoringLocationLatitude et MonitoringLocationLongitude (par exemple NAD83, WGS84)."
-    },
-    "values": {
-      "AMSMA": {
-        "name": {
-          "en": "AMSMA",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "ASTRO": {
-        "name": {
-          "en": "ASTRO",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "GUAM": {
-        "name": {
-          "en": "GUAM",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "HARN": {
-        "name": {
-          "en": "HARN",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "JHNSN": {
-        "name": {
-          "en": "JHNSN",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "NAD27": {
-        "name": {
-          "en": "NAD27",
-          "fr": null
-        },
-        "description": {
-          "en": "North American Datum 1927",
-          "fr": "Système de référence nord-américain de 1927"
-        }
-      },
-      "NAD83": {
-        "name": {
-          "en": "NAD83",
-          "fr": null
-        },
-        "description": {
-          "en": "North American Datum 1983",
-          "fr": "Système de référence nord-américain de 1983"
-        }
-      },
-      "OLDHI": {
-        "name": {
-          "en": "OLDHI",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "OTHER": {
-        "name": {
-          "en": "OTHER",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "PR": {
-        "name": {
-          "en": "PR",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "SGEOR": {
-        "name": {
-          "en": "SGEOR",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "SLAWR": {
-        "name": {
-          "en": "SLAWR",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "SPAUL": {
-        "name": {
-          "en": "SPAUL",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "UNKWN": {
-        "name": {
-          "en": "UNKWN",
-          "fr": null
-        },
-        "description": {
-          "en": "Unknown",
-          "fr": "Incertain"
-        }
-      },
-      "WAKE": {
-        "name": {
-          "en": "WAKE",
-          "fr": null
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "WGS72": {
-        "name": {
-          "en": "WGS72",
-          "fr": null
-        },
-        "description": {
-          "en": "World Geodetic System 1972",
-          "fr": "Système géodésique mondial de 1972"
-        }
-      },
-      "WGS84": {
-        "name": {
-          "en": "WGS84",
-          "fr": null
-        },
-        "description": {
-          "en": "World Geodetic System 1984",
-          "fr": "Système géodésique mondial de 1984"
-        }
-      }
-    }
-  },
   "name": {
-    "en": "MonitoringLocationHorizontalCoordinateReferenceSystem",
+    "en": "Monitoring Location Horizontal Coordinate Reference System",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "The horizontal datum of the MonitoringLocationLatitude and MonitoringLocationLongitude coordinates (e.g. NAD83, WGS84).",
+    "fr": "Le système de référence horizontale des coordonnées MonitoringLocationLatitude et MonitoringLocationLongitude (par exemple NAD83, WGS84)."
   },
   "values": {
     "NAD27": {
@@ -196,13 +14,23 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "North American Datum 1927",
+        "fr": "Système de référence nord-américain de 1927"
       }
     },
     "NAD83": {
       "name": {
         "en": "NAD83",
+        "fr": null
+      },
+      "description": {
+        "en": "North American Datum 1983",
+        "fr": "Système de référence nord-américain de 1983"
+      }
+    },
+    "OTHER": {
+      "name": {
+        "en": "OTHER",
         "fr": null
       },
       "description": {
@@ -216,8 +44,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "Unknown",
+        "fr": "Incertain"
       }
     },
     "WGS72": {
@@ -226,8 +54,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
+        "en": "World Geodetic System 1972",
+        "fr": "Système géodésique mondial de 1972"
       }
     },
     "WGS84": {
@@ -236,18 +64,8 @@
         "fr": null
       },
       "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "OTHER": {
-      "name": {
-        "en": "OTHER",
-        "fr": null
-      },
-      "description": {
-        "en": null,
-        "fr": null
+        "en": "World Geodetic System 1984",
+        "fr": "Système géodésique mondial de 1984"
       }
     }
   }
