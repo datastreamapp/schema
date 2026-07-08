@@ -11,7 +11,7 @@
     "Continuous Data": {
       "name": {
         "en": "Continuous Data",
-        "fr": null
+        "fr": "Données continues"
       },
       "description": {
         "en": null,
@@ -21,7 +21,7 @@
     "Field Measure": {
       "name": {
         "en": "Field Measure",
-        "fr": null
+        "fr": "Mesure sur le terrain"
       },
       "description": {
         "en": null,
@@ -31,7 +31,7 @@
     "Lab Sample": {
       "name": {
         "en": "Lab Sample",
-        "fr": null
+        "fr": "Échantillon de laboratoire"
       },
       "description": {
         "en": null,
@@ -41,7 +41,7 @@
     "Quality Control - Field Measure": {
       "name": {
         "en": "Quality Control - Field Measure",
-        "fr": null
+        "fr": "Contrôle qualité - Mesure sur le terrain"
       },
       "description": {
         "en": null,
@@ -51,7 +51,7 @@
     "Quality Control - Lab Sample": {
       "name": {
         "en": "Quality Control - Lab Sample",
-        "fr": null
+        "fr": "Contrôle qualité - Échantillon de laboratoire"
       },
       "description": {
         "en": null,
@@ -61,20 +61,10 @@
     "Unspecified": {
       "name": {
         "en": "Unspecified",
-        "fr": null
+        "fr": "Non spécifié"
       },
       "description": {
         "en": null,
-        "fr": null
-      }
-    },
-    "Field Set": {
-      "name": {
-        "en": "Field",
-        "fr": "Terrain"
-      },
-      "description": {
-        "en": "DEPRECATED",
         "fr": null
       }
     },
@@ -85,46 +75,6 @@
       },
       "description": {
         "en": null,
-        "fr": null
-      }
-    },
-    "QC Sample": {
-      "name": {
-        "en": "Quality Control",
-        "fr": "Contrôle qualité"
-      },
-      "description": {
-        "en": "DEPRECATED",
-        "fr": null
-      }
-    },
-    "Replicate": {
-      "name": {
-        "en": "Replicate",
-        "fr": null
-      },
-      "description": {
-        "en": "DEPRECATED",
-        "fr": null
-      }
-    },
-    "Subsample": {
-      "name": {
-        "en": "Lab",
-        "fr": "Laboratoire"
-      },
-      "description": {
-        "en": "DEPRECATED",
-        "fr": null
-      }
-    },
-    "Trip": {
-      "name": {
-        "en": "Trip",
-        "fr": null
-      },
-      "description": {
-        "en": "DEPRECATED",
         "fr": null
       }
     }
