@@ -839,6 +839,11 @@ carriage return`,
     ResultAnalyticalMethodName: '\ncarriage return',
     LaboratoryName: '\rcarriage return',
     LaboratorySampleID: '\ttab',
+    EventID: '=SUM(A1)',
+    WellID: '+1234',
+    AquiferCode: '-A1',
+    SampleCollectionMethodID: '@GRAB',
+    SampleCollectionMethodName: '@Grab sample',
   })
   assert.equal(valid, false)
   assert.equal(checkProperty(validate.errors, 'pattern', 'DatasetName'), true)
@@ -867,6 +872,17 @@ carriage return`,
     checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'),
     true
   )
+  assert.equal(checkProperty(validate.errors, 'pattern', 'EventID'), true)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'WellID'), true)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'AquiferCode'), true)
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodID'),
+    true
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodName'),
+    true
+  )
 })
 
 test('Should accept columns without potential csv injection', async (t) => {
@@ -879,6 +895,11 @@ test('Should accept columns without potential csv injection', async (t) => {
     ResultAnalyticalMethodName: '|',
     LaboratoryName: '_',
     LaboratorySampleID: '*',
+    EventID: 'Spring 2018 survey',
+    WellID: 'W-001',
+    AquiferCode: 'A1',
+    SampleCollectionMethodID: 'GRAB-01',
+    SampleCollectionMethodName: 'Grab sample',
   })
   assert.equal(valid, false)
   // console.log(valid, JSON.stringify(validate.errors, null, 2))
@@ -909,6 +930,17 @@ test('Should accept columns without potential csv injection', async (t) => {
   )
   assert.equal(
     checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'),
+    false
+  )
+  assert.equal(checkProperty(validate.errors, 'pattern', 'EventID'), false)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'WellID'), false)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'AquiferCode'), false)
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodID'),
+    false
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodName'),
     false
   )
 })

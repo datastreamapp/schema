@@ -31,7 +31,8 @@ Targets `3.0.0`. Introduces **Groundwater support** to the DataStream schema.
   - `MonitoringLocationVerticalUnit`: `ft`, `m`
   - `SampleCollectionEquipmentName`: `Air line`, `Bailer`, `Hydrasleeve`, `Snap sampler`, `Tubing`, `Water level meter`, `Wetted tape`
   - `CharacteristicName`: `Water level elevation`, `Water level in well, depth from a reference point`
-- **`EventID` field** — optional free-text identifier (max 255 characters) for grouping observations by field sampling event; available for all data types. No conditional logic or validation checks beyond the standard single-line string pattern.
+- **`EventID` field** — optional free-text identifier (max 255 characters) for grouping observations by field sampling event; available for all data types.
+- **Input-safety checks on new free-text ID/name fields** — `EventID`, `WellID`, `AquiferCode`, `SampleCollectionMethodID`, and `SampleCollectionMethodName` now get the same CSV-injection and leading/trailing-whitespace checks as existing text columns like `LaboratorySampleID`.
 - **`ResultStatusID` deprecation warning** — new quality-control warning `ResultStatusID-Deprecated`: `Final` and `Accepted` are flagged as no longer recommended (use `Preliminary`, `Provisional`, or `Validated`). The values remain valid in the enum; the warning does not block submission.
 - **Q2 2026 WQX update** (`wqx` `3.0.260` → `3.0.276`): new values across `CharacteristicName`, `ActivityType`, `ResultAnalyticalMethodContext`, and `SampleCollectionEquipmentName`.
 

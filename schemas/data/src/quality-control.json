@@ -238,7 +238,13 @@
       "$ref": "./quality-control/ResultValue-DOY-Range.json"
     },
     {
+      "$ref": "quality-control/WhiteSpace-AquiferCode.json"
+    },
+    {
       "$ref": "quality-control/WhiteSpace-DatasetName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-EventID.json"
     },
     {
       "$ref": "quality-control/WhiteSpace-LaboratoryName.json"
@@ -260,6 +266,15 @@
     },
     {
       "$ref": "quality-control/WhiteSpace-ResultComment.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-SampleCollectionMethodID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-SampleCollectionMethodName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-WellID.json"
     }
   ]
 }

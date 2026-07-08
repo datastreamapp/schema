@@ -29,6 +29,21 @@
     },
     "LaboratorySampleID": {
       "$ref": "../definitions.json#/definitions/csv-injection"
+    },
+    "EventID": {
+      "$ref": "../definitions.json#/definitions/csv-injection"
+    },
+    "WellID": {
+      "$ref": "../definitions.json#/definitions/csv-injection"
+    },
+    "AquiferCode": {
+      "$ref": "../definitions.json#/definitions/csv-injection"
+    },
+    "SampleCollectionMethodID": {
+      "$ref": "../definitions.json#/definitions/csv-injection"
+    },
+    "SampleCollectionMethodName": {
+      "$ref": "../definitions.json#/definitions/csv-injection"
     }
   },
   "required": []

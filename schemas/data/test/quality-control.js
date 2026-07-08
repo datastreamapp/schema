@@ -1246,6 +1246,11 @@ test('Should reject columns with extra whitespace', async (t) => {
     ResultAnalyticalMethodName: 'sum  ',
     LaboratoryName: '  sum',
     LaboratorySampleID: '  sum  ',
+    EventID: '  sum  ',
+    WellID: '  sum  ',
+    AquiferCode: '  sum  ',
+    SampleCollectionMethodID: '  sum  ',
+    SampleCollectionMethodName: '  sum  ',
   })
   assert.equal(valid, false)
   assert.equal(checkProperty(validate.errors, 'pattern', 'DatasetName'), true)
@@ -1274,6 +1279,17 @@ test('Should reject columns with extra whitespace', async (t) => {
     checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'),
     true
   )
+  assert.equal(checkProperty(validate.errors, 'pattern', 'EventID'), true)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'WellID'), true)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'AquiferCode'), true)
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodID'),
+    true
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodName'),
+    true
+  )
 })
 test('Should accept columns without extra whitespace', async (t) => {
   const valid = validate({
@@ -1285,6 +1301,11 @@ test('Should accept columns without extra whitespace', async (t) => {
     ResultAnalyticalMethodName: 'sum',
     LaboratoryName: 'sum',
     LaboratorySampleID: 'A',
+    EventID: 'Spring 2018 survey',
+    WellID: 'W-001',
+    AquiferCode: 'A1',
+    SampleCollectionMethodID: 'GRAB-01',
+    SampleCollectionMethodName: 'Grab sample',
   })
   assert.equal(valid, true)
 })
