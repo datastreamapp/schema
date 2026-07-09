@@ -104,7 +104,7 @@ error-ResultDetectionQuantitationLimitUnit-Salinity = ResultDetectionQuantitatio
 error-ResultUnit-Salinity = ResultUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million), PSU (practical salinity unit), mg/L (milligrams per litre), or g/L (grams per litre)
 
 ## quality-control
-qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure should be below 0
+qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure should be reported as a negative value.
 qc-ActivityType-CTS-ActivityStartTimeZone = ActivityStartTimeZone should be included when ActivityType is 'Field Msr/Obs-Continuous Time Series'
 qc-ActivityType-CTS-ActivityStartTimeZone-UTC = When ActivityStartTimeZone is '+00:00', consider adding a note in your dataset metadata to let others know your data are reported in UTC/GMT
 qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
