@@ -23,7 +23,8 @@ deref () {
 
 clean () {
 	src=$1
-	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?, '$2')'
+	extra=${2:+, $2}
+	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?'"${extra}"')'
 
 	id=$(jq -r '.["$id"]' src/${src}.build.json)
 	jq "${cmd}" src/${src}.build.json > src/${src}.build.tmp.json
@@ -89,8 +90,8 @@ mkdir -p json-schema/
 pre definitions
 deref definitions
 sast definitions
-clean definitions '.errorMessage?'
-cp src/definitions.build.json json-schema/definitions.json
+clean definitions
+jq 'del(.. | .errorMessage?)' src/definitions.build.json > json-schema/definitions.json
 
 # primary - strict
 pre primary
