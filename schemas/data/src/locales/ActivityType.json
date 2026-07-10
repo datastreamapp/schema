@@ -35,7 +35,7 @@
       },
       "description": {
         "en": "A discrete measurement collected in the field integrated over an interval or space within which changes in flow are used to alter the proportion of the sampled medium contributing to the integrated sample.",
-        "fr": null
+        "fr": "Une mesure discrète prélevées sur le terrain et intégrée sur un intervalle ou un espace au sein duquel les variations du débit servent à modifier la proportion du milieu échantillonné contribuant à l'échantillon intégré."
       }
     },
     "Field Msr/Obs-Integrated Time Series": {
@@ -45,7 +45,7 @@
       },
       "description": {
         "en": "A discrete measurement collected in the field that represents an integrated portion or segment of elapsed time.",
-        "fr": null
+        "fr": "Une mesure discrète prélevées sur le terrain, représentant une partie ou un segment intégré de temps écoulé."
       }
     },
     "Field Msr/Obs-Integrated Vertical Profile": {
@@ -55,7 +55,7 @@
       },
       "description": {
         "en": "A discrete measurement collected in the field that represents an integrated portion or segment of a vertical track within the study area.",
-        "fr": null
+        "fr": "Une mesure discrète prélevées sur le terrain, représentant une partie ou un segment intégré d'une trajectoire verticale au sein de la zone d'étude."
       }
     },
     "Field Msr/Obs-Portable Data Logger": {
@@ -124,8 +124,8 @@
         "fr": null
       },
       "description": {
-        "en": "A measurement taken to verify the quality of data taken by a data logger. For discrete measurements collected by portable loggers (e.g. YSI) in the field.",
-        "fr": "Une mesure prise pour vérifier la qualité des données prélevées à l’aide d’un enregistreur de données. Pour des mesures discrètes prélevées par des enregistreurs portables (par exemple, YSI) sur le terrain."
+        "en": "A field measurement taken to assess the reproducibility of data collected by a data logger. For discrete measurements collected by portable loggers (e.g. YSI) in the field.",
+        "fr": "Une mesure de terrain effectuée pour évaluer la reproductibilité des données recueillies par un enregistreur de données. Concerne les mesures ponctuelles réalisées sur le terrain à l'aide d'enregistreurs portatifs (par ex. YSI)."
       }
     },
     "Quality Control Field Sample Equipment Rinsate Blank": {
@@ -415,7 +415,7 @@
       },
       "description": {
         "en": "The measured value of a calibration standard taken during or after field work to verify that an instrument has maintained its calibration. The expected calibration standard value should be included in the ResultComment.",
-        "fr": null
+        "fr": "Valeur mesurée d'un étalon de calibration relevée pendant ou après le travail sur le terrain afin de vérifier que l'instrument a conservé son étalonnage. La valeur attendue de l'étalon de calibration doit être incluse dans le champ « ResultComment »."
       }
     },
     "Quality Control-Calibration Check Buffer": {
@@ -545,7 +545,7 @@
       },
       "description": {
         "en": "A discrete sample that represents an integrated portion or segment of a horizontal and vertical track within the study area.",
-        "fr": null
+        "fr": "Un échantillon discret représentant une partie ou un segment intégré d'un tracé horizontal et vertical au sein de la zone d'étude."
       }
     },
     "Sample-Integrated Horizontal Profile": {
@@ -555,7 +555,7 @@
       },
       "description": {
         "en": "A discrete sample that represents an integrated portion or segment of a horizontal track within the study area.",
-        "fr": null
+        "fr": "Un échantillon discret représentant une partie ou un segment intégré d'un tracé horizontal au sein de la zone d'étude."
       }
     },
     "Sample-Integrated Time Series": {
@@ -565,7 +565,7 @@
       },
       "description": {
         "en": "A discrete sample that represents an integrated portion or segment of elapsed time.",
-        "fr": null
+        "fr": "Un échantillon discret représentant une partie ou un segment intégré de temps écoulé."
       }
     },
     "Sample-Integrated Vertical Profile": {
@@ -575,7 +575,7 @@
       },
       "description": {
         "en": "A discrete sample that represents an integrated portion or segment of a vertical track within the study area.",
-        "fr": null
+        "fr": "Un échantillon discret représentant une partie ou un segment intégré d'une trajectoire verticale au sein de la zone d'étude."
       }
     },
     "Sample-Negative Control": {
