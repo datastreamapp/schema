@@ -1,0 +1,15 @@
+{
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalCoordinateReferenceSystem.primary.json",
+  "title": "Vertical Reference Datum",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "CGVD2013",
+    "CGVD28",
+    "NAVD88",
+    "NGVD29",
+    "OTHER",
+    "UNKWN"
+  ],
+  "maxLength": 8
+}

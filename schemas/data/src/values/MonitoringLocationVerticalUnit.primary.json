@@ -1,9 +1,11 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalUnit.strict.json",
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationVerticalUnit.primary.json",
   "title": "Measurement Unit",
   "description": "",
   "type": "string",
   "enum": [
+    "ft",
+    "m",
     "MASL"
   ],
   "maxLength": 4

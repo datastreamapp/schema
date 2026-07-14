@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+set -euo pipefail
 
 maxEnumLength=2000
 
@@ -11,15 +12,19 @@ deref () {
 	src=$1
 	opts=${*:2}
 
-	cd src
-	ajv deref ${src}.build.json ${opts} \
-	    -o ${src}.build.json
-	cd ..
+	ajv deref src/${src}.build.json ${opts} \
+	    -r node_modules/wqx/json-schema/definitions.json \
+	    -r src/definitions.build.json \
+	    -r src/logic/*.json \
+	    -r src/quality-control/*.json \
+	    -r src/values/*.json \
+	    -o src/${src}.build.json
 }
 
 clean () {
 	src=$1
-	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?, '$2')'
+	extra=${2:+, $2}
+	cmd='del(.. | .["$vocabulary"]?, .["$id"]?, .["$comment"]?'"${extra}"')'
 
 	id=$(jq -r '.["$id"]' src/${src}.build.json)
 	jq "${cmd}" src/${src}.build.json > src/${src}.build.tmp.json
@@ -85,7 +90,8 @@ mkdir -p json-schema/
 pre definitions
 deref definitions
 sast definitions
-clean definitions '.errorMessage?'
+clean definitions
+jq 'del(.. | .errorMessage?)' src/definitions.build.json > json-schema/definitions.json
 
 # primary - strict
 pre primary
@@ -132,7 +138,7 @@ sast quality-control
 transpile quality-control '' --loop-enum ${maxEnumLength}  --use-defaults empty --all-errors
 post quality-control
 
-mv src/definitions.build.json json-schema/definitions.json
+rm src/definitions.build.json
 
 # locales
 locale en-CA

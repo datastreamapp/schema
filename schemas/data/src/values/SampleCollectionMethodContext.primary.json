@@ -1,0 +1,21 @@
+{
+  "$id": "https://datastream.org/schema/data/values/SampleCollectionMethodContext.primary.json",
+  "title": "Sample Collection Method Context",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "AB_AEP",
+    "AB_AGS",
+    "ASTM",
+    "BC_MOE",
+    "ISO",
+    "NL_ECCC",
+    "NS_DNR",
+    "NS_ECC",
+    "PROPRIETARY",
+    "QC_MOE",
+    "USDOI/USGS",
+    "USEPA"
+  ],
+  "maxLength": 16
+}

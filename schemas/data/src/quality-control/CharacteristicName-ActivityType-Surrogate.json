@@ -32,6 +32,7 @@
         "Acenaphthene-d10",
         "Acenaphthylene-d8",
         "Acridine-d9",
+        "Adamantane Carboxylic Acid-D15",
         "Anilazine",
         "Atrazine-d5 (ethyl-d5)",
         "Benzene, 1-bromo-2-(trifluoromethyl)-",
@@ -46,6 +47,7 @@
         "Chrysene-d12",
         "Clothianidin-d3",
         "Cyanazine-d5",
+        "Decanoic Acid-D19",
         "Dibenzo(a,h)anthracene-D14",
         "Dibenzothiophene-D8",
         "Dimethoate-d6",
@@ -53,8 +55,10 @@
         "Fenitrothion-d6",
         "Flonicamid-d3",
         "Fluoranthene-d10",
+        "Hexadecanoic Acid-D31",
         "Indeno[1,2,3-cd]pyrene-d12",
         "Linuron-d6",
+        "Lithocholic Acid-D4",
         "Malathion-d6",
         "Metolachlor-d6",
         "Naphthalene-d8",
@@ -189,12 +193,14 @@
         "Naphthenic Acid, C9H14O2",
         "Naphthenic Acid, C9H16O2",
         "Naphthenic Acid, C9H18O2",
+        "Nitrobenzene-D5",
         "p-Bromofluorobenzene",
         "p-Terphenyl-d14",
         "Parathion-d10",
         "Perylene-d12",
         "Phenanthrene-d10",
         "Phorate-d10",
+        "Pyrene-d10",
         "Terbufos-d10",
         "Terphenyl-d14",
         "Toluene-d8"
@@ -214,10 +220,7 @@
             "const": "%"
           }
         },
-        "required": [
-          "CharacteristicName",
-          "ResultUnit"
-        ]
+        "required": ["CharacteristicName", "ResultUnit"]
       },
       {
         "properties": {
@@ -247,8 +250,6 @@
         ]
       }
     },
-    "required": [
-      "ActivityType"
-    ]
+    "required": ["ActivityType"]
   }
 }

@@ -1,11 +1,12 @@
 {
-  "$id": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalCoordinateReferenceSystem.strict.json",
+  "$id": "https://datastream.org/schema/data/values/MonitoringLocationHorizontalCoordinateReferenceSystem.primary.json",
   "title": "Horizontal Reference Datum",
   "description": "",
   "type": "string",
   "enum": [
     "NAD27",
     "NAD83",
+    "OTHER",
     "UNKWN",
     "WGS72",
     "WGS84"

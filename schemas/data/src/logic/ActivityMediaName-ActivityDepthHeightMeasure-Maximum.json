@@ -1,0 +1,35 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/ActivityMediaName-ActivityDepthHeightMeasure-Maximum.json",
+  "title": "ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+  "description": "",
+  "errorMessage": "error-ActivityMediaName-ActivityDepthHeightMeasure-Maximum",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": [
+          "Ocean Water",
+          "Rainwater",
+          "Stormwater",
+          "Subsurface Soil/Sediment",
+          "Surface Water",
+          "Surface Water Sediment"
+        ]
+      },
+      "ActivityDepthHeightMeasure": true
+    },
+    "required": ["ActivityMediaName", "ActivityDepthHeightMeasure"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthHeightMeasure": {
+        "type": "number",
+        "maximum": 0
+      }
+    },
+    "required": ["ActivityDepthHeightMeasure"]
+  }
+}

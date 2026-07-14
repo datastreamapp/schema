@@ -1,6 +1,6 @@
 {
   "name": "@datastreamapp/data-schema",
-  "version": "2.29.0",
+  "version": "3.0.0",
   "description": "DataStream Water Quality Data Schema",
   "publishConfig": {
     "cache": "~/.npm",
@@ -22,7 +22,7 @@
   "scripts": {
     "prebuild": "./bin/build-init.sh && node ./bin/build-values.js && node ./bin/build-logic.js && node ./bin/build-lookup.js && node ./bin/build-locales.js",
     "build": "./bin/build",
-    "test": "npm run build && c8 ava",
+    "test": "npm run build && node --test --experimental-test-coverage --test-coverage-exclude='locales/**' --test-coverage-exclude='test/**' test/*.js",
     "prepublishOnly": "npm test"
   },
   "author": "willfarrell",
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/datastreamapp/schema#readme",
   "dependencies": {
-    "wqx": "3.0.260"
+    "wqx": "3.0.276"
   },
   "devDependencies": {
     "change-case": "^5.0.0"

@@ -1,0 +1,25 @@
+{
+  "$id": "https://datastream.org/schema/data/values/WellUseType.primary.json",
+  "title": "Well Type",
+  "description": "",
+  "type": "string",
+  "enum": [
+    "Aquaculture",
+    "Bottling",
+    "Dewatering",
+    "Domestic",
+    "Geothermal",
+    "Industrial",
+    "Irrigation",
+    "Livestock",
+    "Monitoring - Ambient",
+    "Monitoring - Other",
+    "Oil/Gas Production",
+    "Other",
+    "Public Supply - Municipal",
+    "Public Supply - Other",
+    "Recharge",
+    "Test Hole"
+  ],
+  "maxLength": 25
+}

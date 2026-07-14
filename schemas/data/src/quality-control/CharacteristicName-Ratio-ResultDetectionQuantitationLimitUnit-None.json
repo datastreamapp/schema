@@ -25,7 +25,10 @@
       },
       "ResultDetectionQuantitationLimitMeasure": true
     },
-    "required": ["CharacteristicName", "ResultDetectionQuantitationLimitMeasure"]
+    "required": [
+      "CharacteristicName",
+      "ResultDetectionQuantitationLimitMeasure"
+    ]
   },
   "then": {
     "type": "object",

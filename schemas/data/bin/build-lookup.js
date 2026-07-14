@@ -1,7 +1,7 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { readFile, writeFile } from 'node:fs/promises'
-import { replaceRetired } from "./build-lib.js";
+import { replaceRetired } from './build-lib.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -23,7 +23,9 @@ for (const [key, value] of Object.entries(CharacteristicWQXGroups)) {
   const newKey = replaceRetired(key)
   CharacteristicNameWQXGroups[newKey] = value
   if (newKey !== key) {
-    console.log(`Replaced retired CharacteristicName in Group lookup: ${key} => ${newKey}`)
+    console.log(
+      `Replaced retired CharacteristicName in Group lookup: ${key} => ${newKey}`
+    )
   }
 }
 
@@ -42,7 +44,7 @@ await writeFile(
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
   JSON.stringify(CharacteristicNameWQXGroups),
   {
-    encoding: 'utf8'
+    encoding: 'utf8',
   }
 )
 
@@ -71,18 +73,37 @@ for (const characteristicName of characteristicNames) {
   }
 }
 
+// Testing - flag approved (strict/subset) ActivityType values with no
+// ActivityGroupType mapping; these silently default to "Other" in the seeder
+let activityTypeActivityGroupType = await readFile(
+  join(__dirname, `../lookup/ActivityType-ActivityGroupType.json`)
+).then((res) => JSON.parse(res))
+let activityTypes = await readFile(
+  join(__dirname, `../src/values/ActivityType.primary.json`)
+).then((res) => JSON.parse(res))
+activityTypes = activityTypes.enum
+
+for (const activityType of activityTypes) {
+  if (!activityTypeActivityGroupType[activityType]) {
+    console.log(
+      `ActivityType-ActivityGroupType: Missing group mapping (defaults to "Other")`,
+      activityType
+    )
+  }
+}
+
 // Export - Deprecate when using nodejs18
 for (const path of [
   join(__dirname, `/../lookup/CharacteristicName-CharacteristicWQXGroup.json`),
   join(__dirname, `/../lookup/CharacteristicName-MeasurementUnit.json`),
-  join(__dirname, `/../lookup/CharacteristicWQXGroup-MeasurementUnit.json`)
+  join(__dirname, `/../lookup/CharacteristicWQXGroup-MeasurementUnit.json`),
 ]) {
   const json = await readFile(path).then((res) => JSON.parse(res))
   await writeFile(
     path + '.js',
     `export default ${JSON.stringify(json, null, 2)}`,
     {
-      encoding: 'utf8'
+      encoding: 'utf8',
     }
   )
 }

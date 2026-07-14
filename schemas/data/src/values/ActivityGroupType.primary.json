@@ -1,16 +1,16 @@
 {
-  "$id": "https://datastream.org/schema/data/values/ActivityGroupType.strict.json",
+  "$id": "https://datastream.org/schema/data/values/ActivityGroupType.primary.json",
   "title": "Activity Group Type",
   "description": "",
   "type": "string",
   "enum": [
-    "Field Set",
+    "Continuous Data",
+    "Field Measure",
+    "Lab Sample",
     "Other",
-    "QC Sample",
-    "Replicate",
-    "Subsample",
-    "Trip",
+    "Quality Control - Field Measure",
+    "Quality Control - Lab Sample",
     "Unspecified"
   ],
-  "maxLength": 11
+  "maxLength": 31
 }

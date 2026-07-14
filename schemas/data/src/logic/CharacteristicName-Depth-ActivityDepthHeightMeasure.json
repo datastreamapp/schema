@@ -1,0 +1,39 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-Depth-ActivityDepthHeightMeasure.json",
+  "title": "CharacteristicName-Depth-ActivityDepthHeightMeasure",
+  "description": "When CharacteristicName measures depth/height, the depth is the result itself, so ActivityDepthHeightMeasure/Unit should not be populated.",
+  "errorMessage": "error-CharacteristicName-Depth-ActivityDepthHeightMeasure",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Bankfull Height",
+          "Depth of water column",
+          "Depth, Secchi disk depth",
+          "Depth, snow cover",
+          "Ice thickness",
+          "Light attenuation, depth at 99%",
+          "Transparency, Secchi tube with disk",
+          "Transparency, tube with disk",
+          "Water level",
+          "Water level (probe)",
+          "Water level elevation",
+          "Water level in well, depth from a reference point",
+          "White ice thickness"
+        ]
+      }
+    },
+    "required": ["CharacteristicName"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthHeightMeasure": false,
+      "ActivityDepthHeightUnit": false
+    },
+    "required": []
+  }
+}

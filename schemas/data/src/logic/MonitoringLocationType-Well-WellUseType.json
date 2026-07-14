@@ -1,0 +1,33 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/MonitoringLocationType-Well-WellUseType.json",
+  "title": "MonitoringLocationType-Well-WellUseType",
+  "description": "WellUseType is required when MonitoringLocationType contains 'Well' or 'Piezometer'",
+  "errorMessage": "error-MonitoringLocationType-Well-WellUseType",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": ["Groundwater", "Porewater"]
+      },
+      "MonitoringLocationType": {
+        "enum": [
+          "Dug Well",
+          "Multilevel Well",
+          "Nested Well",
+          "Piezometer",
+          "Well"
+        ]
+      }
+    },
+    "required": ["ActivityMediaName", "MonitoringLocationType"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "WellUseType": true
+    },
+    "required": ["WellUseType"]
+  }
+}

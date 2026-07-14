@@ -1,178 +1,26 @@
 {
-  "MonitoringLocationType": {
-    "name": {
-      "en": "Monitoring Location Type",
-      "fr": null
-    },
-    "description": {
-      "en": "Type of monitoring location. Must be entered exactly as specified in Allowed Values. (e.g. \"River/Stream\").",
-      "fr": "Type de lieu de surveillance. Doit être saisi en anglais, exactement comme spécifié dans Valeurs autorisées, dans l'onglet Allowed Values. (par exemple « River/Stream » pour rivière/ruisseau)."
-    },
-    "values": {
-      "Atmosphere": {
-        "name": {
-          "en": "Atmosphere",
-          "fr": "Atmosphère"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Canal Drainage": {
-        "name": {
-          "en": "Canal Drainage",
-          "fr": "Drainage de canal"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Canal Irrigation": {
-        "name": {
-          "en": "Canal Irrigation",
-          "fr": "Irrigation de canal"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Canal Transport": {
-        "name": {
-          "en": "Canal Transport",
-          "fr": "Transport par canal"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Estuary": {
-        "name": {
-          "en": "Estuary",
-          "fr": "Estuaire"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Great Lake": {
-        "name": {
-          "en": "Great Lake",
-          "fr": "Grand Lac"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Lake/Pond": {
-        "name": {
-          "en": "Lake/Pond",
-          "fr": "Lac/Étang"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Ocean": {
-        "name": {
-          "en": "Ocean",
-          "fr": "Océan"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Pond-Stormwater": {
-        "name": {
-          "en": "Pond-Stormwater",
-          "fr": "Étang - Eaux de ruissellement"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Reservoir": {
-        "name": {
-          "en": "Reservoir",
-          "fr": "Réservoir"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "River/Stream": {
-        "name": {
-          "en": "River/Stream",
-          "fr": "Rivière/Ruisseau"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Spring": {
-        "name": {
-          "en": "Spring",
-          "fr": "Source"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Storm Sewer": {
-        "name": {
-          "en": "Storm Sewer",
-          "fr": "Égout pluvial"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Unspecified": {
-        "name": {
-          "en": "Unspecified",
-          "fr": "Non spécifié"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      },
-      "Wetland": {
-        "name": {
-          "en": "Wetland",
-          "fr": "Zone humide"
-        },
-        "description": {
-          "en": null,
-          "fr": null
-        }
-      }
-    }
-  },
   "name": {
-    "en": "MonitoringLocationType",
+    "en": "Monitoring Location Type",
     "fr": null
   },
   "description": {
-    "en": null,
-    "fr": null
+    "en": "Type of monitoring location. Must be entered exactly as specified in Allowed Values. (e.g. \"River/Stream\").",
+    "fr": "Type de lieu de surveillance. Doit être saisi en anglais, exactement comme spécifié dans Valeurs autorisées, dans l'onglet Allowed Values. (par exemple « River/Stream » pour rivière/ruisseau)."
   },
   "values": {
     "Atmosphere": {
       "name": {
         "en": "Atmosphere",
+        "fr": "Atmosphère"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Borehole": {
+      "name": {
+        "en": "Borehole",
         "fr": null
       },
       "description": {
@@ -183,7 +31,7 @@
     "Canal Drainage": {
       "name": {
         "en": "Canal Drainage",
-        "fr": null
+        "fr": "Drainage de canal"
       },
       "description": {
         "en": null,
@@ -193,7 +41,7 @@
     "Canal Irrigation": {
       "name": {
         "en": "Canal Irrigation",
-        "fr": null
+        "fr": "Irrigation de canal"
       },
       "description": {
         "en": null,
@@ -203,6 +51,16 @@
     "Canal Transport": {
       "name": {
         "en": "Canal Transport",
+        "fr": "Transport par canal"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dug Well": {
+      "name": {
+        "en": "Dug Well",
         "fr": null
       },
       "description": {
@@ -213,7 +71,7 @@
     "Estuary": {
       "name": {
         "en": "Estuary",
-        "fr": null
+        "fr": "Estuaire"
       },
       "description": {
         "en": null,
@@ -223,7 +81,7 @@
     "Great Lake": {
       "name": {
         "en": "Great Lake",
-        "fr": null
+        "fr": "Grand Lac"
       },
       "description": {
         "en": null,
@@ -233,6 +91,26 @@
     "Lake/Pond": {
       "name": {
         "en": "Lake/Pond",
+        "fr": "Lac/Étang"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Multilevel Well": {
+      "name": {
+        "en": "Multilevel Well",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Nested Well": {
+      "name": {
+        "en": "Nested Well",
         "fr": null
       },
       "description": {
@@ -243,6 +121,26 @@
     "Ocean": {
       "name": {
         "en": "Ocean",
+        "fr": "Océan"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Other-Ground Water": {
+      "name": {
+        "en": "Other-Ground Water",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Piezometer": {
+      "name": {
+        "en": "Piezometer",
         "fr": null
       },
       "description": {
@@ -253,7 +151,7 @@
     "Pond-Stormwater": {
       "name": {
         "en": "Pond-Stormwater",
-        "fr": null
+        "fr": "Étang - Eaux de ruissellement"
       },
       "description": {
         "en": null,
@@ -263,7 +161,7 @@
     "Reservoir": {
       "name": {
         "en": "Reservoir",
-        "fr": null
+        "fr": "Réservoir"
       },
       "description": {
         "en": null,
@@ -273,6 +171,16 @@
     "River/Stream": {
       "name": {
         "en": "River/Stream",
+        "fr": "Rivière/Ruisseau"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Seep": {
+      "name": {
+        "en": "Seep",
         "fr": null
       },
       "description": {
@@ -283,7 +191,7 @@
     "Spring": {
       "name": {
         "en": "Spring",
-        "fr": null
+        "fr": "Source"
       },
       "description": {
         "en": null,
@@ -293,6 +201,16 @@
     "Storm Sewer": {
       "name": {
         "en": "Storm Sewer",
+        "fr": "Égout pluvial"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Sump": {
+      "name": {
+        "en": "Sump",
         "fr": null
       },
       "description": {
@@ -303,6 +221,16 @@
     "Unspecified": {
       "name": {
         "en": "Unspecified",
+        "fr": "Non spécifié"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Well": {
+      "name": {
+        "en": "Well",
         "fr": null
       },
       "description": {
@@ -313,7 +241,7 @@
     "Wetland": {
       "name": {
         "en": "Wetland",
-        "fr": null
+        "fr": "Zone humide"
       },
       "description": {
         "en": null,

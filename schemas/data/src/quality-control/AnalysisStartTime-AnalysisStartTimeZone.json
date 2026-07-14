@@ -1,0 +1,18 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/AnalysisStartTime-AnalysisStartTimeZone.json",
+  "title": "AnalysisStartTime-AnalysisStartTimeZone",
+  "description": "AnalysisStartTimeZone should be included when AnalysisStartTime is provided.",
+  "errorMessage": "qc-AnalysisStartTime-AnalysisStartTimeZone",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": { "AnalysisStartTime": true },
+    "required": ["AnalysisStartTime"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": { "AnalysisStartTimeZone": true },
+    "required": ["AnalysisStartTimeZone"]
+  }
+}

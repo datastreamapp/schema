@@ -1,0 +1,62 @@
+{
+  "name": {
+    "en": "ActivityDepthAltitudeReferencePoint",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Ground surface": {
+      "name": {
+        "en": "Ground surface",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Top of instrument shelf": {
+      "name": {
+        "en": "Top of instrument shelf",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Top of outer casing": {
+      "name": {
+        "en": "Top of outer casing",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Top of well casing": {
+      "name": {
+        "en": "Top of well casing",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unspecified": {
+      "name": {
+        "en": "Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

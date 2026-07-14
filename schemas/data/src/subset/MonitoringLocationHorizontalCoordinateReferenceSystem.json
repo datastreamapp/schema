@@ -1,7 +1,1 @@
-[
-    "NAD27",
-    "NAD83",
-    "UNKWN",
-    "WGS72",
-    "WGS84"
-]
+["NAD27", "NAD83", "OTHER", "UNKWN", "WGS72", "WGS84"]

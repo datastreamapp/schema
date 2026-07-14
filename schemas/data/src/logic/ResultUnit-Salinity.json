@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/quality-control/ResultUnit-Salinity.json",
+  "$id": "https://datastream.org/schema/data/logic/ResultUnit-Salinity.json",
   "title": "ResultUnit-Salinity",
   "description": "ResultUnit that require special unit notation.",
   "errorMessage": "error-ResultUnit-Salinity",

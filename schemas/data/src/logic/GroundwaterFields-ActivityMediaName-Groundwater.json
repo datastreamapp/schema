@@ -1,0 +1,49 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/GroundwaterFields-ActivityMediaName-Groundwater.json",
+  "title": "GroundwaterFields-ActivityMediaName-Groundwater",
+  "description": "ActivityMediaName must be Groundwater or Porewater when any Groundwater-specific field is reported",
+  "errorMessage": "error-GroundwaterFields-ActivityMediaName-Groundwater",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "anyOf": [
+      { "required": ["MonitoringLocationVerticalCoordinateReferenceSystem"] },
+      { "required": ["MonitoringLocationVerticalCollectionMethod"] },
+      { "required": ["MonitoringLocationVerticalAccuracyMeasure"] },
+      { "required": ["MonitoringLocationVerticalAccuracyUnit"] },
+      { "required": ["WellID"] },
+      { "required": ["WellIDContext"] },
+      { "required": ["WellUseType"] },
+      { "required": ["AquiferCode"] },
+      { "required": ["AquiferUnitName"] },
+      { "required": ["AquiferType"] },
+      { "required": ["AquiferUnitPorosityType"] },
+      { "required": ["LithologyType"] },
+      { "required": ["WellDepthMeasure"] },
+      { "required": ["WellDepthUnit"] },
+      { "required": ["BoreholeDepthMeasure"] },
+      { "required": ["BoreholeDepthUnit"] },
+      { "required": ["WellOpenIntervalTopMeasure"] },
+      { "required": ["WellOpenIntervalTopUnit"] },
+      { "required": ["WellOpenIntervalBottomMeasure"] },
+      { "required": ["WellOpenIntervalBottomUnit"] },
+      { "required": ["ActivityDepthAltitudeReferencePoint"] },
+      { "required": ["ActivityDepthAltitudeReferencePointMeasure"] },
+      { "required": ["ActivityDepthAltitudeReferencePointUnit"] },
+      { "required": ["SampleCollectionMethodID"] },
+      { "required": ["SampleCollectionMethodContext"] },
+      { "required": ["SampleCollectionMethodName"] },
+      { "required": ["SampleCondition"] }
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": ["Groundwater", "Porewater"]
+      }
+    },
+    "required": ["ActivityMediaName"]
+  }
+}

@@ -1,1 +1,9 @@
-["Lake/Pond", "Unspecified", "Wetland"]
+[
+  "Dug Well",
+  "Lake/Pond",
+  "Multilevel Well",
+  "Nested Well",
+  "Piezometer",
+  "Unspecified",
+  "Wetland"
+]

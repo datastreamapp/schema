@@ -1,0 +1,192 @@
+{
+  "name": {
+    "en": "MonitoringLocationVerticalCollectionMethod",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Altimetry": {
+      "name": {
+        "en": "Altimetry",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Classical Surveying Techniques": {
+      "name": {
+        "en": "Classical Surveying Techniques",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Digital Elevation Model": {
+      "name": {
+        "en": "Digital Elevation Model",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "GPS Carrier Phase Kinematic Relative Position": {
+      "name": {
+        "en": "GPS Carrier Phase Kinematic Relative Position",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "GPS Carrier Phase Static Relative Position": {
+      "name": {
+        "en": "GPS Carrier Phase Static Relative Position",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "GPS Code (Pseudo Range) Differential": {
+      "name": {
+        "en": "GPS Code (Pseudo Range) Differential",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "GPS Code (Pseudo Range) Precise Position": {
+      "name": {
+        "en": "GPS Code (Pseudo Range) Precise Position",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "GPS Code (Pseudo Range) Standard Position (SA Off)": {
+      "name": {
+        "en": "GPS Code (Pseudo Range) Standard Position (SA Off)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "GPS Code (Pseudo Range) Standard Position (SA On)": {
+      "name": {
+        "en": "GPS Code (Pseudo Range) Standard Position (SA On)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Handheld GPS - Positioning Method Unspecified": {
+      "name": {
+        "en": "Handheld GPS - Positioning Method Unspecified",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Leveling-Non Bench Mark Control Points": {
+      "name": {
+        "en": "Leveling-Non Bench Mark Control Points",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Light Detection And Ranging (LiDAR)": {
+      "name": {
+        "en": "Light Detection And Ranging (LiDAR)",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Other": {
+      "name": {
+        "en": "Other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Photogrammetric": {
+      "name": {
+        "en": "Photogrammetric",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Precise Leveling-Bench Mark": {
+      "name": {
+        "en": "Precise Leveling-Bench Mark",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Topographic Map Interpolation": {
+      "name": {
+        "en": "Topographic Map Interpolation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Trigonometric Leveling": {
+      "name": {
+        "en": "Trigonometric Leveling",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Unknown": {
+      "name": {
+        "en": "Unknown",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

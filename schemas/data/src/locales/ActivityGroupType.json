@@ -8,60 +8,50 @@
     "fr": null
   },
   "values": {
-    "Field Set": {
+    "Continuous Data": {
       "name": {
-        "en": "Field",
-        "fr": "Terrain"
+        "en": "Continuous Data",
+        "fr": "Données continues"
       },
       "description": {
         "en": null,
         "fr": null
       }
     },
-    "Other": {
+    "Field Measure": {
       "name": {
-        "en": "Other",
-        "fr": null
+        "en": "Field Measure",
+        "fr": "Mesure sur le terrain"
       },
       "description": {
         "en": null,
         "fr": null
       }
     },
-    "QC Sample": {
+    "Lab Sample": {
       "name": {
-        "en": "Quality Control",
-        "fr": "Contrôle qualité"
+        "en": "Lab Sample",
+        "fr": "Échantillon de laboratoire"
       },
       "description": {
         "en": null,
         "fr": null
       }
     },
-    "Replicate": {
+    "Quality Control - Field Measure": {
       "name": {
-        "en": "Replicate",
-        "fr": null
+        "en": "Quality Control - Field Measure",
+        "fr": "Contrôle qualité - Mesure sur le terrain"
       },
       "description": {
         "en": null,
         "fr": null
       }
     },
-    "Subsample": {
+    "Quality Control - Lab Sample": {
       "name": {
-        "en": "Lab",
-        "fr": "Laboratoire"
-      },
-      "description": {
-        "en": null,
-        "fr": null
-      }
-    },
-    "Trip": {
-      "name": {
-        "en": "Trip",
-        "fr": null
+        "en": "Quality Control - Lab Sample",
+        "fr": "Contrôle qualité - Échantillon de laboratoire"
       },
       "description": {
         "en": null,
@@ -71,6 +61,16 @@
     "Unspecified": {
       "name": {
         "en": "Unspecified",
+        "fr": "Non spécifié"
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Other": {
+      "name": {
+        "en": "Other",
         "fr": null
       },
       "description": {

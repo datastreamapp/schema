@@ -1,5 +1,5 @@
 {
-  "$id": "https://datastream.org/schema/data/quality-control",
+  "$id": "https://datastream.org/schema/data/quality-control.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$vocabulary": {
     "https://ajv.js.org/packages/ajv-errors.html": true
@@ -21,7 +21,28 @@
         "MonitoringLocationHorizontalAccuracyUnit": true,
         "MonitoringLocationVerticalMeasure": true,
         "MonitoringLocationVerticalUnit": true,
+        "MonitoringLocationVerticalAccuracyMeasure": true,
+        "MonitoringLocationVerticalAccuracyUnit": true,
+        "MonitoringLocationVerticalCollectionMethod": true,
+        "MonitoringLocationVerticalCoordinateReferenceSystem": true,
         "MonitoringLocationType": true,
+        "WellID": true,
+        "WellIDContext": true,
+        "WellUseType": true,
+        "AquiferCode": true,
+        "AquiferUnitName": true,
+        "AquiferType": true,
+        "AquiferUnitPorosityType": true,
+        "LithologyType": true,
+        "BoreholeDepthMeasure": true,
+        "BoreholeDepthUnit": true,
+        "WellDepthMeasure": true,
+        "WellDepthUnit": true,
+        "WellOpenIntervalTopMeasure": true,
+        "WellOpenIntervalTopUnit": true,
+        "WellOpenIntervalBottomMeasure": true,
+        "WellOpenIntervalBottomUnit": true,
+        "EventID": true,
         "ActivityType": true,
         "ActivityMediaName": true,
         "ActivityStartDate": true,
@@ -68,7 +89,14 @@
         },
         "ActivityDepthHeightMeasure": true,
         "ActivityDepthHeightUnit": true,
+        "ActivityDepthAltitudeReferencePoint": true,
+        "ActivityDepthAltitudeReferencePointMeasure": true,
+        "ActivityDepthAltitudeReferencePointUnit": true,
+        "SampleCondition": true,
         "SampleCollectionEquipmentName": true,
+        "SampleCollectionMethodName": true,
+        "SampleCollectionMethodID": true,
+        "SampleCollectionMethodContext": true,
         "CharacteristicName": true,
         "MethodSpeciation": true,
         "ResultSampleFraction": true,
@@ -121,6 +149,9 @@
     },
     {
       "$ref": "./quality-control/ActivityType-ResultSampleFraction.json"
+    },
+    {
+      "$ref": "./quality-control/AnalysisStartTime-AnalysisStartTimeZone.json"
     },
     {
       "$ref": "./quality-control/CharacteristicName-ActivityMediaName-AmbientAir.json"
@@ -177,6 +208,9 @@
       "$ref": "./quality-control/ResultSampleFraction-FreeAvailable.json"
     },
     {
+      "$ref": "./quality-control/ResultStatusID-Deprecated.json"
+    },
+    {
       "$ref": "./quality-control/ResultUnit-Percent.json"
     },
     {
@@ -204,7 +238,13 @@
       "$ref": "./quality-control/ResultValue-DOY-Range.json"
     },
     {
+      "$ref": "quality-control/WhiteSpace-AquiferCode.json"
+    },
+    {
       "$ref": "quality-control/WhiteSpace-DatasetName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-EventID.json"
     },
     {
       "$ref": "quality-control/WhiteSpace-LaboratoryName.json"
@@ -226,6 +266,15 @@
     },
     {
       "$ref": "quality-control/WhiteSpace-ResultComment.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-SampleCollectionMethodID.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-SampleCollectionMethodName.json"
+    },
+    {
+      "$ref": "quality-control/WhiteSpace-WellID.json"
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/ActivityMediaName-Groundwater-DepthMeasure.json",
+  "title": "ActivityMediaName-Groundwater-DepthMeasure",
+  "description": "At least one depth measure (BoreholeDepthMeasure, WellDepthMeasure, WellOpenIntervalTopMeasure, WellOpenIntervalBottomMeasure, or ActivityDepthHeightMeasure) must be populated when ActivityMediaName is Groundwater or Porewater",
+  "errorMessage": "error-ActivityMediaName-Groundwater-DepthMeasure",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": ["Groundwater", "Porewater"]
+      }
+    },
+    "required": ["ActivityMediaName"]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "anyOf": [
+      { "required": ["ActivityDepthHeightMeasure"] },
+      { "required": ["BoreholeDepthMeasure"] },
+      { "required": ["WellDepthMeasure"] },
+      { "required": ["WellOpenIntervalTopMeasure"] },
+      { "required": ["WellOpenIntervalBottomMeasure"] }
+    ]
+  }
+}

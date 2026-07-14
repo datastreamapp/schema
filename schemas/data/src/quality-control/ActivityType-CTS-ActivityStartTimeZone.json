@@ -8,14 +8,10 @@
     "unevaluatedProperties": true,
     "properties": {
       "ActivityType": {
-        "enum": [
-          "Field Msr/Obs-Continuous Time Series"
-        ]
+        "enum": ["Field Msr/Obs-Continuous Time Series"]
       }
     },
-    "required": [
-      "ActivityType"
-    ]
+    "required": ["ActivityType"]
   },
   "then": {
     "type": "object",
@@ -23,8 +19,6 @@
     "properties": {
       "ActivityStartTimeZone": true
     },
-    "required": [
-      "ActivityStartTimeZone"
-    ]
+    "required": ["ActivityStartTimeZone"]
   }
 }

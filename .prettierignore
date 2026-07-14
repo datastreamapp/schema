@@ -1,0 +1,4 @@
+# Build-generated source — owned by the build (build-values / build-locales).
+# Keep their JSON.stringify output so Prettier and the build don't fight.
+schemas/data/src/values
+schemas/data/src/locales

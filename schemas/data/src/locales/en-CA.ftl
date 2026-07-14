@@ -84,11 +84,19 @@ error-string-multiline-pattern = Only letters, numbers, punctuation, symbols, sp
 ## errors
 error-ActivityType-CTS-ActivityStartTime = Continuous time-series observations must include a valid ActivityStartTime
 error-ActivityType-ResultAnalyticalMethod = Requires LaboratoryName and ResultAnalyticalMethod columns when ActivityType starts with 'Sample' (i.e. Activity is not a Field Msr/Obs)
+error-ActivityDepthHeightMeasure-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required when ActivityDepthHeightMeasure is reported
+error-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure must be reported as a negative value.
+error-ActivityMediaName-Groundwater-DepthMeasure = At least one of ActivityDepthHeightMeasure, BoreholeDepthMeasure, WellDepthMeasure, WellOpenIntervalTopMeasure, or WellOpenIntervalBottomMeasure must be reported when ActivityMediaName is 'Groundwater' or 'Porewater'
+error-CharacteristicName-Depth-ActivityDepthHeightMeasure = ActivityDepthHeightMeasure should not be populated when the CharacteristicName measures depth (e.g. "Depth of water column").
 error-CharacteristicName-MethodSpeciation = MethodSpeciation required for selected CharacteristicName
 error-CharacteristicName-Nutrient-ResultSampleFraction = ResultSampleFractions for nutrients should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
 error-CharacteristicName-ResultSampleFraction = ResultSampleFraction required for selected CharacteristicName
 error-CharacteristicName-StableIsotope-MethodSpeciation = Isotope MethodSpeciation required for selected CharacteristicName. For guidance, please see Best Practices for Reporting Isotope Data (https://datastream.org/en-ca/documentation/isotope-data-guidance)
+error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint = ActivityDepthAltitudeReferencePoint is required for CharacteristicName 'Water level in well, depth from a reference point'
 error-CSVInjection = Invalid starting character. `=`, `+`, `-`, `@`, `[space]`, `[tab]`, `[carriage return]` are not valid characters for the beginning of text columns
+error-GroundwaterFields-ActivityMediaName-Groundwater = ActivityMediaName must be 'Groundwater' or 'Porewater' when any groundwater- or porewater-specific field is reported
+error-MonitoringLocationType-Well-WellUseType = WellUseType is required when MonitoringLocationType is a well or piezometer
+error-MonitoringLocationType-Well-SampleCondition = SampleCondition is required when MonitoringLocationType is a well or piezometer (except for Continuous Time Series activities)
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-above-below = ResultDetectionQuantitationLimit fields are required when ResultDetectionCondition is above or below Detection/Quantification limits
 error-ResultDetectionCondition-ResultDetectionQuantitationLimit-not-detect = When ResultDetectionCondition is set to 'Not Detected' or 'Detected Not Quantified' the ResultDetectionQuantitationLimit fields should not be populated
 error-ResultDetectionCondition-ResultValue = Only one of ResultValue or ResultDetectionCondition should be populated
@@ -96,10 +104,11 @@ error-ResultDetectionQuantitationLimitUnit-Salinity = ResultDetectionQuantitatio
 error-ResultUnit-Salinity = ResultUnit for CharacteristicName Salinity should be ppth (parts per thousand), ppm (parts per million), PSU (practical salinity unit), mg/L (milligrams per litre), or g/L (grams per litre)
 
 ## quality-control
-qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure should be below 0
+qc-ActivityMediaName-ActivityDepthHeightMeasure-Maximum = ActivityDepthHeightMeasure should be reported as a negative value.
 qc-ActivityType-CTS-ActivityStartTimeZone = ActivityStartTimeZone should be included when ActivityType is 'Field Msr/Obs-Continuous Time Series'
 qc-ActivityType-CTS-ActivityStartTimeZone-UTC = When ActivityStartTimeZone is '+00:00', consider adding a note in your dataset metadata to let others know your data are reported in UTC/GMT
 qc-ActivityType-ResultSampleFraction = ResultSampleFraction may not be relevant for selected ActivityType, except for nutrient parameters, which should follow guidance in Best Practices Guide for Nutrient Data (see https://datastream.org/en-ca/documentation/nutrient-data-guidance)
+qc-AnalysisStartTime-AnalysisStartTimeZone = AnalysisStartTimeZone should be included when AnalysisStartTime is provided
 # qc-CharacteristicName-Deprecated = CharacteristicName has been deprecated. Review most up to date template for alternate or contact us.
 qc-CharacteristicName-ActivityMediaName-AmbientAir = The ActivityMediaName for this CharacteristicName should be "Ambient Air"
 qc-CharacteristicName-ActivityType-Surrogate = When reported as a percentage, this characteristic may be a surrogate standard. If this is the case, please use the ActivityType 'Quality Control Sample-Lab Surrogate Control Standard' or 'Quality Control Sample-Lab Surrogate Control Standard Duplicate'
@@ -119,6 +128,7 @@ qc-ResultDetectionQuantitationLimitUnit-NoValue = ResultDetectionQuantitationLim
 qc-ResultDetectionQuantitationLimitUnit-Turbidity = ResultUnit should be used with CharacteristicName 'Turbidity'
 qc-ResultSampleFraction-ActivityMediaName-Sediment = If a sequential extraction was performed on a water sample, or particulates in a water sample, information regarding the reagents used should be indicated in the ResultComment, not the ResultSampleFraction. For guidance on how to select ResultSampleFraction in this case, please refer to our Best practices for submitting metal-series data to DataStream (https://datastream.org/en-ca/documentation/metal-series-data-guidance)
 qc-ResultSampleFraction-FreeAvailable = The ResultSampleFraction 'Free Available' may not be relevant for the selected CharacteristicName
+qc-ResultStatusID-Deprecated = ResultStatusID "Final" and "Accepted" are no longer allowed values. Please use the allowed values "Preliminary", "Provisional", or "Validated".
 # qc-ResultUnit-Elevation = The unit for the CharacteristicName should be an elevation. ** TODO: MASL not a unit, needs to be added to QC rule lists
 qc-CharacteristicName-pH-ResultUnit-None = The unit for the CharacteristicName should be None
 qc-CharacteristicName-Ratio-ResultUnit-None = The unit for the CharacteristicName should be None
@@ -137,7 +147,7 @@ qc-WhiteSpace = Leading or trailing white space detected in character string
 ## quality-control (code)
 qc-RowCount = A dataset requires at least one row.
 qc-ColumnCount = Should match column count from the first row
-qc-DatasetName = The DatasetName in this CSV file does not match the dataset’s metadata. If you proceed, dataset downloads will include the existing dataset name from the metadata. This CSV file containing the mismatched dataset name will still be available via the dataset Changelog. To match your dataset name across all records, update the DatasetName field in the CSV, or update the dataset's metadata.
+qc-DatasetName = The DatasetName in this CSV file does not match the dataset's metadata. If you proceed, dataset downloads will include the existing dataset name from the metadata. This CSV file containing the mismatched dataset name will still be available via the dataset Changelog. To match your dataset name across all records, update the DatasetName field in the CSV, or update the dataset's metadata.
 qc-Date-Future = Contains date in the future
 qc-ActivityStartDate-Future = {qc-Date-Future}
 qc-ActivityEndDate-Future = {qc-Date-Future}
@@ -147,3 +157,5 @@ qc-MonitoringLocationName-Duplicate = Multiple MonitoringLocationNames are used 
 qc-MonitoringLocationType-Duplicate = Multiple MonitoringLocationTypes are used with the same MonitoringLocationID
 qc-MonitoringLocationHorizontalCoordinateReferenceSystem-Duplicate = Multiple MonitoringLocationHorizontalCoordinateReferenceSystems are used with the same MonitoringLocationID
 qc-ActivityTypeContinuous = When there are >= 24 observations of the same type on the same day, ActivityType is expected to equal 'Field Msr/Obs-Continuous Time Series'
+error-ActivityMediaName-Groundwater-Mixed = Groundwater and surface water data must be uploaded in separate datasets. If ActivityMediaName is 'Groundwater' and/or 'Porewater' on any row, file cannot contain any other ActivityMediaName values.
+error-ActivityType-Continuous-Mixed = Continuous time-series data must be uploaded in a separate dataset from discrete (single point-in-time) data

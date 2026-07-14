@@ -1,0 +1,172 @@
+{
+  "name": {
+    "en": "WellUseType",
+    "fr": null
+  },
+  "description": {
+    "en": null,
+    "fr": null
+  },
+  "values": {
+    "Aquaculture": {
+      "name": {
+        "en": "Aquaculture",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Bottling": {
+      "name": {
+        "en": "Bottling",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Dewatering": {
+      "name": {
+        "en": "Dewatering",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Domestic": {
+      "name": {
+        "en": "Domestic",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Geothermal": {
+      "name": {
+        "en": "Geothermal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Industrial": {
+      "name": {
+        "en": "Industrial",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Irrigation": {
+      "name": {
+        "en": "Irrigation",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Livestock": {
+      "name": {
+        "en": "Livestock",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Monitoring - Ambient": {
+      "name": {
+        "en": "Monitoring - Ambient",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Monitoring - Other": {
+      "name": {
+        "en": "Monitoring - Other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Oil/Gas Production": {
+      "name": {
+        "en": "Oil/Gas Production",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Other": {
+      "name": {
+        "en": "Other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Public Supply - Municipal": {
+      "name": {
+        "en": "Public Supply - Municipal",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Public Supply - Other": {
+      "name": {
+        "en": "Public Supply - Other",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Recharge": {
+      "name": {
+        "en": "Recharge",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    },
+    "Test Hole": {
+      "name": {
+        "en": "Test Hole",
+        "fr": null
+      },
+      "description": {
+        "en": null,
+        "fr": null
+      }
+    }
+  }
+}

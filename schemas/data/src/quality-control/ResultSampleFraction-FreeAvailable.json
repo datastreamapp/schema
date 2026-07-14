@@ -18,7 +18,7 @@
     "unevaluatedProperties": true,
     "properties": {
       "CharacteristicName": {
-            "enum": ["Chlorine","Cyanide"]
+        "enum": ["Chlorine", "Cyanide"]
       }
     },
     "required": ["CharacteristicName"]

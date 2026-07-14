@@ -1,5 +1,5 @@
-import test from 'ava'
-
+import { test } from 'node:test'
+import assert from 'node:assert/strict'
 import validate from '../quality-control/index.js'
 
 const defaultObject = {
@@ -21,7 +21,7 @@ const defaultObject = {
   ResultValue: 99.99,
   ResultUnit: '#/100ml',
   ResultValueType: 'Actual',
-  ResultStatusID: 'Accepted',
+  ResultStatusID: 'Validated',
   ResultComment: 'None at this time',
   ResultAnalyticalMethodID: '1',
   ResultAnalyticalMethodContext: 'APHA',
@@ -33,7 +33,7 @@ const defaultObject = {
   LaboratorySampleID: '101010011110',
   AnalysisStartDate: '2018-02-23',
   AnalysisStartTime: '13:15:00',
-  AnalysisStartTimeZone: '-06:00'
+  AnalysisStartTimeZone: '-06:00',
 }
 
 const checkProperty = (errors, keyword, property) => {
@@ -85,7 +85,8 @@ const checkProperty = (errors, keyword, property) => {
       error.instancePath.includes(property)
     ) {
       return true
-    } else if (keyword === 'pattern' && error.instancePath.includes(property)) return true
+    } else if (keyword === 'pattern' && error.instancePath.includes(property))
+      return true
   }
   return false
 }
@@ -93,7 +94,7 @@ const checkProperty = (errors, keyword, property) => {
 test('Should accept with empty object', async (t) => {
   const obj = {}
   const valid = validate(obj)
-  t.true(valid)
+  assert.equal(valid, true)
 })
 
 test('Should accept with undefined values', async (t) => {
@@ -102,7 +103,7 @@ test('Should accept with undefined values', async (t) => {
     obj[key] = undefined
   }
   const valid = validate(obj)
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // test('Should accept with empty strings values', function(done) {
@@ -115,170 +116,236 @@ test('Should accept with undefined values', async (t) => {
 //   }
 //   const valid = validate(obj)
 //   console.log(valid, JSON.stringify(validate.errors, null, 2))
-//   t.is(valid, true)
+//   assert.equal(valid, true)
 //
 // })
 
 test('Should reject improperly formatted time', async (t) => {
   const valid = validate({
     ActivityStartDate: '2020-01-01',
-    ActivityStartTime: '9:30:00'
+    ActivityStartTime: '9:30:00',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'pattern', 'ActivityStartTime'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'ActivityStartTime'),
+    true
+  )
 })
 
 // *** ActivityMediaName-ActivityDepthHeightMeasure-Maximum *** //
-test('Should reject ActivityDepthHeightMeasure > 0 when ActivityMediaName is set', async (t) => {
+// The depth-maximum hard error (see test/logic.js) now covers the other media;
+// the QC warning covers Groundwater/Porewater only.
+test('Should warn ActivityDepthHeightMeasure > 0 when ActivityMediaName is Porewater', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
+    ActivityMediaName: 'Porewater',
     ActivityDepthHeightMeasure: 1,
-    ActivityDepthHeightUnit: 'm'
+    ActivityDepthHeightUnit: 'm',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
     true
   )
 })
-test('Should accept ActivityDepthHeightMeasure < 0 when ActivityMediaName is set', async (t) => {
+test('Should accept ActivityDepthHeightMeasure = 0 when ActivityMediaName is Groundwater', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
-    ActivityDepthHeightMeasure: -1,
-    ActivityDepthHeightUnit: 'm'
-  })
-  t.is(valid, true)
-})
-test('Should accept ActivityDepthHeightMeasure = 0 when ActivityMediaName is set', async (t) => {
-  const valid = validate({
-    ActivityMediaName: 'Surface Water',
+    ActivityMediaName: 'Groundwater',
     ActivityDepthHeightMeasure: 0,
-    ActivityDepthHeightUnit: 'm'
+    ActivityDepthHeightUnit: 'm',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
-test('Should accept when ActivityDepthHeightMeasure is not set and when ActivityMediaName is set', async (t) => {
+test('Should accept when ActivityDepthHeightMeasure is not set and when ActivityMediaName is Groundwater', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water'
+    ActivityMediaName: 'Groundwater',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
+})
+test('Should NOT raise a QC warning for the Surface Water medium (enforced as a hard error instead)', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Surface Water',
+    ActivityDepthHeightMeasure: 1,
+    ActivityDepthHeightUnit: 'm',
+  })
+  assert.equal(valid, true)
+  assert.equal(
+    checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
+    false
+  )
+})
+test('Should reject ActivityDepthHeightMeasure > 0 when ActivityMediaName is Groundwater', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Groundwater',
+    ActivityDepthHeightMeasure: 1,
+    ActivityDepthHeightUnit: 'm',
+  })
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
+    true
+  )
+})
+test('Should accept ActivityDepthHeightMeasure < 0 when ActivityMediaName is Groundwater', async (t) => {
+  const valid = validate({
+    ActivityMediaName: 'Groundwater',
+    ActivityDepthHeightMeasure: -1,
+    ActivityDepthHeightUnit: 'm',
+  })
+  assert.equal(valid, true)
 })
 
 test('Should ignore ActivityDepthHeightMeasure > 0 when ActivityMediaName is other value', async (t) => {
   const valid = validate({
     ActivityMediaName: 'Ambient Air',
     ActivityDepthHeightMeasure: 1,
-    ActivityDepthHeightUnit: 'm'
+    ActivityDepthHeightUnit: 'm',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should ignore ActivityDepthHeightMeasure > 0 when measure is not defined', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
-    ActivityDepthHeightUnit: 'm'
+    ActivityMediaName: 'Groundwater',
+    ActivityDepthHeightUnit: 'm',
   })
-  t.is(valid, true)
-  t.is(
+  assert.equal(valid, true)
+  assert.equal(
     checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
     false
   )
 })
 test('Should ignore ActivityDepthHeightMeasure > 0 when measure is a string', async (t) => {
   const valid = validate({
-    ActivityMediaName: 'Surface Water',
+    ActivityMediaName: 'Groundwater',
     ActivityDepthHeightMeasure: 'unknown',
-    ActivityDepthHeightUnit: 'm'
+    ActivityDepthHeightUnit: 'm',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(validate.errors, 'maximum', 'ActivityDepthHeightMeasure'),
     false
   )
 })
 
 // ActivityType-CTS-ActivityStartTimeZone
-test("Should accept ActivityType without ActivityStartTimeZone for non-CTS", async (t) => {
+test('Should accept ActivityType without ActivityStartTimeZone for non-CTS', async (t) => {
   const valid = validate({
-    ActivityType: "Field Msr/Obs",
-  });
-  t.true(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTimeZone"), false);
-});
+    ActivityType: 'Field Msr/Obs',
+  })
+  assert.equal(valid, true)
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityType'),
+    false
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityStartTimeZone'),
+    false
+  )
+})
 
-test("Should accept ActivityType with ActivityStartTimeZone for non-CTS", async (t) => {
+test('Should accept ActivityType with ActivityStartTimeZone for non-CTS', async (t) => {
   const valid = validate({
-    ActivityType: "Field Msr/Obs",
+    ActivityType: 'Field Msr/Obs',
     ActivityStartTime: '13:15:00',
     ActivityStartTimeZone: '-03:00',
-  });
-  t.true(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTimeZone"), false);
-});
+  })
+  assert.equal(valid, true)
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityType'),
+    false
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityStartTimeZone'),
+    false
+  )
+})
 
-test("Should reject ActivityType without ActivityStartTimeZone for CTS", async (t) => {
+test('Should reject ActivityType without ActivityStartTimeZone for CTS', async (t) => {
   const valid = validate({
-    ActivityType: "Field Msr/Obs-Continuous Time Series",
+    ActivityType: 'Field Msr/Obs-Continuous Time Series',
     ActivityStartDate: '2025-01-01',
-    ActivityStartTime: '13:15:00'
-  });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTimeZone"), true);
-});
+    ActivityStartTime: '13:15:00',
+  })
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityStartTimeZone'),
+    true
+  )
+})
 
-test("Should accept ActivityType with ActivityStartTimeZone for CTS", async (t) => {
+test('Should accept ActivityType with ActivityStartTimeZone for CTS', async (t) => {
   const valid = validate({
-    ActivityType: "Field Msr/Obs-Continuous Time Series",
+    ActivityType: 'Field Msr/Obs-Continuous Time Series',
     ActivityStartTime: '13:15:00',
     ActivityStartTimeZone: '-06:00',
-  });
-  t.true(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTimeZone"), false);
-});
+  })
+  assert.equal(valid, true)
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityType'),
+    false
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityStartTimeZone'),
+    false
+  )
+})
 
 // ActivityType-CTS-ActivityStartTimeZone-UTC
-test("Should accept ActivityType with UTC ActivityStartTimeZone for non-CTS", async (t) => {
+test('Should accept ActivityType with UTC ActivityStartTimeZone for non-CTS', async (t) => {
   const valid = validate({
-    ActivityType: "Field Msr/Obs",
+    ActivityType: 'Field Msr/Obs',
     ActivityStartTime: '13:15:00',
     ActivityStartTimeZone: '+00:00',
-  });
-  t.true(valid);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityStartTimeZone"), false);
-});
+  })
+  assert.equal(valid, true)
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityType'),
+    false
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityStartTimeZone'),
+    false
+  )
+})
 
-test("Should accept ActivityType-CTS-ActivityStartTimeZone-UTC without ActivityStartTimeZone", async (t) => {
+test('Should accept ActivityType-CTS-ActivityStartTimeZone-UTC without ActivityStartTimeZone', async (t) => {
   const valid = validate({
-    ActivityType: "Field Msr/Obs-Continuous Time Series",
-    ActivityStartDate: '2025-01-01'
-  });
-  t.false(valid)
-  t.is(checkProperty(validate.errors, "message", "qc-ActivityType-CTS-ActivityStartTimeZone-UTC"), false);
-});
+    ActivityType: 'Field Msr/Obs-Continuous Time Series',
+    ActivityStartDate: '2025-01-01',
+  })
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      'message',
+      'qc-ActivityType-CTS-ActivityStartTimeZone-UTC'
+    ),
+    false
+  )
+})
 
-test("Should reject ActivityType with UTC ActivityStartTimeZone for CTS", async (t) => {
+test('Should reject ActivityType with UTC ActivityStartTimeZone for CTS', async (t) => {
   const valid = validate({
-    ActivityType: "Field Msr/Obs-Continuous Time Series",
+    ActivityType: 'Field Msr/Obs-Continuous Time Series',
     ActivityStartTime: '13:15:00',
     ActivityStartTimeZone: '+00:00',
-  });
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "not", "ActivityStartTimeZone"), true);
-});
+  })
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'not', 'ActivityStartTimeZone'),
+    true
+  )
+})
 
 // *** ActivityType-ResultSampleFraction *** //
 test('Should reject ResultSampleFraction when ActivityType is set to field', async (t) => {
   const valid = validate({
     ActivityType: 'Field Msr/Obs',
     CharacteristicName: 'Temperature, water',
-    ResultSampleFraction: 'Filtered'
+    ResultSampleFraction: 'Filtered',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(validate.errors, 'false schema', 'ResultSampleFraction'),
     true
   )
@@ -288,34 +355,37 @@ test('Should accept ResultSampleFraction when ActivityType is set to field and C
   const valid = validate({
     ActivityType: 'Field Msr/Obs',
     CharacteristicName: 'Ammonia, un-ionized',
-    ResultSampleFraction: 'Filtered'
+    ResultSampleFraction: 'Filtered',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should accept empty ResultSampleFraction when ActivityType is set to field', async (t) => {
   const valid = validate({
     ActivityType: 'Field Msr/Obs',
-    CharacteristicName: 'Temperature, water'
+    CharacteristicName: 'Temperature, water',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** CharacteristicName-ActivityMediaName-AmbientAir *** //
 test('Should accept CharacteristicName-ActivityMediaName-AmbientAir', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, air',
-    ActivityMediaName: 'Ambient Air'
+    ActivityMediaName: 'Ambient Air',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject CharacteristicName-ActivityMediaName-AmbientAir', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, air',
-    ActivityMediaName: 'Stormwater'
+    ActivityMediaName: 'Stormwater',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ActivityMediaName'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'enum', 'ActivityMediaName'),
+    true
+  )
 })
 
 // *** CharacteristicName-ActivityType-Surrogate *** //
@@ -323,167 +393,203 @@ test('Should accept CharacteristicName-ActivityType-Surrogate & ResultUnit', asy
   const valid = validate({
     CharacteristicName: '2-Methylnaphthalene-D10',
     ResultValue: '10',
-    ResultUnit: "%",
-    ActivityType: 'Quality Control Sample-Lab Surrogate Control Standard'
+    ResultUnit: '%',
+    ActivityType: 'Quality Control Sample-Lab Surrogate Control Standard',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject CharacteristicName-ActivityType-Surrogate & ResultUnit', async (t) => {
   const valid = validate({
     CharacteristicName: '2-Methylnaphthalene-D10',
     ResultValue: '10',
-    ResultUnit: "%",
-    ActivityType: 'Field Msr/Obs-Portable Data Logger'
+    ResultUnit: '%',
+    ActivityType: 'Field Msr/Obs-Portable Data Logger',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
 })
 
 test('Should accept CharacteristicName-ActivityType-Surrogate & ResultDetectionQuantitationLimitUnit', async (t) => {
   const valid = validate({
     CharacteristicName: 'Indeno[1,2,3-cd]pyrene-d12',
     ResultDetectionQuantitationLimitMeasure: '10',
-    ResultDetectionQuantitationLimitUnit: "%",
-    ActivityType: 'Quality Control Sample-Lab Surrogate Control Standard Duplicate'
+    ResultDetectionQuantitationLimitUnit: '%',
+    ActivityType:
+      'Quality Control Sample-Lab Surrogate Control Standard Duplicate',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject CharacteristicName-ActivityType-Surrogate & ResultDetectionQuantitationLimitUnit', async (t) => {
   const valid = validate({
     CharacteristicName: 'Indeno[1,2,3-cd]pyrene-d12',
     ResultDetectionQuantitationLimitMeasure: '10',
-    ResultDetectionQuantitationLimitUnit: "%",
-    ActivityType: 'Quality Control Sample-Lab Surrogate Method Blank'
+    ResultDetectionQuantitationLimitUnit: '%',
+    ActivityType: 'Quality Control Sample-Lab Surrogate Method Blank',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
 })
 
 // *** CharacteristicName-Ammonia *** //
 test('Should accept CharacteristicName Ammonia, un-ionized', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Ammonia, un-ionized'
+    CharacteristicName: 'Ammonia, un-ionized',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should reject CharacteristicName-Ammonia', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Ammonia'
+    CharacteristicName: 'Ammonia',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'not', 'CharacteristicName'), true)
-  t.is(checkProperty(validate.errors, 'message', 'qc-CharacteristicName-Ammonia'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'not', 'CharacteristicName'),
+    true
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'message', 'qc-CharacteristicName-Ammonia'),
+    true
+  )
 })
 
 // *** CharacteristicName-Metal-ResultSampleFraction *** //
 test('Should accept CharacteristicName-Metal-ResultSampleFraction', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
-    ResultSampleFraction: 'Total'
+    ResultSampleFraction: 'Total',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should accept CharacteristicName-Metal-ResultSampleFraction when undefined', async (t) => {
   const valid = validate({
     CharacteristicName: 'Europium',
-    ResultSampleFraction: undefined
+    ResultSampleFraction: undefined,
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should reject CharacteristicName-Metal-ResultSampleFraction', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
-    ResultSampleFraction: 'Total Recoverable'
+    ResultSampleFraction: 'Total Recoverable',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'not', 'ResultSampleFraction'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'not', 'ResultSampleFraction'),
+    true
+  )
 })
 
 // *** CharacteristicName-MethodSpeciation *** //
 test('Should accept CharacteristicName-MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
     CharacteristicName: 'Ammonia and ammonium',
-    MethodSpeciation: 'as N'
+    MethodSpeciation: 'as N',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
-    MethodSpeciation: 'as N'
+    MethodSpeciation: 'as N',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'false schema', 'MethodSpeciation'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'false schema', 'MethodSpeciation'),
+    true
+  )
 })
 test('Should accept MethodSpeciation when its expected', async (t) => {
   const valid = validate({
-    CharacteristicName: 'pH'
+    CharacteristicName: 'pH',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should accept MethodSpeciation when its not expected', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Ammonia and ammonium'
+    CharacteristicName: 'Ammonia and ammonium',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** CharacteristicName-pH-ActivityType-Sample *** //
-test("Should accept CharacteristicName-pH,lab with ActivityType-Sample", async (t) => {
+test('Should accept CharacteristicName-pH,lab with ActivityType-Sample', async (t) => {
   const valid = validate({
-    CharacteristicName: "pH, lab",
-    ActivityType: "Sample-Routine",
-    LaboratoryName: "A",
-    ResultAnalyticalMethodName: "Unspecified"
+    CharacteristicName: 'pH, lab',
+    ActivityType: 'Sample-Routine',
+    LaboratoryName: 'A',
+    ResultAnalyticalMethodName: 'Unspecified',
   })
-  t.true(valid);
-  t.is(checkProperty(validate.errors, "required", "CharacteristicName"), false);
-  t.is(checkProperty(validate.errors, "required", "ActivityType"), false);
-  t.is(checkProperty(validate.errors, "not", "ActivityType"), false);
-});
+  assert.equal(valid, true)
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'CharacteristicName'),
+    false
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ActivityType'),
+    false
+  )
+  assert.equal(checkProperty(validate.errors, 'not', 'ActivityType'), false)
+})
 
-test("Should reject CharacteristicName-pH with ActivityType-Sample", async (t) => {
+test('Should reject CharacteristicName-pH with ActivityType-Sample', async (t) => {
   const valid = validate({
-    CharacteristicName: "pH",
-    ActivityType: "Sample-Routine",
-    LaboratoryName: "A",
-    ResultAnalyticalMethodName: "Unspecified"
+    CharacteristicName: 'pH',
+    ActivityType: 'Sample-Routine',
+    LaboratoryName: 'A',
+    ResultAnalyticalMethodName: 'Unspecified',
   })
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "not", "ActivityType"), true);
-  t.is(checkProperty(validate.errors, "message", "qc-CharacteristicName-pH-ActivityType-Sample"), true);
-});
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'not', 'ActivityType'), true)
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      'message',
+      'qc-CharacteristicName-pH-ActivityType-Sample'
+    ),
+    true
+  )
+})
 
-test("Should reject CharacteristicName-pH with ActivityType-Quality Control Sample", async (t) => {
+test('Should reject CharacteristicName-pH with ActivityType-Quality Control Sample', async (t) => {
   const valid = validate({
-    CharacteristicName: "pH",
-    ActivityType: "Quality Control Sample-Other",
-    LaboratoryName: "A",
-    ResultAnalyticalMethodName: "Unspecified"
+    CharacteristicName: 'pH',
+    ActivityType: 'Quality Control Sample-Other',
+    LaboratoryName: 'A',
+    ResultAnalyticalMethodName: 'Unspecified',
   })
-  t.false(valid);
-  t.is(checkProperty(validate.errors, "not", "ActivityType"), true);
-  t.is(checkProperty(validate.errors, "message", "qc-CharacteristicName-pH-ActivityType-Sample"), true);
-});
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'not', 'ActivityType'), true)
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      'message',
+      'qc-CharacteristicName-pH-ActivityType-Sample'
+    ),
+    true
+  )
+})
 
 // *** CharacteristicName-Metal-ResultAnalyticalMethodName *** //
 test('Should accept CharacteristicName-ResultAnalyticalMethodName', async (t) => {
   const valid = validate({
     CharacteristicName: 'Ammonia and ammonium',
-    ResultAnalyticalMethodName: 'Test Method Name'
+    ResultAnalyticalMethodName: 'Test Method Name',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject CharacteristicName-ResultAnalyticalMethodName when empty', async (t) => {
   const valid = validate({
     CharacteristicName: 'Day, ice off',
-    ResultAnalyticalMethodName: undefined
+    ResultAnalyticalMethodName: undefined,
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'required', 'ResultAnalyticalMethodName'),
+    true
+  )
 })
 
 // MonitoringLocationDepthHeightMeasure - TODO future?
@@ -492,18 +598,18 @@ test('Should reject CharacteristicName-ResultAnalyticalMethodName when empty', a
 test('Should accept MonitoringLocationLatitude/Longitude when its within bounds', async (t) => {
   const valid = validate({
     MonitoringLocationLatitude: 51,
-    MonitoringLocationLongitude: -114
+    MonitoringLocationLongitude: -114,
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should reject MonitoringLocationLatitude when its out of bounds', async (t) => {
   const valid = validate({
     MonitoringLocationLatitude: 35,
-    MonitoringLocationLongitude: -114
+    MonitoringLocationLongitude: -114,
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(validate.errors, 'minimum', 'MonitoringLocationLatitude'),
     true
   )
@@ -512,10 +618,10 @@ test('Should reject MonitoringLocationLatitude when its out of bounds', async (t
 test('Should reject MonitoringLocationLongitude when its out of bounds', async (t) => {
   const valid = validate({
     MonitoringLocationLatitude: 51,
-    MonitoringLocationLongitude: -45
+    MonitoringLocationLongitude: -45,
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(validate.errors, 'minimum', 'MonitoringLocationLongitude'),
     true
   )
@@ -525,39 +631,39 @@ test('Should reject MonitoringLocationLongitude when its out of bounds', async (
 test('Should reject ActivityType when ResultAnalyticalMethodContext is YSI', async (t) => {
   const valid = validate({
     ResultAnalyticalMethodContext: 'YSI',
-    ActivityType: 'Sample-Routine'
+    ActivityType: 'Sample-Routine',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
 })
 test('Should reject ActivityType when ResultAnalyticalMethodContext is Oakton', async (t) => {
   const valid = validate({
     ResultAnalyticalMethodContext: 'Oakton',
-    ActivityType: 'Sample-Routine'
+    ActivityType: 'Sample-Routine',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ActivityType'), true)
 })
 test('Should accept ActivityType when ResultAnalyticalMethodContext is YSI', async (t) => {
   const valid = validate({
     ResultAnalyticalMethodContext: 'YSI',
-    ActivityType: 'Field Msr/Obs-Portable Data Logger'
+    ActivityType: 'Field Msr/Obs-Portable Data Logger',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should accept ActivityType when ResultAnalyticalMethodContext is Oakton', async (t) => {
   const valid = validate({
     ResultAnalyticalMethodContext: 'Oakton',
-    ActivityType: 'Field Msr/Obs-Portable Data Logger'
+    ActivityType: 'Field Msr/Obs-Portable Data Logger',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should ignore ActivityType when ResultAnalyticalMethodContext is not YSI', async (t) => {
   const valid = validate({
-    ResultAnalyticalMethodContext: 'ANY'
+    ResultAnalyticalMethodContext: 'ANY',
   })
-  t.is(valid, true)
-  // t.is(
+  assert.equal(valid, true)
+  // assert.equal(
   //   checkProperty(
   //     validate.errors,
   //     'minimum',
@@ -571,10 +677,10 @@ test('Should ignore ActivityType when ResultAnalyticalMethodContext is not YSI',
 test('Should reject ResultDetectionQuantitationLimit when measure is below 0', async (t) => {
   const valid = validate({
     ResultDetectionQuantitationLimitMeasure: -1,
-    ResultDetectionQuantitationLimitUnit: 'mg/l'
+    ResultDetectionQuantitationLimitUnit: 'mg/l',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(
       validate.errors,
       'minimum',
@@ -586,16 +692,16 @@ test('Should reject ResultDetectionQuantitationLimit when measure is below 0', a
 test('Should accept ResultDetectionQuantitationLimit when measure is above 0', async (t) => {
   const valid = validate({
     ResultDetectionQuantitationLimitMeasure: 1,
-    ResultDetectionQuantitationLimitUnit: 'mg/l'
+    ResultDetectionQuantitationLimitUnit: 'mg/l',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should ignore ResultDetectionQuantitationLimit when measure is not defined', async (t) => {
   const valid = validate({
-    ResultDetectionQuantitationLimitUnit: 'mg/l'
+    ResultDetectionQuantitationLimitUnit: 'mg/l',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(
       validate.errors,
       'minimum',
@@ -610,18 +716,18 @@ test('Should accept when CharacteristicName is pH and ResultDetectionQuantitatio
   const valid = validate({
     CharacteristicName: 'pH',
     ResultDetectionQuantitationLimitMeasure: 7,
-    ResultDetectionQuantitationLimitUnit: 'None'
+    ResultDetectionQuantitationLimitUnit: 'None',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject when CharacteristicName is pH and ResultDetectionQuantitationLimitUnit is not None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
     ResultDetectionQuantitationLimitMeasure: 7,
-    ResultDetectionQuantitationLimitUnit: 'mg/L'
+    ResultDetectionQuantitationLimitUnit: 'mg/L',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(
       validate.errors,
       'enum',
@@ -629,26 +735,28 @@ test('Should reject when CharacteristicName is pH and ResultDetectionQuantitatio
     ),
     true
   )
-  // t.is(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit'), true)
+  // assert.equal(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit'), true)
 })
 
 // *** CharacteristicName-Ratio-ResultDetectionQuantitationLimitUnit-None *** //
 test('Should accept when CharacteristicName is a ratio and ResultDetectionQuantitationLimitUnit is None', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]',
+    CharacteristicName:
+      'Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]',
     ResultDetectionQuantitationLimitMeasure: 7,
-    ResultDetectionQuantitationLimitUnit: 'None'
+    ResultDetectionQuantitationLimitUnit: 'None',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject when CharacteristicName is a ratio and ResultDetectionQuantitationLimitUnit is not None', async (t) => {
   const valid = validate({
-    CharacteristicName: 'Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]',
+    CharacteristicName:
+      'Sodium adsorption ratio [(Na)/(sq root of 1/2 Ca + Mg)]',
     ResultDetectionQuantitationLimitMeasure: 7,
-    ResultDetectionQuantitationLimitUnit: 'mg/L'
+    ResultDetectionQuantitationLimitUnit: 'mg/L',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(
       validate.errors,
       'enum',
@@ -656,7 +764,7 @@ test('Should reject when CharacteristicName is a ratio and ResultDetectionQuanti
     ),
     true
   )
-  // t.is(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit'), true)
+  // assert.equal(checkProperty(validate.errors, 'false schema', 'ResultDetectionQuantitationLimitUnit'), true)
 })
 
 // *** ResultDetectionQuantitationLimitUnit-NoValue *** //
@@ -664,17 +772,17 @@ test('Should accept when ResultDetectionQuantitationLimitMeasure & ResultDetecti
   const valid = validate({
     CharacteristicName: 'Temperature, water',
     ResultDetectionQuantitationLimitMeasure: 0,
-    ResultDetectionQuantitationLimitUnit: 'deg C'
+    ResultDetectionQuantitationLimitUnit: 'deg C',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject when ResultDetectionQuantitationLimitUnit exists without ResultDetectionQuantitationLimitMeasure', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
-    ResultDetectionQuantitationLimitUnit: 'deg C'
+    ResultDetectionQuantitationLimitUnit: 'deg C',
   })
-  t.is(valid, false)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(
     checkProperty(
       validate.errors,
       'false schema',
@@ -688,49 +796,55 @@ test('Should reject when ResultDetectionQuantitationLimitUnit exists without Res
 test('Should accept ResultSampleFraction-ActivityMediaName-Sediment', async (t) => {
   const valid = validate({
     ActivityMediaName: 'Subsurface Soil/Sediment',
-    ResultSampleFraction: 'Extractable, other'
+    ResultSampleFraction: 'Extractable, other',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should reject ResultSampleFraction-ActivityMediaName-Sediment', async (t) => {
   const valid = validate({
     ActivityMediaName: 'Stormwater',
-    ResultSampleFraction: 'Extractable, other'
+    ResultSampleFraction: 'Extractable, other',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ActivityMediaName'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'enum', 'ActivityMediaName'),
+    true
+  )
 })
 
 // *** ResultSampleFraction-FreeAvailable *** //
 test('Should accept ResultSampleFraction Free Available with Chlorine', async (t) => {
   const valid = validate({
     CharacteristicName: 'Chlorine',
-    ResultSampleFraction: 'Free Available'
+    ResultSampleFraction: 'Free Available',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should accept ResultSampleFraction Free Available with Cyanide', async (t) => {
   const valid = validate({
     CharacteristicName: 'Cyanide',
-    ResultSampleFraction: 'Free Available'
+    ResultSampleFraction: 'Free Available',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject ResultSampleFraction Free Available with unrelated CharacteristicName', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
-    ResultSampleFraction: 'Free Available'
+    ResultSampleFraction: 'Free Available',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'CharacteristicName'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'enum', 'CharacteristicName'),
+    true
+  )
 })
 test('Should accept when ResultSampleFraction is not Free Available', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
-    ResultSampleFraction: 'Total'
+    ResultSampleFraction: 'Total',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** ResultUnit-Elevation *** //
@@ -740,8 +854,8 @@ test('Should accept when ResultSampleFraction is not Free Available', async (t) 
     ResultValue: 1800,
     ResultUnit: 'm'
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
 })
 test('Should accept Water level in MASL', async (t) => {
   const valid = validate({
@@ -749,7 +863,7 @@ test('Should accept Water level in MASL', async (t) => {
     ResultValue: 1800,
     ResultUnit: 'MASL'
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })*/
 
 // *** ResultUnit-Percent *** //
@@ -758,19 +872,19 @@ test('Should reject Taxonomic Richness... in None', async (t) => {
     CharacteristicName:
       'Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera',
     ResultValue: 100,
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
 })
 test('Should acceptTaxonomic Richness... in %', async (t) => {
   const valid = validate({
     CharacteristicName:
       'Taxonomic Richness, Ephemeroptera, Plecoptera, Tricoptera',
     ResultValue: 100,
-    ResultUnit: '%'
+    ResultUnit: '%',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** CharacteristicName-pH-ResultUnit-None *** //
@@ -778,19 +892,19 @@ test('Should accept when CharacteristicName is pH and ResultUnit is None', async
   const valid = validate({
     CharacteristicName: 'pH',
     ResultValue: 7,
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject when CharacteristicName is pH and ResultUnit is not None', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
     ResultValue: 7,
-    ResultUnit: 'mg/L'
+    ResultUnit: 'mg/L',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
-  // t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+  // assert.equal(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
 })
 
 // *** CharacteristicName-Ratio-ResultUnit-None *** //
@@ -798,19 +912,19 @@ test('Should accept when CharacteristicName is a ratio and ResultUnit is None', 
   const valid = validate({
     CharacteristicName: 'Anion/cation ratio',
     ResultValue: 7,
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject when CharacteristicName is a ratio and ResultUnit is not None', async (t) => {
   const valid = validate({
     CharacteristicName: 'Anion/cation ratio',
     ResultValue: 7,
-    ResultUnit: 'mg/L'
+    ResultUnit: 'mg/L',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
-  // t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+  // assert.equal(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
 })
 
 // *** ResultUnit-NoValue *** //
@@ -818,18 +932,21 @@ test('Should accept when ResultValue & ResultUnit exist', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
     ResultValue: 0,
-    ResultUnit: 'deg C'
+    ResultUnit: 'deg C',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 test('Should reject when ResultUnit exists without ResultValue', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
-    ResultUnit: 'deg C'
+    ResultUnit: 'deg C',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'false schema', 'ResultUnit'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'false schema', 'ResultUnit'),
+    true
+  )
 })
 
 // *** ResultValue-DepthMaximum *** //
@@ -839,8 +956,8 @@ test('Should reject when ResultUnit exists without ResultValue', async (t) => {
     ResultValue: 1,
     ResultUnit: 'm'
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
 })
 test('Should accept Depth at -1 ft', async (t) => {
   const valid = validate({
@@ -848,7 +965,7 @@ test('Should accept Depth at -1 ft', async (t) => {
     ResultValue: -1,
     ResultUnit: 'ft'
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })*/
 
 // *** ResultUnit-Turbidity *** //
@@ -856,26 +973,29 @@ test('Should accept Turbidity ResultUnit with Turbidity CharacteristicName', asy
   const valid = validate({
     CharacteristicName: 'Turbidity',
     ResultValue: 10,
-    ResultUnit: 'NTU'
+    ResultUnit: 'NTU',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject Turbidity ResultUnit with non-Turbidity CharacteristicName', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
     ResultValue: 10,
-    ResultUnit: 'NTU'
+    ResultUnit: 'NTU',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'CharacteristicName'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'enum', 'CharacteristicName'),
+    true
+  )
 })
 test('Should accept non-Turbidity ResultUnit with non-Turbidity CharacteristicName', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
     ResultValue: 10,
-    ResultUnit: 'mg/L'
+    ResultUnit: 'mg/L',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** ResultDetectionQuantitationLimitUnit-Turbidity *** //
@@ -883,26 +1003,29 @@ test('Should accept Turbidity ResultDetectionQuantitationLimitUnit with Turbidit
   const valid = validate({
     CharacteristicName: 'Turbidity',
     ResultDetectionQuantitationLimitMeasure: 10,
-    ResultDetectionQuantitationLimitUnit: 'NTU'
+    ResultDetectionQuantitationLimitUnit: 'NTU',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should reject Turbidity ResultDetectionQuantitationLimitUnit with non-Turbidity CharacteristicName', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
     ResultDetectionQuantitationLimitMeasure: 10,
-    ResultDetectionQuantitationLimitUnit: 'NTU'
+    ResultDetectionQuantitationLimitUnit: 'NTU',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'CharacteristicName'), true)
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'enum', 'CharacteristicName'),
+    true
+  )
 })
 test('Should accept non-Turbidity ResultDetectionQuantitationLimitUnit with non-Turbidity CharacteristicName', async (t) => {
   const valid = validate({
     CharacteristicName: 'Iron',
     ResultDetectionQuantitationLimitMeasure: 10,
-    ResultDetectionQuantitationLimitUnit: 'mg/L'
+    ResultDetectionQuantitationLimitUnit: 'mg/L',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** ResultValue-DissolvedOxygenUnit *** //
@@ -910,18 +1033,18 @@ test('Should reject Dissolved oxygen (DO) in %', async (t) => {
   const valid = validate({
     CharacteristicName: 'Dissolved oxygen (DO)',
     ResultValue: 1,
-    ResultUnit: '%'
+    ResultUnit: '%',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
 })
 test('Should accept Dissolved oxygen (DO) in mg/L', async (t) => {
   const valid = validate({
     CharacteristicName: 'Dissolved oxygen (DO)',
     ResultValue: 1,
-    ResultUnit: 'mg/L'
+    ResultUnit: 'mg/L',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** ResultValue-DOSatMinimum *** //
@@ -929,50 +1052,50 @@ test('Should reject Dissolved oxygen saturation when measure is below 0', async 
   const valid = validate({
     CharacteristicName: 'Dissolved oxygen saturation',
     ResultValue: -1,
-    ResultUnit: 'mg/l'
+    ResultUnit: 'mg/l',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
 })
 test('Should accept Dissolved oxygen saturation when measure is above 0', async (t) => {
   const valid = validate({
     CharacteristicName: 'Dissolved oxygen saturation',
     ResultValue: 1,
-    ResultUnit: 'mg/l'
+    ResultUnit: 'mg/l',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 
 // *** ResultValue-Minimum *** //
 test('Should reject Result when measure is below 0', async (t) => {
   const valid = validate({
     ResultValue: -1,
-    ResultUnit: 'mg/l'
+    ResultUnit: 'mg/l',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
 })
 test('Should accept Result when measure is above 0', async (t) => {
   const valid = validate({
     ResultValue: 1,
-    ResultUnit: 'mg/l'
+    ResultUnit: 'mg/l',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should ignore Result when measure is not defined', async (t) => {
   const valid = validate({
-    ResultUnit: '#/100ml'
+    ResultUnit: '#/100ml',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
 })
 test('Should ignore Result when measure is a string', async (t) => {
   const valid = validate({
     ResultValue: 'unknown',
-    ResultUnit: '#/100ml'
+    ResultUnit: '#/100ml',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
 })
 
 // *** ResultValue-pH-Range *** //
@@ -980,47 +1103,47 @@ test('Should reject pH below range', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
     ResultValue: -1,
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
 })
 test('Should reject pH above range', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
     ResultValue: 15,
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
 })
 test('Should accept pH within range', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
     ResultValue: 7,
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should ignore pH range check when measure is not defined', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, false) // due to another QC
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+  assert.equal(valid, false) // due to another QC
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
 })
 
 test('Should ignore pH range check when measure is a string', async (t) => {
   const valid = validate({
     CharacteristicName: 'pH',
     ResultValue: 'Unknown',
-    ResultUnit: 'None'
+    ResultUnit: 'None',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
 })
 
 // *** ResultValue-Temperature-Range *** //
@@ -1028,88 +1151,88 @@ test('Should reject Temperature below range', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
     ResultValue: -101,
-    ResultUnit: 'deg C'
+    ResultUnit: 'deg C',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
 })
 test('Should reject Temperature above range', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
     ResultValue: 101,
-    ResultUnit: 'deg C'
+    ResultUnit: 'deg C',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
 })
 test('Should accept Temperature within range', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
     ResultValue: 0,
-    ResultUnit: 'deg C'
+    ResultUnit: 'deg C',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should ignore Temperature range check when measure is not defined', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
-    ResultUnit: 'deg C'
+    ResultUnit: 'deg C',
   })
-  t.is(valid, false) // due to another QC
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+  assert.equal(valid, false) // due to another QC
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
 })
 test('Should ignore Temperature range check when measure is a string', async (t) => {
   const valid = validate({
     CharacteristicName: 'Temperature, water',
     ResultValue: 'Unknown',
-    ResultUnit: 'deg C'
+    ResultUnit: 'deg C',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
 })
 
 // *** ResultValue-DOY-Range *** //
 test('Should reject DOY below range (1-366)', async (t) => {
   const valid = validate({
     ResultUnit: 'DOY',
-    ResultValue: 0
+    ResultValue: 0,
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
 })
 test('Should reject DOY above range (1-366)', async (t) => {
   const valid = validate({
     ResultUnit: 'DOY',
-    ResultValue: 367
+    ResultValue: 367,
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
 })
 test('Should accept DOY within range (1-366)', async (t) => {
   const valid = validate({
     ResultUnit: 'DOY',
-    ResultValue: 300
+    ResultValue: 300,
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
 })
 test('Should ignore DOY range check when measure is not defined', async (t) => {
   const valid = validate({
-    ResultUnit: 'DOY'
+    ResultUnit: 'DOY',
   })
-  t.is(valid, false) // due to another QC
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+  assert.equal(valid, false) // due to another QC
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
 })
 test('Should ignore DOY range check when measure is a string', async (t) => {
   const valid = validate({
     ResultValue: 'Unknown',
-    ResultUnit: 'DOY'
+    ResultUnit: 'DOY',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  t.is(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
+  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
 })
 
 // *** WhiteSpace *** //
@@ -1122,26 +1245,51 @@ test('Should reject columns with extra whitespace', async (t) => {
     ResultAnalyticalMethodID: '  sum  ',
     ResultAnalyticalMethodName: 'sum  ',
     LaboratoryName: '  sum',
-    LaboratorySampleID: '  sum  '
+    LaboratorySampleID: '  sum  ',
+    EventID: '  sum  ',
+    WellID: '  sum  ',
+    AquiferCode: '  sum  ',
+    SampleCollectionMethodID: '  sum  ',
+    SampleCollectionMethodName: '  sum  ',
   })
-  t.is(valid, false)
-  t.is(checkProperty(validate.errors, 'pattern', 'DatasetName'), true)
-  t.is(checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'), true)
-  t.is(
+  assert.equal(valid, false)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'DatasetName'), true)
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'MonitoringLocationID'),
+    true
+  )
+  assert.equal(
     checkProperty(validate.errors, 'pattern', 'MonitoringLocationName'),
     true
   )
-  t.is(checkProperty(validate.errors, 'pattern', 'ResultComment'), true)
-  t.is(
+  assert.equal(checkProperty(validate.errors, 'pattern', 'ResultComment'), true)
+  assert.equal(
     checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodID'),
     true
   )
-  t.is(
+  assert.equal(
     checkProperty(validate.errors, 'pattern', 'ResultAnalyticalMethodName'),
     true
   )
-  t.is(checkProperty(validate.errors, 'pattern', 'LaboratoryName'), true)
-  t.is(checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'), true)
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'LaboratoryName'),
+    true
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'LaboratorySampleID'),
+    true
+  )
+  assert.equal(checkProperty(validate.errors, 'pattern', 'EventID'), true)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'WellID'), true)
+  assert.equal(checkProperty(validate.errors, 'pattern', 'AquiferCode'), true)
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodID'),
+    true
+  )
+  assert.equal(
+    checkProperty(validate.errors, 'pattern', 'SampleCollectionMethodName'),
+    true
+  )
 })
 test('Should accept columns without extra whitespace', async (t) => {
   const valid = validate({
@@ -1152,7 +1300,66 @@ test('Should accept columns without extra whitespace', async (t) => {
     ResultAnalyticalMethodID: 'sum',
     ResultAnalyticalMethodName: 'sum',
     LaboratoryName: 'sum',
-    LaboratorySampleID: 'A'
+    LaboratorySampleID: 'A',
+    EventID: 'Spring 2018 survey',
+    WellID: 'W-001',
+    AquiferCode: 'A1',
+    SampleCollectionMethodID: 'GRAB-01',
+    SampleCollectionMethodName: 'Grab sample',
   })
-  t.is(valid, true)
+  assert.equal(valid, true)
+})
+
+// *** ResultStatusID-Deprecated *** //
+test('Should reject deprecated ResultStatusID Final', async (t) => {
+  const valid = validate({
+    ResultStatusID: 'Final',
+  })
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'message', 'qc-ResultStatusID-Deprecated'),
+    true
+  )
+})
+
+test('Should reject deprecated ResultStatusID Accepted', async (t) => {
+  const valid = validate({
+    ResultStatusID: 'Accepted',
+  })
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(validate.errors, 'message', 'qc-ResultStatusID-Deprecated'),
+    true
+  )
+})
+
+test('Should accept ResultStatusID Validated', async (t) => {
+  const valid = validate({
+    ResultStatusID: 'Validated',
+  })
+  assert.equal(valid, true)
+})
+
+// *** AnalysisStartTime-AnalysisStartTimeZone *** //
+test('Should warn when AnalysisStartTime is present without AnalysisStartTimeZone', async (t) => {
+  const valid = validate({
+    AnalysisStartTime: '13:15:00',
+  })
+  assert.equal(valid, false)
+  assert.equal(
+    checkProperty(
+      validate.errors,
+      'message',
+      'qc-AnalysisStartTime-AnalysisStartTimeZone'
+    ),
+    true
+  )
+})
+
+test('Should accept AnalysisStartTime with AnalysisStartTimeZone', async (t) => {
+  const valid = validate({
+    AnalysisStartTime: '13:15:00',
+    AnalysisStartTimeZone: '-06:00',
+  })
+  assert.equal(valid, true)
 })
