@@ -13,9 +13,9 @@ For DS-WQX fields that have an equivalent WQX field, and that comprise a list of
 - DS-WQX fields with files in [subset](https://github.com/datastreamapp/schema/tree/main/schemas/data/src/subset) allow only the corresponding WQX values listed in the file
 - DS-WQX fields wtih files in [addtion](https://github.com/datastreamapp/schema/tree/main/schemas/data/src/addition) also contain allowed values that exist only in DS-WQX and not in WQX
 
-Some DS-WQX fields do not have an equivalent WQX field, or their conceptual equivalent is different enough and and therefore DS-WQX values are not pulled directly from WQX. In these cases, DS-WQX allowed values are listed in [addtion](https://github.com/datastreamapp/schema/tree/main/schemas/data/src/addition) files (e.g. [WellIDContext](https://github.com/datastreamapp/schema/blob/main/schemas/data/src/addition/WellIDContext.json))
+Some DS-WQX fields do not have a directly equivalent WQX field, so DS-WQX values are not pulled directly from WQX. In these cases, DS-WQX allowed values are listed in [addition](https://github.com/datastreamapp/schema/tree/main/schemas/data/src/addition) files (e.g. [WellIDContext](https://github.com/datastreamapp/schema/blob/main/schemas/data/src/addition/WellIDContext.json))
 
-See also https://github.com/datastreamapp/wqx/
+*See also https://github.com/datastreamapp/wqx/*
 
 ## Projects
 
