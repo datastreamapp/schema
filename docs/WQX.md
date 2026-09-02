@@ -1,162 +1,208 @@
 # WQX Comparison
 
-To ensure a lower barrier to entry, multiple changes were made in the structure:
-- most optional fields were dropped,
+To ensure a lower barrier to entry, multiple changes were made in the structure of the DS-WQX schema:
+
+- most optional fields were dropped, or are conceptually integrated into other fields
 - CSV flavour of the schema was chosen for ease of export from Microsoft Excel
-- `Projects`, `Monitoring Locations` and `Results` were flattened together to simplify the upload process
-- Headers are in PascalCase to ensure a simple transformations by the internal system
+- `Projects`, `Monitoring Locations` and `Physical-Chemistry` (i.e.`Results`) were flattened together to simplify the upload process
+- Headers are in PascalCase to ensure simple transformations by the internal system
 - Date, Time and Time Zone were changed to use the ISO 8601 format to allow ease of parsing and universal readability
+
+For DS-WQX fields that have an equivalent WQX field, and that comprise a list of allowable values, the DS-WQX schema references WQX domain value lists available at https://cdx.epa.gov/wqx/download/DomainValues/All.zip, with changes including:
+
+- DS-WQX fields with files in [subset](https://github.com/datastreamapp/schema/tree/main/schemas/data/src/subset) allow only the corresponding WQX values listed in the file
+- DS-WQX fields wtih files in [addtion](https://github.com/datastreamapp/schema/tree/main/schemas/data/src/addition) also contain allowed values that exist only in DS-WQX and not in WQX
+
+Some DS-WQX fields do not have a directly equivalent WQX field, so DS-WQX values are not pulled directly from WQX. In these cases, DS-WQX allowed values are listed in [addition](https://github.com/datastreamapp/schema/tree/main/schemas/data/src/addition) files (e.g. [WellIDContext](https://github.com/datastreamapp/schema/blob/main/schemas/data/src/addition/WellIDContext.json))
+
+*See also https://github.com/datastreamapp/wqx/*
 
 ## Projects
 
-Column                           | WQX               | DS-WQX         | Changes
----------------------------------|-------------------|----------------|----------------------------------------------------------
-**Project ID**                   | Required, Text    |                | Removed, generated automatically internally using UUID v4
-**Project Name**                 | Required, Text    | Required, Text | Renamed to `DatasetName`
-**Project Description**          | Conditional, Text |                | Moved to metadata work flow, renamed to `Abstract`
-**Sampling Design Type**         | Optional, Values  |                | Removed
-**QAPP Approved Indicator**      | Optional, Bool    |                | Removed
-**QAPP Approval Agency Name**    | Optional, Text    |                | Removed
-**Project Attachment File Name** | Conditional, Text |                | Moved to attachment work flow
-**Project Attachment Type**      | Conditional, Text |                | Moved to attachment work flow
 
+| WQX Field           | Equivalent DS-WQX Field                                                                                          | WQX               | DS-WQX         |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------- | -------------- |
+| Project Name        | `DatasetName` (part of [dataset-level metadata](https://github.com/datastreamapp/schema/tree/main/schemas/meta)) | Required, Text    | Required, Text |
+| Project Description | `Abstract`  (part of [dataset-level metadata](https://github.com/datastreamapp/schema/tree/main/schemas/meta))   | Conditional, Text | Required, Text |
 
+### WQX Fields not included
+
+- **Project Attachment File Name**
+- **Project Attachment Type**
+- **Project ID** (Generated automatically internally using UUID v4)
+- **QAPP Approval Agency Name**
+- **QAPP Approved Indicator**
+- **Sampling Design Type**
 
 ## Monitoring Locations
 
-Column                                                         | WQX                 | DS-WQX           | Changes
----------------------------------------------------------------|---------------------|------------------|--------------------------------------------------------
-**Monitoring Location ID**                                     | Required, Text      | Required, Text   | None
-**Monitoring Location Name**                                   | Required, Text      | Required, Text   | None
-**Monitoring Location Type**                                   | Required, Values    | Required, Values | [Subset](../schemas/data/src/subset/MonitoringLocationType.json)
-**Monitoring Location Description**                            | Optional, Text      |                  | Removed
-**HUC Eight-Digit Code**                                       | Optional, Text      |                  | Removed
-**HUC Twelve-Digit Code**                                      | Optional, Text      |                  | Removed
-**Tribal Land Indicator**                                      | Optional, Bool      |                  | Removed
-**Tribal Land Name**                                           | Optional, Text      |                  | Removed
-**Alternate Monitoring Location ID**                           | Optional, Text      |                  | Removed
-**Alternate Monitoring Location Context**                      | Conditional, Text   |                  | Removed
-**Monitoring Location Latitude**                               | Required, Number    | Required, Number | None
-**Monitoring Location Longitude**                              | Required, Number    | Required, Number | None
-**Monitoring Location Source Map Scale**                       | Conditional, Text   |                  | Removed
-**Monitoring Location Horizontal Accuracy Measure Value**      | Optional, Values    | Optional, Values | None
-**Monitoring Location Horizontal Accuracy Measure Unit Code**  | Conditional, Text   | Conditional, Values | [Subset](../schemas/data/src/subset/MonitoringLocationHorizontalAccuracyUnit.json)
-**Monitoring Location Horizontal Collection Method**           | Required, Values    |                  | Removed, DataStream uses GPS based locations (lat/lng), not addresses, zip/postal code, etc
-**Monitoring Location Horizontal Coordinate Reference System** | Required, Values    | Required, Values | None
-**Vertical Measure**                                           | Optional, Number    |                  | Removed (Possible future use with Ground Water)
-**Vertical Unit**                                              | Conditional, Values |                  | Removed (Possible future use with Ground Water)
-**Vertical Collection Method**                                 | Conditional, Values |                  | Removed (Possible future use with Ground Water)
-**Vertical Coordinate Reference System**                       | Conditional, Values |                  | Removed (Possible future use with Ground Water)
-**Monitoring Location Country Code**                           | Optional, Values    |                  | Removed
-**Monitoring Location State Code**                             | Conditional, Values |                  | Removed, can be auto generated internally
-**Monitoring Location County Name**                            | Optional, Values    |                  | Removed, can be auto generated internally
-**Well Type**                                                  | Optional, Values    |                  | Removed (Possible future use with Ground Water)
-**Aquifer Name**                                               | Optional, Text      |                  | Removed (Possible future use with Ground Water), can be auto generated internally if Aquifer geometries are obtained.
-**Well Formation Type**                                        | Optional, Values    |                  | Removed (Possible future use with Ground Water)
-**Well Hole Depth Measure Value**                              | Optional, Number    |                  | Removed (Possible future use with Ground Water)
-**Well Hole Depth Measure Unit**                               | Conditional, Values |                  | Removed (Possible future use with Ground Water)
-**Monitoring Location Attachment File Name**                   | Optional, Text      |                  | Removed
-**Monitoring Location Attachment Type**                        | Conditional, Text   |                  | Removed
+
+| WQX Field                                                    | Equivalent DS-WQX Field                                 | WQX requirements    | DS-WQX requirements | DS-WQX values    |
+| ------------------------------------------------------------ | ------------------------------------------------------- | ------------------- | ------------------- | ---------------- |
+| Local Aquifer Code                                           | `AquiferCode`                                           | Conditional, Values | Optional, Text      |                  |
+| Local Aquifer Name                                           | `AquiferUnitName`                                       | Optional, Text      | Optional, Values    | Addition         |
+| Monitoring Location Horizontal Accuracy Measure Unit Code    | `MonitoringLocationHorizontalAccuracyUnit`              | Conditional, Values | Conditional, Values | Subset           |
+| Monitoring Location Horizontal Accuracy Measure Value        | `MonitoringLocationHorizontalAccuracyMeasure`           | Optional, Number    | Optional, Number    |                  |
+| Monitoring Location Horizontal Coordinate Reference System   | `MonitoringLocationHorizontalCoordinateReferenceSystem` | Required, Values    | Required, Values    | Subset           |
+| Monitoring Location ID                                       | `MonitoringLocationID`                                  | Required, Text      | Required, Text      |                  |
+| Monitoring Location Latitude                                 | `MonitoringLocationLatitude`                            | Required, Number    | Required, Number    |                  |
+| Monitoring Location Longitude                                | `MonitoringLocationLongitude`                           | Required, Number    | Required, Number    |                  |
+| Monitoring Location Name                                     | `MonitoringLocationName`                                | Required, Text      | Required, Text      |                  |
+| Monitoring Location Type                                     | `MonitoringLocationType`                                | Required, Values    | Required, Values    | Subset, Addition |
+| Vertical Accuracy Measure (WQX 3.0)                          | `MonitoringLocationVerticalAccuracyMeasure`             | Conditional, Number | Optional, Values    | Addition         |
+| Vertical Accuracy Unit (WQX 3.0)                             | `MonitoringLocationVerticalAccuracyUnit`                | Conditional, Values | Conditional, Values | Addition         |
+| Vertical Collection Method                                   | `MonitoringLocationVerticalCollectionMethod`            | Conditional, Values | Conditional, Values | Subset, Addition |
+| Vertical Coordinate Reference System                         | `MonitoringLocationVerticalCoordinateReferenceSystem`   | Conditional, Values | Conditional, Values | Subset, Addition |
+| Vertical Measure                                             | `MonitoringLocationVerticalMeasure`                     | Optional, Number    | Conditional, Number |                  |
+| Vertical Unit                                                | `MonitoringLocationVerticalUnit`                        | Conditional, Values | Conditional, Values | Subset, Addition |
+| Well Formation Type                                          | `LithologyType`                                         | Optional, Values    | Optional, Values    | Subset, Addition |
+| Well Hole Depth Measure Unit   (WQX 3.0 WellHoleDepthUnit)   | `BoreholeDepthUnit`  and `WellDepthUnit`                | Conditional, Values | Conditional, Values | Subset           |
+| Well Hole Depth Measure Value (WQX 3.0 WellHoleDepthMeasure) | `BoreholeDepthMeasure`  and `WellDepthMeasure`          | Optional, Number    | Optional, Number    |                  |
+| Well Type                                                    | `WellUseType`                                           | Conditional, Values | Conditional, Values | Subset, Addition |
+
+### DS-WQX Fields added
+
+
+| DS-WQX Field                    | DS-WQX requirements |
+| ------------------------------- | ------------------- |
+| `WellID`                        | Optional, Text      |
+| `WellIDContext`                 | Optional, Values    |
+| `AquiferType`                   | Optional, Values    |
+| `AquiferUnitPorosityType`       | Optional, Values    |
+| `WellOpenIntervalTopMeasure`    | Conditional, Number |
+| `WellOpenIntervalTopUnit`       | Conditional, Values |
+| `WellOpenIntervalBottomMeasure` | Conditional, Number |
+| `WellOpenIntervalBottomUnit`    | Conditional, Values |
+
+### WQX Fields not included
+
+- **Alternate Monitoring Location Context**
+- **Alternate Monitoring Location ID**
+- **HUC Eight-Digit Code**
+- **HUC Twelve-Digit Code**
+- **Monitoring Location Attachment File Name**
+- **Monitoring Location Attachment Type**
+- **Monitoring Location Country Code**
+- **Monitoring Location County Name**
+- **Monitoring Location Description**
+- **Monitoring Location Horizontal Collection Method**
+- **Monitoring Location Source Map Scale**
+- **Monitoring Location State Code**
+- **Tribal Land Indicator**
+- **Tribal Land Name**
 
 ## Physical-Chemistry Results
-Column                                              | WQX                      | DS-WQX              | Changes
-----------------------------------------------------|--------------------------|---------------------|----------------------------------------------------------------
-**Activity ID**                                     | Required, Text           |                     | Removed, duplication of information, WQX concatenates location ID, date and time to create Activity ID
-**Activity Type**                                   | Required, Values         | Required, Values    | [Additions](../schemas/data/src/addition/ActivityType.json)
-**Activity Media Name**                             | Required, Values         | Required, Values    | Removed
-**Activity Media Subdivision Name**                 | Optional, Values         | Required, Values    | Renamed to `Activity Media Name` for simplicity, see [Subset](../schemas/data/src/subset/ActivityMediaName.json)
-**Activity Start Date**                             | Required, Date           | Required, Date      | Changed format to meet ISO 8601
-**Activity Start Time**                             | Optional, Time           | Optional, Time      | Changed format to meet ISO 8601
-**Activity Start Time Zone**                        | Conditional, Text        |                     | Removed, calculated internally using the Latitude and Longitude
-**Activity End Date**                               | Required, Date           | Required, Date      | See `Activity Start Date`
-**Activity End Time**                               | Optional, Time           | Optional, Time      | See `Activity Start Time`
-**Activity End Time Zone**                          | Conditional, Text        |                     | See `Activity Start Time Zone`
-**Activity Relative Depth Name**                    | Optional, Values         |                     | Removed
-**Activity Height/Depth Measure**                   | Optional, Text           | Optional, Number    | Changed type to Number only
-**Activity Height/Depth Unit**                      | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ActivityDepthHeightUnit.json)
-**Activity Top Depth/Height Measure**               | Optional, Text           |                     | Removed
-**Activity Top Depth/Height Unit**                  | Conditional, Values      |                     | Removed
-**Activity Bottom Depth/Height Measure**            | Optional, Text           |                     | Removed
-**Activity Bottom Depth/Height Measure Unit**       | Conditional, Values      |                     | Removed
-**Activity Depth Altitude Reference Point**         | Conditional, Text        |                     | Removed
-**Project ID**                                      | Required, Values         |                     | See `Project ID` above
-**Organization**                                    | Optional, Text           |                     | Removed, Included in the metadata input form
-**Monitoring Location ID**                          | Conditional, Values      | Required, Text      | See `Monitoring Location ID` above
-**Activity Comment**                                | Optional, Text           |                     | Removed
-**Activity Latitude**                               | Optional, Number         |                     | Removed
-**Activity Longitude**                              | Optional, Number         |                     | Removed
-**Activity Source Map Scale**                       | Conditional, Text        |                     | Removed
-**Activity Horizontal Accuracy Measure**            | Optional, Number         |                     | Removed
-**Activity Horizontal Accuracy Unit**               | Conditional, Values      |                     | Removed
-**Activity Horizontal Collection Method**           | Conditional, Values      |                     | Removed
-**Activity Horizontal Coordinate Reference System** | Conditional, Values      |                     | Removed
-**Sample Collection Method ID**                     | Conditional, Values/Text |                     | Removed
-**Sample Collection Equipment Name**                | Conditional, Values      | Optional, Values    | [Subset](../schemas/data/src/subset/SampleCollectionEquipmentName.json), removed condition on `Sample Collection Method ID` as it's not included
-**Sample Collection Equipment Comment**             | Optional, Text           |                     | Removed
-**Sample Preparation Method ID**                    | Optional, Text           |                     | Removed
-**Sample Container Type**                           | Conditional, Values      |                     | Removed
-**Sample Container Color**                          | Conditional, Values      |                     | Removed
-**Chemical Preservative Used**                      | Conditional, Text        |                     | Removed
-**Thermal Preservative Used**                       | Conditional, Values      |                     | Removed
-**Sample Transport Storage Description**            | Conditional, Text        |                     | Removed
-**Activity Attachment File Name**                   | Optional, Text           |                     | Removed
-**Activity Attachment Type**                        | Conditional, Text        |                     | Removed
-**Data Logger Line**                                | Conditional, Text        |                     | Removed
-**Result Detection Condition**                      | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ResultDetectionCondition.json), Added `Below Detection/Quantification Limit`, `Above Detection/Quantification Limit`. Change was made to improve clarity. Changed the definitions for `Not Detected ` and `Detected Not Quantified` to reflect prescence/abscence to improve clarity.
-**Characteristic Name**                             | Conditional, Values      | Required, Values    | [Subset](../schemas/data/src/subset/CharacteristicName.json)
-**Method Speciation**                               | Conditional, Values      | Optional, Values    | [Subset](../schemas/data/src/subset/MethodSpeciation.json), Added `as CN` to account for CCME cyanide requirement for method speciation
-**Result Sample Fraction**                          | Conditional, Values      | Conditional, Values | [Additions](../schemas/data/src/addition/ResultSampleFraction.json), Added `Unspecified` to account for older data where the sample fraction may be unknown
-**Result Value**                                    | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values
-**Result Unit**                                     | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ResultUnit.json), Added `L/mg-m` for UV absorbance not in `L/mg-cm`, `#/yr` to account for flushing rate, and `uATM` to account for those using micro-atmospheres
-**Result Qualifier**                                | Optional, Values         |                     | Removed
-**Result Status ID**                                | Conditional, Values      | Optional, Values    | [Subset](../schemas/data/src/subset/ResultStatusID.json), Changed, made optional due to ambiguous values
-**Statistical Base Code**                           | Optional, Values         |                     | Removed
-**Result Value Type**                               | Conditional, Values      | Required, Values    | Changed, made required always because default value could be miss used
-**Result Weight Basis**                             | Optional, Values         |                     | Removed
-**Result Time Basis**                               | Optional, Values         |                     | Removed
-**Result Temperature Basis**                        | Optional, Values         |                     | Removed
-**Result Particle Size Basis**                      | Optional, Text           |                     | Removed
-**Precision**                                       | Optional, Text           |                     | Removed
-**Bias**                                            | Optional, Text           |                     | Removed
-**Confidence Interval**                             | Optional, Text           |                     | Removed
-**Upper Confidence Limit**                          | Optional, Text           |                     | Removed
-**Lower Confidence Limit**                          | Optional, Text           |                     | Removed
-**Result Comment**                                  | Optional, Text           | Optional, Text      | None
-**Result Depth/Height Measure**                     | Optional, Text           |                     | Removed
-**Result Depth/Height Unit**                        | Conditional, Values      |                     | Removed
-**Result Depth/Altitude Reference Point**           | Optional, Text           |                     | Removed
-**Result Sampling Point Name**                      | Optional, Text           |                     | Removed
-**Result Attachment File Name**                     | Optional, Text           |                     | Removed
-**Result Attachment Type**                          | Conditional, Text        |                     | Removed
-**Result Analytical Method ID**                     | Conditional, Values/Text | Conditional, Text   | Changed, removed allowed list (US specific), any string accepted.
-**Result Analytical Method Context**                | Conditional, Values/Text | Conditional, Values | [Subset](../schemas/data/src/subset/ResultAnalyticalMethodContext.json), Added `EN` to allow for European standards, `PROPRIETARY` for internal standards specific to the organization and `VMV` to allow for value method variable codes used in Canada
-**Result Analytical Method Name**                   |                          | Conditional, Text   | Added as there is no look-up table of allowed method names to cross reference to get this information at the time.
-**Laboratory Name**                                 | Optional, Text           | Conditional, Text   | Required if Activity Type starts with `Sample`
-**Laboratory Sample ID**                            |                          | Optional, Text      | Added, is reported by labs and helpful for some data stewards
-**Analysis Start Date**                             | Optional, Date           | Optional, Date      | See `Activity Start Date`
-**Analysis Start Time**                             | Optional, Time           | Optional, Time      | See `Activity Start Date`
-**Analysis Start Time Zone**                        | Conditional, Values      | Conditional, Text   | Changed format to meet ISO 8601 over Time Zone Codes
-**Analysis End Date**                               | Optional, Date           |                     | Removed
-**Analysis End Time**                               | Optional, Time           |                     | Removed
-**Analysis End Time Zone**                          | Conditional, Values      |                     | Removed
-**Result Laboratory Comment Code**                  | Optional, Values         |                     | Removed
-**Result Detection/Quantitation Limit Type**        | Conditional, Values      | Conditional, Values | [Subset](../schemas/data/src/subset/ResultDetectionQuantitationLimitType.json), replaced `Upper Reporting Limit` and `Lower Reporting Limit` with `Reporting Limit`.
-**Result Detection/Quantitation Limit Measure**     | Conditional, Text        | Conditional, Number | Modified, currently only allows numeric values. Characteristic Names that require text have been removed. Only required when `Below Detection/Quantification Limit` or `Above Detection/Quantification Limit` exists as detection condition.
-**Result Detection/Quantitation Limit Unit**        | Conditional, Values      | Conditional, Values | See `Result Unit`
-**Laboratory Accreditation Indicator**              | Optional, Bool           |                     | Removed
-**Laboratory Accreditation Authority**              | Optional, Text           |                     | Removed
-**Lab Sample Preparation Method ID**                | Optional, Text           |                     | Removed
-**Lab Sample Preparation Start Date**               | Optional, Date           |                     | Removed
-**Lab Sample Preparation Start Time**               | Optional, Time           |                     | Removed
-**Lab Sample Preparation Start Time Zone**          | Conditional, Values      |                     | Removed
-**Lab Sample Preparation End Date**                 | Optional, Date           |                     | Removed
-**Lab Sample Preparation End Time**                 | Optional, Time           |                     | Removed
-**Lab Sample Preparation End Time Zone**            | Conditional, Values      |                     | Removed
-**Substance Dilution Factor**                       | Optional, Integer        |                     | Removed
-**Activity Group ID**                               | Conditional, Text        |                     | Removed
-**Activity Group Name**                             | Optional, Text           |                     | Removed
-**Activity Group Type**                             | Conditional, Values      |                     | Removed, can be auto generated internally
 
-See https://github.com/datastreamapp/schema/releases for details on `Characteristic Name` grouping changes.
 
-[WQX Allowed Values](https://www.epa.gov/waterdata/storage-and-retrieval-and-water-quality-exchange-domain-services-and-downloads#domain)
+| WQX Field                                   | Equivalent DS-WQX Field                   | WQX requirements         | DS-WQX requirements       | DS-WQX values    |
+| ------------------------------------------- | ----------------------------------------- | ------------------------ | ------------------------- | ---------------- |
+| Activity Depth Altitude Reference Point     | `ActivityDepthAltitudeReferencePoint`     | Optional, Text           | Conditional, Values       | Addition         |
+| Activity End Date                           | `ActivityEndDate`                         | Required, Date           | Required, Date (ISO 8601) |                  |
+| Activity End Time                           | `ActivityEndTime`                         | Optional, Time           | Optional, Time (ISO 8601) |                  |
+| Activity End Time Zone                      | `ActivityEndTimeZone`                     | Conditional, Values      | Conditional, Values       |                  |
+| Activity Group Type                         | `ActivityGroupType`                       | Required, Values         | Required, Values          | Addition         |
+| Activity Height/Depth Measure               | `ActivityDepthHeightMeasure`              | Optional, Text           | Optional, Number          |                  |
+| Activity Height/Depth Unit                  | `ActivityDepthHeightUnit`                 | Conditional, Values      | Conditional, Values       | Subset           |
+| Activity Media Subdivision Name             | `ActivityMediaName`                       | Optional, Values         | Required, Values          | Subset, Addition |
+| Activity Start Date                         | `ActivityStartDate`                       | Required, Date           | Required, Date (ISO 8601) |                  |
+| Activity Start Time                         | `ActivityStartTime`                       | Optional, Time           | Optional, Time (ISO 8601) |                  |
+| Activity Start Time Zone                    | `ActivityStartTimeZone`                   | Conditional, Values      | Conditional, Values       |                  |
+| Activity Type                               | `ActivityType`                            | Required, Values         | Required, Values          | Subset, Addition |
+| Analysis Start Date                         | `AnalysisStartDate`                       | Optional, Date           | Optional, Date (ISO 8601) |                  |
+| Analysis Start Time                         | `AnalysisStartTime`                       | Optional, Time           | Optional, Time (ISO 8601) |                  |
+| Analysis Start Time Zone                    | `AnalysisStartTimeZone`                   | Conditional, Values      | Conditional, Values       |                  |
+| Characteristic Name                         | `CharacteristicName`                      | Conditional, Values      | Required, Values          | Subset, Addition |
+| Laboratory Name                             | `LaboratoryName`                          | Optional, Text           | Conditional, Text         |                  |
+| Method Speciation                           | `MethodSpeciation`                        | Conditional, Values      | Conditional, Values       | Subset, Addition |
+| Result Analytical Method Context            | `ResultAnalyticalMethodContext`           | Conditional, Values/Text | Conditional, Values       | Subset, Addition |
+| Result Analytical Method ID                 | `ResultAnalyticalMethodID`                | Conditional, Values/Text | Conditional, Text         |                  |
+| Result Comment                              | `ResultComment`                           | Optional, Text           | Optional, Text            |                  |
+| Result Detection Condition                  | `ResultDetectionCondition`                | Conditional, Values      | Conditional, Values       | Subset, Addition |
+| Result Detection/Quantitation Limit Measure | `ResultDetectionQuantitationLimitMeasure` | Conditional, Text        | Conditional, Number       |                  |
+| Result Detection/Quantitation Limit Type    | `ResultDetectionQuantitationLimitType`    | Conditional, Values      | Conditional, Values       | Subset, Addition |
+| Result Detection/Quantitation Limit Unit    | `ResultDetectionQuantitationLimitUnit`    | Conditional, Values      | Conditional, Values       | See Result Unit  |
+| Result Sample Fraction                      | `ResultSampleFraction`                    | Conditional, Values      | Conditional, Values       | Subset, Addition |
+| Result Status ID                            | `ResultStatusID`                          | Conditional, Values      | Optional, Values          | Subset           |
+| Result Unit                                 | `ResultUnit`                              | Conditional, Values      | Conditional, Values       | Subset, Addition |
+| Result Value                                | `ResultValue`                             | Conditional, Text        | Conditional, Number       |                  |
+| Result Value Type                           | `ResultValueType`                         | Conditional, Values      | Required, Values          |                  |
+| Sample Collection Equipment *               | `SampleCollectionEquipmentName`           | Conditional, Values      | Optional, Values          | Subset, Addition |
+| Sample Collection Method Identifier         | `SampleCollectionMethodID`                | Conditional, Values/Text | Conditional, Text         |                  |
+| Sample Collection Method Identifier Context | `SampleCollectionMethodContext`           | Conditional, Values/Text | Conditional, Values       | Subset, Addition |
+| Sample Collection Method Name (WQX 3.0)     | `SampleCollectionMethodName`              | Conditional, Values/Text | Optional, Text            |                  |
+
+*Note, the DS-WQX field SampleCollectionEquipmentName combines WQX domain value lists for Sample Collection Equipment and Sample Collection Equipment Type
+
+### DS-WQX Fields added
+
+
+| DS-WQX Field                                 | DS-WQX requirements |
+| -------------------------------------------- | ------------------- |
+| `ActivityDepthAltitudeReferencePointUnit`    | Conditional, Values |
+| `ActivityDepthAltitudeReferencePointMeasure` | Conditional, Number |
+| `EventID`                                    | Optional, Text      |
+| `LaboratorySampleID`                         | Optional, Text      |
+| `SampleCondition`                            | Conditional, Values |
+
+### WQX Fields not included
+
+- **Activity Attachment File Name**
+- **Activity Attachment Type**
+- **Activity Bottom Depth/Height Measure Unit**
+- **Activity Bottom Depth/Height Measure**
+- **Activity Comment**
+- **Activity Group ID**
+- **Activity Group Name**
+- **Activity Horizontal Accuracy Measure**
+- **Activity Horizontal Accuracy Unit**
+- **Activity Horizontal Collection Method**
+- **Activity Horizontal Coordinate Reference System**
+- **Activity ID** (See DS `EventID`)
+- **Activity Latitude**
+- **Activity Longitude**
+- **Activity Media Name** (See DS `ActivityMediaName`)
+- **Activity Relative Depth Name**
+- **Activity Source Map Scale**
+- **Activity Top Depth/Height Measure**
+- **Activity Top Depth/Height Unit**
+- **Analysis End Date**
+- **Analysis End Time Zone**
+- **Analysis End Time**
+- **Bias**
+- **Chemical Preservative Used**
+- **Confidence Interval**
+- **Data Logger Line**
+- **Lab Sample Preparation End Date**
+- **Lab Sample Preparation End Time Zone**
+- **Lab Sample Preparation End Time**
+- **Lab Sample Preparation Method ID**
+- **Lab Sample Preparation Start Date**
+- **Lab Sample Preparation Start Time Zone**
+- **Lab Sample Preparation Start Time**
+- **Laboratory Accreditation Authority**
+- **Laboratory Accreditation Indicator**
+- **Lower Confidence Limit**
+- **Organization** (part of [dataset-level metadata](https://github.com/datastreamapp/schema/tree/main/schemas/meta))
+- **Precision**
+- **Project ID** (See Project section)
+- **Result Attachment File Name**
+- **Result Attachment Type**
+- **Result Depth/Altitude Reference Point**
+- **Result Depth/Height Measure**
+- **Result Depth/Height Unit**
+- **Result Laboratory Comment Code**
+- **Result Particle Size Basis**
+- **Result Qualifier**
+- **Result Sampling Point Name**
+- **Result Temperature Basis**
+- **Result Time Basis**
+- **Result Weight Basis**
+- **Sample Collection Equipment Comment**
+- **Sample Container Color**
+- **Sample Container Type**
+- **Sample Preparation Method ID**
+- **Sample Transport Storage Description**
+- **Statistical Base Code**
+- **Substance Dilution Factor**
+- **Thermal Preservative Used**
+- **Upper Confidence Limit**
