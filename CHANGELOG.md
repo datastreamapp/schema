@@ -5,6 +5,27 @@ All notable changes to `@datastreamapp/data-schema` are documented in this file.
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- New `CharacteristicName` values, and a new `ActivityDepthAltitudeReferencePoint` allowed value.
+- `Rhodium` added to the `ResultSampleFraction` rule for `CharacteristicName`.
+
+### Changed
+
+- Updated English validation messages and added the matching French messages. English and French files now list messages in the same order.
+- `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.
+- Updated the surrogate `ActivityType` and metal `ResultSampleFraction` quality-control rules.
+
+### Deprecated
+
+- One duplicate `CharacteristicName` ("2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol") is deprecated. It stays in the locale files.
+
+### Fixed
+
+- Locale build failed because `qc-Date-Future` was defined after the messages that refer to it.
+
 ## [3.0.0] - 2026-07-14
 
 Introduces **Groundwater support** to the DataStream schema.
