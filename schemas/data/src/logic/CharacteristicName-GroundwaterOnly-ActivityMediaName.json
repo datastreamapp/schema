@@ -1,0 +1,36 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-GroundwaterOnly-ActivityMediaName.json",
+  "title": "CharacteristicName-GroundwaterOnly-ActivityMediaName",
+  "description": "ActivityMediaName must be 'Groundwater' or 'Porewater' for groundwater-only CharacteristicName values",
+  "errorMessage": "error-CharacteristicName-GroundwaterOnly-ActivityMediaName",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Water level elevation",
+          "Water level in well, depth from a reference point"
+        ]
+      }
+    },
+    "required": [
+      "CharacteristicName"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": [
+          "Groundwater",
+          "Porewater"
+        ]
+      }
+    },
+    "required": [
+      "ActivityMediaName"
+    ]
+  }
+}

@@ -847,25 +847,6 @@ test('Should accept when ResultSampleFraction is not Free Available', async (t) 
   assert.equal(valid, true)
 })
 
-// *** ResultUnit-Elevation *** //
-/*test('Should reject Water level in m', async (t) => {
-  const valid = validate({
-    CharacteristicName: 'Water level',
-    ResultValue: 1800,
-    ResultUnit: 'm'
-  })
-  assert.equal(valid, false)
-  assert.equal(checkProperty(validate.errors, 'enum', 'ResultUnit'), true)
-})
-test('Should accept Water level in MASL', async (t) => {
-  const valid = validate({
-    CharacteristicName: 'Water level',
-    ResultValue: 1800,
-    ResultUnit: 'MASL'
-  })
-  assert.equal(valid, true)
-})*/
-
 // *** ResultUnit-Percent *** //
 test('Should reject Taxonomic Richness... in None', async (t) => {
   const valid = validate({
@@ -1187,48 +1168,6 @@ test('Should ignore Temperature range check when measure is a string', async (t)
     CharacteristicName: 'Temperature, water',
     ResultValue: 'Unknown',
     ResultUnit: 'deg C',
-  })
-  assert.equal(valid, false)
-  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
-})
-
-// *** ResultValue-DOY-Range *** //
-test('Should reject DOY below range (1-366)', async (t) => {
-  const valid = validate({
-    ResultUnit: 'DOY',
-    ResultValue: 0,
-  })
-  assert.equal(valid, false)
-  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
-})
-test('Should reject DOY above range (1-366)', async (t) => {
-  const valid = validate({
-    ResultUnit: 'DOY',
-    ResultValue: 367,
-  })
-  assert.equal(valid, false)
-  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), true)
-})
-test('Should accept DOY within range (1-366)', async (t) => {
-  const valid = validate({
-    ResultUnit: 'DOY',
-    ResultValue: 300,
-  })
-  assert.equal(valid, true)
-})
-test('Should ignore DOY range check when measure is not defined', async (t) => {
-  const valid = validate({
-    ResultUnit: 'DOY',
-  })
-  assert.equal(valid, false) // due to another QC
-  assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
-  assert.equal(checkProperty(validate.errors, 'maximum', 'ResultValue'), false)
-})
-test('Should ignore DOY range check when measure is a string', async (t) => {
-  const valid = validate({
-    ResultValue: 'Unknown',
-    ResultUnit: 'DOY',
   })
   assert.equal(valid, false)
   assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)

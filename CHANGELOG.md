@@ -11,8 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - New `CharacteristicName` values, and a new `ActivityDepthAltitudeReferencePoint` allowed value.
 - `Rhodium` added to the `ResultSampleFraction` rule for `CharacteristicName`.
+- New Groundwater errors for `Water level elevation` (`ResultValueType` must be `Calculated`, `ResultAnalyticalMethodName` rule), `MultilevelWell` locations (`WellOpenInterval` required), and `ActivityDepthAltitudeReferencePoint` `Subaqueous sediment` with porewater.
+- New errors that keep `Groundwater` and `Surface water` values of `ActivityMediaName` consistent with `MonitoringLocationType` and `CharacteristicName`.
+- New warning: when `ActivityDepthAltitudeReferencePoint` is `Ground surface`, the measure should be 0.
 
 ### Changed
+
+- `ResultValue` day-of-year range check (`ResultValue-DOY-Range`) changes from a warning to an error.
+- Updated the Groundwater message for the well open interval check.
+- The `ResultUnit` elevation warning (`qc-ResultUnit-Elevation`) is deactivated.
 
 - Updated English validation messages and added the matching French messages. English and French files now list messages in the same order.
 - `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.

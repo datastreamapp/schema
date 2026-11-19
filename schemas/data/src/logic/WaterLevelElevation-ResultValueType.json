@@ -1,0 +1,34 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/WaterLevelElevation-ResultValueType.json",
+  "title": "WaterLevelElevation-ResultValueType",
+  "description": "ResultValueType must be 'Calculated' when CharacteristicName is 'Water level elevation'",
+  "errorMessage": "error-WaterLevelElevation-ResultValueType",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Water level elevation"
+        ]
+      }
+    },
+    "required": [
+      "CharacteristicName"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ResultValueType": {
+        "enum": [
+          "Calculated"
+        ]
+      }
+    },
+    "required": [
+      "ResultValueType"
+    ]
+  }
+}

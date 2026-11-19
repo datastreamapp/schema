@@ -1,0 +1,44 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/CharacteristicName-SurfaceWaterOnly-ActivityMediaName.json",
+  "title": "CharacteristicName-SurfaceWaterOnly-ActivityMediaName",
+  "description": "ActivityMediaName must be 'Surface Water' for surface-water-only CharacteristicName values",
+  "errorMessage": "error-CharacteristicName-SurfaceWaterOnly-ActivityMediaName",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Bankfull Height",
+          "Depth of water column",
+          "Depth, Secchi disk depth",
+          "Depth, snow cover",
+          "Ice thickness",
+          "Light attenuation, depth at 99%",
+          "Transparency, Secchi tube with disk",
+          "Transparency, tube with disk",
+          "Water level",
+          "Water level (probe)",
+          "White ice thickness"
+        ]
+      }
+    },
+    "required": [
+      "CharacteristicName"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": [
+          "Surface Water"
+        ]
+      }
+    },
+    "required": [
+      "ActivityMediaName"
+    ]
+  }
+}

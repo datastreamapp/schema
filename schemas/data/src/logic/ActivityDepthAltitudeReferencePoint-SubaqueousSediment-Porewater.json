@@ -1,0 +1,34 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/ActivityDepthAltitudeReferencePoint-SubaqueousSediment-Porewater.json",
+  "title": "ActivityDepthAltitudeReferencePoint-SubaqueousSediment-Porewater",
+  "description": "ActivityMediaName must be 'Porewater' when ActivityDepthAltitudeReferencePoint is 'Top of subaqueous sediment'",
+  "errorMessage": "error-ActivityDepthAltitudeReferencePoint-SubaqueousSediment-Porewater",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthAltitudeReferencePoint": {
+        "enum": [
+          "Top of subaqueous sediment"
+        ]
+      }
+    },
+    "required": [
+      "ActivityDepthAltitudeReferencePoint"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": [
+          "Porewater"
+        ]
+      }
+    },
+    "required": [
+      "ActivityMediaName"
+    ]
+  }
+}
