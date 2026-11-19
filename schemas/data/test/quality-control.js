@@ -1070,7 +1070,7 @@ test('Should accept Dissolved oxygen saturation when measure is above 0', async 
 test('Should reject Result when measure is below 0', async (t) => {
   const valid = validate({
     ResultValue: -1,
-    ResultUnit: 'mg/l',
+    ResultUnit: 'mg/L',
   })
   assert.equal(valid, false)
   assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), true)
@@ -1078,13 +1078,13 @@ test('Should reject Result when measure is below 0', async (t) => {
 test('Should accept Result when measure is above 0', async (t) => {
   const valid = validate({
     ResultValue: 1,
-    ResultUnit: 'mg/l',
+    ResultUnit: 'mg/L',
   })
   assert.equal(valid, true)
 })
 test('Should ignore Result when measure is not defined', async (t) => {
   const valid = validate({
-    ResultUnit: '#/100ml',
+    ResultUnit: '#/100mL',
   })
   assert.equal(valid, false)
   assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
@@ -1092,7 +1092,7 @@ test('Should ignore Result when measure is not defined', async (t) => {
 test('Should ignore Result when measure is a string', async (t) => {
   const valid = validate({
     ResultValue: 'unknown',
-    ResultUnit: '#/100ml',
+    ResultUnit: '#/100mL',
   })
   assert.equal(valid, false)
   assert.equal(checkProperty(validate.errors, 'minimum', 'ResultValue'), false)
