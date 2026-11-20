@@ -1,8 +1,8 @@
 {
-  "$id": "https://datastream.org/schema/data/quality-control/ResultValue-DOY-Range.json",
+  "$id": "https://datastream.org/schema/data/logic/ResultValue-DOY-Range.json",
   "title": "ResultValue-DOY-Range",
   "description": "The DOY (day of year) cannot be less than 1 or more than 366 (for leap years)",
-  "errorMessage": "qc-ResultValue-DOY-Range",
+  "errorMessage": "error-ResultValue-DOY-Range",
   "if": {
     "type": "object",
     "unevaluatedProperties": true,

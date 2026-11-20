@@ -1,0 +1,50 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/MonitoringLocationType-SurfaceWaterOnly-ActivityMediaName.json",
+  "title": "MonitoringLocationType-SurfaceWaterOnly-ActivityMediaName",
+  "description": "ActivityMediaName must not be Groundwater or Porewater for surface-water-only MonitoringLocationType values",
+  "errorMessage": "error-MonitoringLocationType-SurfaceWaterOnly-ActivityMediaName",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "MonitoringLocationType": {
+        "enum": [
+          "Atmosphere",
+          "Canal Drainage",
+          "Canal Irrigation",
+          "Canal Transport",
+          "Estuary",
+          "Great Lake",
+          "Lake/Pond",
+          "Ocean",
+          "Pond-Stormwater",
+          "Reservoir",
+          "River/Stream",
+          "Storm Sewer",
+          "Unspecified",
+          "Wetland"
+        ]
+      }
+    },
+    "required": [
+      "MonitoringLocationType"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "not": {
+          "enum": [
+            "Groundwater",
+            "Porewater"
+          ]
+        }
+      }
+    },
+    "required": [
+      "ActivityMediaName"
+    ]
+  }
+}

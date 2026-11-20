@@ -1,0 +1,34 @@
+{
+  "$id": "https://datastream.org/schema/data/quality-control/ActivityDepthAltitudeReferencePoint-GroundSurface.json",
+  "title": "ActivityDepthAltitudeReferencePoint-GroundSurface",
+  "description": "ActivityDepthAltitudeReferencePointMeasure should be 0 or blank when ActivityDepthAltitudeReferencePoint is 'Ground surface'",
+  "errorMessage": "qc-ActivityDepthAltitudeReferencePoint-GroundSurface",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthAltitudeReferencePoint": {
+        "enum": [
+          "Ground surface"
+        ]
+      },
+      "ActivityDepthAltitudeReferencePointMeasure": true
+    },
+    "required": [
+      "ActivityDepthAltitudeReferencePoint",
+      "ActivityDepthAltitudeReferencePointMeasure"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityDepthAltitudeReferencePointMeasure": {
+        "const": 0
+      }
+    },
+    "required": [
+      "ActivityDepthAltitudeReferencePointMeasure"
+    ]
+  }
+}

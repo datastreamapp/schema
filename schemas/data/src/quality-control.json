@@ -139,6 +139,9 @@
       "required": []
     },
     {
+      "$ref": "./quality-control/ActivityDepthAltitudeReferencePoint-GroundSurface.json"
+    },
+    {
       "$ref": "./quality-control/ActivityMediaName-ActivityDepthHeightMeasure-Maximum.json"
     },
     {
@@ -233,9 +236,6 @@
     },
     {
       "$ref": "./quality-control/ResultValue-Temperature-Range.json"
-    },
-    {
-      "$ref": "./quality-control/ResultValue-DOY-Range.json"
     },
     {
       "$ref": "quality-control/WhiteSpace-AquiferCode.json"

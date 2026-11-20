@@ -1,0 +1,30 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/WaterLevelElevation-ResultAnalyticalMethodName.json",
+  "title": "WaterLevelElevation-ResultAnalyticalMethodName",
+  "description": "ResultAnalyticalMethodName is required when CharacteristicName is 'Water level elevation'",
+  "errorMessage": "error-WaterLevelElevation-ResultAnalyticalMethodName",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "CharacteristicName": {
+        "enum": [
+          "Water level elevation"
+        ]
+      }
+    },
+    "required": [
+      "CharacteristicName"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ResultAnalyticalMethodName": true
+    },
+    "required": [
+      "ResultAnalyticalMethodName"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/MonitoringLocationType-MultilevelWell-WellOpenInterval.json",
+  "title": "MonitoringLocationType-MultilevelWell-WellOpenInterval",
+  "description": "WellOpenIntervalTopMeasure, WellOpenIntervalTopUnit, WellOpenIntervalBottomMeasure and WellOpenIntervalBottomUnit are required when MonitoringLocationType is 'Multilevel Well'",
+  "errorMessage": "error-MonitoringLocationType-MultilevelWell-WellOpenInterval",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "MonitoringLocationType": {
+        "enum": [
+          "Multilevel Well"
+        ]
+      }
+    },
+    "required": [
+      "MonitoringLocationType"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "WellOpenIntervalTopMeasure": true,
+      "WellOpenIntervalTopUnit": true,
+      "WellOpenIntervalBottomMeasure": true,
+      "WellOpenIntervalBottomUnit": true
+    },
+    "required": [
+      "WellOpenIntervalTopMeasure",
+      "WellOpenIntervalTopUnit",
+      "WellOpenIntervalBottomMeasure",
+      "WellOpenIntervalBottomUnit"
+    ]
+  }
+}
