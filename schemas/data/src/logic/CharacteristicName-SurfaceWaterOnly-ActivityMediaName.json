@@ -1,7 +1,7 @@
 {
   "$id": "https://datastream.org/schema/data/logic/CharacteristicName-SurfaceWaterOnly-ActivityMediaName.json",
   "title": "CharacteristicName-SurfaceWaterOnly-ActivityMediaName",
-  "description": "ActivityMediaName must be 'Surface Water' for surface-water-only CharacteristicName values",
+  "description": "ActivityMediaName must not be Groundwater or Porewater for surface-water-only CharacteristicName values",
   "errorMessage": "error-CharacteristicName-SurfaceWaterOnly-ActivityMediaName",
   "if": {
     "type": "object",
@@ -32,9 +32,12 @@
     "unevaluatedProperties": true,
     "properties": {
       "ActivityMediaName": {
-        "enum": [
-          "Surface Water"
-        ]
+        "not": {
+          "enum": [
+            "Groundwater",
+            "Porewater"
+          ]
+        }
       }
     },
     "required": [

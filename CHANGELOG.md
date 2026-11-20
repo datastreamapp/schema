@@ -18,9 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - `ResultValue` day-of-year range check (`ResultValue-DOY-Range`) changes from a warning to an error.
-- Updated the Groundwater message for the well open interval check.
+- Reworded the Water level elevation message for `ActivityDepthAltitudeReferencePoint` (`error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint`).
 - The `ResultUnit` elevation warning (`qc-ResultUnit-Elevation`) is deactivated.
-
 - Updated English validation messages and added the matching French messages. English and French files now list messages in the same order.
 - `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.
 - Updated the surrogate `ActivityType` and metal `ResultSampleFraction` quality-control rules.

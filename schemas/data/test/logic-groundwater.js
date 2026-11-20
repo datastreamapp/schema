@@ -122,7 +122,7 @@ test('Should reject Water level elevation without ResultValueType Calculated', a
   assert.equal(checkProperty(validate.errors, 'message', 'error-WaterLevelElevation-ResultValueType'), true)
 })
 
-test('Should accept Water level elevation without ResultValueType Calculated', async () => {
+test('Should accept Water level elevation with ResultValueType Calculated', async () => {
   validate({ ActivityMediaName: 'Groundwater', CharacteristicName: 'Water level elevation', ResultValue: 100, ResultUnit: 'm', ResultValueType: 'Calculated' })
   assert.equal(checkProperty(validate.errors, 'message', 'error-WaterLevelElevation-ResultValueType'), false)
 })
@@ -142,7 +142,7 @@ test('Should reject Water level elevation without ResultAnalyticalMethodName', a
   assert.equal(checkProperty(validate.errors, 'message', 'error-WaterLevelElevation-ResultAnalyticalMethodName'), true)
 })
 
-test('Should accept Water level elevation without ResultAnalyticalMethodName', async () => {
+test('Should accept Water level elevation with ResultAnalyticalMethodName', async () => {
   validate({ ActivityMediaName: 'Groundwater', CharacteristicName: 'Water level elevation', ResultValue: 100, ResultUnit: 'm', ResultValueType: 'Calculated', ResultAnalyticalMethodName: 'Calculated' })
   assert.equal(checkProperty(validate.errors, 'message', 'error-WaterLevelElevation-ResultAnalyticalMethodName'), false)
 })
@@ -157,7 +157,7 @@ test('Should reject Multilevel Well without open interval', async () => {
   assert.equal(checkProperty(validate.errors, 'message', 'error-MonitoringLocationType-MultilevelWell-WellOpenInterval'), true)
 })
 
-test('Should accept Multilevel Well without open interval', async () => {
+test('Should accept Multilevel Well with open interval', async () => {
   validate({ ActivityMediaName: 'Groundwater', MonitoringLocationType: 'Multilevel Well', WellOpenIntervalTopMeasure: -10, WellOpenIntervalTopUnit: 'm', WellOpenIntervalBottomMeasure: -20, WellOpenIntervalBottomUnit: 'm' })
   assert.equal(checkProperty(validate.errors, 'message', 'error-MonitoringLocationType-MultilevelWell-WellOpenInterval'), false)
 })
@@ -192,7 +192,7 @@ test('Should reject Top of subaqueous sediment without Porewater', async () => {
   assert.equal(checkProperty(validate.errors, 'message', 'error-ActivityDepthAltitudeReferencePoint-SubaqueousSediment-Porewater'), true)
 })
 
-test('Should accept Top of subaqueous sediment without Porewater', async () => {
+test('Should accept Top of subaqueous sediment with Porewater', async () => {
   validate({ ActivityMediaName: 'Porewater', ActivityDepthAltitudeReferencePoint: 'Top of subaqueous sediment' })
   assert.equal(checkProperty(validate.errors, 'message', 'error-ActivityDepthAltitudeReferencePoint-SubaqueousSediment-Porewater'), false)
 })
@@ -258,6 +258,13 @@ for (const value of ['Atmosphere', 'Canal Drainage', 'Canal Irrigation', 'Canal 
   })
 }
 
+for (const [site, media] of [['Ocean', 'Ocean Water'], ['River/Stream', 'Surface Water Sediment'], ['Atmosphere', 'Ambient Air'], ['Atmosphere', 'Rainwater']]) {
+  test(`Should accept surface-water-only MonitoringLocationType ${site} with other media: ${media}`, async () => {
+    validate({ ActivityMediaName: media, MonitoringLocationType: site })
+    assert.equal(checkProperty(validate.errors, 'message', 'error-MonitoringLocationType-SurfaceWaterOnly-ActivityMediaName'), false)
+  })
+}
+
 test('Should accept Spring with Groundwater', async () => {
   validate({ ActivityMediaName: 'Groundwater', MonitoringLocationType: 'Spring' })
   assert.equal(checkProperty(validate.errors, 'message', 'error-MonitoringLocationType-SurfaceWaterOnly-ActivityMediaName'), false)
@@ -280,6 +287,13 @@ for (const value of ['Bankfull Height', 'Depth of water column', 'Depth, Secchi 
 for (const value of ['Bankfull Height', 'Depth of water column', 'Depth, Secchi disk depth', 'Depth, snow cover', 'Ice thickness', 'Light attenuation, depth at 99%', 'Transparency, Secchi tube with disk', 'Transparency, tube with disk', 'Water level', 'Water level (probe)', 'White ice thickness']) {
   test(`Should accept surface-water-only CharacteristicName with Surface Water: ${value}`, async () => {
     validate({ ActivityMediaName: 'Surface Water', CharacteristicName: value })
+    assert.equal(checkProperty(validate.errors, 'message', 'error-CharacteristicName-SurfaceWaterOnly-ActivityMediaName'), false)
+  })
+}
+
+for (const media of ['Ocean Water', 'Surface Water Sediment', 'Ambient Air']) {
+  test(`Should accept surface-water-only CharacteristicName with other media: ${media}`, async () => {
+    validate({ ActivityMediaName: media, CharacteristicName: 'Water level' })
     assert.equal(checkProperty(validate.errors, 'message', 'error-CharacteristicName-SurfaceWaterOnly-ActivityMediaName'), false)
   })
 }
