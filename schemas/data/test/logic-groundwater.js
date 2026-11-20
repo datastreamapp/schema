@@ -328,3 +328,30 @@ test('Should accept ResultValue 366 when ResultUnit is DOY', async () => {
   assert.equal(checkProperty(validate.errors, 'message', 'error-ResultValue-DOY-Range'), false)
 })
 
+
+test('Should reject non-numeric ResultValue when ResultUnit is DOY', async () => {
+  validate({ ActivityMediaName: 'Surface Water', CharacteristicName: 'Day, ice on', ResultValue: 'Unknown', ResultUnit: 'DOY' })
+  assert.equal(checkProperty(validate.errors, 'message', 'error-ResultValue-DOY-Range'), true)
+})
+
+test('Should reject Top of subaqueous sediment with Groundwater', async () => {
+  validate({ ActivityMediaName: 'Groundwater', ActivityDepthAltitudeReferencePoint: 'Top of subaqueous sediment' })
+  assert.equal(checkProperty(validate.errors, 'message', 'error-ActivityDepthAltitudeReferencePoint-SubaqueousSediment-Porewater'), true)
+})
+
+for (const value of ['Water level elevation', 'Water level in well, depth from a reference point']) {
+  test(`Should accept groundwater-only CharacteristicName with Porewater: ${value}`, async () => {
+    validate({ ActivityMediaName: 'Porewater', CharacteristicName: value })
+    assert.equal(checkProperty(validate.errors, 'message', 'error-CharacteristicName-GroundwaterOnly-ActivityMediaName'), false)
+  })
+}
+
+test('Should accept surface-water-only CharacteristicName with Surface Water', async () => {
+  validate({ ActivityMediaName: 'Surface Water', CharacteristicName: 'Water level' })
+  assert.equal(checkProperty(validate.errors, 'message', 'error-CharacteristicName-SurfaceWaterOnly-ActivityMediaName'), false)
+})
+
+test('Should reject surface-water-only CharacteristicName with Groundwater', async () => {
+  validate({ ActivityMediaName: 'Groundwater', CharacteristicName: 'Water level' })
+  assert.equal(checkProperty(validate.errors, 'message', 'error-CharacteristicName-SurfaceWaterOnly-ActivityMediaName'), true)
+})

@@ -39,6 +39,15 @@ test('Should not warn for another reference point with a non-zero ActivityDepthA
   assert.equal(has('qc-ActivityDepthAltitudeReferencePoint-GroundSurface'), false)
 })
 
+test('Should warn when Ground surface reference point has a positive ActivityDepthAltitudeReferencePointMeasure', async () => {
+  validate({
+    ActivityDepthAltitudeReferencePoint: 'Ground surface',
+    ActivityDepthAltitudeReferencePointMeasure: 1.5,
+    ActivityDepthAltitudeReferencePointUnit: 'm',
+  })
+  assert.equal(has('qc-ActivityDepthAltitudeReferencePoint-GroundSurface'), true)
+})
+
 // *** ResultUnit-Elevation (deactivated) *** //
 for (const unit of ['m', 'MASL']) {
   for (const CharacteristicName of ['Water level', 'Water level (probe)']) {
