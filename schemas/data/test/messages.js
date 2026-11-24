@@ -34,7 +34,7 @@ test('Should transform enum error message', async (t) => {
 test('Should transform minimum error message', async (t) => {
   const valid = validate({
     ResultValue: -1,
-    ResultUnit: 'mg/l',
+    ResultUnit: 'mg/L',
   })
   assert.equal(valid, false)
   en(validate.errors)
@@ -103,7 +103,7 @@ test('frontend surfaces the friendly single-line string message', async (t) => {
     { ...validRow, EventID: 'a\nb' },
     'EventID'
   )
-  assert.match(message, /Only letters, numbers/)
+  assert.match(message, /must contain only letters, numbers/)
 })
 
 test('extract surfaces the friendly single-line string message', async (t) => {
@@ -112,7 +112,7 @@ test('extract surfaces the friendly single-line string message', async (t) => {
     { ...validRow, EventID: 'a\nb' },
     'EventID'
   )
-  assert.match(message, /Only letters, numbers/)
+  assert.match(message, /must contain only letters, numbers/)
 })
 
 test('frontend surfaces the friendly multiline string message', async (t) => {
@@ -121,7 +121,7 @@ test('frontend surfaces the friendly multiline string message', async (t) => {
     { ...validRow, ResultComment: 'a\tb' },
     'ResultComment'
   )
-  assert.match(message, /line feeds\/carriage returns are allowed/)
+  assert.match(message, /line breaks \(line feeds or carriage returns\)/)
 })
 
 test('frontend surfaces the friendly date-format message', async (t) => {
