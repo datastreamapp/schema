@@ -99,7 +99,7 @@ export const replaceRetired = (value) => {
   const startPattern = /^\*{3,10}retired\*{0,3}\s*/i
   // replace suffix
   const endPattern =
-    /(?:\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/
+    /(?:\*{3,10}retired\*{3}.*|\s*\*{3}duplicate\*{3}|[\^*]{2,10}|[*]+)$/i
   if (startPattern.test(value) || endPattern.test(value)) {
     value = value.replace(startPattern, '').replace(endPattern, '').trim()
   }
