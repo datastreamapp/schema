@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - New `CharacteristicName` values, and a new `ActivityDepthAltitudeReferencePoint` allowed value.
+- Four `CharacteristicName` group lookup entries (`CharacteristicWQXGroup`): `2-Chloroethylvinylether`, `3-Iodo-2-propynyl butyl carbamate`, `Perfluorodecanesulfonate` and `Perfluoropentanesulfonic acid`.
 - `Rhodium` added to the `ResultSampleFraction` rule for `CharacteristicName`.
 - New Groundwater errors for `Water level elevation` (`ResultValueType` must be `Calculated`, `ResultAnalyticalMethodName` rule), `MultilevelWell` locations (`WellOpenInterval` required), and `ActivityDepthAltitudeReferencePoint` `Subaqueous sediment` with porewater.
 - New errors that keep `Groundwater` and `Surface water` values of `ActivityMediaName` consistent with `MonitoringLocationType` and `CharacteristicName`.
