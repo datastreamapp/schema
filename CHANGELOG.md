@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.
 - Updated the surrogate `ActivityType` and metal `ResultSampleFraction` quality-control rules.
 - `wqx` updated to 3.0.298. It re-adds six `CharacteristicName` values as `{old name} ***RETIRED*** use {new name}`.
+- 67 `CharacteristicName` values are removed from the backend (`legacy`) list, because `wqx` 3.0.298 no longer carries them.
 - The build now strips a capital `***RETIRED***` suffix, so the six old names stay valid and the subset warnings are gone.
 - The build loops over enums longer than 1500 values (was 2000), because the longer `CharacteristicName` list overflowed the stack when compiled inline.
 
