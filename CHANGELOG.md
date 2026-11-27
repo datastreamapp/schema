@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- New `CharacteristicName` values, and a new `ActivityDepthAltitudeReferencePoint` allowed value.
+- Q4 2026 WQX update (`wqx` `3.0.276` → `3.0.298`): new values across `CharacteristicName`, `MeasurementUnit`, `MethodSpeciation`, `MonitoringLocationType`, `ResultAnalyticalMethodContext`, `ResultDetectionQuantitationLimitUnit`, `ResultUnit`, `SampleCollectionEquipmentName` and `SampleCollectionMethodContext`.
+- New `ActivityDepthAltitudeReferencePoint` allowed value.
 - Four `CharacteristicName` group lookup entries (`CharacteristicWQXGroup`): `2-Chloroethylvinylether`, `3-Iodo-2-propynyl butyl carbamate`, `Perfluorodecanesulfonate` and `Perfluoropentanesulfonic acid`.
 - `Rhodium` added to the `ResultSampleFraction` rule for `CharacteristicName`.
 - New Groundwater errors for `Water level elevation` (`ResultValueType` must be `Calculated`, `ResultAnalyticalMethodName` rule), `MultilevelWell` locations (`WellOpenInterval` required), and `ActivityDepthAltitudeReferencePoint` `Subaqueous sediment` with porewater.
@@ -24,8 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated English validation messages and added the matching French messages. English and French files now list messages in the same order.
 - `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.
 - Updated the surrogate `ActivityType` and metal `ResultSampleFraction` quality-control rules.
-- `wqx` updated to 3.0.298. It re-adds six `CharacteristicName` values as `{old name} ***RETIRED*** use {new name}`.
-- 67 `CharacteristicName` values are removed from the backend (`legacy`) list, because `wqx` 3.0.298 no longer carries them.
+- `wqx` 3.0.298 re-adds six `CharacteristicName` values as `{old name} ***RETIRED*** use {new name}`.
 - The build now strips a capital `***RETIRED***` suffix, so the six old names stay valid and the subset warnings are gone.
 - The build loops over enums longer than 1500 values (was 2000), because the longer `CharacteristicName` list overflowed the stack when compiled inline.
 
@@ -36,6 +36,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Locale build failed because `qc-Date-Future` was defined after the messages that refer to it.
+
+### Breaking
+
+- 67 `CharacteristicName` values are removed from the backend (`legacy`) list, because `wqx` between 3.0.276 and 3.0.298 no longer carries them. None of the 67 are in the primary subset.
 
 ## [3.0.0] - 2026-07-14
 
