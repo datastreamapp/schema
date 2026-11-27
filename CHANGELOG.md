@@ -5,18 +5,27 @@ All notable changes to `@datastreamapp/data-schema` are documented in this file.
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [3.1.0] - 2026-11-27
 
 ### Added
 
 - New `CharacteristicName` values, and a new `ActivityDepthAltitudeReferencePoint` allowed value.
 - `Rhodium` added to the `ResultSampleFraction` rule for `CharacteristicName`.
+- New Groundwater errors for `Water level elevation` (`ResultValueType` must be `Calculated`, `ResultAnalyticalMethodName` rule), `MultilevelWell` locations (`WellOpenInterval` required), and `ActivityDepthAltitudeReferencePoint` `Subaqueous sediment` with porewater.
+- New errors that keep `Groundwater` and `Surface water` values of `ActivityMediaName` consistent with `MonitoringLocationType` and `CharacteristicName`.
+- New warning: when `ActivityDepthAltitudeReferencePoint` is `Ground surface`, the measure should be 0.
 
 ### Changed
 
+- `ResultValue` day-of-year range check (`ResultValue-DOY-Range`) changes from a warning to an error.
+- Reworded the Water level elevation message for `ActivityDepthAltitudeReferencePoint` (`error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint`).
+- The `ResultUnit` elevation warning (`qc-ResultUnit-Elevation`) is deactivated.
 - Updated English validation messages and added the matching French messages. English and French files now list messages in the same order.
 - `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.
 - Updated the surrogate `ActivityType` and metal `ResultSampleFraction` quality-control rules.
+- `wqx` updated to 3.0.298. It re-adds six `CharacteristicName` values as `{old name} ***RETIRED*** use {new name}`.
+- The build now strips a capital `***RETIRED***` suffix, so the six old names stay valid and the subset warnings are gone.
+- The build loops over enums longer than 1500 values (was 2000), because the longer `CharacteristicName` list overflowed the stack when compiled inline.
 
 ### Deprecated
 

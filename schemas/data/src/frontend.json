@@ -368,6 +368,33 @@
     },
     {
       "$ref": "./logic/GroundwaterFields-ActivityMediaName-Groundwater.json"
+    },
+    {
+      "$ref": "./logic/WaterLevelElevation-ResultValueType.json"
+    },
+    {
+      "$ref": "./logic/WaterLevelElevation-ResultAnalyticalMethodName.json"
+    },
+    {
+      "$ref": "./logic/MonitoringLocationType-MultilevelWell-WellOpenInterval.json"
+    },
+    {
+      "$ref": "./logic/ActivityDepthAltitudeReferencePoint-SubaqueousSediment-Porewater.json"
+    },
+    {
+      "$ref": "./logic/MonitoringLocationType-GroundwaterOnly-ActivityMediaName.json"
+    },
+    {
+      "$ref": "./logic/CharacteristicName-GroundwaterOnly-ActivityMediaName.json"
+    },
+    {
+      "$ref": "./logic/MonitoringLocationType-SurfaceWaterOnly-ActivityMediaName.json"
+    },
+    {
+      "$ref": "./logic/CharacteristicName-SurfaceWaterOnly-ActivityMediaName.json"
+    },
+    {
+      "$ref": "./logic/ResultValue-DOY-Range.json"
     }
   ]
 }

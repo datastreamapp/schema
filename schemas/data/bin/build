@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-maxEnumLength=2000
+# Enums longer than this compile as loops. At 2000, the 1676-value CharacteristicName
+# list in wqx 3.0.298 overflowed the stack when compiled inline.
+maxEnumLength=1500
 
 pre () {
 	src=$1

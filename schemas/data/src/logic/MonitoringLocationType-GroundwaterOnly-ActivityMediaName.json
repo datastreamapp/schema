@@ -1,0 +1,43 @@
+{
+  "$id": "https://datastream.org/schema/data/logic/MonitoringLocationType-GroundwaterOnly-ActivityMediaName.json",
+  "title": "MonitoringLocationType-GroundwaterOnly-ActivityMediaName",
+  "description": "ActivityMediaName must be 'Groundwater' or 'Porewater' for groundwater-only MonitoringLocationType values",
+  "errorMessage": "error-MonitoringLocationType-GroundwaterOnly-ActivityMediaName",
+  "if": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "MonitoringLocationType": {
+        "enum": [
+          "Borehole",
+          "Dug Well",
+          "Multilevel Well",
+          "Nested Well",
+          "Other-Ground Water",
+          "Piezometer",
+          "Seep",
+          "Sump",
+          "Well"
+        ]
+      }
+    },
+    "required": [
+      "MonitoringLocationType"
+    ]
+  },
+  "then": {
+    "type": "object",
+    "unevaluatedProperties": true,
+    "properties": {
+      "ActivityMediaName": {
+        "enum": [
+          "Groundwater",
+          "Porewater"
+        ]
+      }
+    },
+    "required": [
+      "ActivityMediaName"
+    ]
+  }
+}
