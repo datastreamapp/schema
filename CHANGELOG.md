@@ -37,10 +37,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Locale build failed because `qc-Date-Future` was defined after the messages that refer to it.
 
-### Breaking
-
-- 67 `CharacteristicName` values are removed from the backend (`legacy`) list, because `wqx` between 3.0.276 and 3.0.298 no longer carries them. None of the 67 are in the primary subset.
-
 ## [3.0.0] - 2026-07-14
 
 Introduces **Groundwater support** to the DataStream schema.
