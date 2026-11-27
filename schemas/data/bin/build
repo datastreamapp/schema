@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-maxEnumLength=2000
+maxEnumLength=1500
 
 pre () {
 	src=$1
