@@ -25,8 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated English validation messages and added the matching French messages. English and French files now list messages in the same order.
 - `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.
 - Updated the surrogate `ActivityType` and metal `ResultSampleFraction` quality-control rules.
-- `wqx` 3.0.298 re-adds six `CharacteristicName` values as `{old name} ***RETIRED*** use {new name}`.
-- The build now strips a capital `***RETIRED***` suffix, so the six old names stay valid and the subset warnings are gone.
 - The build loops over enums longer than 1500 values (was 2000), because the longer `CharacteristicName` list overflowed the stack when compiled inline.
 
 ### Deprecated
