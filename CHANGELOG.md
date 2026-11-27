@@ -9,31 +9,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- New `CharacteristicName` values, and a new `ActivityDepthAltitudeReferencePoint` allowed value.
-- `Rhodium` added to the `ResultSampleFraction` rule for `CharacteristicName`.
-- New Groundwater errors for `Water level elevation` (`ResultValueType` must be `Calculated`, `ResultAnalyticalMethodName` rule), `MultilevelWell` locations (`WellOpenInterval` required), and `ActivityDepthAltitudeReferencePoint` `Subaqueous sediment` with porewater.
-- New errors that keep `Groundwater` and `Surface water` values of `ActivityMediaName` consistent with `MonitoringLocationType` and `CharacteristicName`.
-- New warning: when `ActivityDepthAltitudeReferencePoint` is `Ground surface`, the measure should be 0.
+- **Q4 2026 WQX update** (`wqx` `3.0.276` → `3.0.298`): new values across `CharacteristicName`, `MeasurementUnit`, `MethodSpeciation`, `MonitoringLocationType`, `ResultAnalyticalMethodContext`, `ResultDetectionQuantitationLimitUnit`, `ResultUnit`, `SampleCollectionEquipmentName` and `SampleCollectionMethodContext`.
+- **`ActivityDepthAltitudeReferencePoint` value** — one new allowed value.
+- **`CharacteristicWQXGroup` lookup entries** — four `CharacteristicName` entries added: `2-Chloroethylvinylether`, `3-Iodo-2-propynyl butyl carbamate`, `Perfluorodecanesulfonate` and `Perfluoropentanesulfonic acid`.
+- **`Rhodium` in the `ResultSampleFraction` rule** — added to the rule for `CharacteristicName`.
+- **New Groundwater errors** — for `Water level elevation` (`ResultValueType` must be `Calculated`, `ResultAnalyticalMethodName` rule), `MultilevelWell` locations (`WellOpenInterval` required), and `ActivityDepthAltitudeReferencePoint` `Subaqueous sediment` with porewater.
+- **Groundwater and Surface water consistency errors** — new errors that keep `Groundwater` and `Surface water` values of `ActivityMediaName` consistent with `MonitoringLocationType` and `CharacteristicName`.
+- **`Ground surface` warning** — when `ActivityDepthAltitudeReferencePoint` is `Ground surface`, the measure should be 0.
 
 ### Changed
 
-- `ResultValue` day-of-year range check (`ResultValue-DOY-Range`) changes from a warning to an error.
-- Reworded the Water level elevation message for `ActivityDepthAltitudeReferencePoint` (`error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint`).
-- The `ResultUnit` elevation warning (`qc-ResultUnit-Elevation`) is deactivated.
-- Updated English validation messages and added the matching French messages. English and French files now list messages in the same order.
-- `ResultValue` minimum check (`qc-ResultValue-Minimum`) now covers an updated set of `ResultUnit` values.
-- Updated the surrogate `ActivityType` and metal `ResultSampleFraction` quality-control rules.
-- `wqx` updated to 3.0.298. It re-adds six `CharacteristicName` values as `{old name} ***RETIRED*** use {new name}`.
-- The build now strips a capital `***RETIRED***` suffix, so the six old names stay valid and the subset warnings are gone.
-- The build loops over enums longer than 1500 values (was 2000), because the longer `CharacteristicName` list overflowed the stack when compiled inline.
+- **`ResultValue-DOY-Range` is now an error** — the `ResultValue` day-of-year range check was a warning.
+- **Water level elevation message reworded** — `error-CharacteristicName-WaterLevel-ActivityDepthAltitudeReferencePoint`.
+- **`qc-ResultUnit-Elevation` deactivated** — the `ResultUnit` elevation warning no longer runs.
+- **English and French messages** — English messages updated and the matching French messages added. Both files list messages in the same order.
+- **`qc-ResultValue-Minimum`** — the `ResultValue` minimum check now covers an updated set of `ResultUnit` values.
+- **Surrogate `ActivityType` and metal `ResultSampleFraction` rules** — quality-control rules updated.
+- **Build enum limit** — the build loops over enums longer than 1500 values (was 2000), because the longer `CharacteristicName` list overflowed the stack when compiled inline.
 
 ### Deprecated
 
-- One duplicate `CharacteristicName` ("2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol") is deprecated. It stays in the locale files.
+- **Duplicate `CharacteristicName`** — "2,4-Dichlorophenol mixt. with 2,5-Dichlorophenol" is deprecated. It stays in the locale files.
 
 ### Fixed
 
-- Locale build failed because `qc-Date-Future` was defined after the messages that refer to it.
+- **Locale build** — it failed because `qc-Date-Future` was defined after the messages that refer to it.
 
 ## [3.0.0] - 2026-07-14
 
